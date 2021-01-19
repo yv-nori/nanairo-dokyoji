@@ -1,0 +1,38 @@
+<header class="js-sticky">
+  <div class="head-container">
+    <h1 class="site-title">
+      <%= link_to root_path, class: 'home-link' do %>
+        <%= image_tag '/images/nanairo_logo.png' %>
+      <% end %>
+    </h1>
+    <button class="js-click-animation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div id="navbar" class="navbar media" style="display: block;">
+    <nav id="site-navigation" class="navigation main-navigation">
+      <ul class="home-menu-container js-open">
+        <li class="home-menu-item">
+        <%= link_to '七彩学舎について', root_path %>
+        </li>
+        <li class="home-menu-item">
+        <%= link_to '入園をご希望の方へ', root_path %>
+        </li>
+        <li class="home-menu-item">
+        <%= link_to '就職希望の方へ', root_path %>
+        </li>
+        <li class="home-menu-item">
+        <%= link_to 'パルティ道教寺', root_path %>
+        </li>
+        <li class="home-menu-item">
+        <%= link_to 'ピアニィ道教寺', root_path %>
+        </li>
+        <li class="home-menu-item">
+        <%= link_to 'お問い合わせ', root_path %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

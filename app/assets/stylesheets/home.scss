@@ -1,0 +1,384 @@
+@import "./application.scss";
+// ================================
+// ヘッダー
+// ================================
+header {
+  position: fixed;
+  top: 0px;
+  max-height: $header_height;
+  z-index: 999;
+  width: 100%;
+  padding-top: 4px;
+  background: none;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+  top: -100px;
+  padding-bottom: 4px;
+  font-family: "Montserrat", sans-serif;
+  &.sticky {
+    background-color: rgba($back_color, $back_opacity);
+    opacity: 1;
+    top: 0px;
+    z-index: 999;
+  }
+  .head-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      margin: 5px;
+      width: 240px;
+      font-weight: normal;
+      padding: 10px 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+// ================================
+// ハンバーガーメニューのアニメーション
+// ================================
+.js-click-animation {
+  position: relative;
+  width: 50px;
+  height: 44px;
+  margin: 20px;
+  span {
+    transition: all .4s;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 4px;
+    background-color: $point_color;
+    &:nth-of-type(1) {
+      top: 0;
+    }
+    &:nth-of-type(2) {
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    &:nth-of-type(3) {
+      bottom: 0;
+    }
+  }
+  &.active span {
+    &:nth-of-type(1) {
+      transform: translateY(20px) rotate(-315deg) scale(.8);
+    }
+    &:nth-of-type(2) {
+      width: 60px;
+      height: 60px;
+      background-color: transparent;
+      border: 4px solid $point_color;
+      border-radius: 50%;
+    }
+    &:nth-of-type(3) {
+      transform: translateY(-20px) rotate(315deg) scale(.8);
+    }
+  }
+}
+@include tab {
+  .h1 {
+    width: 230px;
+  }
+}
+@include pc {
+  .h1 {
+    margin: 5px;
+  }
+  .js-click-animation {
+    display: none;
+  }
+}
+// ================================
+// アコーディオンメニュー
+// ================================
+.home-menu-container{
+  width: 100%;
+  position: fixed;
+  top: $header_height;
+  z-index: 80;
+  transition: all 1.2s;
+  background-color: rgba($back_color, $back_opacity);
+  max-height: 0px;
+  overflow: hidden;
+  &.open {
+    max-height: 450px;
+  }
+  .home-menu-item {
+    height: $list_height_M;
+    display: flex;
+    justify-content: center;
+    border-top: #999 solid 1px;
+    &:hover {
+      background-color: darken($back_color, $darken);
+    }
+    &:last-of-type {
+      border-bottom: #999 solid 1px;
+    }
+    a {
+      width: 100%;
+      letter-spacing: $list_letterSpace_M;
+      color: $font_color;
+      font-size: $font_size_M;
+      text-align: center;
+      padding-top: $list_height_M / 2 - ($font_size_M / 2);
+    }
+    // ================================
+    // ホバーアニメーション
+    // ================================
+    &::before,
+    &::after {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      content: '';
+    }
+    &,
+    &::before,
+    &::after {
+      -webkit-transition: all .4s;
+      transition: all .4s;
+    }
+  }
+}
+
+// ================================
+// トップ画像
+// ================================
+// スライドショーのアニメーション
+@keyframes anime-start {
+  0% {
+    opacity: 0;
+  }
+  7% {
+    opacity: 1;
+  }
+
+  17% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    z-index: 9;
+  }
+}
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    z-index: 9;
+  }
+}
+// 各スライドイメージのcssと表示開始時間の生成
+@mixin image_slide($number, $max, $count) {
+  background: url("/images/home_top_slide" + $number + ".jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  height: 100%;
+  z-index:20 - $number;
+  opacity: 0;
+  width: 100%;
+  height: 650px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation-iteration-count: infinite;
+  $time : $max * 6s;
+  @if $count == 0 {
+    animation: anime-start $time 0s infinite;
+  } @else {
+    animation: anime $time 0s infinite;
+  }
+}
+@mixin image_slide_order($start, $max, $count, $order) {
+  @while $count <= ($max - 1) {
+    &.slide#{$start}.order#{$order} {
+      @include image_slide($start, $max, $count);
+      animation-delay: $count * 6s;
+      $count: $count + 1;
+      $start: $start + 1;
+      @if $start > $max {
+        $start: 1;
+      }
+    }
+  }
+}
+// マウスロゴのアニメーション
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+// イメージボックスのcss
+.top_image_box {
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  // 各イメージのアニメーション開始時間の異なるcssを動的に作成
+  .top_image {
+    $start: 1;
+    $max: 5;
+    $count: 0;
+    @for $i from $start through $max {
+      @include image_slide_order($start, $max, $count, $i);
+      $start:$start + 1;
+    }
+  }
+  .text{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    margin-left: 0px;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      opacity: 0.6;
+      &.sub-title {
+        display: block;
+        font-size: 25px;
+        color: white;
+        border-bottom: 2px solid white;
+        padding-bottom: 12px;
+        line-height: 3;
+      }
+      &.title {
+        font-size: 50px;
+        line-height: 1.3;
+        font-family: "Hiragino Mincho Pro";
+
+      }
+    }
+  }
+  // マウスロゴ
+  .mouse {
+    display: block;
+    margin: 0 auto;
+    width: 26px;
+    height: 46px;
+    border-radius: 13px;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -26px;
+    z-index: 999;
+    span {
+      display: block;
+      margin: 6px auto;
+      width: 2px;
+      height: 2px;
+      border-radius: 4px;
+      background: white;
+      border: 1px solid transparent;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+      animation-name: scroll;
+      z-index: 999;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+  // スライドの切替ボタン
+  .change-slide-container {
+    z-index: 999;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    &.left {
+      left: 0;
+      text-align: left;
+    }
+    &.right {
+      right: 0;
+      text-align: right;
+    }
+    button {
+      width: 100%;
+      height: 100%;
+    }
+    i {
+      color: $point_color;
+      font-size: $icon-size;
+      padding: 0 20px;
+      opacity: $back_opacity;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+
+
+.a1 {
+    font-family: 'logo-font';
+    font-size: 50px;
+  }
+  .a2 {
+    font-family: "sub-en-font";
+    font-size: large;
+  }
+  .a3 {
+    font-family: "Blankid";
+    font-size: large;
+  }
+  .a4 {
+    font-family: "DINPro-Medium";
+    font-size: large;
+  }
+  .a5 {
+    font-family: "KozGoPr6N-Regular";
+    font-size: large;
+  }
+  .a6 {
+    font-family: "NewBaskervilleStd-Roman";
+    font-size: large;
+  }
+.body-section {
+  height: 500px;
+}

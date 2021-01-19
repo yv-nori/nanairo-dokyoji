@@ -196,9 +196,13 @@ header {
     z-index: 9;
   }
 }
+.test{
+  background: image-url('home_top_slide1') fixed;
+}
 // 各スライドイメージのcssと表示開始時間の生成
 @mixin image_slide($number, $max, $count) {
-  background: image-url("home_top_slide" + $number + ".jpg") no-repeat center center fixed;
+
+  background: image-url('home_top_slide' + $number + '.jpg') no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

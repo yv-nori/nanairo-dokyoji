@@ -198,7 +198,7 @@ header {
 }
 // 各スライドイメージのcssと表示開始時間の生成
 @mixin image_slide($number, $max, $count) {
-  background: url("/images/home_top_slide" + $number + ".jpg") no-repeat center center fixed;
+  background: image-url("/images/home_top_slide" + $number + ".jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

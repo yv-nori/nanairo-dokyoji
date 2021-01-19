@@ -197,7 +197,7 @@ header {
   }
 }
 .test{
-  background: image-url('home_top_slide1.jpg') fixed;
+  background: image-url('furima-header01.png') fixed;
 }
 // 各スライドイメージのcssと表示開始時間の生成
 @mixin image_slide($number, $max, $count) {

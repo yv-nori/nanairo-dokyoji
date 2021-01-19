@@ -384,3 +384,16 @@ header {
 .body-section {
   height: 500px;
 }
+// ================================
+// メイン画面
+// ================================
+.preschool-image-container,
+.for-addmission-school-image-container,
+.for-recuruit-image-container {
+  width: 75%;
+  height: 50px;
+  image{
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 <%= render partial: 'layouts/header' %>
 <section class="top-section">
   <div class="top_image_box">
+    <%# TODO 画面サイズによっての画像S,M,Lを配置 トップ画像%>
     <div class="top_image slide1 order1"></div>
     <div class="top_image slide2 order1"></div>
     <div class="top_image slide3 order1"></div>
@@ -30,34 +31,41 @@
 <section class="main-section">
   <div class="preschool__wrapper">
     <div class="preschool__item">
-      <div class="preschool__image">
-        <picture class="responsive-image">
-          <source srcset='/images/parti.png' data-width="710" data-height="425" media=<%= Settings.media[:pc] %>>
-          <source srcset='/images/parti.png' data-width="710" data-height="425" media="(min-width: 640px)">
-          <source srcset='/images/parti.png' data-width="325" data-height="195" media="(min-width: 1px)">
-          <%= image_tag '/images/parti.png', class: "parti-responsive-image lazyloaded" %>
-        </picture>
-      </div>
-      <div class="preschool__content">
-        <h3>パルティ</h3>
-        <div class="preschool__link">
-          <%= link_to "", root_path, class: "action" %>
+      <div class="preschool__scale">
+        <div class="preschool__image">
+          <picture class="responsive-image">
+          <%# TODO 画面サイズによっての画像S,M,Lを配置 パルティ%>
+            <source srcset='/images/parti.png' data-width="710" data-height="425" media=<%= Settings[:media][:pc] %>>
+            <source srcset='/images/parti.png' data-width="710" data-height="425" media=<%= Settings[:media][:tab] %>>
+            <source srcset='/images/parti.png' data-width="325" data-height="195" media=<%= Settings[:media][:sp] %>>
+            <%= image_tag '/images/parti.png', class: "responsive-image lazyloaded" %>
+          </picture>
+        </div>
+        <div class="preschool__content">
+          <h3>Parti</h3>
+          <div class="preschool__link">
+            <%= link_to "", root_path, class: "action" %>
+          </div>
         </div>
       </div>
     </div>
     <div class="preschool__item">
-      <div class="preschool__image">
-        <picture class="responsive-image">
-          <source srcset='/images/piani.png' data-width="710" data-height="425" media="(min-width: 960px)">
-          <source srcset='/images/piani.png' data-width="710" data-height="425" media="(min-width: 640px)">
-          <source srcset='/images/piani.png' data-width="325" data-height="195" media="(min-width: 1px)">
-          <%= image_tag '/images/piani.png', class: "responsive-image lazyloaded" %>
-        </picture>
-      </div>
-      <div class="preschool__content">
-        <h3>ピアニィ</h3>
-        <div class="preschool__link">
-          <%= link_to "", root_path, class: "action" %>
+      <div class="preschool__scale">
+        <div class="preschool__image">
+          <picture class="responsive-image">
+          <%# TODO 画面サイズによっての画像S,M,Lを配置 ピアニィ%>
+            <source srcset='/images/piani.png' data-width="710" data-height="425" media=<%= Settings[:media][:pc] %>>
+            <source srcset='/images/piani.png' data-width="710" data-height="425" media=<%= Settings[:media][:tab] %>>
+            <source srcset='/images/piani.png' data-width="325" data-height="195" media=<%= Settings[:media][:sp] %>>
+            <%= image_tag '/images/piani.png', class: "responsive-image lazyloaded" %>
+          </picture>
+          <%# <div class="cover"></div> %>
+        </div>
+        <div class="preschool__content">
+          <h3>Piani</h3>
+          <div class="preschool__link">
+            <%= link_to "", root_path, class: "action" %>
+          </div>
         </div>
       </div>
     </div>

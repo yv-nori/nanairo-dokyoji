@@ -376,7 +376,6 @@ img {
   background-position: left top;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: scroll;
   border-style: none;
   border-width: 1px;
   border-radius: 0px;
@@ -389,63 +388,87 @@ img {
   overflow: hidden;
   .preschool__item {
     position: relative;
-    picture {
-      display: block;
-      img {
-        display: block;
-        width: 100%;
-      }
-    }
-    .preschool__content {
-      margin: 0 auto;
-      display: block;
-      text-align: center;
-      &h3 {
-        font-size: 1.2rem;
-        color: #fff;
-        letter-spacing: .12rem;
-        text-transform: uppercase;
-        position: absolute;
-        bottom: 25px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        display: block;
-        text-align: center;
-      }
-      .preschool__link {
-        display: block;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        margin: 0;
-        .action{
-          color: #fff;
-          background: 0 0;
-          position: absolute;
-          width: 100%;
-          display: block;
-          height: 100%;
-          top: 0;
-          border: none;
-          opacity: .1;
-        }
-      }
-    }
     &:last-child {
       margin: 3rem 0 0 0;
     }
   }
 }
+// .cover {
+//   position: absolute;
+//   background: rgba(0, 0, 0, .2);
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   transition: all .25s;
+//   &:hover{
+//   background: rgba(0, 0, 0, 0);
+//   }
+// }
+
+.preschool__content {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  h3 {
+    transition: all .7s;
+    font-size: 2.5rem;
+    color: #fff;
+    letter-spacing: 0.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    z-index: 500;
+    font-family: "sub-en-font";
+  }
+  .preschool__link {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    .action{
+      transition: all .7s;
+      background-color: rgba(0, 0, 0, .45);
+      position: absolute;
+      width: 100%;
+      display: block;
+      height: 100%;
+      top: 0;
+      border: none;
+    }
+  }
+}
+// アイテムホバー時
+.preschool__item {
+  overflow: hidden;
+  border-radius: $border-radius;
+  .preschool__scale {
+    transition: all .71s;
+    &:hover {
+      transform: scale(1.05);
+      .action {
+        opacity: 0;
+      }
+      h3 {
+        opacity: 0;
+      }
+    }
+  }
+}
 
 @include tab {
-  .preschool__wrapper {
-    .preschool__item {
-      &:last-child {
-        margin: 3rem 0 0 0;
-      }
+  .preschool__item {
+    &:last-child {
+      margin: 3rem 0 0 0;
+    }
+    h3 {
+      font-size: 7rem;
+      letter-spacing: 0.8rem;
+      transform: translate(-50%, -20%);
     }
   }
 }
@@ -453,8 +476,21 @@ img {
   .preschool__wrapper {
     display: flex;
     .preschool__item {
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
       &:last-child {
-        margin: 0 0 0 30px;
+        margin: 0 0 0 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+      h3 {
+        font-size: 5rem;
+        letter-spacing: 0.8rem;
+        transform: translate(-50%, -32%);
       }
     }
   }

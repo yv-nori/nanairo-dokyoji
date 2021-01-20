@@ -1,0 +1,4 @@
+media :
+  pc : "(min-width: 960px)"
+  tab : "(min-width: 640px)"
+  sp : "(min-width: 1px)"

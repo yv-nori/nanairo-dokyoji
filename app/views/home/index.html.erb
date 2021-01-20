@@ -1,5 +1,5 @@
 <%= render partial: 'layouts/header' %>
-<section>
+<section class="top-section">
   <div class="top_image_box">
     <div class="top_image slide1 order1"></div>
     <div class="top_image slide2 order1"></div>
@@ -24,30 +24,46 @@
       </button>
     </div>
   </div>
-</section>
-  <div class="preschool-image-container">
-    <%= link_to root_path do %>
-      <%= image_tag 'parti.png' %>
-    <% end %>
-    <%= link_to root_path do %>
-      <%= image_tag 'piani.png' %>
-    <% end %>
+  <div class="catch-copy-container">
   </div>
-<section>
-  <%= link_to root_path do %>
-    <div class="for-addmission-school-image-container">
-      <%= image_tag 'parti.png' %>
-    </div>
-  <% end %>
-  <%= link_to root_path do %>
-    <div class="for-recuruit-image-container">
-      <%= image_tag 'parti.png' %>
-    </div>
-  <% end %>
 </section>
-<section>
+<section class="main-section">
+  <div class="preschool__wrapper">
+    <div class="preschool__item">
+      <div class="preschool__image">
+        <picture class="responsive-image">
+          <source srcset='/images/parti.png' data-width="710" data-height="425" media=<%= Settings.media[:pc] %>>
+          <source srcset='/images/parti.png' data-width="710" data-height="425" media="(min-width: 640px)">
+          <source srcset='/images/parti.png' data-width="325" data-height="195" media="(min-width: 1px)">
+          <%= image_tag '/images/parti.png', class: "parti-responsive-image lazyloaded" %>
+        </picture>
+      </div>
+      <div class="preschool__content">
+        <h3>パルティ</h3>
+        <div class="preschool__link">
+          <%= link_to "", root_path, class: "action" %>
+        </div>
+      </div>
+    </div>
+    <div class="preschool__item">
+      <div class="preschool__image">
+        <picture class="responsive-image">
+          <source srcset='/images/piani.png' data-width="710" data-height="425" media="(min-width: 960px)">
+          <source srcset='/images/piani.png' data-width="710" data-height="425" media="(min-width: 640px)">
+          <source srcset='/images/piani.png' data-width="325" data-height="195" media="(min-width: 1px)">
+          <%= image_tag '/images/piani.png', class: "responsive-image lazyloaded" %>
+        </picture>
+      </div>
+      <div class="preschool__content">
+        <h3>ピアニィ</h3>
+        <div class="preschool__link">
+          <%= link_to "", root_path, class: "action" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-</section>
 <div class="row content">
 
 <p class="a1">aa  Parti</p>
@@ -56,11 +72,7 @@
 <p class="a4">Parti</p>
 <p class="a5">Parti</p>
 <p class="a6">Parti</p>
- <section class="body-section">
- <h1>
 
- </h1>
- </section>
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//s.w.org">

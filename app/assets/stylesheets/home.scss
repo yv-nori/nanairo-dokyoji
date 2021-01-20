@@ -252,8 +252,8 @@ header {
 }
 // イメージボックスのcss
 .top_image_box {
-  min-height: 75vh;
-  min-width: 100vw;
+  height: 75vh;
+  width: 100vw;
   position: relative;
   overflow: hidden;
   color: #fff;
@@ -356,6 +356,9 @@ header {
       display: none;
     }
   }
+}
+@include tab {
+
 }
 .catch-copy-container {
   width: 100%;

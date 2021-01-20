@@ -59,3 +59,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails'
 gem 'autoprefixer-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'config'

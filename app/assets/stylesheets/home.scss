@@ -2,6 +2,10 @@
 // ================================
 // ヘッダー
 // ================================
+.top-section {
+  height: 100vh;
+  width: 100%;
+}
 header {
   position: fixed;
   top: 0px;
@@ -147,7 +151,6 @@ header {
     }
   }
 }
-
 // ================================
 // トップ画像
 // ================================
@@ -199,7 +202,6 @@ header {
 
 // 各スライドイメージのcssと表示開始時間の生成
 @mixin image_slide($number, $max, $count) {
-
   background: image-url('home_top_slide' + $number + '.png') no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
@@ -250,7 +252,8 @@ header {
 }
 // イメージボックスのcss
 .top_image_box {
-  min-height: 650px;
+  min-height: 75vh;
+  min-width: 100vw;
   position: relative;
   overflow: hidden;
   color: #fff;
@@ -354,33 +357,165 @@ header {
     }
   }
 }
-
-
-
-.a1 {
-    font-family: 'logo-font';
-    font-size: 50px;
-  }
-  .a2 {
-    font-family: "sub-en-font";
-    font-size: large;
-  }
-  .a3 {
-    font-family: "Blankid";
-    font-size: large;
-  }
-  .a4 {
-    font-family: "DINPro-Medium";
-    font-size: large;
-  }
-  .a5 {
-    font-family: "KozGoPr6N-Regular";
-    font-size: large;
-  }
-  .a6 {
-    font-family: "NewBaskervilleStd-Roman";
-    font-size: large;
-  }
-.body-section {
-  height: 500px;
+.catch-copy-container {
+  width: 100%;
+  height: 25vh;
+  background-color: $back_color_sub;
+  opacity: $back_opacity;
 }
+// ================================
+// メイン画面
+// ================================
+img {
+  max-width: 100%;
+  height: auto;
+}
+.main-section {
+  display: flex;
+  flex-direction: column;
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-style: none;
+  border-width: 1px;
+  border-radius: 0px;
+  margin: 0px;
+  padding: 0 20px;
+}
+.preschool__wrapper {
+  margin-top: 50px;
+  padding: 0.6%;
+  overflow: hidden;
+  .preschool__item {
+    position: relative;
+    &:last-child {
+      margin: 3rem 0 0 0;
+    }
+  }
+}
+// .cover {
+//   position: absolute;
+//   background: rgba(0, 0, 0, .2);
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   transition: all .25s;
+//   &:hover{
+//   background: rgba(0, 0, 0, 0);
+//   }
+// }
+
+.preschool__content {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  h3 {
+    transition: all .7s;
+    font-size: 2.5rem;
+    color: #fff;
+    letter-spacing: 0.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    z-index: 500;
+    font-family: "sub-en-font";
+  }
+  .preschool__link {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    .action{
+      transition: all .7s;
+      background-color: rgba(0, 0, 0, .45);
+      position: absolute;
+      width: 100%;
+      display: block;
+      height: 100%;
+      top: 0;
+      border: none;
+    }
+  }
+}
+// アイテムホバー時
+.preschool__item {
+  overflow: hidden;
+  border-radius: $border-radius;
+  .preschool__scale {
+    transition: all .71s;
+    &:hover {
+      transform: scale(1.05);
+      .action {
+        opacity: 0;
+      }
+      h3 {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@include tab {
+  .preschool__item {
+    &:last-child {
+      margin: 3rem 0 0 0;
+    }
+    h3 {
+      font-size: 7rem;
+      letter-spacing: 0.8rem;
+      transform: translate(-50%, -20%);
+    }
+  }
+}
+@include pc {
+  .preschool__wrapper {
+    display: flex;
+    .preschool__item {
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      &:last-child {
+        margin: 0 0 0 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+      h3 {
+        font-size: 5rem;
+        letter-spacing: 0.8rem;
+        transform: translate(-50%, -32%);
+      }
+    }
+  }
+}
+// .a1 {
+//     font-family: 'logo-font';
+//     font-size: 50px;
+//   }
+//   .a2 {
+//     font-family: "sub-en-font";
+//     font-size: large;
+//   }
+//   .a3 {
+//     font-family: "Blankid";
+//     font-size: large;
+//   }
+//   .a4 {
+//     font-family: "DINPro-Medium";
+//     font-size: large;
+//   }
+//   .a5 {
+//     font-family: "KozGoPr6N-Regular";
+//     font-size: large;
+//   }
+//   .a6 {
+//     font-family: "NewBaskervilleStd-Roman";
+//     font-size: large;
+//   }

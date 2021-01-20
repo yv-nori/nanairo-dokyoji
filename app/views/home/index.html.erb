@@ -1,6 +1,7 @@
 <%= render partial: 'layouts/header' %>
-<section>
+<section class="top-section">
   <div class="top_image_box">
+    <%# TODO 画面サイズによっての画像S,M,Lを配置 トップ画像%>
     <div class="top_image slide1 order1"></div>
     <div class="top_image slide2 order1"></div>
     <div class="top_image slide3 order1"></div>
@@ -24,12 +25,51 @@
       </button>
     </div>
   </div>
+  <div class="catch-copy-container">
+  </div>
 </section>
-<section>
-<div class="preschool-image-container">
-
-
-</div>
+<section class="main-section">
+  <div class="preschool__wrapper">
+    <div class="preschool__item">
+      <div class="preschool__scale">
+        <div class="preschool__image">
+          <picture class="responsive-image">
+          <%# TODO 画面サイズによっての画像S,M,Lを配置 パルティ%>
+            <source srcset='/images/parti.png' data-width="710" data-height="425" media=<%= Settings[:media][:pc] %>>
+            <source srcset='/images/parti.png' data-width="710" data-height="425" media=<%= Settings[:media][:tab] %>>
+            <source srcset='/images/parti.png' data-width="325" data-height="195" media=<%= Settings[:media][:sp] %>>
+            <%= image_tag '/images/parti.png', class: "responsive-image lazyloaded" %>
+          </picture>
+        </div>
+        <div class="preschool__content">
+          <h3>Parti</h3>
+          <div class="preschool__link">
+            <%= link_to "", root_path, class: "action" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="preschool__item">
+      <div class="preschool__scale">
+        <div class="preschool__image">
+          <picture class="responsive-image">
+          <%# TODO 画面サイズによっての画像S,M,Lを配置 ピアニィ%>
+            <source srcset='/images/piani.png' data-width="710" data-height="425" media=<%= Settings[:media][:pc] %>>
+            <source srcset='/images/piani.png' data-width="710" data-height="425" media=<%= Settings[:media][:tab] %>>
+            <source srcset='/images/piani.png' data-width="325" data-height="195" media=<%= Settings[:media][:sp] %>>
+            <%= image_tag '/images/piani.png', class: "responsive-image lazyloaded" %>
+          </picture>
+          <%# <div class="cover"></div> %>
+        </div>
+        <div class="preschool__content">
+          <h3>Piani</h3>
+          <div class="preschool__link">
+            <%= link_to "", root_path, class: "action" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="row content">
@@ -40,11 +80,7 @@
 <p class="a4">Parti</p>
 <p class="a5">Parti</p>
 <p class="a6">Parti</p>
- <section class="body-section">
- <h1>
 
- </h1>
- </section>
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//s.w.org">

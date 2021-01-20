@@ -1,5 +1,5 @@
-$pc: 767px; // PCの最小
-$tab: 359px;
+$pc: 1025px; // PCの最小
+$tab: 600px;
 @mixin pc {
   @media (min-width: ($pc)) {
     @content;
@@ -14,6 +14,7 @@ $tab: 359px;
 // カラーリング
 // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 $back_color: #fff;
+$back_color_sub: #eee;
 $back_opacity: 0.7;
 $point_color: #8F8F8F;
 $font_color: #141412;
@@ -26,7 +27,11 @@ $list_height_M: 75px;
 $list_letterSpace_M: 4.5px;
 $header_height: 93px;
 $icon-size: 2em;
+$border-radius :6px;
 
+// ============================
+// フォント
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 @font-face {
   font-family: 'Angelface';
   src: font-url('Angelface.otf') format('truetype');

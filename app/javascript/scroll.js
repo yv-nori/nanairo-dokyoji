@@ -27,12 +27,12 @@ $(function () {
             // start: "start scrollstart",
             // end: "end scrollend",
             start: "top 200px",
-            end: "870px 570px",
+            end: "900px 600px",
             scrub: true, // 要素を追従させる
-            markers: true
+            markers: false
         },
         duration: 3,
-        y: 720,
+        y: 750,
         });
 
     ScrollTrigger.create({

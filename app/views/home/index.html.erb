@@ -1,13 +1,5 @@
 <%= render partial: 'layouts/header' %>
 
-<%# <p class="text text_c">C.スクロールに追従します</p>
-<div class="box_c" style="transform: translate(-50%, 0%);">C</div> %>
-
-<%# <div class="toptop">
-  <div id="message-block">
-  </div>
-</div> %>
-
 <section class="top-section">
   <div class="top_image_box">
     <div class="cover"></div>
@@ -42,9 +34,18 @@
 </section>
 <section class="catch-section">
   <div class="catch-copy-container">
-    <div>
+    <div class="catch-copy-box text">
+      <h4>わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
     </div>
-    <div>
+    <div class="catch-copy-box vision">
+      <h1>こどもへの願い</h1>
+      <p>VISION</p>
+      <%= link_to "", root_path, class: "action" %>
+    </div>
+    <div class="catch-copy-box history">
+      <h1>わたしたちの歩み</h1>
+      <p>HISTORY</p>
+      <%= link_to "", root_path, class: "action" %>
     </div>
   </div>
 </section>

@@ -28,7 +28,20 @@ $list_letterSpace_M: 4.5px;
 $header_height: 93px;
 $icon-size: 2em;
 $border-radius :6px;
-
+// ============================
+// z-index
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+$z_menu_hover: -1;
+$z_image_under: 5;
+$z_image_top: 20;
+$z_image_cover: 21;
+$z_header: 22;
+$z_menu:23;
+$z_header_sticky: 24;
+$z_catch_black_under: 25;
+$z_catch_white_top: 26;
+$z_mouse: 27;
+$z_button_slide: 27;
 // ============================
 // フォント
 // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -71,6 +84,12 @@ $border-radius :6px;
 @font-face {
   font-family: 'logo-font';
   src: font-url('CastroScript_PERSONAL_USE_ONLY.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hannari';
+  src: font-url('Hannari.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

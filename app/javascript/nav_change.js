@@ -1,4 +1,5 @@
 $(function () {
+  console.log("a")
   if (location.pathname.match("/")) {
     // メニュー表示のアニメーション
     $('.js-click-animation').on('click', function () {
@@ -44,6 +45,7 @@ $(function () {
         $images.addClass('order' + (max));
       }
     });
+    // スクロールの時のメニューアニメーション
   };
 });
 

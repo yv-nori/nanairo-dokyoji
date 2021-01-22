@@ -173,6 +173,8 @@ GEM
     parallel (1.20.1)
     parser (3.0.0.0)
       ast (~> 2.4.1)
+    picture_tag-rails (0.0.5)
+      rails (>= 3.0)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -325,6 +327,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   mini_magick
   mysql2 (>= 0.4.4)
+  picture_tag-rails
   pry-rails
   puma (~> 3.11)
   rails (~> 6.0.0)

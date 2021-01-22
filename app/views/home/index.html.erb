@@ -1,19 +1,20 @@
 <%= render partial: 'layouts/header' %>
 
-<section class="top-section">
+<section class="top-section js-scroll-trigger">
   <div class="top_image_box">
     <div class="cover"></div>
     <div class="trim-area">
-      <%# TODO 画面サイズによっての画像S,M,Lを配置 トップ画像%>
+      <%# TODO 仮の写真を正規画像へ%>
       <div class="top_image slide1 order1"></div>
       <div class="top_image slide2 order1"></div>
       <div class="top_image slide3 order1"></div>
-      <div class="top_image slide4 order1"></div>
-      <div class="top_image slide5 order1"></div>
-      <div class="mouse js-hide">
+      <div class="top_image_pc slide1 order1 isHide "></div>
+      <div class="top_image_pc slide2 order1 isHide"></div>
+      <div class="top_image_pc slide3 order1 isHide"></div>
+      <div class="mouse js-scroll-mouse-hide-target">
           <span></span>
       </div>
-      <div class="change-slide-container right js-hide">
+      <div class="change-slide-container right js-scroll-slideButton-hide-target">
         <button class="js-click-slide-right">
           <i class="fas fa-chevron-right"></i>
         </button>
@@ -24,31 +25,40 @@
         </button>
       </div>
       <div id="message-white", class="scroll-move">
-        <span>こどもの「好き」が見つかる<br/>可能性は無限大</span>
-      </div>
+        <span>こどもの<br/>「好き」が見つかる<br/>可能性は無限大</span>
+    </div>
     </div>
     <div id="message-black", class="scroll-move">
-        <span>こどもの「好き」が見つかる<br/>可能性は無限大</span>
+        <span>こどもの<br/>「好き」が見つかる<br/>可能性は無限大</span>
     </div>
   </div>
 </section>
-<section class="catch-section">
-  <div class="catch-copy-container">
-    <div class="catch-copy-box text">
-      <h4>わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
+<section class="test">
+  <div class="image-test"></div>
+</section>
+<section class="catch-copy-section">
+  <div class="catch-copy__wrapper top"></div>
+  <div class="catch-copy__wrapper middle" >
+    <div class="catch-copy__box text">
+      <h4>　わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
     </div>
-    <div class="catch-copy-box vision">
-      <h1>こどもへの願い</h1>
-      <p>VISION</p>
-      <%= link_to "", root_path, class: "action" %>
+  </div>
+  <div class="catch-copy__wrapper bottom">
+    <div class="catch-copy__box vision">
+      <a href="" class="action">
+        <h1>こどもへの願い</h1>
+        <p>VISION</p>
+      </a>
     </div>
-    <div class="catch-copy-box history">
-      <h1>わたしたちの歩み</h1>
-      <p>HISTORY</p>
-      <%= link_to "", root_path, class: "action" %>
+    <div class="catch-copy__box history">
+      <a href="" class="action">
+        <h1>わたしたちの歩み</h1>
+        <p>HISTORY</p>
+      </a>
     </div>
   </div>
 </section>
+
 <section class="main-section">
   <div class="preschool__wrapper">
     <div class="preschool__item">

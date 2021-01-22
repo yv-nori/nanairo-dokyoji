@@ -1,33 +1,30 @@
 @import "./application.scss";
+body {
+  font-family: $font_body;
+}
 // ================================
 // ヘッダー
 // ================================
-.top-section {
-  height: 100vh;
-  width: 100%;
-}
-header {
+.header {
+  font-family: "Montserrat", sans-serif;
   position: fixed;
-  top: 0px;
   max-height: $header_height;
-  z-index: $z_header;
+  z-index: $z_menu;
   width: 100%;
   padding-top: 4px;
+  padding-bottom: 4px;
   background: none;
   overflow: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: 0;
+  // アニメーション
+  transition: all 1s;
+  opacity: 1;
   top: -100px;
-  padding-bottom: 4px;
-  font-family: "Montserrat", sans-serif;
-  &.sticky {
-    background-color: rgba($back_color, $back_opacity);
+  background-color: rgba($back_color, 0);
+  top: 0px;
+  &.isShow{
     opacity: 1;
-    top: 0px;
-    z-index: $z_header_sticky;
   }
-  .head-container {
+  &-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -44,15 +41,15 @@ header {
   }
 }
 // ================================
-// ハンバーガーメニューのアニメーション
+// ハンバーガーメニューのクリックアニメーション
 // ================================
-.js-click-animation {
+.js-click-openMenu {
   position: relative;
   width: 50px;
   height: 44px;
   margin: 20px;
   span {
-    transition: all .4s;
+    transition: all .3s;
     position: absolute;
     width: 100%;
     height: 5px;
@@ -73,7 +70,7 @@ header {
   &.active span {
     &:nth-of-type(1) {
       transform: translateY(20px) rotate(-315deg) scale(.8);
-    }
+    } 
     &:nth-of-type(2) {
       width: 60px;
       height: 60px;
@@ -87,34 +84,47 @@ header {
   }
 }
 @include tab {
-  .h1 {
-    width: 230px;
+  .header {
+    &-container {
+      h1 {
+        width: 230px;
+      }
+    }
   }
 }
 @include pc {
-  .h1 {
-    margin: 5px;
-  }
-  .js-click-animation {
-    display: none;
+  .header {
+    &-container {
+      h1 {
+        margin: 5px;
+      }
+      .js-click-openMenu {
+        display: none;
+      }
+    }
   }
 }
 // ================================
 // アコーディオンメニュー
 // ================================
-.home-menu-container{
-  width: 100%;
-  position: fixed;
-  top: $header_height;
-  z-index: $z_menu;
-  transition: all 1.2s;
-  background-color: rgba($back_color, $back_opacity);
-  max-height: 0px;
-  overflow: hidden;
-  &.open {
-    max-height: 450px;
+.home-menu{
+  &-container {
+    width: 100%;
+    position: fixed;
+    top: $header_height;
+    z-index: $z_menu;
+    transition: all 1.2s;
+    background-color: rgba($back_color, $back_opacity);
+    max-height: 0px;
+    overflow: hidden;
+    &.isOpen {
+      max-height: 450px;
+    }
+    &.isClose {
+      max-height: 0px;
+    }
   }
-  .home-menu-item {
+  &-item {
     height: $list_height_M;
     display: flex;
     justify-content: center;
@@ -151,6 +161,11 @@ header {
     }
   }
 }
+
+.top-section {
+  height: 100vh;
+  width: 100%;
+}
 // ================================
 // トップ画像
 // ================================
@@ -159,6 +174,7 @@ header {
   0% {
     opacity: 0;
   }
+
   7% {
     opacity: 1;
   }
@@ -171,70 +187,77 @@ header {
     opacity: 1;
     transform: scale(1.08);
   }
+
   95% {
     opacity: 0;
   }
-  100% {
-    z-index: $z_image_under;
-  }
-}
-@keyframes anime {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  17% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-    transform: scale(1.08);
-  }
-  95% {
-    opacity: 0;
-  }
+
   100% {
     z-index: $z_image_under;
   }
 }
 
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  17% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    z-index: $z_image_under;
+  }
+}
 // 各スライドイメージのcssと表示開始時間の生成
-@mixin image_slide($number, $max, $count) {
-  background: image-url('home_top_slide' + $number + '.png') no-repeat center center fixed;
+@mixin image_slide($number, $max, $count, $media) {
+  background: image-url('home_top_slide_'+ $media + $number + '.jpg') no-repeat center center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  height: 100%;
   z-index: $z_image_top - $number;
-  opacity: 0;
+  opacity: 1;
   width: 100%;
   height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
   position: absolute;
   animation-iteration-count: infinite;
-  $time : $max * 6s;
-  @if $count == 0 {
+  $time: $max * 6s;
+  @if $count==0 {
     animation: anime-start $time 0s infinite;
-  } @else {
+  }
+  @else {
     animation: anime $time 0s infinite;
   }
 }
-@mixin image_slide_order($start, $max, $count, $order) {
-  @while $count <= ($max - 1) {
+
+@mixin image_slide_order($start, $max, $count, $order, $media) {
+  @while $count <=($max - 1) {
     &.slide#{$start}.order#{$order} {
-      @include image_slide($start, $max, $count);
+      @include image_slide($start, $max, $count, $media);
       animation-delay: $count * 6s;
       $count: $count + 1;
       $start: $start + 1;
-      @if $start > $max {
+      @if $start>$max {
         $start: 1;
       }
     }
   }
 }
+
 // マウスロゴのアニメーション
 @keyframes scroll {
   0% {
@@ -243,6 +266,7 @@ header {
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+
   100% {
     opacity: 0;
     -webkit-transform: translateY(20px);
@@ -250,6 +274,7 @@ header {
     transform: translateY(20px);
   }
 }
+
 // イメージキャッチコピー
 .cover {
   position: absolute;
@@ -258,53 +283,77 @@ header {
   background-color: rgba(0, 0, 0, .2);
   z-index: $z_image_cover;
 }
+
 .trim-area {
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
 }
+
 #message-white,
 #message-black {
   position: absolute;
   left: 50%;
   top: 20%;
   transform: translate(-50%, 0);
-  font-size: 40px;
+  font-size: $font_sizeR_LL;
   font-family: 'Hannari';
   display: flex;
   flex-direction: column;
   width: 600px;
   height: 200px;
-  span{
+
+  span {
     text-align: center;
   }
 }
+
 #message-white {
   z-index: $z_catch_white_top;
+
   span {
     color: white;
   }
 }
+
 #message-black {
   z-index: $z_catch_black_under;
   color: black;
 }
 
-  // イメージボックスのcss
+// イメージボックスのcss
 .top_image_box {
   height: 100%;
   width: 100%;
   position: relative;
   color: #fff;
+
   // 各イメージのアニメーション開始時間の異なるcssを動的に作成
   .top_image {
     $start: 1;
-    $max: 5;
+    $max: 3;
     $count: 0;
+    $media: 'sp';
     @for $i from $start through $max {
-      @include image_slide_order($start, $max, $count, $i);
-      $start:$start + 1;
+      @include image_slide_order($start, $max, $count, $i, $media);
+      $start: $start + 1;
+    }
+    &.isHide {
+      display: none;
+    }
+  }
+  .top_image_pc {
+    $start: 1;
+    $max: 3;
+    $count: 0;
+    $media: 'pc';
+    @for $i from $start through $max {
+      @include image_slide_order($start, $max, $count, $i, $media);
+      $start: $start + 1;
+    }
+    &.isHide {
+      display: none;
     }
   }
   // マウスロゴ
@@ -320,6 +369,8 @@ header {
     left: 50%;
     margin-left: -26px;
     z-index: $z_mouse;
+    transition: all.3s;
+    opacity: 1;
     span {
       display: block;
       margin: 6px auto;
@@ -334,24 +385,30 @@ header {
       animation-name: scroll;
       z-index: $z_mouse;
     }
-    &.hidden {
-      display: none;
+    &.isHide {
+      opacity: 0;
     }
   }
+
   // スライドの切替ボタン
   .change-slide-container {
     z-index: $z_button_slide;
     position: absolute;
     width: 30%;
     height: 100%;
+    cursor: pointer !important;
+    opacity: 1;
+    transition: all.6s;
     &.left {
       left: 0;
       text-align: left;
     }
+
     &.right {
       right: 0;
       text-align: right;
     }
+
     button {
       width: 100%;
       height: 100%;
@@ -362,21 +419,137 @@ header {
       padding: 0 20px;
       opacity: $back_opacity;
     }
-    &.hidden {
-      display: none;
+    &.isHide {
+      opacity: 0;
     }
   }
 }
-@include tab {
 
-}
+// ================================
 // キャッチコピー
-.catch-copy-container {
+// ================================
+.catch-copy-section {
   width: 100%;
   height: 100vh;
+  padding: 0 15px;
   background-color: $back_color_sub;
   opacity: $back_opacity;
+  font-family: $font_title;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .catch-copy__wrapper {
+    max-width: 700px;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.top {
+      height: 40vh;
+    }
+
+    &.middle {
+      font-size: 1.8rem;
+      padding: 0 25px;
+      height: 25vh;
+      line-height: 1.7;
+    }
+
+    &.bottom {
+      height: 25vh;
+    }
+  }
 }
+
+.catch-copy__box {
+  position: relative;
+  height: 100%;
+  text-align: left;
+
+  p {
+    padding-top: 20px;
+    font-size: $font_sizeR_M;
+    text-align: center;
+  }
+
+  h1 {
+    padding-bottom: 15px;
+    font-size: $font_sizeR_MM;
+    position: relative;
+    border-bottom: solid 2px #aaa;
+
+    &::after {
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 2px;
+      border-top: solid 2px #333;
+      transform: scale(0.1, 1);
+      transform-origin: left top;
+      transition: transform .3s;
+    }
+  }
+
+  .action {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    position: relative;
+
+    &:hover {
+      h1::after {
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  &.history {
+    margin-top: 80px;
+  }
+}
+
+@include pc {
+  .catch-copy-section {
+    .catch-copy__wrapper {
+      &.top {
+        margin-top: 10px;
+      }
+
+      &.middle {
+        margin-top: 10px;
+      }
+
+      &.bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 25vh;
+      }
+    }
+  }
+
+  .catch-copy__box {
+    p {
+      padding-top: 40px;
+    }
+
+    h1 {
+      padding-bottom: 35px;
+    }
+
+    &.history,
+    &.vision {
+      margin-top: 50px;
+    }
+  }
+}
+
 // ================================
 // メイン画面
 // ================================
@@ -384,6 +557,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 .main-section {
   display: flex;
   flex-direction: column;
@@ -396,21 +570,26 @@ img {
   margin: 0px;
   padding: 0 20px;
 }
+
 .preschool__wrapper {
   margin-top: 50px;
   padding: 0.6%;
   overflow: hidden;
+
   .preschool__item {
     position: relative;
+
     &:last-child {
       margin: 3rem 0 0 0;
     }
   }
 }
+
 .preschool__content {
   margin: 0 auto;
   display: block;
   text-align: center;
+
   h3 {
     transition: all .7s;
     font-size: 2.5rem;
@@ -423,6 +602,7 @@ img {
     z-index: 500;
     font-family: "sub-en-font";
   }
+
   .preschool__link {
     display: block;
     position: absolute;
@@ -431,7 +611,8 @@ img {
     top: 0;
     left: 0;
     margin: 0;
-    .action{
+
+    .action {
       transition: all .7s;
       background-color: rgba(0, 0, 0, .45);
       position: absolute;
@@ -443,17 +624,22 @@ img {
     }
   }
 }
+
 // アイテムホバー時
 .preschool__item {
   overflow: hidden;
   border-radius: $border-radius;
+
   .preschool__scale {
     transition: all .71s;
+
     &:hover {
       transform: scale(1.05);
+
       .action {
         opacity: 0;
       }
+
       h3 {
         opacity: 0;
       }
@@ -466,6 +652,7 @@ img {
     &:last-child {
       margin: 3rem 0 0 0;
     }
+
     h3 {
       font-size: 7rem;
       letter-spacing: 0.8rem;
@@ -473,14 +660,17 @@ img {
     }
   }
 }
+
 @include pc {
   .preschool__wrapper {
     display: flex;
+
     .preschool__item {
       border-top-left-radius: $border-radius;
       border-bottom-left-radius: $border-radius;
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
+
       &:last-child {
         margin: 0 0 0 0px;
         border-top-left-radius: 0px;
@@ -488,6 +678,7 @@ img {
         border-top-right-radius: $border-radius;
         border-bottom-right-radius: $border-radius;
       }
+
       h3 {
         font-size: 5rem;
         letter-spacing: 0.8rem;
@@ -496,6 +687,7 @@ img {
     }
   }
 }
+
 // .a1 {
 //     font-family: 'logo-font';
 //     font-size: 50px;

@@ -1,27 +1,26 @@
 $(function () {
-  console.log("a")
   if (location.pathname.match("/")) {
     // メニュー表示のアニメーション
-    $('.js-click-animation').on('click', function () {
+    $('.js-click-openMenu').on('click', function () {
       const $clickMenu = $(this);
       const $openMenu = $('.js-open');
       $clickMenu.toggleClass('active');
-      $openMenu.toggleClass('open');
+      $openMenu.toggleClass('isOpen');
     });
-    // スクロールの時のメニューアニメーション
-    $(window).scroll(function () {
-      if ($(window).scrollTop() > 100) {
-        const $scrollMenu = $('.js-sticky');
-        const $hides = $('.js-hide')
-        $scrollMenu.addClass('sticky')
-        $hides.addClass('hidden')
-      } else {
-        const $scrollMenu = $('.js-sticky');
-        const $hides = $('.js-hide')
-        $scrollMenu.removeClass('sticky')
-        $hides.removeClass('hidden')
-      };
-    });
+  //   // スクロールの時のメニューアニメーション
+  //   $(window).scroll(function () {
+  //     if ($(window).scrollTop() > 100) {
+  //       const $scrollMenu = $('.js-sticky');
+  //       const $hides = $('.js-hide')
+  //       $scrollMenu.addClass('sticky')
+  //       $hides.addClass('hidden')
+  //     } else {
+  //       const $scrollMenu = $('.js-sticky');
+  //       const $hides = $('.js-hide')
+  //       $scrollMenu.removeClass('sticky')
+  //       $hides.removeClass('hidden')
+  //     };
+  //   });
     // スライドのスタート表示切替
     $('.js-click-slide-right').on('click', function () {
       const $images = $('.top_image')
@@ -45,34 +44,5 @@ $(function () {
         $images.addClass('order' + (max));
       }
     });
-    // スクロールの時のメニューアニメーション
   };
 });
-
-// あ
-// // Mobile Navigation
-// $('.mobile-toggle').click(function() {
-//     if ($('.main_h').hasClass('open-nav')) {
-//         $('.main_h').removeClass('open-nav');
-//     } else {
-//         $('.main_h').addClass('open-nav');
-//     }
-// });
-
-// $('.main_h li a').click(function() {
-//     if ($('.main_h').hasClass('open-nav')) {
-//         $('.navigation').removeClass('open-nav');
-//         $('.main_h').removeClass('open-nav');
-//     }
-// });
-
-// // navigation scroll lijepo radi materem
-// $('nav a').click(function(event) {
-//     var id = $(this).attr("href");
-//     var offset = 70;
-//     var target = $(id).offset().top - offset;
-//     $('html, body').animate({
-//         scrollTop: target
-//     }, 500);
-//     event.preventDefault();
-// });

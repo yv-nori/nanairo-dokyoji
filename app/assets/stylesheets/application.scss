@@ -1,3 +1,6 @@
+// ================================
+// ブレイクポイント
+// ================================
 $pc: 1025px; // PCの最小
 $tab: 600px;
 @mixin pc {
@@ -19,9 +22,25 @@ html {
 p {
   @include fz(18);
 }
-// ============================
+// ================================
+// 共通アクション
+// ================================
+.isHide {
+  display: none!important;
+}
+.isShow {
+  display: block!important;
+}
+.isVisible {
+  opacity: 1!important;
+  visibility: visible!important;
+}
+.isInvisible {
+  visibility: hidden;
+}
+// ================================
 // カラーリング
-// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// ================================
 $back_color: #fff;
 $back_color_sub: #eee;
 $back_opacity: 0.7;
@@ -35,11 +54,21 @@ $font_size_M: 15px;
 $font_sizeR_M: 1.5rem;
 $font_sizeR_MM: 2.7rem;
 $font_sizeR_LL: 4rem;
+$font_sizeR_LLL: 6rem;
 $list_height_M: 75px;
 $list_letterSpace_M: 4.5px;
+$letterSpace_M: 4.5px;
 $header_height: 93px;
 $icon-size: 2em;
-$border-radius :6px;
+$border-radius :10px;
+// ============================
+// スペース
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+$side_space_S: 30px;
+$side_space_M: 200px;
+$top_space_S:30px;
+$top_space_M:60px;
+$image_space_vertical_M: 30px;
 // ============================
 // z-index
 // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝

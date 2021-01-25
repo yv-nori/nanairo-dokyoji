@@ -25,7 +25,7 @@ $(function () {
     trigger: '.js_scroll_TopImage_trigger',
     start: 'center+=10 center',
     end: 'center+=10 bottom',
-    markers: true,
+    markers: false,
     onLeaveBack: () => {
       $('.js_scroll_NavHeader_visible_target').removeClass('isVisible');
       $('.js_scroll_mouse_invisible_target').removeClass('isInvisible');

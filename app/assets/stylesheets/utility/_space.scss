@@ -1,59 +1,59 @@
 // margin
-.u-m-auto {
+.U_m-auto {
 	margin: auto;
 }
 
-.u-mx-auto {
+.U_mx-auto {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.u-my-auto {
+.U_my-auto {
 	margin-top: auto;
 	margin-bottom: auto;
 }
 
-.u-mt-auto {
+.U_mt-auto {
 	margin-top: auto;
 }
 
-.u-mr-auto {
+.U_mr-auto {
 	margin-right: auto;
 }
 
-.u-ml-auto {
+.U_ml-auto {
 	margin-left: auto;
 }
 
-.u-mb-auto {
+.U_mb-auto {
 	margin-bottom: auto;
 }
 
 @for $i from 0 through 300 {
 
-	.u-mx-#{$i} {
+	.U_mx-#{$i} {
 		margin-left: #{$i}px;
 		margin-right: #{$i}px;
 	}
 
-	.u-my-#{$i} {
+	.U_my-#{$i} {
 		margin-top: #{$i}px;
 		margin-bottom: #{$i}px;
 	}
 
-	.u-mt-#{$i} {
+	.U_mt-#{$i} {
 		margin-top: #{$i}px;
 	}
 
-	.u-mr-#{$i} {
+	.U_mr-#{$i} {
 		margin-right: #{$i}px;
 	}
 
-	.u-mb-#{$i} {
+	.U_mb-#{$i} {
 		margin-bottom: #{$i}px;
 	}
 
-	.u-ml-#{$i} {
+	.U_ml-#{$i} {
 		margin-left: #{$i}px;
 	}
 }
@@ -61,7 +61,7 @@
 // padding
 @for $i from 0 through 100 {
 
-	.u-px-#{$i}pct {
+	.U_px-#{$i}pct {
 		padding-left: 1% * $i;
 		padding-right: 1% * $i;
 		&_pc {
@@ -72,7 +72,7 @@
 		}
 	}
 	
-	.u-py-#{$i}pct {
+	.U_py-#{$i}pct {
 		padding-top:  1% * $i;
 		padding-bottom:  1% * $i;
 		&_pc {
@@ -83,7 +83,7 @@
 		}
 	}
 
-	.u-pt-#{$i}pct {
+	.U_pt-#{$i}pct {
 		padding-top:  1% * $i;
 		&_pc {
 			@include mq-up("pc") {
@@ -92,7 +92,7 @@
 		}
 	}
 
-	.u-pr-#{$i}pct {
+	.U_pr-#{$i}pct {
 		padding-right:  1% * $i;
 		&_pc {
 			@include mq-up("pc") {
@@ -101,7 +101,7 @@
 		}
 	}
 
-	.u-pb-#{$i}pct {
+	.U_pb-#{$i}pct {
 		padding-bottom:  1% * $i;
 		&_pc {
 			@include mq-up("pc") {
@@ -110,7 +110,7 @@
 		}
 	}
 
-	.u-pl-#{$i}pct {
+	.U_pl-#{$i}pct {
 		padding-left:  1% * $i;
 		&_pc {
 			@include mq-up("pc") {
@@ -122,7 +122,7 @@
 // padding
 @for $i from 0 through 300 {
 
-	.u-px-#{$i} {
+	.U_px-#{$i} {
 		padding-left: #{$i}px;
 		padding-right: #{$i}px;
 
@@ -134,7 +134,7 @@
 		}
 	}
 
-	.u-py-#{$i} {
+	.U_py-#{$i} {
 		padding-top: #{$i}px;
 		padding-bottom: #{$i}px;
 
@@ -146,7 +146,7 @@
 		}
 	}
 
-	.u-pt-#{$i} {
+	.U_pt-#{$i} {
 		padding-top: #{$i}px;
 
 		&_pc {
@@ -156,7 +156,7 @@
 		}
 	}
 
-	.u-pr-#{$i} {
+	.U_pr-#{$i} {
 		padding-right: #{$i}px;
 
 		&_pc {
@@ -166,7 +166,7 @@
 		}
 	}
 
-	.u-pb-#{$i} {
+	.U_pb-#{$i} {
 		padding-bottom: #{$i}px;
 
 		&_pc {
@@ -176,7 +176,7 @@
 		}
 	}
 
-	.u-pl-#{$i} {
+	.U_pl-#{$i} {
 		padding-left: #{$i}px;
 
 		&_pc {

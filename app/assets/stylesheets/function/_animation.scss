@@ -1,0 +1,12 @@
+.isClear {
+  opacity: $opacity;
+}
+
+.isOpen {
+  max-height: 100vh!important;
+}
+
+.isHide {
+  opacity: 0!important;
+  visibility: hidden!important;
+}

@@ -1,5 +1,5 @@
 $ScrollChangeColorMessage-font-size: 6rem;
-@mixin c-scroll-change-color-message ($color, $z-index) {
+@mixin C_scroll-change-color-message ($color, $z-index) {
   position: absolute;
   left: 50%;
   top: 30%;
@@ -14,11 +14,11 @@ $ScrollChangeColorMessage-font-size: 6rem;
   color: $color;
   z-index: $z-index;
 }
-.c-scroll-change-color-message {
+.C_scroll-change-color-message {
   &--white {
-    @include c-scroll-change-color-message(white, map-get($layer, 'icon') + 1)
+    @include C_scroll-change-color-message(white, map-get($layer, 'icon') + 1)
   }
   &--black {
-    @include c-scroll-change-color-message(black, map-get($layer, 'icon'))
+    @include C_scroll-change-color-message(black, map-get($layer, 'icon'))
   }
 }

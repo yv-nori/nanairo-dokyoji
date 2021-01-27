@@ -1,0 +1,22 @@
+// height
+@for $i from 0 through 100 {
+  .U_hx-#{$i} {
+    width: #{$i}vh;
+
+    &_pc {
+      @include mq-up("pc") {
+        width: #{$i}vh;
+      }
+    }
+  }
+
+  .U_hy-#{$i} {
+    height: #{$i}vh;
+
+    &_pc {
+      @include mq_up("pc") {
+        height: #{$i}vh;
+      }
+    }
+  }
+}

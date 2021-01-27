@@ -1,4 +1,4 @@
-.c-image {
+.C_image {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -9,18 +9,18 @@
   transition: all .5s;
   &__parti {
     background: image-url('parti_sp.png') no-repeat center center / cover;
-    @include mq(pc) {
+    @include mq-up("pc") {
       background: image-url('parti_pc.png') no-repeat center center / cover;
     }
   }
   &__piani {
     background: image-url('piani_sp.png') no-repeat center center / cover;
-    @include mq(pc) {
+    @include mq-up("pc") {
       background: image-url('piani_pc.png') no-repeat center center / cover;
     }
   }
 }
-.c-image--thumbnail {
+.C_image--thumbnail {
   overflow: hidden;
   width: 100%;
   height: calc(50% - #{$image_space_vertical_M}/2);
@@ -30,7 +30,7 @@
     transform: scale(1.04);
   }
 }
-.c-link-cover {
+.C_link-cover {
   display: block;
   position: absolute;
   top: 0;
@@ -46,7 +46,7 @@
   }
 }
 
-.c-title {
+.C_title {
   position:absolute;
   top:50%;
   left:50%;
@@ -71,7 +71,7 @@
   width: 100%;
 }
 
-.c-image--parallax {
+.C_image--parallax {
   @include mq(pc) {
     @include parallax-image-set('home_top_slide_pc.jpg');
   }

@@ -1,0 +1,124 @@
+.c-card {
+	display: inline-block;
+	text-decoration: none;
+	background: #fff;
+	position: relative;
+}
+
+// ニュッと伸びるボタン
+
+.c-card--border-stretch {
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+	&:hover &__text-top::after {
+		transform-origin: left top;
+		transform: scale(1, 1);
+		height: 2px;
+		left: 0;
+		bottom: 0
+	}
+	&__text-top {
+		text-align: center;
+		padding-bottom: 15px;
+		content: '';
+		position: absolute;
+		width: 100%;
+		font-size: $font_sizeR_M * 1.8;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			background-color: #333;
+			transform: scale(0.1, 1);
+			transform-origin: left top;
+			transition: transform .5s;
+			height: 2px;
+			left: 0;
+			bottom: 0
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			background-color: #888;
+			transform: scale(1, 1);
+			height: 2px;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	&__text-bottom {
+		text-align: center;
+		height: 50%;
+		padding-top: 20px;
+		font-size: $font_sizeR_M;
+		letter-spacing: $letterSpace_M;
+	}
+}
+
+.c-card__img {
+	text-align: center;
+}
+
+.c-card__body {
+	padding: 0.4em;
+}
+
+.c-card__title {
+	font-size: 1.2em;
+	font-weight: 700;
+	margin: 0.4em 0;
+}
+
+.c-card__excerpt {
+	font-size: 0.95em;
+	color: #757575;
+	margin: 0;
+}
+
+.c-card__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.c-card__time,
+.c-card__label {
+	margin-bottom: 0.4em;
+}
+
+.c-card__time {
+	display: block;
+	color: #757575;
+	font-size: 0.875em;
+}
+
+.c-card__label {
+	margin-left: auto;
+	display: block;
+	text-decoration: none;
+	background: $card-label-background;
+	color: $card-label-color;
+	padding: 0.2em 0.8em;
+	font-size: 0.875em;
+}
+
+.c-card--horizon {
+	display: flex;
+}
+
+.c-card__img--horizon {
+	width: 150px;
+	padding: 0.4em;
+}
+
+.c-card__body--horizon {
+	width: calc(100% - 150px);
+	padding: 0.4em;
+}
+
+.c-card--shadow {
+	box-shadow: 0 0 5px 0 rgba(#000, 0.16);
+}

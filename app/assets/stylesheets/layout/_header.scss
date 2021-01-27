@@ -1,0 +1,19 @@
+@mixin l-header {
+	width: 100%;
+	height: $header-height-sp;
+	z-index: map-get($layer, "header");
+	background-color: $header-background;
+	color: $header-color;
+}
+.l-header {
+	@include l-header;
+	@include mq-up("tab") {
+		height: $header-height-pc;
+	}
+	&--fixed {
+		@include l-header;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+}

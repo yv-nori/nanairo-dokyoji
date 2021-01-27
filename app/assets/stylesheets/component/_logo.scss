@@ -1,0 +1,9 @@
+.c-logo {
+  width: $logo-width-sp;
+  @include mq-up("tab") {
+    width: $logo-width-tab;
+  }
+  @include mq-up("pc") {
+    width: $logo-width-pc;
+  }
+}

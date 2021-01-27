@@ -1,0 +1,102 @@
+// レイアウト幅
+$layout-width-canvas: 1440px;
+$layout-width-container: 1025px;
+$layout-width-smartphone: 600px;
+
+// ブレークポイント（スマホベース）
+$breakpoints-up: (
+	"sp": "(max-width: #{$layout-width-smartphone - 1px})",
+	"tab-only": "(min-width: #{$layout-width-smartphone}) and (max-width: #{$layout-width-container - 1px})",
+	"tab": "(min-width: #{$layout-width-smartphone})",
+	"pc": "(min-width: #{$layout-width-container})",
+	"ie": "(-ms-high-contrast: active), (-ms-high-contrast: none)"
+);
+
+// ブレークポイント（PCベース）
+$breakpoints-down: (
+	"sp": "(max-width: #{$layout-width-smartphone - 1px})",
+	"tab-only": "(min-width: #{$layout-width-smartphone}) and (max-width: #{$layout-width-container - 1px})",
+	"tab": "(max-width: #{$layout-width-container - 1px})",
+	"pc": "(min-width: #{$layout-width-container})",
+	"ie": "(-ms-high-contrast: active), (-ms-high-contrast: none)"
+);
+
+// ブレークポイント mixin（スマホベース）
+@mixin mq($breakpoint: pc) {
+	@media #{map-get($breakpoints-up, $breakpoint)} {
+		@content;
+	}
+}
+
+// ヘッダー高さ
+$header-height-sp: 60px;
+$header-height-pc: 60px;
+
+// z-index の指定
+$layer: (
+	loading: 200,
+	modal: 100,
+	drawer: 50,
+	floating: 40,
+	header: 30,
+	footer: 20,
+	icon: 10,
+	cover: 5,
+	default: 1,
+	minus: -1,
+);
+
+$z_menu_hover: -1;
+$z_image_under: 5;
+$z_image_top: 20;
+
+$z_catch_black_under: 23;
+$z_catch_white_top: 24;
+$z_mouse: 25;
+$z_button_slide: 25;
+$z_menu:26;
+
+
+// 余白
+$pd-x-pc: 0;
+$pd-x-tab: 32px;
+$pd-x-sp: 24px;
+
+$side_space_S: 30px;
+$side_space_M: 200px;
+$top_space_S:30px;
+$top_space_M:60px;
+$image_space_vertical_M: 30px;
+
+// ナビのメニュー高さ
+$nav-menu-height_sp: 70px;
+
+// ロゴ
+$logo-width-sp: 240px;
+$logo-width-tab: 230px;
+$logo-width-pc: 230px;
+
+// ボタンサイズ
+$button-width: 50px;
+$button-height: 44px;
+$button-material-height: 5px;
+$button-radius: 4px;
+
+// アイコン
+$icon-width_M: 30px;
+$icon-width_S: 26px;
+$icon-height_M: 30px;
+$icon-height_L: 46px;
+$icon-font: 30px;
+
+// マーカー
+$marker-pd-x: 0.4em;
+$marker-pd-y: 1em;
+
+// ドロワー
+$drawer-bar-space: 5px;
+$drawer-bar-width: 30px;
+$drawer-bar-height: 3px;
+
+// ソリッドサイズ
+$border-solid-size: 1px;

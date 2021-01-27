@@ -1,0 +1,93 @@
+.c-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-attachment: fixed;
+  opacity: 1;
+  transition: all .5s;
+  &__parti {
+    background: image-url('parti_sp.png') no-repeat center center / cover;
+    @include mq(pc) {
+      background: image-url('parti_pc.png') no-repeat center center / cover;
+    }
+  }
+  &__piani {
+    background: image-url('piani_sp.png') no-repeat center center / cover;
+    @include mq(pc) {
+      background: image-url('piani_pc.png') no-repeat center center / cover;
+    }
+  }
+}
+.c-image--thumbnail {
+  overflow: hidden;
+  width: 100%;
+  height: calc(50% - #{$image_space_vertical_M}/2);
+  position: relative;
+  pointer-events: none;
+  &:hover &__image {
+    transform: scale(1.04);
+  }
+}
+.c-link-cover {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all .5s;
+  background-color: rgba(0, 0, 0, .35);
+  pointer-events: auto;
+  &:hover {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+.c-title {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -10%);
+  width:100%;
+  text-align: center;
+  font-size: 7rem;
+  color: #fff;
+  letter-spacing: 0.3rem;
+  font-family: "sub-en-font";
+}
+
+@mixin parallax-image-set ($image) {
+  background: image-url($image);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.c-image--parallax {
+  @include mq(pc) {
+    @include parallax-image-set('home_top_slide_pc.jpg');
+  }
+  @include parallax-image-set('home_top_slide_sp.jpg');
+  &__container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    &__cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .25);
+      z-index: map-get($layer, 'cover');
+    }
+  }
+}

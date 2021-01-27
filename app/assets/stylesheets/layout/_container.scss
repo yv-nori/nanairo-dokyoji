@@ -1,0 +1,124 @@
+// height
+@for $i from 0 through 100 {
+	.l-hx-#{$i} {
+		width: #{$i}vh;
+		&_pc {
+			@include mq-up("pc") {
+				width: #{$i}vh;
+			}
+		}
+	}
+	.l-hy-#{$i} {
+		height: #{$i}vh;
+		&_pc {
+			@include mq_up("pc") {
+				height: #{$i}vh;
+			}
+		}
+	}
+}
+
+.l-inner {
+	margin: 0 auto;
+	padding: 0 $pd-x-sp;
+	width: $layout-width-container;
+	max-width: 100%;
+	height: inherit;
+
+	@include mq-up("tab") {
+		padding-right: $pd-x-tab;
+		padding-left: $pd-x-tab;
+	}
+
+	@include mq-up("pc") {
+		padding-right: $pd-x-pc;
+		padding-left: $pd-x-pc;
+	}
+}
+
+.l-inner--wide {
+	width: $layout-width-container * 1.1;
+}
+
+.l-inner--narrow {
+	width: $layout-width-container * 0.9;
+}
+
+.l-inner--full {
+	width: 100%;
+	height: 100%;
+}
+
+.l-inner--half-Y {
+	width: 100%;
+	height: 50%;
+}
+
+.l-inner--fullBlock {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.l-inner--fullTrimming {
+	width: 100%;
+	height: 100%;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	&__cover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, $cover-opacity);
+		z-index: map-get($layer, 'cover' );
+	}
+}
+
+.l-inner--radius-double {
+	overflow: hidden;
+	// 
+	background-color: grey;
+// 
+	width: 100%;
+	height: calc(50% - #{$image_space_vertical_M}/2);
+	border-radius: $border-radius;
+  position: relative;
+  pointer-events: none;
+  &:hover &__image {
+    transform: scale(1.04);
+  }
+	&:last-child {
+		margin-top: $image_space_vertical_M;
+	}
+	@include mq-up("pc") {
+		width: 50%;
+		height: 100%;
+		border-radius: $border-radius 0 0 $border-radius;
+		&:last-child {
+			border-radius: 0 $border-radius $border-radius 0;
+			margin: 0;
+		}
+	}
+}
+.l-window-full {
+	margin: 0 calc(50% - 50vw);
+	overflow: hidden;
+	width: 100vw;
+}
+
+.l-window-right {
+	margin: 0 calc(50% - 50vw);
+	overflow: hidden;
+	padding: 0 0 0 calc(50vw - 50%);
+	width: 100vw;
+	display: block;
+}
+
+.l-window-left {
+	margin: 0 calc(50% - 50vw);
+	overflow: hidden;
+	padding: 0 calc(50vw - 50%) 0 0;
+	width: 100vw;
+	display: block;
+}

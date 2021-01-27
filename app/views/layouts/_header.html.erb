@@ -1,36 +1,36 @@
-<header class="NavHeader js_scroll_NavHeader_visible_target" >
-  <div class="NavHeader__header">
-    <div class="NavHeader__header__logo-box">
-      <%= link_to root_path, class: 'NavHeader__header__logo-box__link-home' do %>
-        <%= image_tag '/images/nanairo_logo.png', class: 'NavHeader__header__logo-box__link-home__logo' %>
+<header>
+  <div class="l-header--fixed u-py-4 u-px-20 l-row--between isClear js_scroll_l-header--isVisible_target">
+    <div class="c-logo">
+      <%= link_to root_path, class: 'l-inner--fullBlock' do %>
+        <%= image_tag '/images/nanairo_logo.png', class: 'l-inner--full ' %>
       <% end %>
     </div>
-    <button class="NavHeader__header__button js_menu-open_NavBtn_trigger js_scroll_menuBtn_close_target">
-      <span class="NavHeader__header__button__material"></span>
-      <span class="NavHeader__header__button__material"></span>
-      <span class="NavHeader__header__button__material"></span>
+    <button class="c-button--hamberger js_menu-open_c-button-hamBerger--isActive_trigger js_scroll_menuBtn_close_target">
+      <span class="c-button--hamberger__material"></span>
+      <span class="c-button--hamberger__material"></span>
+      <span class="c-button--hamberger__material"></span>
     </button>
   </div>
-  <nav id="site-NavHeader-navigation">
-    <ul class="NavHeader__menu js_menu-open_NavMenu_target js_scroll_menu_close_target">
-      <li class="NavHeader__menu__item">
-        <%= link_to '七彩学舎について', root_path, class: 'NavHeader__menu__link' %>
-      </li>
-      <li class="NavHeader__menu__item">
-        <%= link_to '入園をご希望の方へ', root_path, class: 'NavHeader__menu__link' %>
-      </li>
-      <li class="NavHeader__menu__item">
-        <%= link_to '就職希望の方へ', root_path, class: 'NavHeader__menu__link' %>
-      </li>
-      <li class="NavHeader__menu__item">
-        <%= link_to 'パルティ道教寺', root_path, class: 'NavHeader__menu__link' %>
-      </li>
-      <li class="NavHeader__menu__item">
-        <%= link_to 'ピアニィ道教寺', root_path, class: 'NavHeader__menu__link' %>
-      </li>
-      <li class="NavHeader__menu__item">
-        <%= link_to 'お問い合わせ', root_path, class: 'NavHeader__menu__link' %>
-      </li>
-    </ul>
-  </nav>
+    <nav id="site-NavHeader-navigation">
+      <ul class="c-list__nav-menu_sp js_menu-open_NavMenu_target js_scroll_menu_close_target">
+        <li class="c-list__nav-menu_sp__item">
+          <%= link_to '七彩学舎について', root_path, class: 'c-list__nav-menu_sp__link-text' %>
+        </li>
+        <li class="c-list__nav-menu_sp__item">
+          <%= link_to '入園をご希望の方へ', root_path, class: 'c-list__nav-menu_sp__link-text' %>
+        </li>
+        <li class="c-list__nav-menu_sp__item">
+          <%= link_to '就職希望の方へ', root_path, class: 'c-list__nav-menu_sp__link-text' %>
+        </li>
+        <li class="c-list__nav-menu_sp__item">
+          <%= link_to 'パルティ道教寺', root_path, class: 'c-list__nav-menu_sp__link-text' %>
+        </li>
+        <li class="c-list__nav-menu_sp__item">
+          <%= link_to 'ピアニィ道教寺', root_path, class: 'c-list__nav-menu_sp__link-text' %>
+        </li>
+        <li class="c-list__nav-menu_sp__item">
+          <%= link_to 'お問い合わせ', root_path, class: 'c-list__nav-menu_sp__link-text' %>
+        </li>
+      </ul>
+    </nav>
 </header>

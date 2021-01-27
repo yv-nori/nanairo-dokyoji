@@ -1,73 +1,66 @@
 <%= render partial: 'layouts/header' %>
 <section class="TopImage js_scroll_TopImage_trigger js_scroll_TopImage_height_get">
-  <div class="TopImage__container">
-    <%# TODO 仮の写真を正規画像へ%>
-    <div class="TopImage__container__cover"></div>
-    <div class="TopImage__container__mouse js_scroll_mouse_invisible_target">
-        <span class="TopImage__container__mouse__material"></span>
-    </div>
-    <div class="TopImage__container__message white js_scroll_message_move_target js_scroll_message_height_get">
-      <span>こどもの<br/>「好き」が見つかる<br/>可能性は無限大</span>
-    </div>
-  </div>
-  <div class="TopImage__container__message black js_scroll_message_move_target">
-      <span>こどもの<br/>「好き」が見つかる<br/>可能性は無限大</span>
-  </div>
-</section>
-<section class="CatchCopy">
-    <div class="CatchCopy__wrapper CatchCopy__wrapper__top js_scroll_CatchCopy__wrapper-top_height_get"></div>
-    <div class="CatchCopy__wrapper CatchCopy__wrapper__middle" >
-      <div class="CatchCopy__wrapper CatchCopy__wrapper__middle__text-box">
-        <h4 class="CatchCopy__wrapper CatchCopy__wrapper__middle__text-box__text">　わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
+  <div class="c-image--parallax">
+    <div class="l-inner--fullTrimming">
+      <%# TODO 仮の写真を正規画像へ%>
+      <div class="l-inner--fullTrimming__cover"></div>
+      <div class="c-icon-mouse js_scroll_mouse_invisible_target">
+          <span class="c-icon-mouse__material"></span>
+      </div>
+      <div class="c-scroll-change-color-message--white js_scroll_message_move_target js_scroll_message_height_get">
+        <h1 class="c-text_L">こどもの<br/>「好き」が見つかる<br/>可能性は無限大</h1>
       </div>
     </div>
-    <div class="CatchCopy__wrapper CatchCopy__wrapper__bottom">
-      <div class="CatchCopy__wrapper__bottom__text-box">
-        <%= link_to root_path, class: 'CatchCopy__wrapper__bottom__text-box__link' do %>
-          <h1 class="CatchCopy__wrapper__bottom__text-box__link__title 
-          CatchCopy__wrapper__bottom__text-box__link__title__ja">こどもへの願い</h1>
-          <p class="CatchCopy__wrapper__bottom__text-box__link__title 
-          CatchCopy__wrapper__bottom__text-box__link__title__en">VISION</p>
-        <% end %>
-      </div>
-      <div class="CatchCopy__wrapper__bottom__text-box">
-        <%= link_to root_path, class: 'CatchCopy__wrapper__bottom__text-box__link' do %>
-          <h1 class="CatchCopy__wrapper__bottom__text-box__link__title 
-          CatchCopy__wrapper__bottom__text-box__link__title__ja">私たちのあゆみ</h1>
-          <p class="CatchCopy__wrapper__bottom__text-box__link__title 
-          CatchCopy__wrapper__bottom__text-box__link__title__en">HISTORY</p>
-        <% end %>
-      </div>
+    <div class="c-scroll-change-color-message--black js_scroll_message_move_target js_scroll_message_height_get">
+        <h1 class="c-text_L">こどもの<br/>「好き」が見つかる<br/>可能性は無限大</h1>
     </div>
   </div>
 </section>
-<section class="PreSchool">
-<div class="wrap-test">
+<section class="CatchCopy l-hy-90 u-px-15 u-pt-10_pc isClear">
+  <div class="l-hy-30 js_scroll_CatchCopy__wrapper-top_height_get"></div>
+  <div class="l-hy-25 u-px-25" >
+    <h4 class="c-text_M">　わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
+  </div>
+  <div class="l-hy-35 l-hy-25_pc l-row--space-around_pc">
+    <div class="u-px-10pct">
+      <%= link_to root_path, class: 'c-card--border-stretch' do %>
+        <h1 class="c-card--border-stretch__text-top">こどもへの願い</h1>
+        <p class="c-card--border-stretch__text-bottom">VISION</p>
+      <% end %>
+    </div>
+    <div class="u-px-10pct">
+      <%= link_to root_path, class: 'c-card--border-stretch' do %>
+        <h1 class="c-card--border-stretch__text-top">私たちのあゆみ</h1>
+        <p class="c-card--border-stretch__text-bottom">HISTORY</p>
+      <% end %>
+    </div>
+  </div>
+</section>
+<section class="PreSchool l-hy-80 u-py-30 u-px-15">
+  <div class="l-inner--full l-row--wrap-center">
+    <div class="l-inner--radius-double c-image__parti">
+      <div class="c-image--thumbnail"></div>
+      <%= link_to root_path, class: "c-link-cover" do %>
+        <h3 class="c-title">Parti</h3>
+      <% end %>
+    </div>
+    <div class="l-inner--radius-double c-image__piani">
+      <div class="c-image--thumbnail"></div>
+      <%= link_to root_path, class: "c-link-cover" do %>
+        <h3 class="c-title">Parti</h3>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<div class="c-box">
+  <p class="c-box__title">Parti</p>
+  <p class="c-box__title">aa  Parti</p>
+  <p class="c-box__title">Parti</p>
+  <p class="c-box__title">Parti</p>
+  <p class="c-box__title">Parti</p>
+  <p class="c-box__title">Parti</p>
 </div>
-  <div class="PreSchool__wrapper">
-    <div class="PreSchool__wrapper__image-box">
-      <div class="PreSchool__wrapper__image-box__image PreSchool__wrapper__image-box__image__parti a"></div>
-      <%= link_to root_path, class: "PreSchool__wrapper__image-box__link-cover" do %>
-        <h3 class="PreSchool__wrapper__image-box__link-cover__title">Parti</h3>
-      <% end %>
-    </div>
-    <div class="PreSchool__wrapper__image-box">
-      <div class="PreSchool__wrapper__image-box__image PreSchool__wrapper__image-box__image__piani aa"></div>
-      <%= link_to root_path, class: "PreSchool__wrapper__image-box__link-cover" do %>
-        <h3 class="PreSchool__wrapper__image-box__link-cover__title">Parti</h3>
-      <% end %>
-    </div>
-  </div>
-</section>
-
-<div class="row content aa">
-
-<p class="a1">aa  Parti</p>
-<p class="a2">Parti</p>
-<p class="a3">Parti</p>
-<p class="a4">Parti</p>
-<p class="a5">Parti</p>
-<p class="a6">Parti</p>
 
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com">

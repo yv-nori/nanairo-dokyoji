@@ -21,16 +21,13 @@ $breakpoints-down: (
 	"ie": "(-ms-high-contrast: active), (-ms-high-contrast: none)"
 );
 
-// ブレークポイント mixin（スマホベース）
-@mixin mq($breakpoint: pc) {
-	@media #{map-get($breakpoints-up, $breakpoint)} {
-		@content;
-	}
-}
+// ボーダーラディウス
+$border-radius-button: 4px;
+$border-radius-little: 10px;
 
 // ヘッダー高さ
-$header-height-sp: 60px;
-$header-height-pc: 60px;
+$header-height_sp: 60px;
+$header-height_pc: 60px;
 
 // z-index の指定
 $layer: (
@@ -47,9 +44,9 @@ $layer: (
 );
 
 // 余白
-$pd-x-pc: 0;
-$pd-x-tab: 32px;
-$pd-x-sp: 24px;
+$pd-x_pc: 0;
+$pd-x_tab: 32px;
+$pd-x_sp: 24px;
 
 $side_space_S: 30px;
 $side_space_M: 200px;
@@ -60,16 +57,23 @@ $image_space_vertical_M: 30px;
 // ナビのメニュー高さ
 $nav-menu-height_sp: 70px;
 
-// ロゴ
-$logo-width-sp: 240px;
-$logo-width-tab: 230px;
-$logo-width-pc: 230px;
+// デコレーションアイコン
+$deco-width: 20px;
+$deco-height: 20px;
 
-// ボタンサイズ
-$button-width: 50px;
-$button-height: 44px;
+// ロゴ
+$logo-width_sp: 145px;
+$logo-width_tab: 230px;
+$logo-width_pc: 230px;
+
+// ボタンサイズ(比率:width-height=4px)
+$button-width: 40px;
+$button-height: 36px;
 $button-material-height: 5px;
-$button-radius: 4px;
+
+// ボックスサイズ
+$box-width: 50px;
+$box-height: 10px;
 
 // アイコン
 $icon-width_M: 30px;

@@ -1,27 +1,27 @@
 <%= render partial: 'layouts/header' %>
 <section class="TopImage JS_scroll_trigger JS_scroll_TopImage_get">
   <div class="C_image--parallax">
-    <div class="L_inner--fullTrimming">
+    <div class="L_inner--full U_trim U_relative">
       <%# TODO 仮の写真を正規画像へ%>
-      <div class="L_inner--fullTrimming__cover"></div>
+      <div class="L_inner__cover-shadow"></div>
       <div class="C_icon-mouse JS_scroll_isHide_target">
           <span class="C_icon-mouse__material"></span>
       </div>
       <div class="C_scroll-change-color-message--white JS_scroll_move_target JS_scroll_message_get">
-        <h1 class="C_text_L">こどもの<br/>「好き」が見つかる<br/>可能性は無限大</h1>
+        <h1 class="C_text__catch">こどもの<br/>「好き」が見つかる<br/>可能性は無限大</h1>
       </div>
     </div>
     <div class="C_scroll-change-color-message--black JS_scroll_move_target JS_scroll_message_get">
-        <h1 class="C_text_L">こどもの<br/>「好き」が見つかる<br/>可能性は無限大</h1>
+        <h1 class="C_text__catch">こどもの<br/>「好き」が見つかる<br/>可能性は無限大</h1>
     </div>
   </div>
 </section>
-<section class="CatchCopy U_hy-90 U_px-15 U_pt-10_pc isClear">
+<section class="CatchCopy U_hy-90 U_px-15 U_pt-10_pc A_isClear">
   <div class="U_hy-30 JS_scroll_CatchCopy_get"></div>
   <div class="U_hy-25 U_px-25" >
-    <h4 class="C_text_M">　わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
+    <h4 class="C_text__sentence">　わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
   </div>
-  <div class="U_hy-35 U_hy-25_pc L_row--space-around_pc">
+  <div class="U_hy-35 U_hy-25_pc L_flex--space-around_pc">
     <div class="U_px-10pct">
       <%= link_to root_path, class: 'C_card--border-stretch' do %>
         <h1 class="C_card--border-stretch__text-top">こどもへの願い</h1>
@@ -37,19 +37,45 @@
   </div>
 </section>
 <section class="PreSchool U_hy-80 U_py-30 U_px-15">
-  <div class="L_inner--full L_row--wrap-center">
-    <div class="L_inner--radius-double C_image__parti">
-      <div class="C_image--thumbnail"></div>
-      <%= link_to root_path, class: "C_link-cover" do %>
-        <h3 class="C_title">Parti</h3>
+  <div class="L_inner--full L_flex--wrap-center">
+    <div class="L_inner--double U_rds--double C_image__parti">
+      <%= link_to root_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
+        <h3 class="C_text__preschool U_abs-X50pct-Y70pct">Parti</h3>
       <% end %>
     </div>
-    <div class="L_inner--radius-double C_image__piani">
-      <div class="C_image--thumbnail"></div>
-      <%= link_to root_path, class: "C_link-cover" do %>
-        <h3 class="C_title">Parti</h3>
+    <div class="L_inner--double U_rds--double C_image__piani">
+      <%= link_to root_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
+        <h3 class="C_text__preschool U_abs-X50pct-Y70pct">Piani</h3>
       <% end %>
     </div>
+  </div>
+</section>
+
+<section class="Recruit U_py-100">
+  <div class="U_relative U_hy-50">
+    <div class="L_inner--full U_bgc--base1 U_p-5pct">
+      <div class="L_inner--full U_bgc--white U_p-2pct">
+        <div class="C_image__recruit L_inner--full U_relative U_trim">
+          <div class="L_inner__cover-shadow A_pointer A_time-S A_toOpacity"></div>
+        </div>
+      </div>
+    </div>
+    <h1 class="C_text__title U_abs-X50pct-Y2pct">RECRUITING</h1>
+    <div class="C_box--vertical U_bgc__box--base1 U_rds--half U_abs-X4pct-Y50pct">
+      <h4 class="C_text__inBox U_fnt-c--white">
+        就職希望の方へ
+      </h4>
+    </div>
+    <div class="C_box U_abs-X80pct-Y50pct U_rds--little U_border--tough L_flex">
+      <h4 class="C_text__inBox">MORE</h4>
+      <div class="C_text__inBox L_flex__grow-001">▶︎</div>
+    </div>
+    <div class="U_abs-X50pct-Y95pct">
+      <h4 class="C_text__sentence">子どもたちの未来を一緒に育みましょう。</h4>
+    </div>
+    <%# <div class="C_box--deco">
+      <%= image_tag '/images/sparkle.png', class: 'L_inner--full U_abs-X85pct-Y10pct' %>
+    </div> %>
   </div>
 </section>
 

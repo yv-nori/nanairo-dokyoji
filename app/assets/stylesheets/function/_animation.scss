@@ -1,12 +1,40 @@
-.isClear {
+$anime-time-short: 0.4s;
+$anime-time-middle: 0.8s;
+$anime-time-long: 1.2s;
+
+.A_pointer {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.A_time-S {
+  transition: all $anime-time-short;
+}
+
+.A_time-M {
+  transition: all $anime-time-middle;
+}
+
+.A_time-L {
+  transition: all $anime-time-long;
+}
+
+.A_isClear {
   opacity: $opacity;
 }
 
-.isOpen {
+.A_isOpen {
   max-height: 100vh!important;
 }
 
-.isHide {
+.A_isHide {
   opacity: 0!important;
   visibility: hidden!important;
+}
+
+.A_toOpacity {
+  &:hover {
+    opacity: 0;
+    transform: scale(1.2);
+  }
 }

@@ -1,23 +1,28 @@
-// テキスト
-@mixin C_text {
+.C_text__sentence {
   font-size: $font-size-base;
   line-height: $line-height-base;
 }
 
-.C_text_M {
- @include C_text;
-	&--full {
-		width: 100%;
-	}
-}
-
-.C_text_L {
+.C_text__catch {
   font-size: $font-size-base * 1.55;
   line-height: $line-height-base * 1.55;
-	&--full {
-		width: 100%;
-	}
 }
-.C_text--full {
-	width: 100%;
+
+.C_text__inBox {
+	font-size: $font-size-base;
+  line-height: $line-height-base;
+  letter-spacing: $letter-spacing-base * 0.4;
+}
+
+.C_text__title {
+	font-size: $font-size-base * 5;
+  line-height: $line-height-base * 1;
+  font-family: 'DINPro-Medium';
+}
+
+.C_text__preschool {
+  color: white;
+  font-size: $font-size-base * 5;
+  letter-spacing: $letter-spacing-base * 0.4;
+  font-family: "sub-en-font";
 }

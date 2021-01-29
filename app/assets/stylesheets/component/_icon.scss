@@ -17,7 +17,7 @@
   bottom: 40px;
 	left: 50%;
   margin-left: -26px;
-	transition: all.8s;
+	transition: all $anime-time-middle;
   opacity: 1;
   &__material {
     display: block;

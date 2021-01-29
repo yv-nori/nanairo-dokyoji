@@ -1,7 +1,7 @@
 $font-size-base: 1.6rem;
 $font-weight-base: 500;
 $line-height-base: 1.6;
-
+$font-size-inbox: 1rem;
 // ================================
 // サイズ
 // ================================
@@ -9,11 +9,9 @@ $font_size_M: 15px;
 $font_sizeR_M: 1.5rem;
 $font_sizeR_LL: 4rem;
 $list_height_M: 75px;
-$list_letterSpace_M: 4.5px;
-$letterSpace_M: 4.5px;
+$letter-spacing-base: 4.5px;
 $header_height: 93px;
 $icon-size: 2em;
-$border-radius :10px;
 // ================================
 // スペース
 // ================================
@@ -144,3 +142,4 @@ serif;
   font-weight: normal;
   font-style: normal;
 }
+

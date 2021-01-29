@@ -5,7 +5,7 @@ $(function () {
       const $clickMenu = $(this);
       const $openMenu = $('.JS_menu-open_target');
       $clickMenu.toggleClass('C_button--hamberger--isActive');
-      $openMenu.toggleClass('isOpen');
+      $openMenu.toggleClass('A_isOpen');
     });
   };
 });

@@ -28,14 +28,14 @@ $(function () {
     end: 'center+=10 bottom',
     markers: false,
     onLeaveBack: () => {
-      $('.JS_scroll_isShow_target').addClass('isHide');
-      $('.JS_scroll_isHide_target').removeClass('isHide');
+      $('.JS_scroll_isShow_target').addClass('A_isHide');
+      $('.JS_scroll_isHide_target').removeClass('A_isHide');
       $('.JS_scroll_isPassive_target').removeClass('C_button--hamberger--isActive');
-      $('.JS_scroll_isClose_target').removeClass('isOpen');
+      $('.JS_scroll_isClose_target').removeClass('A_isOpen');
     },
     onLeave: () => {
-      $('.JS_scroll_isShow_target').removeClass('isHide');
-      $('.JS_scroll_isHide_target').addClass('isHide');
+      $('.JS_scroll_isShow_target').removeClass('A_isHide');
+      $('.JS_scroll_isHide_target').addClass('A_isHide');
     }
   });
 });

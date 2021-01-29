@@ -1,18 +1,18 @@
-@mixin l-header {
+@mixin L_header {
 	width: 100%;
-	height: $header-height-sp;
+	height: $header-height_sp;
 	z-index: map-get($layer, "header");
 	background-color: $header-background;
 	color: $header-color;
-	transition: all.8s;
+	transition: all $anime-time-middle;
 }
 .L_header {
-	@include l-header;
+	@include L_header;
 	@include mq-up("tab") {
-		height: $header-height-pc;
+		height: $header-height_pc;
 	}
 	&--fixed {
-		@include l-header;
+		@include L_header;
 		position: fixed;
 		top: 0;
 		left: 0;

@@ -60,6 +60,9 @@
 
 // padding
 @for $i from 0 through 100 {
+	.U_p-#{$i}pct {
+		padding: 1% * $i;
+	}
 
 	.U_px-#{$i}pct {
 		padding-left: 1% * $i;

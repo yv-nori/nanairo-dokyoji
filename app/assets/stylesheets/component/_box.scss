@@ -1,0 +1,19 @@
+.C_box {
+  display: inline-block;
+}
+
+.C_box--vertical {
+  display: inline-block;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  padding: 40px 5px;
+}
+
+.C_box--deco {
+  width: $deco-width;
+  height: $deco-height;
+}
+.C_box {
+  width: $box-width;
+  height: $box-height;
+}

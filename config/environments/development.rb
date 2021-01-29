@@ -59,4 +59,20 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+ 
+# # コンパイル済みアセットを圧縮するかどうかを指定。圧縮することで、データ容量を減らし、高速化をする
+# config.assets.compress = true
+
+# # JavaScriptの圧縮に使用するプログラムを定義。:uglifierが最も圧縮率が高い
+# config.assets.js_compressor = :uglifier
+
+# # CSSの圧縮に使用するプログラムを定義
+# config.assets.css_compressor = :scss
+
+# # 動的なSprocketsコンパイルをするかどうかを指定
+# config.assets.compile = false
+
+# # デバッグ用にアセットの連結と圧縮をやめるかどうかを指定
+# config.assets.debug = false
 end

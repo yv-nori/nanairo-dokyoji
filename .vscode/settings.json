@@ -23,6 +23,7 @@
         "style.css",
         "${fileBasenameNoExtension}.css"
     
-    ]
+    ],
+    "workbench.tree.renderIndentGuides": "always"
   
 }

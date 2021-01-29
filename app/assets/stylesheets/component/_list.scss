@@ -3,7 +3,7 @@
 	position: fixed;
 	top: $header-height-sp;
 	z-index: map-get($layer, "header");
-	transition: all 1.2s;
+	transition: all $anime-time-long;
 	background-color: $header-background;
 	opacity: $opacity;
 	max-height: 0px;
@@ -31,14 +31,10 @@
 		&:hover {
 			opacity: .8;
 		}
-		&.isOpen {
-			max-height: 100vh !important;
-		}
-
 	}
 	&__link-text {
 		width: 100%;
-		letter-spacing: $list_letterSpace_M;
+		letter-spacing: $letter-spacing-base;
 		font-size: $font_size_M;
 		text-align: center;
 		display: block;
@@ -58,8 +54,8 @@
 	&,
 	&::before,
 	&::after {
-		-webkit-transition: all .4s;
-		transition: all .4s;
+		-webkit-transition: all $anime-time-short;
+		transition: all $anime-time-short;
 	}
 		
 }

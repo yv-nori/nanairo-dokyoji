@@ -6,8 +6,25 @@
 }
 
 .U_border--white {
-  border: solid white 1px;
+  border: solid white 2px;
 }
+
+// .U_dot {
+//   height: 10px;
+//   position: relative;
+//   &::before {
+//     content: "";
+//     border-radius: 100%;
+//     background-image: linear-gradient(to right, #000, #000 3px, transparent 3px, transparent 8px);
+//     background-size: 8px 1px;
+//     background-repeat: repeat-x;
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//   }
+// }
 
 // --------------------------------
 // カラーリングの調整
@@ -29,6 +46,10 @@
 
 .U_bgc__box--base1 {
   background-color: $box-color-base;
+}
+
+.U_bgc__grade--blue {
+background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
 // --------------------------------
@@ -77,4 +98,11 @@
       }
     }
   }
+}
+// --------------------------------
+// その他
+// --------------------------------
+
+.U_trim {
+  overflow: hidden;
 }

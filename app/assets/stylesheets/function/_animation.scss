@@ -38,3 +38,9 @@ $anime-time-long: 1.2s;
     transform: scale(1.2);
   }
 }
+
+.A_toWide {
+  &:hover {
+    transform: scale(1.1);
+  }
+}

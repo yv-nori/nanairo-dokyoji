@@ -85,7 +85,7 @@ meiryo,
 "MS PGothic",
 sans-serif;
 
-$font_title: dnp-shuei-mincho-pr6n,
+$font-family-shuei: dnp-shuei-mincho-pr6n,
 "Noto Serif JP",
 "游明朝",
 YuMincho,
@@ -143,3 +143,15 @@ serif;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Angelface';
+  src: font-url('Angelface.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Baskerville';
+  src: font-url('Baskerville.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

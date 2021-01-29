@@ -15,9 +15,11 @@
 }
 
 .C_text__title {
-	font-size: $font-size-base * 5;
+	font-size: $font-size-base * 6;
   line-height: $line-height-base * 1;
-  font-family: 'DINPro-Medium';
+  font-family: 'Angelface';
+  pointer-events: none;
+  z-index: map-get($layer, 'icon');
 }
 
 .C_text__preschool {
@@ -25,4 +27,68 @@
   font-size: $font-size-base * 5;
   letter-spacing: $letter-spacing-base * 0.4;
   font-family: "sub-en-font";
+}
+
+.C_text__font-awesome {
+  font-family: $font-family-awesome;
+}
+
+.C_text__font-code {
+  font-family: $font-family-code;
+}
+
+.C_text__font-base {
+  font-family: $font-family-base;
+}
+
+.C_text__font-hkgw3 {
+  font-family: $font-family-hkgw3;
+}
+
+.C_text__font-hkgw6 {
+  font-family: $font-family-hkgw6;
+}
+
+.C_text__font-minco {
+  font-family: $font-family-minco;
+}
+
+.C_text__font-gothic {
+  font-family: $font-family-gothic;
+}
+
+.C_text__font-shuei {
+  font-family: $font-family-shuei;
+}
+
+.C_text__font-sub-en {
+  font-family: 'sub-en-font';
+}
+
+.C_text__font-DINPro {
+  font-family: 'DINPro-Medium';
+}
+
+.C_text__font-Koz {
+  font-family: 'KozGoPr6N-Regular';
+}
+
+.C_text__font-NewBask {
+  font-family: 'NewBaskervilleStd-Roman';
+}
+
+.C_text__font-logo {
+  font-family: 'CastroScript_PERSONAL_USE_ONLY';
+}
+
+.C_text__font-Hannari {
+  font-family: 'Hannari';
+}
+
+.C_text__font-Angelface {
+  font-family: 'Angelface';
+}
+
+.C_text__font-Bask {
+  font-family: 'Baskerville';
 }

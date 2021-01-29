@@ -1,9 +1,14 @@
 .C_box {
   display: inline-block;
+  z-index: map-get($layer,'icon');
+  pointer-events: none;
+  padding: 5px 40px;
 }
 
 .C_box--vertical {
   display: inline-block;
+  z-index: map-get($layer, 'icon');
+  pointer-events: none;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   padding: 40px 5px;
@@ -12,8 +17,4 @@
 .C_box--deco {
   width: $deco-width;
   height: $deco-height;
-}
-.C_box {
-  width: $box-width;
-  height: $box-height;
 }

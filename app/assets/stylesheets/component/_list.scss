@@ -15,16 +15,12 @@
 		display: flex;
 		justify-content: center;
 		border-top: darken($header-background, $darken) solid $border-solid-size;
-
 		&:hover {
 			background-color: darken($header-background, $darken);
 		}
-
 		&:last-of-type {
 			border-bottom: #999 solid 1px;
 		}
-
-
 		&:last-of-type {
 			border-bottom: darken($header-background, $darken) solid $border-solid-size;
 		}
@@ -35,7 +31,7 @@
 	&__link-text {
 		width: 100%;
 		letter-spacing: $letter-spacing-base;
-		font-size: $font_size_M;
+		font-size: $font-size-base;
 		text-align: center;
 		display: block;
 

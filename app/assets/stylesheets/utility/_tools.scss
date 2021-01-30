@@ -9,6 +9,10 @@
   border: solid white 2px;
 }
 
+.U_border--dot-right-white {
+  border-right: dotted white 1px;
+}
+
 // .U_dot {
 //   height: 10px;
 //   position: relative;
@@ -48,6 +52,10 @@
   background-color: $box-color-base;
 }
 
+.U_bgc__footer {
+  background-color: darken($footer-color-base,3);
+}
+
 .U_bgc__grade--blue {
 background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
@@ -82,27 +90,37 @@ background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 @for $i from 0 through 100 {
   .U_hx-#{$i} {
     width: #{$i}vh;
-
-    &_pc {
-      @include mq-up("pc") {
-        width: #{$i}vh;
-      }
-    }
   }
   .U_hy-#{$i} {
     height: #{$i}vh;
+  }
+}
 
-    &_pc {
-      @include mq_up("pc") {
-        height: #{$i}vh;
-      }
+@for $i from 0 through 100 {
+  .U_hx-#{$i}_pc {
+    @include mq-up("pc") {
+      width: #{$i}vh;
     }
+  }
+  .U_hy-#{$i}_pc {
+    @include mq-up("pc") {
+      height: #{$i}vh;
+    }
+  }
+}
+
+@for $i from 0 through 100 {
+  .U_hx-#{$i}px {
+    width: #{$i}px;
+  }
+
+  .U_hy-#{$i}px {
+    height: #{$i}px;
   }
 }
 // --------------------------------
 // その他
 // --------------------------------
-
 .U_trim {
   overflow: hidden;
 }

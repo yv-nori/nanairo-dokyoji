@@ -7,3 +7,13 @@
     width: $logo-width_pc;
   }
 }
+.C_logo__footer {
+  width: $logo-width_sp * 0.8;
+  @include mq-up("tab") {
+    width: $logo-width_tab * 0.8;
+  }
+
+  @include mq-up("pc") {
+    width: $logo-width_pc * 0.8;
+  }
+}

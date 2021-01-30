@@ -10,16 +10,22 @@
 
 .C_text__inBox {
 	font-size: $font-size-base;
-  line-height: $line-height-base;
+  line-height: $line-height-base * 0.625;
   letter-spacing: $letter-spacing-base * 0.4;
+  @include mq-up("pc") {
+	  font-size: $font-size-base * 1;
+    line-height: $line-height-base * 1;
+  }
 }
 
 .C_text__title {
-	font-size: $font-size-base * 6;
-  line-height: $line-height-base * 1;
+	font-size: $font-size-base * 5;
   font-family: 'Angelface';
   pointer-events: none;
   z-index: map-get($layer, 'icon');
+  @include mq-up("pc") {
+	  font-size: $font-size-base * 9;
+  }
 }
 
 .C_text__preschool {
@@ -27,6 +33,13 @@
   font-size: $font-size-base * 5;
   letter-spacing: $letter-spacing-base * 0.4;
   font-family: "sub-en-font";
+}
+
+.C_text__footer {
+  color: white;
+  font-size: $font-size-base * 0.85;
+  letter-spacing: $letter-spacing-base * 0.4;
+  text-align: center;
 }
 
 .C_text__font-awesome {

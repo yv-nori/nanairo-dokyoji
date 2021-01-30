@@ -16,7 +16,7 @@
 		content: '';
 		position: absolute;
 		width: 100%;
-		font-size: $font_sizeR_M * 1.8;
+		font-size: $font-size-base * 1.8;
 		position: relative;
 		&::after {
 			content: '';
@@ -45,7 +45,7 @@
 		text-align: center;
 		height: 50%;
 		padding-top: 20px;
-		font-size: $font_sizeR_M;
+		font-size: $font-size-base;
 		letter-spacing: $letter-spacing-base;
 	}
 }

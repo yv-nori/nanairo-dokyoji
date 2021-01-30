@@ -3,6 +3,7 @@
   z-index: map-get($layer,'icon');
   pointer-events: none;
   padding: 5px 40px;
+  white-space: nowrap;
 }
 
 .C_box--vertical {

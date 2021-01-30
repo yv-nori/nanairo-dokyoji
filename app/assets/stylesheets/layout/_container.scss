@@ -49,6 +49,14 @@
 	z-index: map-get($layer, 'cover' );
 }
 
+.L_inner--double-X {
+	width: 50%;
+	height: 100%;
+	@include mq-up("tab") {
+		width: 100%;
+	}
+}
+
 @mixin L_inner--double {
 	width: 100%;
 	height: calc(50% - #{$space-vertical}/2);

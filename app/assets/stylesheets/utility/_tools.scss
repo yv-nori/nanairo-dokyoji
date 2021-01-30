@@ -1,6 +1,7 @@
 // --------------------------------
 // ボーダーの調整
 // --------------------------------
+
 .U_border--tough {
   border: solid black 2px;
 }
@@ -9,8 +10,30 @@
   border: solid white 2px;
 }
 
-.U_border--dot-right-white {
-  border-right: dotted white 1px;
+.U_border--grey-tl {
+  border-top: solid #313130 1px;
+  border-left: solid #313130 1px;
+}
+.U_border--grey-tlr {
+  border-top: solid #313130 1px;
+  border-left: solid #313130 1px;
+  border-right: solid #313130 1px;
+}
+.U_border--grey {
+  border: solid #313130 1px;
+}
+
+.U_border--none_tab {
+  @include mq-up("tab") {
+    border: none;
+  }
+}
+
+.U_border--dot-right-white_tab {
+  @include mq-up("tab") {
+    border: none;
+    border-right: dotted white 1px;
+  }
 }
 
 // .U_dot {
@@ -97,6 +120,43 @@ background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
 @for $i from 0 through 100 {
+  .U_hx-#{$i}px {
+    width: #{$i}px;
+  }
+
+  .U_hy-#{$i}px {
+    height: #{$i}px;
+  }
+}
+
+@for $i from 0 through 100 {
+  .U_hx-#{$i}_tab {
+    @include mq-up("tab") {
+      width: #{$i}vh;
+    }
+  }
+
+  .U_hy-#{$i}_tab {
+    @include mq-up("tab") {
+      height: #{$i}vh;
+    }
+  }
+}
+
+@for $i from 0 through 100 {
+  .U_hx-#{$i}px_tab {
+    @include mq-up("tab") {
+      width: #{$i}px;
+    }
+  }
+  .U_hy-#{$i}px_tab {
+    @include mq-up("tab") {
+      height: #{$i}px;
+    }
+  }
+}
+
+@for $i from 0 through 100 {
   .U_hx-#{$i}_pc {
     @include mq-up("pc") {
       width: #{$i}vh;
@@ -109,15 +169,7 @@ background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   }
 }
 
-@for $i from 0 through 100 {
-  .U_hx-#{$i}px {
-    width: #{$i}px;
-  }
 
-  .U_hy-#{$i}px {
-    height: #{$i}px;
-  }
-}
 // --------------------------------
 // その他
 // --------------------------------

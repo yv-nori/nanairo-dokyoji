@@ -53,10 +53,8 @@ $anime-time-long: 1.2s;
     position: absolute;
     top: 0;
     left: 4%;
-
     cursor: pointer;
     display: inline-block;
-
     transition: 0.5s;
     color: white;
     opacity: 0;
@@ -64,5 +62,80 @@ $anime-time-long: 1.2s;
   &:hover:before {
     transform: translateX(6px);
     opacity: 1;
+  }
+}
+.A_mq-show {
+  &_tab {
+    display: none;
+  }
+  &_pc {
+    display: none;
+  }
+  &_sp {
+    display: block;
+  }
+  @include mq-up("tab") {
+    &_sp {
+      display: none;
+    }
+    &_pc {
+      display: none;
+    }
+    &_tab {
+      display: block;
+    }
+  }
+  @include mq-up("pc") {
+    &_sp {
+      display: none;
+    }
+    &_tab {
+      display: none;
+    }
+
+    &_pc {
+      display: block;
+    }
+  }
+}
+.A_mq-show-inline {
+  &_tab {
+    display: none;
+  }
+
+  &_pc {
+    display: none;
+  }
+
+  &_sp {
+    display: inline;
+  }
+
+  @include mq-up("tab") {
+    &_sp {
+      display: none;
+    }
+
+    &_pc {
+      display: none;
+    }
+
+    &_tab {
+      display: inline;
+    }
+  }
+
+  @include mq-up("pc") {
+    &_sp {
+      display: none;
+    }
+
+    &_tab {
+      display: none;
+    }
+
+    &_pc {
+      display: inline;
+    }
   }
 }

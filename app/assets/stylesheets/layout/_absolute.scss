@@ -11,5 +11,26 @@
       transform: translateY(-1% * $y) translateX(-1% * $x);
       -webkit-transform: translateY(-1% * $y) translateX(-1% * $x);
     }
+    .U_abs-X-#{$x}pct-Y-#{$y}pct {
+      position: absolute;
+      left: -1% * $x;
+      top: -1% * $y;
+      transform: translateY(1% * $y) translateX(1% * $x);
+      -webkit-transform: translateY(1% * $y) translateX(1% * $x);
+    }
+    .U_abs-X#{$x}pct-Y-#{$y}pct {
+      position: absolute;
+      left: 1% * $x;
+      top: -1% * $y;
+      transform: translateY(1% * $y) translateX(-1% * $x);
+      -webkit-transform: translateY(1% * $y) translateX(-1% * $x);
+    }
+    .U_abs-X-#{$x}pct-Y#{$y}pct {
+      position: absolute;
+      left: -1% * $x;
+      top: 1% * $y;
+      transform: translateY(-1% * $y) translateX(1% * $x);
+      -webkit-transform: translateY(-1% * $y) translateX(1% * $x);
+    }
   }
 }

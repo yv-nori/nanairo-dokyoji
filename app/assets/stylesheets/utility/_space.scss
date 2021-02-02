@@ -61,6 +61,31 @@
 	}
 }
 
+@for $i from 0 through 300 {
+	.U_p-#{$i} {
+		padding: #{$i}px;
+	}
+	.U_px-#{$i} {
+		padding-left: #{$i}px;
+		padding-right: #{$i}px;
+	}
+	.U_py-#{$i} {
+		padding-top: #{$i}px;
+		padding-bottom: #{$i}px;
+	}
+	.U_pt-#{$i} {
+		padding-top: #{$i}px;
+	}
+	.U_pr-#{$i} {
+		padding-right: #{$i}px;
+	}
+	.U_pb-#{$i} {
+		padding-bottom: #{$i}px;
+	}
+	.U_pl-#{$i} {
+		padding-left: #{$i}px;
+	}
+}
 // padding
 @for $i from 0 through 100 {
 	.U_p-#{$i}pct {
@@ -176,31 +201,6 @@
 }
 
 // padding
-@for $i from 0 through 300 {
-	.U_p-#{$i} {
-		padding: #{$i}px;
-	}
-	.U_px-#{$i} {
-		padding-left: #{$i}px;
-		padding-right: #{$i}px;
-	}
-	.U_py-#{$i} {
-		padding-top: #{$i}px;
-		padding-bottom: #{$i}px;
-	}
-	.U_pt-#{$i} {
-		padding-top: #{$i}px;
-	}
-	.U_pr-#{$i} {
-		padding-right: #{$i}px;
-	}
-	.U_pb-#{$i} {
-		padding-bottom: #{$i}px;
-	}
-	.U_pl-#{$i} {
-		padding-left: #{$i}px;
-	}
-}
 @for $i from 0 through 300 {
 	.U_px-#{$i}_tab {
 		@include mq-up("tab") {

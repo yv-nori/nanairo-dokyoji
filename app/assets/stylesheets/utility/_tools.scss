@@ -2,6 +2,9 @@
 // ボーダーの調整
 // --------------------------------
 
+.U_border {
+  border: solid black 1px;
+}
 .U_border--tough {
   border: solid black 2px;
 }
@@ -56,13 +59,13 @@
 // --------------------------------
 // カラーリングの調整
 // --------------------------------
-
 // フォントカラー
 .U_fnt-c--white {
   color: white;
 }
 
 // バックグラウンドカラー
+
 .U_bgc--white {
   background-color: white;
 }
@@ -71,8 +74,8 @@
   background-color: $color-base1;
 }
 
-.U_bgc__box--base1 {
-  background-color: $box-color-base;
+.U_bgc__title-box1 {
+  background-color: $title-box-color1;
 }
 
 .U_bgc__footer {
@@ -80,9 +83,11 @@
 }
 
 .U_bgc__grade--blue {
-background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
-
+.U_bgc__grade--lightblue {
+  background: rgb(119,191,196);
+}
 // --------------------------------
 // border-radiusの調整
 // --------------------------------
@@ -175,4 +180,15 @@ background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 // --------------------------------
 .U_trim {
   overflow: hidden;
+}
+.U_trim--font {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.U_text-align {
+  text-align: center;
+}
+.U_z-minus{
+  z-index: map-get($layer,'minus');
 }

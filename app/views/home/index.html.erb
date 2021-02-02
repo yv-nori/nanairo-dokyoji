@@ -1,6 +1,6 @@
 <%= render partial: 'layouts/header' %>
 <section class="TopImage JS_scroll_trigger JS_scroll_TopImage_get">
-  <div class="C_image--parallax">
+  <div class="C_image--parallax__houjin l-inner--full U_hy-100">
     <div class="L_inner--full U_trim U_relative">
       <%# TODO 仮の写真を正規画像へ%>
       <div class="L_inner__cover-shadow"></div>
@@ -16,12 +16,12 @@
     </div>
   </div>
 </section>
-<section class="CatchCopy U_hy-90 U_px-15 U_pt-10_pc A_isClear">
+<section class="CatchCopy U_hy-90 U_hy-80_pc U_px-15 U_pt-10_pc U_px-12pct_pc A_isClear">
   <div class="U_hy-30 JS_scroll_CatchCopy_get"></div>
   <div class="U_hy-25 U_px-25" >
     <h4 class="C_text__sentence">　わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
   </div>
-  <div class="U_hy-35 U_hy-25_pc L_flex--space-around_pc">
+  <div class="U_hy-35 U_hy-25_pc  L_flex--space-around_pc">
     <div class="U_px-10pct">
       <%= link_to root_path, class: 'C_card--border-stretch' do %>
         <h1 class="C_card--border-stretch__text-top">こどもへの願い</h1>
@@ -36,7 +36,7 @@
     </div>
   </div>
 </section>
-<section class="PreSchool U_hy-80 U_py-30 U_hy-55_pc U_py-70_pc U_px-15">
+<section class="PreSchool U_hy-80 U_py-30 U_hy-45_pc U_pb-70_pc U_pt-0_pc U_px-15 U_px-12pct_pc">
   <div class="L_inner--full L_flex--wrap-center">
     <div class="L_inner--double-set U_relative U_trim U_rds--double C_image__parti">
       <%= link_to root_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
@@ -52,11 +52,11 @@
 </section>
 
 <section class="Sub-content">
-  <div class="U_hy-60 U_hy-45_pc U_py-30 U_py-50_pc U_px-15 U_bgc__grade--blue">
+  <div class="U_hy-60 U_hy-45_pc U_py-30 U_px-15 U_px-12pct_pc U_bgc__grade--blue">
     <div class="L_inner--full L_flex--wrap-center">
       <div class="L_inner--double-space U_bgc--white U_p-5 U_rds--little U_relative">
         <h1 class="C_text__title U_abs-X50pct-Y50pct U_fnt-c--white">Recruiting</h1>
-        <div class="C_box U_bgc__box--base1 U_rds--half U_abs-X50pct-Y78pct U_border--white">
+        <div class="C_box U_bgc__title-box1 U_rds--half U_abs-X50pct-Y78pct U_border--white">
           <h4 class="C_text__inBox U_fnt-c--white">
             就職希望の方へ
           </h4>
@@ -66,13 +66,14 @@
         </div>
         <div class="L_inner--full-Y U_trim">
           <div class="C_image__recruit L_inner--full U_relative U_trim U_rds--little">
-            <div class="L_inner__cover-shadow  A_toOpacity A_time-S A_pointer"></div>
+            <%= link_to recruit_index_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
+            <% end %>
           </div>
         </div>
       </div>
       <div class="L_inner--double-space U_bgc--white U_p-5 U_rds--little U_relative">
         <h1 class="C_text__title U_abs-X50pct-Y50pct U_fnt-c--white">Admision</h1>
-        <div class="C_box U_bgc__box--base1 U_rds--half U_abs-X50pct-Y78pct U_border--white">
+        <div class="C_box U_bgc__title-box1 U_rds--half U_abs-X50pct-Y78pct U_border--white">
           <h4 class="C_text__inBox U_fnt-c--white">
             入園希望の方へ
           </h4>
@@ -82,7 +83,8 @@
         </div>
         <div class="L_inner--full U_trim">
           <div class="C_image__recruit L_inner--full U_relative U_trim U_rds--little">
-            <div class="L_inner__cover-shadow  A_toOpacity A_time-S A_pointer"></div>
+            <%= link_to recruit_index_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -101,7 +103,7 @@
   <p class="C_text__font-minco">あア亜aA「font-family-minco」</p>
   <p class="C_text__font-gothic">あア亜aA「font-family-gothic」</p>
   <p class="C_text__font-shuei">あア亜aA「font-family-shuei」</p>
-  <p class="C_text__font-sub-en">あア亜aA「'sub-en-font'」:Brankid[parti]</p>
+  <p class="C_text__font-sub-en">あア亜aA「'Blankid'」:Brankid[parti]</p>
   <p class="C_text__font-DINPro">あア亜aA「'DINPro-Medium';'KozGoPr6N-Regular'」</p>
   <p class="C_text__font-NewBask">あア亜aA「'NewBaskervilleStd-Roman'」</p>
   <p class="C_text__font-logo">あア亜aA「'CastroScript_PERSONAL_USE_ONLY'」：logo</p>

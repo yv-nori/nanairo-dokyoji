@@ -18,8 +18,7 @@ sans-serif;
 $font-family-code: monospace,
 sans-serif;
 
-$font-family-base: 
-'Hannari',
+$font-family-base: 'Hannari',
 dnp-shuei-gothic-gin-std,
 YuGothic,
 "游ゴシック体",
@@ -90,7 +89,7 @@ serif;
 // ================================
 
 @font-face {
-  font-family: 'sub-en-font';
+  font-family: 'Blankid';
   src: font-url('Blankid.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -137,9 +136,59 @@ serif;
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Baskerville';
   src: font-url('Baskerville.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SummerFestival-Regular';
+  src: font-url('SummerFestival-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SummerFestival-Regular';
+  src: font-url('SummerFestival-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CursiveScript';
+  src: font-url('CursiveScript.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IndulgeScript';
+  src: font-url('IndulgeScript.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sono-Bold';
+  src: font-url('Sono-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Forum-Regular';
+  src: font-url('Forum-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'goudy_bookletter_1911';
+  src: font-url('goudy_bookletter_1911.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

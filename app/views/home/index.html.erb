@@ -1,74 +1,116 @@
 <%= render partial: 'layouts/header' %>
-<section class="TopImage js_scroll_TopImage_trigger js_scroll_TopImage_height_get">
-  <div class="TopImage__container">
-    <%# TODO 仮の写真を正規画像へ%>
-    <div class="TopImage__container__cover"></div>
-    <div class="TopImage__container__mouse js_scroll_mouse_invisible_target">
-        <span class="TopImage__container__mouse__material"></span>
-    </div>
-    <div class="TopImage__container__message white js_scroll_message_move_target js_scroll_message_height_get">
-      <span>こどもの<br/>「好き」が見つかる<br/>可能性は無限大</span>
-    </div>
-  </div>
-  <div class="TopImage__container__message black js_scroll_message_move_target">
-      <span>こどもの<br/>「好き」が見つかる<br/>可能性は無限大</span>
-  </div>
-</section>
-<section class="CatchCopy">
-    <div class="CatchCopy__wrapper CatchCopy__wrapper__top js_scroll_CatchCopy__wrapper-top_height_get"></div>
-    <div class="CatchCopy__wrapper CatchCopy__wrapper__middle" >
-      <div class="CatchCopy__wrapper CatchCopy__wrapper__middle__text-box">
-        <h4 class="CatchCopy__wrapper CatchCopy__wrapper__middle__text-box__text">　わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
+<section class="TopImage JS_scroll_trigger JS_scroll_TopImage_get">
+  <div class="C_image--parallax__houjin l-inner--full U_hy-100">
+    <div class="L_inner--full U_trim U_relative">
+      <%# TODO 仮の写真を正規画像へ%>
+      <div class="L_inner__cover-shadow"></div>
+      <div class="C_icon-mouse JS_scroll_isHide_target">
+          <span class="C_icon-mouse__material"></span>
+      </div>
+      <div class="C_scroll-change-color-message--white JS_scroll_move_target JS_scroll_message_get">
+        <h1 class="C_text__catch">こどもの<br/>「好き」が見つかる<br/>可能性は無限大</h1>
       </div>
     </div>
-    <div class="CatchCopy__wrapper CatchCopy__wrapper__bottom">
-      <div class="CatchCopy__wrapper__bottom__text-box">
-        <%= link_to root_path, class: 'CatchCopy__wrapper__bottom__text-box__link' do %>
-          <h1 class="CatchCopy__wrapper__bottom__text-box__link__title 
-          CatchCopy__wrapper__bottom__text-box__link__title__ja">こどもへの願い</h1>
-          <p class="CatchCopy__wrapper__bottom__text-box__link__title 
-          CatchCopy__wrapper__bottom__text-box__link__title__en">VISION</p>
-        <% end %>
-      </div>
-      <div class="CatchCopy__wrapper__bottom__text-box">
-        <%= link_to root_path, class: 'CatchCopy__wrapper__bottom__text-box__link' do %>
-          <h1 class="CatchCopy__wrapper__bottom__text-box__link__title 
-          CatchCopy__wrapper__bottom__text-box__link__title__ja">私たちのあゆみ</h1>
-          <p class="CatchCopy__wrapper__bottom__text-box__link__title 
-          CatchCopy__wrapper__bottom__text-box__link__title__en">HISTORY</p>
-        <% end %>
-      </div>
+    <div class="C_scroll-change-color-message--black JS_scroll_move_target JS_scroll_message_get">
+        <h1 class="C_text__catch">こどもの<br/>「好き」が見つかる<br/>可能性は無限大</h1>
     </div>
   </div>
 </section>
-<section class="PreSchool">
-<div class="wrap-test">
+<section class="CatchCopy U_hy-90 U_hy-80_pc U_px-15 U_pt-10_pc U_px-12pct_pc A_isClear">
+  <div class="U_hy-30 JS_scroll_CatchCopy_get"></div>
+  <div class="U_hy-25 U_px-25" >
+    <h4 class="C_text__sentence">　わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
+  </div>
+  <div class="U_hy-35 U_hy-25_pc  L_flex--space-around_pc">
+    <div class="U_px-10pct">
+      <%= link_to root_path, class: 'C_card--border-stretch' do %>
+        <h1 class="C_card--border-stretch__text-top">こどもへの願い</h1>
+        <p class="C_card--border-stretch__text-bottom">VISION</p>
+      <% end %>
+    </div>
+    <div class="U_px-10pct">
+      <%= link_to root_path, class: 'C_card--border-stretch' do %>
+        <h1 class="C_card--border-stretch__text-top">私たちのあゆみ</h1>
+        <p class="C_card--border-stretch__text-bottom">HISTORY</p>
+      <% end %>
+    </div>
+  </div>
+</section>
+<section class="PreSchool U_hy-80 U_py-30 U_hy-45_pc U_pb-70_pc U_pt-0_pc U_px-15 U_px-12pct_pc">
+  <div class="L_inner--full L_flex--wrap-center">
+    <div class="L_inner--double-set U_relative U_trim U_rds--double C_image__parti">
+      <%= link_to root_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
+        <h3 class="C_text__preschool U_abs-X50pct-Y70pct">Parti</h3>
+      <% end %>
+    </div>
+    <div class="L_inner--double-set U_relative U_trim U_rds--double C_image__piani">
+      <%= link_to root_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
+        <h3 class="C_text__preschool U_abs-X50pct-Y70pct">Piani</h3>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="Sub-content">
+  <div class="U_hy-60 U_hy-45_pc U_py-30 U_px-15 U_px-12pct_pc U_bgc__grade--blue">
+    <div class="L_inner--full L_flex--wrap-center">
+      <div class="L_inner--double-space U_bgc--white U_p-5 U_rds--little U_relative">
+        <h1 class="C_text__title U_abs-X50pct-Y50pct U_fnt-c--white">Recruiting</h1>
+        <div class="C_box U_bgc__title-box1 U_rds--half U_abs-X50pct-Y78pct U_border--white">
+          <h4 class="C_text__inBox U_fnt-c--white">
+            就職希望の方へ
+          </h4>
+        </div>
+        <div class="U_abs-X50pct-Y95pct">
+          <h4 class="C_text__sentence">子どもたちの未来を一緒に育みましょう。</h4>
+        </div>
+        <div class="L_inner--full-Y U_trim">
+          <div class="C_image__recruit L_inner--full U_relative U_trim U_rds--little">
+            <%= link_to recruit_index_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="L_inner--double-space U_bgc--white U_p-5 U_rds--little U_relative">
+        <h1 class="C_text__title U_abs-X50pct-Y50pct U_fnt-c--white">Admision</h1>
+        <div class="C_box U_bgc__title-box1 U_rds--half U_abs-X50pct-Y78pct U_border--white">
+          <h4 class="C_text__inBox U_fnt-c--white">
+            入園希望の方へ
+          </h4>
+        </div>
+        <div class="U_abs-X50pct-Y95pct">
+          <h4 class="C_text__sentence">子どもたちの未来を一緒に育みましょう。</h4>
+        </div>
+        <div class="L_inner--full U_trim">
+          <div class="C_image__recruit L_inner--full U_relative U_trim U_rds--little">
+            <%= link_to recruit_index_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render partial: 'layouts/footer' %>
+
+<div class="L_inner--full U_hy-30">
+  <p class="C_text__font-awesome">あア亜aA「font-family-awesome」</p>
+  <p class="C_text__font-code">あア亜aA「font-family-code」</p>
+  <p class="C_text__font-base">あア亜aA「font-family-base」</p>
+  <p class="C_text__font-hkgw3">あア亜aA「font-family-hkgw3」</p>
+  <p class="C_text__font-hkgw6">あア亜aA「font-family-hkgw6」</p>
+  <p class="C_text__font-minco">あア亜aA「font-family-minco」</p>
+  <p class="C_text__font-gothic">あア亜aA「font-family-gothic」</p>
+  <p class="C_text__font-shuei">あア亜aA「font-family-shuei」</p>
+  <p class="C_text__font-sub-en">あア亜aA「'Blankid'」:Brankid[parti]</p>
+  <p class="C_text__font-DINPro">あア亜aA「'DINPro-Medium';'KozGoPr6N-Regular'」</p>
+  <p class="C_text__font-NewBask">あア亜aA「'NewBaskervilleStd-Roman'」</p>
+  <p class="C_text__font-logo">あア亜aA「'CastroScript_PERSONAL_USE_ONLY'」：logo</p>
+  <p class="C_text__font-Hannari">あア亜aA「'Hannari'」</p>
+  <p class="C_text__font-Angelface">あア亜aA「'Angelface'」</p>
+  <p class="C_text__font-Bask">あア亜aA「'Baskerville'」</p>
 </div>
-  <div class="PreSchool__wrapper">
-    <div class="PreSchool__wrapper__image-box">
-      <div class="PreSchool__wrapper__image-box__image PreSchool__wrapper__image-box__image__parti a"></div>
-      <%= link_to root_path, class: "PreSchool__wrapper__image-box__link-cover" do %>
-        <h3 class="PreSchool__wrapper__image-box__link-cover__title">Parti</h3>
-      <% end %>
-    </div>
-    <div class="PreSchool__wrapper__image-box">
-      <div class="PreSchool__wrapper__image-box__image PreSchool__wrapper__image-box__image__piani aa"></div>
-      <%= link_to root_path, class: "PreSchool__wrapper__image-box__link-cover" do %>
-        <h3 class="PreSchool__wrapper__image-box__link-cover__title">Parti</h3>
-      <% end %>
-    </div>
-  </div>
-</section>
-
-<div class="row content aa">
-
-<p class="a1">aa  Parti</p>
-<p class="a2">Parti</p>
-<p class="a3">Parti</p>
-<p class="a4">Parti</p>
-<p class="a5">Parti</p>
-<p class="a6">Parti</p>
-
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//s.w.org">
@@ -77,5 +119,5 @@
 <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>

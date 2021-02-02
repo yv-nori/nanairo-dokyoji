@@ -1,0 +1,97 @@
+// レイアウト幅
+$layout-width-canvas: 1440px;
+$layout-width-container: 1025px;
+$layout-width-smartphone: 600px;
+
+// ブレークポイント（スマホベース）
+$breakpoints-up: (
+	"sp": "(max-width: #{$layout-width-smartphone - 1px})",
+	"tab-only": "(min-width: #{$layout-width-smartphone}) and (max-width: #{$layout-width-container - 1px})",
+	"tab": "(min-width: #{$layout-width-smartphone})",
+	"pc": "(min-width: #{$layout-width-container})",
+	"ie": "(-ms-high-contrast: active), (-ms-high-contrast: none)"
+);
+
+// ブレークポイント（PCベース）
+$breakpoints-down: (
+	"sp": "(max-width: #{$layout-width-smartphone - 1px})",
+	"tab-only": "(min-width: #{$layout-width-smartphone}) and (max-width: #{$layout-width-container - 1px})",
+	"tab": "(max-width: #{$layout-width-container - 1px})",
+	"pc": "(min-width: #{$layout-width-container})",
+	"ie": "(-ms-high-contrast: active), (-ms-high-contrast: none)"
+);
+
+// ボーダーラディウス
+$border-radius-button: 4px;
+$border-radius-little: 10px;
+
+// ヘッダー高さ
+$header-height_sp: 60px;
+$header-height_pc: 60px;
+
+// z-index の指定
+$layer: (
+	loading: 200,
+	modal: 100,
+	drawer: 50,
+	floating: 40,
+	header: 30,
+	footer: 20,
+	icon: 10,
+	cover: 5,
+	default: 1,
+	minus: -1,
+);
+
+// 余白
+$pd-x_pc: 0;
+$pd-x_tab: 32px;
+$pd-x_sp: 24px;
+
+// スペース
+$space_vertical: 30px;
+$space_side: 20px;
+
+// ナビのメニュー高さ
+$nav-menu-height_sp: 70px;
+
+// デコレーションアイコン
+$deco-width: 75px;
+$deco-height: 75px;
+
+// イメージサイズ
+$image-width: 800px;
+$image-height: 500px;
+
+// ロゴ
+$logo-width_sp: 145px;
+$logo-width_tab: 220px;
+$logo-width_pc: 220px;
+
+// ボタンサイズ(比率:width-height=4px)
+$button-width: 40px;
+$button-height: 36px;
+$button-material-height: 5px;
+
+// ボックスサイズ
+$box-width: 50px;
+$box-height: 10px;
+
+// アイコン
+$icon-width_M: 30px;
+$icon-width_S: 26px;
+$icon-height_M: 30px;
+$icon-height_L: 46px;
+$icon-font: 30px;
+
+// マーカー
+$marker-pd-x: 0.4em;
+$marker-pd-y: 1em;
+
+// ドロワー
+$drawer-bar-space: 5px;
+$drawer-bar-width: 30px;
+$drawer-bar-height: 3px;
+
+// ソリッドサイズ
+$border-solid-size: 1px;

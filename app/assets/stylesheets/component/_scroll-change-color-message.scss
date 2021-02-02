@@ -1,0 +1,24 @@
+$ScrollChangeColorMessage-font-size: 6rem;
+@mixin C_scroll-change-color-message ($color, $z-index) {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, 0);
+  font-size: $ScrollChangeColorMessage-font-size;
+  font-family: 'Hannari';
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 200px;
+  text-align: center;
+  color: $color;
+  z-index: $z-index;
+}
+.C_scroll-change-color-message {
+  &--white {
+    @include C_scroll-change-color-message(white, map-get($layer, 'icon') + 1)
+  }
+  &--black {
+    @include C_scroll-change-color-message(black, map-get($layer, 'icon'))
+  }
+}

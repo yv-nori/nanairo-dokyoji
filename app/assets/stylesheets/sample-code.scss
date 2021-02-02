@@ -1,163 +1,163 @@
-// // 各スライドイメージのcssと表示開始時間の生成
-// @mixin image_slide($number, $max, $count, $media) {
-//   background: image-url('home_top_slide_'+ $media + $number + '.jpg') no-repeat center center / cover;
-//   background-size: cover;
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   background-attachment: fixed;
-//   z-index: $z_image_top - $number;
-//   opacity: 1;
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
+// 各スライドイメージのcssと表示開始時間の生成
+@mixin image_slide($number, $max, $count, $media) {
+  background: image-url('home_top_slide_'+ $media + $number + '.jpg') no-repeat center center / cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-attachment: fixed;
+  z-index: $z_image_top - $number;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 
-//   animation-iteration-count: infinite;
-//   $time: $max * 6s;
+  animation-iteration-count: infinite;
+  $time: $max * 6s;
 
-//   @if $count==0 {
-//     animation: anime-start $time 0s infinite;
-//   }
+  @if $count==0 {
+    animation: anime-start $time 0s infinite;
+  }
 
-//   @else {
-//     animation: anime $time 0s infinite;
-//   }
-// }
-// @mixin image_slide_order($start, $max, $count, $order, $media) {
-//   @while $count <=($max - 1) {
-//     &.slide#{$start}.order#{$order} {
-//       @include image_slide($start, $max, $count, $media);
-//       animation-delay: $count * 6s;
-//       $count: $count + 1;
-//       $start: $start + 1;
+  @else {
+    animation: anime $time 0s infinite;
+  }
+}
+@mixin image_slide_order($start, $max, $count, $order, $media) {
+  @while $count <=($max - 1) {
+    &.slide#{$start}.order#{$order} {
+      @include image_slide($start, $max, $count, $media);
+      animation-delay: $count * 6s;
+      $count: $count + 1;
+      $start: $start + 1;
 
-//       @if $start>$max {
-//         $start: 1;
-//       }
-//     }
-//   }
-// }
-// // スライドショーのアニメーション
-// @keyframes anime-start {
-//   0% {
-//     opacity: 0;
-//   }
+      @if $start>$max {
+        $start: 1;
+      }
+    }
+  }
+}
+// スライドショーのアニメーション
+@keyframes anime-start {
+  0% {
+    opacity: 0;
+  }
 
-//   7% {
-//     opacity: 1;
-//   }
+  7% {
+    opacity: 1;
+  }
 
-//   17% {
-//     opacity: 1;
-//   }
+  17% {
+    opacity: 1;
+  }
 
-//   25% {
-//     opacity: 1;
-//     transform: scale(1.08);
-//   }
+  25% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
 
-//   95% {
-//     opacity: 0;
-//   }
+  95% {
+    opacity: 0;
+  }
 
-//   100% {
-//     z-index: $z_image_under;
-//   }
-// }
+  100% {
+    z-index: $z_image_under;
+  }
+}
 
-// @keyframes anime {
-//   0% {
-//     opacity: 0;
-//   }
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
 
-//   5% {
-//     opacity: 1;
-//   }
+  5% {
+    opacity: 1;
+  }
 
-//   17% {
-//     opacity: 1;
-//   }
+  17% {
+    opacity: 1;
+  }
 
-//   25% {
-//     opacity: 1;
-//     transform: scale(1.08);
-//   }
+  25% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
 
-//   95% {
-//     opacity: 0;
-//   }
+  95% {
+    opacity: 0;
+  }
 
-//   100% {
-//     z-index: $z_image_under;
-//   }
-// }
-// // 各イメージのアニメーション開始時間の異なるcssを動的に作成
+  100% {
+    z-index: $z_image_under;
+  }
+}
+// 各イメージのアニメーション開始時間の異なるcssを動的に作成
 
-// .top_image {
-//   $start: 1;
-//   $max: 3;
-//   $count: 0;
-//   $media: 'sp';
+.top_image {
+  $start: 1;
+  $max: 3;
+  $count: 0;
+  $media: 'sp';
 
-//   @for $i from $start through $max {
-//     @include image_slide_order($start, $max, $count, $i, $media);
-//     $start: $start + 1;
-//   }
+  @for $i from $start through $max {
+    @include image_slide_order($start, $max, $count, $i, $media);
+    $start: $start + 1;
+  }
 
-//   &.isHide {
-//     display: none;
-//   }
-// }
+  &.isHide {
+    display: none;
+  }
+}
 
-// .top_image_pc {
-//   $start: 1;
-//   $max: 3;
-//   $count: 0;
-//   $media: 'pc';
+.top_image_pc {
+  $start: 1;
+  $max: 3;
+  $count: 0;
+  $media: 'pc';
 
-//   @for $i from $start through $max {
-//     @include image_slide_order($start, $max, $count, $i, $media);
-//     $start: $start + 1;
-//   }
+  @for $i from $start through $max {
+    @include image_slide_order($start, $max, $count, $i, $media);
+    $start: $start + 1;
+  }
 
-//   &.isHide {
-//     display: none;
-//   }
-// }
-// --------------------------------
-// スライダー切替
-// --------------------------------
-// %TopImage__container__change-slide_default {
-//   z-index: $z_button_slide;
-//   position: absolute;
-//   width: 30%;
-//   height: 100%;
-//   cursor: pointer !important;
-//   opacity: 1;
-//   transition: all.6s;
-// }
+  &.isHide {
+    display: none;
+  }
+}
+--------------------------------
+スライダー切替
+--------------------------------
+%TopImage__container__change-slide_default {
+  z-index: $z_button_slide;
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  cursor: pointer !important;
+  opacity: 1;
+  transition: all.6s;
+}
 
-// .TopImage__container__change-slide {
-//   &--right {
-//     @extend %TopImage__container__change-slide_default;
-//     right: 0;
-//     text-align: right;
-//   }
+.TopImage__container__change-slide {
+  &--right {
+    @extend %TopImage__container__change-slide_default;
+    right: 0;
+    text-align: right;
+  }
 
-//   &--left {
-//     @extend %TopImage__container__change-slide_default;
-//     left: 0;
-//     text-align: left;
-//   }
+  &--left {
+    @extend %TopImage__container__change-slide_default;
+    left: 0;
+    text-align: left;
+  }
 
-//   &__button {
-//     width: 100%;
-//     height: 100%;
-//   }
+  &__button {
+    width: 100%;
+    height: 100%;
+  }
 
-//   &__icon {
-//     color: $point_color;
-//     font-size: $icon-size;
-//     padding: 0 20px;
-//     opacity: $back_opacity;
-//   }
-// }
+  &__icon {
+    color: $button-color;
+    font-size: $icon-size;
+    padding: 0 20px;
+    opacity: $opacity;
+  }
+}

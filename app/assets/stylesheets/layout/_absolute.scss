@@ -1,0 +1,36 @@
+.U_relative {
+  position: relative;
+}
+
+@for $x from 0 through 100 {
+  @for $y from 0 through 100 {
+    .U_abs-X#{$x}pct-Y#{$y}pct {
+      position: absolute;
+      left: 1% * $x;
+      top: 1% * $y;
+      transform: translateY(-1% * $y) translateX(-1% * $x);
+      -webkit-transform: translateY(-1% * $y) translateX(-1% * $x);
+    }
+    .U_abs-X-#{$x}pct-Y-#{$y}pct {
+      position: absolute;
+      left: -1% * $x;
+      top: -1% * $y;
+      transform: translateY(1% * $y) translateX(1% * $x);
+      -webkit-transform: translateY(1% * $y) translateX(1% * $x);
+    }
+    .U_abs-X#{$x}pct-Y-#{$y}pct {
+      position: absolute;
+      left: 1% * $x;
+      top: -1% * $y;
+      transform: translateY(1% * $y) translateX(-1% * $x);
+      -webkit-transform: translateY(1% * $y) translateX(-1% * $x);
+    }
+    .U_abs-X-#{$x}pct-Y#{$y}pct {
+      position: absolute;
+      left: -1% * $x;
+      top: 1% * $y;
+      transform: translateY(-1% * $y) translateX(1% * $x);
+      -webkit-transform: translateY(-1% * $y) translateX(1% * $x);
+    }
+  }
+}

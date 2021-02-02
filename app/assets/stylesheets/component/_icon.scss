@@ -1,0 +1,50 @@
+@mixin C_icon($icon-width:$icon-width_M, $icon-height:$icon-height_M){
+	display: inline-block;
+	width: $icon-width;
+	height: $icon-height;
+	font-size: $icon-font;
+	position: relative;
+	overflow: hidden;
+	z-index: map-get($layer,'mouse');
+	margin: 0 auto;
+}
+// スクロールするマウスロゴ
+.C_icon-mouse {
+	@include C_icon($icon-width_S, $icon-height_L);
+  border-radius: 13px;
+	border: 2px solid $icon-color;	
+  position: absolute;
+  bottom: 40px;
+	left: 50%;
+  margin-left: -26px;
+	transition: all $anime-time-middle;
+  opacity: 1;
+  &__material {
+    display: block;
+    z-index: map-get($layer, 'mouse');
+    margin: 6px auto;
+    width: 2px;
+    height: 2px;
+    border-radius: 4px;
+    background: $icon-color;
+    border: 1px solid transparent;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: mouse-scroll;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}

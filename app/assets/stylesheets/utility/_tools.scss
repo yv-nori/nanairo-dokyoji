@@ -1,0 +1,194 @@
+// --------------------------------
+// ボーダーの調整
+// --------------------------------
+
+.U_border {
+  border: solid black 1px;
+}
+.U_border--tough {
+  border: solid black 2px;
+}
+
+.U_border--white {
+  border: solid white 2px;
+}
+
+.U_border--grey-tl {
+  border-top: solid #313130 1px;
+  border-left: solid #313130 1px;
+}
+.U_border--grey-tlr {
+  border-top: solid #313130 1px;
+  border-left: solid #313130 1px;
+  border-right: solid #313130 1px;
+}
+.U_border--grey {
+  border: solid #313130 1px;
+}
+
+.U_border--none_tab {
+  @include mq-up("tab") {
+    border: none;
+  }
+}
+
+.U_border--dot-right-white_tab {
+  @include mq-up("tab") {
+    border: none;
+    border-right: dotted white 1px;
+  }
+}
+
+// .U_dot {
+//   height: 10px;
+//   position: relative;
+//   &::before {
+//     content: "";
+//     border-radius: 100%;
+//     background-image: linear-gradient(to right, #000, #000 3px, transparent 3px, transparent 8px);
+//     background-size: 8px 1px;
+//     background-repeat: repeat-x;
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//   }
+// }
+
+// --------------------------------
+// カラーリングの調整
+// --------------------------------
+// フォントカラー
+.U_fnt-c--white {
+  color: white;
+}
+
+// バックグラウンドカラー
+
+.U_bgc--white {
+  background-color: white;
+}
+
+.U_bgc--base1 {
+  background-color: $color-base1;
+}
+
+.U_bgc__title-box1 {
+  background-color: $title-box-color1;
+}
+
+.U_bgc__footer {
+  background-color: darken($footer-color-base,3);
+}
+
+.U_bgc__grade--blue {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+.U_bgc__grade--lightblue {
+  background: rgb(119,191,196);
+}
+// --------------------------------
+// border-radiusの調整
+// --------------------------------
+
+.U_rds--little {
+  border-radius: 10px;
+}
+
+.U_rds--half {
+  border-radius: 50px;
+}
+
+.U_rds--double {
+  border-radius: $border-radius-little;
+  @include mq-up("pc") {
+    border-radius: $border-radius-little 0 0 $border-radius-little;
+
+    &:last-child {
+      border-radius: 0 $border-radius-little $border-radius-little 0;
+    }
+  }
+}
+
+// --------------------------------
+// divサイズ調整
+// --------------------------------
+
+@for $i from 0 through 100 {
+  .U_hx-#{$i} {
+    width: #{$i}vh;
+  }
+  .U_hy-#{$i} {
+    height: #{$i}vh;
+  }
+}
+
+@for $i from 0 through 100 {
+  .U_hx-#{$i}px {
+    width: #{$i}px;
+  }
+
+  .U_hy-#{$i}px {
+    height: #{$i}px;
+  }
+}
+
+@for $i from 0 through 100 {
+  .U_hx-#{$i}_tab {
+    @include mq-up("tab") {
+      width: #{$i}vh;
+    }
+  }
+
+  .U_hy-#{$i}_tab {
+    @include mq-up("tab") {
+      height: #{$i}vh;
+    }
+  }
+}
+
+@for $i from 0 through 100 {
+  .U_hx-#{$i}px_tab {
+    @include mq-up("tab") {
+      width: #{$i}px;
+    }
+  }
+  .U_hy-#{$i}px_tab {
+    @include mq-up("tab") {
+      height: #{$i}px;
+    }
+  }
+}
+
+@for $i from 0 through 100 {
+  .U_hx-#{$i}_pc {
+    @include mq-up("pc") {
+      width: #{$i}vh;
+    }
+  }
+  .U_hy-#{$i}_pc {
+    @include mq-up("pc") {
+      height: #{$i}vh;
+    }
+  }
+}
+
+
+// --------------------------------
+// その他
+// --------------------------------
+.U_trim {
+  overflow: hidden;
+}
+.U_trim--font {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.U_text-align {
+  text-align: center;
+}
+.U_z-minus{
+  z-index: map-get($layer,'minus');
+}

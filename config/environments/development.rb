@@ -48,8 +48,9 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
+  # ローカルホストの更新が遅いのでfalseにした
   config.assets.debug = true
-
+  # config.assets.debug = false
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
@@ -58,5 +59,22 @@ Rails.application.configure do
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  # 更新がおそい
+  # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.file_watcher = ActiveSupport::FileUpdateChecker
+ 
+# # コンパイル済みアセットを圧縮するかどうかを指定。圧縮することで、データ容量を減らし、高速化をする
+# config.assets.compress = true
+
+# # JavaScriptの圧縮に使用するプログラムを定義。:uglifierが最も圧縮率が高い
+# config.assets.js_compressor = :uglifier
+
+# # CSSの圧縮に使用するプログラムを定義
+# config.assets.css_compressor = :scss
+
+# # 動的なSprocketsコンパイルをするかどうかを指定
+# config.assets.compile = false
+
+# # デバッグ用にアセットの連結と圧縮をやめるかどうかを指定
+# config.assets.debug = false
 end

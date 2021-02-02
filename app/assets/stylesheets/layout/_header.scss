@@ -1,0 +1,20 @@
+@mixin L_header {
+	width: 100%;
+	height: $header-height_sp;
+	z-index: map-get($layer, "header");
+	background-color: $header-background;
+	color: $header-color;
+	transition: all $anime-time-middle;
+}
+.L_header {
+	@include L_header;
+	@include mq-up("tab") {
+		height: $header-height_pc;
+	}
+	&--fixed {
+		@include L_header;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+}

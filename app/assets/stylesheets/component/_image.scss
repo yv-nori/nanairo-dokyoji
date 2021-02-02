@@ -1,0 +1,79 @@
+@mixin C_image {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-attachment: fixed;
+}
+.C_image {
+  &__parti {
+    @include C_image;
+    background: image-url('preschool/parti_sp.png') no-repeat center center / cover;
+    @include mq-up("pc") {
+      background: image-url('preschool/parti_pc.png') no-repeat center center / cover;
+    }
+  }
+  &__piani {
+    @include C_image;
+    background: image-url('preschool/piani_sp.png') no-repeat center center / cover;
+    @include mq-up("pc") {
+      background: image-url('preschool/piani_pc.png') no-repeat center center / cover;
+    }
+  }
+  &__recruit {
+    @include C_image;
+    background: image-url('recruit/recruit_sp.png') no-repeat center center / cover;
+    @include mq-up("tab") {
+      background: image-url('recruit/recruit_tab.png') no-repeat center center / cover;
+    }
+    @include mq-up("pc") {
+      background: image-url('recruit/recruit_pc2.jpg') no-repeat center center / cover;
+    }
+    &__staff1 {
+      @include C_image;
+      background: image-url('recruit/staff1_pc.jpg') no-repeat center center / cover;
+      @include mq-up("tab") {
+        background: image-url('recruit/staff1_pc.jpg') no-repeat center center / cover;
+      }
+    }
+    &__staff2 {
+      @include C_image;
+      background: image-url('recruit/staff2_pc.jpg') no-repeat center center / cover;
+      @include mq-up("tab") {
+        background: image-url('recruit/staff2_pc.jpg') no-repeat center center / cover;
+      }
+    }
+    &__staff3 {
+      @include C_image;
+      background: image-url('recruit/staff3_pc.jpg') no-repeat center center / cover;
+      @include mq-up("tab") {
+        background: image-url('recruit/staff3_pc.jpg') no-repeat center center / cover;
+      }
+    }
+    &__staff4 {
+      @include C_image;
+      background: image-url('recruit/staff4_pc.jpg') no-repeat center center / cover;
+      @include mq-up("tab") {
+        background: image-url('recruit/staff4_pc.jpg') no-repeat center center / cover;
+      }
+    }
+  }
+}
+
+@mixin parallax-image-set ($image) {
+  background: image-url($image);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.C_image--parallax {
+  &__houjin{
+    @include mq-up("pc") {
+      @include parallax-image-set('home/home_top_slide_pc.jpg');
+    }
+    @include parallax-image-set('home/home_top_slide_sp.jpg');
+  }
+}

@@ -21,9 +21,9 @@
   }
   &__recruit {
     @include C_image;
-    background: image-url('recruit/recruit_sp.png') no-repeat center center / cover;
+    background: image-url('recruit/recruit.jpg') no-repeat center center / cover;
     @include mq-up("tab") {
-      background: image-url('recruit/recruit_tab.png') no-repeat center center / cover;
+      background: image-url('recruit/recruit.jpg') no-repeat center center / cover;
     }
     @include mq-up("pc") {
       background: image-url('recruit/recruit.jpg') no-repeat center center / cover;

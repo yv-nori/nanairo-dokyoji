@@ -1,4 +1,5 @@
 <%= render partial: 'layouts/header' %>
+<%#-- TODO:h1タグの見直し(seo) --%>
 <%# ==================================== %>
 <%# トップ画像
 <%# ==================================== %>
@@ -35,13 +36,16 @@
     <h4 class="C_text__sentence">　わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>
   </div>
   <%#-- ボトムセクション --%>
-  <div class="U_hy-35 U_hy-25_pc  L_flex--space-around_pc">
-        <div class="U_px-10pct">
+  <div class="U_hy-35 U_hy-25_pc L_flex--space-around_pc">
+    <%#-- TODO:理念のページの作成 --%>
+    <%#-- 理念(子どもへの願い) --%>
+    <div class="U_px-10pct">
       <%= link_to root_path, class: 'C_card--border-stretch' do %>
         <h1 class="C_card--border-stretch__text-top">こどもへの願い</h1>
         <p class="C_card--border-stretch__text-bottom">VISION</p>
       <% end %>
     </div>
+    <%#-- 理念(私たちのあゆみ) --%>
     <div class="U_px-10pct">
       <%= link_to root_path, class: 'C_card--border-stretch' do %>
         <h1 class="C_card--border-stretch__text-top">私たちのあゆみ</h1>
@@ -50,25 +54,38 @@
     </div>
   </div>
 </section>
+<%# ==================================== %>
+<%# 施設の紹介
+<%# ==================================== %>
 <section class="PreSchool U_hy-80 U_py-30 U_hy-45_pc U_pb-70_pc U_pt-0_pc U_px-15 U_px-12pct_pc">
   <div class="L_inner--full L_flex--wrap-center">
+    <%#-- パルティimage --%>
     <div class="L_inner--double-set U_relative U_trim U_rds--double C_image__parti">
+    <%#-- カバーシャドウ＋リンク --%>
       <%= link_to root_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
         <h3 class="C_text__preschool U_abs-X50pct-Y70pct">Parti</h3>
       <% end %>
     </div>
+    <%#-- ピアニィ image--%>
     <div class="L_inner--double-set U_relative U_trim U_rds--double C_image__piani">
+      <%#-- カバーシャドウ＋リンク --%>
       <%= link_to root_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
         <h3 class="C_text__preschool U_abs-X50pct-Y70pct">Piani</h3>
       <% end %>
     </div>
   </div>
 </section>
-
+<%# ==================================== %>
+<%# 就職と入園希望の案内
+<%# ==================================== %>
 <section class="Sub-content">
+  <%#-- TODO:背景のグラデーションの見直し --%>
+  <%#-- 背景のグラデーション --%>
   <div class="U_hy-60 U_hy-45_pc U_py-30 U_px-15 U_px-12pct_pc U_bgc__grade--blue">
     <div class="L_inner--full L_flex--wrap-center">
+      <%#-- 就職希望の方へ --%>
       <div class="L_inner--double-space U_bgc--white U_p-5 U_rds--little U_relative">
+        <%#-- 就職希望 コンテンツ --%>
         <h1 class="C_text__title U_abs-X50pct-Y50pct U_fnt-c--white">Recruiting</h1>
         <div class="C_box U_bgc__title-box1 U_rds--half U_abs-X50pct-Y78pct U_border--white">
           <h4 class="C_text__inBox U_fnt-c--white">
@@ -78,6 +95,7 @@
         <div class="U_abs-X50pct-Y95pct">
           <h4 class="C_text__sentence">子どもたちの未来を一緒に育みましょう。</h4>
         </div>
+        <%#-- 就職希望 image --%>
         <div class="L_inner--full-Y U_trim">
           <div class="C_image__recruit L_inner--full U_relative U_trim U_rds--little">
             <%= link_to recruit_index_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
@@ -85,7 +103,9 @@
           </div>
         </div>
       </div>
+      <%#-- 入園希望の方へ --%>
       <div class="L_inner--double-space U_bgc--white U_p-5 U_rds--little U_relative">
+        <%#-- 入園希望の方へ コンテンツ --%>
         <h1 class="C_text__title U_abs-X50pct-Y50pct U_fnt-c--white">Admision</h1>
         <div class="C_box U_bgc__title-box1 U_rds--half U_abs-X50pct-Y78pct U_border--white">
           <h4 class="C_text__inBox U_fnt-c--white">
@@ -95,6 +115,8 @@
         <div class="U_abs-X50pct-Y95pct">
           <h4 class="C_text__sentence">子どもたちの未来を一緒に育みましょう。</h4>
         </div>
+        <%#-- TODO:入園希望の方へのimage変更 --%>
+        <%#-- 入園希望の方へ image --%>
         <div class="L_inner--full U_trim">
           <div class="C_image__recruit L_inner--full U_relative U_trim U_rds--little">
             <%= link_to recruit_index_path, class: "L_inner__cover-shadow A_time-S A_toOpacity A_pointer" do %>
@@ -108,6 +130,7 @@
 
 <%= render partial: 'layouts/footer' %>
 
+<%#-- フォントの確認用 --%>
 <div class="L_inner--full U_hy-30">
   <p class="C_text__font-awesome">あア亜aA「font-family-awesome」</p>
   <p class="C_text__font-code">あア亜aA「font-family-code」</p>

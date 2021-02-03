@@ -37,9 +37,9 @@
     }
     &__staff2 {
       @include C_image;
-      background: image-url('recruit/staff2_pc.jpg') no-repeat center center / cover;
+      background: image-url('recruit/staff2_pcaa.jpg') no-repeat center center / cover;
       @include mq-up("tab") {
-        background: image-url('recruit/staff2_pc.jpg') no-repeat center center / cover;
+        background: image-url('recruit/staff2_pcaa.jpg') no-repeat center center / cover;
       }
     }
     &__staff3 {

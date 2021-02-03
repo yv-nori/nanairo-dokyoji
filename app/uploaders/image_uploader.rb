@@ -13,9 +13,9 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  include CarrierWave::MiniMagick
-  process resize_to_fit: [800, 800]
-  #上記追記。コメントアウトされてるところもあるので、それを解除でも可。
+  # include CarrierWave::MiniMagick
+  # process resize_to_fit: [800, 800]
+  # #上記追記。コメントアウトされてるところもあるので、それを解除でも可。
 
   # 環境ごとに保存先変更/デフォルトではstorage :fileがコメントアウトで入っている
   if Rails.env.production?

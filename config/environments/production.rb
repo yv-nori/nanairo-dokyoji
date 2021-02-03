@@ -32,7 +32,7 @@ Rails.application.configure do
   #CSSの圧縮ライブラリの設定。以下default。
   config.assets.css_compressor = :sass
   #動的にcompileするか。trueだとprecompileしていないファイルを動的にコンパイルするのでproductionではfalseが良さそう。
-  config.assets.compile = false
+  config.assets.compile = true
   # digest付与を有効にするかどうか。pipelineを通した後のファイルにつく数字をつけるかどうかです。付けてあげるとキャッシュに残っているものも変更を加えることが出来るのでproductionではtrueが良さそう。以下default。
   config.assets.digest = true
   # config.assets.debug = false

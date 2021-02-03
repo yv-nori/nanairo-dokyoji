@@ -64,3 +64,4 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'config'
 gem "aws-sdk-s3", require: false
+gem 'fog-aws'

@@ -7,16 +7,16 @@
 .C_image {
   &__parti {
     @include C_image;
-    background: image-url('preschool/parti_sp.png') no-repeat center center / cover;
+    background: image-url('preschool/parti_sp.jpg') no-repeat center center / cover;
     @include mq-up("pc") {
-      background: image-url('preschool/parti_pc.png') no-repeat center center / cover;
+      background: image-url('preschool/parti_sp.jpg') no-repeat center center / cover;
     }
   }
   &__piani {
     @include C_image;
-    background: image-url('preschool/piani_sp.png') no-repeat center center / cover;
+    background: image-url('preschool/piani_sp.jpg') no-repeat center center / cover;
     @include mq-up("pc") {
-      background: image-url('preschool/piani_pc.png') no-repeat center center / cover;
+      background: image-url('preschool/piani_sp.jpg') no-repeat center center / cover;
     }
   }
   &__recruit {

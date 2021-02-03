@@ -18,12 +18,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   #上記追記。コメントアウトされてるところもあるので、それを解除でも可。
 
   # 環境ごとに保存先変更/デフォルトではstorage :fileがコメントアウトで入っている
-  if Rails.env.development?
-    storage :file
-  elsif Rails.env.test?
-    storage :file
-  else
+  if Rails.env.production?
     storage :fog
+  else
+    storage :file
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

@@ -53,11 +53,11 @@ Rails.application.configure do
   # ローカルホストの更新が遅いのでfalseにした
   # config.assets.js_compressor = nil
   # config.assets.css_compressor = nil
-  # config.assets.compile = true
+  config.assets.compile = false
   config.assets.digest = false
   config.assets.debug = true
 
-  
+
   config.assets.quiet = true
 
   # Raises error for missing translations.

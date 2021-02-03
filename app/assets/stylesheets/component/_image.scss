@@ -21,18 +21,18 @@
   }
   &__recruit {
     @include C_image;
-    background: image-url('assets/recruit/recruit_sp.png') no-repeat center center / cover;
+    background: image-url('/assets/images/recruit/recruit_sp.png') no-repeat center center / cover;
     @include mq-up("tab") {
-      background: image-url('assets/recruit/recruit_tab.png') no-repeat center center / cover;
+      background: image-url('/assets/images/recruit/recruit_tab.png') no-repeat center center / cover;
     }
     @include mq-up("pc") {
-      background: image-url('/app/assets/images/recruit/recruit.jpg') no-repeat center center / cover;
+      background: image-url('/assets/images/recruit/recruit.jpg') no-repeat center center / cover;
     }
     &__staff1 {
       @include C_image;
-      background: image-url('/recruit/staff1_pc.jpg') no-repeat center center / cover;
+      background: image-url('recruit/staff1_pc.jpg') no-repeat center center / cover;
       @include mq-up("tab") {
-        background: image-url('/recruit/staff1_pc.jpg') no-repeat center center / cover;
+        background: image-url('recruit/staff1_pc.jpg') no-repeat center center / cover;
       }
     }
     &__staff2 {

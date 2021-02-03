@@ -48,10 +48,16 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
+
+
   # ローカルホストの更新が遅いのでfalseにした
+  # config.assets.js_compressor = nil
+  # config.assets.css_compressor = nil
+  # config.assets.compile = true
+  config.assets.digest = false
   config.assets.debug = true
-  # config.assets.debug = false
-  # Suppress logger output for asset requests.
+
+  
   config.assets.quiet = true
 
   # Raises error for missing translations.

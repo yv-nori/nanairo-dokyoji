@@ -14,7 +14,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   include CarrierWave::MiniMagick
-  process resize_to_fit: [800, 800]」
+  process resize_to_fit: [800, 800]
   #上記追記。コメントアウトされてるところもあるので、それを解除でも可。
 
   # 環境ごとに保存先変更/デフォルトではstorage :fileがコメントアウトで入っている

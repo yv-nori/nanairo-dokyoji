@@ -26,10 +26,17 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true
+  
+  #Javascriptの圧縮ライブラリの設定。productionではuglifierというgemを利用しているが nilの設定にして無効にすることも出来る。
   config.assets.js_compressor = :uglifier
-  config.assets.css_compressor = :scss
-  config.assets.digest = true 
+  #CSSの圧縮ライブラリの設定。以下default。
+  config.assets.css_compressor = :sass
+  #動的にcompileするか。trueだとprecompileしていないファイルを動的にコンパイルするのでproductionではfalseが良さそう。
+  config.assets.compile = false
+  # digest付与を有効にするかどうか。pipelineを通した後のファイルにつく数字をつけるかどうかです。付けてあげるとキャッシュに残っているものも変更を加えることが出来るのでproductionではtrueが良さそう。以下default。
+  config.assets.digest = true
+  # config.assets.debug = false
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
 

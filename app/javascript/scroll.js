@@ -2,186 +2,87 @@ $(function () {
   let CurrentPath = location.pathname;
   // TODO:共通ファンクションに切り出し（changeMedia）
   if (CurrentPath == "/") {
+    // ヘッダー処理の変数を定義
     let startPosition = 0, windowScrollTop = 0;
+
+    // キャッチコピースクロール処理の定数の定義
+    //スクロールスタートの取得
+    const $scrollTarget = $('.JS_scroll_move_target')
+    const targetWidth = $scrollTarget.width();
+    const targetHeight = $scrollTarget.height();
+    // キャッチコピーのスクロールスタートの地点を定義
+    const startOffset = $scrollTarget.offset().top;
+    // スクロールエンドの取得
+    const $scrollEnd = $('.JS_scroll_move_end_target')
+    const endOffset = $scrollEnd.offset().top;
+    const endHeight = $scrollEnd.height()
+    const maxDistance = (endOffset + endHeight / 2) - (startOffset + targetHeight / 2);
+
     $(window).on('scroll', function () {
+      // ヘッダーの処理
       windowScrollTop = $(this).scrollTop();
+      const $header = $('.JS_scroll_hide-Y_target');
+      const $header_button = $('.JS_scroll_white_target');
+      const $logo_color = $('.JS_scroll_invisible_target');
+      const $logo_white = $('.JS_scroll_visible_target');
+      const $mouse = $('.JS_scroll_invisible_target_mouse');
       if (windowScrollTop >= startPosition) {
         // ヘッダーを隠す
-        $('.JS_scroll_hide-Y_target').addClass('A_isHide-Y');
+        $header.addClass('A_isHide-Y');
         // ヘッダーの透明化
-        $('.JS_scroll_hide-Y_target').addClass('A_isClear--max');
+        $header.addClass('A_isClear--max');
         // ヘッダーのテキストホワイト
-        $('.JS_scroll_hide-Y_target').addClass('A_isWhite');
+        $header.addClass('A_isWhite');
         // ヘッダーのボタンホワイト
-        $('.JS_scroll_white_target').addClass('A_isWhite__bgc');
+        $header_button.addClass('A_isWhite__bgc');
         // ロゴの入れ替え(ホワイト隠す)
-        $('.JS_scroll_invisible_target').addClass('A_isVisible');
-        $('.JS_scroll_invisible_target').removeClass('A_isInvisible');
-        $('.JS_scroll_visible_target').addClass('A_isInvisible');
-        $('.JS_scroll_visible_target').removeClass('A_isVisible');
+        $logo_color.addClass('A_isVisible');
+        $logo_color.removeClass('A_isInvisible');
+        $logo_white.addClass('A_isInvisible');
+        $logo_white.removeClass('A_isVisible');
+        // マウスのロゴの非表示
+        $mouse.removeClass('A_isVisible');
+        $mouse.addClass('A_isInvisible');
       } else {
         // ヘッダーを表示
-        $('.JS_scroll_hide-Y_target').removeClass('A_isHide-Y');
+        $header.removeClass('A_isHide-Y');
         // ヘッダーの透明化解除
-        $('.JS_scroll_hide-Y_target').removeClass('A_isClear--max');
+        $header.removeClass('A_isClear--max');
         // ヘッダーのテキストホワイト解除
-        $('.JS_scroll_hide-Y_target').removeClass('A_isWhite');
+        $header.removeClass('A_isWhite');
         // ヘッダーのボタンホワイト解除
-        $('.JS_scroll_white_target').removeClass('A_isWhite__bgc');
+        $header_button.removeClass('A_isWhite__bgc');
         // ロゴの入れ替え(ホワイト表示)
-        $('.JS_scroll_invisible_target').removeClass('A_isVisible');
-        $('.JS_scroll_invisible_target').addClass('A_isInvisible');
-        $('.JS_scroll_visible_target').removeClass('A_isInvisible');
-        $('.JS_scroll_visible_target').addClass('A_isVisible');
+        $logo_color.removeClass('A_isVisible');
+        $logo_color.addClass('A_isInvisible');
+        $logo_white.removeClass('A_isInvisible');
+        $logo_white.addClass('A_isVisible');
       }
       startPosition = windowScrollTop;
       if (windowScrollTop == 0) {
         // ヘッダーを表示
-        $('.JS_scroll_hide-Y_target').removeClass('A_isHide-Y');
+        $header.removeClass('A_isHide-Y');
         // ヘッダーの透明化
-        $('.JS_scroll_hide-Y_target').addClass('A_isClear--max');
+        $header.addClass('A_isClear--max');
         // ヘッダーのテキストホワイト
-        $('.JS_scroll_hide-Y_target').addClass('A_isWhite');
+        $header.addClass('A_isWhite');
         // ヘッダーのボタンホワイト
-        $('.JS_scroll_white_target').addClass('A_isWhite__bgc');
+        $header_button.addClass('A_isWhite__bgc');
         // ロゴの入れ替え(ホワイト隠す)
-        $('.JS_scroll_invisible_target').addClass('A_isVisible');
-        $('.JS_scroll_invisible_target').removeClass('A_isInvisible');
-        $('.JS_scroll_visible_target').addClass('A_isInvisible');
-        $('.JS_scroll_visible_target').removeClass('A_isVisible');
+        $logo_color.addClass('A_isVisible');
+        $logo_color.removeClass('A_isInvisible');
+        $logo_white.addClass('A_isInvisible');
+        $logo_white.removeClass('A_isVisible');
+        // マウスのロゴの表示
+        $mouse.addClass('A_isVisible');
+        $mouse.removeClass('A_isInvisible');
+      }
+      // キャッチコピースクロールの処理
+      const $scrollTarget = $('.JS_scroll_move_target');
+      if (windowScrollTop <= maxDistance) {
+        $scrollTarget[0].style.cssText = "transform: translate3D(" + (targetWidth * -1) / 2 + "px, " + (windowScrollTop - (targetHeight) / 2) + "px, 0px);";
+        $scrollTarget[1].style.cssText = "transform: translate3D(" + (targetWidth * -1) / 2 + "px, " + (windowScrollTop - (targetHeight) / 2) + "px, 0px);";
       }
     });
-  //   // 画面サイズに応じて処理を切り替え
-  //   const maxSize=600;
-  //   const currentSize=screen.width;
-  //   // スマホの場合
-  //   let ScrollStart = 120;
-  //   if (maxSize >= currentSize) {
-  //     scrollStart = 120;
-  //   // スマホ以上の場合
-  //   } else {
-  //     scrollStart = 0;
-  //   }
-  //   $(window).resize(function () {
-  //     const currentSize=screen.width;
-  //     // スマホの場合
-  //     if (maxSize >= currentSize) {
-  //       scrollStart = 120;
-  //     // スマホ以上の場合
-  //     } else {
-  //       scrollStart = 0;
-  //     }
-  //   });
-  //   // スクロール位置の取得
-  //   const top_height = $('.JS_scroll_TopImage_get').outerHeight(true);
-  //   const CatchWrapTop_height = $('.JS_scroll_CatchCopy_get').
-  //     outerHeight(true);
-  //   const $TopImageMessage = $('.JS_scroll_message_get')
-  //   const TopImageMessage_height = $TopImageMessage.
-  //     outerHeight(true);
-  //   const TopImageMessage_y = $TopImageMessage.offset().top;
-  //   const moving_distance = top_height + (CatchWrapTop_height / 2) - TopImageMessage_y - (TopImageMessage_height * 0.5);
-  
-  //   // キャッチコピーの上下移動
-  //   gsap.to(".JS_scroll_move_target",{
-  //     scrollTrigger: {
-  //       trigger: ".JS_scroll_trigger",
-  //       start: 'center+=' + (TopImageMessage_height * 0.5) + ' center',
-  //       end: 'bottom center',
-  //       scrub: true,
-  //       markers: false,
-  //     },
-  //     duration: 1,
-  //     y: moving_distance,
-  //   });
-  //   // ヘッダー・マウス・スライドボタンの表示
-  //   ScrollTrigger.create({
-  //     trigger: '.JS_scroll_trigger',
-  //     // start: 'center+=' + (10 + scrollStart) + ' center',
-  //     // end: 'center+=' + (10 + scrollStart) + ' bottom',
-  //     start: 'center+=' + (TopImageMessage_height * 0.5 + 25) + ' center',
-  //     end: 'center+=' + (TopImageMessage_height * 0.5 + 25) + ' bottom',
-  //     markers: true,
-  //     onLeaveBack: () => {
-  //       $('.JS_scroll_isShow_target').addClass('A_isHide');
-  //       $('.JS_scroll_isHide_target').removeClass('A_isHide');
-  //       $('.JS_scroll_isPassive_target').removeClass('C_button--hamberger--isActive');
-  //       $('.JS_scroll_isClose_target').removeClass('A_isOpen');
-  //     },
-  //     onLeave: () => {
-  //       $('.JS_scroll_isShow_target').removeClass('A_isHide');
-  //       $('.JS_scroll_isHide_target').addClass('A_isHide');
-  //     }
-  //   });
-  // };
-
-  // if (CurrentPath == "/recruit") {
-  //   // 就職情報のフェードイン表示
-  //   ScrollTrigger.create({
-  //     trigger: '.JS_scroll_isFadeIn_target1',
-  //     start: 'top center',
-  //     end: 'bottom center',
-  //     markers: false,
-  //     onEnter: () => {
-  //       $('.JS_scroll_isFadeIn_target1').addClass('A_isFadeIn');
-  //       $('.JS_scroll_isFadeIn_target1').removeClass('A_isFadeOut');
-  //     },
-  //     // onLeave: () => {
-  //     //   $('.JS_scroll_isFadeIn_target1').removeClass('A_isFadeIn');
-  //     //   $('.JS_scroll_isFadeIn_target1').addClass('A_isFadeOut');
-  //     // },
-  //     // onEnterBack: () => {
-  //     //   $('.JS_scroll_isFadeIn_target1').removeClass('A_isFadeOut');
-  //     //   $('.JS_scroll_isFadeIn_target1').addClass('A_isFadeIn');
-  //     // },
-  //     onLeaveBack: () => {
-  //       $('.JS_scroll_isFadeIn_target1').removeClass('A_isFadeIn');
-  //       $('.JS_scroll_isFadeIn_target1').addClass('A_isFadeOut');
-  //     },
-  //   });
-  //   ScrollTrigger.create({
-  //     trigger: '.JS_scroll_isFadeIn_target2',
-  //     start: 'top center',
-  //     end: 'bottom center',
-  //     markers: false,
-  //     onEnter: () => {
-  //       $('.JS_scroll_isFadeIn_target2').addClass('A_isFadeIn');
-  //       $('.JS_scroll_isFadeIn_target2').removeClass('A_isFadeOut');
-  //     },
-  //     // onLeave: () => {
-  //     //   $('.JS_scroll_isFadeIn_target2').removeClass('A_isFadeIn');
-  //     //   $('.JS_scroll_isFadeIn_target2').addClass('A_isFadeOut');
-  //     // },
-  //     // onEnterBack: () => {
-  //     //   $('.JS_scroll_isFadeIn_target2').removeClass('A_isFadeOut');
-  //     //   $('.JS_scroll_isFadeIn_target2').addClass('A_isFadeIn');
-  //     // },
-  //     onLeaveBack: () => {
-  //       $('.JS_scroll_isFadeIn_target2').removeClass('A_isFadeIn');
-  //       $('.JS_scroll_isFadeIn_target2').addClass('A_isFadeOut');
-  //     }
-  //   });
-  //   ScrollTrigger.create({
-  //     trigger: '.JS_scroll_isFadeIn_target3',
-  //     start: 'top center',
-  //     end: 'bottom center',
-  //     markers: false,
-  //     onEnter: () => {
-  //       $('.JS_scroll_isFadeIn_target3').addClass('A_isFadeIn');
-  //       $('.JS_scroll_isFadeIn_target3').removeClass('A_isFadeOut');
-  //     },
-  //     // onLeave: () => {
-  //     //   $('.JS_scroll_isFadeIn_target3').removeClass('A_isFadeIn');
-  //     //   $('.JS_scroll_isFadeIn_target3').addClass('A_isFadeOut');
-  //     // },
-  //     // onEnterBack: () => {
-  //     //   $('.JS_scroll_isFadeIn_target3').removeClass('A_isFadeOut');
-  //     //   $('.JS_scroll_isFadeIn_target3').addClass('A_isFadeIn');
-  //     // },
-  //     onLeaveBack: () => {
-  //       $('.JS_scroll_isFadeIn_target3').removeClass('A_isFadeIn');
-  //       $('.JS_scroll_isFadeIn_target3').addClass('A_isFadeOut');
-  //     },
-  //   });
   };
 });

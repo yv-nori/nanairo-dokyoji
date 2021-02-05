@@ -38,24 +38,15 @@
     border-right: dotted white 1px;
   }
 }
-
-// .U_dot {
-//   height: 10px;
-//   position: relative;
-//   &::before {
-//     content: "";
-//     border-radius: 100%;
-//     background-image: linear-gradient(to right, #000, #000 3px, transparent 3px, transparent 8px);
-//     background-size: 8px 1px;
-//     background-repeat: repeat-x;
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//   }
-// }
-
+// --------------------------------
+// z-index
+// --------------------------------
+.U_z-icon {
+  z-index: map-get($layer,'icon');
+  &__-1{
+    z-index: map-get($layer,'icon') -1;
+  }
+}
 // --------------------------------
 // カラーリングの調整
 // --------------------------------

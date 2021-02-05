@@ -4,25 +4,47 @@
 <%# トップ画像
 <%# ==================================== %>
 <section class="TopImage">
-  <%#-- イメージコンテナー --%>
-  <div class="C_image--parallax__houjin L-inner--full U_hy-100">
-    <div class="L_inner--full U_trim U_relative">
-      <%#-- TODO:写真の置き換え --%>
-      <%#-- シャドウブラックカバー --%>
-      <div class="L_inner__cover-shadow"></div>
-      <%#-- マウスアイコン --%>
-      <div class="C_icon-mouse JS_scroll_isHide_target">
-          <span class="C_icon-mouse__material"></span>
+  <div class="JS_scroll_move_area L_inner--full">
+    <%#-- イメージコンテナー --%>
+    <div class="C_image--parallax__houjin L-inner--full U_hy-100">
+      <div class="L_inner--full U_trim U_relative">
+        <%#-- TODO:写真の置き換え --%>
+        <%#-- シャドウブラックカバー --%>
+        <div class="L_inner__cover-shadow"></div>
+        <%#-- マウスアイコン --%>
+        <div class="C_icon-mouse U_z-icon JS_scroll_invisible_target_mouse A_isVisible">
+            <span class="C_icon-mouse__material"></span>
+        </div>
+        <%#-- スクロールするキャッチコピー(フロント) --%>
+        <div class="L_inner--full-X U_abs-X50pct-Y50pct U_z-icon U_fnt-c--white JS_scroll_move_target">
+          <p class="C_text__catch-en">
+            <span>
+              Find the Many Like
+              <br class="sp-only">
+              Nurture the future
+            </span>
+          </p>
+          <h2 class="C_text__catch-ja">
+            <span>好きが見つかる</span><br>
+            <span>未来を育む</span>
+          </h2>
+        </div>
       </div>
-      <%#-- スクロールするキャッチコピー(フロント) --%>
-      <%#<div class="C_scroll-change-color-message--white JS_scroll_move_target JS_scroll_message_get">
-        <h1 class="C_text__catch">こどもの<br/>「好き」が見つかる<br/>可能性は無限大</h1>
-      </div>%>
+      <%#-- スクロールするキャッチコピー(バック) --%>
+      <div class="L_inner--full-X U_abs-X50pct-Y50pct U_z-icon__-1 JS_scroll_move_target">
+        <p class="C_text__catch-en">
+          <span>
+            Find the Many Like
+            <br class="sp-only">
+            Nurture the future
+          </span>
+        </p>
+        <h2 class="C_text__catch-ja">
+          <span>好きが見つかる</span><br>
+          <span>未来を育む</span>
+        </h2>
+      </div>
     </div>
-    <%#-- スクロールするキャッチコピー(バック) --%>
-    <%#<div class="C_scroll-change-color-message--black JS_scroll_move_target JS_scroll_message_get">
-        <h1 class="C_text__catch">こどもの<br/>「好き」が見つかる<br/>可能性は無限大</h1>
-    </div>%>
   </div>
 </section>
 <%# ==================================== %>
@@ -30,7 +52,7 @@
 <%# ==================================== %>
 <section class="CatchCopy U_hy-90 U_hy-80_pc U_px-15 U_pt-10_pc U_px-12pct_pc A_isClear">
   <%#-- トップセクション(ここでキャッチコピーが止まる) --%>
-  <div class="U_hy-30 JS_scroll_CatchCopy_get"></div>
+  <div class="U_hy-80 JS_scroll_move_end_target"></div>
   <%#-- ミドルセクション --%>
   <div class="U_hy-25 U_px-25" >
     <h4 class="C_text__sentence">　わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。わたしたちは、こどもの「好き」を一つでも多く見つけたい。</h4>

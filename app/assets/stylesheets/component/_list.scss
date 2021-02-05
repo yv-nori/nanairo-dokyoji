@@ -4,8 +4,7 @@
 	top: $header-height-sp;
 	z-index: map-get($layer, "header");
 	transition: all $anime-time-long;
-	background-color: $header-background;
-	opacity: $opacity;
+	background-color: $color-background;
 	max-height: 0px;
 	overflow: hidden;
 	&__item {
@@ -14,15 +13,15 @@
 		color: $color-text;
 		display: flex;
 		justify-content: center;
-		border-top: darken($header-background, $darken) solid $border-solid-size;
+		border-top: darken($color-background, $darken) solid $border-solid-size;
 		&:hover {
-			background-color: darken($header-background, $darken);
+			background-color: darken($color-background, $darken);
 		}
 		&:last-of-type {
 			border-bottom: #999 solid 1px;
 		}
 		&:last-of-type {
-			border-bottom: darken($header-background, $darken) solid $border-solid-size;
+			border-bottom: darken($color-background, $darken) solid $border-solid-size;
 		}
 		&:hover {
 			opacity: .8;

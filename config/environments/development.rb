@@ -53,10 +53,23 @@ Rails.application.configure do
   # ローカルホストの更新が遅いのでfalseにした
   # config.assets.js_compressor = nil
   # config.assets.css_compressor = nil
-  config.assets.compile = false
+  config.assets.compile = true
   config.assets.digest = false
-  config.assets.debug = true
+  # config.assets.debug = true
 
+  # # コンパイル済みアセットを圧縮するかどうかを指定。圧縮することで、データ容量を減らし、高速化をする
+  # config.assets.compress = true
+  # # JavaScriptの圧縮に使用するプログラムを定義。:uglifierが最も圧縮率が高い
+  # config.assets.js_compressor = :uglifier
+  # # CSSの圧縮に使用するプログラムを定義
+  # config.assets.css_compressor = :scss
+  # # 動的なSprocketsコンパイルをするかどうかを指定
+  # config.assets.compile = true
+  # # デバッグ用にアセットの連結と圧縮をやめるかどうかを指定
+  # config.assets.debug = false
+
+# JSやCSSに修正した場合に再度rake assets:precompileコマンドを実行しなくてはならない。
+# config.assets.debug = falseとconfig.assets.compress = trueとしているため、エラー時のデバッグがしにくい
 
   config.assets.quiet = true
 

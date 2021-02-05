@@ -9,6 +9,12 @@
   font-size: $font-size-base *1.5;
   line-height: $line-height-base;
 }
+.C_link-text {
+  display: inline-block;
+  padding-top: 34px;
+  padding-bottom: 31px;
+  white-space: nowrap;
+}
 // --------------------------------
 // キャッチコピー
 // --------------------------------

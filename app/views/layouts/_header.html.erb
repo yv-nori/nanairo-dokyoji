@@ -3,18 +3,44 @@
 <%# ==================================== %>
 <header>
   <%#-- TODO:PC用のヘッダーメニューとサイズ調整 --%>
-  <div class="L_header--fixed U_py-4 U_px-20 L_flex--between A_isClear JS_scroll_isShow_target isHide">
-    <%#-- ロゴ --%>
-    <div class="C_box--logo">
-      <%= link_to root_path, class: 'L_inner--full' do %>
-        <%= image_tag 'logo/nanairo_logo.png', class: 'L_inner--full ' %>
-      <% end %>
+  <div class="L_header U_px-12 L_flex--between JS_scroll_hide-Y_target A_time-S A_isWhite A_isClear--max">
+    <div class="L_flex L_inner-full">
+      <%#-- ロゴ --%>
+      <h1 class="L_flex--center U_mr-60">
+        <%= link_to root_path, class: 'L_inner--full L_flex--center' do %>
+          <div class="U_relative C_box--logo">
+            <%= image_tag 'logo/nanairo_logo_white.png', class: 'U_abs-X50pct-Y50pct L_inner--full JS_scroll_invisible_target A_isVisible', :alt => '社会福祉法人七彩学舎' %>
+            <%= image_tag 'logo/nanairo_logo.png', class: 'U_abs-X50pct-Y50pct L_inner--full JS_scroll_visible_target A_isInvisible', :alt => '社会福祉法人七彩学舎' %>
+          </div>
+        <% end %>
+      </h1>
+      <%#-- メニューリストPC --%>
+      <ul class="L_flex--space-around pc-only">
+        <li class="U_mr-24 L_inner--full">
+          <%= link_to '七彩学舎について', root_path, class: 'C_link-text' %>
+        </li>
+        <li class="U_mr-24 L_inner--full">
+          <%= link_to '入園をご希望の方へ', root_path, class: 'C_link-text' %>
+        </li>
+        <li class="U_mr-24 L_inner--full">
+          <%= link_to '就職希望の方へ', root_path, class: 'C_link-text' %>
+        </li>
+        <li class="U_mr-24 L_inner--full">
+          <%= link_to 'パルティ道教寺', root_path, class: 'C_link-text' %>
+        </li>
+        <li class="U_mr-24 L_inner--full">
+          <%= link_to 'ピアニィ道教寺', root_path, class: 'C_link-text' %>
+        </li>
+        <li class="L_inner--full">
+          <%= link_to 'お問い合わせ', root_path, class: 'C_link-text' %>
+        </li>
+      </ul>
     </div>
     <%#-- メニューボタン --%>
-    <button class="C_button--hamberger JS_menu-open_trigger JS_scroll_isPassive_target">
-      <span class="C_button--hamberger__material"></span>
-      <span class="C_button--hamberger__material"></span>
-      <span class="C_button--hamberger__material"></span>
+    <button class="C_button--hamberger sp-only JS_menu-open_trigger JS_scroll_isPassive_target">
+      <span class="JS_scroll_white_target  A_isWhite__bgc"></span>
+      <span class="JS_scroll_white_target  A_isWhite__bgc"></span>
+      <span class="JS_scroll_white_target  A_isWhite__bgc"></span>
     </button>
   </div>
   <%#-- メニューリスト --%>

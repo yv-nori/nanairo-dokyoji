@@ -5,6 +5,10 @@
   background-attachment: fixed;
 }
 .C_image {
+  &__logo-white {
+    @include C_image;
+    background: image-url('logo/nanairo_logo_white.png') no-repeat center center / cover;
+  }
   &__parti {
     @include C_image;
     background: image-url('preschool/parti_sp.jpg') no-repeat center center / cover;

@@ -4,6 +4,7 @@
   height: $image-height;
   overflow: hidden;
 }
+
 // テキスト
 .C_box {
   display: inline-block;
@@ -27,7 +28,6 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
   rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-
 .U_box-shadow2{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
   rgba(0, 0, 0, 0.12) 0px -12px 30px,
@@ -81,19 +81,19 @@
 
 .C_box--logo {
   width: $logo-width_sp;
-
+  height: $logo-height_sp;
   @include mq-up("tab") {
     width: $logo-width_tab;
+    height: $logo-height_tab;
   }
-
   @include mq-up("pc") {
     width: $logo-width_pc;
+    height: $logo-height_pc;
   }
 }
 
 .C_box--logo__footer {
   width: $logo-width_sp * 0.8;
-
   @include mq-up("tab") {
     width: $logo-width_tab * 0.8;
   }
@@ -108,5 +108,4 @@
   height: $button-height * 2.2;
   z-index: map-get($layer,'icon');
   cursor: pointer;
-  font-size: 50px;
 }

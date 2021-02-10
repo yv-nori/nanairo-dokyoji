@@ -3,72 +3,72 @@
 <%# ==================================== %>
 <header>
   <%#-- TODO:PC用のヘッダーメニューとサイズ調整 --%>
-  <div class="L_header U_px-12 L_flex--between JS_scroll_hide-Y_target A_time-S A_isWhite A_isClear--max">
-    <div class="L_flex L_inner-full">
+  <div class="L_header JS_scroll_move-change_target isMoveTop">
+    <div class="L_header__inner">
       <%#-- ロゴ --%>
-      <h1 class="L_flex--center U_mr-60">
-        <%= link_to root_path, class: 'L_inner--full L_flex--center' do %>
-          <div class="U_relative C_box--logo">
-            <%= image_tag 'logo/nanairo_logo_white.png', class: 'U_abs-X50pct-Y50pct L_inner--full JS_scroll_invisible_target A_isVisible', :alt => '社会福祉法人七彩学舎' %>
-            <%= image_tag 'logo/nanairo_logo.png', class: 'U_abs-X50pct-Y50pct L_inner--full JS_scroll_visible_target A_isInvisible', :alt => '社会福祉法人七彩学舎' %>
+      <h1 class="L_header__left-logo">
+        <%= link_to root_path, class: 'L_header__link-logo' do %>
+          <div class="L_header__logo JS_scroll_move-change_target isMoveTop">
           </div>
         <% end %>
       </h1>
       <%#-- メニューリストPC --%>
-      <ul class="L_flex--space-around pc-only">
-        <li class="U_mr-24 L_inner--full">
-          <%= link_to '七彩学舎について', root_path, class: 'C_link-text' %>
-        </li>
-        <li class="U_mr-24 L_inner--full">
-          <%= link_to '入園をご希望の方へ', root_path, class: 'C_link-text' %>
-        </li>
-        <li class="U_mr-24 L_inner--full">
-          <%= link_to '就職希望の方へ', root_path, class: 'C_link-text' %>
-        </li>
-        <li class="U_mr-24 L_inner--full">
-          <%= link_to 'パルティ道教寺', root_path, class: 'C_link-text' %>
-        </li>
-        <li class="U_mr-24 L_inner--full">
-          <%= link_to 'ピアニィ道教寺', root_path, class: 'C_link-text' %>
-        </li>
-        <li class="L_inner--full">
-          <%= link_to 'お問い合わせ', root_path, class: 'C_link-text' %>
-        </li>
-      </ul>
+      <nav>
+        <ul class="L_header__pc-nav pc-only">
+          <li class="L_header__pc-nav-item">
+            <%= link_to '七彩学舎について', root_path, class: 'L_header__pc-nav-text' %>
+          </li>
+          <li class="L_header__pc-nav-item">
+            <%= link_to '入園をご希望の方へ', root_path, class: 'L_header__pc-nav-text' %>
+          </li>
+          <li class="L_header__pc-nav-item">
+            <%= link_to '就職希望の方へ', root_path, class: 'L_header__pc-nav-text' %>
+          </li>
+          <li class="L_header__pc-nav-item">
+            <%= link_to 'パルティ道教寺', root_path, class: 'L_header__pc-nav-text' %>
+          </li>
+          <li class="L_header__pc-nav-item">
+            <%= link_to 'ピアニィ道教寺', root_path, class: 'L_header__pc-nav-text' %>
+          </li>
+          <li class="L_header__pc-nav-item">
+            <%= link_to 'お問い合わせ', root_path, class: 'L_header__pc-nav-text' %>
+          </li>
+        </ul>
+      </nav>
     </div>
     <%#-- メニューボタン --%>
-    <button class="C_button--hamberger sp-only JS_menu-open_trigger JS_scroll_isPassive_target">
-      <span class="JS_scroll_white_target  A_isWhite__bgc"></span>
-      <span class="JS_scroll_white_target  A_isWhite__bgc"></span>
-      <span class="JS_scroll_white_target  A_isWhite__bgc"></span>
+    <button class="C_button--hamberger sp-only JS_menu-open_trigger">
+      <span class="JS_scroll_move-change_target isMoveTop"></span>
+      <span class="JS_scroll_move-change_target isMoveTop"></span>
+      <span class="JS_scroll_move-change_target isMoveTop"></span>
     </button>
   </div>
-  <%#-- メニューリスト --%>
-  <nav id="site-NavHeader-navigation">
-    <ul class="C_list__nav-menu_sp JS_menu-open_target JS_scroll_isClose_target">
+  <%#-- メニューリストSP --%>
+  <nav>
+    <ul class="L_header__sp-nav  JS_menu-open_target">
       <%#-- TODO:法人についてのページ作成 --%>
-      <li class="C_list__nav-menu_sp__item">
-        <%= link_to '七彩学舎について', root_path, class: 'C_list__nav-menu_sp__link-text' %>
+      <li class="L_header__sp-nav-item">
+        <%= link_to '七彩学舎について', root_path, class: 'L_header__sp-nav-text' %>
       </li>
       <%#-- TODO:入園のご希望の方へのページ作成 --%>
-      <li class="C_list__nav-menu_sp__item">
-        <%= link_to '入園をご希望の方へ', root_path, class: 'C_list__nav-menu_sp__link-text' %>
+      <li class="L_header__sp-nav-item">
+        <%= link_to '入園をご希望の方へ', root_path, class: 'L_header__sp-nav-text' %>
       </li>
       <%#-- TODO:採用のページの作成 --%>
-      <li class="C_list__nav-menu_sp__item">
-        <%= link_to '就職希望の方へ', recruit_index_path, class: 'C_list__nav-menu_sp__link-text' %>
+      <li class="L_header__sp-nav-item">
+        <%= link_to '就職希望の方へ', recruit_index_path, class: 'L_header__sp-nav-text' %>
       </li>
       <%#-- TODO:パルティのページ作成 --%>
-      <li class="C_list__nav-menu_sp__item">
-        <%= link_to 'パルティ道教寺', root_path, class: 'C_list__nav-menu_sp__link-text' %>
+      <li class="L_header__sp-nav-item">
+        <%= link_to 'パルティ道教寺', root_path, class: 'L_header__sp-nav-text' %>
       </li>
       <%#-- TODO:ピアニィのページ作成 --%>
-      <li class="C_list__nav-menu_sp__item">
-        <%= link_to 'ピアニィ道教寺', root_path, class: 'C_list__nav-menu_sp__link-text' %>
+      <li class="L_header__sp-nav-item">
+        <%= link_to 'ピアニィ道教寺', root_path, class: 'L_header__sp-nav-text' %>
       </li>
       <%#-- TODO:お問い合わせページの作成 --%>
-      <li class="C_list__nav-menu_sp__item">
-        <%= link_to 'お問い合わせ', root_path, class: 'C_list__nav-menu_sp__link-text' %>
+      <li class="L_header__sp-nav-item">
+        <%= link_to 'お問い合わせ', root_path, class: 'L_header__sp-nav-text' %>
       </li>
     </ul>
   </nav>

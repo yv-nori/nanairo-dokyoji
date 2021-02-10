@@ -53,9 +53,9 @@ Rails.application.configure do
   # ローカルホストの更新が遅いのでfalseにした
   # config.assets.js_compressor = nil
   # config.assets.css_compressor = nil
-  config.assets.compile = true
-  config.assets.digest = false
-  # config.assets.debug = true
+  # config.assets.compile = true
+  # config.assets.digest = false
+  config.assets.debug = true
 
   # # コンパイル済みアセットを圧縮するかどうかを指定。圧縮することで、データ容量を減らし、高速化をする
   # config.assets.compress = true

@@ -41,12 +41,11 @@
 // --------------------------------
 // z-index
 // --------------------------------
-.U_z-icon {
-  z-index: map-get($layer,'icon');
-  &__-1{
-    z-index: map-get($layer,'icon') -1;
-  }
+
+.U_z-minus{
+  z-index: map-get($layer,'minus');
 }
+
 // --------------------------------
 // カラーリングの調整
 // --------------------------------
@@ -69,9 +68,6 @@
   background-color: $title-box-color1;
 }
 
-.U_bgc__footer {
-  background-color: darken($footer-color-base,3);
-}
 
 .U_bgc__grade--blue {
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
@@ -89,17 +85,6 @@
 
 .U_rds--half {
   border-radius: 50px;
-}
-
-.U_rds--double {
-  border-radius: $border-radius-little;
-  @include mq-up("pc") {
-    border-radius: $border-radius-little 0 0 $border-radius-little;
-
-    &:last-child {
-      border-radius: 0 $border-radius-little $border-radius-little 0;
-    }
-  }
 }
 
 // --------------------------------
@@ -179,7 +164,4 @@
 }
 .U_text-align {
   text-align: center;
-}
-.U_z-minus{
-  z-index: map-get($layer,'minus');
 }

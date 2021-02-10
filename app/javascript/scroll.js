@@ -1,88 +1,102 @@
+// --------------------------------
+// 関数の読み込み
+// --------------------------------
+import {
+  scrollMoveChange, down, up, top, triggerPosition, scrollToDown, screenBottom, screenCenter, sp_only
+  } from "./func"
 $(function () {
   let CurrentPath = location.pathname;
-  // TODO:共通ファンクションに切り出し（changeMedia）
   if (CurrentPath == "/") {
+    // --------------------------------
+    // 変数定義
+    // --------------------------------
     // ヘッダー処理の変数を定義
     let startPosition = 0, windowScrollTop = 0;
-
     // キャッチコピースクロール処理の定数の定義
     //スクロールスタートの取得
-    const $scrollTarget = $('.JS_scroll_move_target')
+    const $scrollTarget = $('.JS_scroll_move_target');
     const targetWidth = $scrollTarget.width();
     const targetHeight = $scrollTarget.height();
-    // キャッチコピーのスクロールスタートの地点を定義
+    // // キャッチコピーのスクロールスタートの地点を定義
     const startOffset = $scrollTarget.offset().top;
     // スクロールエンドの取得
-    const $scrollEnd = $('.JS_scroll_move_end_target')
+    const $scrollEnd = $('.JS_scroll_move_end_target');
     const endOffset = $scrollEnd.offset().top;
-    const endHeight = $scrollEnd.height()
-    const maxDistance = (endOffset + endHeight / 2) - (startOffset + targetHeight / 2);
-
+    // 最大移動距離を算出
+    const maxDistance = endOffset - startOffset;
+    // トップへ戻るアイコンの表示処理の定数を定義
+    const $to_top = $('.JS_scroll_to-top_active_target');
+    const $passiveTriggers = $('.JS_scroll_to-top_trigger');
+    // シャボンアニメーションのポジションの取得
+    const $animeAdmissionTrigger = $('.JS_scroll_admission_trigger');
+    const $animeAdmissionTargets = $('.JS_anime_admission');
+    const $animeRecruitTrigger = $('.JS_scroll_recruit_trigger');
+    const $animeRecruitTargets = $('.JS_anime_recruit');
+    const $scaleParti = $('.JS_scroll_scale_parti');
+    const $scalePiani = $('.JS_scroll_scale_piani');
+    // --------------------------------
+    // スクロールイベント
+    // --------------------------------
     $(window).on('scroll', function () {
-      // ヘッダーの処理
+      // スクロール位置の取得
       windowScrollTop = $(this).scrollTop();
-      const $header = $('.JS_scroll_hide-Y_target');
-      const $header_button = $('.JS_scroll_white_target');
-      const $logo_color = $('.JS_scroll_invisible_target');
-      const $logo_white = $('.JS_scroll_visible_target');
-      const $mouse = $('.JS_scroll_invisible_target_mouse');
-      if (windowScrollTop >= startPosition) {
-        // ヘッダーを隠す
-        $header.addClass('A_isHide-Y');
-        // ヘッダーの透明化
-        $header.addClass('A_isClear--max');
-        // ヘッダーのテキストホワイト
-        $header.addClass('A_isWhite');
-        // ヘッダーのボタンホワイト
-        $header_button.addClass('A_isWhite__bgc');
-        // ロゴの入れ替え(ホワイト隠す)
-        $logo_color.addClass('A_isVisible');
-        $logo_color.removeClass('A_isInvisible');
-        $logo_white.addClass('A_isInvisible');
-        $logo_white.removeClass('A_isVisible');
-        // マウスのロゴの非表示
-        $mouse.removeClass('A_isVisible');
-        $mouse.addClass('A_isInvisible');
+      // ヘッダーの処理
+      const $move_change_targets = $('.JS_scroll_move-change_target');
+      if (scrollToDown(windowScrollTop, startPosition)) {
+        scrollMoveChange(down.bind(null, $move_change_targets));
       } else {
-        // ヘッダーを表示
-        $header.removeClass('A_isHide-Y');
-        // ヘッダーの透明化解除
-        $header.removeClass('A_isClear--max');
-        // ヘッダーのテキストホワイト解除
-        $header.removeClass('A_isWhite');
-        // ヘッダーのボタンホワイト解除
-        $header_button.removeClass('A_isWhite__bgc');
-        // ロゴの入れ替え(ホワイト表示)
-        $logo_color.removeClass('A_isVisible');
-        $logo_color.addClass('A_isInvisible');
-        $logo_white.removeClass('A_isInvisible');
-        $logo_white.addClass('A_isVisible');
+        scrollMoveChange(up.bind(null, $move_change_targets));
       }
-      startPosition = windowScrollTop;
       if (windowScrollTop == 0) {
-        // ヘッダーを表示
-        $header.removeClass('A_isHide-Y');
-        // ヘッダーの透明化
-        $header.addClass('A_isClear--max');
-        // ヘッダーのテキストホワイト
-        $header.addClass('A_isWhite');
-        // ヘッダーのボタンホワイト
-        $header_button.addClass('A_isWhite__bgc');
-        // ロゴの入れ替え(ホワイト隠す)
-        $logo_color.addClass('A_isVisible');
-        $logo_color.removeClass('A_isInvisible');
-        $logo_white.addClass('A_isInvisible');
-        $logo_white.removeClass('A_isVisible');
-        // マウスのロゴの表示
-        $mouse.addClass('A_isVisible');
-        $mouse.removeClass('A_isInvisible');
+        scrollMoveChange(top.bind(null, $move_change_targets));
       }
-      // キャッチコピースクロールの処理
+      // キャッチコピーのスクロール処理
       const $scrollTarget = $('.JS_scroll_move_target');
       if (windowScrollTop <= maxDistance) {
         $scrollTarget[0].style.cssText = "transform: translate3D(" + (targetWidth * -1) / 2 + "px, " + (windowScrollTop - (targetHeight) / 2) + "px, 0px);";
         $scrollTarget[1].style.cssText = "transform: translate3D(" + (targetWidth * -1) / 2 + "px, " + (windowScrollTop - (targetHeight) / 2) + "px, 0px);";
       }
+      // トップへ戻るボタンの処理
+      $to_top.removeClass('A_isHide');
+      if (triggerPosition(windowScrollTop, $passiveTriggers, 85, 260, screenBottom)) {
+        if (scrollToDown(windowScrollTop, startPosition)) {
+          $to_top.addClass('isPassive-top');
+        } else {
+          $to_top.addClass('isPassive-bottom'); 
+        }
+      } else {
+        $to_top.removeClass('isPassive-top');
+        $to_top.removeClass('isPassive-bottom');
+      }
+      // アニメーションスタート
+      if (sp_only()) {
+        if (triggerPosition(windowScrollTop, $animeAdmissionTrigger, 85, 260, screenCenter)) {
+          $animeAdmissionTargets.addClass('A_isAnimeStart');
+          $animeAdmissionTrigger.addClass('A_isScale');
+        } else {
+          $animeAdmissionTargets.removeClass('A_isAnimeStart');
+          $animeAdmissionTrigger.removeClass('A_isScale');
+        }
+        if (triggerPosition(windowScrollTop, $animeRecruitTrigger, 85, 260, screenCenter)) {
+          $animeRecruitTargets.addClass('A_isAnimeStart');
+          $animeRecruitTrigger.addClass('A_isScale');
+        } else {
+          $animeRecruitTargets.removeClass('A_isAnimeStart');
+          $animeRecruitTrigger.removeClass('A_isScale');
+        }
+        if (triggerPosition(windowScrollTop, $scaleParti, 85, 260, screenCenter)) {
+          $scaleParti.addClass('A_isScale');
+        } else {
+          $scaleParti.removeClass('A_isScale');
+        }
+        if (triggerPosition(windowScrollTop, $scalePiani, 85, 260, screenCenter)) {
+          $scalePiani.addClass('A_isScale');
+        } else {
+          $scalePiani.removeClass('A_isScale');
+        }
+      }
+      // startPositionの初期化
+      startPosition = windowScrollTop;
     });
   };
 });

@@ -32,12 +32,8 @@ $anime-time-long: 1.2s;
 .A_isClear {
   opacity: $opacity;
 }
-
 .A_isClear--tough {
   opacity: $opacity * 0.3;
-}
-.A_isClear--max {
-  background-color: transparent !important;
 }
 .A_isOpen {
   max-height: 100vh!important;
@@ -45,9 +41,6 @@ $anime-time-long: 1.2s;
 .A_isHide {
   opacity: 0!important;
   visibility: hidden!important;
-}
-.A_isHide-Y {
-  top: -100px!important;
 }
 .A_isInvisible {
   opacity: 0!important;
@@ -61,17 +54,20 @@ $anime-time-long: 1.2s;
 .A_isBlock {
   display: block;
 }
-.A_isWhite {
-  color: #fff!important;
+.A_isAnimeStart {
+  animation-play-state : running!important;
 }
-.A_isWhite__bgc {
-  background-color: #fff!important;
+.A_isScale {
+  transform: scale(1.05);
 }
 .A_toOpacity {
   &:hover {
     opacity: 0;
     transform: scale(1.2);
   }
+}
+.A_isStop{
+  animation-play-state: paused!important;
 }
 // --------------------------------
 // アクション(アニメーション)
@@ -81,6 +77,31 @@ $anime-time-long: 1.2s;
     transform: scale(1.1);
   }
 }
+
+// ニュッと伸びるカード
+.A_border-stretch {
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+	&:hover &__text::before {
+    width: 100%;
+	}
+	&__text {
+    position: relative;
+    border-bottom: 1px solid rgba(56, 59, 78, 0.2);
+		&::before {
+      transition: all $anime-time-short;
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 25px;
+      border-bottom: 1px solid #383B4E;
+		}
+	}
+}
+
 // カードのフェードイン
 .A_toFadeIn1 {
   opacity: 0;
@@ -298,7 +319,7 @@ $anime-time-long: 1.2s;
 		display: none!important;
 	}
 }
-@include mq-up("sp") {
+@include mq-down("sp") {
 	.pc-only {
 		display: none!important;
 	}
@@ -378,5 +399,23 @@ $anime-time-long: 1.2s;
     &_pc {
       display: inline;
     }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
   }
 }

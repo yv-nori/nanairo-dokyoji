@@ -1,10 +1,9 @@
+import { sp_only } from './func';
 // ウィンドウズサイズの切替
 $(function () {
   var CurrentPath = location.pathname;
   if (CurrentPath == "/recruit") {
-      const maxSize=600;
-      const currentSize=screen.width;
-      if (maxSize >= currentSize) {
+      if (sp_only) {
         console.log("A");
         const $target2 = $('.JS_window-size_target2');
         const $target3 = $('.JS_window-size_target3')
@@ -21,8 +20,7 @@ $(function () {
         $target3.removeClass('A_toFadeIn1');
       }
       $(window).resize(function () {
-        const currentSize=screen.width;
-        if (maxSize >= currentSize) {
+        if (sp_only) {
           console.log( $('.JS_window-size_target2'));
           const $target2 = $('.JS_window-size_target2');
           const $target3 = $('.JS_window-size_target3')

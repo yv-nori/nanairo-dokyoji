@@ -9,48 +9,6 @@
   font-size: $font-size-base *1.5;
   line-height: $line-height-base;
 }
-.C_link-text {
-  display: inline-block;
-  padding-top: 34px;
-  padding-bottom: 31px;
-  white-space: nowrap;
-}
-// --------------------------------
-// キャッチコピー
-// --------------------------------
-.C_text__catch-en {
-  font-size: 1.6rem;
-  line-height: 175%;
-  margin-bottom: 15px;
-  letter-spacing: 0.08em;
-  font-family: 'Forum-Regular';
-  text-align: center;
-  @include mq-up("tab") {
-    font-size: 3rem;
-    margin-bottom: 25px;
-    font-weight: 500;
-    line-height: 180%;
-  }
-}
-.C_text__catch-ja {
-  font-size: 4.5rem;
-  line-height: 120%;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  font-family: 'Hannari';
-  text-align: center;
-  @include mq-up("tab") {
-    font-size: 9rem;
-    line-height: 120%;
-    white-space: nowrap;
-  }
-}
-.A_isFixed {
-  position: fixed;
-  top:50%;
-  left:50%;
-  transform: translateY(-50%) translateX(-50%);
-}
 // --------------------------------
 // テキストボックスのテキスト
 // --------------------------------
@@ -120,19 +78,6 @@
   }
 }
 
-.C_text__preschool {
-  color: white;
-  font-size: $font-size-base * 5;
-  letter-spacing: $letter-spacing-base * 0.4;
-  font-family: "Blankid";
-}
-
-.C_text__footer {
-  color: white;
-  font-size: $font-size-base * 0.85;
-  letter-spacing: $letter-spacing-base * 0.4;
-  text-align: center;
-}
 
 .C_text__font-awesome {
   font-family: $font-family-awesome;

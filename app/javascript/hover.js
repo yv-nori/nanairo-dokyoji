@@ -27,7 +27,6 @@ $(function () {
       // バックイメージを隠す
       const $show_targets = $('.JS_hover_show_target')
       if ($show_targets.eq($(this).index() - 1).hasClass('A_isClicked')) {
-        
       } else {
         $show_targets.eq($(this).index()-1).removeClass("A_isVisible");
         $show_targets.eq($(this).index() - 1).addClass("A_isInvisible");
@@ -39,7 +38,6 @@ $(function () {
       // テキストのクリア
       const $clear_targets = $('.JS_hover_clear_target')
       $clear_targets.not($clear_targets.eq($(this).index() - 1)).toggleClass("A_isClear--tough");
-      
     });
   };
 });

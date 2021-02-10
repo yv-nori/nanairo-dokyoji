@@ -1,3 +1,123 @@
 .L_footer {
+  background-color: $footer-color-base;
+  position: relative;
+  &__inner {
+    width: 100%;
+    padding-top: 20px;
+    padding: 72px 10vw;
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    @include mq-up ("tab") {
+      justify-content: flex-start;
+    }
+  }
+  &__logo-box {
+    width: $logo-width_sp * 1.3;
+    height: $logo-height_sp * 1.3;
+    @include mq-up("tab") {
+      width: $logo-width_tab * 1.3;
+      height: $logo-height_tab * 1.3;
+      margin: 0 0 40px
+    }
+  }
+  &__nav-inner {
+    padding: 35px 0;
+    @include mq-up("tab") {
+      padding: 35px 0;
+      border: 1px solid $color-border--thin;
+      border-width: 1px 0;
+      line-height: 2;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @include mq-up ("tab") {
+      flex-direction: row;
+    }
+  }
+  &__list-item {
+    width: 100%;
+    position: relative;
+    padding: 15px 0;
+    cursor: pointer;
+    border-bottom: 1px solid $color-border--thin;
+    &:nth-of-type(1) {
+      border-top: 1px solid $color-border--thin;
+    }
+    @include mq-up ("tab") {
+      width: inherit;
 
+      border-bottom: none;
+      &:nth-of-type(1) {
+        border-top: none;
+      }
+      &+& {
+        padding-left: 55px;
+      }
+      &+&::before {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        width: 16px;
+        height: 1px;
+        background-color: $color-border--thin;
+        content: " ";
+      }
+      &:hover .L_footer__list-link::after{
+        width: 100%;
+      }
+    }
+  }
+  &__list-link {
+    position: relative;
+    font-size: $font-size-base;
+    letter-spacing: $letter-spacing-base;
+    display: block;
+    padding-left: 10px;
+    &::before {
+      content: "/";
+      font-size: 12px;
+      color: $color-accent;
+      position: absolute;
+      top: 50%;
+      left: auto;
+      right: 0;
+      margin-top: -12px;
+      @include mq-up ("tab") {
+        top: -20px;
+        left: 3px;
+        margin-top: 0;
+      }
+    }
+    &::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 0;
+      height: 0.1px;
+      background-color: $color-border--thin;
+      content: "";
+      transition: width $anime-time-short cubic-bezier(.25,.46,.45,.94);
+    }
+    @include mq-up ("tab") {
+      display: inline-block;
+      padding-left: 0;
+    }
+  }
+  &__bottom {
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+    @include mq-up ("tab") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__text {
+    font-size: $font-size-base * 0.85;
+    letter-spacing: $letter-spacing-base * 0.4;
+  }
 }

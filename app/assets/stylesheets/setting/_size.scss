@@ -26,8 +26,8 @@ $border-radius-button: 4px;
 $border-radius-little: 10px;
 
 // ヘッダー高さ
-$header-height_sp: 60px;
-$header-height_pc: 60px;
+$header-height_sp: 63px;
+$header-height_pc: 93px;
 
 // z-index の指定
 $layer: (
@@ -50,7 +50,7 @@ $pd-x_sp: 24px;
 
 // スペース
 $space_vertical: 30px;
-$space_side: 20px;
+$space_side: 24px;
 
 // ナビのメニュー高さ
 $nav-menu-height_sp: 70px;
@@ -64,9 +64,13 @@ $image-width: 800px;
 $image-height: 500px;
 
 // ロゴ
-$logo-width_sp: 145px;
-$logo-width_tab: 220px;
-$logo-width_pc: 220px;
+$logo-width_sp: 116px;
+$logo-width_tab: 164px;
+$logo-width_pc: 164px;
+$logo-height_sp: 27.84px;
+$logo-height_tab: 39.86px;
+$logo-height_pc: 39.86px;
+
 
 // ボタンサイズ(比率:width-height=4px)
 $button-width: 40px;

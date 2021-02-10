@@ -1,31 +1,38 @@
 .U_relative {
   position: relative;
 }
+@mixin abs($x:50, $y:50) {
+  position: absolute;
+  left: 1% * $x;
+  top: 1% * $y;
+  transform: translateY(-1% * $y) translateX(-1% * $x);
+  -webkit-transform: translateY(-1% * $y) translateX(-1% * $x);
+}
 
-@for $x from 0 through 100 {
-  @for $y from 0 through 100 {
-    .U_abs-X#{$x}pct-Y#{$y}pct {
+@for $x from 0 through 120 {
+  @for $y from 0 through 120 {
+    .U_abs-X#{$x}-Y#{$y} {
       position: absolute;
       left: 1% * $x;
       top: 1% * $y;
       transform: translateY(-1% * $y) translateX(-1% * $x);
       -webkit-transform: translateY(-1% * $y) translateX(-1% * $x);
     }
-    .U_abs-X-#{$x}pct-Y-#{$y}pct {
+    .U_abs-X-#{$x}-Y-#{$y} {
       position: absolute;
       left: -1% * $x;
       top: -1% * $y;
       transform: translateY(1% * $y) translateX(1% * $x);
       -webkit-transform: translateY(1% * $y) translateX(1% * $x);
     }
-    .U_abs-X#{$x}pct-Y-#{$y}pct {
+    .U_abs-X#{$x}-Y-#{$y} {
       position: absolute;
       left: 1% * $x;
       top: -1% * $y;
       transform: translateY(1% * $y) translateX(-1% * $x);
       -webkit-transform: translateY(1% * $y) translateX(-1% * $x);
     }
-    .U_abs-X-#{$x}pct-Y#{$y}pct {
+    .U_abs-X-#{$x}-Y#{$y} {
       position: absolute;
       left: -1% * $x;
       top: 1% * $y;

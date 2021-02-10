@@ -4,11 +4,12 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-// require("turbolinks").start()
+require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 require("jquery-ui-dist/jquery-ui")
+require("../func.js")
 require("../raindrops")
 require("../menu-open")
 require("../scroll")

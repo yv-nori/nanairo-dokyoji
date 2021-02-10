@@ -1,0 +1,231 @@
+// --------------------------------
+// トップイメージ
+// --------------------------------
+.P_Houjin-kv {
+  &__text-box {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    &.--front {
+      z-index: map-get($layer,'icon');
+      color: #fff;
+    }
+    &.--back {
+      z-index: map-get($layer,'icon') -1;
+    }
+  }
+  &__text-en {
+    font-size: $font-size-base;
+    line-height: 140%;
+    margin-bottom: 15px;
+    letter-spacing: 0em;
+    font-family: 'Forum-Regular';
+    @include mq-up("tab") {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 500;
+      line-height: 180%;
+    }
+  }
+  &__text-ja {
+    font-size: $font-size-base * 2.8125;
+    line-height: 120%;
+    font-weight: 400;
+    letter-spacing: -0.12em;
+    font-family: 'Hannari';
+    @include mq-up("tab") {
+      font-size: 11rem;
+      line-height: 120%;
+      white-space: nowrap;
+    }
+  }
+}
+// --------------------------------
+// 理念
+// --------------------------------
+.P_Houjin-philosophy {
+  &__catch {
+    padding-top: 72px;
+    padding-bottom: 70px;
+    @include mq-up("tab") {
+      padding-top: 144px;
+    }
+  }
+  &__lead {
+    padding-bottom: 98px;
+    @include mq-up("tab") {
+      padding-bottom: 100px;
+    }
+  }
+  &__text {
+    font-size: $font-size-base;
+    margin-bottom: 60px;
+    line-height: 140%;
+    letter-spacing: -0.06em;
+    @include mq-up("tab") {
+      font-size: 2.1rem;
+      line-height:168%;
+      letter-spacing: -0.08em;
+      margin-bottom: 72px;
+    }
+  }
+  &__list-item + li {
+    margin-left: 0;
+    margin-top: 60px;
+    @include mq-up("tab") {
+      margin-left: 80px;
+      margin-top: 0;
+    }
+  }
+  &__link-text {
+    text-align: center;
+    width: 100%;
+    &.ja {
+      padding-bottom: 15px;
+      font-size: $font-size-base * 1.8;
+    }
+    &.en {
+      height: 50%;
+      padding-top: 20px;
+      font-size: $font-size-base;
+      letter-spacing: $letter-spacing-base;
+    }
+  }
+}
+// --------------------------------
+// インフォメーション（就職・入園）
+// --------------------------------
+.P_Info {
+  height: 80vh;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: $space_vertical;
+  @include mq-up("tab") {
+    height: 40vh;
+    margin-bottom: 100px;
+  }
+  &__container {
+    width: 100%;
+    height: 100%;
+  }
+  &__image {
+    width: 100%;
+		height: calc(50% - #{$space_vertical}/2);
+    position: relative;
+    overflow: hidden;
+    margin: 0 $space_side;
+    &:last-child {
+      margin: $space_vertical $space-side 0 $space-side;
+    }
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all $anime-time-middle;
+    &:hover {
+      transform: scale(1.05);
+    }
+    @include mq-up("tab") {
+      width: calc(50% - 120px/2);
+      height: 100%;
+      margin: 0;
+      &:last-child {
+        margin: 0 0 0 120px;
+      }
+    }
+  }
+  &__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    &:hover > * > * > *,&:hover > * > * > * > * ,&:hover > * > * > * > * > *{
+      animation-play-state : running
+    }
+  }
+  &__deco {
+    width: 100%;
+    height: 25%;
+    background-color: #77bfc4;
+    position: absolute;
+    @include abs(50, 102);
+    position: relative;
+  }
+  &__text {
+    color: white;
+    font-size: $font-size-base * 2;
+    letter-spacing: $letter-spacing-base * 1.625;
+    font-family: "goudy_bookletter_1911";
+    @include abs(50, 2);
+    @include mq-up ("tab") {  
+      @include abs(50, 15);
+    }
+  }
+  &__sub-text {
+    color: white;
+    font-size: $font-size-base * 1.3;
+    letter-spacing: $letter-spacing-base * 0.3;
+    white-space: nowrap;
+    font-family: "Hannari";
+    @include abs(50, 85);
+    @include mq-up ("tab") {  
+      @include abs(50, 67);
+    }
+  }
+  &__shabon > * > *{
+    animation-play-state: paused;
+    & > * {
+      animation-play-state: paused;
+      & > * {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+// --------------------------------
+// 各施設
+// --------------------------------
+.P_Facility {
+  height: 80vh;
+  padding-bottom: $space_vertical;
+  @include mq-up("tab") {
+    height: 45vh;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  &__container {
+    width: 100%;
+    height: 100%;
+  }
+  &__image {
+    transition: all $anime-time-short;
+    width: 100%;
+		height: calc(50% - #{$space_vertical}/2);
+    position: relative;
+    overflow: hidden;
+    margin: 0 $space_side;
+    &:last-child {
+      margin: $space_vertical $space-side 0 $space-side;
+    }
+    @include mq-up("tab") {
+		  width: 50%;
+      height: 100%;
+      margin: 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &__text {
+    color: white;
+    font-size: $font-size-base * 5;
+    letter-spacing: $letter-spacing-base * 0.4;
+    font-family: "Blankid";
+    @include abs(50, 60);
+    @include mq-up("tab") {
+      @include abs(50, 65);
+      font-size: $font-size-base * 6.875;
+    }
+  }
+}

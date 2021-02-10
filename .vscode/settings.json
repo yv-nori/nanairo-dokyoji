@@ -24,6 +24,7 @@
         "${fileBasenameNoExtension}.css"
     
     ],
-    "workbench.tree.renderIndentGuides": "always"
+    "workbench.tree.renderIndentGuides": "always",
+    "bracketPairColorizer.showBracketsInGutter": true
   
 }

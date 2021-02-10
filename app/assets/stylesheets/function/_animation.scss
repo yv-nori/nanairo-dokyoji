@@ -1,7 +1,9 @@
 $anime-time-short: 0.4s;
 $anime-time-middle: 0.8s;
 $anime-time-long: 1.2s;
-
+// --------------------------------
+// ポインターイベント
+// --------------------------------
 .A_pointer {
   cursor: pointer;
   pointer-events: auto;
@@ -9,9 +11,12 @@ $anime-time-long: 1.2s;
 .A_pointer--none {
   pointer-events: none;
 }
-
+// --------------------------------
+// アニメーションタイム
+// --------------------------------
 .A_time-S {
   transition: all $anime-time-short;
+  will-change: transform;
 }
 
 .A_time-M {
@@ -21,26 +26,24 @@ $anime-time-long: 1.2s;
 .A_time-L {
   transition: all $anime-time-long;
 }
-
+// --------------------------------
+// アクション(状態変更)
+// --------------------------------
 .A_isClear {
   opacity: $opacity;
 }
-
 .A_isClear--tough {
   opacity: $opacity * 0.3;
 }
-
 .A_isOpen {
   max-height: 100vh!important;
 }
-
 .A_isHide {
   opacity: 0!important;
   visibility: hidden!important;
 }
-
 .A_isInvisible {
-  opacity: 0;
+  opacity: 0!important;
 }
 .A_isVisible {
   opacity: 1;
@@ -51,19 +54,79 @@ $anime-time-long: 1.2s;
 .A_isBlock {
   display: block;
 }
+.A_isAnimeStart {
+  animation-play-state : running!important;
+}
+.A_isScale {
+  transform: scale(1.05);
+}
 .A_toOpacity {
   &:hover {
     opacity: 0;
     transform: scale(1.2);
   }
 }
-
+.A_isStop{
+  animation-play-state: paused!important;
+}
+// --------------------------------
+// アクション(アニメーション)
+// --------------------------------
 .A_toWide {
   &:hover {
     transform: scale(1.1);
   }
 }
 
+// ニュッと伸びるカード
+.A_border-stretch {
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+	&:hover &__text::before {
+    width: 100%;
+	}
+	&__text {
+    position: relative;
+    border-bottom: 1px solid rgba(56, 59, 78, 0.2);
+		&::before {
+      transition: all $anime-time-short;
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 25px;
+      border-bottom: 1px solid #383B4E;
+		}
+	}
+}
+
+// カードのフェードイン
+.A_toFadeIn1 {
+  opacity: 0;
+  transform: translate(-20px, 0);
+  transition: all 1s ease-out;
+}
+.A_toFadeIn2 {
+  opacity: 0;
+  transform: translate(-30px, 0);
+  transition: all 1.5s ease-out;
+}
+.A_toFadeIn3 {
+  opacity: 0;
+  transform: translate(-40px, 0);
+  transition: all 2s ease-out;
+}
+.A_isFadeIn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.A_isFadeOut {
+  opacity: 0;
+  transform: translate(-20px, 0);
+}
+// 職員のイントロダクションのホバー
 .A_toRotate {
   &__target {
     transition: 0.5s;
@@ -73,7 +136,7 @@ $anime-time-long: 1.2s;
     transform: rotateZ(90deg);
   }
 }
-
+// 職員のイントロダクションのフリップ
 .A_toFlip {
   position : relative;
   transition: 0.5s;
@@ -115,6 +178,9 @@ $anime-time-long: 1.2s;
     opacity: 1;
   }
 }
+// --------------------------------
+// フッター項目選択ホバー時のカーソル表示
+// --------------------------------
 .A_toCursor {
   transition: all 0.5s;
   position: relative;
@@ -134,8 +200,9 @@ $anime-time-long: 1.2s;
     opacity: 1;
   }
 }
-
-
+// --------------------------------
+// スタッフ画像の切り替え
+// --------------------------------
 .A_changeImage{
   &__triger1 {
     opacity: 1;
@@ -214,10 +281,6 @@ $anime-time-long: 1.2s;
     opacity: 0;
   }
 }
-.L_inner--test {
-  height: 200%;
-  width: 100%;
-}
 .A_toChangeImage {
   &--fadeOut{
     transition: all 0.8s;
@@ -247,29 +310,21 @@ $anime-time-long: 1.2s;
   }
 }
 
-.A_toFadeIn1 {
-	opacity: 0;
-	transform: translate(-20px, 0);
-	transition: all 1s ease-out;
+// --------------------------------
+// メディアクエリ
+// --------------------------------
+// メディアクエリの表示
+@include mq-up("tab") {
+	.sp-only {
+		display: none!important;
+	}
 }
-.A_toFadeIn2 {
-	opacity: 0;
-	transform: translate(-30px, 0);
-	transition: all 1.5s ease-out;
+@include mq-down("sp") {
+	.pc-only {
+		display: none!important;
+	}
 }
-.A_toFadeIn3 {
-	opacity: 0;
-	transform: translate(-40px, 0);
-	transition: all 2s ease-out;
-}
-.A_isFadeIn {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.A_isFadeOut {
-  opacity: 0;
-  transform: translate(-20px, 0);
-}
+
 .A_mq-show {
   &_tab {
     display: none;
@@ -344,5 +399,23 @@ $anime-time-long: 1.2s;
     &_pc {
       display: inline;
     }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
   }
 }

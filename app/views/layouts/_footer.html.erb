@@ -1,33 +1,43 @@
 <footer>
-  <div class="U_hy-32 U_hy-20_tab U_pt-20 U_bgc__footer">
-    <div class=" U_py-4 U_px-20 L_flex--center">
-      <div class="C_box--logo__footer">
-          <%= image_tag 'logo/nanairo_logo_white.png', class: 'L_inner--full ' %>
-      </div>
-    </div>
-    <div class="L_flex--center U_mt-20" >
-      <h4 class="C_text__footer">〒597-0033　大阪府貝塚市半田1-3-6<span class="A_mq-show_tab--inline A_mq-show--inline_pc">　</span><br class="A_mq-show_sp">TEL 072-427-8969 FAX 072-426-5432</h4>
-    </div>
-    <div class="U_pt-10 U_px-10pct_tab U_px-20pct_pc">
-      <nav id="site-NavFooter-navigation">
-        <ul class="L_flex--wrap-center L_flex--space-around_tab U_hy-40px U_hy-23px_tab">
-          <li class="L_inner--double-X U_border--dot-right-white_tab U_border--grey-tl U_pt-8 U_pt-0_tab">
-            <%= link_to '七彩学舎', root_path, class: 'C_text__footer L_inner--full-block A_toCursor' %>
+  <div class="L_footer">
+    <div class="L_footer__inner">
+      <div class="C_box__side-bar pc-only"></div>
+      <h1 class="L_footer__logo">
+        <div class="L_footer__logo-box">
+          <div class="C_image__logo"></div>
+        </div>
+      </h1>
+      <nav class="L_footer__nav-inner">
+        <ul class="L_footer__list">
+          <li class="L_footer__list-item ">
+            <%= link_to '七彩学舎', root_path, class: 'L_footer__list-link' %>
           </li>
-          <li class="L_inner--double-X U_border--dot-right-white_tab U_border--grey-tlr U_pt-8 U_pt-0_tab">
-            <%= link_to '法人概要', root_path, class: 'C_text__footer L_inner--full-block A_toCursor' %>
+          <li class="L_footer__list-item">
+            <%= link_to '法人概要', root_path, class: 'L_footer__list-link' %>
           </li>
-          <li class="L_inner--double-X U_border--dot-right-white_tab U_border--grey-tl U_pt-8 U_pt-0_tab">
-            <%= link_to 'お問い合わせ', root_path, class: 'C_text__footer L_inner--full-block A_toCursor' %>
+          <li class="L_footer__list-item">
+            <%= link_to 'お問い合わせ', root_path, class: 'L_footer__list-link' %>
           </li>
-          <li class="L_inner--double-X U_border--dot-right-white_tab U_border--grey U_pt-8 U_pt-0_tab">
-            <%= link_to '個人情報保護', root_path, class: 'C_text__footer L_inner--full-block A_toCursor' %>
+          <li class="L_footer__list-item">
+            <%= link_to '個人情報保護', root_path, class: 'L_footer__list-link' %>
           </li>
-          <li class="L_inner--double-X U_border--grey U_border--none_tab U_pt-8 U_pt-0_tab">
-            <%= link_to 'サイトポリシー', root_path, class: 'C_text__footer L_inner--full-block A_toCursor' %>
+          <li class="L_footer__list-item">
+            <%= link_to 'サイトポリシー', root_path, class: 'L_footer__list-link' %>
           </li>
         </ul>
       </nav>
+      <div class="L_footer__bottom" >
+        <p class="L_footer__text">
+          〒597-0033　大阪府貝塚市半田1-3-6<br class="sp-only">
+          <span class="pc-only">　</span>
+          TEL 072-427-8969 FAX 072-426-5432
+        </p>
+        <p class="L_footer__text">
+          <small>Copyright © Nanairo Gakusya<br class="sp-only">
+          <span class="pc-only"> </span>
+          Partners Inc. All Rights Reserved.</small>
+        </p>
+      </div>
     </div>
   </div>
 </footer>

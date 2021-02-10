@@ -12,3 +12,9 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+#he asset "logo/nanairo_logo.png" is not present in the asset pipeline.
+# #↑↑↑↑のエラーが出るので↓↓↓↓を追加
+# assets.precompile += %w(basic.css)
+# assets = Rails.application.config.assets
+# assets.precompile += %w(basic.css)

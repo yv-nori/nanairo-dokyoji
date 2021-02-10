@@ -10,19 +10,6 @@
   line-height: $line-height-base;
 }
 // --------------------------------
-// キャッチコピー
-// --------------------------------
-.C_text__catch {
-  font-size: $font-size-base * 1.55;
-  line-height: $line-height-base * 1.55;
-}
-.C_text__catch--L {
-  font-size: $font-size-base * 2.5;
-  line-height: $line-height-base * 1;
-  z-index: map-get($layer, 'icon');
-  pointer-events: none;
-}
-// --------------------------------
 // テキストボックスのテキスト
 // --------------------------------
 .C_text__inBox {
@@ -91,19 +78,6 @@
   }
 }
 
-.C_text__preschool {
-  color: white;
-  font-size: $font-size-base * 5;
-  letter-spacing: $letter-spacing-base * 0.4;
-  font-family: "Blankid";
-}
-
-.C_text__footer {
-  color: white;
-  font-size: $font-size-base * 0.85;
-  letter-spacing: $letter-spacing-base * 0.4;
-  text-align: center;
-}
 
 .C_text__font-awesome {
   font-family: $font-family-awesome;

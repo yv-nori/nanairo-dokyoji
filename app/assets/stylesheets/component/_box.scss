@@ -14,15 +14,6 @@
   white-space: nowrap;
 }
 
-.C_box--vertical {
-  display: inline-block;
-  z-index: map-get($layer, 'icon');
-  pointer-events: none;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  padding: 40px 5px;
-}
-
 // ロゴやデコ
 .C_box__shabon_SSS {
   width: $deco-width * 0.4;
@@ -71,6 +62,9 @@
   height: $button-height * 2.2;
   z-index: map-get($layer,'icon');
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 // サイドバー
 .C_box__side-bar {

@@ -84,15 +84,6 @@
 	}
 }
 
-.L_inner--quarter {
-	width: 100%;
-	height: 25%;
-	@include mq-up("tab") {
-		width: 50%;
-		height: 50%;
-	}
-}
-
 @for $x from 0 through 100 {
 	@for $y from 0 through 100 {
 		.L_inner--X#{$x}pct-Y#{$y}pct {

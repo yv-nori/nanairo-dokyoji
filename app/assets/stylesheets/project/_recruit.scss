@@ -1,0 +1,220 @@
+.P_Recruit__kv {
+  &__title-box {
+    border-radius: $border-radius-little;
+    display: inline-block;
+    z-index: map-get($layer, 'icon');
+    pointer-events: none;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    padding: 40px 5px;
+    background-color: #fff;
+    border: 2px #000 solid;
+    &.right {
+      @include abs(20,40);
+    }
+    &.left {
+      @include abs(10,40);
+    }
+  }
+  &__text {
+    font-size: $font-size-base *1.5;
+    line-height: $line-height-base;
+  }
+  &__main-title {
+    font-size: $font-size-base * 4;
+    letter-spacing: $letter-spacing-base * 2;
+    font-family: 'goudy_bookletter_1911';
+    pointer-events: none;
+    z-index: map-get($layer, 'icon');
+    color: #fff;
+    @include abs(50,94);
+    @include mq-up("pc") {
+      font-size: $font-size-base * 6;
+    letter-spacing: $letter-spacing-base * 4.5;
+    }
+  }
+  &__sub-title {
+    @include abs(50,98);
+    font-size: $font-size-base * 4;
+    letter-spacing: $letter-spacing-base * 2;
+    font-family: 'goudy_bookletter_1911';
+    pointer-events: none;
+    z-index: map-get($layer, 'icon');
+    @include mq-up("pc") {
+      font-size: $font-size-base * 2.2;
+      letter-spacing: $letter-spacing-base * 1;
+      color: white;
+    }
+  }
+}
+.P_Recruit__concept {
+  position: relative;
+  &__title {
+    font-size: $font-size-base * 4;
+    letter-spacing: 0px;
+    font-family: 'Blankid';
+    pointer-events: none;
+    z-index: map-get($layer, 'icon');
+    transform: rotate(-9deg);
+    @include abs(12,14);
+    @include mq-up("pc") {
+      font-size: $font-size-base * 4;
+    }
+  }
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  &__inner {
+    width: 50%;
+    height: 100%;
+    &.left {
+      padding-right: 30px;
+    }
+    &-left {
+      &.title {
+        font-size: $font-size-base *1.5;
+        line-height: $line-height-base;
+      }
+      &.sentense {
+        font-size: $font-size-base *1.5;
+        line-height: $line-height-base;
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius-little;
+    border: 1px #000 solid;
+  }
+}
+.P_Recruit__staff {
+  &__panel-box {
+    position: relative;
+    display: flex;
+  }
+  &__cover {
+    @include abs(50,50);
+  }
+  &__inner {
+    width: 100%;
+    height: 25%;
+    position: relative;
+    pointer-events: auto;
+    @include mq-up ("tab") {
+      width: 50%;
+      height: 50%;
+    }
+  }
+  &__front-image {
+    width: 100%;
+    height: 100%;
+    transition: all $anime-time-short;
+  }
+  &__front-catch {
+    text-align: center;
+    @include abs(50,50);
+    color: #fff;
+  }
+  &__btn {
+    @include abs(100,50);
+  }
+  &__back-image {
+    height: 100%;
+    width: 100%;
+    padding: 40px 50px 40px 20px;
+    transition: all $anime-time-short;
+  }
+}
+.P_Recruit__concept__intro {
+  width: 100%;
+  height: 100%;
+}
+.P_Recruit__concept__flip-front {
+  width: 100%;
+  height: 100%;
+  box-shadow: $shadow-strong;
+  opacity: $opacity;
+  background-color: #fff;
+  border-radius: $border-radius-little;
+  .L_container {
+    &__top {
+      display: flex;
+      width: 100%;
+      height: 20%;
+    }
+    &__name {
+      height: 100%;
+      width: 50%;
+      display: flex;
+    }
+    &__info {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    &__catch {
+      width: 100%;
+      height: 20%;
+    }
+    &__catch-sentense {
+      width: 100%;
+      height: 20%;
+    }
+    &__bottom {
+      width: 100%;
+      height: 40%;
+    }
+    &__holiday {
+      width: 50%;
+      height: 100%;
+    }
+    &__favorite {
+      width: 50%;
+      height: 100%;
+    }
+  }
+}
+.P_Recruit__concept__flip-back {
+  width: 100%;
+  height: 100%;
+  opacity: $opacity;
+  border-radius: $border-radius-little;
+  background-color: #fff;
+  box-shadow: $shadow-strong;
+}
+.P_Recruit__job-info {
+  width: 100%;
+  height: 100vh;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__card {
+    width: 100%;
+    height: 33.33%;
+    background-color: #fff;
+    box-shadow: $shadow;
+
+    @include mq-up ("tab") {
+      width: 33.33%;
+      height: 100%;
+    }
+  }
+  &__titel-box {
+    border-radius: $border-radius-little;
+    background-color: #000;
+  }
+  &__title {
+
+  }
+  &__sub2-title {
+
+  }
+  &__sub2-text {
+
+  }
+}

@@ -1,12 +1,14 @@
-.C_cover {
+.C_cover--shadow {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: map-get($layer, 'cover' );
-  &.--shadow {
-    background-color: rgba(0, 0, 0, $cover-opacity);
-    &-white {
-      background-color: rgba(255, 255, 255, $cover-opacity);
-    }
-  }
+  background-color: rgba(0, 0, 0, $cover-opacity);
+}
+.C_cover--shadow-white {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: map-get($layer, 'cover' );
+  background-color: rgba(255, 255, 255, $cover-opacity);
 }

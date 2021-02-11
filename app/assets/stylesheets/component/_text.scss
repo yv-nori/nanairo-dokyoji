@@ -1,15 +1,4 @@
 // --------------------------------
-// 説明文
-// --------------------------------
-.C_text__sentence {
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-}
-.C_text__sentence2 {
-  font-size: $font-size-base *1.5;
-  line-height: $line-height-base;
-}
-// --------------------------------
 // テキストボックスのテキスト
 // --------------------------------
 .C_text__inBox {
@@ -41,42 +30,6 @@
   }
 }
 
-.C_text__recruit-title {
-  font-size: $font-size-base * 4;
-  letter-spacing: $letter-spacing-base * 2;
-  font-family: 'goudy_bookletter_1911';
-  pointer-events: none;
-  z-index: map-get($layer, 'icon');
-  @include mq-up("pc") {
-    font-size: $font-size-base * 6;
-  letter-spacing: $letter-spacing-base * 4.5;
-  }
-}
-
-.C_text__recruit-subtitle {
-  font-size: $font-size-base * 4;
-  letter-spacing: $letter-spacing-base * 2;
-  font-family: 'goudy_bookletter_1911';
-  pointer-events: none;
-  z-index: map-get($layer, 'icon');
-  @include mq-up("pc") {
-    font-size: $font-size-base * 2.2;
-    letter-spacing: $letter-spacing-base * 1;
-    color: white;
-  }
-}
-
-.C_text__recruit-content {
-  font-size: $font-size-base * 4;
-  letter-spacing: 0px;
-  font-family: 'Blankid';
-  pointer-events: none;
-  z-index: map-get($layer, 'icon');
-  transform: rotate(-9deg);
-  @include mq-up("pc") {
-    font-size: $font-size-base * 4;
-  }
-}
 
 
 .C_text__font-awesome {

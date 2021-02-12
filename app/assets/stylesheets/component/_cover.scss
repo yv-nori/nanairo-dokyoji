@@ -4,6 +4,7 @@
   height: 100%;
   z-index: map-get($layer, 'cover' );
   background-color: rgba(0, 0, 0, $cover-opacity);
+  pointer-events: none;
 }
 .C_cover--shadow-white {
   position: absolute;
@@ -11,4 +12,5 @@
   height: 100%;
   z-index: map-get($layer, 'cover' );
   background-color: rgba(255, 255, 255, $cover-opacity);
+  pointer-events: none;
 }

@@ -70,6 +70,15 @@ $anime-time-long: 1.2s;
   animation-play-state: paused!important;
 }
 // --------------------------------
+// raindrops
+// --------------------------------
+.JS_raindrops_target {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+// --------------------------------
 // アクション(アニメーション)
 // --------------------------------
 .A_toWide {
@@ -125,46 +134,6 @@ $anime-time-long: 1.2s;
 .A_isFadeOut {
   opacity: 0;
   transform: translate(-20px, 0);
-}
-// 職員のイントロダクションのホバー
-.A_toRotate {
-  &__target {
-    transition: 0.5s;
-    transform: rotateX(0deg);    
-  }
-  &:hover &__target {
-    transform: rotateZ(90deg);
-  }
-}
-// 職員のイントロダクションのフリップ
-.A_toFlip {
-  position : relative;
-  transition: 0.5s;
-  &:hover {
-    transform: rotatey(20deg) translatex(0px) translatey(-10px);
-  }
-  &--front,
-  &--back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  &--back {
-    transform : rotateY(-180deg);
-  }
-}
-.A_toFlipped--front {
-  transform: rotateY(180deg)
-}
-.A_toFlipped--back {
-  transform: rotateY(0);
 }
 
 @keyframes hover-shadow {

@@ -3,8 +3,9 @@
 <%# トップイメージ
 <%# ==================================== %>
 <section class="RecruitKeyVisual">
-  <div class="L_key-visual JS_raindrops_target">
-    <div class="L_key-visual_inner C_image__recruit">
+  <div class="L_key-visual">
+    <div class="L_key-visual__inner">
+      <div class="C_image__recruit"></div>
       <%#-- サブタイトル縦書き --%>
       <div class="P_Recruit__kv__title-box right">
         <h3 class="P_Recruit__kv__text">子どもたちの未来を</h3>
@@ -12,57 +13,66 @@
       <div class="P_Recruit__kv__title-box left">
         <h3 class="P_Recruit__kv__text">一緒に育みましょう。</h3>
       </div>
-      <%#-- シャボン玉左上 --%>
-      <%=render'layouts/shabon',{x:83,y:24,cl:'P_Recruit',size:'S'  ,time:'2',ptn:'B',dir:'left',jscl:''}%>
-      <%=render'layouts/shabon',{x:90,y:20,cl:'P_Recruit',size:'SS' ,time:'3',ptn:'A',dir:'left',jscl:''}%>
-      <%=render'layouts/shabon',{x:92,y:28,cl:'P_Recruit',size:'SS' ,time:'2',ptn:'A',dir:'left',jscl:''}%>
-      <%=render'layouts/shabon',{x:96,y:25,cl:'P_Recruit',size:'SSS',time:'3',ptn:'B',dir:'left',jscl:''}%>
-      <%=render'layouts/shabon',{x:86,y:16,cl:'P_Recruit',size:'SSS',time:'3',ptn:'A',dir:'left',jscl:''}%>
-      <%#-- シャボン左下 --%>
-      <%=render'layouts/shabon',{x:5, y:67,cl:'P_Recruit',size:'LLL',time:'3',ptn:'A',dir:'right',jscl:''}%>
-      <%=render'layouts/shabon',{x:10,y:78,cl:'P_Recruit',size:'M'  ,time:'3',ptn:'B',dir:'right',jscl:''}%>
-      <%=render'layouts/shabon',{x:7, y:83,cl:'P_Recruit',size:'SSS',time:'1',ptn:'A',dir:'right',jscl:''}%>
-      <%#-- シャボン右下 --%>
-      <%=render'layouts/shabon',{x:85,y:77,cl:'P_Recruit',size:'LLL',time:'2',ptn:'A',dir:'right',jscl:''}%>
-      <%=render'layouts/shabon',{x:90,y:88,cl:'P_Recruit',size:'M'  ,time:'2',ptn:'B',dir:'right',jscl:''}%>
-      <%=render'layouts/shabon',{x:87, y:93,cl:'P_Recruit',size:'SSS',time:'1',ptn:'A',dir:'right',jscl:''}%>
       <%#-- 採用タイトル --%>
       <h1 class="P_Recruit__kv__main-title">RECRUITING</h1>
       <h2 class="P_Recruit__kv__sub-title">ー Let's Work Together ー</h2>
+      <%#-- raindrop --%>
+      <div class="P_Recruit__kv__rain">
+        <div class="JS_raindrops_target"></div>
+      </div>
+      <%#-- シャボン玉左上 --%>
+      <%=render'layouts/shabon',{x:16,y:13,cl:'P_Recruit__kv',size:'LLL',time:'3',ptn:'A',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:27,y:28,cl:'P_Recruit__kv',size:'LLL',time:'2',ptn:'B',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:19,y:40,cl:'P_Recruit__kv',size:'L',time:'1',ptn:'A',dir:'right',jscl:''}%>
+      <%#-- シャボン玉右上 --%>
+      <%=render'layouts/shabon',{x:83,y:24,cl:'P_Recruit__kv',size:'S'  ,time:'2',ptn:'B',dir:'left',jscl:''}%>
+      <%=render'layouts/shabon',{x:90,y:20,cl:'P_Recruit__kv',size:'SS' ,time:'3',ptn:'A',dir:'left',jscl:''}%>
+      <%=render'layouts/shabon',{x:92,y:28,cl:'P_Recruit__kv',size:'SS' ,time:'2',ptn:'A',dir:'left',jscl:''}%>
+      <%=render'layouts/shabon',{x:96,y:25,cl:'P_Recruit__kv',size:'SSS',time:'3',ptn:'B',dir:'left',jscl:''}%>
+      <%=render'layouts/shabon',{x:86,y:16,cl:'P_Recruit__kv',size:'SSS',time:'3',ptn:'A',dir:'left',jscl:''}%>
+      <%#-- シャボン玉左下 --%>
+      <%=render'layouts/shabon',{x:4, y:76,cl:'P_Recruit__kv',size:'LLL',time:'3',ptn:'A',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:10,y:87,cl:'P_Recruit__kv',size:'M'  ,time:'3',ptn:'B',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:7, y:92,cl:'P_Recruit__kv',size:'SSS',time:'1',ptn:'A',dir:'right',jscl:''}%>
+      <%#-- シャボン玉右下 --%>
+      <%=render'layouts/shabon',{x:86,y:82,cl:'P_Recruit__kv',size:'LLL',time:'2',ptn:'A',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:92,y:90,cl:'P_Recruit__kv',size:'M'  ,time:'2',ptn:'B',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:86, y:94,cl:'P_Recruit__kv',size:'SSS',time:'1',ptn:'A',dir:'right',jscl:''}%>
     </div>
-    </div>
+  </div>
 </section>
 <%# ==================================== %>
 <%# コンセプト
 <%# ==================================== %>
 <section class="RecruitConcept">
   <article class="P_Recruit__concept">
-    <div class="C_wrap__600">
+    <div class="C_wrap__1000">
       <%#-- タイトル --%>
       <h1 class="P_Recruit__concept__title">concept</h1>
-      <%#-- シャボン玉左上 --%>
-      <%=render'layouts/shabon',{x:53,y:22,cl:'P_Recruit__concept',size:'SSS',time:'1',ptn:'B',dir:'right',jscl:''}%>
-      <%=render'layouts/shabon',{x:49,y:22,cl:'P_Recruit__concept',size:'M'  ,time:'3',ptn:'A',dir:'right',jscl:''}%>
-      <%=render'layouts/shabon',{x:45, y:11,cl:'P_Recruit__concept',size:'LLL',time:'2',ptn:'B',dir:'right',jscl:''}%>
-      <%#-- シャボン玉右下 --%>
-      <%=render'layouts/shabon',{x:83,y:80,cl:'P_Recruit__concept',size:'S',time:'1',ptn:'A',dir:'right',jscl:''}%>
-      <%=render'layouts/shabon',{x:85,y:75,cl:'P_Recruit__concept',size:'SS'  ,time:'2',ptn:'B',dir:'right',jscl:''}%>
-      <%=render'layouts/shabon',{x:88, y:82,cl:'P_Recruit__concept',size:'SSS',time:'3',ptn:'A',dir:'right',jscl:''}%>
       <%#-- コンセプトのコンテンツボックス --%>
       <div class="P_Recruit__concept__container">
         <div class="P_Recruit__concept__inner left">
           <%#-- テキストコンテント --%>
           <h2 class="P_Recruit__concept__inner-left title">子どもの「好き」を見つけませんか？
           </h2>
-          <p class="P_Recruit__concept__inner-left sentense">　私たち保育教諭は、子どもの「はじめて」に、いつもとなりにいます。その「はじめて」が「好き」になれば、子どもの可能性が無限に広がります。たとえ、その時できなくとでも、「好き」があれば今後も伸びる可能性があります。私たちは、一つでも多くの子どもの好きを見つけ、その子の将来の選択肢を増やしてあげることができます。<br>
-          　「はじめて」の時、子どもたちは「できた」「楽しい」を私たちに投げかけます。その時に笑顔でその楽しさを共有できれば、それが子どもの「好き」に繋がります。<br>
+          <p class="P_Recruit__concept__inner-left sentense">　私たち保育教諭は、子どもの「はじめて」のいつもとなりにいます。その「はじめて」が「好き」になれば、子どもの可能性が無限に広がります。<br>
+          　子どもは「できた」「楽しい」を私たちに投げかけます。その時、笑顔でその楽しさを共有できれば、それが子どもの「好き」に繋がります。私たちは一つでも多くの「好き」を見つけてあげたいと考えます。<br>
           　さぁ、わたしたちと一緒に、子どもたちの七彩(なないろ)の未来を育みませんか？</p>
         </div>
         <%#-- イメージコンテント --%>
-        <div class="P_Recruit__cencept__inner">
+        <div class="P_Recruit__concept__inner">
           <%= image_tag 'recruit/recruit2.jpg', class: 'P_Recruit__concept__image' %>
         </div>
       </div>
+      <%#-- シャボン玉左上 --%>
+      <%=render'layouts/shabon',{x:58,y:29,cl:'P_Recruit__concept',size:'SSS',time:'1',ptn:'B',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:54,y:29,cl:'P_Recruit__concept',size:'M'  ,time:'3',ptn:'A',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:50, y:18,cl:'P_Recruit__concept',size:'LLL',time:'2',ptn:'B',dir:'right',jscl:''}%>
+      <%#-- シャボン玉右下 --%>
+      <%=render'layouts/shabon',{x:86,y:72,cl:'P_Recruit__concept',size:'S',time:'3',ptn:'A',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:88,y:78,cl:'P_Recruit__concept',size:'S',time:'1',ptn:'A',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:90,y:73,cl:'P_Recruit__concept',size:'SS'  ,time:'2',ptn:'A',dir:'right',jscl:''}%>
+      <%=render'layouts/shabon',{x:93, y:76,cl:'P_Recruit__concept',size:'SSS',time:'3',ptn:'A',dir:'right',jscl:''}%>
     </div>
   </article>
 </section>
@@ -70,96 +80,162 @@
 <%# 職員紹介
 <%# ==================================== %>
 <section class="Staff">
+  <%#-- イメージボックス --%>
   <div class="P_Recruit__staff">
-    <%#-- イメージボックス --%>
-    <div class="panel-box">
-      <%#-- シャドウブラックカバー --%>
-      <div class="P_Recruit__staff__cover C_cover--shadow JS_click_hide_target"></div>
-      <%#-- フロントイメージ1 --%>
-      <div class="P_Recruit__inner JS_hover_trigger JS_click_hide_target JS_click_open_trigger">
-        <div class="P_Recruit__staff__front-image C_image__recruit__staff1 JS_hover_hide_target A_isVisible"></div>
-        <div class="C_cover--shadow-white JS_hover_show_shadow_target JS_click_hide_target A_isInvisible"></div>
-        <h1 class="P_Recruit__staff__front-cath JS_hover_clear_target">仕事も子育ても</h1>
-      </div>
-      <%#-- フロントイメージ2 --%>
-      <div class="P_Recruit__inner JS_hover_trigger JS_click_hide_target JS_click_open_trigger">
-        <div class="P_Recruit__staff__front-image C_image__recruit__staff2 JS_hover_hide_target A_isVisible"></div>
-        <div class="C_cover--shadow-white JS_hover_show_shadow_target JS_click_hide_target A_isInvisible"></div>
-        <h1 class="P_Recruit__staff__front-cath JS_hover_clear_target">ひとりひとりの子どもを大切に</h1>
-      </div>
-      <%#-- フロントイメージ3 --%>
-      <div class="P_Recruit__inner JS_hover_trigger JS_click_hide_target JS_click_open_trigger">
-        <div class="P_Recruit__staff__front-image C_image__recruit__staff3 JS_hover_hide_target A_isVisible"></div>
-        <div class="C_cover--shadow-white JS_hover_show_shadow_target JS_click_hide_target A_isInvisible"></div>
-        <h1 class="P_Recruit__staff__front-cath JS_hover_clear_target">言葉を手渡す</h1>
-      </div>
-      <%#-- フロントイメージ4 --%>
-      <div class="P_Recruit__inner JS_hover_trigger JS_click_hide_target JS_click_open_trigger">
-        <div class="P_Recruit__staff__front-image C_image__recruit__staff4 JS_hover_hide_target A_isVisible"></div>
-        <div class="C_cover--shadow--white JS_hover_show_shadow_target JS_click_hide_target A_isInvisible"></div>
-        <h1 class="P_Recruit__staff__front-cath JS_hover_clear_target">優しさをもって</h1>
-      </div>
-      <%#-- 閉じるボタン --%>
-      <div class="P_Recruit__staff__btn C_box--btn JS_click_show_target JS_click_close_trigger A_isNone A_toRotate">
-        <i class="far fa-times-circle A_toRotate__target"></i>
-      </div>
+    <%#-- バックイメージ --%>
+    <div class="P_Recruit__staff__back">
       <%#-- バックイメージ1 --%>
-      <div class="P_Recruit__staff__back-image C_image__recruit__staff1 JS_hover_show_target A_isInvisible JS_click_hide_backImage_target">
-        <div class="L_inner--half-X A_isInvisible">
+      <div class="JS_hover_click_target_backImg A_isInvisible">
+        <div class="C_image__recruit__staff1"></div>
+        <div class="JS_click_close_target A_isNone">
+          <%#-- 紹介文 --%>
+          <%=render'layouts/staff_info',{ 
+            name:'北野　沙織',
+            name_en:'kitano saori',
+            work_style:'正規・常勤',
+            license:'栄養士・調理師',
+            catch_copy:'美味しい給食で子どもたちに笑顔を',
+            catch_sentense:'子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を',
+            holiday:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+            favorite:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている'
+          }%>
         </div>
       </div>
       <%#-- バックイメージ2 --%>
-      <div class="P_Recruit__staff__back-image C_image__recruit__staff2 JS_hover_show_target A_isInvisible JS_click_hide_backImage_target">
-        <div class="schedule">
+      <div class="JS_hover_click_target_backImg A_isInvisible">
+        <div class="C_image__recruit__staff2"></div>
+        <div class="JS_click_close_target A_isNone">
+          <%#-- 紹介文 --%>
+          <%=render'layouts/staff_info',{ 
+            name:'北野　沙織',
+            name_en:'kitano saori',
+            work_style:'正規・常勤',
+            license:'栄養士・調理師',
+            catch_copy:'美味しい給食で子どもたちに笑顔を',
+            catch_sentense:'子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を',
+            holiday:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+            favorite:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている'
+          }%>
         </div>
       </div>
       <%#-- バックイメージ3 --%>
-      <div class="P_Recruit__staff__back-image C_image__recruit__staff3 JS_hover_show_target A_isInvisible JS_click_hide_backImage_target">
-        <div class="schedule">
+      <div class="JS_hover_click_target_backImg A_isInvisible">
+        <div class="C_image__recruit__staff3"></div>
+        <div class="JS_click_close_target A_isNone">
+          <%#-- 紹介文 --%>
+          <%=render'layouts/staff_info',{ 
+            name:'北野　沙織',
+            name_en:'kitano saori',
+            work_style:'正規・常勤',
+            license:'栄養士・調理師',
+            catch_copy:'美味しい給食で子どもたちに笑顔を',
+            catch_sentense:'子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を',
+            holiday:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+            favorite:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている'
+          }%>
         </div>
       </div>
       <%#-- バックイメージ4 --%>
-      <div class="P_Recruit__staff__back-image C_image__recruit__staff4 JS_hover_show_target A_isInvisible JS_click_hide_backImage_target">
-        <%#-- 紹介文 --%>
-        <article class="P_Recruit__staff__intro A_toFlip JS_click_show_introduction_target JS_click_flip_trigger A_isNone">
-          <%#-- フリップカード表 --%>
-          <div class="P_Recruit__staff__flip-front A_toFlip--front JS_click_flip_front_target">
-            <%#-- 紹介文 --%>
-            <div class="L_container__top">
-              <div class="L_container__name">
-                <h1>北野　沙</h1>
-                <h2>kitano saori</h2>
-              </div>
-              <ul class="L_container__info">
-                <li>・年齢　：　２６歳</li>
-                <li>・配属　：　給食室・栄養士</li>
-                <li>・勤務形態　：　正規常勤</li>
-                <li>・所持資格等　：　栄養士・調理師免許</li>
-              </ul>
-            </div>
-            <div class="L_container__catch">
-              <h1>美味しい給食で子どもたちに笑顔を</h1>
-            </div>
-            <div class="L_container__catch-sentense">
-              <h4>　子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を</h4>
-            </div>
-            <div class="L_container__bottom">
-              <div class="L_container__holiday">
-                <h3>休日の過ごし方</h3>
-                <h4>たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている</h4>
-              </div>
-              <div class="L_container__favorite">
-                <h3>職場の気に入っているところ</h3>
-                <h4>たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている</h4>
-              </div>
-            </div>
-          </div>
-          <%#-- フリップカード裏 --%>
-          <div class="P_Recruit__concept__flip-back  A_toFlip--back JS_click_flip_back_target">
-            <h1>schedule</h1>
-          </div>
-        </article>
+      <div class="JS_hover_click_target_backImg A_isInvisible">
+        <%#-- イメージ --%>
+        <div class="C_image__recruit__staff4"></div>
+        <div class="JS_click_close_target A_isNone">
+          <%#-- 紹介文 --%>
+          <%=render'layouts/staff_info',{ 
+            name:'北野　沙織',
+            name_en:'kitano saori',
+            work_style:'正規・常勤',
+            license:'栄養士・調理師',
+            catch_copy:'美味しい給食で子どもたちに笑顔を',
+            catch_sentense:'子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を',
+            holiday:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+            favorite:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている'
+          }%>
+        </div>
       </div>
+    </div>
+    <%#-- 閉じるボタン --%>
+    <div class="JS_click_close_target A_isNone">
+      <div class="P_Recruit__staff__btn">
+        <div class="C_box--btn A_toRotate">
+          <i class="far fa-times-circle A_toRotate__target"></i>
+          <div class="JS_click_close_trigger"></div>
+        </div>
+      </div>
+    </div>
+    <%#-- フロントイメージ --%>
+    <div class="P_Recruit__staff__front">
+      <%#-- フロントイメージ１ --%>
+      <div class="P_Recruit__staff__inner">
+        <div class="JS_click_target">
+          <div class="JS_hover_click_target_frontImg">
+            <div class="P_Recruit__staff__front-image">
+              <div class="C_image__recruit__staff1"></div>
+            </div>
+          </div>
+          <div class="JS_hover_target_frontSdw A_isInvisible">
+            <div class="C_cover--shadow-white"></div>
+          </div>
+          <div class="JS_hover_target_frontTxt">
+            <h1 class="P_Recruit__staff__front-catch">仕事も家族も</h1>
+          </div>
+          <div class="JS_hover_click_trigger"></div>
+        </div>
+      </div>
+      <%#-- フロントイメージ2 --%>
+      <div class="P_Recruit__staff__inner">
+        <div class="JS_click_target">
+          <div class="JS_hover_click_target_frontImg">
+            <div class="P_Recruit__staff__front-image">
+              <div class="C_image__recruit__staff2"></div>
+            </div>
+          </div>
+          <div class="JS_hover_target_frontSdw A_isInvisible">
+            <div class="C_cover--shadow-white"></div>
+          </div>
+          <div class="JS_hover_target_frontTxt">
+            <h1 class="P_Recruit__staff__front-catch">ひとりひとりの子どもを大切に</h1>
+          </div>
+          <div class="JS_hover_click_trigger"></div>
+        </div>
+      </div>
+      <%#-- フロントイメージ3 --%>
+      <div class="P_Recruit__staff__inner">
+        <div class="JS_click_target">
+          <div class="JS_hover_click_target_frontImg">
+            <div class="P_Recruit__staff__front-image">
+              <div class="C_image__recruit__staff3"></div>
+            </div>
+          </div>
+          <div class="JS_hover_target_frontSdw A_isInvisible">
+            <div class="C_cover--shadow-white"></div>
+          </div>
+          <div class="JS_hover_target_frontTxt">
+            <h1 class="P_Recruit__staff__front-catch">言葉を手渡す</h1>
+          </div>
+          <div class="JS_hover_click_trigger"></div>
+        </div>
+      </div>
+      <%#-- フロントイメージ4 --%>
+      <div class="P_Recruit__staff__inner">
+        <div class="JS_click_target">
+          <div class="JS_hover_click_target_frontImg">
+            <div class="P_Recruit__staff__front-image">
+              <div class="C_image__recruit__staff4"></div>
+            </div>
+          </div>
+          <div class="JS_hover_target_frontSdw A_isInvisible">
+            <div class="C_cover--shadow-white"></div>
+          </div>
+          <div class="JS_hover_target_frontTxt">
+            <h1 class="P_Recruit__staff__front-catch">優しさをもって</h1>
+          </div>
+          <div class="JS_hover_click_trigger"></div>
+        </div>
+      </div>
+    <%#-- シャドウブラックカバー --%>
+    <div class="JS_click_close_target">
+      <div class="P_Recruit__staff__cover"></div>
     </div>
   </div>
 </section>

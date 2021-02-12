@@ -49,12 +49,16 @@
     background: image-url('recruit/recruit.jpg') no-repeat center center / cover;
     @include mq-up("tab") {
       background: image-url('recruit/recruit.jpg') no-repeat center center / cover;
+    width: 100%;
+    height: 100%;
     }
     &__staff1 {
       @include image;
       background: image-url('recruit/staff1_pc.jpg') no-repeat center center / cover;
       @include mq-up("tab") {
         background: image-url('recruit/staff1_pc.jpg') no-repeat center center / cover;
+        width: 100%;
+        height: 100%;
       }
     }
     &__staff2 {
@@ -62,6 +66,8 @@
       background: image-url('recruit/staff2_pc.jpg') no-repeat center center / cover;
       @include mq-up("tab") {
         background: image-url('recruit/staff2_pc.jpg') no-repeat center center / cover;
+        width: 100%;
+        height: 100%;
       }
     }
     &__staff3 {
@@ -69,6 +75,8 @@
       background: image-url('recruit/staff3_pc.jpg') no-repeat center center / cover;
       @include mq-up("tab") {
         background: image-url('recruit/staff3_pc.jpg') no-repeat center center / cover;
+        width: 100%;
+        height: 100%;
       }
     }
     &__staff4 {
@@ -76,6 +84,8 @@
       background: image-url('recruit/staff4_pc.jpg') no-repeat center center / cover;
       @include mq-up("tab") {
         background: image-url('recruit/staff4_pc.jpg') no-repeat center center / cover;
+        width: 100%;
+        height: 100%;
       }
     }
   }

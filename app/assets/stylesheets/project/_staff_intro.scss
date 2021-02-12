@@ -1,0 +1,129 @@
+// --------------------------------
+// フリップカード表
+// --------------------------------
+// フリップアクション
+.A_toFlip {
+  position : relative;
+  transition: 0.5s;
+  &:hover {
+    transform: rotatey(20deg) translatex(0px) translatey(-10px);
+  }
+  .JS_click_flip_target {
+    &_front,
+    &_back {
+      @include abs-full;
+      position: absolute;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;      
+      &.front-active {
+        transform: rotateY(180deg)
+      }
+    }
+    &_back {
+      transform : rotateY(-180deg);
+      &.back-active {
+        transform: rotateY(0);
+      }
+    }
+  }
+}
+.P_Staff-intro {
+  @include abs-full;
+  &__front {
+    width: 100%;
+    height: 100%;
+    box-shadow: $shadow-strong;
+    opacity: $opacity;
+    background-color: #fff;
+    border-radius: $border-radius-little;
+    &-top {
+      display: flex;
+      width: 100%;
+      height: 20%;
+    }
+    &-name {
+      height: 100%;
+      width: 50%;
+      display: flex;
+    }
+    &-info {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    &-catch {
+      width: 100%;
+      height: 20%;
+    }
+    &-catch-sentense {
+      width: 100%;
+      height: 20%;
+    }
+    &-bottom {
+      width: 100%;
+      height: 40%;
+    }
+    &-holiday {
+      width: 50%;
+      height: 100%;
+    }
+    &-favorite {
+      width: 50%;
+      height: 100%;
+    }
+  }
+}
+// --------------------------------
+// フリップカード裏（スケジュール）
+// --------------------------------
+.P_Staff-intro {
+  @include abs-full;
+  &__back {
+    width: 100%;
+    height: 100%;
+    box-shadow: $shadow-strong;
+    opacity: $opacity;
+    background-color: #fff;
+    border-radius: $border-radius-little;
+    &-top {
+      display: flex;
+      width: 100%;
+      height: 20%;
+    }
+    &-name {
+      height: 100%;
+      width: 50%;
+      display: flex;
+    }
+    &-info {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    &-catch {
+      width: 100%;
+      height: 20%;
+    }
+    &-catch-sentense {
+      width: 100%;
+      height: 20%;
+    }
+    &-bottom {
+      width: 100%;
+      height: 40%;
+    }
+    &-holiday {
+      width: 50%;
+      height: 100%;
+    }
+    &-favorite {
+      width: 50%;
+      height: 100%;
+    }
+  }
+}

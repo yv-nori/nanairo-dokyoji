@@ -10,3 +10,15 @@
     padding-right: 84px;
   }
 }
+.C_wrap__1000 {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: content-box;
+  @include mq-up("tab") {
+    padding-left: 84px;
+    padding-right: 84px;
+  }
+}

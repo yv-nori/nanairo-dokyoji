@@ -1,43 +1,37 @@
 $(function () {
   var CurrentPath = location.pathname;
   if (CurrentPath == "/recruit") {
-    const $triggers = $('.JS_hover_trigger');
+    const $triggers = $('.JS_hover_click_trigger');
+    const $frontImgs = $('.JS_hover_click_target_frontImg');
+    const $backImgs = $('.JS_hover_click_target_backImg');
+    const $frontSdws = $('.JS_hover_target_frontSdw');
+    const $frontTxts = $('.JS_hover_target_frontTxt');
     $triggers.mouseover(function () {
       // フロントイメージを隠す
-      const $hide_targets = $('.JS_hover_hide_target');
-      $hide_targets.addClass('A_isInvisible');
-      $hide_targets.removeClass('A_isVisible');
+      $frontImgs.addClass('A_isInvisible');
+      $frontImgs.removeClass('A_isVisible');
       // バックイメージの表示
-      const $show_targets = $('.JS_hover_show_target');
-      $show_targets.eq($(this).index()-1).addClass("A_isVisible");
-      $show_targets.eq($(this).index() - 1).removeClass("A_isInvisible");
+      $backImgs.eq($triggers.index(this)).addClass("A_isVisible");
+      $backImgs.eq($triggers.index(this)).removeClass("A_isInvisible");
       // ホワイトシャドウの表示
-      const $show_shadow_targets = $('.JS_hover_show_shadow_target')
-      $show_shadow_targets.eq($(this).index()-1).addClass("A_isVisible");
-      $show_shadow_targets.eq($(this).index()-1).removeClass("A_isInvisible");
+      $frontSdws.eq($triggers.index(this)).addClass("A_isVisible");
+      $frontSdws.eq($triggers.index(this)).removeClass("A_isInvisible");
       // テキストのクリア
-      const $clear_targets = $('.JS_hover_clear_target')
-      $clear_targets.not($clear_targets.eq($(this).index()-1)).toggleClass("A_isClear--tough");
-      console.log($(this).index()-1);
+      $frontTxts.not($frontTxts.eq($triggers.index(this))).toggleClass("A_isClear--tough");
     }).mouseout(function () {
       // フロントイメージの表示
-      const $hide_targets = $('.JS_hover_hide_target');
-      $hide_targets.removeClass("A_isInvisible");
-      $hide_targets.addClass("A_isVisible");
+      $frontImgs.removeClass("A_isInvisible");
+      $frontImgs.addClass("A_isVisible");
       // バックイメージを隠す
-      const $show_targets = $('.JS_hover_show_target')
-      if ($show_targets.eq($(this).index() - 1).hasClass('A_isClicked')) {
-      } else {
-        $show_targets.eq($(this).index()-1).removeClass("A_isVisible");
-        $show_targets.eq($(this).index() - 1).addClass("A_isInvisible");
+      if (!$backImgs.eq($triggers.index(this)).hasClass('A_isClicked')) {
+        $backImgs.eq($triggers.index(this)).removeClass("A_isVisible");
+        $backImgs.eq($triggers.index(this)).addClass("A_isInvisible");
       }
       // ホワイトシャドウを隠す
-      const $show_shadow_targets = $('.JS_hover_show_shadow_target')
-      $show_shadow_targets.eq($(this).index()-1).removeClass("A_isVisible");
-      $show_shadow_targets.eq($(this).index() - 1).addClass("A_isInvisible");
+      $frontSdws.eq($triggers.index(this)).removeClass("A_isVisible");
+      $frontSdws.eq($triggers.index(this)).addClass("A_isInvisible");
       // テキストのクリア
-      const $clear_targets = $('.JS_hover_clear_target')
-      $clear_targets.not($clear_targets.eq($(this).index() - 1)).toggleClass("A_isClear--tough");
+      $frontTxts.not($frontTxts.eq($triggers.index(this))).toggleClass("A_isClear--tough");
     });
   };
 });

@@ -1,3 +1,6 @@
+// =====================================
+// トップイメージ
+// =====================================
 .P_Recruit__kv {
   &__title-box {
     border-radius: $border-radius-little;
@@ -10,10 +13,14 @@
     background-color: #fff;
     border: 2px #000 solid;
     &.right {
-      @include abs(20,40);
+      position: absolute;
+      top: 10%;
+      left: 23%;
     }
     &.left {
-      @include abs(10,40);
+      position: absolute;
+      top: 15%;
+      left: 13%;
     }
   }
   &__text {
@@ -46,7 +53,19 @@
       color: white;
     }
   }
+  &__rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  &__shabon {
+    z-index: map-get($layer, 'top-icon');
+  }
 }
+// =====================================
+// コンセプト
+// =====================================
 .P_Recruit__concept {
   position: relative;
   &__title {
@@ -55,15 +74,18 @@
     font-family: 'Blankid';
     pointer-events: none;
     z-index: map-get($layer, 'icon');
-    transform: rotate(-9deg);
-    @include abs(12,14);
+    transform: rotate(-10deg);
+    position: absolute;
+    top: 22%;
+    left: 8%;
     @include mq-up("pc") {
       font-size: $font-size-base * 4;
     }
   }
   &__container {
     width: 100%;
-    height: 100%;
+    height: 80vh;
+    padding: 20vh 0;
     display: flex;
   }
   &__inner {
@@ -74,12 +96,24 @@
     }
     &-left {
       &.title {
-        font-size: $font-size-base *1.5;
+        font-size: $font-size-base * 1.4;
         line-height: $line-height-base;
+        padding-top: 16%;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 35%;
+          right: 0;
+          height: 1px;
+          width: 70%;
+          border-top: 2px dotted $color-border--thin;
+        }
       }
       &.sentense {
-        font-size: $font-size-base *1.5;
+        font-size: $font-size-base;
         line-height: $line-height-base;
+        padding-top: 4%;
       }
     }
   }
@@ -90,102 +124,113 @@
     border: 1px #000 solid;
   }
 }
+// =====================================
+// スタッフ紹介
+// =====================================
 .P_Recruit__staff {
-  &__panel-box {
-    position: relative;
-    display: flex;
+  position: relative;
+  height: 100vh
+}
+// --------------------------------
+// バックイメージ
+// --------------------------------
+.P_Recruit__staff {
+  &__back {
+    @include abs-full;
   }
-  &__cover {
-    @include abs(50,50);
+  .JS_hover_click_target_backImg {
+    @include abs-full;
+    transition: all $anime-time-short;
+  }
+}
+// --------------------------------
+// ボタン
+// --------------------------------
+.P_Recruit__staff {
+  .JS_click_close_target {
+    @include abs-full;
+    pointer-events: none;
+  }
+  &__btn {
+    font-size: $font-size-base * 2.5;
+    @include abs(100,0);
+    pointer-events: auto;
+    cursor: pointer;
+    .JS_click_close_trigger {
+      @include abs-full;
+      pointer-events: auto;
+    }
+  }
+}
+// --------------------------------
+// フロントイメージ
+// --------------------------------
+.P_Recruit__staff {
+  &__front {
+    display: flex;
+    flex-wrap: wrap;
+    @include abs-full;
+    pointer-events: none;
   }
   &__inner {
     width: 100%;
     height: 25%;
     position: relative;
-    pointer-events: auto;
+    pointer-events: none;
     @include mq-up ("tab") {
       width: 50%;
       height: 50%;
     }
   }
+  .JS_hover_click_target_frontImg {
+    @include abs-full;
+    transition: all $anime-time-short;
+  }
   &__front-image {
     width: 100%;
     height: 100%;
+    position: absolute;
     transition: all $anime-time-short;
+  }
+  .JS_hover_target_frontSdw {
+    @include abs-full;
+  }
+  .JS_hover_target_frontTxt {
+    @include abs-full;
+  }
+  .JS_click_target {
+    @include abs-full;
+    pointer-events: none;
   }
   &__front-catch {
     text-align: center;
+    font-size: $font-size-base * 2.75;
+    z-index: map-get($layer, 'icon');
     @include abs(50,50);
     color: #fff;
+    pointer-events: none;
   }
-  &__btn {
-    @include abs(100,50);
+  .JS_hover_click_trigger {
+    @include abs-full;
+    pointer-events: auto;
+    cursor: pointer;
   }
-  &__back-image {
-    height: 100%;
+}
+// --------------------------------
+// シャドウカバー
+// --------------------------------
+.P_Recruit__staff {
+  &__cover {
     width: 100%;
-    padding: 40px 50px 40px 20px;
-    transition: all $anime-time-short;
+    height: 100%;
+    background-color: rgba(0, 0, 0, $cover-opacity);
+    z-index: map-get($layer, 'cover' );
+    pointer-events: none;
   }
 }
-.P_Recruit__concept__intro {
-  width: 100%;
-  height: 100%;
-}
-.P_Recruit__concept__flip-front {
-  width: 100%;
-  height: 100%;
-  box-shadow: $shadow-strong;
-  opacity: $opacity;
-  background-color: #fff;
-  border-radius: $border-radius-little;
-  .L_container {
-    &__top {
-      display: flex;
-      width: 100%;
-      height: 20%;
-    }
-    &__name {
-      height: 100%;
-      width: 50%;
-      display: flex;
-    }
-    &__info {
-      height: 100%;
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-    }
-    &__catch {
-      width: 100%;
-      height: 20%;
-    }
-    &__catch-sentense {
-      width: 100%;
-      height: 20%;
-    }
-    &__bottom {
-      width: 100%;
-      height: 40%;
-    }
-    &__holiday {
-      width: 50%;
-      height: 100%;
-    }
-    &__favorite {
-      width: 50%;
-      height: 100%;
-    }
-  }
-}
-.P_Recruit__concept__flip-back {
-  width: 100%;
-  height: 100%;
-  opacity: $opacity;
-  border-radius: $border-radius-little;
-  background-color: #fff;
-  box-shadow: $shadow-strong;
-}
+// =====================================
+// 求人内容
+// =====================================
 .P_Recruit__job-info {
   width: 100%;
   height: 100vh;
@@ -198,7 +243,7 @@
     height: 33.33%;
     background-color: #fff;
     box-shadow: $shadow;
-
+    
     @include mq-up ("tab") {
       width: 33.33%;
       height: 100%;
@@ -209,12 +254,12 @@
     background-color: #000;
   }
   &__title {
-
+    
   }
   &__sub2-title {
-
+    
   }
   &__sub2-text {
-
+    
   }
 }

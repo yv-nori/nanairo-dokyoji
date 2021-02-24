@@ -14,43 +14,55 @@
     border: 2px #000 solid;
     &.right {
       position: absolute;
+      top: 22%;
+      left: 27%;
+      @include mq-up("tab") {
       top: 10%;
       left: 23%;
+      }
     }
     &.left {
       position: absolute;
-      top: 15%;
-      left: 13%;
+      top: 27%;
+      left: 10%;
+      @include mq-up("tab") {
+        top: 15%;
+        left: 13%;
+      }
     }
   }
   &__text {
-    font-size: $font-size-base *1.5;
+    font-size: $font-size-base * 1.5;
     line-height: $line-height-base;
   }
   &__main-title {
-    font-size: $font-size-base * 4;
-    letter-spacing: $letter-spacing-base * 2;
+    font-size: $font-size-base * 3;
+    letter-spacing: $letter-spacing-base * 1.25;
+    white-space: nowrap;
     font-family: 'goudy_bookletter_1911';
     pointer-events: none;
     z-index: map-get($layer, 'icon');
     color: #fff;
-    @include abs(50,94);
-    @include mq-up("pc") {
+    @include abs(50,88);
+    @include mq-up("tab") {
+      @include abs(50,94);
       font-size: $font-size-base * 6;
-    letter-spacing: $letter-spacing-base * 4.5;
+      letter-spacing: $letter-spacing-base * 4.5;
     }
   }
   &__sub-title {
-    @include abs(50,98);
-    font-size: $font-size-base * 4;
-    letter-spacing: $letter-spacing-base * 2;
+    font-size: $font-size-base * 1.5;
+    letter-spacing: $letter-spacing-base * 1.25;
+    white-space: nowrap;
     font-family: 'goudy_bookletter_1911';
     pointer-events: none;
     z-index: map-get($layer, 'icon');
+    color: white;
+    @include abs(50,94);
     @include mq-up("pc") {
+      @include abs(50,98);
       font-size: $font-size-base * 2.2;
       letter-spacing: $letter-spacing-base * 1;
-      color: white;
     }
   }
   &__rain {
@@ -76,44 +88,97 @@
     z-index: map-get($layer, 'icon');
     transform: rotate(-10deg);
     position: absolute;
-    top: 22%;
+    top: 5%;
     left: 8%;
-    @include mq-up("pc") {
+    @include mq-up("tab") {
+      top: 22%;
       font-size: $font-size-base * 4;
     }
   }
   &__container {
     width: 100%;
-    height: 80vh;
-    padding: 20vh 0;
-    display: flex;
+    height:100vh;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    @include mq-up("tab") {
+      display: flex;
+      padding: 20vh 0;
+      flex-wrap: nowrap;
+    }
   }
   &__inner {
-    width: 50%;
-    height: 100%;
-    &.left {
-      padding-right: 30px;
+    width: 100%;
+    height: 70%;
+    @include mq-up("tab") {
+      width: 50%;
+      height: 100%;
     }
-    &-left {
-      &.title {
-        font-size: $font-size-base * 1.4;
-        line-height: $line-height-base;
-        padding-top: 16%;
-        position: relative;
-        &::before {
-          content: '';
-          position: absolute;
-          top: 35%;
-          right: 0;
-          height: 1px;
-          width: 70%;
-          border-top: 2px dotted $color-border--thin;
+    &.left {
+      @include mq-up("tab") {  
+        padding-right: 30px;
+      }
+    }
+    &.right {
+      height: 30%;
+      position: relative;
+      @include mq-up("tab") { 
+        height: 100%; 
+        padding-top: 30px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -20%;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        border-top: 2px dotted $color-border--thin;
+        @include mq-up("tab") {
+          display: none;
         }
       }
-      &.sentense {
-        font-size: $font-size-base;
-        line-height: $line-height-base;
-        padding-top: 4%;
+    }
+  }
+  &__sub-title {
+    font-size: $font-size-base * 1.2;
+    line-height: $line-height-base;
+    font-weight: 600;
+    padding-top: 30%;
+    position: relative;
+    @include mq-up("tab") {
+      font-weight: normal;
+      font-size: $font-size-base * 1.4;
+      padding-top: 25%;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 60%;
+      right: 0;
+      height: 1px;
+      width: 65%;
+      border-top: 2px dotted $color-border--thin;
+      @include mq-up("tab") {
+        top: 35%;
+        width: 70%;
+      }
+    }
+  }
+  &__sentense {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    position: relative;
+    padding-top: 4%;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      border-top: 2px dotted $color-border--thin;
+      @include mq-up("tab") {
+        display: none;
       }
     }
   }
@@ -122,6 +187,8 @@
     height: 100%;
     border-radius: $border-radius-little;
     border: 1px #000 solid;
+    position: relative;
+
   }
 }
 // =====================================
@@ -129,43 +196,29 @@
 // =====================================
 .P_Recruit__staff {
   position: relative;
-  height: 100vh
-}
-// --------------------------------
-// バックイメージ
-// --------------------------------
-.P_Recruit__staff {
+  height: 100vh;
+  // バックイメージ
   &__back {
     @include abs-full;
   }
-  .JS_hover_click_target_backImg {
-    @include abs-full;
-    transition: all $anime-time-short;
-  }
-}
-// --------------------------------
-// ボタン
-// --------------------------------
-.P_Recruit__staff {
-  .JS_click_close_target {
-    @include abs-full;
-    pointer-events: none;
-  }
+  // 閉じるボタン
   &__btn {
+    &.left {
+      @include abs(0,0);
+    }
+    &.right {
+      @include abs(100,0);
+    }
+    display: block;
     font-size: $font-size-base * 2.5;
-    @include abs(100,0);
     pointer-events: auto;
     cursor: pointer;
-    .JS_click_close_trigger {
-      @include abs-full;
-      pointer-events: auto;
+    &:hover .C_box--btn{
+      transform: rotate(180deg);
+      transform-origin: center center;
     }
   }
-}
-// --------------------------------
-// フロントイメージ
-// --------------------------------
-.P_Recruit__staff {
+  // フロントイメージ
   &__front {
     display: flex;
     flex-wrap: wrap;
@@ -176,56 +229,27 @@
     width: 100%;
     height: 25%;
     position: relative;
-    pointer-events: none;
     @include mq-up ("tab") {
       width: 50%;
       height: 50%;
     }
   }
-  .JS_hover_click_target_frontImg {
-    @include abs-full;
-    transition: all $anime-time-short;
-  }
-  &__front-image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: all $anime-time-short;
-  }
-  .JS_hover_target_frontSdw {
-    @include abs-full;
-  }
-  .JS_hover_target_frontTxt {
-    @include abs-full;
-  }
-  .JS_click_target {
-    @include abs-full;
-    pointer-events: none;
-  }
   &__front-catch {
     text-align: center;
-    font-size: $font-size-base * 2.75;
+    font-size: $font-size-base * 1.68;
+    white-space: nowrap;
     z-index: map-get($layer, 'icon');
     @include abs(50,50);
     color: #fff;
     pointer-events: none;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 2.75;
+    }
   }
-  .JS_hover_click_trigger {
+  &__trigger {
     @include abs-full;
     pointer-events: auto;
     cursor: pointer;
-  }
-}
-// --------------------------------
-// シャドウカバー
-// --------------------------------
-.P_Recruit__staff {
-  &__cover {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, $cover-opacity);
-    z-index: map-get($layer, 'cover' );
-    pointer-events: none;
   }
 }
 // =====================================
@@ -233,33 +257,94 @@
 // =====================================
 .P_Recruit__job-info {
   width: 100%;
-  height: 100vh;
   &__container {
+    padding: 40px 20px;
     display: flex;
     flex-wrap: wrap;
-  }
-  &__card {
-    width: 100%;
-    height: 33.33%;
-    background-color: #fff;
-    box-shadow: $shadow;
-    
-    @include mq-up ("tab") {
-      width: 33.33%;
-      height: 100%;
+    @include mq-up("tab") {
+      padding: 100px 50px;
+      flex-wrap: nowrap;
     }
   }
-  &__titel-box {
-    border-radius: $border-radius-little;
-    background-color: #000;
+  &__content {
+    margin-top: 20px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    @include mq-up("tab") {
+      margin-top: 0px;
+      margin-left: 30px;
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+// =====================================
+// お問い合わせフォームへのリンクフッター
+// =====================================
+.P_Recruit__contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  @include mq-up("tab") {
+    height: 60vh;
   }
   &__title {
-    
+    font-size: $font-size-base * 2.8;
+    letter-spacing: $letter-spacing-base * 1.25;
+    font-family: 'goudy_bookletter_1911';
+    color: #fff;
+    text-align: center;
+    padding-top: 95px;
+    @include mq-up("pc") {
+      font-size: $font-size-base * 6;
+      letter-spacing: $letter-spacing-base * 4.5;
+      padding-top: 60px;
+    }
   }
-  &__sub2-title {
-    
+  &__text1 {
+    font-size: $font-size-base * 1.4375;
+    margin-top: -5px;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.875;
+      margin-top: -10px;
+    }
   }
-  &__sub2-text {
-    
+  &__text2 {
+    font-size: $font-size-base;
+  }
+  &__container {
+    display: flex;
+    padding-top: 25px;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include mq-up("tab") {
+      padding-top: 33px;
+      flex-wrap: nowrap;
+    }
+  }
+  &__btn-text {
+    font-size: $font-size-base * 1;
+    position: relative;
+    line-height: 300%;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.3;
+      padding-top: 1px;
+      line-height: 100%;
+    }
+  }
+  &__tel-text {
+    font-size: $font-size-base * 1.875;
+    margin-top: 15px;
+    @include mq-up("tab") {
+      margin-top: 0;
+      margin-left: 80px;
+    }
   }
 }

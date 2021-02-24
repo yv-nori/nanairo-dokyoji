@@ -1,0 +1,390 @@
+<%= render partial: 'shared/header' %>
+<%# ==================================== %>
+<%# トップイメージ
+<%# ==================================== %>
+<section class="RecruitKeyVisual">
+  <div class="L_key-visual" id="JS_raindrops_target">
+    <div class="L_key-visual__inner">
+      <div class="C_image__recruit"></div>
+      <%#-- サブタイトル縦書き --%>
+      <div class="P_Recruit__kv__title-box right">
+        <h3 class="P_Recruit__kv__text">子どもたちの未来を</h3>
+      </div>
+      <div class="P_Recruit__kv__title-box left">
+        <h3 class="P_Recruit__kv__text">一緒に育みましょう。</h3>
+      </div>
+      <%#-- 採用タイトル --%>
+      <h1 class="P_Recruit__kv__main-title">RECRUITING</h1>
+      <h2 class="P_Recruit__kv__sub-title">ー Let's Work Together ー</h2>
+      <%#-- シャボン玉左上 --%>
+      <%=render'shared/shabon',{x:16,y:13,cl:'pc-only P_Recruit__kv',size:'LLL',time:'3',ptn:'A',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:27,y:28,cl:'pc-only P_Recruit__kv',size:'LLL',time:'2',ptn:'B',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:19,y:40,cl:'P_Recruit__kv',size:'L',time:'1',ptn:'A',dir:'right',js:''}%>
+      <%#-- シャボン玉右上 --%>
+      <%=render'shared/shabon',{x:83,y:24,cl:'P_Recruit__kv',size:'S'  ,time:'2',ptn:'B',dir:'left',js:''}%>
+      <%=render'shared/shabon',{x:90,y:20,cl:'pc-only P_Recruit__kv',size:'SS' ,time:'3',ptn:'A',dir:'left',js:''}%>
+      <%=render'shared/shabon',{x:92,y:28,cl:'P_Recruit__kv',size:'SS' ,time:'2',ptn:'A',dir:'left',js:''}%>
+      <%=render'shared/shabon',{x:96,y:25,cl:'P_Recruit__kv',size:'SSS',time:'3',ptn:'B',dir:'left',js:''}%>
+      <%=render'shared/shabon',{x:86,y:16,cl:'pc-only P_Recruit__kv',size:'SSS',time:'3',ptn:'A',dir:'left',js:''}%>
+      <%#-- シャボン玉左下 --%>
+      <%=render'shared/shabon',{x:4, y:76,cl:'P_Recruit__kv',size:'LLL',time:'3',ptn:'A',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:10,y:87,cl:'pc_only P_Recruit__kv',size:'M'  ,time:'3',ptn:'B',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:7, y:92,cl:'P_Recruit__kv',size:'SSS',time:'1',ptn:'A',dir:'right',js:''}%>
+      <%#-- シャボン玉右下 --%>
+      <%=render'shared/shabon',{x:86,y:82,cl:'P_Recruit__kv',size:'LLL',time:'2',ptn:'A',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:92,y:90,cl:'P_Recruit__kv',size:'M'  ,time:'2',ptn:'B',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:86, y:94,cl:'P_Recruit__kv',size:'SSS',time:'1',ptn:'A',dir:'right',js:''}%>
+    </div>
+  </div>
+</section>
+<%# ==================================== %>
+<%# コンセプト
+<%# ==================================== %>
+<section class="RecruitConcept">
+  <article class="P_Recruit__concept">
+    <div class="C_wrap__1000">
+      <%#-- タイトル --%>
+      <h1 class="P_Recruit__concept__title">concept</h1>
+      <%#-- コンセプトのコンテンツボックス --%>
+      <div class="P_Recruit__concept__container">
+        <div class="P_Recruit__concept__inner left">
+          <%#-- テキストコンテント --%>
+          <h2 class="P_Recruit__concept__sub-title">
+            子どもの「好き」を見つけませんか？
+          </h2>
+          <p class="P_Recruit__concept__sentense">　私たち保育教諭は、子どもの「はじめて」のいつもとなりにいます。その「はじめて」が「好き」になれば、子どもの可能性が無限に広がります。<br>
+          　子どもは「できた」「楽しい」を私たちに投げかけます。その時、笑顔でその楽しさを共有できれば、それが子どもの「好き」に繋がります。私たちは一つでも多くの「好き」を見つけてあげたいと考えます。<br>
+          　さぁ、わたしたちと一緒に、子どもたちの七彩(なないろ)の未来を育みませんか？</p>
+        </div>
+        <%#-- イメージコンテント --%>
+        <div class="P_Recruit__concept__inner right">
+          <%= image_tag 'recruit/recruit2.jpg', class: 'P_Recruit__concept__image' %>
+        </div>
+      </div>
+      <%#-- pcシャボン玉左上 --%>
+      <%=render'shared/shabon',{x:58,y:29,cl:'pc-only P_Recruit__concept',size:'SSS',time:'1',ptn:'B',dir:'right',js:''} %>
+      <%=render'shared/shabon',{x:54,y:29,cl:'pc-only P_Recruit__concept',size:'M'  ,time:'3',ptn:'A',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:50, y:18,cl:'pc-only P_Recruit__concept',size:'LLL',time:'2',ptn:'B',dir:'right',js:''}%>
+      <%#-- spシャボン玉左上 --%>
+      <%=render'shared/shabon',{x:88,y:6,cl:'sp-only P_Recruit__concept',size:'SSS',time:'1',ptn:'B',dir:'right',js:''} %>
+      <%=render'shared/shabon',{x:90,y:9,cl:'sp-only P_Recruit__concept',size:'M'  ,time:'3',ptn:'A',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:77, y:1,cl:'sp-only P_Recruit__concept',size:'LLL',time:'2',ptn:'B',dir:'right',js:''}%>
+      <%#-- pcシャボン玉右下 --%>
+      <%=render'shared/shabon',{x:88,y:83,cl:'pc-only P_Recruit__concept',size:'S',time:'3',ptn:'B',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:91,y:78,cl:'pc-only P_Recruit__concept',size:'L',time:'1',ptn:'B',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:92,y:82,cl:'pc-only P_Recruit__concept',size:'SS'  ,time:'2',ptn:'B',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:90, y:84,cl:'pc-only P_Recruit__concept',size:'SSS',time:'1',ptn:'B',dir:'right',js:''}%>
+      <%#-- spシャボン玉右下 --%>
+      <%=render'shared/shabon',{x:84,y:94,cl:'sp-only P_Recruit__concept',size:'S',time:'3',ptn:'A',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:93,y:88,cl:'sp-only P_Recruit__concept',size:'S',time:'1',ptn:'A',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:95,y:92,cl:'sp-only P_Recruit__concept',size:'SS'  ,time:'2',ptn:'A',dir:'right',js:''}%>
+      <%=render'shared/shabon',{x:92, y:95,cl:'sp-only P_Recruit__concept',size:'SSS',time:'3',ptn:'A',dir:'right',js:''}%>
+    </div>
+  </article>
+</section>
+<%# ==================================== %>
+<%# 職員紹介
+<%# ==================================== %>
+
+<%
+staff1 = [
+  name:'上村　和美',
+  name_en:'kitano saori',
+  joined_date:'平成20年4月',
+  work_style:'正規・常勤',
+  license:'栄養士・調理師',
+  catch_copy:'美味しい給食で子どもたちに笑顔を',
+  catch_sentense:'子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を',
+  holiday:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+  favorite:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+  card_position:'right',
+  js_id:'0']
+staff2 = [
+  name:'篠原　明美',
+  name_en:'kitano saori',
+  joined_date:'平成20年4月',
+  work_style:'正規・常勤',
+  license:'栄養士・調理師',
+  catch_copy:'美味しい給食で子どもたちに笑顔を',
+  catch_sentense:'子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を',
+  holiday:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+  favorite:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+  card_position:'right',
+  js_id:'1']
+staff3 = [
+  name:'名前　名前',
+  name_en:'kitano saori',
+  joined_date:'平成20年4月',
+  work_style:'正規・常勤',
+  license:'栄養士・調理師',
+  catch_copy:'美味しい給食で子どもたちに笑顔を',
+  catch_sentense:'子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を',
+  holiday:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+  favorite:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+  card_position:'left',
+  js_id:'2']
+staff4 = [
+  name:'北野　沙織',
+  name_en:'kitano saori',
+  joined_date:'平成20年4月',
+  work_style:'正規・常勤',
+  license:'栄養士・調理師',
+  catch_copy:'美味しい給食で子どもたちに笑顔を',
+  catch_sentense:'子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を子どもたちにおいしい給食を',
+  holiday:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+  favorite:'たのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしているたのしく過ごしている',
+  card_position:'left',
+  js_id:'3']
+%>
+
+<section class="Staff">
+  <%#-- イメージボックス --%>
+  <div class="P_Recruit__staff">
+    <%#-- バックイメージ --%>
+    <div class="P_Recruit__staff__back">
+      <%#-- バックイメージ0 --%>
+      <div class="A_isInvisible" id="JS_staff-switch_target0-backImg">
+        <div class="C_image__recruit__staff0"></div>
+        <div class="A_isNone" id="JS_staff-switch_target0-intro">
+          <%#-- 紹介文 --%>
+          <%=render partial:'shared/staff_intro',collection:staff1,as:'staff' %>
+        </div>
+      </div>
+      <%#-- バックイメージ1 --%>
+      <div class="A_isInvisible" id="JS_staff-switch_target1-backImg">
+        <div class="C_image__recruit__staff1"></div>
+        <div class="A_isNone" id="JS_staff-switch_target1-intro">
+          <%#-- 紹介文 --%>
+          <%=render partial:'shared/staff_intro',collection:staff2,as:'staff' %>
+        </div>
+      </div>
+      <%#-- バックイメージ2 --%>
+      <div class="A_isInvisible" id="JS_staff-switch_target2-backImg">
+        <div class="C_image__recruit__staff2"></div>
+        <div class="A_isNone" id="JS_staff-switch_target2-intro">
+          <%#-- 紹介文 --%>
+          <%=render partial:'shared/staff_intro',collection:staff3,as:'staff' %>
+        </div>
+      </div>
+      <%#-- バックイメージ3 --%>
+      <div class="A_isInvisible" id="JS_staff-switch_target3-backImg">
+        <div class="C_image__recruit__staff3"></div>
+        <div class="A_isNone" id="JS_staff-switch_target3-intro">
+          <%#-- 紹介文 --%>
+          <%=render partial:'shared/staff_intro',collection:staff4,as:'staff' %>
+        </div>
+      </div>
+    </div>
+    <%#-- 閉じるボタン --%>
+    <div class="P_Recruit__staff__btn A_isNone JS_R JS_R JS_L JS_L" id="JS_staff-switch_target-btn">
+      <div class="C_box--btn">
+        <i class="far fa-times-circle"></i>
+      </div>
+    </div>
+    <%#-- フロントイメージ --%>
+    <div class="P_Recruit__staff__front">
+      <%#-- フロントイメージ0 --%>
+      <div class="P_Recruit__staff__inner">
+        <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target0-white"></div>
+        <div class="C_image__recruit__staff0" id="JS_staff-switch_target0-frontImg"></div>
+        <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target0-catch">
+          仕事も家族も
+        </h1>
+        <div class="P_Recruit__staff__trigger" id="JS_staff-switch_trigger0"></div>
+      </div>
+      <%#-- フロントイメージ1 --%>
+      <div class="P_Recruit__staff__inner">
+        <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target1-white"></div>
+        <div class="C_image__recruit__staff1" id="JS_staff-switch_target1-frontImg"></div>
+        <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target1-catch">
+          ひとりひとりの<br>
+          子どもを大切に
+        </h1>
+        <div class="P_Recruit__staff__trigger" id="JS_staff-switch_trigger1"></div>
+      </div>
+      <%#-- フロントイメージ2 --%>
+      <div class="P_Recruit__staff__inner">
+        <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target2-white"></div>
+        <div class="C_image__recruit__staff2" id="JS_staff-switch_target2-frontImg"></div>
+        <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target2-catch">
+          言葉を手渡す
+        </h1>
+        <div class="P_Recruit__staff__trigger" id="JS_staff-switch_trigger2"></div>
+      </div>
+      <%#-- フロントイメージ3 --%>
+      <div class="P_Recruit__staff__inner">
+        <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target3-white"></div>
+        <div class="C_image__recruit__staff3" id="JS_staff-switch_target3-frontImg"></div>
+        <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target3-catch">
+          優しさをもって
+        </h1>
+        <div class="P_Recruit__staff__trigger" id="JS_staff-switch_trigger3"></div>
+      </div>
+    <div class="U_cover--shadow" id="JS_staff-switch_target-cover"></div>
+  </div>
+</section>
+<%# ==================================== %>
+<%# 就職情報カード
+<%# ==================================== %>
+<% 
+job_info1 = [
+  title:'給料について',
+  title_en:'About salary',
+  content1_title:'●正職員',
+  content1_text:'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー',
+  content2_title:'●非常勤(フルタイム・パートタイム)',
+  content2_text:'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー']
+job_info2 = [
+  title:'勤務時間',
+  title_en:'Working hours',
+  content1_title:'●正職員',
+  content1_text:'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー',
+  content2_title:'●非常勤(フルタイム・パートタイム)',
+  content2_text:'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー']
+job_info3 = [
+  title:'福利厚生',
+  title_en:'About Welfare',
+  content1_title:'●正職員',
+  content1_text:'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー',
+  content2_title:'●非常勤(フルタイム・パートタイム)',
+  content2_text:'ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー']
+%>
+<%# ==================================== %>
+<%# 採用情報
+<%# ==================================== %>
+<section class="jobInfo">
+  <div class="P_Recruit__job-info">
+    <ul class="P_Recruit__job-info__container">
+      <li class="P_Recruit__job-info__content">
+        <%=render partial:'shared/job_info',collection:job_info1,as:'job_info' %>
+      </li>
+      <li class="P_Recruit__job-info__content">
+        <%=render partial:'shared/job_info',collection:job_info2,as:'job_info' %>
+      </li>
+      <li class="P_Recruit__job-info__content">
+        <%=render partial:'shared/job_info',collection:job_info3,as:'job_info' %>
+      </li>
+    </ul>
+  </div>
+</section>
+<%# ==================================== %>
+<%# お問い合わせフォームへのリンクフッター
+<%# ==================================== %>
+<section class="contactFotter" id="JS_raindrops_target-darken">
+  <div class="P_Recruit__contact">
+    <h1 class="P_Recruit__contact__title">
+      RECRUITING
+    </h1>
+    <p class="P_Recruit__contact__text1">
+      お気軽にお問い合わせください。
+    </p>
+    <p class="P_Recruit__contact__text2">
+      ご質問やご相談を承ります。どうぞ、お気軽にお問い合わせください。
+    </p>
+    <div class="P_Recruit__contact__container">
+      <div class="C_Btn--white">
+        <span></span>
+        <div class="C_Btn--white__arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="P_Recruit__contact__btn-text">
+          WEBでのエントリーはこちら
+          <div class="C_Btn--white__underline"></div>
+        </div>
+        <%= link_to '', root_path, class: 'C_Btn--white__link'%>
+      </div>
+      <p class="P_Recruit__contact__tel-text">
+        TEL:072-427-8969
+      </p>
+    </div>
+    <%#-- シャボン玉左上 --%>
+    <%=render'shared/shabon',{x:1,y:23,cl:'P_Recruit__contact',size:'LLL',time:'3',ptn:'A',dir:'right',js:''}%>
+    <%=render'shared/shabon',{x:12,y:39,cl:'pc-only P_Recruit__contact',size:'LLL',time:'2',ptn:'B',dir:'right',js:''}%>
+    <%=render'shared/shabon',{x:4,y:64,cl:'P_Recruit__contact',size:'L',time:'1',ptn:'A',dir:'right',js:''}%>
+    <%#-- シャボン玉右上 --%>
+    <%=render'shared/shabon',{x:83,y:81,cl:'pc-only P_Recruit__contact',size:'S'  ,time:'2',ptn:'B',dir:'left',js:''}%>
+    <%=render'shared/shabon',{x:90,y:77,cl:'P_Recruit__contact',size:'SS' ,time:'3',ptn:'A',dir:'left',js:''}%>
+    <%=render'shared/shabon',{x:92,y:90,cl:'P_Recruit__contact',size:'SS' ,time:'2',ptn:'A',dir:'left',js:''}%>
+    <%=render'shared/shabon',{x:96,y:92,cl:'P_Recruit__contact',size:'SSS',time:'3',ptn:'B',dir:'left',js:''}%>
+    <%=render'shared/shabon',{x:86,y:73,cl:'pc-only P_Recruit__contact',size:'SSS',time:'3',ptn:'A',dir:'left',js:''}%>
+  </div>
+</section>
+<%# ==================================== %>
+<%# お問い合わせフォーム
+<%# ==================================== %>
+<%
+form_items = [
+  title: 'ENTRY',
+  url: contact_recruits_path,
+  forms: @contact_recruit,
+  items: [{
+    title: 'お名前',
+    mandatory: true,
+    key: :name,
+    id: 'name',
+    maxlength: '30',
+    placeholder: '例) 七彩　花子',
+    error_message: @contact_recruit.errors.full_messages_for(:name)},
+  { 
+    title: 'ふりがな',
+    mandatory: true,
+    key: :name_kana,
+    id: 'name_kana',
+    maxlength: '30',
+    placeholder: '例) なないろ　はなこ',
+    error_message: @contact_recruit.errors.full_messages_for(:name_kana)},
+  {
+    title: '電話番号',
+    mandatory: true,
+    key: :tel,
+    id: 'tel',
+    maxlength: '12',
+    placeholder: '例) 000-0000-000',
+    error_message: @contact_recruit.errors.full_messages_for(:tel)},
+  {
+    title: 'メールアドレス',
+    mandatory: true,
+    key: :email,
+    id: 'email',
+    email_field: true,
+    placeholder: '例) example@dokyoji.or.jp',
+    error_message: @contact_recruit.errors.full_messages_for(:email)},
+  {
+    title: 'メールアドレス確認',
+    mandatory: true,
+    key: :email_confirmation,
+    id: 'email_cofirmation',
+    email_field: true,
+    placeholder: '例) example@dokyoji.or.jp',
+    error_message: @contact_recruit.errors.full_messages_for(:email_confirmation)},
+  {
+    title: '郵便番号',
+    key: :postal_code,
+    id: 'postal_code',
+    maxlength: '8',
+    placeholder: '例) 〒597-0033',
+    error_message: @contact_recruit.errors.full_messages_for(:postal_code)},
+  {
+    title: 'ご住所',
+    key: :address,
+    id: 'address',
+    placeholder: '例) 大阪府　貝塚市　半田1-3-6',
+    error_message: @contact_recruit.errors.full_messages_for(:address)},
+  {
+    title: 'その他質問事項',
+    key: :question,
+    id: 'question',
+    text_area: true,
+    maxlength: '1000',
+    rows: '4',
+    error_message: @contact_recruit.errors.full_messages_for(:question)
+  }]]
+%>
+<section class="RecruitContactForm", id="return">
+  <div class="C_wrap__600">
+    <%=render partial:'shared/form', collection: form_items ,as:'form_items' %>
+  </div>
+</section>
+<%= render partial: 'shared/footer' %>

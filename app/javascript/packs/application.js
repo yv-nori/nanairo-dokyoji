@@ -3,21 +3,16 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-require("jquery")
-require("jquery-ui-dist/jquery-ui")
-require("../func.js")
-require("../raindrops")
-require("../menu-open")
-require("../scroll")
-require("../raindrops-recruit")
-require("../window-size")
-require("../hover")
-require("../click")
-
+require("@rails/ujs").start();
+// require("turbolinks").start()
+require("@rails/activestorage").start();
+require("channels");
+require("jquery");
+require("jquery-ui-dist/jquery-ui");
+require("../function/raindrops");
+// ページ関数
+require("../page/houjin_top");
+require("../page/houjin_recruit");
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

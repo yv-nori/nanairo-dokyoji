@@ -25,6 +25,7 @@
     
     ],
     "workbench.tree.renderIndentGuides": "always",
-    "bracketPairColorizer.showBracketsInGutter": true
+    "bracketPairColorizer.showBracketsInGutter": true,
+    "emmet.triggerExpansionOnTab": true
   
 }

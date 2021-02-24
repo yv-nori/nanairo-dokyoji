@@ -1,47 +1,51 @@
-<%= render partial: 'layouts/header' %>
-<%#-- TODO:h1タグの見直し(seo) --%>
+<%= render partial: 'shared/header' %>
 <%# ==================================== %>
 <%# トップ画像
 <%# ==================================== %>
 <section class="KeyVisual">
   <%#-- イメージコンテナー --%>
-  <div class="L_key-visual JS_scroll_to-top_trigger C_image--parallax__houjin">
-    <div class="L_key-visual__inner U_trim">
-      <%#-- TODO:写真の置き換え --%>
-      <%#-- シャドウブラックカバー --%>
-      <div class="C_cover--shadow"></div>
-      <%#-- マウスアイコン --%>
-      <div class="C_icon-mouse U_z-icon">
+  <div class="P_Houjin-kv">
+    <div class="L_key-visual" id="JS_scroll-to-top_trigger-0">
+      <%#-- スクロールするキャッチコピー(バック黒) --%>
+      <div class="P_Houjin-kv__text-container" id="JS_scroll-move_target-0">
+        <div class="P_Houjin-kv__back-text">
+          <p class="P_Houjin-kv__text-en">
+            <span>
+              Find the Many Like
+              <br class="sp-only">
+              Nurture the future
+            </span>
+          </p>
+          <h2 class="P_Houjin-kv__text-ja">
+            <span>好きが見つかる</span><br>
+            <span>未来を育む</span>
+          </h2>
+        </div>
+      </div>
+      <div class="L_inner-trim">
+        <div class="C_image--parallax__houjin"></div>
+        <div class="U_cover--shadow"></div>
+        <%#-- マウスアイコン --%>
+        <div class="C_icon-mouse" id="JS_scroll-change_target">
           <span class="C_icon-mouse__material"></span>
+        </div>
+        <%#-- スクロールするキャッチコピー(フロント白) --%>
+        <div class="P_Houjin-kv__text-container" id="JS_scroll-move_target-1">
+          <div class="P_Houjin-kv__front-text">
+            <p class="P_Houjin-kv__text-en">
+              <span>
+                Find the Many Like
+                <br class="sp-only">
+                Nurture the future
+              </span>
+            </p>
+            <h2 class="P_Houjin-kv__text-ja">
+              <span>好きが見つかる</span><br>
+              <span>未来を育む</span>
+            </h2>
+          </div>
+        </div>
       </div>
-      <%#-- スクロールするキャッチコピー(フロント) --%>
-      <div class="P_Houjin-kv__text-box  --front JS_scroll_move_target">
-        <p class="P_Houjin-kv__text-en">
-          <span>
-            Find the Many Like
-            <br class="sp-only">
-            Nurture the future
-          </span>
-        </p>
-        <h2 class="P_Houjin-kv__text-ja">
-          <span>好きが見つかる</span><br>
-          <span>未来を育む</span>
-        </h2>
-      </div>
-    </div>
-    <%#-- スクロールするキャッチコピー(バック) --%>
-    <div class="P_Houjin-kv__text-box  --back JS_scroll_move_target">
-      <p class="P_Houjin-kv__text-en">
-        <span>
-          Find the Many Like
-          <br class="sp-only">
-          Nurture the future
-        </span>
-      </p>
-      <h2 class="P_Houjin-kv__text-ja">
-        <span>好きが見つかる</span><br>
-        <span>未来を育む</span>
-      </h2>
     </div>
   </div>
 </section>
@@ -51,8 +55,8 @@
 <%#-- キャッチコピーセクション --%>
 <section class="Philosophy">
   <div class="P_Houjin-philosophy__catch">
-    <div class="C_wrap__600 JS_scroll_move_end_target">
-      <div class="A_isInvisible">
+    <div class="C_wrap__600">
+      <div class="A_isInvisible" id="JS_scroll-move-end_target">
         <p class="P_Houjin-kv__text-en">
           <span>
             Find the Many Like
@@ -70,23 +74,28 @@
   <%#-- リード文 --%>
   <div class="P_Houjin-philosophy__lead">
     <div class="C_wrap__600">
-      <p class="P_Houjin-philosophy__text">　私たち七彩(なないろ)学舎では、子どもたちの「好き」を大切にしています。子どもの体験は全て「はじめて」です。その「はじめて」が「好き」になれば、たとえその時苦手なことも継続し、子どもたちの将来の選択肢が広がります。<br>　私たちは、その考えのもと、子どもたちの未来を育んでいます。</p>
-      <div class="P_Houjin-philosophy__link">
-        <ul class="P_Houjin-philosophy__list L_flex --center-X --wrap">
-          <li class="P_Houjin-philosophy__list-item">
-            <%= link_to root_path, class: 'A_border-stretch' do %>
-              <p class="P_Houjin-philosophy__link-text ja A_border-stretch__text">こどもへの願い</p>
-              <p class="P_Houjin-philosophy__link-text en">VISION</p>
-            <% end %>
-          </li>
-          <li class="P_Houjin-philosophy__list-item">
-            <%= link_to root_path, class: 'A_border-stretch' do %>
-              <p class="P_Houjin-philosophy__link-text ja A_border-stretch__text">私たちのあゆみ</p>
-              <p class="P_Houjin-philosophy__link-text en">HISTORY</p>
-            <% end %>
-          </li>
-        </ul>
-      </div>
+      <p class="P_Houjin-philosophy__text">
+        　私たち七彩(なないろ)学舎では、子どもたちの「好き」を大切にしています。子どもの体験は全て「はじめて」です。その「はじめて」が「好き」になれば、たとえその時苦手なことも継続でき、子どもたちの将来の選択肢が広がります。<br>　私たちは、その考えのもと、子どもたちの未来を育んでいます。</p>
+      <ul class="P_Houjin-philosophy__link-container">
+        <li class="P_Houjin-philosophy__link-item">
+          <div class="P_Houjin-philosophy__link-text">
+            <div class="P_Houjin-philosophy__border-stretch">
+              <p class="P_Houjin-philosophy__link-text-ja">こどもへの願い</p>
+            </div>
+            <p class="P_Houjin-philosophy__link-text-en">VISION</p>
+            <%= link_to "", root_path, class:"U_link"%>
+          </div>
+        </li>
+        <li class="P_Houjin-philosophy__link-item">
+          <div class="P_Houjin-philosophy__link-text">
+            <div class="P_Houjin-philosophy__border-stretch">
+              <p class="P_Houjin-philosophy__link-text-ja">私たちのあゆみ</p>
+            </div>
+            <p class="P_Houjin-philosophy__link-text-en">HISTORY</p>
+            <%= link_to "", root_path, class:"U_link"%>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
@@ -95,78 +104,85 @@
 <%# ==================================== %>
 <section class="Info">
   <div class="P_Info">
-    <div class="P_Info__container L_flex --wrap --center">
+    <div class="P_Info__container">
       <%#-- 入園希望 --%>
-      <div class="P_Info__image C_image__admission JS_scroll_admission_trigger">
-        <%#-- カバーシャドウ＋リンク --%>
-        <%= link_to root_path, class: "P_Info__link A_pointer" do %>
-          <div class="P_Info__deco">
-            <h1 class="P_Info__text">Admission</h1>
-            <h2 class="P_Info__sub-text">入園をご希望の方</h2>
-          </div>
-          <%#-- シャボン --%>
-          <%=render'layouts/shabon',{x:4,  y:5,  cl:'P_Info',size:'S' ,time:'2',ptn:'B',dir:'left',jscl:'JS_anime_admission'}%>
-          <%=render'layouts/shabon',{x:0,  y:90, cl:'P_Info',size:'M' ,time:'1',ptn:'A',dir:'left',jscl:'JS_anime_admission'}%>
-          <%=render'layouts/shabon',{x:46, y:10, cl:'P_Info',size:'SS',time:'1',ptn:'A',dir:'left',jscl:'JS_anime_admission'}%>
-          <%=render'layouts/shabon',{x:70, y:38, cl:'P_Info',size:'M' ,time:'2',ptn:'B',dir:'left',jscl:'JS_anime_admission'}%>
-          <%=render'layouts/shabon',{x:100,y:100,cl:'P_Info',size:'L' ,time:'3',ptn:'B',dir:'left',jscl:'JS_anime_admission'}%>
-        <% end %>
+      <div class="P_Info__image-box" id="JS_scroll-action_trigger-0">
+        <div class="P_Info__image">
+          <div class="C_image__admission"></div>
+        </div>
+        <div class="U_cover--shadow" id="JS_scroll-action0-clear_target"></div>
+        <div class="P_Info__text-box">
+          <h1 class="P_Info__text">Admission</h1>
+          <h2 class="P_Info__sub-text">入園をご希望の方</h2>
+        </div>
+        <%#-- シャボン --%>
+        <%=render'shared/shabon',{x:4,  y:5,  cl:'P_Info',size:'S' ,time:'2',ptn:'B',dir:'left',js:'JS_scroll-action0-anime_target-0'}%>
+        <%=render'shared/shabon',{x:0,  y:90, cl:'P_Info',size:'M' ,time:'1',ptn:'A',dir:'left',js:'JS_scroll-action0-anime_target-1'}%>
+        <%=render'shared/shabon',{x:46, y:10, cl:'P_Info',size:'SS',time:'1',ptn:'A',dir:'left',js:'JS_scroll-action0-anime_target-2'}%>
+        <%=render'shared/shabon',{x:70, y:38, cl:'P_Info',size:'M' ,time:'2',ptn:'B',dir:'left',js:'JS_scroll-action0-anime_target-3'}%>
+        <%=render'shared/shabon',{x:100,y:100,cl:'P_Info',size:'L' ,time:'3',ptn:'B',dir:'left',js:'JS_scroll-action0-anime_target-4'}%>
+        <%= link_to "", root_path, class:"U_link"%>
       </div>
       <%#-- 就職希望 --%>
-      <div class="P_Info__image C_image__recruit JS_scroll_recruit_trigger">
-      <%#-- カバーシャドウ＋リンク --%>
-        <%= link_to recruit_index_path, class: "P_Info__link A_time-S A_pointer" do %>
-          <div class="P_Info__deco">
-            <h1 class="P_Info__text">Recruiting</h1>
-            <h2 class="P_Info__sub-text">就職をご希望の方</h2>
-          </div>
-          <%=render'layouts/shabon',{x:4, y:5, cl:'P_Info',size:'SS' ,time:'1',ptn:'A',dir:'left',jscl:'JS_anime_recruit'}%>
-          <%=render'layouts/shabon',{x:7, y:5, cl:'P_Info',size:'S'  ,time:'2',ptn:'B',dir:'left',jscl:'JS_anime_recruit'}%>
-          <%=render'layouts/shabon',{x:1, y:55,cl:'P_Info',size:'LL' ,time:'1',ptn:'A',dir:'left',jscl:'JS_anime_recruit'}%>
-          <%=render'layouts/shabon',{x:80,y:10,cl:'P_Info',size:'SS' ,time:'1',ptn:'A',dir:'left',jscl:'JS_anime_recruit'}%>
-          <%=render'layouts/shabon',{x:55,y:42,cl:'P_Info',size:'M'  ,time:'2',ptn:'B',dir:'left',jscl:'JS_anime_recruit'}%>
-          <%=render'layouts/shabon',{x:100,y:100,cl:'P_Info',size:'LLL',time:'3',ptn:'B',dir:'left',jscl:'JS_anime_recruit'}%>
-        <% end %>
+      <div class="P_Info__image-box" id="JS_scroll-action_trigger-1">
+        <div class="P_Info__image">
+          <div class="C_image__recruit"></div>
+        </div>
+        <div class="U_cover--shadow" id="JS_scroll-action1-clear_target"></div>
+        <div class="P_Info__text-box">
+          <h1 class="P_Info__text">Recruiting</h1>
+          <h2 class="P_Info__sub-text">就職をご希望の方</h2>
+        </div>
+        <%#-- シャボン --%>
+        <%=render'shared/shabon',{x:4, y:5, cl:'P_Info',size:'SS' ,time:'1',ptn:'A',dir:'left',js:'JS_scroll-action1-anime_target-0'}%>
+        <%=render'shared/shabon',{x:7, y:5, cl:'P_Info',size:'S'  ,time:'2',ptn:'B',dir:'left',js:'JS_scroll-action1-anime_target-1'}%>
+        <%=render'shared/shabon',{x:1, y:55,cl:'P_Info',size:'LL' ,time:'1',ptn:'A',dir:'left',js:'JS_scroll-action1-anime_target-2'}%>
+        <%=render'shared/shabon',{x:80,y:10,cl:'P_Info',size:'SS' ,time:'1',ptn:'A',dir:'left',js:'JS_scroll-action1-anime_target-3'}%>
+        <%=render'shared/shabon',{x:55,y:42,cl:'P_Info',size:'M'  ,time:'2',ptn:'B',dir:'left',js:'JS_scroll-action1-anime_target-4'}%>
+        <%=render'shared/shabon',{x:100,y:100,cl:'P_Info',size:'LLL',time:'3',ptn:'B',dir:'left',js:'JS_scroll-action1-anime_target-5'}%>
+        <%= link_to "", contact_recruits_path, class:"U_link"%>
       </div>
     </div>
   </div>
 </section>
-
 <%# ==================================== %>
 <%# 施設の紹介
 <%# ==================================== %>
 <section class="Facilities">
-  <div class="P_Facility JS_scroll_to-top_trigger">
-    <div class="P_Facility__container L_flex --wrap --center">
-      <%#-- パルティimage --%>
-      <div class="P_Facility__image C_image__parti JS_scroll_scale_parti">
-      <%#-- カバーシャドウ＋リンク --%>
-        <%= link_to root_path, class: "C_cover--shadow A_time-S A_toOpacity A_pointer" do %>
-          <h1 class="P_Facility__text">Parti</h3>
-        <% end %>
+  <div class="P_Facility">
+    <div class="P_Facility__container" id="JS_scroll-to-top_trigger-1">
+      <div class="P_Facility__image-box" id="JS_scroll-action_trigger-2">
+        <div class="P_Facility__image">
+          <div class="C_image__parti"></div>
+        </div>
+        <div class="U_cover--shadow" id="JS_scroll-action2-clear_target"></div>
+        <h1 class="P_Facility__text">Parti</h1>
+        <%= link_to "", root_path, class:"U_link"%>
       </div>
-      <%#-- ピアニィ image--%>
-      <div class="P_Facility__image C_image__piani JS_scroll_scale_piani">
-        <%#-- カバーシャドウ＋リンク --%>
-        <%= link_to root_path, class: "C_cover--shadow A_time-S A_toOpacity A_pointer" do %>
-          <h1 class="P_Facility__text">Piani</h3>
-        <% end %>
+      <div class="P_Facility__image-box" id="JS_scroll-action_trigger-3">
+        <div class="P_Facility__image">
+          <div class="C_image__piani"></div>
+        </div>
+        <div class="U_cover--shadow" id="JS_scroll-action3-clear_target"></div>
+        <h1 class="P_Facility__text">Piani</h1>
+        <%= link_to "", root_path, class:"U_link"%>
       </div>
     </div>
   </div>
 </section>
 <%#-- サイドバー --%>
 <div class="C_box__side-bar-back pc-only"></div>
-<div class="C_icon__to-top JS_scroll_to-top_active_target A_isHide pc-only">
-  <a class="C_icon__to-top__link" href="#">
+<div class="C_icon__to-top">
+  <div class="C_icon__to-top__container A_isHide" id="JS_scroll-to-top_target">
+    <%= link_to "", root_path, class:"U_link"%>
     <div class="C_icon__to-top__border-box">
       <div class="C_icon__to-top__border"></div>
     </div>
     <p class="C_icon__to-top__text">PAGE TOP</p>
-  </a>
+  </div>
 </div>
 
-<%= render partial: 'layouts/footer' %>
+<%= render partial: 'shared/footer' %>
 
 <%#-- フォントの確認用 --%>
 <div class="L_full A_shabon-ver1A U_hy-30">

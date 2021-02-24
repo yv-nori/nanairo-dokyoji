@@ -1,0 +1,87 @@
+<div class="P_Staff-intro__<%= staff[:card_position] %>" id="JS_staff_target-<%= staff[:js_id] %>btnPosition">
+  <ul class="C_Accordion">
+    <li class="C_Accordion__list" id="JS_accordion<%= staff[:js_id] %>_trigger0">
+      <div class="C_Accordion__title" id="JS_accordion<%= staff[:js_id] %>_target-title0">
+        <div class="C_Accordion__title-text">
+          <h1 class="P_Staff-intro__title">
+            <%= staff[:name] %>
+            <span class="P_Staff-intro__name-en">
+              <%= staff[:name_en] %>
+            </span>
+          </h1>
+        </div>
+        <div class="C_Accordion__icon" id="JS_accordion<%= staff[:js_id] %>_target-icon0">
+          <i class="fa fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="C_Accordion__content" id="JS_accordion<%= staff[:js_id] %>_target-content0">
+        <div class="C_Accordion__text" id="JS_accordion<%= staff[:js_id] %>_target-text0">
+          <div class="P_Staff-intro__content">
+            <ul>
+              <li class="P_Staff-intro__joined-date"><%= staff[:joined_date] %>　入社<br></li>
+              <li>勤務体制：<%= staff[:work_style] %><br></li>
+              <li>資格：<%= staff[:license] %><br></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="C_Accordion__list" id="JS_accordion<%= staff[:js_id] %>_trigger1">
+      <div class="C_Accordion__title" id="JS_accordion<%= staff[:js_id] %>_target-title1">
+        <div class="C_Accordion__title-text">
+          <h1 class="P_Staff-intro__title">
+            <%= staff[:catch_copy] %>
+          </h1>
+        </div>
+        <div class="C_Accordion__icon" id="JS_accordion<%= staff[:js_id] %>_target-icon1">
+          <i class="fa fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="C_Accordion__content" id="JS_accordion<%= staff[:js_id] %>_target-content1">
+        <div class="C_Accordion__text" id="JS_accordion<%= staff[:js_id] %>_target-text1">
+          <div class="P_Staff-intro__content">
+            <%= staff[:catch_sentense] %>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="C_Accordion__list" id="JS_accordion<%= staff[:js_id] %>_trigger2">
+      <div class="C_Accordion__title" id="JS_accordion<%= staff[:js_id] %>_target-title2">
+        <div class="C_Accordion__title-text">
+          <h1 class="P_Staff-intro__title">
+            休日の過ごし方
+          </h1>
+        </div>
+        <div class="C_Accordion__icon" id="JS_accordion<%= staff[:js_id] %>_target-icon2">
+          <i class="fa fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="C_Accordion__content" id="JS_accordion<%= staff[:js_id] %>_target-content2">
+        <div class="C_Accordion__text" id="JS_accordion<%= staff[:js_id] %>_target-text2">
+          <div class="P_Staff-intro__content">
+            <%= staff[:holiday] %>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="C_Accordion__list" id="JS_accordion<%= staff[:js_id] %>_trigger3">
+      <div class="C_Accordion__title" id="JS_accordion<%= staff[:js_id] %>_target-title3">
+        <div class="C_Accordion__title-text">
+          <h1 class="P_Staff-intro__title">
+            職場の気に入っているところ
+          </h1>
+        </div>
+        <div class="C_Accordion__icon" id="JS_accordion<%= staff[:js_id] %>_target-icon3">
+          <i class="fa fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="C_Accordion__content" id="JS_accordion<%= staff[:js_id] %>_target-content3">
+        <div class="C_Accordion__text" id="JS_accordion<%= staff[:js_id] %>_target-text3">
+          <div class="P_Staff-intro__content">
+            <%= staff[:favorite] %>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

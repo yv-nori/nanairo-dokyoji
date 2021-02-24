@@ -2,7 +2,7 @@
 // トップイメージ
 // --------------------------------
 .P_Houjin-kv {
-  &__text-box {
+  &__text-container {
     width: 100%;
     position: absolute;
     left: 50%;
@@ -10,13 +10,9 @@
     transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%);
     text-align: center;
-    &.--front {
-      z-index: map-get($layer,'icon');
-      color: #fff;
-    }
-    &.--back {
-      z-index: map-get($layer,'icon') -1;
-    }
+  }
+  &__front-text {
+    color: #fff;
   }
   &__text-en {
     font-size: $font-size-base;
@@ -51,6 +47,7 @@
   &__catch {
     padding-top: 72px;
     padding-bottom: 70px;
+    position: relative;
     @include mq-up("tab") {
       padding-top: 144px;
     }
@@ -73,7 +70,20 @@
       margin-bottom: 72px;
     }
   }
-  &__list-item + li {
+  &__link-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__link-item {
+    pointer-events: auto;
+    cursor: pointer;
+    &:hover .P_Houjin-philosophy__border-stretch::before {
+      width: 100%;
+    }
+  }
+  &__link-item + li {
+    position: relative;
     margin-left: 0;
     margin-top: 60px;
     @include mq-up("tab") {
@@ -82,17 +92,33 @@
     }
   }
   &__link-text {
+    position: relative;
     text-align: center;
     width: 100%;
-    &.ja {
+    &-ja {
       padding-bottom: 15px;
       font-size: $font-size-base * 1.8;
     }
-    &.en {
+    &-en {
       height: 50%;
       padding-top: 20px;
       font-size: $font-size-base;
       letter-spacing: $letter-spacing-base;
+    }
+  }
+  &__border-stretch {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid rgba(56, 59, 78, 0.2);
+    &::before {
+      transition: all $anime-time-short;
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 25px;
+      border-bottom: 1px solid #383B4E;
     }
   }
 }
@@ -111,20 +137,21 @@
   &__container {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  &__image {
+  &__image-box {
     width: 100%;
-		height: calc(50% - #{$space_vertical}/2);
-    position: relative;
+    height: calc(50% - #{$space_vertical}/2);
     overflow: hidden;
+    transition: all $anime-time-short ease-out;
     margin: 0 $space_side;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
     &:last-child {
       margin: $space_vertical $space-side 0 $space-side;
-    }
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: all $anime-time-middle;
-    &:hover {
-      transform: scale(1.05);
     }
     @include mq-up("tab") {
       width: calc(50% - 120px/2);
@@ -134,32 +161,33 @@
         margin: 0 0 0 120px;
       }
     }
-  }
-  &__link {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    &:hover > * > * > *,&:hover > * > * > * > * ,&:hover > * > * > * > * > *{
+    &:hover .P_Info__image {
+      transform: scale(1.05);
+    }
+    &:hover .U_cover--shadow {
+      opacity: 0;
+    }
+    &:hover .C_shabon_anime{
       animation-play-state : running
     }
   }
-  &__deco {
+  &__image {
+    transition: all $anime-time-short;
+    @include abs-full;
+  }
+  &__text-box {
     width: 100%;
     height: 25%;
     background-color: #77bfc4;
     position: absolute;
-    @include abs(50, 102);
-    position: relative;
+    bottom: 0;
+    text-align: center;
   }
   &__text {
     color: white;
     font-size: $font-size-base * 2;
     letter-spacing: $letter-spacing-base * 1.625;
     font-family: "goudy_bookletter_1911";
-    @include abs(50, 2);
-    @include mq-up ("tab") {  
-      @include abs(50, 15);
-    }
   }
   &__sub-text {
     color: white;
@@ -167,19 +195,10 @@
     letter-spacing: $letter-spacing-base * 0.3;
     white-space: nowrap;
     font-family: "Hannari";
-    @include abs(50, 85);
-    @include mq-up ("tab") {  
-      @include abs(50, 67);
-    }
+    margin-top: -13px;
   }
-  &__shabon > * > *{
+  .C_shabon_anime{
     animation-play-state: paused;
-    & > * {
-      animation-play-state: paused;
-      & > * {
-        animation-play-state: paused;
-      }
-    }
   }
 }
 
@@ -197,31 +216,49 @@
   &__container {
     width: 100%;
     height: 100%;
-  }
-  &__image {
-    transition: all $anime-time-short;
-    width: 100%;
-		height: calc(50% - #{$space_vertical}/2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     position: relative;
-    overflow: hidden;
+  }
+  &__image-box {
+    width: 100%;
+    height: calc(50% - #{$space_vertical}/2);
+    position: relative;
     margin: 0 $space_side;
+    overflow: hidden;
+    transition: all $anime-time-short;
     &:last-child {
       margin: $space_vertical $space-side 0 $space-side;
     }
     @include mq-up("tab") {
-		  width: 50%;
+      width: 50%;
       height: 100%;
       margin: 0;
       &:last-child {
         margin: 0;
       }
     }
+    &:hover .U_cover--shadow {
+      opacity: 0;
+    }
+    &:hover .P_Facility__text {
+      opacity: 0;
+    }
+    &:hover .P_Facility__image {
+      transform: scale(1.05);
+    }
+  }
+  &__image {
+    transition: all $anime-time-short;
+    @include abs-full;
   }
   &__text {
     color: white;
     font-size: $font-size-base * 5;
     letter-spacing: $letter-spacing-base * 0.4;
     font-family: "Blankid";
+    transition: all $anime-time-short;
     @include abs(50, 60);
     @include mq-up("tab") {
       @include abs(50, 65);

@@ -1,0 +1,48 @@
+<div class="C_Form">
+  <h1 class="C_Form__title"><%= form_items[:title] %></h1>
+  <%= form_with(model: form_items[:forms], url: form_items[:url], local: true) do |f| %>
+    <% form_items[:items].each do |item| %>
+      <div class="C_Form__item">
+        <%#-- エラーメッセージ --%>
+        <% if item[:error_message].present? %>
+          <div class="error-alert">
+            <div class='error-message'><%= item[:error_message] %></div>
+          </div>
+        <% end %>
+        <div class="C_Form__item-title">
+          <h2 class="C_Form__item-text"><%= item[:title] %></h2>
+          <% if item[:mandatory] %>
+            <p class="C_Form__item-mandatory">必須</p>
+          <% end %>
+        </div>
+        <%#-- フィールドオプションの作成 --%>
+        <% option = {id: item[:id]} %>
+        <% if item[:text_area] %>
+          <% option[:class] = "C_Form__item-text-area" %>
+        <% else %>
+          <% option[:class] = "C_Form__item-input" %>
+        <% end %>
+        <% if item[:placeholder].present? %>
+          <% option[:placeholder] = item[:placeholder] %>
+        <% end %>
+        <% if item[:maxlength].present? %>
+          <% option[:maxlength] = item[:maxlength] %>
+        <% end %>
+        <% if item[:rows].present? %>
+          <% option[:rows] = item[:rows] %>
+        <% end %>
+        <%#-- フィールドの作成 --%>
+        <% if item[:email_field] %>
+          <%= f.email_field item[:key] ,option%>
+        <% elsif item[:text_area] %>
+          <%= f.text_area item[:key] ,option%>
+        <% else %>
+          <%= f.text_field item[:key] ,option %>
+        <% end %>
+      </div>
+    <% end %>
+    <%# ENTRY %>
+    <%= f.submit "Entry", class:"C_Form__submit" %>
+    <%# /下部ボタン %>
+  <% end %>
+</div>

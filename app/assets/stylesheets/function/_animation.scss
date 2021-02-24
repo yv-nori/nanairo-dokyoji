@@ -30,13 +30,10 @@ $anime-time-long: 1.2s;
 // アクション(状態変更)
 // --------------------------------
 .A_isClear {
-  opacity: $opacity;
+  opacity: 0;
 }
 .A_isClear--tough {
   opacity: $opacity * 0.3;
-}
-.A_isOpen {
-  max-height: 100vh!important;
 }
 .A_isHide {
   opacity: 0!important;
@@ -87,54 +84,6 @@ $anime-time-long: 1.2s;
   }
 }
 
-// ニュッと伸びるカード
-.A_border-stretch {
-	display: block;
-	height: 100%;
-	margin: 0 auto;
-	&:hover &__text::before {
-    width: 100%;
-	}
-	&__text {
-    position: relative;
-    border-bottom: 1px solid rgba(56, 59, 78, 0.2);
-		&::before {
-      transition: all $anime-time-short;
-      display: block;
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 25px;
-      border-bottom: 1px solid #383B4E;
-		}
-	}
-}
-
-// カードのフェードイン
-.A_toFadeIn1 {
-  opacity: 0;
-  transform: translate(-20px, 0);
-  transition: all 1s ease-out;
-}
-.A_toFadeIn2 {
-  opacity: 0;
-  transform: translate(-30px, 0);
-  transition: all 1.5s ease-out;
-}
-.A_toFadeIn3 {
-  opacity: 0;
-  transform: translate(-40px, 0);
-  transition: all 2s ease-out;
-}
-.A_isFadeIn {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.A_isFadeOut {
-  opacity: 0;
-  transform: translate(-20px, 0);
-}
 
 @keyframes hover-shadow {
   0% {

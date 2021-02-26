@@ -1,4 +1,3 @@
-
 // ボタン
 .C_box--btn {
   width: $button-width * 2.2;
@@ -21,7 +20,7 @@
 }
 .C_box__side-bar-back {
   position: fixed;
-  z-index: -1;
+  z-index: map-get($layer, 'default');
   top: 0;
   right: 0;
   width: 5vw;

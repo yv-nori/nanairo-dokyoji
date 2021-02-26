@@ -1,41 +1,39 @@
 import {
-  scrollTrigger
+  scrollTrigger, resetPositions
 } from "../function/scroll"
 // --------------------------------
 // メイン処理
 // --------------------------------
+export let wasClicked = null;
 export const staffSwitch = Items => {
   const length = Items.$triggers.length;
-  let wasClicked = null
   for (let activeItem = 0; activeItem < length; activeItem++) {
     Items.$triggers[activeItem].addEventListener('mouseover', () => {
       hoverActive(Items, activeItem);
     }, false);
     Items.$triggers[activeItem].addEventListener('mouseleave', () => {
-      hoverPassive(Items, wasClicked);
+      hoverPassive(Items);
     }, false);
     $(Items.$triggers[activeItem]).on('click', () => {
       wasClicked = activeItem;
       open(Items, activeItem);
     });
     $(Items.$closeBtn).on('click', function () {
-      close(Items, wasClicked);
+      close(Items);
       wasClicked = null
     });
   }
 }
 // スクロールアクション
 export const scrollAction = (windowScrollTop, Items) => {
-  let result = scrollTrigger(windowScrollTop, Items.scrollPositions);
-  if (result !== false) {
-    hoverActive(Items.toggleItems, result)
-  } else {
-    hoverPassive(Items.toggleItems)
+  if (wasClicked === null) {
+    let result = scrollTrigger(windowScrollTop, Items.scrollPositions);
+    if (result !== false) {
+      hoverActive(Items.toggleItems, result)
+    } else {
+      hoverPassive(Items.toggleItems)
+    }
   }
-}
-// スクロールアクションストップ
-export const scrollActionStop = Items => {
-  hoverPassive(Items);
 }
 // --------------------------------
 // 共通関数
@@ -45,6 +43,7 @@ const hoverActive = (Items, result) => {
   const length = Items.$triggers.length;
   for (let i = 0; i < length; i++) {
     $(Items.$frontImgs[i]).addClass('A_isInvisible').removeClass('A_isVisible');
+    $(Items.$catchCopies[result]).removeClass("A_isClear--tough");
     if (i !== result) {
       $(Items.$catchCopies[i]).addClass("A_isClear--tough");
       $(Items.$backImgs[i]).add($(Items.$whiteShadows[i])).removeClass("A_isVisible").addClass("A_isInvisible");
@@ -53,7 +52,7 @@ const hoverActive = (Items, result) => {
   $(Items.$backImgs[result]).add(Items.$whiteShadows[result]).addClass("A_isVisible").removeClass("A_isInvisible");
 }
 // ホバー外れた時
-const hoverPassive = (Items, wasClicked = null) => {
+const hoverPassive = (Items) => {
   const length = Items.$triggers.length;
   for (let i = 0; i < length; i++) {
     if (i !== wasClicked) {
@@ -67,9 +66,9 @@ const hoverPassive = (Items, wasClicked = null) => {
 const open = (Items, result) => {
   const length = Items.$triggers.length;
   for (let i = 0; i < length; i++) {
-    $(Items.$catchCopies[i]).add($(Items.$whiteShadows[i])).add($(Items.$triggers[i])).add($(Items.$frontImgs[i])).addClass('A_isNone');
+    $(Items.$catchCopies[i]).add($(Items.$whiteShadows[i])).add($(Items.$triggers[i])).add($(Items.$frontImgs[i])).add($(Items.$backImgs[result])).addClass('A_isNone');
   }
-  $(Items.$intros[result]).removeClass('A_isNone');
+  $(Items.$intros[result]).add($(Items.$backImgs[result])).removeClass('A_isNone');
   $(Items.$cover).addClass('A_isNone');
   if (Items.btnPositions[result] === 'JS_L') {
     $(Items.$closeBtn).addClass('left').removeClass('A_isNone');
@@ -78,7 +77,7 @@ const open = (Items, result) => {
   }
 }
 // 閉じるボタンクリック時
-const close = (Items, wasClicked) => {
+const close = (Items) => {
   const length = Items.$triggers.length;
   for (let i = 0; i < length; i++) {
     $(Items.$catchCopies[i]).add($(Items.$whiteShadows[i])).add($(Items.$triggers[i])).add($(Items.$frontImgs[i])).removeClass('A_isNone');
@@ -101,9 +100,9 @@ export const staffItems = () => {
       $catchCopies: [],
       $backImgs: [],
       $intros: [],
-      $cover: [],
-      $closeBtn: [],
-      btnPositions: []
+      $cover: [_doc.getElementById("JS_staff-switch_target-cover")],
+      $closeBtn: [_doc.getElementById("JS_staff-switch_target-btn")],
+      btnPositions: [],
     },
     scrollPositions: {
       start: [],
@@ -117,11 +116,8 @@ export const staffItems = () => {
     Items.toggleItems.$catchCopies.push(_doc.getElementById("JS_staff-switch_target" + i + "-catch"));
     Items.toggleItems.$backImgs.push(_doc.getElementById("JS_staff-switch_target" + i + "-backImg"));
     Items.toggleItems.$intros.push(_doc.getElementById("JS_staff-switch_target" + i + "-intro"));
-    Items.scrollPositions.start.push($(Items.toggleItems.$triggers[i]).offset().top);
-    Items.scrollPositions.end.push($(Items.toggleItems.$triggers[i]).offset().top + $(Items.toggleItems.$triggers[i]).height());
   }
-  Items.toggleItems.$cover.push(_doc.getElementById("JS_staff-switch_target-cover"));
-  Items.toggleItems.$closeBtn.push(_doc.getElementById("JS_staff-switch_target-btn"));
-  Items.toggleItems.btnPositions.push(Items.toggleItems.$closeBtn[0].className.split(' ').slice(-4));
+  resetPositions(Items.scrollPositions, Items.toggleItems.$triggers);
+  Items.toggleItems.btnPositions.push(...Items.toggleItems.$closeBtn[0].className.split(' ').slice(-4))
   return Items;
 }

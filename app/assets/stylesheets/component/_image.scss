@@ -72,6 +72,18 @@
       }
     }
   }
+  &__H-about_kv {
+    @include image;
+    background: image-url('home/about_kv.jpg') no-repeat center center / cover;
+  }
+  &__H-about_greeting {
+    @include image;
+    background: image-url('home/about_greeting.jpg') no-repeat center center / cover;
+  }
+  &__H-about_overview {
+    @include image;
+    background: image-url('home/about_overview.jpg') no-repeat center center / cover;
+  }
   &--parallax {
     &__houjin {
       background: image-url('home/top_sp.jpg');

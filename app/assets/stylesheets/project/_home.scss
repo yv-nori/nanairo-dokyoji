@@ -106,6 +106,7 @@
       letter-spacing: $letter-spacing-base;
     }
   }
+  
   &__border-stretch {
     position: relative;
     width: 100%;
@@ -146,12 +147,12 @@
     height: calc(50% - #{$space_vertical}/2);
     overflow: hidden;
     transition: all $anime-time-short ease-out;
-    margin: 0 $space_side;
+    margin: 0 $space_side_sp;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: relative;
     &:last-child {
-      margin: $space_vertical $space-side 0 $space-side;
+      margin: $space_vertical $space-side_sp 0 $space-side_sp;
     }
     @include mq-up("tab") {
       width: calc(50% - 120px/2);
@@ -164,7 +165,7 @@
     &:hover .P_Info__image {
       transform: scale(1.05);
     }
-    &:hover .U_cover--shadow {
+    &:hover .U_--shadow {
       opacity: 0;
     }
     &:hover .C_shabon_anime{
@@ -225,11 +226,11 @@
     width: 100%;
     height: calc(50% - #{$space_vertical}/2);
     position: relative;
-    margin: 0 $space_side;
+    margin: 0 $space_side_sp;
     overflow: hidden;
     transition: all $anime-time-short;
     &:last-child {
-      margin: $space_vertical $space-side 0 $space-side;
+      margin: $space_vertical $space-side_sp 0 $space-side_sp;
     }
     @include mq-up("tab") {
       width: 50%;

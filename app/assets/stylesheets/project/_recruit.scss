@@ -203,11 +203,16 @@
   }
   // 閉じるボタン
   &__btn {
+    @include abs(98,4);
     &.left {
-      @include abs(0,0);
+      @include mq-up("tab") {  
+        @include abs(2,4);
+      }
     }
     &.right {
-      @include abs(100,0);
+      @include mq-up("tab") {
+        @include abs(98,4);
+      }
     }
     display: block;
     font-size: $font-size-base * 2.5;
@@ -304,7 +309,7 @@
     @include mq-up("pc") {
       font-size: $font-size-base * 6;
       letter-spacing: $letter-spacing-base * 4.5;
-      padding-top: 60px;
+      padding-top: 100px;
     }
   }
   &__text1 {

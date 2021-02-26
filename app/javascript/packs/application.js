@@ -8,11 +8,19 @@ require("@rails/ujs").start();
 require("@rails/activestorage").start();
 require("channels");
 require("jquery");
-require("jquery-ui-dist/jquery-ui");
-require("../function/raindrops");
 // ページ関数
-require("../page/houjin_top");
-require("../page/houjin_recruit");
+let CurrentPath = location.pathname;
+if (CurrentPath == "/home/about") {
+  require("../page/houjin_about");
+}
+if (CurrentPath == "/contact_recruits") { 
+  require("jquery-ui-dist/jquery-ui");
+  require("../function/raindrops");
+  require("../page/houjin_recruit");
+}
+if (CurrentPath == "/") { 
+  require("../page/houjin_top");
+}
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

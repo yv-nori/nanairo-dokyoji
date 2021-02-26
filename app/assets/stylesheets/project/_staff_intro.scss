@@ -1,13 +1,17 @@
 .P_Staff-intro {
-  &__left {
-    position: absolute;
-    left: 2%;
-    top: 10%;
+  position: absolute;
+  top: 10%;
+  &.left {
+    @include mq-up("tab") {
+      left: 2%;
+      top: 10%;
+    }
   }
-  &__right {
-    position: absolute;
-    right: 2%;
-    top: 10%;
+  &.right {
+    @include mq-up("tab") {
+      right: 2%;
+      top: 10%;
+    }
   }
   &__title {
     text-align: center;

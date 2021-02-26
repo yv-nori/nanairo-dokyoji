@@ -1,0 +1,275 @@
+.P_H-about {
+  &__title-en {
+    font-size: $font-size-base * 1;
+    line-height: 140%;
+    letter-spacing: 0em;
+    font-family: 'Forum-Regular';
+    padding-left: 5px;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.6;
+      font-weight: 500;
+      line-height: 180%;
+      padding-left: 15px;
+    }
+  }
+  &__title-ja {
+    font-size: $font-size-base * 2;
+    line-height: 120%;
+    font-weight: 400;
+    letter-spacing: -0.12em;
+    font-family: 'Hannari';
+    @include mq-up("tab") {
+      font-size: $font-size-base * 3.4375;
+      line-height: 120%;
+      white-space: nowrap;
+    }
+  }
+  &__sub-title {
+    font-size: $font-size-base * 1.43;
+    padding-top: 15px;
+    line-height: 120%;
+    font-weight: 400;
+    letter-spacing: -0.12em;
+    font-family: 'Hannari';
+    @include mq-up("tab") {
+      padding-top: 25px;
+      font-size: $font-size-base * 2;
+      line-height: 120%;
+      white-space: nowrap;
+    }
+  }
+  &__nav {
+    @include mq-up("tab") {  
+      line-height: 200%;
+    }
+  }
+  &__nav-list {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    &::before {
+      transition: all $anime-time-short;
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      border-bottom: 1px solid #383B4E;
+    }
+    &:hover:before {
+      width: 100%;
+    }
+  }
+  &__kv {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    margin-bottom: 50px;
+    z-index: map-get($layer, 'kv');
+  }
+  &__img-box {
+    position: relative;
+    height: 25vh;
+    order: 1;
+    &.noRight {
+      margin-right: $space-side_sp * -1;
+      @include mq-up("tab") {
+        height: inherit;
+        margin-right: auto;
+        width: calc(50% + #{$space_side_pc/2});
+        z-index: map-get($layer, 'kv');
+        order: 0;
+      }
+    }
+    &.noLeft {
+      margin-left: $space-side_sp * -1;
+      @include mq-up("tab") {
+        height: inherit;
+        margin-left: 0;
+	      width: calc(50% + #{$space_side_pc/2});
+        z-index: map-get($layer, 'kv');
+        order: 0;
+      }
+    }
+  }
+  &__hover-action {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all $anime-time-short;
+    &:hover .P_H-about__shadow{
+      background-color: rgba(0, 0, 0, .5);
+      visibility: visible;
+      transform: scale(1,1);
+    }
+    &:hover .P_H-about__cover-text{
+      opacity: 1;
+    }
+  }
+  &__shadow {
+    visibility: collapse;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(1,1.2);
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    transition: all $anime-time-short;
+  }
+  &__cover-text {
+    width: 100%;
+    opacity: 0;
+    transition: all $anime-time-short;
+    position: absolute;
+    color: white;
+    font-size: $font-size-base * 1.6;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate3d(-50%, -50%, 0);
+    transition: all 0.4s;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 2.5;
+    }
+  }
+  &__text {
+    padding-top: 20px;
+    font-size: $font-size-base * 1.125;
+  }
+  &__table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  &__table-row {
+    line-height: 200%;
+    @include mq-up("tab") {  
+      line-height: 300%;
+    }
+    border-bottom: $color-border--thin2 1px solid;
+  }
+  &__table-title {
+    width: 30%;
+    padding-left: 5px;
+    font-size: $font-size-base * 0.875;
+    white-space: nowrap;
+    @include mq-up("tab") {  
+      width: 35%;
+      padding-left: 10px;
+      font-size: $font-size-base * 1.125;
+    }
+  }
+  &__table-text {
+    width: 70%;
+    white-space: nowrap;
+    font-size: $font-size-base * 0.875;
+    @include mq-up("tab") {
+      width: 65%;
+      font-size: $font-size-base * 1.0625;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__info-list {
+    cursor: pointer;
+    position: relative;
+    padding: 0 5px;
+    font-size: $font-size-base * 1.125;
+    margin-top: 15px;
+    min-width: 51%;
+    border-bottom: 1px solid rgba(56, 59, 78, 0.2);
+    @include mq-up("tab") {
+      min-width: 0;
+      padding: 0 10px;
+      line-height: 250%;
+      margin-top: 20px;
+      margin-right: 40px;
+    }
+    &::before {
+      transition: all $anime-time-short;
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 30px;
+      border-bottom: 1px solid #383B4E;
+    }
+    &:last-of-type {
+      cursor: auto;
+      margin-right: 0;
+    }
+    &:last-of-type::before {
+      border: none;
+    }
+    &:hover:before {
+      width: 100%;
+    }
+  }
+  &__map {
+    display: flex;
+    justify-content: center;
+    margin-right: $space-side_sp;
+    margin-left: $space-side_sp;
+    margin-bottom: $space_section_sp;
+    @include mq-up("tab") {
+      margin-right: $space-side_pc;
+      margin-left: $space-side_pc;
+      margin-bottom: $space_section_pc;
+    }
+  }
+}
+.L_pageTitle__headding {
+    padding-top: 170px;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    padding-right: $space-side_sp;
+    padding-left: $space-side_sp;
+    padding-bottom: $space_section_sp;
+  @include mq-up("tab") {
+    padding-right: $space-side_pc;
+    padding-left: $space-side_pc;
+    padding-bottom: $space_section_pc;
+  }
+}
+.L_wrap {
+  display: flex;
+  flex-direction: column;
+  padding-left: $space_side_sp;
+  padding-right: $space_side_sp;
+	padding-bottom: $space_section_sp;
+	@include mq-up("tab") {
+  padding-left: $space_side_pc;
+  padding-right: $space_side_pc;
+	padding-bottom: $space_section_pc;
+	}
+  &.noLeft {
+    @include mq-up("tab") {
+      flex-direction: row;
+      margin-left: $space_side_pc * -1;
+    }
+  }
+  &.noRight {
+    @include mq-up("tab") {
+      flex-direction: row;
+      margin-right: $space_side_pc * -1;
+    }
+  }
+  &.subColor {
+    background-color: $color-background_sub;
+    margin-top: $space_section_sp;
+    margin-bottom: $space_section_sp;
+    padding-top: $space_section_sp;
+    padding-bottom: $space_section_sp;
+    @include mq-up("tab") {
+      margin-top: $space_section_pc;
+      margin-bottom: $space_section_pc;
+      padding-top: $space_section_pc;
+      padding-bottom: $space_section_pc;
+    }
+  }
+}

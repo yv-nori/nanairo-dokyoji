@@ -41,6 +41,7 @@ $layer: (
 	top-icon: 15,
 	icon: 10,
 	cover: 5,
+	kv: 3,
 	default: 1,
 	minus: -1,
 );
@@ -51,8 +52,11 @@ $pd-x_tab: 32px;
 $pd-x_sp: 24px;
 
 // スペース
+$space_side_sp: 24px;
+$space_side_pc: 84px;
+$space_section_sp: 30px;
+$space_section_pc: 60px;
 $space_vertical: 30px;
-$space_side: 24px;
 
 // ナビのメニュー高さ
 $nav-menu-height_sp: 70px;

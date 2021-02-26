@@ -2,13 +2,13 @@
 // 関数の読み込み
 // --------------------------------
 import {
-  scrollChange
+  scrollChange, resetPositions
 } from "../function/scroll"
 import {
   headerItems, menuOpen
-} from "../page/header"
+} from "../function/header"
 import {
-  staffSwitch, scrollAction, scrollActionStop, staffItems
+  staffSwitch, scrollAction, staffItems
 } from "../function/staffSwitch"
 import {
   accordion, accordionItems
@@ -23,32 +23,24 @@ import {
 // メイン処理
 // --------------------------------
 $(function () {
-  let CurrentPath = location.pathname;
-  if (CurrentPath == "/contact_recruits") {
-    raindropsBlue();
-    raindropsBlueDarken();
-    const HeaderItems = headerItems();
-    menuOpen(HeaderItems);
-    accordion(accordionItems());
-    scrollMethod(HeaderItems.$changeTargets);
-    window.addEventListener('resize', () => {
-      scrollMethod(HeaderItems.$changeTargets)
-    }, false);
-  };
-});
-const scrollMethod = HeaderItems => {
+  const HeaderItems = headerItems();
+  const StaffItems = staffItems();
+  raindropsBlue();
+  raindropsBlueDarken();
+  staffSwitch(StaffItems.toggleItems);
+  menuOpen(HeaderItems);
+  accordion(accordionItems());
   let startPosition = 0;
   let windowScrollTop = 0;
-  const StaffItems = staffItems();
-  staffSwitch(StaffItems.toggleItems);
-  $(window).on('scroll',function (){
+  $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
-    scrollChange(windowScrollTop, startPosition, HeaderItems);
+    scrollChange(windowScrollTop, startPosition, HeaderItems.$targets);
     if (sp_only()) {
       scrollAction(windowScrollTop, StaffItems);
-    } else {
-      scrollActionStop(StaffItems.toggleItems);
     }
     startPosition = windowScrollTop;
   });
-}
+  window.addEventListener('resize', () => {
+    resetPositions(StaffItems.scrollPositions, StaffItems.toggleItems.$triggers)
+  }, false);
+});

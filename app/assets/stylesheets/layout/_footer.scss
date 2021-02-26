@@ -50,7 +50,6 @@
     }
     @include mq-up ("tab") {
       width: inherit;
-
       border-bottom: none;
       &:nth-of-type(1) {
         border-top: none;
@@ -98,7 +97,7 @@
       bottom: -10px;
       left: 0;
       width: 0;
-      height: 0.1px;
+      height: 1px;
       background-color: $color-border--thin;
       content: "";
       transition: width $anime-time-short cubic-bezier(.25,.46,.45,.94);

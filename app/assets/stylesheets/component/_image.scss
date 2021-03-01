@@ -75,6 +75,7 @@
   &__H-about_kv {
     @include image;
     background: image-url('home/about_kv.jpg') no-repeat center center / cover;
+    @include parallax;
   }
   &__H-about_greeting {
     @include image;
@@ -83,6 +84,24 @@
   &__H-about_overview {
     @include image;
     background: image-url('home/about_overview.jpg') no-repeat center center / cover;
+  }
+  &__H-vision_kv {
+    @include image;
+    background: image-url('home/vision_kv.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+  }
+  &__H-vision_play {
+    @include image;
+    background: image-url('home/vision_play.jpg') no-repeat center center / cover;
+
+  }
+  &__H-vision_friend {
+    @include image;
+    background: image-url('home/vision_friend.jpg') no-repeat center center / cover;
+  }
+  &__H-vision_kind {
+    @include image;
+    background: image-url('home/vision_kind.jpg') no-repeat center center / cover;
   }
   &--parallax {
     &__houjin {

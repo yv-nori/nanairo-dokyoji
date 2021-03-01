@@ -52,10 +52,13 @@ $pd-x_tab: 32px;
 $pd-x_sp: 24px;
 
 // スペース
+$space_side: 7vw;
 $space_side_sp: 24px;
 $space_side_pc: 84px;
+$space_section: 13vh;
 $space_section_sp: 30px;
-$space_section_pc: 60px;
+// $space_section_pc: 60px;
+$space_section_pc: 80px;
 $space_vertical: 30px;
 
 // ナビのメニュー高さ
@@ -105,3 +108,6 @@ $drawer-bar-height: 3px;
 
 // ソリッドサイズ
 $border-solid-size: 1px;
+
+// サイドバー
+$side-bar-size :5vw;

@@ -1,0 +1,25 @@
+.C_text__title-en {
+  font-size: $font-size-base * 1;
+  line-height: 140%;
+  letter-spacing: 0.18em;
+  font-family: 'Forum-Regular';
+  padding-left: 5px;
+  @include mq-up("tab") {
+    font-size: $font-size-base * 1.6;
+    font-weight: 500;
+    line-height: 180%;
+    padding-left: 15px;
+  }
+}
+.C_text__title-ja {
+  font-size: $font-size-base * 2;
+  line-height: 120%;
+  font-weight: 400;
+  letter-spacing: -0.12em;
+  font-family: 'Hannari';
+  @include mq-up("tab") {
+    font-size: $font-size-base * 3.4375;
+    line-height: 120%;
+    white-space: nowrap;
+  }
+}

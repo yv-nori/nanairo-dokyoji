@@ -1,29 +1,4 @@
 .P_H-about {
-  &__title-en {
-    font-size: $font-size-base * 1;
-    line-height: 140%;
-    letter-spacing: 0em;
-    font-family: 'Forum-Regular';
-    padding-left: 5px;
-    @include mq-up("tab") {
-      font-size: $font-size-base * 1.6;
-      font-weight: 500;
-      line-height: 180%;
-      padding-left: 15px;
-    }
-  }
-  &__title-ja {
-    font-size: $font-size-base * 2;
-    line-height: 120%;
-    font-weight: 400;
-    letter-spacing: -0.12em;
-    font-family: 'Hannari';
-    @include mq-up("tab") {
-      font-size: $font-size-base * 3.4375;
-      line-height: 120%;
-      white-space: nowrap;
-    }
-  }
   &__sub-title {
     font-size: $font-size-base * 1.43;
     padding-top: 15px;
@@ -117,6 +92,11 @@
     background-color: rgba(0, 0, 0, 0);
     pointer-events: none;
     transition: all $anime-time-short;
+    &.isActive {
+      background-color: rgba(0, 0, 0, .5);
+      visibility: visible;
+      transform: scale(1,1);
+    }
   }
   &__cover-text {
     width: 100%;
@@ -132,6 +112,9 @@
     transition: all 0.4s;
     @include mq-up("tab") {
       font-size: $font-size-base * 2.5;
+    }
+    &.isActive {
+      opacity: 1;
     }
   }
   &__text {
@@ -219,57 +202,6 @@
       margin-right: $space-side_pc;
       margin-left: $space-side_pc;
       margin-bottom: $space_section_pc;
-    }
-  }
-}
-.L_pageTitle__headding {
-    padding-top: 170px;
-    height: 50vh;
-    display: flex;
-    justify-content: space-between;
-    padding-right: $space-side_sp;
-    padding-left: $space-side_sp;
-    padding-bottom: $space_section_sp;
-  @include mq-up("tab") {
-    padding-right: $space-side_pc;
-    padding-left: $space-side_pc;
-    padding-bottom: $space_section_pc;
-  }
-}
-.L_wrap {
-  display: flex;
-  flex-direction: column;
-  padding-left: $space_side_sp;
-  padding-right: $space_side_sp;
-	padding-bottom: $space_section_sp;
-	@include mq-up("tab") {
-  padding-left: $space_side_pc;
-  padding-right: $space_side_pc;
-	padding-bottom: $space_section_pc;
-	}
-  &.noLeft {
-    @include mq-up("tab") {
-      flex-direction: row;
-      margin-left: $space_side_pc * -1;
-    }
-  }
-  &.noRight {
-    @include mq-up("tab") {
-      flex-direction: row;
-      margin-right: $space_side_pc * -1;
-    }
-  }
-  &.subColor {
-    background-color: $color-background_sub;
-    margin-top: $space_section_sp;
-    margin-bottom: $space_section_sp;
-    padding-top: $space_section_sp;
-    padding-bottom: $space_section_sp;
-    @include mq-up("tab") {
-      margin-top: $space_section_pc;
-      margin-bottom: $space_section_pc;
-      padding-top: $space_section_pc;
-      padding-bottom: $space_section_pc;
     }
   }
 }

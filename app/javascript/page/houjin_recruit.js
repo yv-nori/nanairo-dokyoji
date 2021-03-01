@@ -2,7 +2,7 @@
 // 関数の読み込み
 // --------------------------------
 import {
-  scrollChange, resetPositions
+  scrollChange, resetPositions, toTopItems, scrollToTop, smoothItems, smoothScroll, headerStatusWhite, scrollToTopHide
 } from "../function/scroll"
 import {
   headerItems, menuOpen
@@ -25,18 +25,25 @@ import {
 $(function () {
   const HeaderItems = headerItems();
   const StaffItems = staffItems();
+  const SmoothItems = smoothItems();
+  const ToTopItems = toTopItems();
   raindropsBlue();
   raindropsBlueDarken();
   staffSwitch(StaffItems.toggleItems);
   menuOpen(HeaderItems);
+  smoothScroll(SmoothItems);
+  headerStatusWhite(HeaderItems.$targets);
   accordion(accordionItems());
   let startPosition = 0;
   let windowScrollTop = 0;
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
-    scrollChange(windowScrollTop, startPosition, HeaderItems.$targets);
+    scrollChange(windowScrollTop, startPosition, HeaderItems.$targets, false);
     if (sp_only()) {
       scrollAction(windowScrollTop, StaffItems);
+      scrollToTopHide(ToTopItems.$target);
+    } else {
+      scrollToTop(windowScrollTop, startPosition, ToTopItems)
     }
     startPosition = windowScrollTop;
   });

@@ -17,7 +17,7 @@
       top: 22%;
       left: 27%;
       @include mq-up("tab") {
-      top: 10%;
+      top: 20%;
       left: 23%;
       }
     }
@@ -26,7 +26,7 @@
       top: 27%;
       left: 10%;
       @include mq-up("tab") {
-        top: 15%;
+        top: 25%;
         left: 13%;
       }
     }

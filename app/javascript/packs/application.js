@@ -10,9 +10,6 @@ require("channels");
 require("jquery");
 // ページ関数
 let CurrentPath = location.pathname;
-if (CurrentPath == "/home/about") {
-  require("../page/houjin_about");
-}
 if (CurrentPath == "/contact_recruits") { 
   require("jquery-ui-dist/jquery-ui");
   require("../function/raindrops");
@@ -20,6 +17,12 @@ if (CurrentPath == "/contact_recruits") {
 }
 if (CurrentPath == "/") { 
   require("../page/houjin_top");
+}
+if (CurrentPath == "/home/about") {
+  require("../page/houjin_about");
+}
+if (CurrentPath == "/home/vision") {
+  require("../page/houjin_vision");
 }
 
 // Uncomment to copy all static images under ../images to the output folder and reference

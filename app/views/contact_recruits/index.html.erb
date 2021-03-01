@@ -2,9 +2,12 @@
 <%# ==================================== %>
 <%# トップイメージ
 <%# ==================================== %>
-<section class="RecruitKeyVisual">
+<%# <div class="C_icon__toDown" id="JS_toDown_Trigger">
+  <i class="fa fa-angle-double-down icon" aria-hidden="true"></i>
+</div> %>
+<section class="RecruitKeyVisual"  id="JS_smoothScroll_target-0">
   <div class="L_key-visual" id="JS_raindrops_target">
-    <div class="L_key-visual__inner">
+    <div class="L_key-visual__inner" id="JS_scroll-to-top_trigger-0">
       <div class="C_image__recruit"></div>
       <%#-- サブタイトル縦書き --%>
       <div class="P_Recruit__kv__title-box right">
@@ -40,9 +43,9 @@
 <%# ==================================== %>
 <%# コンセプト
 <%# ==================================== %>
-<section class="RecruitConcept">
+<section class="RecruitConcept"  id="JS_smoothScroll_target-1">
   <article class="P_Recruit__concept">
-    <div class="C_wrap__1000">
+    <div class="L_wrap__1000">
       <%#-- タイトル --%>
       <h1 class="P_Recruit__concept__title">concept</h1>
       <%#-- コンセプトのコンテンツボックス --%>
@@ -136,10 +139,9 @@ staff4 = [
   card_position:'left',
   js_id:'3']
 %>
-
-<section class="Staff">
+<section class="Staff"  id="JS_scroll-to-top_trigger-1">
   <%#-- イメージボックス --%>
-  <div class="P_Recruit__staff">
+  <div class="P_Recruit__staff"  id="JS_smoothScroll_target-2">
     <%#-- バックイメージ --%>
     <div class="P_Recruit__staff__back">
       <%#-- バックイメージ0 --%>
@@ -252,7 +254,7 @@ job_info3 = [
 <%# ==================================== %>
 <%# 採用情報
 <%# ==================================== %>
-<section class="jobInfo">
+<section class="jobInfo" id="JS_smoothScroll_target-3">
   <div class="P_Recruit__job-info">
     <ul class="P_Recruit__job-info__container">
       <li class="P_Recruit__job-info__content">
@@ -271,7 +273,7 @@ job_info3 = [
 <%# お問い合わせフォームへのリンクフッター
 <%# ==================================== %>
 <section class="contactFotter" id="JS_raindrops_target-darken">
-  <div class="P_Recruit__contact">
+  <div class="P_Recruit__contact"  id="JS_scroll-to-top_trigger-2">
     <h1 class="P_Recruit__contact__title">
       RECRUITING
     </h1>
@@ -383,9 +385,9 @@ form_items = [
   }]]
 %>
 <section class="RecruitContactForm", id="return">
-  <div class="C_wrap__600">
+  <div class="L_wrap__600"  id="JS_smoothScroll_target-4">
     <%=render partial:'shared/form', collection: form_items ,as:'form_items' %>
   </div>
 </section>
-<%= render partial: 'shared/side_bar' %>
+<%= render 'shared/side_bar',{color: ''}%>
 <%= render partial: 'shared/footer' %>

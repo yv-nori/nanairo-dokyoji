@@ -28,3 +28,22 @@ export const sp_only = () => {
     return false;
   }
 }
+export const tab_only = () => {
+  const maxSize = 1025;
+  const minSize = 600;
+  const currentSize = $(window).width();
+  if (maxSize >= currentSize && minSize < currentSize) {
+    return true;
+  } else {
+    return false;
+  }
+}
+export const pc_only = () => {
+  const minSize = 1025;
+  const currentSize = $(window).width();
+  if (minSize < currentSize) {
+    return true;
+  } else {
+    return false;
+  }
+}

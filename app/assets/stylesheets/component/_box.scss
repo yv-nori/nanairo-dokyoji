@@ -14,16 +14,19 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 5vw;
+  width: $side-bar-size;
   height: 100%;
   background-color: $color-accent;
 }
 .C_box__side-bar-back {
   position: fixed;
-  z-index: map-get($layer, 'default');
+  z-index: -1;
   top: 0;
   right: 0;
-  width: 5vw;
+  width: $side-bar-size;
   height: 100%;
   background-color: $color-accent;
+  &.color-recruit {
+    background-color: $color-recruit;
+  }
 }

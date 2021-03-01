@@ -34,6 +34,9 @@
   background-color: rgba(0, 0, 0, $cover-opacity);
   pointer-events: none;
   transition: all $anime-time-short;
+  &.isActive {
+    opacity: 0;
+  }
 }
 .U_cover--shadow-white {
   position: absolute;
@@ -45,3 +48,6 @@
   pointer-events: none;
   transition: all $anime-time-short;
 }
+// .U_z-kv {
+//   z-index: map-get($layer, 'kv');
+// }

@@ -1,0 +1,372 @@
+.P_H-vision {
+  &__kv {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    z-index: 3;
+  }
+  &__nav-flame {
+    position: absolute;
+    top: 64%;
+    left: 35%;
+    @include mq-up("tab") {  
+      top: 60%;
+      left: 71%;
+    }
+    @include mq-up("pc") {  
+      top: 60%;
+      left: 73%;
+    }
+  }
+  &__nav {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    font-size: $font-size-base * 1.87;
+    &::before {
+      transition: all $anime-time-short;
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      border-bottom: 1px solid #383B4E;
+    }
+    &:hover:before {
+      width: 100%;
+    }
+  }
+  &__circle-bit-text {
+    pointer-events: none;
+    position: absolute;
+    color: white;
+    opacity: 0;
+    font-size: $font-size-base * 1.5;
+    transition: all $anime-time-short;
+    top: 20px;
+    left: 28px;
+  }
+  &__title-wrap {
+    position: relative;
+    overflow: hidden;
+    padding-top: $space_section_sp;
+    padding-left: $space_side_sp;
+    padding-right: $space_side_sp;
+    height: 100vh;
+    background-color: white;
+    @include mq-up("tab") {
+      padding-top: $space_section_pc;
+      padding-left: $space_side_pc;
+      padding-right: $space_side_pc;
+    }
+  }
+  &__sub-title {
+    font-size: $font-size-base * 1;
+    line-height: 140%;
+    letter-spacing: 0.18em;
+    font-family: 'Hannari';
+    padding-left: 5px;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.6;
+      font-weight: 500;
+      line-height: 180%;
+      padding-left: 15px;
+    }
+  }
+  &__sub-text {
+    font-size: $font-size-base * 1.25;
+    padding-top: 10px;
+    padding-left: 5px;
+    line-height: 140%;
+    font-family: 'Hannari';
+    padding-left: 5px;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.25;
+      font-weight: 500;
+      line-height: 180%;
+      padding-left: 15px;
+    }
+  }
+  &__flame {
+    cursor: pointer;
+    position: absolute;
+    &:hover div {
+      animation: hover .3s ease-in forwards;
+    }
+    &.bit {
+      &:hover span {
+        opacity: 1;
+      }
+    }
+    &.play {
+      top: 35%;
+      left: -140%;
+      @include mq-up("tab") {
+        top: 45%;
+        left: -30%;
+      }
+      @include mq-up("pc") {
+        top: 55%;
+        left: -10%;
+      }
+      &.bit {
+        top: 75%;
+        left: 5%;
+        @include mq-up("tab") {
+          top: 64%;
+          left: 60%;
+        }
+        @include mq-up("pc") {
+          top: 64%;
+          left: 64%;
+        }
+      }
+    }
+    &.kind {
+      top: 50%;
+      left: 40%;
+      @include mq-up("tab") {
+        top: 55%;
+        left: 50%;
+      }
+      @include mq-up("pc") {
+        top: 45%;
+        left: 60%;
+      }
+      &.bit {
+        top: 68%;
+        left: 74%;
+        @include mq-up("tab") {
+          left: 83%;
+        }
+        @include mq-up("pc") {
+          top: 75%;
+          left: 83%;
+        }
+      }
+    }
+    &.friend {
+      top: -15%;
+      left: 53%;
+      @include mq-up("tab") {
+        top: -5%;
+      }
+      @include mq-up("pc") {
+        top: -45%;
+        left: 55%;
+      }
+      &.bit {
+        top: 33%;
+        left: 47%;
+        @include mq-up("tab") {
+          top: 45%;
+          left: 77%;
+        }
+        @include mq-up("pc") {
+          top: 35%;
+          left: 75%;
+        }
+      }
+    }
+  }
+  &__circle-friend,
+  &__circle-play,
+  &__circle-kind {
+    color: #fff;
+    width: 700px;
+    height: 700px;
+    opacity: 0.7;
+    mix-blend-mode: multiply;
+    animation: hoverReverse .3s ease-in forwards, uneune 55s linear .3s infinite, rotate 80s linear .3s infinite;
+    &.small {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+    }
+    &.bit {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+    }
+  }
+  &__circle-friend {
+    background: #f66;
+    border-radius: 50% 70% 50% 70%/50% 50% 70% 60%;
+  }
+  &__circle-play {
+    background: #f92;
+    border-radius: 50% 40% 50% 50%/50%;
+  }
+  &__circle-kind {
+    background: #fc2;
+    border-radius: 40% 70% 40% 70%/60% 60% 30% 50%;
+  }
+  &__circle-text{
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    font-size: $font-size-base * 2.5;
+    text-align: center;
+    transform: translate3d(-50%,-50%,0);
+    color: white;
+    z-index: 1;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 5;
+    }
+    &.play {
+      top: 75%;
+      left: 25%;
+      @include mq-up("tab") {
+        top: 75%;
+        left: 20%;
+      }
+      @include mq-up("pc") {
+        top: 75%;
+        left: 20%;
+      }
+    }
+    &.kind {
+      top: 75%;
+      left: 74%;
+      @include mq-up("tab") {
+        left: 76%;
+      }
+      @include mq-up("pc") {
+        left: 80%;
+      }
+    }
+    &.friend {
+      top: 40%;
+      left: 74%;
+      @include mq-up("tab") {
+        top: 30%;
+        left: 76%;
+      }
+      @include mq-up("pc") {
+        top: 20%;
+        left: 80%;
+      }
+    }
+  }
+  @keyframes uneune {
+    0% {
+      border-radius: 60% 50% 60% 50% / 50% 60% 50% 60%; 
+    }
+
+    25% {
+      border-radius: 70% 60% 60% 70% / 70% 80% 40% 70%; 
+    }
+
+    50% {
+      border-radius: 60% 40% 70% 60% / 40% 60% 50% 60%; 
+    }
+
+    75% {
+      border-radius: 70% 60% 40% 70% / 70% 50% 60% 40%; 
+    }
+
+    100% {
+      border-radius: 60% 50% 60% 50% / 50% 60% 50% 60%; 
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes hover {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.2,1.2);
+    }
+  }
+  @keyframes hoverReverse {
+    0% {
+      transform: rotate(0deg) scale(1.2,1.2);
+    }
+    100% {
+      transform: rotate(0deg);
+      transform: rotate(0deg) scale(1,1);
+    }
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $space_side * 2;
+    @include mq-up("pc") {
+      padding-left: $space_side;
+      padding-right: $space_side;
+      padding-top: $space_section;
+      margin-bottom: 0;
+    }
+    &.noLeft {
+      @include mq-up("pc") {
+        margin-left: $space_side * -1;
+        flex-direction: row;
+      }
+    }
+    &.noRight {
+      @include mq-up("pc") {
+        margin-right: $space_side * -1;
+        flex-direction: row;
+      }
+    }
+
+    &.last {
+      margin-bottom: $space_side * 2;
+    }
+  }
+  &__text-box {
+    width: 100%;
+    padding: $space-side;
+    padding-top: $space_side * 2;
+    position: relative;
+    order: 2;
+    @include mq-up("pc") {
+      padding: 0;
+    }
+    @include mq-up("pc") {
+      padding: 0;
+      order: 1;
+      margin-right: $space-side;
+      width: 30%;
+    }
+    &.right {
+      @include mq-up("pc") {
+        order: 2;
+        margin-right: 0;
+      }
+    }
+  }
+  &__img-box {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    order: 1;
+    @include mq-up("pc") {
+      height: 50vh;
+      order: 2;
+      width: 70%;
+    }
+    &.left {
+      @include mq-up("pc") {
+        order: 2;
+        margin-right: $space-side;
+      }
+    }
+  }
+  &__sentence {
+    font-size: $font-size-base * 1.125;
+    padding-top: 20px;
+  }
+}
+.U_relative {
+  position: relative;
+}

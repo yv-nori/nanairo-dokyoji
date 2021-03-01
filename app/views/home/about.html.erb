@@ -2,10 +2,10 @@
 <section class="PageTitle" id="JS_smoothScroll_target-0">
   <div class="L_pageTitle__headding">
     <div class="">
-      <p class="P_H-about__title-en">
+      <p class="C_text__title-en">
         About
       </p>
-      <h1 class="P_H-about__title-ja">
+      <h1 class="C_text__title-ja">
         七彩学舎について
       </h1>
     </div>
@@ -26,10 +26,10 @@
 <section class="Greeting" id="JS_smoothScroll_target-1">
   <div class="L_wrap">
     <div class="L_title__headding">
-      <p class="P_H-about__title-en">
+      <p class="C_text__title-en">
         Messeage
       </p>
-      <h1 class="P_H-about__title-ja">
+      <h1 class="C_text__title-ja">
         ご挨拶
       </h1>
     </div>
@@ -49,10 +49,10 @@
 <section class="Overview" id="JS_smoothScroll_target-2">
   <div class="L_wrap">
     <div class="L_title__headding">
-      <p class="P_H-about__title-en">
+      <p class="C_text__title-en">
         Overview
       </p>
-      <h1 class="P_H-about__title-ja">
+      <h1 class="C_text__title-ja">
         法人概要
       </h1>
     </div>
@@ -103,10 +103,10 @@
 <section class="Facilities" id="JS_smoothScroll_target-3">
   <div class="L_wrap">
     <div class="L_title__headding">
-      <p class="P_H-about__title-en">
+      <p class="C_text__title-en">
         Facilities
       </p>
-      <h1 class="P_H-about__title-ja">
+      <h1 class="C_text__title-ja">
         施設概要
       </h1>
     </div>
@@ -146,10 +146,10 @@
       </table>
     </div>
     <div class="P_H-about__img-box noRight" id="JS_scroll-to-top_trigger-2">
-      <div class="P_H-about__hover-action">
+      <div class="P_H-about__hover-action" id="JS_scroll-action-0_trigger">
         <div class="C_image__parti"></div>
-        <div class="P_H-about__shadow"></div>
-        <p class="P_H-about__cover-text">パルティ道教寺<br>ホームページへ</p>
+        <div class="P_H-about__shadow" id="JS_scroll-action-0_target-0"></div>
+        <p class="P_H-about__cover-text" id="JS_scroll-action-0_target-1">パルティ道教寺<br>ホームページへ</p>
         <%= link_to "", root_path, class:"U_link"%>
       </div>
     </div>
@@ -163,10 +163,10 @@
   </div>
   <div class="L_wrap noLeft">
     <div class="P_H-about__img-box noLeft">
-      <div class="P_H-about__hover-action">
+      <div class="P_H-about__hover-action" id="JS_scroll-action-1_trigger">
         <div class="C_image__piani"></div>
-        <div class="P_H-about__shadow"></div>
-        <p class="P_H-about__cover-text">ピアニィ道教寺<br>ホームページへ</p>
+        <div class="P_H-about__shadow" id="JS_scroll-action-1_target-0"></div>
+        <p class="P_H-about__cover-text" id="JS_scroll-action-1_target-1">ピアニィ道教寺<br>ホームページへ</p>
         <%= link_to "", root_path, class:"U_link"%>
       </div>
     </div>
@@ -203,10 +203,10 @@
 <section class="PublicInfo" id="JS_smoothScroll_target-4">
   <div class="L_wrap subColor">
     <div class="L_title__headding">
-      <p class="P_H-about__title-en">
+      <p class="C_text__title-en">
         Public Info
       </p>
-      <h1 class="P_H-about__title-ja">
+      <h1 class="C_text__title-ja">
         公示情報
       </h1>
     </div>
@@ -235,10 +235,10 @@
 <section class="Map" id="JS_smoothScroll_target-5">
   <div class="L_wrap">
     <div class="L_title__headding">
-      <p class="P_H-about__title-en">
+      <p class="C_text__title-en">
         Map
       </p>
-      <h1 class="P_H-about__title-ja">
+      <h1 class="C_text__title-ja">
         法人本部所在地
       </h1>
     </div>
@@ -247,5 +247,5 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13162.036286214505!2d135.3731036!3d34.4392232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd48c9cfe7b368468!2z56S-5Lya56aP56WJ5rOV5Lq6IOS4g-W9qeWtpuiIjg!5e0!3m2!1sja!2sjp!4v1614213618813!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>
-<%= render partial: 'shared/side_bar' %>
+<%= render 'shared/side_bar',{color: ''}%>
 <%= render partial: 'shared/footer' %>

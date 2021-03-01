@@ -165,11 +165,14 @@
     &:hover .P_Info__image {
       transform: scale(1.05);
     }
-    &:hover .U_--shadow {
+    &:hover .U_cover--shadow {
       opacity: 0;
     }
     &:hover .C_shabon_anime{
       animation-play-state : running
+    }
+    &.isActive {
+      transform: scale(1.05);
     }
   }
   &__image {
@@ -200,6 +203,9 @@
   }
   .C_shabon_anime{
     animation-play-state: paused;
+    &.isActive {
+      animation-play-state : running
+    }
   }
 }
 
@@ -249,6 +255,9 @@
     &:hover .P_Facility__image {
       transform: scale(1.05);
     }
+    &.isActive {
+      transform: scale(1.05);
+    }
   }
   &__image {
     transition: all $anime-time-short;
@@ -257,7 +266,7 @@
   &__text {
     color: white;
     font-size: $font-size-base * 5;
-    letter-spacing: $letter-spacing-base * 0.4;
+    letter-spacing: $letter-spacing-base * 0.125;
     font-family: "Blankid";
     transition: all $anime-time-short;
     @include abs(50, 60);

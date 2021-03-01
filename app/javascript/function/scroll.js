@@ -86,29 +86,28 @@ export const screenBottom = () => {
   return html.clientHeight
 }
 export const scrollAction = (windowScrollTop, Items) => {
+  let trigers_length = Items.$triggers.length;
   let result = scrollTrigger(windowScrollTop, Items.scrollPositions)
-  for (let i = 0; i < 4; i++) {
-    if (result !==false) {
-      for (let action in Items.scrollActions[result]) {
-        Items.scrollActions[result][action].forEach(target => {
-          $(target).addClass(action);
-        })
+  for (let trigger = 0; trigger < trigers_length; trigger++) {
+    if (result !== false) {
+      let targets_length = Items.$targets[result].length;
+      for (let i = 0; i < targets_length; i++) {
+        $(Items.$targets[result][i]).addClass('isActive');
       }
     } else {
-      for (let action in Items.scrollActions[i]) {
-        Items.scrollActions[i][action].forEach(target => {
-          $(target).removeClass(action);
-        })
+      let targets_length = Items.$targets[trigger].length;
+      for (let i = 0; i < targets_length; i++) {
+        $(Items.$targets[trigger][i]).removeClass('isActive');
       }
     }
   }
 }
 // スクロールアクションストップ
-export const scrollActionStop = Items => {
-  for (let stopAction in Items.stopActions) {
-    Items.stopActions[stopAction].forEach($target => {
-      $($target).removeClass(stopAction);
-    })
+export const scrollActionStop = $targets => {
+  $targets.flat()
+  let length = $targets.length
+  for (let i = 0; i < length; i++) {
+    $($targets[i]).removeClass('isActive');
   }
 }
 // スクロールアクション（トップへ戻る）
@@ -175,6 +174,23 @@ export const smoothScroll = (Items, speed = 500) => {
     });
   }
 };
+// // トゥダウン
+// export const toDown = (Items, speed = 500) => {
+//   let length = Items.targetOffset.length
+//   console.log(Items.targetOffset.length)
+
+//   const $trigger = _doc.getElementById('JS_toDown_trigger');
+//   $($trigger).on('click', () => {
+//     console.log(Items)
+//     Items.currentPosition++;
+//     $("html, body").animate({ scrollTop: Items.targetOffset[Items.currentPosition] }, speed, "swing");
+//     if (length === Items.currentPosition) {
+//       $(Items.$trigger).removeClass('isActive')
+//     } else {
+//       $(Items.$trigger).addClass('isActive')
+//     }
+//   });
+// };
 
 // --------------------------------
 // DOMの格納
@@ -204,40 +220,21 @@ export const moveItems = () => {
   return Items;
 };
 // スクロールアクションアイテム
-export const actionItems = () => {
+export const scrollActionItems = () => {
   const Items = {
     $triggers: [],
-    scrollPositions: {
-      start: [],
-      end: []
-    },
-    scrollActions: [
-      { A_isScale: [], A_isClear: [], A_isAnimeStart: [] },
-      { A_isScale: [], A_isClear: [], A_isAnimeStart: [] },
-      { A_isScale: [], A_isClear: [] },
-      { A_isScale: [], A_isClear: [] }
-    ],
-    stopActions: {
-      A_isScale: [], A_isClear: [], A_isAnimeStart: []
-    }
+    scrollPositions: { start: [], end: [] },
+    $targets: []
   }
-  for (let i = 0; i < 4; i++) {
-    Items.$triggers.push(_doc.getElementById('JS_scroll-action_trigger-' + i))
+  let $trigger, $target;
+  for (let triNum = 0; ($trigger = _doc.getElementById('JS_scroll-action-' + triNum + '_trigger')) !== null; triNum++) {
+    Items.$triggers.push($trigger);
+    Items.$targets.push([]);
+    for (let tarNum = 0; ($target = _doc.getElementById('JS_scroll-action-' + triNum + '_target-' + tarNum)) !== null; tarNum++) {
+      Items.$targets[triNum].push($target);
+    }
   }
   resetPositions(Items.scrollPositions, Items.$triggers);
-  for (let i = 0; i < 4; i++) {
-    Items.scrollActions[i].A_isScale.push(Items.$triggers[i]);
-    Items.scrollActions[i].A_isClear.push(_doc.getElementById('JS_scroll-action' + i + '-clear_target'))
-  }
-  for (let i = 0; i < 6; i++) {
-    if (i < 5) {
-      Items.scrollActions[0].A_isAnimeStart.push(_doc.getElementById('JS_scroll-action0-anime_target-' + i))
-    }
-    Items.scrollActions[1].A_isAnimeStart.push(_doc.getElementById('JS_scroll-action1-anime_target-' + i))
-  }
-  Items.stopActions.A_isScale.push(...Items.scrollActions.flatMap(data => data.A_isScale));
-  Items.stopActions.A_isClear.push(...Items.scrollActions.flatMap(data => data.A_isClear));
-  Items.stopActions.A_isAnimeStart.push(...Items.scrollActions.flatMap(data => data.A_isAnimeStart));
   return Items;
 }
 // トゥトップアイテム
@@ -248,7 +245,8 @@ export const toTopItems = () => {
     scrollPositions: {
       start: [],
       end: []
-    }
+    },
+    addTrigerNum: 0
   }
   let $trigger;
   for (let i = 0; ($trigger = _doc.getElementById('JS_scroll-to-top_trigger-' + i)) !== null; i++) {
@@ -257,11 +255,32 @@ export const toTopItems = () => {
   resetPositions(Items.scrollPositions, Items.$triggers);
   return Items;
 }
+// トゥトップアイテム追加
+export const addToTopTrigger = (Items) => {
+  if (Items.addTrigerNum === 0) {
+    let $trigger;
+    for (let i = 0; ($trigger = _doc.getElementById('JS_scroll-to-top_trigger-add-' + i)) !== null; i++) {
+      Items.$triggers.push($trigger);
+      Items.addTrigerNum = i + 1;
+    }
+      resetPositions(Items.scrollPositions, Items.$triggers);
+  }
+}
+// トゥトップアイテム削除
+export const removeToTopTrigger = (Items) => {
+  for (let i = 0; i < Items.addTrigerNum; i++) {
+    Items.$triggers.pop();
+  }
+  Items.addTrigerNum = 0;
+  resetPositions(Items.scrollPositions, Items.$triggers);
+}
+// スムースアイテム
 export const smoothItems = () => {
   const Items = {
     $triggers: [],
     $targets: [],
-    targetOffset: []
+    targetOffset: [],
+    currentPosition: 0
   }
   let $trigger;
   for (let i = 0; ($trigger = _doc.getElementById('JS_smoothScroll_trigger-' + i)) !== null; i++) {

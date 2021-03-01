@@ -1,0 +1,28 @@
+.P_Staff-intro {
+  position: absolute;
+  top: 10%;
+  &.left {
+    @include mq-up("tab") {
+      left: 2%;
+      top: 10%;
+    }
+  }
+  &.right {
+    @include mq-up("tab") {
+      right: 2%;
+      top: 10%;
+    }
+  }
+  &__title {
+    text-align: center;
+    padding-top: 2px;
+    font-size: $font-size-base * 1.25;
+    color: white;
+  }
+  &__content {
+    font-size: $font-size-base * 1.2;
+  }
+  &__joined-date {
+    text-align: center;
+  }
+}

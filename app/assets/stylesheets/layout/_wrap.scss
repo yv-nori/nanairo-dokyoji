@@ -1,0 +1,77 @@
+.L_wrap__600 {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: content-box;
+  @include mq-up("tab") {
+    padding-left: 84px;
+    padding-right: 84px;
+  }
+}
+.L_wrap__1000 {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: content-box;
+  @include mq-up("tab") {
+    padding-left: 84px;
+    padding-right: 84px;
+  }
+}
+.L_pageTitle__headding {
+  position: relative;
+  padding-top: 170px;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  padding-right: $space-side_sp;
+  padding-left: $space-side_sp;
+  padding-bottom: $space_section_sp;
+  @include mq-up("tab") {
+    padding-right: $space-side_pc;
+    padding-left: $space-side_pc;
+    padding-bottom: $space_section_pc;
+  }
+}
+.L_wrap {
+  display: flex;
+  flex-direction: column;
+  padding-left: $space_side_sp;
+  padding-right: $space_side_sp;
+	padding-top: $space_section_sp;
+	@include mq-up("tab") {
+    padding-left: $space_side_pc;
+    padding-right: $space_side_pc;
+    padding-top: $space_section_pc;
+	}
+  &.noLeft {
+    @include mq-up("tab") {
+      flex-direction: row;
+      margin-left: $space_side_pc * -1;
+    }
+  }
+  &.noRight {
+    @include mq-up("tab") {
+      flex-direction: row;
+      margin-right: $space_side_pc * -1;
+    }
+  }
+  &.subColor {
+    background-color: $color-background_sub;
+    margin-top: $space_section_sp;
+    margin-bottom: $space_section_sp;
+    padding-top: $space_section_sp;
+    padding-bottom: $space_section_sp;
+    @include mq-up("tab") {
+      margin-top: $space_section_pc;
+      margin-bottom: $space_section_pc;
+      padding-top: $space_section_pc;
+      padding-bottom: $space_section_pc;
+      margin-right: $side-bar-size;
+    }
+  }
+}

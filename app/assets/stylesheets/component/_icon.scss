@@ -1,16 +1,13 @@
-@mixin C_icon($icon-width:$icon-width_M, $icon-height:$icon-height_M){
+// スクロールするマウスロゴ
+.C_icon-mouse {
 	display: inline-block;
-	width: $icon-width;
-	height: $icon-height;
+	width: 24px;
+	height: 40px;
 	font-size: $icon-font;
 	position: relative;
 	overflow: hidden;
 	z-index: map-get($layer,'mouse');
 	margin: 0 auto;
-}
-// スクロールするマウスロゴ
-.C_icon-mouse {
-	@include C_icon($icon-width_S, $icon-height_L);
   border-radius: 13px;
 	border: 2px solid $icon-color;	
   position: absolute;
@@ -18,15 +15,6 @@
 	left: 50%;
   margin-left: -26px;
 	transition: all $anime-time-middle;
-  &.isMoveTop{
-    opacity: 1;
-  }
-  &.isMoveUp{
-    opacity: 0;
-  }
-  &.isMoveDown{
-    opacity: 0;
-  }
   &__material {
     display: block;
     z-index: map-get($layer, 'mouse');
@@ -40,6 +28,15 @@
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-name: mouse-scroll;
+  }
+  &.isMoveTop{
+    opacity: 1;
+  }
+  &.isMoveUp{
+    opacity: 0;
+  }
+  &.isMoveDown{
+    opacity: 0;
   }
 }
 @keyframes mouse-scroll {
@@ -60,21 +57,14 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 10;
+  z-index: map-get($layer, 'icon');
   width: 5vw;
   height: 225px;
   margin-bottom: 20px;
   text-align: center;
-  transition: all $anime-time-middle;
-  &.isPassive-top {
-    bottom: 50%;
-    opacity: 0;
-  }
-  &.isPassive-bottom {
-    bottom: -50%;
-    opacity: 0;
-  }
-  &__link {
+  &__container {
+    width: 100%;
+    height: 100%;
     position: relative;
     top: 0;
     left: 0;
@@ -84,8 +74,17 @@
     align-items: center;
     writing-mode: vertical-rl;
     color: #fff;
+    transition: all $anime-time-middle;
     &:hover .C_icon__to-top__border {
       animation: icon__to-top 1.3s linear infinite;
+    }
+    &.isPassive-top {
+      transform: translate3d(0, 500px, 0);
+      opacity: 0;
+    }
+    &.isPassive-bottom {
+      transform: translate3d(0, -500px, 0);
+      opacity: 0;
     }
   }
   &__border-box {
@@ -115,5 +114,16 @@
   }
   100% {
     transform:translate3d(0,-200%,0);
+  }
+}
+.C_icon__toDown {
+  position: fixed;
+  bottom: 1%;
+  right: 2%;
+  z-index: map-get($layer, 'icon');
+  .icon{
+    font-size: 3rem;
+    opacity: 0.3;
+    color: grey;
   }
 }

@@ -3,28 +3,17 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 @mixin parallax {
   background-repeat: no-repeat;
 }
 .C_image {
-  &__shabon-left {
-    @include image;
-    background: image-url('deco/shabon/shabon-left.png') no-repeat center center / cover;
-    width: 100%;
-    height: 100%
-  }
-  &__shabon-right {
-    @include image;
-    background: image-url('deco/shabon/shabon-right.png') no-repeat center center / cover;
-    width: 100%;
-    height: 100%
-  }
   &__logo {
     @include image;
-    background: image-url('logo/nanairo_logo.png') no-repeat center center / cover;
-    width: 100%;
-    height: 100%;
+    background: image-url('logo/nanairo_logo.png') no-repeat center center / contain;
     }
   &__parti {
     @include image;
@@ -46,13 +35,22 @@
   }
   &__recruit {
     @include image;
-    background: image-url('recruit/recruit.jpg') no-repeat center center / cover;
+    background: image-url('recruit/recruit_sp.jpg') no-repeat center center / cover;
     @include mq-up("tab") {
       background: image-url('recruit/recruit.jpg') no-repeat center center / cover;
+    }
+    &__staff0 {
+      @include image;
+      background: image-url('recruit/staff0_pc.jpg') no-repeat center center / cover;
+      transition: all $anime-time-short;
+      @include mq-up("tab") {
+        background: image-url('recruit/staff0_pc.jpg') no-repeat center center / cover;
+      }
     }
     &__staff1 {
       @include image;
       background: image-url('recruit/staff1_pc.jpg') no-repeat center center / cover;
+      transition: all $anime-time-short;
       @include mq-up("tab") {
         background: image-url('recruit/staff1_pc.jpg') no-repeat center center / cover;
       }
@@ -60,6 +58,7 @@
     &__staff2 {
       @include image;
       background: image-url('recruit/staff2_pc.jpg') no-repeat center center / cover;
+      transition: all $anime-time-short;
       @include mq-up("tab") {
         background: image-url('recruit/staff2_pc.jpg') no-repeat center center / cover;
       }
@@ -67,23 +66,51 @@
     &__staff3 {
       @include image;
       background: image-url('recruit/staff3_pc.jpg') no-repeat center center / cover;
+      transition: all $anime-time-short;
       @include mq-up("tab") {
         background: image-url('recruit/staff3_pc.jpg') no-repeat center center / cover;
       }
     }
-    &__staff4 {
-      @include image;
-      background: image-url('recruit/staff4_pc.jpg') no-repeat center center / cover;
-      @include mq-up("tab") {
-        background: image-url('recruit/staff4_pc.jpg') no-repeat center center / cover;
-      }
-    }
+  }
+  &__H-about_kv {
+    @include image;
+    background: image-url('home/about_kv.jpg') no-repeat center center / cover;
+    @include parallax;
+  }
+  &__H-about_greeting {
+    @include image;
+    background: image-url('home/about_greeting.jpg') no-repeat center center / cover;
+  }
+  &__H-about_overview {
+    @include image;
+    background: image-url('home/about_overview.jpg') no-repeat center center / cover;
+  }
+  &__H-vision_kv {
+    @include image;
+    background: image-url('home/vision_kv.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+  }
+  &__H-vision_play {
+    @include image;
+    background: image-url('home/vision_play.jpg') no-repeat center center / cover;
+
+  }
+  &__H-vision_friend {
+    @include image;
+    background: image-url('home/vision_friend.jpg') no-repeat center center / cover;
+  }
+  &__H-vision_kind {
+    @include image;
+    background: image-url('home/vision_kind.jpg') no-repeat center center / cover;
   }
   &--parallax {
     &__houjin {
       background: image-url('home/top_sp.jpg');
       @include image;
       @include parallax;
+      width: 100%;
+      height: 100%;
+      position: absolute;
       @include mq-up("pc") {
         background: image-url('home/top_pc.jpg');
         @include image;

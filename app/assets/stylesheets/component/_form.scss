@@ -1,0 +1,99 @@
+.C_Form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  &__title {
+    text-align: center;
+    font-size: $font-size-base * 3;
+    letter-spacing: $letter-spacing-base * 3.75;
+    margin: 40px auto;
+  }
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: $line-height-base;
+    font-size: $font-size-base;
+    min-height: 3em;
+    padding: 20px 0;
+    border-bottom: #F4F4F2 1px solid;
+    &:nth-of-type(1) {
+      border-top: #F4F4F2 1px solid;
+    }
+  }
+  &__item-title {
+    flex-basis: 44%;
+    display: flex;
+    margin-right: 30px;
+  }
+  &__item-text {
+    padding-top: 2px;
+    white-space: nowrap;
+    font-size: $font-size-base;
+  }
+  &__item-mandatory {
+    border: #BE0738 1px solid;
+    color: #BE0738;
+    font-size: $font-size-base;
+    white-space: nowrap;
+    width: 50px;
+    text-align: center;
+    height: 30px;
+    padding-top: 1px;
+    margin-left: 10px;
+  }
+  &__item-input {
+    margin-top: 10px;
+    padding: 2px 10px 0 10px;
+    height: 1.6em;
+    min-height: 30px;
+    min-width: 300px;
+    max-width: 370px;
+    background-color: #F4F4F2;
+    @include mq-up("tab") {
+      margin-top: 0;
+    }
+  }
+  &__item-text-area {
+    padding: 2px 10px 0 10px;
+    height: 1.6em * 4;
+    min-height: 30px;
+    min-width: 300px;
+    max-width: 370px;
+    background-color: #F4F4F2;
+    margin-top: 10px;
+    @include mq-up("tab") {
+      margin-top: 0;
+    }
+  }
+  &__submit {
+    margin: 40px auto;
+    width: 200px;
+    height: 40px;
+    background-color: $color-accent;
+    text-align: center;
+    font-size: $font-size-base;
+    border-radius: $border-radius-little;
+    display: block;
+    color: #fff;
+    font-family: 'Font Awesome 5 Free';
+    border: 3px solid $color-accent;
+    transition: all $anime-time-middle;
+    &:hover {
+      background-color: #fff;
+      border-color: $color-accent;
+      color: $color-accent;
+      box-shadow: $shadow;
+    }
+  }
+}
+.field_with_errors {
+  border: #BE0738 1px solid;
+}
+.error-alert {
+  width: 100%;
+  text-align: right;
+  color: #BE0738;
+  padding-bottom: 7px;
+  margin-top: -12px;
+}

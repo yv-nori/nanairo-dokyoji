@@ -1,0 +1,22 @@
+.flash {
+ &__notice {
+   width: 100%;
+   margin: 0 auto;
+   position: fixed;
+   top: 0;
+   z-index: 999;
+   background-color: deepskyblue;
+   color: #fff;
+   text-align: center;
+ }
+ &__alert {
+   width: 100%;
+   margin: 0 auto;
+   position: fixed;
+   top: 0;
+   z-index: 999;
+   background-color: deepskyblue;
+   color: #fff;
+   text-align: center;
+ }
+}

@@ -1,0 +1,85 @@
+.C_Accordion {
+  box-shadow: 0px 13px 23px -13px rgba(0,0,0,0.5);
+  background-color: transparent;
+  padding: 20px;
+  width: 80%;
+  @include mq-up("tab") {
+    width: 420px;
+  }
+  &__list {
+    pointer-events: auto;
+    cursor: pointer;
+    margin: 5px 0;
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0,0,0, .4);
+    color: #ffddcc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 2;
+    font-weight: lighter;
+    position: relative;
+    padding: 10px;
+    z-index: map-get($layer, 'icon');
+    border-radius: 4px;
+    margin-top: 2px;
+    transition: all .2s ease-in;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(0,0,0, .5);
+    }
+    &.isActive {
+      background-color: rgba(0,0,0, .5);
+    }
+  }
+  &__title-text {
+    width: 100%;
+    height: 100%;
+  }
+  &__icon {
+    font-size: 20px;
+    color: rgba(255,255,255, .5);
+    transition: all .6s cubic-bezier(0.080, 1.090, 0.320, 1.275);
+    &.isActive {
+      color: rgba(255,255,255, 1);
+      transform: rotate(180deg);
+    }
+  }
+  &__content {
+    height: 30px;
+    width: 420px;
+    background-color: transparent;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    margin-top: -30px;
+    text-align: left;
+    transition: all 200ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+    &.isActive {
+      width: 100%;
+      margin-top: 0px;
+      height: auto;
+      background-color: rgba(0,0,0, .4);
+      transition: all 350ms cubic-bezier(0.080, 1.090, 0.320, 1.275);
+    }
+  }
+  &__text {
+    padding: 15px;
+    visibility: hidden;
+    opacity: 0;
+    overflow: auto;
+    transition: all .2s ease-in;
+    &.isActive {
+      margin: 5px 0;
+      visibility: visible;
+      opacity: 1;
+      transition: all .8s ease-in;
+    }
+  }
+}

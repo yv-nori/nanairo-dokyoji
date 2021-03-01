@@ -24,6 +24,7 @@ $breakpoints-down: (
 // ボーダーラディウス
 $border-radius-button: 4px;
 $border-radius-little: 10px;
+$border-radius-half: 50px;
 
 // ヘッダー高さ
 $header-height_sp: 63px;
@@ -37,8 +38,10 @@ $layer: (
 	floating: 40,
 	header: 30,
 	footer: 20,
+	top-icon: 15,
 	icon: 10,
 	cover: 5,
+	kv: 3,
 	default: 1,
 	minus: -1,
 );
@@ -49,8 +52,14 @@ $pd-x_tab: 32px;
 $pd-x_sp: 24px;
 
 // スペース
+$space_side: 7vw;
+$space_side_sp: 24px;
+$space_side_pc: 84px;
+$space_section: 13vh;
+$space_section_sp: 30px;
+// $space_section_pc: 60px;
+$space_section_pc: 80px;
 $space_vertical: 30px;
-$space_side: 24px;
 
 // ナビのメニュー高さ
 $nav-menu-height_sp: 70px;
@@ -99,3 +108,6 @@ $drawer-bar-height: 3px;
 
 // ソリッドサイズ
 $border-solid-size: 1px;
+
+// サイドバー
+$side-bar-size :5vw;

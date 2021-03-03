@@ -1,0 +1,65 @@
+<%= render partial: 'shared/header' %>
+<section class="PageTitle">
+  <div id="JS_smoothScroll_target-0"></div>
+  <div class="L_pageTitle__headding">
+    <div class="">
+      <p class="C_text__title-en">
+        Contact
+      </p>
+      <h1 class="C_text__title-ja">
+        お問い合わせ
+      </h1>
+    </div>
+  </div>
+</section>
+<section class="PageKeyVisual" id="JS_scroll-to-top_trigger-0">
+  <div class="L_kv-half">
+    <div class="C_image__contact-kv"></div>
+  </div>
+</section>
+<%
+form_items = [
+  title: 'ENTRY',
+  url: home_index_path,
+  forms: @contact,
+  items: [{
+    title: 'お名前',
+    mandatory: true,
+    key: :name,
+    id: 'name',
+    maxlength: '30',
+    placeholder: '例) 七彩　花子',
+    error_message: @contact.errors.full_messages_for(:name)},
+  {
+    title: 'メールアドレス',
+    mandatory: true,
+    key: :email,
+    id: 'email',
+    email_field: true,
+    placeholder: '例) example@dokyoji.or.jp',
+    error_message: @contact.errors.full_messages_for(:email)},
+  {
+    title: 'メールアドレス確認',
+    mandatory: true,
+    key: :email_confirmation,
+    id: 'email_cofirmation',
+    email_field: true,
+    placeholder: '例) example@dokyoji.or.jp',
+    error_message: @contact.errors.full_messages_for(:email_confirmation)},
+  {
+    title: 'お問い合わせ内容',
+    key: :question,
+    id: 'question',
+    text_area: true,
+    maxlength: '1000',
+    rows: '4',
+    error_message: @contact.errors.full_messages_for(:question)
+  }]]
+%>
+<section class="Contact">
+  <div class="L_wrap__600">
+    <%=render partial:'shared/form', collection: form_items ,as:'form_items' %>
+  </div>
+</section>
+<%= render 'shared/side_bar',{color: ''}%>
+<%= render partial: 'shared/footer' %>

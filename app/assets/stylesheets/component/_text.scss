@@ -23,3 +23,26 @@
     white-space: nowrap;
   }
 }
+.C_text__sub-title {
+  font-size: $font-size-base * 1.43;
+  padding-top: $space-vertical;
+  line-height: 120%;
+  font-weight: 400;
+  letter-spacing: -0.12em;
+  font-family: 'Hannari';
+  @include mq-up("tab") {
+    font-size: $font-size-base * 2;
+    line-height: 120%;
+  }
+}
+.C_text__sentence {
+  padding-top: 20px;
+  font-size: $font-size-base * 1.125;
+  letter-spacing: $letter-spacing-base;
+  &.in {
+    padding-left: 10px;
+    @include mq-up("tab") {
+      padding-left: 20px;
+    }
+  }
+}

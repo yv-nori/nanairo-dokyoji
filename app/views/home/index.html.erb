@@ -5,7 +5,7 @@
 <section class="KeyVisual">
   <%#-- イメージコンテナー --%>
   <div class="P_Houjin-kv" id="JS_smoothScroll_target-0">
-    <div class="L_key-visual" id="JS_scroll-to-top_trigger-0">
+    <div class="L_kv" id="JS_scroll-to-top_trigger-0">
       <%#-- スクロールするキャッチコピー(バック黒) --%>
       <div class="P_Houjin-kv__text-container" id="JS_scroll-move_target-0">
         <div class="P_Houjin-kv__back-text">
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="L_inner-trim">
-        <div class="C_image--parallax__houjin"></div>
+        <div class="C_image__houjin-kv"></div>
         <div class="U_cover--shadow"></div>
         <%#-- マウスアイコン --%>
         <div class="C_icon-mouse" id="JS_scroll-change_target">
@@ -113,7 +113,7 @@
         <div class="U_cover--shadow" id="JS_scroll-action-0_target-1"></div>
         <div class="P_Info__text-box">
           <h1 class="P_Info__text">Admission</h1>
-          <h2 class="P_Info__sub-text">入園をご希望の方</h2>
+          <h2 class="P_Info__sub-text">入園をお考えの方</h2>
         </div>
         <%#-- シャボン --%>
         <%=render'shared/shabon',{x:4,  y:5,  cl:'P_Info',size:'S' ,time:'2',ptn:'B',dir:'left',js:'JS_scroll-action-0_target-2'}%>
@@ -121,7 +121,7 @@
         <%=render'shared/shabon',{x:46, y:10, cl:'P_Info',size:'SS',time:'1',ptn:'A',dir:'left',js:'JS_scroll-action-0_target-4'}%>
         <%=render'shared/shabon',{x:70, y:38, cl:'P_Info',size:'M' ,time:'2',ptn:'B',dir:'left',js:'JS_scroll-action-0_target-5'}%>
         <%=render'shared/shabon',{x:100,y:100,cl:'P_Info',size:'L' ,time:'3',ptn:'B',dir:'left',js:'JS_scroll-action-0_target-6'}%>
-        <%= link_to "", root_path, class:"U_link"%>
+        <%= link_to "", admission_home_index_path, class:"U_link"%>
       </div>
       <%#-- 就職希望 --%>
       <div class="P_Info__image-box" id="JS_scroll-action-1_target-0">
@@ -150,7 +150,7 @@
 <%# ==================================== %>
 <section class="Facilities">
   <div class="P_Facility">
-    <div class="P_Facility__container" id="JS_scroll-to-top_trigger-1">
+    <div class="P_Facility__container" id="JS_scroll-to-top_trigger-add-0">
       <div class="P_Facility__image-box" id="JS_scroll-action-2_target-0">
         <div class="P_Facility__image" id="JS_scroll-action-2_trigger">
           <div class="C_image__parti"></div>
@@ -165,7 +165,7 @@
         </div>
         <div class="U_cover--shadow" id="JS_scroll-action-3_target-1"></div>
         <h1 class="P_Facility__text">Piani</h1>
-        <%= link_to "", root_path, class:"U_link"%>
+        <%= link_to "", piani_index_path, class:"U_link"%>
       </div>
     </div>
   </div>

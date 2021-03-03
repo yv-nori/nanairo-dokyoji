@@ -7,13 +7,18 @@
   height: 100%;
   position: absolute;
 }
-@mixin parallax {
-  background-repeat: no-repeat;
-}
 .C_image {
   &__logo {
     @include image;
     background: image-url('logo/nanairo_logo.png') no-repeat center center / contain;
+    }
+  &__logo-piani {
+    @include image;
+    background: image-url('logo/piani_logo.png') no-repeat center center / contain;
+    }
+  &__logo-parti {
+    @include image;
+    background: image-url('logo/parti_logo.png') no-repeat center center / contain;
     }
   &__parti {
     @include image;
@@ -33,11 +38,38 @@
     @include image;
     background: image-url('home/admission.jpg') no-repeat center center / cover;
   }
+  &__admission-para {
+    @include image;
+    background: image-url('home/admission2.jpg') no-repeat center center / cover;
+    background-attachment: fixed
+  }
+  &__admission-group-life {
+    @include image;
+    background: image-url('home/admission_group_life.jpg') no-repeat center center / cover;
+  }
+  &__admission-child-facility {
+    @include image;
+    background: image-url('home/admission_child_facility.jpg') no-repeat center center / cover;
+  }
+  &__admission-group-life {
+    @include image;
+    background: image-url('home/admission_group_life.jpg') no-repeat center center / cover;
+  }
+  &__contact-kv {
+    @include image;
+    background: image-url('home/contact_kv.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+  }
   &__recruit {
     @include image;
     background: image-url('recruit/recruit_sp.jpg') no-repeat center center / cover;
     @include mq-up("tab") {
       background: image-url('recruit/recruit.jpg') no-repeat center center / cover;
+    }
+    &2 {
+      @include image;
+      background: image-url('recruit/recruit2.jpg') no-repeat center center / cover;
+      top: 0
     }
     &__staff0 {
       @include image;
@@ -75,7 +107,7 @@
   &__H-about_kv {
     @include image;
     background: image-url('home/about_kv.jpg') no-repeat center center / cover;
-    @include parallax;
+    background-attachment: fixed; 
   }
   &__H-about_greeting {
     @include image;
@@ -93,7 +125,6 @@
   &__H-vision_play {
     @include image;
     background: image-url('home/vision_play.jpg') no-repeat center center / cover;
-
   }
   &__H-vision_friend {
     @include image;
@@ -103,19 +134,23 @@
     @include image;
     background: image-url('home/vision_kind.jpg') no-repeat center center / cover;
   }
-  &--parallax {
-    &__houjin {
-      background: image-url('home/top_sp.jpg');
-      @include image;
-      @include parallax;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      @include mq-up("pc") {
-        background: image-url('home/top_pc.jpg');
-        @include image;
-        @include parallax;
-      }
+  &__houjin-kv {
+    background: image-url('home/top_sp.jpg');
+    @include image;
+    background-attachment: fixed;
+    @include mq-up("pc") {
+      background: image-url('home/top_pc.jpg');
+      background-attachment: fixed;
     }
+  }
+  &__piani-kv {
+    background: image-url('piani/index/kv.jpg');
+    @include image;
+    background-attachment: fixed;
+  }
+  &__parti-kv {
+    background: image-url('parti/index/kv.jpg');
+    @include image;
+    background-attachment: fixed;
   }
 }

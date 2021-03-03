@@ -2,10 +2,10 @@
 // 関数と定数の読み込み
 // --------------------------------
 import {
-  scrollChange, $changeTargets, scrollMove, moveItems, scrollAction, scrollActionItems, scrollActionStop, scrollToTop, toTopItems, scrollToTopHide, resetPositions, resetMovePositions, smoothScroll, smoothItems
+  scrollChange, $changeTargets, scrollMove, moveItems, scrollAction, scrollActionItems, scrollActionStop, scrollToTop, toTopItems, scrollToTopHide, resetPositions, resetMovePositions, smoothScroll, smoothItems, addToTopTrigger, removeToTopTrigger
 } from "../function/scroll"
 import {
-  sp_only
+  tab_only, pc_only
 } from "../function/utility"
 import {
   headerItems, menuOpen
@@ -28,11 +28,16 @@ $(function(){
     windowScrollTop = $(this).scrollTop();
     scrollChange(windowScrollTop, startPosition, $ChangeTargets);
     scrollMove(windowScrollTop, MoveItems);
-    if (sp_only()) {
+    if (pc_only()) {
+      scrollToTop(windowScrollTop, startPosition, ToTopItems);
+      addToTopTrigger(ToTopItems);
+    } else {
       scrollAction(windowScrollTop, ScrollActionItems);
       scrollToTopHide(ToTopItems.$target);
-    } else {
-      scrollToTop(windowScrollTop, startPosition, ToTopItems)
+      removeToTopTrigger(ToTopItems);
+    }
+    if (tab_only()) {
+      scrollToTop(windowScrollTop, startPosition, ToTopItems);
     }
     startPosition = windowScrollTop;
   });

@@ -52,6 +52,26 @@
 			background: image-url('logo/nanairo_logo_white.png') no-repeat center center / contain;
 		}
 	}
+	&__logo-image-piani{
+		&.isMoveUp {
+			@include image;
+			background: image-url('logo/piani_logo.png') no-repeat center center / contain;
+		}
+		&.isMoveTop {
+			@include image;
+			background: image-url('logo/piani_logo_white.png') no-repeat center center / contain;
+		}
+	}
+	&__logo-image-parti{
+		&.isMoveUp {
+			@include image;
+			background: image-url('logo/parti_logo.png') no-repeat center center / contain;
+		}
+		&.isMoveTop {
+			@include image;
+			background: image-url('logo/parti_logo_white.png') no-repeat center center / contain;
+		}
+	}
 }
 .L_header__pc-nav {
 	&-items {
@@ -73,13 +93,13 @@
 		white-space: nowrap;
 	}
 }
-.L_header__sp-nav{
+.L_header__tab-sp-nav{
 	&-items {
 		background-color: $color-background;
 		opacity: 0;
 		width: 100%;
 		position: fixed;
-		top: $header-height-sp;
+		top: $header-height_sp;
 		left: 0;
 		z-index: map-get($layer, "header");
 		transition: all $anime-time-middle;
@@ -89,9 +109,12 @@
 			max-height: 100vh!important;
 			opacity: 1;
 		}
+		@include mq-up("tab") {
+			top: $header-height_pc;
+		}
 	}
 	&-item {
-		line-height: $header-height-sp;
+		line-height: $header-height_sp;
 		text-align: center;
 		color: $color-text;
 		display: flex;

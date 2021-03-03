@@ -44,13 +44,12 @@ $(function () {
   });
   window.addEventListener('resize', () => {
     if (pc_only()) {
-      removeToTopTrigger(ToTopItems)
+      removeToTopTrigger(ToTopItems);
     } else {
-      addToTopTrigger(ToTopItems)
+      addToTopTrigger(ToTopItems);
     }
     resetPositions(ToTopItems.scrollPositions, ToTopItems.$triggers);
     resetPositions(ScrollActionItems.scrollPositions, ScrollActionItems.$triggers);
-    resetSmoothPositions(SmoothItems)
-    console.log(ToTopItems)
+    resetSmoothPositions(SmoothItems);
   }, false);
 });

@@ -22,56 +22,43 @@
     padding-right: 84px;
   }
 }
-.L_pageTitle__headding {
-  position: relative;
-  padding-top: 170px;
-  height: 50vh;
-  display: flex;
-  justify-content: space-between;
-  padding-right: $space-side_sp;
-  padding-left: $space-side_sp;
-  padding-bottom: $space_section_sp;
-  @include mq-up("tab") {
-    padding-right: $space-side_pc;
-    padding-left: $space-side_pc;
-    padding-bottom: $space_section_pc;
+.L_pageTitle {
+  &__headding {
+    flex-direction: column;
+    position: relative;
+    padding-top: 170px;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    padding-right: $space-side;
+    padding-left: $space-side;
+    padding-bottom: $space-section;
+    @include mq-up("tab") {
+      flex-direction: row;
+      padding-right: $space-side;
+      padding-left: $space-side;
+      padding-bottom: $space-section;
+    }
+  }
+  &__second {
+    padding-top: $space-section / 2;
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 .L_wrap {
   display: flex;
   flex-direction: column;
-  padding-left: $space_side_sp;
-  padding-right: $space_side_sp;
-	padding-top: $space_section_sp;
-	@include mq-up("tab") {
-    padding-left: $space_side_pc;
-    padding-right: $space_side_pc;
-    padding-top: $space_section_pc;
-	}
-  &.noLeft {
-    @include mq-up("tab") {
-      flex-direction: row;
-      margin-left: $space_side_pc * -1;
-    }
+  padding-left: $space-side;
+  padding-right: $space-side;
+	padding-top: $space-section;
+  @include mq-up("pc") {
+    flex-direction: row;
   }
-  &.noRight {
-    @include mq-up("tab") {
-      flex-direction: row;
-      margin-right: $space_side_pc * -1;
-    }
+  &.title {
+    flex-direction: column;
   }
-  &.subColor {
-    background-color: $color-background_sub;
-    margin-top: $space_section_sp;
-    margin-bottom: $space_section_sp;
-    padding-top: $space_section_sp;
-    padding-bottom: $space_section_sp;
-    @include mq-up("tab") {
-      margin-top: $space_section_pc;
-      margin-bottom: $space_section_pc;
-      padding-top: $space_section_pc;
-      padding-bottom: $space_section_pc;
-      margin-right: $side-bar-size;
-    }
+  &.bottom {
+    margin-bottom: $space-section * 2;
   }
 }

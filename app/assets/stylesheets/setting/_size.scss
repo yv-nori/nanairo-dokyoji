@@ -52,14 +52,14 @@ $pd-x_tab: 32px;
 $pd-x_sp: 24px;
 
 // スペース
-$space_side: 7vw;
-$space_side_sp: 24px;
-$space_side_pc: 84px;
-$space_section: 13vh;
-$space_section_sp: 30px;
-// $space_section_pc: 60px;
-$space_section_pc: 80px;
-$space_vertical: 30px;
+$space-side: 7vw;
+$space-side_sp: 24px;
+$space-side_pc: 84px;
+$space-section: 6vh;
+$space-section_sp: 30px;
+$space-vertical: 3vh;
+// $space-section_pc: 60px;
+$space-section_pc: 80px;
 
 // ナビのメニュー高さ
 $nav-menu-height_sp: 70px;
@@ -71,6 +71,8 @@ $deco-height: 75px;
 // イメージサイズ
 $image-width: 800px;
 $image-height: 500px;
+
+$image-tab-max: 540px;
 
 // ロゴ
 $logo-width_sp: 116px;

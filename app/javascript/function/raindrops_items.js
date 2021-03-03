@@ -24,7 +24,7 @@ export const raindropsBlueDarken = () => {
     density: 0,
     rippleSpeed: 0.001,
     canvasWidth: 2000,
-    canvasHeight: 700,
+    canvasHeight: 560,
     rightPadding: 20,
     position: 'absolute',
     positionBottom: 0,

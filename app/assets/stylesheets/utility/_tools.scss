@@ -20,7 +20,25 @@
       position: absolute;
       left: 1% * $x;
       top: 1% * $y;
-      transform: translate3d(-1% * $x, -1% * $y, 0);
+      transform: translate3d(-50%, -50%, 0);
+    }
+    .U_abs-X-#{$x}-Y-#{$y} {
+      position: absolute;
+      left: -1% * $x;
+      top: -1% * $y;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    .U_abs-X#{$x}-Y-#{$y} {
+      position: absolute;
+      left: 1% * $x;
+      top: -1% * $y;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    .U_abs-X-#{$x}-Y#{$y} {
+      position: absolute;
+      left: -1% * $x;
+      top: 1% * $y;
+      transform: translate3d(-50%, -50%, 0);
     }
   }
 }
@@ -48,6 +66,16 @@
   pointer-events: none;
   transition: all $anime-time-short;
 }
-// .U_z-kv {
-//   z-index: map-get($layer, 'kv');
-// }
+.U_list-style {
+  list-style: inside;
+  &.in {
+    text-indent: -1em;
+    padding-left: 10px;
+    @include mq-up("tab") {
+      padding-left: 20px;
+    }
+  }
+}
+.U_z-1 {
+  z-index: 1;
+}

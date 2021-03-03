@@ -232,12 +232,22 @@ $anime-time-long: 1.2s;
 // メディアクエリ
 // --------------------------------
 // メディアクエリの表示
+@include mq-down("sp") {
+	.pc-tab-only {
+		display: none!important;
+	}
+}
 @include mq-up("tab") {
 	.sp-only {
 		display: none!important;
 	}
 }
-@include mq-down("sp") {
+@include mq-up("pc") {
+	.tab-sp-only {
+		display: none!important;
+	}
+}
+@include mq-down("tab") {
 	.pc-only {
 		display: none!important;
 	}

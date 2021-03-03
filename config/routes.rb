@@ -4,7 +4,17 @@ Rails.application.routes.draw do
   resources :home do
     collection do
       get 'about'
+      get 'admission'
+      get 'contact'
       get 'vision'
+      get 'policy'
+      get 'privacy'
+      post 'create'
+    end
+  end
+  resources :piani do
+    collection do
+      get 'index'
     end
   end
 end

@@ -24,6 +24,14 @@ if (CurrentPath == "/home/about") {
 if (CurrentPath == "/home/vision") {
   require("../page/houjin_vision");
 }
+if (CurrentPath == "/home/admission") {
+  require("../page/houjin_admission");
+}
+if (CurrentPath == "/home/contact" ||
+    CurrentPath == "/home/policy" ||
+    CurrentPath == "/home/privacy") {
+  require("../page/houjin_contact");
+}
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

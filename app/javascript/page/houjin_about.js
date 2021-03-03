@@ -5,7 +5,7 @@ import {
   scrollChange, headerStatusWhite, toTopItems, scrollToTop, smoothItems, smoothScroll, resetPositions, resetSmoothPositions, scrollAction, scrollActionItems, scrollToTopHide
 } from "../function/scroll"
 import {
-  sp_only
+  sp_only, pc_only, tab_only
 } from "../function/utility"
 import {
   headerItems, menuOpen
@@ -26,11 +26,16 @@ $(function () {
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
     scrollChange(windowScrollTop, startPosition, HeaderItems.$targets, false);
-    if (sp_only()) { 
+    if (pc_only()) {
+      scrollToTop(windowScrollTop, startPosition, ToTopItems);
+    }
+    if (tab_only()) {
+      scrollToTop(windowScrollTop, startPosition, ToTopItems);
+      scrollAction(windowScrollTop, ScrollActionItems);
+    }
+    if (sp_only()) {
       scrollAction(windowScrollTop, ScrollActionItems);
       scrollToTopHide(ToTopItems.$target);
-    } else {
-      scrollToTop(windowScrollTop, startPosition, ToTopItems)
     }
     startPosition = windowScrollTop;
   });

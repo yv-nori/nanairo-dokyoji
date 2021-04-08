@@ -148,7 +148,7 @@
     background: image-url('home/about_overview.jpg') no-repeat center center / cover;
   }
   &__H-vision_kv {
-    @include image;
+    @include image-para();
     background: image-url('home/vision_kv.jpg') no-repeat center center / cover;
     background-attachment: fixed;
   }

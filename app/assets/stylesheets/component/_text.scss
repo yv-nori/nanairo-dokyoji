@@ -23,3 +23,45 @@
     white-space: nowrap;
   }
 }
+.C_text__sub-title {
+  font-size: $font-size-base * 1.43;
+  padding-top: $space-vertical;
+  line-height: 120%;
+  font-weight: 400;
+  letter-spacing: -0.12em;
+  font-family: 'Hannari';
+  @include mq-up("tab") {
+    font-size: $font-size-base * 2;
+    line-height: 120%;
+  }
+}
+.C_text__sentence {
+  padding-top: 20px;
+  font-size: $font-size-base * 1.125;
+  letter-spacing: $letter-spacing-base;
+  &.in {
+    padding-left: 10px;
+    @include mq-up("tab") {
+      padding-left: 20px;
+    }
+  }
+}
+.C_text__logo {
+  &__shoe-logo__parti {
+    width: 100%;
+    height: 100%;
+    background: image-url('logo/shoe_logo_parti.svg') no-repeat center center / contain;
+  }
+  &__shoe-logo__piani {
+    width: 100%;
+    height: 100%;
+    background: image-url('logo/shoe_logo_piani.svg') no-repeat center center / contain;
+  }
+  &__name {
+    font-family: 'DinPro';
+    letter-spacing: 0.1em;
+    font-size: $font-size-base * 0.625;
+    text-align: center;
+    margin-top: -8px;
+  }
+}

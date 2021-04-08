@@ -2,84 +2,161 @@
 // トップイメージ
 // =====================================
 .P_Recruit__kv {
-  &__title-box {
-    border-radius: $border-radius-little;
-    display: inline-block;
+  &__text-box {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: absolute;
     z-index: map-get($layer, 'icon');
+    bottom: 0;
     pointer-events: none;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    padding: 40px 5px;
-    background-color: #fff;
-    border: 2px #000 solid;
-    &.right {
-      position: absolute;
-      top: 22%;
-      left: 27%;
-      @include mq-up("tab") {
-      top: 20%;
-      left: 23%;
-      }
+    height: 150px;
+    @include mq-up("tab") {
+      height: 180px;
     }
-    &.left {
-      position: absolute;
-      top: 27%;
-      left: 10%;
-      @include mq-up("tab") {
-        top: 25%;
-        left: 13%;
-      }
+    @include mq-up("pc") {
+      height: 70px;
+      display: flex;
+      justify-content: center;
     }
-  }
-  &__text {
-    font-size: $font-size-base * 1.5;
-    line-height: $line-height-base;
   }
   &__main-title {
     font-size: $font-size-base * 3;
     letter-spacing: $letter-spacing-base * 1.25;
     white-space: nowrap;
     font-family: 'goudy_bookletter_1911';
-    pointer-events: none;
-    z-index: map-get($layer, 'icon');
     color: #fff;
-    @include abs(50,88);
     @include mq-up("tab") {
-      @include abs(50,94);
-      font-size: $font-size-base * 6;
+      font-size: $font-size-base * 4.375;
       letter-spacing: $letter-spacing-base * 4.5;
+    }
+    @include mq-up("pc") {
+      font-size: $font-size-base * 2.5;
     }
   }
   &__sub-title {
+    margin-top: -10px;
     font-size: $font-size-base * 1.5;
     letter-spacing: $letter-spacing-base * 1.25;
     white-space: nowrap;
     font-family: 'goudy_bookletter_1911';
     pointer-events: none;
-    z-index: map-get($layer, 'icon');
-    color: white;
-    @include abs(50,94);
-    @include mq-up("pc") {
-      @include abs(50,98);
+    @include mq-up("tab") {
+      margin-top: -23px;
       font-size: $font-size-base * 2.2;
       letter-spacing: $letter-spacing-base * 1;
     }
+    @include mq-up("pc") {
+      font-size: $font-size-base * 1.4375;
+      margin-top: 0;
+      padding-top: 15px;
+      padding-left: 10px;
+    }
   }
-  &__rain {
+  &__nav {
+    color: #fff;
     position: absolute;
+    bottom: 0;
+    right: 0;
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: 60px;
+    z-index: map-get($layer, 'icon');
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    @include mq-up("pc") {
+      justify-content: flex-end;
+    }
+  }
+  &__nav-list {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: $font-size-base * 0.875;
+    @include mq-up("tab") {
+      font-size: $font-size-base;
+    }
+    &::before {
+      transition: all $anime-time-short;
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      border-bottom: 1px solid #fff;
+    }
+    &:hover:before {
+      width: 100%;
+    }
   }
   &__shabon {
     z-index: map-get($layer, 'top-icon');
+    pointer-events: none;
   }
 }
 // =====================================
 // コンセプト
 // =====================================
 .P_Recruit__concept {
-  position: relative;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @include mq-up("tab") {
+      flex-direction: row;
+    }
+  }
+  &__inner-img {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    @include mq-up("tab") {
+      width: 50%;
+      height: 50vh;
+      padding-left: $space-side / 2;
+    }
+  }
+  &__img-box {
+    border-radius: $border-radius-little;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  &__inner-text {
+    margin-top: 4vh;
+    @include mq-up("tab") {
+      margin-top: 0;
+      width: 50%;
+    }
+  }
+  &__inner-title {
+    width: 100%;
+    display: flex;
+    height: 50px;
+  }
+  &__title-box {
+    position: relative;
+    width: 50%;
+  }
+  &__under-line {
+    position: relative;
+    width: 50%;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 75%;
+      right: 0;
+      height: 1px;
+      width: 125%;
+      border-top: 2px dotted $color-border--thin;
+    }
+  }
   &__title {
     font-size: $font-size-base * 4;
     letter-spacing: 0px;
@@ -88,107 +165,12 @@
     z-index: map-get($layer, 'icon');
     transform: rotate(-10deg);
     position: absolute;
-    top: 5%;
+    top: -40%;
     left: 8%;
     @include mq-up("tab") {
-      top: 22%;
+      top: -50%;
       font-size: $font-size-base * 4;
     }
-  }
-  &__container {
-    width: 100%;
-    height:100vh;
-    padding-top: 5vh;
-    padding-bottom: 10vh;
-    @include mq-up("tab") {
-      display: flex;
-      padding: 20vh 0;
-      flex-wrap: nowrap;
-    }
-  }
-  &__inner {
-    width: 100%;
-    height: 70%;
-    @include mq-up("tab") {
-      width: 50%;
-      height: 100%;
-    }
-    &.left {
-      @include mq-up("tab") {  
-        padding-right: 30px;
-      }
-    }
-    &.right {
-      height: 30%;
-      position: relative;
-      @include mq-up("tab") { 
-        height: 100%; 
-        padding-top: 30px;
-      }
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -20%;
-        left: 0;
-        height: 1px;
-        width: 100%;
-        border-top: 2px dotted $color-border--thin;
-        @include mq-up("tab") {
-          display: none;
-        }
-      }
-    }
-  }
-  &__sub-title {
-    font-size: $font-size-base * 1.2;
-    line-height: $line-height-base;
-    font-weight: 600;
-    padding-top: 30%;
-    position: relative;
-    @include mq-up("tab") {
-      font-weight: normal;
-      font-size: $font-size-base * 1.4;
-      padding-top: 25%;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      top: 60%;
-      right: 0;
-      height: 1px;
-      width: 65%;
-      border-top: 2px dotted $color-border--thin;
-      @include mq-up("tab") {
-        top: 35%;
-        width: 70%;
-      }
-    }
-  }
-  &__sentense {
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    position: relative;
-    padding-top: 4%;
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -10%;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      border-top: 2px dotted $color-border--thin;
-      @include mq-up("tab") {
-        display: none;
-      }
-    }
-  }
-  &__image {
-    width: 100%;
-    height: 100%;
-    border-radius: $border-radius-little;
-    border: 1px #000 solid;
-    position: relative;
-
   }
 }
 // =====================================
@@ -196,7 +178,12 @@
 // =====================================
 .P_Recruit__staff {
   position: relative;
-  height: 100vh;
+  height: 75vh;
+  margin-left: $space-side;
+  margin-right: $space-side;
+  margin-top: $space-section;
+  border-radius: 10px;
+  overflow: hidden;
   // バックイメージ
   &__back {
     @include abs-full;
@@ -261,18 +248,20 @@
 // 求人内容
 // =====================================
 .P_Recruit__job-info {
-  width: 100%;
   &__container {
-    padding: 40px 20px;
+    padding-left: $space-side;
+    padding-right: $space-side;
+    margin-right: $side-bar-size;
+    padding-top: $space-section;
     display: flex;
     flex-wrap: wrap;
     @include mq-up("tab") {
-      padding: 100px 50px;
       flex-wrap: nowrap;
     }
   }
   &__content {
     margin-top: 20px;
+    width: 33.33%;
     &:first-of-type {
       margin-top: 0;
     }
@@ -284,33 +273,11 @@
       }
     }
   }
-}
-// =====================================
-// お問い合わせフォームへのリンクフッター
-// =====================================
-.P_Recruit__contact {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 50vh;
-  color: #fff;
-  text-align: center;
-  z-index: 1;
-  @include mq-up("tab") {
-    height: 60vh;
-  }
-  &__title {
-    font-size: $font-size-base * 2.8;
-    letter-spacing: $letter-spacing-base * 1.25;
-    font-family: 'goudy_bookletter_1911';
-    color: #fff;
+  &__text1, &__text2 {
     text-align: center;
-    padding-top: 95px;
-    @include mq-up("pc") {
-      font-size: $font-size-base * 6;
-      letter-spacing: $letter-spacing-base * 4.5;
-      padding-top: 100px;
-    }
+  }
+  &__text1, &__text2, &__tel-text {
+    color: #fff;
   }
   &__text1 {
     font-size: $font-size-base * 1.4375;
@@ -323,14 +290,14 @@
   &__text2 {
     font-size: $font-size-base;
   }
-  &__container {
+  &__wrap {
     display: flex;
     padding-top: 25px;
+    padding-bottom: 33px;
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
     @include mq-up("tab") {
-      padding-top: 33px;
       flex-wrap: nowrap;
     }
   }

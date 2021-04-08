@@ -55,16 +55,22 @@
         border-top: none;
       }
       &+& {
-        padding-left: 55px;
+        padding-left: 28px;
+        @include mq-up("pc") {
+          padding-left: 55px;
+        }
       }
       &+&::before {
         position: absolute;
         top: 50%;
         left: 16px;
-        width: 16px;
         height: 1px;
         background-color: $color-border--thin;
         content: " ";
+        width: 10px;
+        @include mq-up("pc") {
+          width: 16px;
+        }
       }
       &:hover .L_footer__list-link::after{
         width: 100%;
@@ -77,6 +83,7 @@
     letter-spacing: $letter-spacing-base;
     display: block;
     padding-left: 10px;
+    white-space: nowrap;
     &::before {
       content: "/";
       font-size: 12px;

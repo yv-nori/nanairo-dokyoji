@@ -1,0 +1,832 @@
+.P_features__nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $space-section_L $space-side 4vh $space-side;
+  &__title {
+    position: relative;
+    margin-top: $space-vertical;
+    font-family: 'Baskerville';
+    font-size: $font-size-base * 1.5;
+    letter-spacing: 0.7em;
+    &::before,
+    &::after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background-color: $color-text;
+      position: absolute;
+      bottom: 0px;
+      transform-origin: center bottom;
+    }
+    &::before {
+      left: -16px;
+      transform: rotate(-45deg);
+    }
+    &::after {
+      right: -5px;
+      transform: rotate(45deg);
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    margin-top: $space-vertical
+  }
+  &__deco {
+    position: absolute;
+    z-index: -1;
+    &.jagged {
+      top: -70%;
+      left: -6%;
+      width: 11vw;
+      height: 11.6vh;
+      @include mq-up("pc") {
+        top: -44%;
+        left: -7%;
+        width: 12vw;
+        height: 16.6vh;
+      }
+    }
+    &.babble {
+      top: -69%;
+      right: 12%;
+      width: 11vw;
+      height: 9.6vh;
+      @include mq-up("pc") {
+        top: -39%;
+        right: 12%;
+        width: 11vw;
+        height: 11.6vh;
+      }
+    }
+    &.triangle {
+      top: 60%;
+      right: -4%;
+      width: 7vw;
+      height: 9.6vh;
+      @include mq-up("pc") {
+        top: 82%;
+        right: -4%;
+        width: 7vw;
+        height: 9.6vh;
+      }
+    }
+    &.dots {
+      bottom: -51%;
+      right: 66%;
+      width: 11vw;
+      height: 11.6vh;
+      @include mq-up("pc") {
+        bottom: -21%;
+        right: 73%;
+        width: 11vw;
+        height: 14.6vh;
+      }
+    }
+  }
+  &__box {
+    position: relative;
+    width: calc(20% - 2vw);
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 75%;
+    }
+  }
+  &__nav-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: $thumbnail-gradation-back;
+      background-image: $thumbnail-gradation-image;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: .3s;
+      z-index: 1;
+      pointer-events: none;
+    } 
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.6;
+      transition: .3s;
+      pointer-events: none;
+    }
+    &:hover:before {
+      opacity: 0.6;
+    }
+    &:hover:after {
+      opacity: 0;
+    }
+    &.isActive::after {
+      opacity: 0;
+    }
+  }
+  &__nav-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: map-get($layer, 'icon');
+    font-size: $font-size-base * 0.875;
+    white-space: nowrap;
+    letter-spacing: 0.2em;
+    pointer-events: none;
+    @include mq-up("pc") {
+      font-size: $font-size-base * 1.25;
+    }
+  }
+  &__nav-title-en {
+    writing-mode: vertical-rl;
+    font-family: 'DinPro';
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    font-size: $font-size-base * 0.75;
+    white-space: nowrap;
+    letter-spacing: 0.3em;
+    transform: translateY(-50%);
+    color: #fff;
+    display: none;
+    @include mq-up("pc") {
+      display: block;
+    }
+  }
+}
+.P_features__sp-nav {
+  &__title {
+    margin: $space-section_L auto 0 auto;
+    font-family: 'Baskerville';
+    font-size: $font-size-base * 1;
+    letter-spacing: 0.5em;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    &::before,
+    &::after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background-color: $color-text;
+      position: absolute;
+      bottom: 0px;
+      transform-origin: center bottom;
+    }
+    &::before {
+      left: -16px;
+      transform: rotate(-45deg);
+    }
+    &::after {
+      right: -5px;
+      transform: rotate(45deg);
+    }
+  }
+  &__lists {
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    margin-top: $space-vertical;
+  }
+  &__list {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .5s;
+    &.play {
+      &.isPlay {
+        background-color: $color-play;
+        border-top: darken($color-play, $darken) 1px solid;
+        border-right: darken($color-play, $darken) 1px solid;
+        border-top-right-radius: 8px;
+        color: invert($color-play);
+      }
+      &.isCourtesy {
+        background-color: #fff;
+        border-bottom: darken($color-courtesy, $darken) 1px solid;
+      }
+      &.isEnvironment {
+        background-color: #fff;
+        border-bottom: darken($color-environment, $darken) 1px solid;
+      }
+      &.isExpression {
+        background-color: #fff;
+        border-bottom: darken($color-expression, $darken) 1px solid;
+      }
+      &.isTogether {
+        background-color: #fff;
+        border-bottom: darken($color-together, $darken) 1px solid;
+      }
+    }
+    &.courtesy {
+      &.isPlay {
+        background-color: #fff;
+        border-bottom: darken($color-play, $darken) 1px solid;
+      }
+      &.isCourtesy {
+        background-color: $color-courtesy;
+        border-left: darken($color-courtesy, $darken) 1px solid;
+        border-top: darken($color-courtesy, $darken) 1px solid;
+        border-right: darken($color-courtesy, $darken) 1px solid;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        color: invert($color-courtesy);
+      }
+      &.isEnvironment {
+        background-color: #fff;
+        border-bottom: darken($color-environment, $darken) 1px solid;
+      }
+      &.isExpression {
+        background-color: #fff;
+        border-bottom: darken($color-expression, $darken) 1px solid;
+      }
+      &.isTogether {
+        background-color: #fff;
+        border-bottom: darken($color-together, $darken) 1px solid;
+      }
+    }
+    &.environment {
+      &.isPlay {
+        background-color: #fff;
+        border-bottom: darken($color-play, $darken) 1px solid;
+      }
+      &.isCourtesy {
+        background-color: #fff;
+        border-bottom: darken($color-courtesy, $darken) 1px solid;
+      }
+      &.isEnvironment {
+        background-color: $color-environment;
+        border-left: darken($color-environment, $darken) 1px solid;
+        border-top: darken($color-environment, $darken) 1px solid;
+        border-right: darken($color-environment, $darken) 1px solid;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        color: invert($color-environment);
+      }
+      &.isExpression {
+        background-color: #fff;
+        border-bottom: darken($color-expression, $darken) 1px solid;
+      }
+      &.isTogether {
+        background-color: #fff;
+        border-bottom: darken($color-together, $darken) 1px solid;
+      }
+    }
+    &.expression {
+      &.isPlay {
+        background-color: #fff;
+        border-bottom: darken($color-play, $darken) 1px solid;
+      }
+      &.isCourtesy {
+        background-color: #fff;
+        border-bottom: darken($color-courtesy, $darken) 1px solid;
+      }
+      &.isEnvironment {
+        background-color: #fff;
+        border-bottom: darken($color-environment, $darken) 1px solid;
+      }
+      &.isExpression {
+        background-color: $color-expression;
+        border-left: darken($color-expression, $darken) 1px solid;
+        border-top: darken($color-expression, $darken) 1px solid;
+        border-right: darken($color-expression, $darken) 1px solid;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        color: invert($color-expression);
+      }
+      &.isTogether {
+        background-color: #fff;
+        border-bottom: darken($color-together, $darken) 1px solid;
+      }
+    }
+    &.together {
+      &.isPlay {
+        background-color: #fff;
+        border-bottom: darken($color-play, $darken) 1px solid;
+      }
+      &.isCourtesy {
+        background-color: #fff;
+        border-bottom: darken($color-courtesy, $darken) 1px solid;
+      }
+      &.isEnvironment {
+        background-color: #fff;
+        border-bottom: darken($color-environment, $darken) 1px solid;
+      }
+      &.isExpression {
+        background-color: #fff;
+        border-bottom: darken($color-expression, $darken) 1px solid;
+      }
+      &.isTogether {
+        background-color: $color-together;
+        border-left: darken($color-together, $darken) 1px solid;
+        border-top: darken($color-together, $darken) 1px solid;
+        border-top-left-radius: 8px;
+        color: invert($color-together);
+      }
+    }
+  }
+  &__content-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: map-get($layer, 'icon');
+    font-size: $font-size-base * 0.875;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+    line-height: 120%;
+  }
+}
+.P_features__articles {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+}
+.P_features__article {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $space-section 5.5vw;
+  transition: .5s;
+  transition-timing-function: ease-in-out;
+  @include mq-up("tab") {
+  padding: 0;
+  }
+  &.play {
+    background-color: $color-play;
+    border-bottom: darken($color-play, $darken) 1px solid;
+    @include mq-up("tab") {
+      background-color: #fff;
+    }
+    &.isPlay {
+      transform: translateX(0);
+    }
+    &.isCourtesy {
+      transform: translateX(-100%);
+    }
+    &.isEnvironment {
+      transform: translateX(-200%);
+    }
+    &.isExpression {
+      transform: translateX(-300%);
+    }
+    &.isTogether {
+      transform: translateX(-400%);
+    }
+  }
+  &.courtesy {
+    background-color: $color-courtesy;
+    border-bottom: darken($color-courtesy, $darken) 1px solid;
+    @include mq-up("tab") {
+      background-color: #fff;
+    }
+    &.isPlay {
+      transform: translateX(100%);
+    }
+    &.isCourtesy {
+      transform: translateX(0%);
+    }
+    &.isEnvironment {
+      transform: translateX(-100%);
+    }
+    &.isExpression {
+      transform: translateX(-200%);
+    }
+    &.isTogether {
+      transform: translateX(-300%);
+    }
+  }
+  &.environment {
+    background-color: $color-environment;
+    border-bottom: darken($color-environment, $darken) 1px solid;
+    @include mq-up("tab") {
+      background-color: #fff;
+    }
+    &.isPlay {
+      transform: translateX(200%);
+    }
+    &.isCourtesy {
+      transform: translateX(100%);
+    }
+    &.isEnvironment {
+      transform: translateX(0);
+    }
+    &.isExpression {
+      transform: translateX(-100%);
+    }
+    &.isTogether {
+      transform: translateX(-200%);
+    }
+  }
+  &.expression {
+    background-color: $color-expression;
+    border-bottom: darken($color-expression, $darken) 1px solid;
+    @include mq-up("tab") {
+      background-color: #fff;
+    }
+    &.isPlay {
+      transform: translateX(300%);
+    }
+    &.isCourtesy {
+      transform: translateX(200%);
+    }
+    &.isEnvironment {
+      transform: translateX(100%);
+    }
+    &.isExpression {
+      transform: translateX(0);
+    }
+    &.isTogether {
+      transform: translateX(-100%);
+    }
+  }
+  &.together {
+    background-color: $color-together;
+    border-bottom: darken($color-together, $darken) 1px solid;
+    @include mq-up("tab") {
+      background-color: #fff;
+    }
+    &.isPlay {
+      transform: translateX(400%);
+    }
+    &.isCourtesy {
+      transform: translateX(300%);
+    }
+    &.isEnvironment {
+      transform: translateX(200%);
+    }
+    &.isExpression {
+      transform: translateX(100%);
+    }
+    &.isTogether {
+      transform: translateX(0);
+    }
+  }
+  &__wave-trim {
+    overflow: hidden;
+    width: 100%;
+    height: $space-vertical;
+    position: relative;
+    @include mq-up("pc") {
+      height: $space-section;
+    }
+  }
+  &__wave {
+    position: absolute;
+    bottom: 0;
+    transform: scale(2, -1.6);
+    &.play {
+      fill: $color-play;
+    }
+    &.courtesy {
+      fill: $color-courtesy;
+    }
+    &.environment {
+      fill: $color-environment;
+    }
+    &.expression {
+      fill: $color-expression;
+    }
+    &.together {
+      fill: $color-together
+    }
+  }
+  &__color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @include mq-up("tab") {
+      padding: 5vh $space-side_L $space-section $space-side_L;
+    }
+    @include mq-up("pc") {
+      padding: 8vh $space-side_L * 2 $space-section_L $space-side_L * 2;
+    }
+    &.play {
+      background-color: $color-play;
+    }
+    &.courtesy {
+      background-color: $color-courtesy;
+    }
+    &.environment {
+      background-color: $color-environment;
+    }
+    &.expression {
+      background-color: $color-expression;
+    }
+    &.together {
+      background-color: $color-together;
+    }
+  }
+  &__title {
+    background-color: #404040;
+    padding: 3px 65px;
+    font-size: $font-size-base * 1.25;
+    border-radius: 50px;
+    color: #fff;
+    letter-spacing: 0.2em;
+    @include mq-up("tab") {
+      padding: 5px 75px;
+      font-size: $font-size-base * 1.25;
+    }
+    @include mq-up("pc") {
+      padding: 10px 90px;
+      font-size: $font-size-base * 1.375;
+    }
+  }
+  &__section-line-ver {
+    background-color: #404040;
+    width: 4px;
+    height: 4.8vh;
+    @include mq-up("tab") {
+      height: $space-section;
+    }
+    @include mq-up("pc") {
+      height: 9vh;
+    }
+  }
+  &__content-box {
+    border: 4px solid #404040;
+    padding: 4.8vh 4.2vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+  }
+  &__content-title {
+    font-family: 'DinPro';
+    font-size: $font-size-base * 0.75;
+    letter-spacing: 0.2em;
+    @include mq-up("pc") {
+      font-size: $font-size-base * 0.875;
+    }
+  }
+  &__under-arrow {
+    margin-top: 1vh;
+    height: 1.25vh;
+    width: 9.6vw;
+    @include mq-up("tab") {
+      width: 5.6vw;
+    }
+    @include mq-up("pc") {
+      width: 4vw;
+    }
+  }
+  &__content-sub-title {
+    position: relative;
+    font-size: $font-size-base * 1.375;
+    text-align: center;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 2.125;
+    }
+  }
+  &__title-logo {
+    position: absolute;
+    top: 27%;
+    width: 14vw;
+    height: 10.4vh;
+    @include mq-up("tab") {
+      width: 10vw;
+    }
+    &.left {
+      transform: translate(-100%, -50%);
+      left: -1.6vw;
+      &.narrow {
+        left: -0.4vw;
+      }
+      &.tab-narrow {
+        @include mq-up("tab") {
+          left: 0;
+        }
+      }
+    }
+    &.right {
+      transform: translate(100%, -50%);
+      right: -1.6vw;
+      &.narrow {
+        right: -0.4vw;
+      }
+      &.tab-narrow {
+        @include mq-up("tab") {
+          right: 0;
+        }
+      }
+    }
+    &.size-L {
+      width: 19vw;
+    }
+    &.size-S {
+      width: 11vw;
+    }
+    &.size-2S {
+      width: 9vw;
+    }
+    &.size-tab-S {
+      @include mq-up("tab") {
+        width: 8vw;
+      }
+      @include mq-up("pc") {
+        width: 4vw;
+      }
+    }
+  }
+  &__under-line {
+    stroke: #D5D5D5;
+    stroke-width: 4px;
+    stroke-dasharray: 1 15;
+    stroke-linecap: round;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 20%;
+    width: 100%;
+  }
+  &__img-box {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: $space-vertical;
+    margin-bottom: $space-vertical / 2;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 60%;
+    }
+  }
+  &__img-box-col {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(40% - 5px);
+    @include mq-up("tab") {
+      width: calc(40% - 10px);
+    }
+  }
+  &__img-box-row {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: calc(50% - 5px);
+    @include mq-up("tab") {
+      height: calc(50% - 10px);
+    }
+    &.top {
+      top: 0;
+    }
+    &.bottom {
+      bottom: 0;
+    }
+  }
+  &__img-single,
+  &__img-triple-col-main,
+  &__img-triple-col-sub,
+  &__img-triple-row-main,
+  &__img-triple-row-sub,
+  &__img-twin,
+  &__img-double {
+    background-color: grey;
+    position: absolute;
+    border-radius: 8px;
+  }
+  &__img-single {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__img-triple-col-main {
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: calc(60% - 5px);
+    @include mq-up("tab") {
+      width: calc(60% - 10px);
+    }
+  }
+  &__img-triple-col-sub {
+    width: 100%;
+    height: calc(50% - 10px);
+    right: 0;
+    height: calc(50% - 5px);
+    @include mq-up("tab") {
+      height: calc(50% - 10px);
+    }
+    &.top {
+      top: 0;
+    }
+    &.bottom {
+      bottom: 0;
+    }
+  }
+  &__img-triple-row-main {
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+  }
+  &__img-triple-row-sub {
+    height: 100%;
+    width: calc(50% - 5px);
+    @include mq-up("tab") {
+      width: calc(50% - 10px);
+    }
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+  }
+  &__img-twin {
+    height: 100%;
+    top: 0;
+    width: calc(50% - 5px);
+    @include mq-up("tab") {
+      width: calc(50% - 10px);
+    }
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+  }
+  &__img-double {
+    top: 0;
+    height: 100%;
+    &.left {
+      left: 0;
+      width: calc(60% - 5px);
+      @include mq-up("tab") {
+        width: calc(60% - 10px);
+      }
+    }
+    &.right {
+      right: 0;
+      width: calc(40% - 5px);
+      @include mq-up("tab") {
+        width: calc(40% - 10px);
+      }
+    }
+  }
+  &__text-title {
+    font-weight: bold;
+    margin-top: $space-vertical / 2;
+    font-size: $font-size-base * 1.125;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.25;
+    }
+  }
+  &__text {
+    margin-top: $space-vertical / 2;
+    font-size: $font-size-base * 0.875;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.125;
+    }
+  }
+  &__section-line {
+    stroke: #fff;
+    stroke-width: 5px;
+    stroke-dasharray: 6 15;
+    stroke-linecap: round;
+    overflow: hidden;
+    height: 5vh;
+    width: 100vw;
+    @include mq-up("tab") {
+      height: 10vh;
+      width: 84vw;
+    }
+    @include mq-up("pc") {
+      width: 56vw;
+    }
+  }
+}

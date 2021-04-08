@@ -1,19 +1,12 @@
 // スクロールするマウスロゴ
 .C_icon-mouse {
-	display: inline-block;
 	width: 24px;
-	height: 40px;
-	font-size: $icon-font;
+	height: 45px;
 	position: relative;
 	overflow: hidden;
 	z-index: map-get($layer,'mouse');
-	margin: 0 auto;
   border-radius: 13px;
 	border: 2px solid $icon-color;	
-  position: absolute;
-  bottom: 40px;
-	left: 50%;
-  margin-left: -26px;
 	transition: all $anime-time-middle;
   &__material {
     display: block;
@@ -101,11 +94,18 @@
     left: 50%;
     width: 1px;
     height: 200%;
-    background: #fff;
+    background-color: #fff;
+    &.noBack {
+      background-color: $color-text;
+    }
   }
   &__text {
     font-size: $font-size-base * 1.25;
     letter-spacing: $letter-spacing-base;
+    color: #fff;
+    &.noBack {
+      color: $color-text;
+    }
   }
 }
 @keyframes icon__to-top{
@@ -125,5 +125,47 @@
     font-size: 3rem;
     opacity: 0.3;
     color: grey;
+  }
+}
+.C_icon__arrow-right {
+  width: 25px;
+  height: 10px;
+  position: absolute;
+  overflow: hidden;
+  &__material1,
+  &__material2,
+  &__material3,
+  &__material4 {
+    position: absolute;
+    &.white {
+      background-color: #fff;
+    }
+  }
+  &__material1 {
+    height: 1px;
+    width: 14px;
+    top: 5px;
+    left: 0;
+  }
+  &__material2 {
+    height: 10px;
+    width: 1px;
+    left: 14px;
+    top: 0;
+  }
+  &__material3,
+  &__material4 {
+    width: 15px;
+    left: 14px;
+    height: 1px;
+    transform-origin: left center;
+  }
+  &__material3 {
+    top: 0px;
+    transform: rotate(21deg);
+  }
+  &__material4 {
+    bottom: 0;
+    transform: rotate(-21deg);
   }
 }

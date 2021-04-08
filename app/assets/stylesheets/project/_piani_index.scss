@@ -1,0 +1,1629 @@
+@mixin font-logo($x , $y) {
+  color: #fff;
+  font-size: 2.4rem;
+  position: absolute;
+  top: $y * 1%;
+  left: $x * 1%;
+}
+.P_Pi__kv {
+  width: 100%;
+  height: 100vh;
+	position: relative;
+  overflow: hidden;
+  &__cloud1 {
+    position: absolute;
+    width: 700px;
+    height: 390px;
+    opacity: 0.8;
+    display: none;
+    @include mq-up("tab") {
+      display: block;
+      bottom: -15%;
+      right: -24%;
+    }
+    @include mq-up("pc") {
+      right: -10%;
+      bottom: -15%;
+    }
+  }
+  &__cloud2 {
+    position: absolute;
+    left: -12%;
+    top: 80%;
+    width: 400px;
+    height: 200px;
+    opacity: 0.8;
+    @include mq-up("tab") {
+      top: 40%;
+    }
+    @include mq-up("pc") {
+      top: 40%;
+    }
+  }
+  &__cloud3 {
+    position: absolute;
+    top: 0%;
+    right: -60%;
+    width: 500px;
+    height: 200px;
+    opacity: 0.8;
+    @include mq-up("tab") {
+      top: -3%;
+      right: 0%;
+    }
+    @include mq-up("pc") {
+      top: -6%;
+      right: 3%;
+    }
+  }
+  &__side-text {
+    position: absolute;
+    top: 15%;
+    left: -5%;
+    transform: rotate(90deg);
+    font-size: $font-size-base;
+    padding-left: 23px;
+    color: #fff;
+    border-left: 1px solid #fff;
+    @include mq-up("tab") {
+      top: 20%;
+      left: 0%;
+    }
+  }
+  &__title {
+    color: white;
+    font-size: $font-size-base * 12.5;
+    font-family: "Angelface";
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate3d( -50%, 0, 0);
+  }
+  &__sub-title {
+    color: white;
+    font-size: $font-size-base * 2.5;
+    letter-spacing: $letter-spacing-base;
+    font-family: "goudy_bookletter_1911";
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translate3d( -50%, 0, 0);
+  }
+  &__L {
+    &-star {
+      @include font-logo(26, 82);
+      @include mq-up("tab") {
+        @include font-logo(3, 58);
+      }
+      @include mq-up("pc") {
+        @include font-logo(2, 65);
+      }
+    }
+    &-triangle-1 {
+      @include mq-up("tab") {
+        @include font-logo(10, 50);
+      }
+      @include mq-up("pc") {
+        @include font-logo(5, 55);
+      }
+    }
+    &-triangle-2 {
+      @include font-logo(5, 81);
+      @include mq-up("tab") {
+        @include font-logo(8, 65);
+      }
+      @include mq-up("pc") {
+        @include font-logo(4, 73);
+      }
+    }
+    &-square {
+      @include font-logo(16, 89);
+      @include mq-up("tab") {
+        @include font-logo(15, 58);
+      }
+      @include mq-up("pc") {
+        @include font-logo(7, 64);
+      }
+    }
+    &-circle {
+      @include mq-up("tab") {
+        @include font-logo(20, 51);
+      }
+      @include mq-up("pc") {
+        @include font-logo(10, 56);
+      }
+    }
+  }
+  &__RT {
+    &-star-1 {
+      @include font-logo(46, 8);
+      @include mq-up("tab") {
+        @include font-logo(81, 8);
+      }
+      @include mq-up("pc") {
+        @include font-logo(89, 10);
+      }
+    }
+    &-star-2 {
+      @include font-logo(92, 24);
+      @include mq-up("tab") {
+        @include font-logo(96, 18);
+      }
+      @include mq-up("pc") {
+        @include font-logo(98, 14);
+      }
+    }
+    &-triangle {
+      @include font-logo(67, 4);
+      @include mq-up("tab") {
+        @include font-logo(88, 4);
+      }
+      @include mq-up("pc") {
+        @include font-logo(92, 3);
+      }
+    }
+    &-square {
+      @include font-logo(73, 15);
+      @include mq-up("tab") {
+        @include font-logo(91, 14);
+      }
+      @include mq-up("pc") {
+        @include font-logo(93, 14);
+      }
+    }
+    &-circle {
+      @include font-logo(87, 9);
+      @include mq-up("tab") {
+        @include font-logo(94, 8);
+      }
+      @include mq-up("pc") {
+        @include font-logo(95, 8);
+      }
+    }
+  }
+  &__RB {
+    &-star {
+      @include font-logo(89, 94);
+      @include mq-up("tab") {
+        @include font-logo(94, 95);
+      }
+      @include mq-up("pc") {
+        @include font-logo(97, 93);
+      }
+    }
+    &-triangle {
+      @include font-logo(68, 92);
+      @include mq-up("tab") {
+        @include font-logo(95, 86);
+      }
+      @include mq-up("pc") {
+        @include font-logo(98, 83);
+      }
+    }
+    &-circle {
+      @include font-logo(82, 86);
+      @include mq-up("tab") {
+        @include font-logo(88, 90);
+      }
+      @include mq-up("pc") {
+        @include font-logo(94, 88);
+      }
+    }
+  }
+}
+.P_Pi__thought {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    padding-left: $space-side_L;
+    padding-right: $space-side_L;
+    background-color: $color-background2;
+    @include mq-up("pc") {
+      flex-direction: row;
+      padding-top: $space-section_L;
+      padding-bottom: $space-section * 2;
+    }
+  }
+  &__inner-left {
+    width: 100%;
+    margin-right: 0;
+    @include mq-up("pc") {
+      width: 50%;
+      margin-right: $space-side;
+    }
+  }
+  &__title-box {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: 22px;
+    margin-top: 10vh;
+    @include mq-up("tab") {
+      margin-top: $space-section;
+    }
+  }
+  &__title-en {
+    font-size: $font-size-base;
+    letter-spacing: 0.32em;
+    font-family: 'Baskerville';
+    @include mq-up("tab") {
+    letter-spacing: $letter-spacing-base * 9;
+    }
+  }
+  &__deco-line-ver {
+    position: relative;
+    width: 12vw;
+    @include mq-up("tab") {
+      width: 10vw;
+    }
+    @include mq-up("pc") {
+      width: 5vw;
+    }
+    &::after {
+      content: '';
+      width: 4px;
+      border-left: 1px solid $color-border--thin3;
+      border-right: 1px solid $color-border--thin3;
+      transform: translate3d(-50%, -50%, 0) rotate(45deg);
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+  }
+  &__title-ja {
+    font-size: $font-size-base;
+    letter-spacing: 0.12em;
+  }
+  &__sub-title{
+    font-size: $font-size-base * 1.25;
+    font-weight: 400;
+    letter-spacing: 0.017em;
+    font-family: 'Hannari';
+    padding-top: $space-section_L;
+    @include mq-up("tab") {
+      padding-top: 10.5vh;
+      font-size: $font-size-base * 1.5625;
+      letter-spacing: $letter-spacing-base * 0.25;
+    }
+  }
+  &__text {
+    padding-top: 5.5vh;
+    font-size: $font-size-base * 0.875;
+    letter-spacing: -0.05em;
+    line-height: 250%;
+    font-feature-settings: "palt";
+  }
+  &__img-container {
+    padding-top: 9vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__sub-img-box {
+    border: 1px solid $color-text;
+    position: relative;
+    width: calc(50% - 0.6vw);
+    position: relative;
+    &::before {
+      content:"";
+      display: block;
+      padding-top: 60%;
+    }
+  }
+  &__main-img-box {
+    border: 1px solid $color-text;
+    position: relative;
+    width: 50%;
+    
+  }
+  &__sp-img-container {
+    padding-top: 10.5vh;
+    display: flex;
+    height: 60vh;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__sp-main-img-box{
+    position: relative;
+    width: calc(50% - 1.2vw);
+    height: 100%;
+    border: 1px solid $color-text;
+  }
+  &__sp-sub-img-container {
+    width: calc(50% - 1.2vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__sp-sub-img-box {
+    position: relative;
+    width: 100%;
+    height: calc(50% - 1.2vw);
+    border: 1px solid $color-text;
+  }
+}
+.P_Pi__features {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    padding-left: $space-side_L;
+    padding-right: $space-side_L;
+    padding-top: $space-section_L;
+    padding-bottom: $space-section_L * 2;
+    background-color: $color-background2;
+  }
+  &__title-section {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: $space-vertical;
+    &::before {
+      content: '';
+      position: absolute;
+      border-top: 1px solid $color-border--thin3;
+      border-bottom: 1px solid $color-border--thin3;
+      height: 4px;
+      width: $space-vertical * 2;
+      top: 50%;
+      left: 50%;
+      transform: rotate(-45deg) translate3d(-50%, 0,0);
+      transform-origin: left center;
+    }
+  }
+  &__title-en {
+    letter-spacing: 0.62em;
+    font-size: $font-size-base * 1.25;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Baskerville';
+    @include mq-up("tab") {
+      letter-spacing: $letter-spacing-base * 9;
+    }
+    @include mq-up("pc") {
+      letter-spacing: 0.62em;
+    }
+  }
+  &__title-ja {
+    font-size: $font-size-base;
+    padding-top: $space-vertical;
+    letter-spacing: 0.12em;
+    text-align: center;
+  }
+  &__inner {
+    padding-top: $space-section_M / 3;
+    display: flex;
+    flex-direction: column;
+    @include mq-up("tab") {
+      padding-top: 0;
+      flex-direction: row;
+    }
+  }
+  &__left {
+    width: 40%;
+    float: right;
+  }
+  &__right {
+    width: 60%;
+    float: left;
+  }
+  &__img-box {
+    position: relative;
+    width: 100%;
+    height: 26vh;
+    margin-top: 8.2vh;
+    cursor: pointer;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: $thumbnail-gradation-back;
+      background-image: $thumbnail-gradation-image;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: .3s;
+      pointer-events: none;
+    }
+    &:hover:after, &.isActive::after {
+      opacity: .6;
+    }
+    @include mq-up("tab") {
+      height: auto;
+      margin-bottom: 0;
+      &.play {
+        width: 93%;
+        margin-left: 7%;
+        &::before {
+          content:"";
+          display: block;
+          padding-top: 100%;
+        }
+      }
+      &.environment {
+        width: 77%;
+        margin-top: 19%;
+        margin-left: 20%;
+        @include mq-up("pc") {
+          margin-top: 23%;
+        }
+        &::before {
+          content:"";
+          display: block;
+          padding-top: 100%;
+        }
+      }
+      &.expression {
+        width: 109%;
+        margin-top: 33%;
+        @include mq-up("pc") {
+          margin-top: 40%;
+        }
+        &::before {
+          content:"";
+          display: block;
+          padding-top: 100%;
+        }
+      }
+      &.courtesy {
+        width: 79%;
+        margin-left: 21%;
+        margin-top: 44%;
+        @include mq-up("pc") {
+          margin-left: 9%;
+          margin-top: 25%;
+        }
+        &::before {
+          content:"";
+          display: block;
+          padding-top: 100%;
+        }
+      }
+      &.together {
+        width: 55%;
+        margin-left: 40%;
+        margin-top: 34%;
+        @include mq-up("tab") {  
+          margin-left: 29%;
+          margin-top: 27%;
+        }
+        &::before {
+          content:"";
+          display: block;
+          padding-top: 100%;
+        }
+      }
+    }
+  }
+  &__number-box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $color-text;
+    left: 0;
+    top: -5%;
+    transform: translate3d(0, -100%, 0);
+    z-index: map-get($layer, 'icon');
+    @include mq-up("tab") {
+      width: 45px;
+      height: 45px;
+      &.play {
+        top: 6%;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        transform: translate3d(50%, 0, 0);
+      }
+      &.environment {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 0;
+        transform: translate3d(-60%, 60%, 0);
+      }
+      &.expression {
+        top: 24%;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        transform: translate3d(50%, 0, 0);
+      }
+      &.courtesy {
+        top: auto;
+        right: auto;
+        bottom: -8%;
+        left: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+      &.together {
+        top: auto;
+        right: auto;
+        bottom: -8%;
+        left: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+    }
+    @include mq-up("pc") {
+      width: 70px;
+      height: 70px;
+      &.courtesy, &.together {
+        bottom: -4%;
+      }
+    }
+  }
+  &__number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'NewBaskervilleStd-Roman';
+    transform: translate3d(-50%, -40%, 0);
+    font-size: $font-size-base * 0.625;
+    color: #fff;
+    @include mq-up("tab") {
+      font-size: $font-size-base;
+    }
+    @include mq-up("pc") {
+      font-size: $font-size-base * 1.875;
+    }
+  }
+  &__border {
+    position: absolute;
+    height: 1px;
+    width: 22px;
+    background-color: $color-text;
+    &.play {
+      right: 0;
+      top: 50%;
+      transform: translate3d(100%, -50%, 0);
+    }
+    &.environment {
+      right: 15%;
+      bottom: 15%;
+      transform: rotate(45deg) translate3d(100%, -50%, 0);
+      transform-origin: right center;
+    }
+    &.expression {
+      right: 15%;
+      bottom: 15%;
+      transform: rotate(45deg) translate3d(100%, -50%, 0);
+      transform-origin: right center;
+    }
+    &.courtesy {
+      right: 0;
+      top: 50%;
+      transform: translate3d(100%, -50%, 0);
+    }
+    &.together {
+      right: 0;
+      top: 50%;
+      transform: translate3d(100%, -50%, 0);
+    }
+  }
+  &__sub-title-box {
+    height: 60px;
+    width: 400px;
+    display: flex;
+    position: absolute;
+    width: fit-content;
+    &.play {
+      right: -22px;
+      top: 50%;
+      transform: translate3d(100%, -50%, 0);
+    }
+    &.environment {
+      right: -6px;
+      bottom: 20px;
+      transform: translate3d(100%, 100%, 0);
+    }
+    &.expression {
+      right: 22px;
+      bottom: -9px;
+      transform: translate3d(100%, 100%, 0);
+      transform-origin: right center;
+      width: 60px;
+      height: 400px;
+      flex-direction: column;
+    }
+    &.courtesy {
+      right: -22px;
+      top: 50%;
+      transform: translate3d(100%, -50%, 0);
+    }
+    &.together {
+      right: -22px;
+      top: 50%;
+      transform: translate3d(100%, -50%, 0);
+    }
+  }
+  &__sub-title-ja {
+    font-size: $font-size-base * 1.375;
+    padding-top: 10px;
+    padding-left: 1vw;
+    position: absolute;
+    top: -24%;
+    left: 10%;
+    white-space: nowrap;
+    @include mq-up("tab") {
+      position: initial;
+      font-size: $font-size-base * 1.6875;
+    }
+    &.vertical {
+      padding-right: 10px;
+      padding-left: 0;
+      padding-top: 1vh;
+      writing-mode: vertical-rl;
+    }
+  }
+  &__section {
+    width: 5vw;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 1px;
+      width: 10vw;
+      transform: rotate(-45deg) translate3d(-50%, 0,0);
+      transform-origin: left center;
+      background:url(
+    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAABCAYAAAAMwoR9AAAAFElEQVQYV2NkYGD4z8DAwMiABwAAIUYBAlvg6/4AAAAASUVORK5CYII=
+      ) repeat;
+    }
+    &.reverse {
+      width: 100%;
+      height: 5vw;
+    }
+  }
+  &__sub-title-en {
+    font-size: $font-size-base * 0.875;
+    font-family: 'DinPro';
+    padding-top: 23px;
+    position: absolute;
+    top: -26%;
+    right: 0;
+    white-space: nowrap;
+    @include mq-up("tab") {
+      position: initial;
+    }
+    &.vertical {
+      writing-mode: vertical-rl;
+      padding-top: 0px;
+      padding-right: 19px;
+    }
+  }
+}
+.P_Pi__contents {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    padding-left: $space-side_L;
+    padding-right: $space-side_L;
+    padding-top: $space-section;
+    padding-bottom: $space-section_L * 2;
+    position: relative;
+    @include mq-up("tab") {
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-top: 0;
+      padding-bottom: 9vh;
+    }
+    @include mq-up("pc") {
+      padding-top: 9vh;
+      padding-bottom: $space-section_L;
+    }
+  }
+  &__top-title-en {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    font-size: $font-size-base * 2.1875;
+    letter-spacing: 0.25em;
+    white-space: nowrap;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 2.5;
+      letter-spacing: 0.72em;
+    }
+  }
+  &__item-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
+    @include mq-up("tab") {
+      width: calc(50% - 1.6vw);
+      margin-bottom: 0;
+    }
+    &:nth-last-of-type(3),
+    &:nth-last-of-type(4){
+      @include mq-up("tab") {  
+        margin-top: $space-section;
+      }
+    }
+    @include mq-up("pc") {
+      width: calc(25% - 1.6vw);
+      margin-top: $space-section;
+      margin-bottom: 0;
+    }
+  }
+  &__img-box {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    &:hover:after, &.isActive::after {
+      opacity: 0;
+    }
+    &:hover .P_Pi__contents__deco-line {
+      opacity: 0;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+      transition: 0.3s;
+    }
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 70%;
+      @include mq-up("tab") {
+        padding-top: 120%;
+      }
+      @include mq-up("pc") {
+        padding-top: 174%;
+      }
+    }
+    background-color: grey;
+    position: relative;
+  }
+  &__number {
+    text-align: center;
+    font-size: $font-size-base;
+    font-family: 'Baskerville';
+    letter-spacing: $letter-spacing-base * 9;
+    width: 100%;
+    height: 42px;
+  }
+  &__title-en {
+    text-align: center;
+    font-size: $font-size-base;
+    font-family: 'Baskerville';
+    letter-spacing: $letter-spacing-base * 5.25;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d( -50%, -50%, 0);
+    z-index: map-get($layer, 'icon');
+    transition: .3s;
+  }
+  &__deco-line {
+    position: absolute;
+    width: 10px;
+    height: 27%;
+    top: 72%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    overflow: hidden;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 0, 5;
+    z-index: map-get($layer, 'icon');
+    transition: .3s;
+    &.isActive {
+      opacity: 0;
+    }
+  }
+  &__title-box {
+    padding-top: 4px;
+    width: 74%;
+    height: 40px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    background-color: #fff;
+    z-index: map-get($layer, 'icon');
+  }
+  &__title-ja {
+    text-align: center;
+    font-size: $font-size-base * 1.25;
+    letter-spacing: 0.12em;
+  }
+  &__text-box {
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    @include mq-up("tab") {
+      padding-top: 30px;
+    }
+  }
+  &__text {
+    font-size: $font-size-base;
+    letter-spacing: 0.02em;
+  }
+}
+.P_Pi__photo-gallery {
+  &__wrap {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    background-color: $color-background2;
+    @include mq-up("tab") {
+      height: 77.35vh;
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    font-size: $font-size-base * 2.1875;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 2.5;
+      letter-spacing: 0.72em;
+    }
+  }
+  &__deco-container {
+    position: absolute;
+    top: 10%;
+    right: 17%;
+    width: 20%;
+    transform: translate3d(50%, 0 , 0);
+    display: flex;
+    @include mq-up("tab") {
+      width: 13%;
+    }
+    @include mq-up("pc") {
+      width: 9.7%;
+    }
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 50%;
+    }
+  }
+  &__deco-box {
+    width: 50%;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    position: relative;
+    border-bottom: 1px solid $color-text;
+    &.left {
+      border-right: 1px solid $color-text;
+      transform: rotate(45deg);
+      transform-origin: right top;
+    }
+    &.right {
+      border-left: 1px solid $color-text;
+      transform: rotate(-45deg);
+      transform-origin: left top;
+    }
+  }
+  &__deco-box-text {
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    text-align: center;
+    font-size: 0.1rem;
+    font-family: 'DinPro';
+    top: 0;
+    @include mq-up("tab") {
+      transform: translate3d(-50%, 0, 0);
+      font-size: $font-size-base * 0.875;
+      top: -10%;
+    }
+    &.left {
+      left: 15%;
+    }
+    &.right {
+      left: 85%;
+    }
+  }
+  &__img-slider {
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0%, -50%, 0);
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    pointer-events: none;
+    &:hover ul {
+      animation-play-state: paused;
+    } 
+  }
+  &__slide-group {
+    padding: 0;
+    display: flex;
+    flex-shrink: 0;
+    &:first-child {
+      animation: slide1 60s -30s linear infinite;
+    }
+    &:last-child {
+      animation: slide2 60s linear infinite;
+    }
+  }
+  &__img-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: grey;
+    position: relative;
+    display: inline-block;
+    margin-right: 23px;
+    pointer-events: auto;
+    &:hover:after {
+      opacity: .3;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $thumbnail-gradation-back;
+      background-image: $thumbnail-gradation-image;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      transition: .3s;
+    }
+    @include mq-up("tab") {
+      width: 220px;
+      height: 220px;
+    }
+    @include mq-up("pc") {
+      width: 270px;
+      height: 270px;
+    }
+  }
+  &__btn {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    border-radius: $border-radius-little;
+    background-color: $color-text;
+    width: 260px;
+    height: 47px;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      background-color: #fff;
+      border: 2px solid $color-text;
+    }
+    &:hover .P_Pi__photo-gallery__btn-text {
+      color: $color-text;
+    }
+    @include mq-up("tab") {
+      bottom: 10%;
+      width: 340px;
+      height: 57px;
+      padding-top: 14px;
+    }
+  }
+  &__btn-text {
+    font-size: $font-size-base * 1.1;
+    font-family: 'DinPro';
+    color: #fff;
+    letter-spacing: 0.3em;
+    text-align: center;
+  }
+}
+.P_Pi__nav{
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    padding-left: $space-side_L;
+    padding-right: $space-side_L;
+    padding-top: $space-section_L;
+    padding-bottom: $space-section;
+    @include mq-up("pc") {
+      padding-bottom: $space-section_L;
+    }
+  }
+  &__top-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @include mq-up("tab") {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+      min-height: 30vh;
+    }
+    @include mq-up("pc") {
+      margin-top: $space-section;
+    }
+  }
+  &__belong-box, &__admission-box {
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    &:hover .P_Pi__nav__deco-under-line{
+      animation: wright-line 2s forwards, line-stretch2 1s ease-in-out infinite alternate;
+    }
+    @include mq-up("tab") {
+      align-items: flex-end;
+      width: calc(50% - 4vw);
+      margin-top: 10vh;
+    }
+    @include mq-up("pc") {
+      width: calc(50% - 14vw);
+    }
+  }
+  &__belong-box {
+    @include mq-up("pc") {
+      margin-left: 10vw;
+      align-items: center;
+    }
+  }
+  &__admission-box {
+    margin-top: $space-section_L;
+    align-items: flex-end;
+    &:hover .P_Pi__nav__deco-under-line{
+      animation: wright-line-right 2s forwards, line-stretch2-right 1s ease-in-out infinite alternate;
+    }
+    @include mq-up("tab") {
+      margin-top: 0;
+      align-items: flex-start;
+      &:hover .P_Pi__nav__deco-under-line{
+        animation: wright-line 2s forwards, line-stretch2 1s ease-in-out infinite alternate;
+      }
+    }
+    @include mq-up("pc") {
+      justify-content: flex-start;
+      margin-right: 8vw;
+      margin-bottom: 8vh;
+    }
+  }
+  &__title-box{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    @include mq-up("pc") {  
+      width: 6vw;
+    }
+    &.left {
+      padding-top: 3vh;
+      @include mq-up("tab") {
+        padding-top: 5.7vh;
+      }
+      @include mq-up("pc") {
+        padding-top: 0;
+      }
+    }
+    &.right {
+      order: 2;
+      @include mq-up("tab") {
+        padding-top: 0;
+        padding-top: 3.8vh;
+      }
+      @include mq-up("pc") {
+        order: 1;
+      }
+    }
+  }
+  &__title-ja {
+    writing-mode: vertical-rl;
+    vertical-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 4vh;
+    font-size: $font-size-base * 1.25;
+  }
+  &__deco-under-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    stroke: $color-text;
+    transform-origin: left center;
+    @include mq-up("tab") {
+      transform-origin: left center;
+    }
+    &.isActive {
+      animation: wright-line 2s forwards, line-stretch2 1s ease-in-out infinite alternate;
+    }
+    &.right {
+      transform: scale(-1, 1) translate3d(115% , 0 ,0);
+      transform-origin: right center;
+      @include mq-up("tab") {
+        transform: initial;
+        transform-origin: left center;
+      }
+      &.isActive {
+        animation: wright-line-right 2s forwards, line-stretch2-right 1s ease-in-out infinite alternate;
+      }
+    }
+  }
+  &__read {
+    padding-top: 4vh;
+    text-align: center;
+    font-family: 'DinPro';
+    font-size: $font-size-base * 0.875;
+  }
+  &__img-box {
+    width: calc(70% - 9vw);
+    position: relative;
+    @include mq-up("tab") {
+      width: 18.7vw;
+    }
+    @include mq-up("pc") {
+      width: 13.7vw;
+      margin-left: 3.5vw;
+    }
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 140%;
+    }
+    &.admission {
+      order: 1;
+      @include mq-up("tab") {
+        order: 2;
+        margin-top: 3vh;
+      }
+      @include mq-up("pc") {
+        margin-top: 0;
+      }
+    }
+  }
+  &__trim-img{
+    border-radius: 45px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__deco{
+    &-top-left, &-top-right, &-bottom-left, &-bottom-right {
+      position: absolute;
+      width: 20%;
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+    }
+    &-top-left {
+      top: -3%;
+      left: -3%;
+      border-top-left-radius: 50px;
+      border-left: 1px solid $color-text;
+      border-top: 1px solid $color-text;
+    }
+    &-top-right {
+      top: -3%;
+      right: -3%;
+      border-top-right-radius: 50px;
+      border-right: 1px solid $color-text;
+      border-top: 1px solid $color-text;
+    }
+    &-bottom-left {
+      bottom: -3%;
+      left: -3%;
+      border-bottom-left-radius: 50px;
+      border-left: 1px solid $color-text;
+      border-bottom: 1px solid $color-text;
+    }
+    &-bottom-right {
+      bottom: -3%;
+      right: -3%;
+      border-bottom-right-radius: 50px;
+      border-right: 1px solid $color-text;
+      border-bottom: 1px solid $color-text;
+    }
+    &-line-ver {
+      position: absolute;
+      stroke: $color-text;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-dasharray: 1, 5;
+      stroke-dashoffset: 3;
+      transform: rotate(5deg);
+      top: -8%;
+      left: 52%;
+      @include mq-up("pc") {
+        transform: rotate(10deg);
+      }
+    }
+  }
+  &__under-wrap {
+    display: flex;
+    margin-top: 7vh;
+    justify-content: space-around;
+    @include mq-up("tab") {
+      margin-top: 0;
+    }
+    @include mq-up("pc") {
+      margin-bottom: 7vh;
+    }
+  }
+  &__access-title-box,&__map-title-box,&__info-title-box {
+    width: 24.8vw;
+    text-align: center;
+    position: relative;
+    margin-bottom: auto;
+    @include mq-up("tab") {
+      width: 20.8vw;
+    }
+    @include mq-up("pc") {
+      width: 13.8vw;
+    }
+    &::before {
+      cursor: pointer;
+      content: '';
+      width: 100%;
+      height: 1px;
+      border-bottom: solid 4px $color-text;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate3d(0, -50%, 0);
+      transition-property: border, border-bottom ,height;
+      transition-duration:0.1s,0.1s,0.5s;
+      transition-delay:0.5s,0.5s,0s;
+    }
+    &:hover:before, &.isActive::before {
+      transition-property: border, border-bottom ,height;
+      transition-duration:0.1s,0.1s,0.5s;
+      transition-delay:0s,0s,0.1s;
+      border: solid 2px $color-text;
+      border-bottom: solid 2px $color-text;
+      height: 120%;
+    }
+  }
+  &__access-title-box {
+    margin-top: 12vh;
+    @include mq-up("tab") {
+      margin-top: 16vh;
+    }
+    @include mq-up("pc") {
+      margin-top: 21vh;
+    }
+  }
+  &__map-title-box {
+    margin-top: 6vh;
+    @include mq-up("tab") {
+      margin-top: 12vh;
+    }
+    @include mq-up("pc") {
+      margin-top: 17vh;
+    }
+  }
+  &__info-title-box {
+    @include mq-up("tab") {
+      margin-top: 8vh;
+    }
+    @include mq-up("pc") {
+      margin-top: 13vh;
+    }
+  }
+  &__under-title-en {
+    pointer-events: none;
+    font-size: 3rem;
+    font-family: 'DinPro';
+    font-size: 1rem;
+    padding-bottom: 1vh;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.53;
+      padding-bottom: 2.5vh;
+    }
+  }
+  &__under-title-ja {
+    pointer-events: none;
+    font-size: 1rem;
+    padding-top: 1vh;
+    @include mq-up("tab") {
+      font-size: $font-size-base;
+      padding-top: 2.5vh;
+    }
+  }
+}
+.P_Pi__recruit {
+  width: 100%;
+  height: 65vh;
+  position: relative;
+  display: flex;
+  @include mq-up("tab") {
+    height: 50vh;
+  }
+  @include mq-up("pc") {
+    height: 65vh;
+  }
+  &__deco-line {
+    position: absolute;
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 0, 17;
+    &-2 {
+      stroke-dashoffset: 8;
+    }
+    &-ver {
+      position: absolute;
+      top: -5%;
+      left: -35%;
+      stroke: $color-text;
+      stroke-dasharray: 0 7;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+    }
+  }
+  &__back {
+    width: 50%;
+    height: 100%;
+    &.left {
+      background-color: #65A2C2;
+    }
+    &.right {
+      background-color: #B8AC78;
+    }
+  }
+  &__title-ja {
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translate3d(-50%, 0 ,0);
+    font-size: $font-size-base * 1.46;
+    &::before, &::after {
+      content: '';
+      height: 100%;
+      width: 1px;
+      bottom: 0;
+      position: absolute;
+      background-color: $color-text;
+    }
+    &::before {
+      left: -25px;
+      transform: rotate(-40deg);
+      transform-origin: left bottom;
+    }
+    &::after {
+      right: -25px;
+      transform: rotate(40deg);
+      transform-origin: right bottom;
+    }
+  }
+  &__title-en {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate3d(-50%, 0 ,0);
+    font-family: 'DinPro';
+    letter-spacing: $letter-spacing-base;
+    font-size: $font-size-base * 3;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 3.64;
+    }
+  }
+  &__sub-title-en {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate3d(-50%, 0 ,0);
+    font-family: 'DinPro';
+    letter-spacing: $letter-spacing-base;
+  }
+  &__read {
+    width: 200px;
+    height: 60px;
+    padding-top: 17px;
+    text-align: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate3d(-50%, 0 ,0);
+    font-family: 'DinPro';
+    letter-spacing: $letter-spacing-base;
+    cursor: pointer;
+    &:hover .P_Pi__recruit__deco-line-read-1{
+      animation: wright-line 2s;
+    }
+    &:hover .P_Pi__recruit__deco-line-read-2{
+      animation: wright-line 2s forwards, line-stretch 1.5s ease-in-out infinite alternate;
+    }
+  }
+  .P_Pi__recruit__deco-line-read-1.isActive {
+    animation: wright-line 2s;
+  }
+  .P_Pi__recruit__deco-line-read-2.isActive {
+    animation: wright-line 2s forwards, line-stretch 1.5s ease-in-out infinite alternate;
+  }
+  &__deco-line-read {
+    position: absolute;
+    top: 0;
+    left: 0;
+    stroke: $color-text;
+    pointer-events: none;
+  }
+  &__text {
+    font-size: $font-size-base * 1.1;
+    line-height: 2.1;
+    position: absolute;
+    top: 50%;
+    right: 15.6%;
+    writing-mode: vertical-rl;
+    transform: translate3d(0, -50%, 0);
+  }
+  &__img-frame-M, &__img-frame-S {
+    display: block;
+    position: absolute;
+    background: white;
+    padding: 4px;
+    border: solid 1px $color-text;
+    -moz-box-shadow: 0 4px 10px $color-text;
+    -webkit-box-shadow: 0 4px 10px $color-text;
+    box-shadow: 0 4px 10px $color-text;
+  }
+  &__img-frame-M {
+    top: 15%;
+    left: 13%;
+    width: 11.2%;
+    height: 46%;
+    border-radius: 2% 2% 3% 3% / 50% 50% 50% 50%;
+  }
+  &__img-frame-S {
+    top: 53%;
+    left: 23%;
+    width: 8.8%;
+    height: 35%;
+    border-radius: 3% 3% 2% 2% / 50% 50% 50% 50%;
+  }
+  &__img-box-S,&__img-box-M {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  &__img-box-M {
+    border-radius: 2% 2% 3% 3% / 50% 50% 50% 50%;
+  }
+  &__img-box-S {
+    border-radius: 3% 3% 2% 2% / 50% 50% 50% 50%;
+  }
+}
+.P_Pi__others {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    padding-left: $space-side_L;
+    padding-right: $space-side_L;
+    padding-top: 9vh;
+    padding-bottom: 9vh;
+    justify-content: space-around;
+    @include mq-up("tab") {
+      flex-direction: row;
+    }
+    @include mq-up("pc") {
+      padding-top: $space-section_L;
+      padding-bottom: $space-section_L;
+    }
+  }
+  &__inner {
+    width: 100%;
+    @include mq-up("tab") {
+      width: 28.6vw;
+    }
+    &.right {
+      margin-top: $space-section;
+      @include mq-up("tab") {
+        margin-top: 0;
+      }
+    }
+  }
+  &__title-en {
+    font-family: 'DinPro';
+    position: relative;
+    margin-bottom: 35px;
+    display: inline-block;
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -5px;
+      width: 80%;
+      height: 2px;
+      background-color: $color-text;
+    }
+  }
+  &__img-box {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    &::after {
+      content: '';
+      transition: .3s;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    &:hover:after{
+      opacity: 0;
+    }
+    &.isActive::after {
+      opacity: 0;
+    }
+  }
+  &__title-ja {
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    writing-mode: vertical-rl;
+    border: 1px solid #fff;
+    border-radius: $border-radius-half;
+    color: #fff;
+    height: 65%;
+    font-size: $font-size-base * 1.4375;
+    transition: .3s;
+    z-index: map-get($layer, 'icon');
+    @include mq-up("tab") {
+      height: 65%;
+      font-size: $font-size-base * 1;
+    }
+    @include mq-up("pc") {
+      height: 55%;
+      font-size: $font-size-base * 1.6;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      height: 38px;
+      width: 1px;
+      background-color: #fff;
+      top: 0;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      @include mq-up("tab") {
+        height: 28px;
+      }
+      @include mq-up("pc") {
+        height: 38px;
+      }
+    }
+  }
+}

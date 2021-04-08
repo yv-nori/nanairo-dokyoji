@@ -5,6 +5,9 @@
   cursor: pointer;
   top: 0;
   left: 0;
+  &.circle {
+    border-radius: 50%;
+  }
 }
 @mixin abs($x:50, $y:50) {
   position: absolute;
@@ -12,17 +15,6 @@
   top: 1% * $y;
   transform: translateY(-1% * $y) translateX(-1% * $x);
   -webkit-transform: translateY(-1% * $y) translateX(-1% * $x);
-}
-// 配置
-@for $x from 0 through 100 {
-  @for $y from 0 through 100 {
-    .U_abs-X#{$x}-Y#{$y} {
-      position: absolute;
-      left: 1% * $x;
-      top: 1% * $y;
-      transform: translate3d(-1% * $x, -1% * $y, 0);
-    }
-  }
 }
 
 .U_cover--shadow {
@@ -48,6 +40,16 @@
   pointer-events: none;
   transition: all $anime-time-short;
 }
-// .U_z-kv {
-//   z-index: map-get($layer, 'kv');
-// }
+.U_list-style {
+  list-style: inside;
+  &.in {
+    text-indent: -1em;
+    padding-left: 10px;
+    @include mq-up("tab") {
+      padding-left: 20px;
+    }
+  }
+}
+.U_z-1 {
+  z-index: 1;
+}

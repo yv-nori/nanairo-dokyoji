@@ -1,0 +1,770 @@
+.P_eat-education__common {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: $space-section;
+    padding-right: $space-side;
+    padding-left: $space-side;
+    padding-top: $space-section;
+    padding-bottom: $space-section;
+    @include mq-up("pc") {
+      margin-top: $space-section_L;
+      padding-right: $space-side_L;
+      padding-left: $space-side_L;
+      padding-top: $space-section_L;
+      padding-bottom: $space-section_L;
+    }
+  }
+  &__title-ja {
+    border-radius: 50px;
+    width: 200px;
+    height: 40px;
+    padding-top: 5px;
+    color: #fff;
+    background-color: $color-sub2;
+    font-size: $font-size-base * 1.125;
+    text-align: center;
+  }
+  &__sub-title {
+    position: relative;
+    margin-top: $space-vertical;
+    white-space: nowrap;
+    text-align: center;
+    &::before,
+    &::after {
+      content: '';
+      height: 100%;
+      width: 1px;
+      background-color: $color-text;
+      position: absolute;
+      bottom: -5px;
+    }
+    &.multiple {
+      &::before,
+      &::after {
+        height: 50%;
+        @include mq-up("tab") {
+          height: 100%;
+        }
+      }
+    }
+    &::before {
+      left: -20px;
+      transform: rotate(-45deg);
+    }
+    &::after {
+      right: -20px;
+      transform: rotate(45deg);
+    }
+  }
+  &__title-section {
+    margin-top: 2vh;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    &::before,
+    &::after {
+    content: '';
+    height: 40px;
+    width: 0.1px;
+    background-color: #888;
+    transform: translate(-50%, -50%) rotate(47deg);
+    top: 50%;
+    position: absolute;
+    }
+    &::before {
+        left: calc(50% - 2px);
+    }
+    &::after {
+      left: calc(50% + 2px);
+    }
+  }
+  &__title-en {
+    font-family: 'Baskerville';
+    margin-top: 1vh;
+    font-size: $font-size-base * 0.8125;
+    letter-spacing: 0.4em;
+  }
+  &__back-skew {
+    background-color: $color-background2;
+    width: 140%;
+    height: 54vh;
+    top: 0;
+    position: absolute;
+    left: 0;
+    transform: rotate(-13deg);
+    transform-origin: left bottom;
+    z-index: -1;
+    @include mq-up("tab") {
+      height: 53vh;
+      min-height: 542px;
+    }
+    @include mq-up("pc") {
+      height: 88vh;
+    }
+  }
+  &__content-wrap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: $space-section_M / 2;
+    &.first {
+      margin-top: $space-section_M / 4;
+      @include mq-up("tab") {
+        margin-top: $space-section / 2;
+      }
+      @include mq-up("pc") {
+        margin-top: $space-section_M / 2;
+      }
+    }
+    @include mq-up("tab") {
+      margin-top: $space-section;
+      padding-right: $space-side;
+      padding-left: $space-side;
+    }
+    @include mq-up("pc") {
+      margin-top: $space-section_M;
+      padding-right: $space-side_L;
+      padding-left: $space-side_L;
+    }
+  }
+  &__content-number {
+    font-family: 'NewBaskervilleStd-Roman';
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    font-size: 2.5rem;
+    padding-top: 9px;
+    border-radius: 50%;
+    background-color: $color-text;
+    color: #fff;
+    position: relative;
+    &::before {
+      content: '';
+      width: 1px;
+      height: 20px;
+      background-color: $color-text;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%);
+    }
+  }
+  &__content-title {
+    margin-top: $space-vertical;
+    font-size: $font-size-base * 2;
+    letter-spacing: 0.4em;
+  }
+  &__content-sub-title {
+    letter-spacing: 0.3em;
+    text-align: center;
+  }
+  &__deco-line {
+    position: absolute;
+    transform: translateX(-50%) rotate(-13deg);
+    width: 90%;
+    left: 50%;
+    stroke-width: 5px;
+    stroke: $color-background2;
+    stroke-linecap: round;
+    stroke-dasharray: 1 16;
+    z-index: -1;
+    bottom: -23%;
+    &.line1 {
+      @include mq-up("tab") {
+        bottom: -18%;
+      }
+    }
+    &.line2 {
+      bottom: -22%;
+      @include mq-up("tab") {
+        bottom: -19%;
+      }
+    }
+    &.line3 {
+      bottom: -22%;
+      @include mq-up("tab") {
+        bottom: -18%;
+      }
+    }
+    &.line4 {
+      bottom: -22%;
+      @include mq-up("tab") {
+        bottom: -18%;
+      }
+    }
+  }
+}
+.P_eat-education__kv {
+  height: 50vh;
+  position: relative;
+  @include mq-up("pc") {
+    height: 100vh;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: grey;
+  }
+  &__title,
+  &__sub-title,
+  &__sub-text {
+    color: #fff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+  &__title {
+    font-family: 'logo-font';
+    font-size: $font-size-base * 5;
+    bottom: -13%;
+    @include mq-up("pc") {
+      font-size: $font-size-base * 5.625;
+      bottom: -6%;
+    }
+  }
+  &__sub-title {
+    font-family: 'DinPro';
+    bottom: 1%;
+    font-size: $font-size-base * 0.75;
+    @include mq-up("pc") {
+      bottom: 3%;
+    }
+  }
+  &__sub-text {
+    top: 50%;
+    left: 50%;
+    height: 75%;
+    width: 100px;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    border-radius: 71px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    padding-top: 20px;
+    @include mq-up("tab") {
+      height: 60%;
+    }
+    @include mq-up("pc") {
+      height: 45%;
+    }
+  }
+  &__deco-line {
+    width: 32px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 5%;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 1px;
+      background-color: #fff;
+    }
+    &.left {
+      transform: rotate(45deg);
+      left: -5%;
+      &::after {
+        left: -7px;
+      }
+    }
+    &.right {
+      transform: rotate(-45deg);
+      right: -5%;
+      &::after {
+        right: -7px;
+      }
+    }
+  }
+  &__deco-text {
+    position: absolute;
+    top: -29px;
+    left: 0;
+    letter-spacing: 0.01em;
+    width: 100%;
+    color: #fff;
+    transform: rotate(-1deg) scale(0.9);
+    font-size: 1rem;
+    font-family: 'DinPro';
+    -ms-writing-mode: lr-tb;
+    writing-mode: horizontal-tb;
+    &.font {
+      font-family: 'logo-font';
+    }
+  }
+}
+.P_eat-education__intro {
+  padding-right: $space-side;
+  padding-left: $space-side;
+  padding-top: $space-section;
+  @include mq-up("pc") {
+    padding-right: $space-side_L;
+    padding-left: $space-side_L;
+    padding-top: $space-section_L;
+  }
+  &__title-box {
+    background-color: $color-base2;
+    position: relative;
+    margin: 0 auto;
+    width: calc(100% - 24vw);
+    @include mq-up("tab") {
+      width: calc(33.33% + 3.5vw);
+    }
+    @include mq-up("pc") {
+      width: calc(33.33% - 8.5vw);
+    }
+    &::before {
+      content: '';
+      padding-top: 100%;
+      display: block;
+    }
+  }
+  &__title-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: $font-size-base * 1.75;
+    white-space: nowrap;
+    color: #fff;
+    line-height: 220%;
+    writing-mode: vertical-rl;
+  }
+  &__content-wrap {
+    display: flex;
+    margin-top: $space-section;
+    flex-wrap: wrap;
+    @include mq-up("tab") {
+      justify-content: space-around;
+    }
+  }
+  &__content-box {
+    width: 100%;
+    text-align: center;
+    margin-top: $space-vertical;
+    &:first-child {
+      margin-top: 0;
+    }
+    @include mq-up("tab") {
+      margin-top: 0;
+      width: calc(33.33% - #{$space-side / 2});
+    }
+  }
+  &__content-number {
+    width: 100%;
+    height: 5vh;
+    position: relative;
+    font-family: 'Baskerville';
+    &::before {
+      content: '';
+      border-right: 1px solid $color-text;
+      border-bottom: 1px solid $color-text;
+      transform: translateX(-50%) rotate(45deg);
+      position: absolute;
+      bottom: -27%;
+      left: 50%;
+      height: 23px;
+      width: 23px;
+    }
+  }
+  &__content-title {
+    width: 100%;
+    font-size: $font-size-base * 1.125;
+    margin-top: $space-section;
+    position: relative;
+    @include mq-up("tab") {
+      font-size: $font-size-base;
+    }
+    @include mq-up("pc") {
+      font-size: $font-size-base * 1.125;
+    }
+  }
+  &__deco-line {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 50%;
+    left: 50%;
+    top: 10%;
+    stroke-width: 5px;
+    stroke: $color-border--thin2;
+    stroke-linecap: round;
+    stroke-dasharray: 1 16;
+    @include mq-up("tab") {
+      top: 4%;
+    }
+  }
+  &__content-text {
+    font-size: $font-size-base * 0.75;
+    margin-top: $space-section;
+    width: 100%;
+  }
+}
+.P_eat-education__recipe {
+  background-color: $color-background2;
+  position: relative;
+  height: 70vh;
+  margin-top: $space-section_M;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8vh;
+  &.margin-bottom {
+    margin-bottom: $space-section_L;
+  }
+  @include mq-up("tab") {
+    height: 60vh;
+    min-height: 532px;
+  }
+  @include mq-up("pc") {
+  height: 70vh;
+    margin-top: $space-section_L;
+  }
+  &__title-en {
+    font-family: 'Baskerville';
+    font-size: $font-size-base * 3.125;
+    letter-spacing: 0.4em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -42%);
+  }
+  &__img-slider {
+    position: absolute;
+    top: 55%;
+    transform: translate3d(0%, -50%, 0);
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 70%;
+    pointer-events: none;
+    overflow: hidden;
+    &:hover ul {
+      animation-play-state: paused;
+    } 
+  }
+  &__slide-group {
+    padding: 0;
+    display: flex;
+    flex-shrink: 0;
+    &:first-child {
+      animation: slide1 60s -30s linear infinite;
+    }
+    &:last-child {
+      animation: slide2 60s linear infinite;
+    }
+  }
+  &__content-box {
+    position: relative;
+  }
+  &__img-circle {
+    background-color: grey;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin-right: 23px;
+    cursor: pointer;
+    pointer-events: auto;
+    width: 20vh;
+    height: 20vh;
+    @include mq-up("pc") {
+      width: 27vh;
+      height: 27vh;
+    }
+    &:hover:after {
+      opacity: .3;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $thumbnail-gradation-back;
+      background-image: $thumbnail-gradation-image;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      transition: .3s;
+    }
+  }
+  &__recipe-title {
+    text-align: center;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    width: 100%;
+    font-size: 1.6rem;
+    transform: translateX(-50%);
+    padding-right: 23px;
+    @include mq-up("tab") {
+      bottom: 46px;
+    }
+    @include mq-up("pc") {
+      bottom: 18px;
+    }
+    &::before {
+      content: '';
+      height: 1px;
+      width: 19px;
+      background-color: $color-text;
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-100%) rotate(-35deg);
+    }
+  }
+  &__btn {
+    width: 300px;
+    height: 50px;
+    background-color: $color-text;
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    @include mq-up("pc") {
+      bottom: -5%;
+    }
+  }
+  &__btn-text {
+    color: #fff;
+    text-align: center;
+    font-family: 'DinPro';
+    padding-top: 12px;
+  }
+}
+.P_eat-education__instagram {
+  &__icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: $space-vertical;
+  }
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+  &__icon-title {
+    font-family: 'Artegra_Sans-300-Light';
+    letter-spacing: 0.18em;
+    margin-top: 1vh;
+  }
+  &__img-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: $space-section;
+  }
+  &__img {
+    background-color: grey;
+    position: relative;
+    cursor: pointer;
+    width: calc(33.33% - #{$space-side / 2});
+    height: calc(33.33% - #{$space-side / 2});
+    @include mq-up("tab") {
+      width: calc(25% - #{$space-side / 2});
+      height: calc(25% - #{$space-side / 2});
+    }
+    @include mq-up("pc") {
+      width: calc(20% - #{$space-side / 2});
+      height: calc(20% - #{$space-side / 2});
+    }
+    &:hover:after {
+      opacity: .3;
+    }
+    &:hover &-text {
+      opacity: 1;
+    }
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    &::after {
+      content: '';
+      transition: .3s;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &-text {
+      transition: .3s;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      pointer-events: none;
+      z-index: map-get($layer, 'icon');
+      white-space: nowrap;
+      text-align: center;
+    }
+  }
+}
+.P_eat-education__event {
+  &__content-img-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: $space-section;
+  }
+  &__content-img-half {
+    background-color: grey;
+    width: calc(50% - #{$space-photo-narrow});
+    height: 25vh;
+    @include mq-up("tab") {
+      height: 35vh;
+      min-height: 358px;
+    }
+    @include mq-up("pc") {
+      height: 70vh;
+    }
+  }
+  &__content-img-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &.ver-twin {
+      width: calc(60% - #{$space-photo-narrow});
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 30vh;
+      @include mq-up("tab") {
+        height: 35vh;
+        min-height: 358px;
+      }
+      @include mq-up("pc") {
+        height: 70vh;
+      }
+    }
+    &.ver-single {
+      width: calc(40% - #{$space-photo-narrow});
+      height: 30vh;
+      @include mq-up("tab") {
+        height: 35vh;
+        min-height: 358px;
+      }
+      @include mq-up("pc") {
+        height: 70vh;
+      }
+    }
+    &.top {
+      width: 100%;
+      height: calc(70% - #{$space-photo-narrow});
+    }
+    &.bottom {
+      width: 100%;
+      height: calc(30% - #{$space-photo-narrow});
+      &.left {
+        align-items: flex-end;
+      }
+      &.right {
+        align-items: flex-start;
+      }
+    }
+  }
+  &__content-img-triple-L {
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+  }
+  &__content-img-triple-M {
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    margin-top: 30%;
+    margin-bottom: 20%;
+  }
+  &__content-img-triple-S {
+    background-color: grey;
+    width: 50%;
+    height: 100%;
+  }
+  &__content-img-banner {
+    background-color: grey;
+    width: 100%;
+    height: 25vh;
+    @include mq-up("tab") {
+      height: 35vh;
+      min-height: 358px;
+    }
+    @include mq-up("pc") {
+      height: 50vh;
+    }
+  }
+}
+.P_eat-education__foodstuff{
+  &__shop-name {
+    margin-top: 3vh;
+    font-size: $font-size-base * 1.875;
+    letter-spacing: 0.1em;
+  }
+  &__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: $space-section / 2;
+    flex-wrap: wrap;
+    @include mq-up("tab") {
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+      margin-top: $space-section;
+    }
+  }
+  &__img {
+    width: 100%;
+    background-color: grey;
+    height: 25vh;
+    @include mq-up("tab") {
+      width: calc(50% - #{$space-side / 2});
+      height: 35vh;
+      min-height: 358px;
+    }
+    @include mq-up("pc") {
+      height: 50vh;
+    }
+  }
+  &__text-box {
+    margin-top: $space-section;
+    width: 100%;
+    @include mq-up("tab") {
+      margin-top: 0;
+      width: calc(50% - #{$space-side / 2});
+    }
+  }
+  &__representative {
+    font-size: $font-size-base * 1.5;
+    padding-left: 10px;
+  }
+  &__text-section {
+    padding-top: 20px;
+  }
+  &__text-content {
+    padding-left: 10px;
+  }
+}

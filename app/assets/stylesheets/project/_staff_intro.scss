@@ -26,3 +26,12 @@
     text-align: center;
   }
 }
+.P_support {
+  &__kv {
+    width: 100vw;
+    height: 70vh;
+    background-color: grey;
+    margin-top: 30vh;
+    position: relative;
+  }
+}

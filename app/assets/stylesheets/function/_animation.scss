@@ -232,16 +232,35 @@ $anime-time-long: 1.2s;
 // メディアクエリ
 // --------------------------------
 // メディアクエリの表示
+@include mq-down("sp") {
+	.pc-tab-only {
+		display: none!important;
+	}
+}
 @include mq-up("tab") {
 	.sp-only {
 		display: none!important;
 	}
 }
-@include mq-down("sp") {
+@include mq-up("pc") {
+	.tab-sp-only {
+		display: none!important;
+	}
+}
+@include mq-down("tab") {
 	.pc-only {
 		display: none!important;
 	}
 }
+.tab-only {
+  @include mq-up("pc") {
+		display: none!important;
+  }
+  @include mq-down("sp") {
+		display: none!important;
+  }
+}
+
 
 .A_mq-show {
   &_tab {
@@ -319,7 +338,6 @@ $anime-time-long: 1.2s;
     }
   }
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg) translate3d(0, 0, 0);
@@ -337,3 +355,222 @@ $anime-time-long: 1.2s;
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
 }
+// 写真のスライドショー
+// parti/index-photoGalerry
+// piani/index-photoGalerry
+@keyframes slide1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes slide2 {
+  0% {
+      transform: translateX(-200%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+// svgの描画
+// parti/index-nav
+// piani/index-nav
+@keyframes wright-line {
+  0% {
+    stroke-dasharray: 600px;
+    stroke-dashoffset: 600px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes wright-line-right {
+  0% {
+    transform: scale(-1,1) translate3d(115% , 0 ,0);
+    stroke-dasharray: 600px;
+    stroke-dashoffset: 600px;
+  }
+  100% {
+    transform: scale(-1,1) translate3d(115% , 0 ,0);
+    stroke-dashoffset: 0;
+  }
+}
+// 矢印の伸び縮み
+// parti/index-nav
+// piani/index-nav
+@keyframes line-stretch {
+  0% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(0.95,1);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+@keyframes line-stretch2 {
+  0% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(1.1,1);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+// /parti/belong
+@keyframes line-stretch3 {
+  0% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(1.1,1);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+@keyframes line-stretch2-right {
+  0%, 50% ,100% {
+    transform-origin: right center;
+  }
+  0% {
+    transform: scale(-1,1) translate3d(115% , 0 ,0);
+  }
+  50% {
+    transform: scale(-1.1,1) translate3d(115% , 0 ,0);
+  }
+  100% {
+    transform: scale(-1,1) translate3d(115% , 0 ,0);
+  }
+}
+// 矢印右に動く
+// parti/admission
+// piani/admission
+@keyframes arrow-move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+// 矢印の伸び縮み
+// parti/index-nav
+// piani/index-nav
+@keyframes open-box-thin {
+  0% {
+    border-bottom: solid 4px $color-text;
+  }
+  100% {
+    border: solid 1px $color-text;
+  }
+}
+@keyframes open-box-wide {
+  0% {
+    height: 1px;
+  }
+  100% {
+    height: 120%;
+  }
+}
+// visionアイコンうねうね
+// home/vision
+// parti/vision
+// piani/vision
+@keyframes uneune {
+  0% {
+    border-radius: 60% 50% 60% 50% / 50% 60% 50% 60%; 
+  }
+
+  25% {
+    border-radius: 70% 60% 60% 70% / 70% 80% 40% 70%; 
+  }
+
+  50% {
+    border-radius: 60% 40% 70% 60% / 40% 60% 50% 60%; 
+  }
+
+  75% {
+    border-radius: 70% 60% 40% 70% / 70% 50% 60% 40%; 
+  }
+
+  100% {
+    border-radius: 60% 50% 60% 50% / 50% 60% 50% 60%; 
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hover {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.2,1.2);
+  }
+}
+@keyframes hoverReverse {
+  0% {
+    transform: rotate(0deg) scale(1.2,1.2);
+  }
+  100% {
+    transform: rotate(0deg);
+    transform: rotate(0deg) scale(1,1);
+  }
+}
+// 各園のvisonアイコンぐるっと回って広がる
+// parti/vision
+// piani/vision
+@keyframes vision-circle-rotate {
+  0% {
+    border-radius: 10px;
+  }
+  70% {
+    transform: rotate(360deg);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes vision-circle-scale {
+  0% {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,  -50%);
+    transform-origin: center center;
+    border-radius: 50%;
+  }
+  100% {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,  -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+} 

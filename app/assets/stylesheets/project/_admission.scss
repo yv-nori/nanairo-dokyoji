@@ -1,0 +1,878 @@
+.P_admission__common {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-right: $space-side;
+    padding-left: $space-side;
+    padding-bottom: $space-section;
+    @include mq-up("tab") {
+      padding-right: $space-side_L;
+      padding-left: $space-side_L;
+    }
+    @include mq-up("pc") {
+      padding-bottom: $space-section_L;
+    }
+    &.top {
+      padding-top: $space-section * 2;
+      @include mq-up("tab") {
+        padding-top: $space-section_L * 2;
+      }
+    }
+    &.first {
+      padding-top: $space-section;
+      @include mq-up("pc") {
+        padding-top: $space-section_L;
+      }
+    }
+  }
+  &__title-en {
+    font-family: 'DinPro';
+    font-size: $font-size-base * 0.75;
+    letter-spacing: 0.08em;
+  }
+  &__title-ja {
+    position: relative;
+    text-align: center;
+    font-size: $font-size-base * 1.875;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 2.05;
+    }
+  }
+  &__title-deco {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    @include mq-up("tab") {
+      width: 50px;
+      height: 50px;
+    }
+    &.left {
+      left: -53px;
+      top: 60%;
+    }
+    &.right {
+      right: -53px;
+      top: 40%;
+    }
+  }
+  &__deco-line {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    stroke: #C2C2C2;
+    stroke-dasharray: 3 6;
+    stroke-linecap: round;
+    bottom: -6px;
+    left: 0;
+    stroke-width: 2px;
+  }
+  &__table {
+    font-size: $font-size-base * 0.75;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    text-align: center;
+    border: double 1px $color-text;
+    margin-right: $space-side * -1;
+    margin-left: $space-side * -1;
+    margin-top: $space-section / 2;
+    width: calc(100% + 14vw);
+    @include mq-up("tab") {
+      width: 100%;
+    }
+    @include mq-up("pc") {
+      margin-top: $space-section;
+    }
+    &.margin-S {
+      margin-top: $space-vertical / 2;
+      @include mq-up("pc") {
+        margin-top: $space-vertical;
+      }
+    }
+    &.width-S {
+      @include mq-up("pc") {
+        width: 80%;
+      }
+    }
+    &.width-2S {
+      width: calc(100% + 14vw);
+      @include mq-up("tab") {
+        width: 70%;
+      }
+    }
+    &.width-3S {
+      width: calc(100% + 14vw);
+      @include mq-up("tab") {
+        width: 35%;
+      }
+    }
+    &.width-4S {
+      width: 70%;
+      @include mq-up("pc") {
+        width: 35%;
+      }
+    }
+  }
+  &__head {
+    line-height: 240%;
+    background-color: $color-text;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border: solid 1px #fff;
+    padding-left: 5px;
+    padding-right: 5px;
+    @include mq-up("tab") {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &.width-S {
+      width: 30%;
+    }
+    &.padding-0 {
+      padding-left: 0;
+      padding-right: 0;
+      @include mq-up("pc") {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+  &__data {
+    line-height: 240%;
+    border: solid 1px $color-text;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 5px;
+    @include mq-up("tab") {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+    &.first {
+      border: double 1px #333;
+    }
+    &.pink {
+      background-color: $color-infant;
+      color: #fff;
+      font-weight: bold;
+    }
+    &.white {
+      background-color: #fff;
+      font-weight: bold;
+    }
+    &.orange {
+      background-color: $color-toddler;
+      color: #fff;
+      font-weight: bold;
+    }
+    &.purple1 {
+      background-color: #A584C5;
+      color: #fff;
+      font-weight: bold;
+    }
+    &.purple2 {
+      background-color: #8989C5;
+      color: #fff;
+      font-weight: bold;
+    }
+    &.purple3 {
+      background-color: #7897C5;
+      color: #fff;
+      font-weight: bold;
+    }
+    &.blank {
+      position: relative;
+      &:before {
+        content: '';
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        left: -2px;
+        top: 0;
+        background-color: #fff;
+      }
+    }
+    &.padding-0 {
+      padding-left: 0;
+      padding-right: 0;
+      @include mq-up("pc") {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+  &__content-title {
+    padding: 20px 5px;
+    color: $color-blue-text;
+    border: 1px solid $color-blue-text;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    border-radius: 50px;
+    padding: 5px 45px;
+    font-weight: bold;
+    margin-top: $space-section;
+    font-size: $font-size-base;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.125;
+    }
+    @include mq-up("pc") {
+      margin-top: $space-section_L;
+    }
+  }
+  &__table-title {
+    text-align: center;
+    font-size: $font-size-base * 1.5;
+    margin-top: 3.5vh;
+    @include mq-up("pc") {
+      margin-top: 7vh;
+    }
+  }
+  &__blue-title {
+    color: $color-blue-text;
+    font-weight: bold;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  }
+}
+.P_admission__intro {
+  &__page-title-en {
+    font-family: 'Baskerville';
+    text-align: center;
+    letter-spacing: 0.35em;
+    font-size: $font-size-base * 2.375;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 3;
+    }
+  }
+  &__page-title-ja {
+    font-size: $font-size-base * 1.625;
+    text-align: center;
+    padding-top: 10px;
+  }
+  &__section-line {
+    stroke: $color-border--thin3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 3px;
+    stroke-width: 3;
+    stroke-dasharray: 0 10;
+    stroke-linecap: round;
+    height: $space-section;
+    @include mq-up("tab") {
+      stroke-dasharray: 0 13;
+      height: $space-section_L;
+    }
+  }
+  &__text {
+    font-size: $font-size-base * 0.9375;
+    @include mq-up("tab") {
+      text-align: center;
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    padding-top: $space-section_px;
+    flex-wrap: wrap;
+  }
+  &__btn {
+    border-radius: 50px;
+    background-color: $color-blue-back;
+    transition: .3s;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: $font-size-base * 0.9375;
+    color: #fff;
+    width: 300px;
+    @include mq-up("tab") {
+      width: 250px;
+    }
+    @include mq-up("pc") {
+      width: 300px;
+    }
+    &.right {
+      margin-top: $space-vertical;
+      @include mq-up("tab") {
+        margin-top: 0;
+        margin-left: $space-side / 2;
+      }
+    }
+    &:hover {
+      background-color: #fff;
+      color: $color-text;
+      border: solid 1px $color-text;
+    }
+  }
+}
+.P_admission__one-day {
+  &__btn {
+    margin-top: $space-section;
+    color: #fff;
+    position: relative;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    @include mq-up("tab") {
+      padding: 0 90px;
+    }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+    &::before {
+      z-index: -1;
+      background: linear-gradient(to right,$color-blue-back 30%, #61A1B9 80%);
+      transition: .5s;
+    }
+    &::after {
+      z-index: -2;
+      background: linear-gradient(to right,$color-blue-back 60%, #61A1B9 98%);
+    }
+    &:hover:before {
+      opacity: 0;
+    }
+    &:hover .C_icon__arrow-right {
+      animation: arrow-move ease-in-out 1.2s infinite;
+    }
+  }
+  &__ja-text {
+    font-size: $font-size-base * 1.4375;
+  }
+  &__en-text {
+    padding-top: 17px;
+    pointer-events: none;
+    font-family: 'Angelface';
+    font-size: $font-size-base * 2.5;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 3.125;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: 63px;
+    top: 45%;
+  }
+}
+.P_admission__about {
+  &__text {
+    margin-top: $space-section;
+  }
+  &__reason-text {
+    border-bottom: 1px dotted $color-text;
+    padding-bottom: 15px;
+    margin-top: $space-vertical;
+    @include mq-up("pc") {
+      margin-top: $space-section;
+    }
+  }
+  &__reason-title {
+    margin-top: $space-vertical / 2;
+    @include mq-up("pc") {
+      margin-top: $space-vertical;
+    }
+  }
+  &__reason-container {
+    background-color: #F2F2F0;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+    margin-top: $space-vertical / 2;
+    @include mq-up("tab") {
+      width: 90%;
+    }
+    @include mq-up("pc") {
+      width: 70%;
+      margin-top: $space-vertical;
+    }
+  }
+  &__reason-list {
+    width: calc(50% - 5px);
+    color: #fff;
+    background-color: $color-blue-back;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 7px;
+    font-size: $font-size-base * 0.875;
+    @include mq-up("tab") {
+      font-size: $font-size-base ;
+      width: calc(33.33% - 5px);
+    }
+    &.last {
+      margin-bottom: 0;
+    }
+  }
+}
+.P_admission__chart {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9ECEF;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__sheet {
+    background-color: #fff;
+    border-radius: 50px;
+    margin: 7vh 6vw;
+    @include mq-up("tab") {
+      margin: 7vh 12vw;
+    }
+  }
+  &__title-en {
+    font-family: 'Angelface';
+    text-align: center;
+    margin-top: -2vh;
+    font-size: $font-size-base * 1.875;
+    @include mq-up("tab") {
+      margin-top: -3vh;
+      font-size: $font-size-base * 3.3125;
+    }
+  }
+  &__title-ja {
+    font-family: 'TsukuARdGothic-Regular',
+                  sans-serif;
+    font-weight: bold;
+    color: #77BEC3;
+    text-align: center;
+    font-size: $font-size-base * 1.875;
+    margin-top: -2vh;
+    @include mq-up("tab") {
+      margin-top: 0;
+      font-size: $font-size-base * 2.5;
+    }
+  }
+  &__sub-title {
+    font-family: YuGothic,
+                'Yu Gothic', 
+                sans-serif;
+    font-size: $font-size-base * 0.75;
+    text-align: center;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: $space-vertical;
+    font-family: 'TsukuARdGothic-Regular',
+                  sans-serif;
+    font-weight: bold;
+  }
+  &__content-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    @include mq-up("tab") {
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+    &.center {
+      justify-content: center;
+    }
+    &.isIn {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__section-container {
+    overflow: hidden;
+    position: relative;
+    height: 3vh;
+    &.isIn {
+      height: initial;
+      width: 100%;
+      padding-right: 4vw;
+      padding-left: 4vw;
+      @include mq-up("tab") {
+        padding-right: 3vw;
+        padding-left: 3vw;
+      }
+    }
+    &.isBottom {
+      height: 9vh;
+    }
+  }
+  &__content-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 41vw;
+    @include mq-up("tab") {
+      width: 29vw;
+    }
+    &.isIn {
+      width: 37vw;
+      @include mq-up("tab") {
+        width: 29vw;
+      }
+    }
+  }
+  &__content-question {
+    background-color: $color-blue-back;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    &.isIn {
+      font-size: $font-size-base * 0.875;
+      @include mq-up("tab") {
+        font-size: $font-size-base;
+      }
+    }
+  }
+  &__content-answer {
+    margin-top: 1vh;
+    width: calc(50% - 0.3vw);
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid $color-blue-back;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.font-S {
+      font-size: $font-size-base * 0.8125;
+    }
+  }
+  &__content-select {
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid $color-blue-back;
+    margin-left: 5vw;
+    position: absolute;
+    background-color: #ffff;
+    z-index: 1;
+    padding: 2px 4vw;
+    margin-top: 2vh;
+    @include mq-up("tab") {
+      padding: 2px 1vw;
+      margin-top: 3vh;
+    }
+    @include mq-up("pc") {
+      padding: 2px 4vw;
+    }
+  }
+  &__number {
+    font-size: $font-size-base * 1.125;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.5625;
+    }
+    &.isIn {
+      padding-left: 4px;
+      @include mq-up("tab") {
+        padding-left: 0;
+      }
+    }
+  }
+  &__string {
+    padding-top: 5px;
+    padding-left: 3px;
+    &.isIn {
+      padding-left: 0;
+      @include mq-up("tab") {
+        padding-left: 3px;
+      }
+    }
+  }
+  &__line {
+    width: 3px;
+    height: 100%;
+    stroke: $color-blue-back;
+    stroke-width: 1px;
+    stroke-dasharray: 3 2;
+    position: absolute;
+    top: -1%;
+    height: 250%;
+    @include mq-up("pc") {
+      height: 900%;
+    }
+    &.left {
+      transform-origin: top center;
+      left: 37%;
+      transform: rotate(58deg);
+      @include mq-up("tab") {
+        left: 41%;
+        transform: rotate(65deg);
+      }
+      @include mq-up("pc") {
+        left: 40%;
+        transform: rotate(82deg);
+      }
+    }
+    &.right {
+      transform-origin: top center;
+      right: 37%;
+      transform: rotate(-58deg);
+      @include mq-up("tab") {
+        right: 41%;
+        transform: rotate(-65deg);
+      }
+      @include mq-up("pc") {
+        right: 40%;
+        transform: rotate(-82deg);
+      }
+    }
+  }
+  &__line-ver {
+    width: 3px;
+    height: 100%;
+    stroke: $color-blue-back;
+    stroke-width: 1px;
+    stroke-dasharray: 3 2;
+    position: absolute;
+    top: -1%;
+    &.line1 {
+      left: 3%;
+    }
+    &.line2 {
+      right: 3%;
+    }
+    &.line3 {
+      right: 31%;
+    }
+    &.line4 {
+      right: 69%;
+    }
+    &.line5 {
+      left: 12%;
+    }
+    &.line6 {
+      left: 37%;
+    }
+    &.line7 {
+      left: 64%;
+    }
+    &.line8 {
+      left: 88%;
+    }
+    &.line9 {
+      height: 9vh;
+      bottom: 0%;
+      right: 15%;
+      top: initial;
+      transform: translateY(100%);
+    }
+  }
+  &__result-container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    text-align: center;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    @include mq-up("tab") {
+      padding-right: 5vw;
+      padding-left: 5vw;
+    }
+  }
+  &__result-box {
+    width: calc(25% - 1.8vw);
+    border-radius: 10px;
+    &.box1,
+    &.box2,
+    &.box3 {
+      padding: 4px;
+      @include mq-up("tab") {
+        font-size: $font-size-base * 1.25;
+        padding: 11px 15px;
+      }
+    }
+    &.box1 {
+      background-color: #A584C5;
+    }
+    &.box2 {
+      background-color: #8989C5;
+    }
+    &.box3 {
+      background-color: #7897C5;
+    }
+    &.box4 {
+      background-color: #DFF0F1;
+      color: $color-text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $font-size-base * 0.625;
+      @include mq-up("tab") {
+        font-size: $font-size-base * 0.75;
+      }
+    }
+  }
+  &__result-issue-text {
+    border-bottom: 1px solid #fff;
+  }
+  &__class-container {
+    display: flex;
+    color: #fff;
+    text-align: center;
+    font-size: $font-size-base * 0.75;
+    margin-top: 1vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin-bottom: 5vh;
+    @include mq-up("tab") {
+      font-size: $font-size-base;
+      margin-top: 2vh;
+      padding-left: 5vw;
+      padding-right: 5vw;
+      margin-bottom: 9vh;
+    }
+  }
+  &__toddler {
+    width: calc(50% - 1.1vw);
+    background-color: $color-toddler;
+  }
+  &__infant {
+    width: calc(25% - 2vw);
+    background-color: $color-infant;
+    margin-left: 2.3vw;
+  }
+}
+.P_admission__flow {
+  &__container {
+    width: 100%;
+    @include mq-up("tab") {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__table {
+    line-height: 270%;
+    text-align: center;
+    border-spacing: 0 3vh;
+    border-collapse: separate;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: bold;
+    font-size: $font-size-base * 0.75;
+    width: 100%;
+    margin-top: 4vh;
+    @include mq-up("tab") {
+      width: calc(50% - #{$space-side} / 4);
+    }
+    @include mq-up("pc") {
+      margin-top: 10vh;
+    }
+  }
+  &__data {
+    border-radius: 5px;
+    &.left-first,
+    &.left-last {
+      color: #fff;
+      background-color: $color-infant;
+    }
+    &.left-first {
+      font-size: $font-size-base;
+    }
+    &.right-first,
+    &.right-last {
+      color: #fff;
+      background-color: $color-toddler;
+    }
+    &.right-first {
+      font-size: $font-size-base;
+    }
+    &.left,
+    &.right {
+      position: relative;
+      &::before {
+        content: '▼';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -3.8vh;
+      }
+    }
+    &.left {
+      color: $color-infant;
+      border: solid $color-infant 1px;
+    }
+    &.right {
+      color: $color-toddler;
+      border: solid $color-toddler 1px;
+    }
+  }
+  &__text {
+    font-size: $font-size-base * 0.875;
+    width: 100%;
+    margin-top: $space-section / 2;
+    @include mq-up("pc") {
+      margin-top: $space-section;
+    }
+  }
+}
+.P_admission__cost {
+  &__img-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: $space-section / 2;
+    padding-left: $space-side;
+    padding-right: $space-side;
+    @include mq-up("pc") {
+      margin-top: $space-section;
+      padding-left: 18vw;
+      padding-right: 18vw;
+    }
+  }
+  &__img {
+    width: calc(50% - 1vw);
+    background-color: grey;
+    height: 23vh;
+    @include mq-up("tab") {
+      height: 30vh;
+      max-height: 304px;
+    }
+    @include mq-up("pc") {
+      height: 45vh;
+    }
+  }
+  &__text {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    width: 100%;
+    margin-top: 1.5vh;
+    @include mq-up("pc") {
+      margin-top: 2vh;
+    }
+    &.first {
+      margin-top: $space-vertical / 2;
+      @include mq-up("pc") {
+        margin-top: $space-vertical;
+      }
+    }
+  }
+}
+.P_admission__extension {
+  &__text1 {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    margin-top: $space-section;
+    @include mq-up("pc") {
+      margin-top: $space-section_L;
+    }
+  }
+  &__text2 {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    margin-top: $space-section / 2;
+    @include mq-up("pc") {
+      margin-top: $space-section;
+    }
+  }
+}

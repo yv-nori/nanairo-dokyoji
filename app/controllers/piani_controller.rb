@@ -1,0 +1,2 @@
+class PianiController < ApplicationController
+end

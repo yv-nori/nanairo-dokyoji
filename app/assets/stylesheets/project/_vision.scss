@@ -1,0 +1,346 @@
+.P_vision {
+  &__sky {
+    width: 100%;
+    height: 25vh;
+    position: relative;
+    height: 30vh;
+  }
+  &__top-title {
+    font-size: $font-size-base * 10;
+    position: absolute;
+    display: block;
+    text-align: center;
+    font-family: 'logo-font';
+    width: 100%;
+    bottom: 0%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, 48%);
+    text-shadow:1px 1px 0 $color-text,-1px 1px 0 $color-text,1px -1px 0 $color-text,-1px -1px 0 $color-text;
+  }
+}
+.P_vision__intro{
+  &__wrap {
+    padding-left: $space-side_L;
+    padding-right: $space-side_L;
+    padding-top: 16vh;
+  }
+  &__layout {
+    margin-top: $space-section;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include mq-up("tab") {
+      flex-direction: row;
+    }
+  }
+  &__title-box {
+    height: 80px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq-up("tab") {
+      margin-right: $space-side;
+      height: 400px;
+      width: 100px;
+    }
+  }
+  &__title {
+    font-size: $font-size-base * 1.75;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.875;
+      writing-mode: vertical-rl;
+    }
+  }
+  &__deco-line {
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    stroke: $color-border--thin3;
+    stroke-linecap: round;
+    stroke-dasharray: 0 14;
+    stroke-width: 4px;
+    @include mq-up("tab") {
+      stroke-dasharray: 0 18;
+      stroke-width: 6px;
+    }
+    &.left {
+      left: 0;
+    }
+    &.right {
+      left: 100%;
+    }
+    &.top {
+      top: 0;
+      transform: translate(0, -50%);
+    }
+    &.bottom {
+      top: 100%;
+      transform: translate(0, -50%);
+    }
+  }
+  &__circle-box {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin-top: 9vh;
+    @include mq-up("tab") {
+      margin-top: 0;
+      width: 500px;
+    }
+  }
+  &__circle {
+    transition: .6s;
+    position: absolute;
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 1px $color-text;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    @include mq-up("tab") {
+      width:230px;
+      height: 230px;
+    }
+    &:hover {
+      border: solid 1px rgba(3,3,3,0);
+    }
+    &:hover .P_vision__intro__circle-line{
+      animation:vision-circle-rotate ease-in 1 0.8s forwards, vision-circle-scale ease-out 0.5s forwards 0.8s;
+    }
+    &.friend {
+      top: 0;
+      left: 50%;
+    }
+    &.play {
+      top: 37%;
+      left: 22%;
+      @include mq-up("tab") {
+        top: 40%;
+        left: 30;
+      }
+      @include mq-up("pc") {
+        left: 31%;
+      }
+    }
+    &.kind {
+      top: 37%;
+      left: 78%;
+      @include mq-up("tab") {
+        top: 40%;
+        left: 70%;
+      }
+      @include mq-up("pc") {
+        left: 69%;
+      }
+    }
+  }
+  &__circle-text-ja {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: $font-size-base * 2.5;
+    z-index: map-get($layer, 'icon');
+  }
+  &__circle-text-en {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: $font-size-base * 1.625;
+    font-family: 'Blankid';
+    z-index: map-get($layer, 'icon');
+  }
+  &__circle-line {
+    position: absolute;
+    width: 180px;
+    height: 10px;
+    border-radius: 10px;
+    opacity: 0.3;
+    transform: rotate(-45deg);
+    transform-origin: left center;
+    &.friend {
+      background-color: $color-vision-friend;
+      top: 59%;
+      left: 67%;
+      @include mq-up("tab") {
+        top: 54%;
+        left: 64%;
+      }
+    }
+    &.play {
+      background-color: $color-vision-play;
+      top: 40%;
+      left: 13%;
+    }
+    &.kind {
+      transform-origin: right center;
+      background-color: $color-vision-kind;
+      top: 60%;
+      left: -19%;
+      @include mq-up("tab") {
+        top: 66%;
+        left: 0;
+      }
+    }
+  }
+}
+.P_vision__content {
+  &__wrap {
+    padding-left: $space-side_L;
+    padding-right: $space-side_L;
+    padding-top: $space-section_L;
+    padding-bottom: $space-section_L;
+    overflow: hidden;
+  }
+  &__text-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    @include mq-up("tab") {  
+      margin-top: $space-section_L;
+    }
+  }
+  &__text-box-sub {
+    width: 14%;
+    margin-top: 11vh;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: 'DinPro';
+    font-size: $font-size-base * 1.5;
+    letter-spacing: $letter-spacing-base;
+    &.left {
+      border-left: solid 4px $color-text;
+    }
+    &.right {
+      border-right: solid 4px $color-text;
+      order: 2;
+    }
+    &::before {
+      content: 'you';
+      font-family: 'Blankid';
+      font-size: $font-size-base * 2.5;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%,-100%);
+      writing-mode: initial;
+    }
+  }
+  &__text-box-main {
+    display: flex;
+    flex-wrap: wrap;
+    &.right {
+      margin-left: 2vw;
+    }
+    &.left {
+      order: 1;
+      margin-right: 2vw;
+      justify-content: flex-end;
+    }
+  }
+  &__title-ja {
+    font-size: $font-size-base * 3.875;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    &.left {
+      order: 1;
+    }
+  }
+  &__sub-title {
+    height: 40px;
+    text-align: center;
+    border-radius: 15px 0 0 15px;
+    margin-right: $space-side_L * -1;
+    font-size: $font-size-base * 1.25;
+    padding-top: 3px;
+    width: calc(100% + #{$space-side_L});
+    @include mq-up("tab") {
+      border-radius: 15px;
+      font-size: $font-size-base * 1.4;
+      padding-top: 0;
+      margin-top: 36px;
+      margin-right: 0;
+      margin-left: 2vw;
+      width: 350px;
+    }
+    &.left {
+      order: 2;
+      border-radius: 0 15px 15px 0;
+      margin-left: $space-side_L * -1;
+      margin-right: 0;
+      @include mq-up("tab") {
+        margin-left: 0;
+        border-radius: 15px;
+        font-size: $font-size-base * 1.4;
+        padding-top: 0;
+        margin-right: 2vw;
+      }
+    }
+    &.friend {
+      background-color: $color-friend-clear;
+    }
+    &.play {
+      background-color: $color-play-clear;
+    }
+    &.kind {
+      background-color: $color-kind-clear;
+    }
+  }
+  &__text {
+    font-size: $font-size-base * 1.125;
+    padding-top: 4vh;
+    padding-bottom: 6vh;
+    &.left {
+      order: 3;
+    }
+  }
+  &__img-box {
+    height: 40vh;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: $space-section_L;
+    border-radius: 0 20px 20px 0;
+    width: calc(100% + $space-section_L);
+    margin-left: $space-side_L * -1;
+    @include mq-up("tab") {
+      height: 50vh;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &.right {
+      margin-left: 0;
+      margin-right: $space-side_L * -1;
+      border-radius: 20px 0 0 20px;
+    }
+  }
+  &__back-line, &__back-line2 {
+    position: absolute;
+    width: 1800px;
+    top: 50%;
+    height: 100%;
+    transform: translate(0, -50%);
+    stroke: $color-border--thin2;
+    stroke-linecap: round;
+    stroke-dasharray: 0 19;
+    stroke-width: 6px;
+    z-index: -1;
+  }
+  &__back-line {
+    left: -28%;
+    top: -42%;
+  }
+  &__back-line2 {
+    left: 27%;
+    top: -54%;
+  }
+}

@@ -1,7 +1,7 @@
 <%= render partial: 'shared/header' %>
 <section class="PageTitle" id="JS_smoothScroll_target-0">
   <div class="L_pageTitle__headding">
-    <div class="">
+    <div class="L_pageTitle__title">
       <p class="C_text__title-en">
         About
       </p>
@@ -9,22 +9,24 @@
         七彩学舎について
       </h1>
     </div>
-    <ul class="P_H-about__nav">
-      <li><%= link_to 'ご挨拶', '#', class: 'P_H-about__nav-list', id: 'JS_smoothScroll_trigger-1'%></li>
-      <li><%= link_to '法人概要', '#', class: 'P_H-about__nav-list', id: 'JS_smoothScroll_trigger-2'%></li>
-      <li><%= link_to '施設概要', '#', class: 'P_H-about__nav-list', id: 'JS_smoothScroll_trigger-3'%></li>
-      <li><%= link_to '公示情報', '#', class: 'P_H-about__nav-list', id: 'JS_smoothScroll_trigger-4'%></li>
-      <li><%= link_to '所在地', '#', class: 'P_H-about__nav-list', id: 'JS_smoothScroll_trigger-5'%></li>
-    </ul>
+    <div class="L_pageTitle__second">
+      <ul class="P_H-about__nav">
+        <li><%= link_to 'ご挨拶', '#', class: 'P_H-about__nav-list', id: 'JS_smoothScroll_trigger-1'%></li>
+        <li><%= link_to '法人概要', '#', class: 'P_H-about__nav-list', id: 'JS_smoothScroll_trigger-2'%></li>
+        <li><%= link_to '施設概要', '#', class: 'P_H-about__nav-list', id: 'JS_smoothScroll_trigger-3'%></li>
+        <li><%= link_to '公示情報', '#', class: 'P_H-about__nav-list', id: 'JS_smoothScroll_trigger-4'%></li>
+        <li><%= link_to '所在地', '#', class: 'P_H-about__nav-list', id: 'JS_smoothScroll_trigger-5'%></li>
+      </ul>
+    </div>
   </div>
 </section>
 <section class="PageKeyVisual" id = "JS_scroll-to-top_trigger-0">
-  <div class="P_H-about__kv">
+  <div class="L_kv-half">
     <div class="C_image__H-about_kv"></div>
   </div>
 </section>
 <section class="Greeting" id="JS_smoothScroll_target-1">
-  <div class="L_wrap">
+  <div class="L_wrap title">
     <div class="L_title__headding">
       <p class="C_text__title-en">
         Messeage
@@ -34,9 +36,9 @@
       </h1>
     </div>
   </div>
-  <div class="L_wrap noRight">
-    <div class="L_inner-left">
-      <h1 class="P_H-about__sub-title">可能性を育む</h1>
+  <div class="L_wrap">
+    <div class="P_H-about__inner-text space-right">
+      <h1 class="C_text__sub-title">可能性を育む</h1>
       <p class="P_H-about__text">
       子どもは、「健康で元気いっぱい」が基本です。健康で元気いっぱい友達と遊んで、いっぱいおいしいものを食べて、時にはけんかをしたり泣いたりもして、心や精神が育っていきます。友達と遊ぶことで、自分を素直に表現できる情緒豊かな心と、元気に走り回れる体をしっかり育まれた子供たちは、友達を思い遣り、相手の痛みを理解する優しさや、みんなと一緒に一つのことに取り組み、あたりまえの事ができてルールを守れる協調性や社会性を身につけていきます。しっかり育った心と体、優しさと協調性を備えた自立した個性は、やがて知性や社会性のベースとなるでしょう。七彩学舎では、ご家庭との連携を緊密にし、子どもたちの心と体、個性を大切に育ててまいります。
       </p>
@@ -47,7 +49,7 @@
   </div>
 </section>
 <section class="Overview" id="JS_smoothScroll_target-2">
-  <div class="L_wrap">
+  <div class="L_wrap title">
     <div class="L_title__headding">
       <p class="C_text__title-en">
         Overview
@@ -57,16 +59,16 @@
       </h1>
     </div>
     <div class="L_sub-title__headding">
-      <h1 class="P_H-about__sub-title">
+      <h1 class="C_text__sub-title">
         社会福祉法人　七彩学舎
       </h1>
     </div>
   </div>
-  <div class="L_wrap noLeft">
+  <div class="L_wrap">
     <div class="P_H-about__img-box noLeft">
       <div class="C_image__H-about_overview"></div>
     </div>
-    <div class="L_inner-right">
+    <div class="P_H-about__inner-text space-left">
       <table class="P_H-about__table">
         <tr class="P_H-about__table-row">
           <td class="P_H-about__table-title">理事長</td>
@@ -101,7 +103,7 @@
   </div>
 </section>
 <section class="Facilities" id="JS_smoothScroll_target-3">
-  <div class="L_wrap">
+  <div class="L_wrap title">
     <div class="L_title__headding">
       <p class="C_text__title-en">
         Facilities
@@ -111,13 +113,13 @@
       </h1>
     </div>
     <div class="L_sub-title__headding">
-      <h1 class="P_H-about__sub-title">
+      <h1 class="C_text__sub-title">
         認定こども園　パルティ道教寺
       </h1>
     </div>
   </div>
-  <div class="L_wrap noRight">
-    <div class="L_inner-left">
+  <div class="L_wrap">
+    <div class="P_H-about__inner-text space-right">
       <table class="P_H-about__table">
         <tr class="P_H-about__table-row">
           <td class="P_H-about__table-title">園長</td>
@@ -154,14 +156,14 @@
       </div>
     </div>
   </div>
-  <div class="L_wrap">
+  <div class="L_wrap title">
     <div class="L_sub-title__headding">
-      <h1 class="P_H-about__sub-title">
+      <h1 class="C_text__sub-title">
         認定こども園　ピアニィ道教寺
       </h1>
     </div>
   </div>
-  <div class="L_wrap noLeft">
+  <div class="L_wrap">
     <div class="P_H-about__img-box noLeft">
       <div class="P_H-about__hover-action" id="JS_scroll-action-1_trigger">
         <div class="C_image__piani"></div>
@@ -170,7 +172,7 @@
         <%= link_to "", root_path, class:"U_link"%>
       </div>
     </div>
-    <div class="L_inner-right">
+    <div class="P_H-about__inner-text space-left">
       <table class="P_H-about__table">
         <tr class="P_H-about__table-row">
           <td class="P_H-about__table-title">園長</td>
@@ -201,7 +203,7 @@
   </div>
 </section>
 <section class="PublicInfo" id="JS_smoothScroll_target-4">
-  <div class="L_wrap subColor">
+  <div class="P_H-about__info-wrap">
     <div class="L_title__headding">
       <p class="C_text__title-en">
         Public Info
@@ -243,7 +245,7 @@
       </h1>
     </div>
   </div>
-  <div class="P_H-about__map">
+  <div class="P_H-about__map-inner">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13162.036286214505!2d135.3731036!3d34.4392232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd48c9cfe7b368468!2z56S-5Lya56aP56WJ5rOV5Lq6IOS4g-W9qeWtpuiIjg!5e0!3m2!1sja!2sjp!4v1614213618813!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>

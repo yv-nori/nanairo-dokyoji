@@ -94,44 +94,54 @@
     background: image-url('deco/shabon/shabon-right.png') no-repeat center center / cover;
   }
   // サイズ
-  &-SSS {
+  &_3S {
     width: $deco-width * 0.4;
     height: $deco-height * 0.4;
     z-index: map-get($layer, 'icon');
   }
-  &-SS {
+  &_2S {
     width: $deco-width * 0.6;
     height: $deco-height * 0.6;
     z-index: map-get($layer, 'icon');
   }
-  &-S {
+  &_S {
     width: $deco-width * 0.8;
     height: $deco-height * 0.8;
     z-index: map-get($layer, 'icon');
   }
-  &-M {
+  &_M {
     width: $deco-width;
     height: $deco-height;
     z-index: map-get($layer, 'icon');
   }
-  &-L {
+  &_L {
     width: $deco-width * 1.2;
     height: $deco-height * 1.2;
     z-index: map-get($layer, 'icon');
   }
-  &-LL {
+  &_2L {
     width: $deco-width * 1.4;
     height: $deco-height * 1.4;
     z-index: map-get($layer, 'icon');
   }
-  &-LLL {
+  &_3L {
     width: $deco-width * 1.6;
     height: $deco-height * 1.6;
     z-index: map-get($layer, 'icon');
   }
-  &-LLLL {
+  &_4L {
     width: $deco-width * 1.8;
     height: $deco-height * 1.8;
+    z-index: map-get($layer, 'icon');
+  }
+  &_5L {
+    width: $deco-width * 2.6;
+    height: $deco-height * 2.6;
+    z-index: map-get($layer, 'icon');
+  }
+  &_6L {
+    width: $deco-width * 3;
+    height: $deco-height * 3;
     z-index: map-get($layer, 'icon');
   }
 }

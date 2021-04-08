@@ -1,10 +1,4 @@
 .P_H-vision {
-  &__kv {
-    width: 100%;
-    height: 50vh;
-    position: relative;
-    z-index: 3;
-  }
   &__nav-flame {
     position: absolute;
     top: 64%;
@@ -50,15 +44,15 @@
   &__title-wrap {
     position: relative;
     overflow: hidden;
-    padding-top: $space_section_sp;
-    padding-left: $space_side_sp;
-    padding-right: $space_side_sp;
+    padding-top: $space-section;
+    padding-left: $space-side;
+    padding-right: $space-side;
     height: 100vh;
     background-color: white;
     @include mq-up("tab") {
-      padding-top: $space_section_pc;
-      padding-left: $space_side_pc;
-      padding-right: $space_side_pc;
+      padding-top: $space-section;
+      padding-left: $space-side;
+      padding-right: $space-side;
     }
   }
   &__sub-title {
@@ -160,7 +154,7 @@
         top: 33%;
         left: 47%;
         @include mq-up("tab") {
-          top: 45%;
+          top: 38%;
           left: 77%;
         }
         @include mq-up("pc") {
@@ -178,7 +172,7 @@
     height: 700px;
     opacity: 0.7;
     mix-blend-mode: multiply;
-    animation: hoverReverse .3s ease-in forwards, uneune 55s linear .3s infinite, rotate 80s linear .3s infinite;
+    animation: hoverReverse .3s ease-in forwards, uneune 35s linear .3s infinite, rotate 60s linear .3s infinite;
     &.small {
       width: 300px;
       height: 300px;
@@ -191,15 +185,15 @@
     }
   }
   &__circle-friend {
-    background: #f66;
+    background: $color-vision-friend;
     border-radius: 50% 70% 50% 70%/50% 50% 70% 60%;
   }
   &__circle-play {
-    background: #f92;
+    background: $color-vision-play;
     border-radius: 50% 40% 50% 50%/50%;
   }
   &__circle-kind {
-    background: #fc2;
+    background: $color-vision-kind;
     border-radius: 40% 70% 40% 70%/60% 60% 30% 50%;
   }
   &__circle-text{
@@ -250,83 +244,36 @@
       }
     }
   }
-  @keyframes uneune {
-    0% {
-      border-radius: 60% 50% 60% 50% / 50% 60% 50% 60%; 
-    }
-
-    25% {
-      border-radius: 70% 60% 60% 70% / 70% 80% 40% 70%; 
-    }
-
-    50% {
-      border-radius: 60% 40% 70% 60% / 40% 60% 50% 60%; 
-    }
-
-    75% {
-      border-radius: 70% 60% 40% 70% / 70% 50% 60% 40%; 
-    }
-
-    100% {
-      border-radius: 60% 50% 60% 50% / 50% 60% 50% 60%; 
-    }
-  }
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes hover {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(0deg) scale(1.2,1.2);
-    }
-  }
-  @keyframes hoverReverse {
-    0% {
-      transform: rotate(0deg) scale(1.2,1.2);
-    }
-    100% {
-      transform: rotate(0deg);
-      transform: rotate(0deg) scale(1,1);
-    }
-  }
   &__wrap {
     display: flex;
     flex-direction: column;
-    margin-bottom: $space_side * 2;
+    margin-bottom: $space-side * 2;
     @include mq-up("pc") {
-      padding-left: $space_side;
-      padding-right: $space_side;
-      padding-top: $space_section;
+      padding-left: $space-side;
+      padding-right: $space-side;
+      padding-top: $space-section;
       margin-bottom: 0;
     }
     &.noLeft {
       @include mq-up("pc") {
-        margin-left: $space_side * -1;
+        margin-left: $space-side * -1;
         flex-direction: row;
       }
     }
     &.noRight {
       @include mq-up("pc") {
-        margin-right: $space_side * -1;
+        margin-right: $space-side * -1;
         flex-direction: row;
       }
     }
-
     &.last {
-      margin-bottom: $space_side * 2;
+      margin-bottom: $space-side * 2;
     }
   }
   &__text-box {
     width: 100%;
     padding: $space-side;
-    padding-top: $space_side * 2;
+    padding-top: $space-side * 2;
     position: relative;
     order: 2;
     @include mq-up("pc") {

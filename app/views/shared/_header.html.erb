@@ -16,53 +16,53 @@
             <%= link_to '七彩学舎について', about_home_index_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
-            <%= link_to '入園をご希望の方へ', root_path, class: 'L_header__pc-nav-text' %>
+            <%= link_to '入園をお考えの方へ', admission_home_index_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
             <%= link_to '就職希望の方へ', contact_recruits_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
-            <%= link_to 'パルティ道教寺', root_path, class: 'L_header__pc-nav-text' %>
+            <%= link_to 'パルティ道教寺', parti_index_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
-            <%= link_to 'ピアニィ道教寺', root_path, class: 'L_header__pc-nav-text' %>
+            <%= link_to 'ピアニィ道教寺', piani_index_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
-            <%= link_to 'お問い合わせ', root_path, class: 'L_header__pc-nav-text' %>
+            <%= link_to 'お問い合わせ', contact_home_index_path, class: 'L_header__pc-nav-text' %>
           </li>
         </ul>
       </nav>
     </div>
     <%#-- メニューボタン --%>
-    <button class="C_Btn--hamberger sp-only" id="JS_menu-open_trigger">
+    <button class="C_Btn--hamberger tab-sp-only" id="JS_menu-open_trigger">
       <span class="C_Btn--hamberger__border isMoveTop" id="JS_menu-open_target-btn-0"></span>
       <span class="C_Btn--hamberger__border isMoveTop" id="JS_menu-open_target-btn-1"></span>
       <span class="C_Btn--hamberger__border isMoveTop" id="JS_menu-open_target-btn-2"></span>
     </button>
   <%#-- メニューリストSP --%>
-  <nav class="L_header__sp-nav">
-    <ul class="L_header__sp-nav-items isMoveTop" id="JS_menu-open_target">
-      <li class="L_header__sp-nav-item">
-        <%= link_to '七彩学舎について', about_home_index_path, class: 'L_header__sp-nav-text' %>
+  <nav class="L_header__tab-sp-nav">
+    <ul class="L_header__tab-sp-nav-items isMoveTop" id="JS_menu-open_target">
+      <li class="L_header__tab-sp-nav-item">
+        <%= link_to '七彩学舎について', about_home_index_path, class: 'L_header__tab-sp-nav-text' %>
       </li>
       <%#-- TODO:入園のご希望の方へのページ作成 --%>
-      <li class="L_header__sp-nav-item">
-        <%= link_to '入園をご希望の方へ', root_path, class: 'L_header__sp-nav-text' %>
+      <li class="L_header__tab-sp-nav-item">
+        <%= link_to '入園をお考えの方へ', admission_home_index_path, class: 'L_header__tab-sp-nav-text' %>
       </li>
-      <li class="L_header__sp-nav-item">
-        <%= link_to '就職希望の方へ', contact_recruits_path, class: 'L_header__sp-nav-text' %>
+      <li class="L_header__tab-sp-nav-item">
+        <%= link_to '就職希望の方へ', contact_recruits_path, class: 'L_header__tab-sp-nav-text' %>
       </li>
       <%#-- TODO:パルティのページ作成 --%>
-      <li class="L_header__sp-nav-item">
-        <%= link_to 'パルティ道教寺', root_path, class: 'L_header__sp-nav-text' %>
+      <li class="L_header__tab-sp-nav-item">
+        <%= link_to 'パルティ道教寺', root_path, class: 'L_header__tab-sp-nav-text' %>
       </li>
       <%#-- TODO:ピアニィのページ作成 --%>
-      <li class="L_header__sp-nav-item">
-        <%= link_to 'ピアニィ道教寺', root_path, class: 'L_header__sp-nav-text' %>
+      <li class="L_header__tab-sp-nav-item">
+        <%= link_to 'ピアニィ道教寺',  piani_index_path, class: 'L_header__tab-sp-nav-text' %>
       </li>
       <%#-- TODO:お問い合わせページの作成 --%>
-      <li class="L_header__sp-nav-item">
-        <%= link_to 'お問い合わせ', root_path, class: 'L_header__sp-nav-text' %>
+      <li class="L_header__tab-sp-nav-item">
+        <%= link_to 'お問い合わせ', contact_home_index_path, class: 'L_header__sp-nav-text' %>
       </li>
     </ul>
   </nav>

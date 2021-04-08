@@ -24,7 +24,69 @@ if (CurrentPath == "/home/about") {
 if (CurrentPath == "/home/vision") {
   require("../page/houjin_vision");
 }
-
+if (CurrentPath == "/home/admission") {
+  require("../page/houjin_admission");
+}
+if (CurrentPath == "/home/contact" ||
+    CurrentPath == "/home/policy" ||
+    CurrentPath == "/home/privacy") {
+  require("../page/houjin_contact");
+}
+if (CurrentPath == "/piani/index") {
+  require("../page/piani_index");
+}
+if (CurrentPath == "/parti/index") {
+  require("../page/parti_index");
+}
+if (CurrentPath == "/parti/vision" ||
+    CurrentPath == "/piani/vision" ) {
+  require("../page/vision");
+}
+if (CurrentPath == "/parti/event" ||
+    CurrentPath == "/piani/event" ) {
+  require("../page/event");
+}
+if (CurrentPath == "/parti/photo_gallery" ||
+    CurrentPath == "/piani/photo_gallery" ) {
+  require("../page/photo_gallery");
+}
+if (CurrentPath == "/parti/photo_gallery" ||
+    CurrentPath == "/piani/photo_gallery" ) {
+  require("../page/photo_gallery");
+}
+if (CurrentPath == "/parti/belong" ||
+    CurrentPath == "/piani/belong" ) {
+  require("../page/belong");
+}
+if (CurrentPath == "/parti/eat_education" ||
+  CurrentPath == "/piani/eat_education") {
+  require("../function/jquery.arctext");
+  require("../page/eat_education");
+}
+if (CurrentPath == "/parti/admission" ||
+  CurrentPath == "/piani/admission") {
+  require("../page/admission");
+}
+if (CurrentPath == "/parti/one_day" ||
+  CurrentPath == "/piani/one_day") {
+  require("../page/one_day");
+}
+if (CurrentPath == "/parti/for_admission" ||
+  CurrentPath == "/piani/for_admission") {
+  require("../page/for_admission");
+}
+if (CurrentPath == "/parti/support" ||
+  CurrentPath == "/piani/support") {
+  require("../page/support");
+}
+if (CurrentPath == "/parti/about" ||
+  CurrentPath == "/piani/about") {
+  require("../page/about");
+}
+if (CurrentPath == "/parti/features" ||
+  CurrentPath == "/piani/features") {
+  require("../page/features");
+}
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.

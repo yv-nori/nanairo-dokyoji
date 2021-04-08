@@ -8,6 +8,17 @@
   top: 0;
   left: 0;
 }
+@mixin image-para {
+  background-size: cover;/* cover指定 */
+  content: "";/* 画像を表示させる為に必要*/
+  display: block;/*ブロックボックスで表示*/
+  position: fixed;/* 擬似要素全体を固定 */
+  width: 100%;/* 横幅を画面全体 */
+  height: 100vh;/* 縦幅を画面全体 */
+  top: 0;/* 上からの配置を0 */
+  left: 0;/* 左からの配置を0 */
+  z-index: -1;/*背景画像になるように重ね順を-1*/
+}
 .C_image {
   &__logo {
     @include image;
@@ -154,13 +165,11 @@
     background: image-url('home/vision_kind.jpg') no-repeat center center / cover;
   }
   &__houjin-kv {
-    background: image-url('home/top_sp.jpg') no-repeat center center / cover;
-    @include image;
-    background-attachment: fixed;
+    background: image-url('home/top_sp.jpg') no-repeat center;
     @include mq-up("pc") {
-      background: image-url('home/top_pc.jpg') no-repeat center center / cover;
-      background-attachment: fixed;
+      background: image-url('home/top_pc.jpg') no-repeat center;
     }
+    @include image-para;
   }
   &__piani-kv {
     background: image-url('piani/kv.jpg') no-repeat center center / cover;

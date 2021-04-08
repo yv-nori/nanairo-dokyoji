@@ -15,6 +15,33 @@ Rails.application.routes.draw do
   resources :piani do
     collection do
       get 'index'
+      get 'vision'
+      get 'event'
+      get 'photo_gallery'
+      get 'belong'
+      get 'eat_education'
+      get 'admission'
+      get 'one_day'
+      get 'for_admission'
+      get 'support'
+      get 'about'
+      get 'features'
+    end
+  end
+  resources :parti do
+    collection do
+      get 'index'
+      get 'vision'
+      get 'event'
+      get 'photo_gallery'
+      get 'belong'
+      get 'eat_education'
+      get 'admission'
+      get 'one_day'
+      get 'for_admission'
+      get 'support'
+      get 'about'
+      get 'features'
     end
   end
 end

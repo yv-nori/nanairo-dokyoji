@@ -53,20 +53,31 @@ $pd-x_sp: 24px;
 
 // スペース
 $space-side: 7vw;
-$space-side_sp: 24px;
-$space-side_pc: 84px;
+$space-side_L: 12vw;
+$space-side_2L: 18vw;
 $space-section: 6vh;
-$space-section_sp: 30px;
+$space-section_M: 10vh;
+$space-section_L: 12vh;
 $space-vertical: 3vh;
+// スペース
+$space-side_px: 112px;
+$space-side_L_px: 192px;
+$space-side_2L_px: 288px;
+$space-section_px: 46.5px;
+$space-section_M_px: 77.5px;
+$space-section_L_px: 93px;
+$space-vertical_px: 23px;
 // $space-section_pc: 60px;
 $space-section_pc: 80px;
-
+$space-photo-narrow: 6px;
 // ナビのメニュー高さ
 $nav-menu-height_sp: 70px;
 
 // デコレーションアイコン
 $deco-width: 75px;
 $deco-height: 75px;
+$deco-vari-width: 9.6vh;
+$deco-vari-height: 4.6vw;
 
 // イメージサイズ
 $image-width: 800px;

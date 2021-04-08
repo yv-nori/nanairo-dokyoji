@@ -39,6 +39,12 @@
       white-space: nowrap;
     }
   }
+  &__mouse {
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 // --------------------------------
 // 理念

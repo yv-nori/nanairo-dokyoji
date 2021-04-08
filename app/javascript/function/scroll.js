@@ -1,8 +1,10 @@
-const _doc = document;
+import {
+  _doc, getTargets
+} from "../function/utility"
 // --------------------------------
 // 共通関数
 // --------------------------------
-// スクロール方向の判定
+// scrollDirection
 export const scrollDirection = (windowScrollTop, startPosition) => {
   if (windowScrollTop == 0) {
     return 'toTop'
@@ -12,7 +14,7 @@ export const scrollDirection = (windowScrollTop, startPosition) => {
     return 'toUp';
   }
 };
-// スクロールステータスの定義
+// scrollStatus
 export const scrollStatus = callback => {
   callback();
 }
@@ -25,14 +27,14 @@ export const isUp = $targets => {
 export const isTop = $targets => {
   $targets.removeClass('isMoveDown').removeClass('isMoveUp').addClass('isMoveTop');
 }
-// スクロールステータスホワイトスタート
+// headerStatusWhite
 export const headerStatusWhite = $targets => {
   let length = $targets.length;
   for (let i = 0; i < length; i++) { 
     scrollStatus(isUp.bind(null, $($targets[i])));
   }
 }
-// スクロールチェンジ関数
+// scrollChange
 export const scrollChange = (windowScrollTop, startPosition, $targets, toTop = true) => {
   let length = $targets.length;
   for (let i = 0; i < length; i++) {
@@ -53,7 +55,7 @@ export const scrollChange = (windowScrollTop, startPosition, $targets, toTop = t
     }
   }
 };
-// スクロールムーブ関数
+// scrollMove
 export const scrollMove = (windowScrollTop, Items) => {
   const length = Items.$targets.length;
   for (let i = 0; i < length; i++) { 
@@ -62,7 +64,7 @@ export const scrollMove = (windowScrollTop, Items) => {
     }
   }
 };
-// スクロールトリガー
+// scrollTrigger
 export const scrollTrigger = (windowScrollTop, Positions, startScreenPosition = screenCenter, addStart= 0, addEnd = 0) => {
   const startScreen = startScreenPosition() + windowScrollTop;
   let length = Positions.start.length
@@ -73,7 +75,7 @@ export const scrollTrigger = (windowScrollTop, Positions, startScreenPosition = 
   }
   return false
 }
-// スクロールアクション
+// screen scroll方向やポジション
 export const screenTop = () => {
   return 0
 }
@@ -85,11 +87,29 @@ export const screenBottom = () => {
   let html = window.document.documentElement;
   return html.clientHeight
 }
+// scrollAction
+// export const scrollAction = (windowScrollTop, Items) => {
+//   let trigers_length = Items.$triggers.length;
+//   let result = scrollTrigger(windowScrollTop, Items.scrollPositions)
+//   for (let trigger = 0; trigger < trigers_length; trigger++) {
+//     if (result !== false) {
+//       let targets_length = Items.$targets[result].length;
+//       for (let i = 0; i < targets_length; i++) {
+//         $(Items.$targets[result][i]).addClass('isActive');
+//       }
+//     } else {
+//       let targets_length = Items.$targets[trigger].length;
+//       for (let i = 0; i < targets_length; i++) {
+//         $(Items.$targets[trigger][i]).removeClass('isActive');
+//       }
+//     }
+//   }
+// }
 export const scrollAction = (windowScrollTop, Items) => {
   let trigers_length = Items.$triggers.length;
   let result = scrollTrigger(windowScrollTop, Items.scrollPositions)
   for (let trigger = 0; trigger < trigers_length; trigger++) {
-    if (result !== false) {
+    if (result === trigger) {
       let targets_length = Items.$targets[result].length;
       for (let i = 0; i < targets_length; i++) {
         $(Items.$targets[result][i]).addClass('isActive');
@@ -102,7 +122,7 @@ export const scrollAction = (windowScrollTop, Items) => {
     }
   }
 }
-// スクロールアクションストップ
+// scrollActionStop
 export const scrollActionStop = $targets => {
   $targets.flat()
   let length = $targets.length
@@ -110,7 +130,7 @@ export const scrollActionStop = $targets => {
     $($targets[i]).removeClass('isActive');
   }
 }
-// スクロールアクション（トップへ戻る）
+//scrollToTop（ページトップへ戻る）
 export const scrollToTop = (windowScrollTop, startPosition, Items, addStart = 67.5, addEnd = 240, startScreenPosition = screenBottom) => {
   $(Items.$target).removeClass('A_isHide');
   let result = scrollTrigger(windowScrollTop, Items.scrollPositions, startScreenPosition, addStart, addEnd)
@@ -130,17 +150,17 @@ export const scrollToTop = (windowScrollTop, startPosition, Items, addStart = 67
 export const scrollToTopHide = ($target) => {
   $($target).addClass('A_isHide');
 }
-// リセットポジション
-export const resetPositions = (scrollPositions, $triggers) => {
+// resetPositions
+export const resetPositions = (scrollPositions, $triggers, addStart = 0, addEnd = 0) => {
   scrollPositions.start = [];
   scrollPositions.end = [];
   const length = $triggers.length;
   for (let i = 0; i < length; i++) {
-    scrollPositions.start.push($($triggers[i]).offset().top);
-    scrollPositions.end.push($($triggers[i]).offset().top + $($triggers[i]).height());
+    scrollPositions.start.push($($triggers[i]).offset().top + addStart );
+    scrollPositions.end.push($($triggers[i]).offset().top + $($triggers[i]).height() + addEnd);
   }
 }
-// リセットムーブポジション
+// resetMovePositions
 export const resetMovePositions = Items => {
   let length = Items.$targets.length
   for (let i = 0; i < length; i++) {
@@ -157,7 +177,7 @@ export const resetMovePositions = Items => {
     Items.maxDistance.push(Items.end - $(Items.$targets[i]).offset().top);
   }
 }
-// リセットスムースポジション
+// resetSmoothPositions
 export const resetSmoothPositions = (Items) => {
   let length = Items.$targets.length
   Items.targetOffset = [];
@@ -165,7 +185,7 @@ export const resetSmoothPositions = (Items) => {
     Items.targetOffset.push($(Items.$targets[i]).offset().top);
   }
 }
-// スムーズスクロール
+// smoothScroll
 export const smoothScroll = (Items, speed = 500) => {
   let length = Items.$triggers.length
   for (let i = 0; i < length; i++) {
@@ -174,7 +194,7 @@ export const smoothScroll = (Items, speed = 500) => {
     });
   }
 };
-// // トゥダウン
+// 未toDown
 // export const toDown = (Items, speed = 500) => {
 //   let length = Items.targetOffset.length
 //   console.log(Items.targetOffset.length)
@@ -195,7 +215,7 @@ export const smoothScroll = (Items, speed = 500) => {
 // --------------------------------
 // DOMの格納
 // --------------------------------
-// チェンジアイテム
+// $changeTargets
 export const $changeTargets = addItems => {
   const $changeTargets = [
     _doc.getElementById('JS_scroll-change_target'),
@@ -203,7 +223,7 @@ export const $changeTargets = addItems => {
   ];
   return $changeTargets;
 };
-// ムーブアイテム
+// moveItems
 export const moveItems = () => {
   const Items = {
     $targets: [
@@ -219,7 +239,7 @@ export const moveItems = () => {
   resetMovePositions(Items)
   return Items;
 };
-// スクロールアクションアイテム
+// scrollActionItems
 export const scrollActionItems = () => {
   const Items = {
     $triggers: [],
@@ -237,7 +257,7 @@ export const scrollActionItems = () => {
   resetPositions(Items.scrollPositions, Items.$triggers);
   return Items;
 }
-// トゥトップアイテム
+// toTopItems
 export const toTopItems = () => {
   const Items = {
     $triggers: [],
@@ -255,7 +275,7 @@ export const toTopItems = () => {
   resetPositions(Items.scrollPositions, Items.$triggers);
   return Items;
 }
-// トゥトップアイテム追加
+// addToTopTrigger
 export const addToTopTrigger = (Items) => {
   if (Items.addTrigerNum === 0) {
     let $trigger;
@@ -266,7 +286,7 @@ export const addToTopTrigger = (Items) => {
       resetPositions(Items.scrollPositions, Items.$triggers);
   }
 }
-// トゥトップアイテム削除
+// removeToTopTrigger
 export const removeToTopTrigger = (Items) => {
   for (let i = 0; i < Items.addTrigerNum; i++) {
     Items.$triggers.pop();
@@ -274,7 +294,7 @@ export const removeToTopTrigger = (Items) => {
   Items.addTrigerNum = 0;
   resetPositions(Items.scrollPositions, Items.$triggers);
 }
-// スムースアイテム
+// smoothItems
 export const smoothItems = () => {
   const Items = {
     $triggers: [],

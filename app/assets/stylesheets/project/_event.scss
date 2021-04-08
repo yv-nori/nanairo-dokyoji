@@ -1,0 +1,733 @@
+.P_event {
+  &__kv {
+    width: 100%;
+    height: 50vh;
+    background-color: grey;
+  }
+  &__deco {
+    &-spring {
+      &-heart2 {
+        background: image-url('deco/event/spring-heart.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 36%;
+        height: 40%;
+        top: 8%;
+        right: -45%;
+      }
+      &-triangle1 {
+        background: image-url('deco/event/spring-triangle1.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 22%;
+        height: 38%;
+        bottom: -32%;
+        left: -22%;
+      }
+      &-triangle2 {
+        background: image-url('deco/event/spring-triangle2.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 27%;
+        height: 45%;
+        top: -45%;
+        right: -17%;
+      }
+    }
+    &-summer {
+      &-star1 {
+        background: image-url('deco/event/summer-star1.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 20%;
+        height: 39%;
+        top: -38%;
+        left: -9%;
+      }
+      &-star2 {
+        background: image-url('deco/event/summer-star2.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 20%;
+        height: 43%;
+        bottom: -31%;
+        right: -19%;
+      }
+      &-bubble1 {
+        background: image-url('deco/event/summer-bubble1.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 13%;
+        height: 34%;
+        bottom: -46%;
+        left: -7%;
+      }
+      &-bubble2 {
+        background: image-url('deco/event/summer-bubble2.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 35%;
+        height: 39%;
+        top: -51%;
+        right: -10%;
+      }
+    }
+    &-autumn {
+      &-triangle1 {
+        background: image-url('deco/event/autumn-triangle1.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 23%;
+        height: 12%;
+        bottom: -8%;
+        right: -34%;
+      }
+      &-triangle2 {
+        background: image-url('deco/event/autumn-triangle2.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 38%;
+        height: 28%;
+        top: -25%;
+        left: -44%;
+      }
+      &-heart1 {
+        background: image-url('deco/event/autumn-heart1.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 18%;
+        height: 35%;
+        bottom: -29%;
+        right: -15%;
+      }
+      &-heart2 {
+        background: image-url('deco/event/autumn-heart2.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 22%;
+        height: 42%;
+        top: -48%;
+        left: -25%;
+        @include mq-up("tab") {
+          top: -54%;
+          left: -18%;
+        }
+      }
+      &-star1 {
+        background: image-url('deco/event/autumn-star1.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 27%;
+        height: 19%;
+        top: -22%;
+        left: -10%;
+      }
+      &-star2 {
+        background: image-url('deco/event/autumn-star2.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 30%;
+        height: 28%;
+        bottom: -15%;
+        right: -30%;
+      }
+      &-bubble {
+        background: image-url('deco/event/autumn-bubble1.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 31%;
+        height: 38%;
+        top: -45%;
+        right: -9%;
+      }
+    }
+    &-winter {
+      &-triangle1 {
+        background: image-url('deco/event/winter-triangle1.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 16%;
+        height: 19%;
+        bottom: -25%;
+        right: -23%;
+      }
+      &-triangle2 {
+        background: image-url('deco/event/winter-triangle2.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 32%;
+        height: 40%;
+        top: -51%;
+        left: -25%;
+      }
+      &-music-note1 {
+        background: image-url('deco/event/winter-music-note1.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 19%;
+        height: 25%;
+        bottom: -8%;
+        left: -27%;
+        @include mq-up("tab") {
+          width: 21%;
+          height: 25%;
+          bottom: -42%;
+          left: -15%;
+        }
+      }
+      &-music-note2 {
+        background: image-url('deco/event/winter-music-note2.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 22%;
+        height: 25%;
+        top: -39%;
+        right: -15%;
+      }
+      &-star1 {
+        background: image-url('deco/event/winter-star1.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 16%;
+        height: 27%;
+        bottom: -25%;
+        left: -14%;
+      }
+      &-star2 {
+        background: image-url('deco/event/winter-star2.svg') no-repeat center center / cover;
+        position: absolute;
+        width: 18%;
+        height: 36%;
+        top: -42%;
+        right: -13%;
+      }
+    }
+  }
+  &__nav {
+    z-index: map-get($layer, 'icon');
+    position: fixed;
+    right: 10%;
+    top: 11%;
+    width: 5vw;
+    height: 36vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    @include mq-up("tab") {
+      right: 3%;
+      top: 16%;
+      height: 27vh;
+      min-height: 240px;
+    }
+    @include mq-up("pc") {
+      height: 36vh;
+      top: 13%;
+      right: 2%;
+    }
+  }
+  &__season-list {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: $font-size-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &.spring {
+      color: invert($color-spring);
+      background: #E7A0A9;
+      box-shadow: 5px 5px 10px #c48890,
+                  -5px -5px 10px #ffb8c2;
+      &:hover {
+        background: linear-gradient(145deg, #d09098, #f7abb5);
+      }
+      &.isActive {
+        background: #E7A0A9;
+        box-shadow: inset 5px 5px 10px #c48890,
+                    inset -5px -5px 10px #ffb8c2;
+      }
+    }
+    &.summer {
+      color: invert($color-summer);
+      background: #96CDCD;
+      box-shadow: 5px 5px 10px #80aeae,
+                  -5px -5px 10px #adecec;
+      &:hover {
+        background: linear-gradient(145deg, #87b9b9, #a1dbdb);
+      }
+      &.isActive {
+        background: #96CDCD;
+        box-shadow: inset 5px 5px 10px #80aeae,
+                    inset -5px -5px 10px #adecec;
+      }
+    }
+    &.autumn {
+      color: invert($color-autumn);
+      background: #ADD291;
+      box-shadow:  5px 5px 10px #93b37b, -5px -5px 10px #c7f2a7;
+      &:hover {
+        background: linear-gradient(145deg, #9cbd83, #b9e19b);
+      }
+      &.isActive {
+        box-shadow: inset 5px 5px 10px #93b37b,
+                    inset -5px -5px 10px #c7f2a7;
+      }
+    }
+    &.winter {
+      color: invert($color-winter);
+      background: #C2AB94;
+      box-shadow:  5px 5px 10px #a5917e, -5px -5px 10px #dfc5aa;
+      &:hover {
+        background: linear-gradient(145deg, #af9a85, #d0b79e);
+      }
+      &.isActive {
+        background: #C2AB94;
+        box-shadow: inset 5px 5px 10px #a5917e,
+                    inset -5px -5px 10px #dfc5aa;
+      }
+    }
+  }
+  &__back-color {
+    background: linear-gradient(177deg,$color-spring-thin 19%, $color-summer-thin 22%, $color-summer-thin 34%, $color-autumn-thin 37%, $color-autumn-thin 70%, $color-winter-thin 73%);
+  }
+  &__wrap {
+    padding-left: $space-side_L;
+    padding-right: $space-side_L;
+    @include mq-up("pc") {  
+      padding-left: $space-side_2L;
+      padding-right: $space-side_2L;
+    }
+    position: relative;
+  }
+  &__season-text-ja {
+    width: 100%;
+    display: block;
+    font-size: $font-size-base * 2.5;
+    text-align: center;
+    padding-top: 1vh;
+    &.top {
+      padding-top: $space-section_L;
+    }
+    &.spring {
+      color: invert($color-spring);
+    }
+    &.summer {
+      color: invert($color-summer);
+    }
+    &.autumn {
+      color: invert($color-autumn);
+    }
+    &.winter {
+      color: invert($color-winter);
+    }
+  }
+  &__season-text-en {
+    margin-bottom: $space-vertical;
+    width: 100%;
+    display: block;
+    font-size: $font-size-base * 1.875;
+    margin-top: -18px;
+    text-align: center;
+    font-family: 'logo-font';
+    &.spring {
+      color: invert($color-spring);
+    }
+    &.summer {
+      color: invert($color-summer);
+    }
+    &.autumn {
+      color: invert($color-autumn);
+    }
+    &.winter {
+      color: invert($color-winter);
+    }
+  }
+  &__deco-line-trim {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    &.spring {
+      height: 104%;
+    }
+    &.summer {
+      height: 105%;
+    }
+    &.autumn {
+      height: 102%;
+    }
+    &.winter {
+      height: 102%;
+    }
+  }
+  &__deco-line-ver {
+    stroke-dasharray: 0 7;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    &.spring {
+      stroke: invert($color-spring);
+    }
+    &.summer {
+      stroke: invert($color-summer);
+    }
+    &.autumn {
+      stroke: invert($color-autumn);
+    }
+    &.winter {
+      stroke: invert($color-winter);
+    }
+  }
+  &__deco-line-canvas {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+    left: 59%;
+    stroke-width: 0;
+    @include mq-up("tab") {
+      left: 52%;
+    }
+  }
+  &__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $space-section_L;
+    height: 30vh;
+    &.right {
+      flex-direction: row-reverse;
+    }
+    &.photo2-ver {
+      height: 72vh;
+    }
+    &.photo2-hor {
+      height: 60vh;
+    }
+    @include mq-up("tab") {
+      min-height: 307px;
+      &.photo2-ver {
+        height: 30vh;
+      }
+      &.photo2-hor {
+        height: 30vh;
+      }
+    }
+    @include mq-up("pc") {
+      height: 45vh;
+      &.photo2-ver {
+        height: 45vh;
+      }
+      &.photo2-hor {
+        height: 45vh;
+      }
+    }
+  }
+  &__deco-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+  }
+  &__contents-wrap {
+    position: relative;
+    padding-bottom: $space-section_L;
+  }
+  &__img-box {
+    position: relative;
+    background-color: grey;
+    height: 100%;
+    width: calc(82% + #{$space-side_L});
+    &.left {
+      margin-left: $space-side_L * -1;
+    }
+    &.right {
+      margin-right: $space-side_L * -1;
+    }
+    &.photo2-ver {
+      height: calc(50% - #{$space-section_L} / 2);
+    }
+    &.photo2-hor {
+      height: 50%;
+    }
+    @include mq-up("tab") {
+      width: 80%;
+      &.photo2-ver {
+        height: 100%;
+      }
+      &.photo2-hor {
+        height: 100%;
+      }
+    }
+    @include mq-up("pc") {
+      margin-left: 0;
+      margin-right: 0;
+      width: 55%;
+      &.photo2-ver {
+        height: 100%;
+      }
+      &.photo2-hor {
+        height: 100%;
+      }
+      &.left {
+        margin-left: 0;
+      }
+      &.right {
+        margin-right: 0;
+      }
+    }
+  }
+  &__month {
+    font-size: $font-size-base * 3.75;
+    position: absolute;
+    top: 0;
+    transform: scale(0.9, 1) translateY(-85%);
+    padding-right: 8px;
+    &.left {
+      left: 7%;
+      @include mq-up("pc") {  
+        left: 0;
+      }
+    }
+    &.right {
+      right: 7%;
+      @include mq-up("pc") {  
+        right: 0;
+      }
+    }
+    &_S {
+      font-size: $font-size-base * 1.625;
+      margin-left: -8px;
+    }
+    &.spring {
+      color: invert($color-spring);
+    }
+    &.summer {
+      color: invert($color-summer);
+    }
+    &.autumn {
+      color: invert($color-autumn);
+    }
+    &.winter {
+      color: invert($color-winter);
+    }
+  }
+  &__title-ja {
+    top: 0;
+    height: 38px;
+    width: 137px;
+    border: solid 1px $color-text;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    font-size: $font-size-base;
+    transform: translateY(-50%);
+    &.left {
+      right: 10%;
+    }
+    &.right {
+      left: 10%;
+    }
+    @include mq-up("tab") {
+      top: 10%;
+      height: 70%;
+      width: 47px;
+      writing-mode: vertical-rl;
+      font-size: $font-size-base * 1.375;
+      &.left {
+        transform: translateX(50%);
+        right: 0;
+      }
+      &.right {
+        transform: translateX(-50%);
+        left: 0;
+      }
+    }
+  }
+  &__img-sub {
+    position: relative;
+    &.left {
+      margin: auto 1vw auto auto;
+    }
+    &.right {
+      margin: auto auto auto 1vw;
+    }
+    &.ver {
+      margin: auto auto 0 auto;
+      width: 60%;
+      height: calc(50% - #{$space-section_L} / 2);
+      @include mq-up("tab") {
+        margin: auto 0 auto auto;
+        width: 22%;
+        height: 60%;
+        &.left {
+          margin: auto 0 auto auto;
+        }
+        &.right {
+          margin: auto auto auto 0;
+        }
+      }
+      @include mq-up("pc") {
+        width: 17%;
+        height: 70%;
+        &.left {
+          margin: auto 6vw auto auto;
+        }
+        &.right {
+          margin: auto auto auto 6vw;
+        }
+      }
+    }
+    &.hor {
+      margin: auto auto 0 auto;
+      width: 80%;
+      height: calc(50% - 12vh);
+      @include mq-up("tab") {
+        width: 32%;
+        height: 42%;
+        &.left {
+          margin: auto -6vw auto auto;
+        }
+        &.right {
+          margin: auto auto auto -6vw;
+        }
+      }
+      @include mq-up("pc") {
+        width: 30%;
+        height: 52%;
+        &.left {
+          margin: auto 2vw auto auto;
+        }
+        &.right {
+          margin: auto auto auto 2vw;
+        }
+      }
+    }
+  }
+  &__trim-img{
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    border-radius: 23px;
+    overflow: hidden;
+    position: absolute;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  &__deco{
+    &-top-left, &-top-right, &-bottom-left, &-bottom-right {
+      position: absolute;
+      width: 20%;
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+    }
+    &-top-left {
+      border-left: 1px solid $color-text;
+      border-top: 1px solid $color-text;
+      &.ver {
+        top: -3%;
+        left: -3%;
+        border-top-left-radius: 76%;
+        @include mq-up("tab") {
+          border-top-left-radius: 100%;
+        }
+        @include mq-up("pc") {
+          border-top-left-radius: 80%;
+        }
+      }
+      &.hor {
+        top: -4%;
+        left: -3%;
+        border-top-left-radius: 60%;
+        @include mq-up("tab") {
+          border-top-left-radius: 75%;
+        }
+        @include mq-up("pc") {
+          border-top-left-radius: 45%;
+        }
+      }
+      @include mq-up("tab") {
+        border-top-left-radius: 50px;
+      }
+    }
+    &-top-right {
+      border-right: 1px solid $color-text;
+      border-top: 1px solid $color-text;
+      &.ver {
+        top: -3%;
+        right: -3%;
+        border-top-right-radius: 76%;
+        @include mq-up("tab") {
+          border-top-right-radius: 100%;
+        }
+        @include mq-up("pc") {
+          border-top-right-radius: 80%;
+        }
+      }
+      &.hor {
+        top: -4%;
+        right: -3%;
+        border-top-right-radius: 60%;
+        @include mq-up("tab") {
+          border-top-right-radius: 75%;
+        }
+        @include mq-up("pc") {
+          border-top-right-radius: 45%;
+        }
+      }
+      @include mq-up("tab") {
+        border-top-right-radius: 50px;
+      }
+    }
+    &-bottom-left {
+      border-left: 1px solid $color-text;
+      border-bottom: 1px solid $color-text;
+      &.ver {
+        bottom: -3%;
+        left: -3%;
+        border-bottom-left-radius: 76%;
+        @include mq-up("tab") {
+          border-bottom-left-radius: 100%;
+        }
+        @include mq-up("pc") {
+          border-bottom-left-radius: 80%;
+        }
+      }
+      &.hor {
+        bottom: -4%;
+        left: -3%;
+        border-bottom-left-radius: 60%;
+        @include mq-up("tab") {
+          border-bottom-left-radius: 75%;
+        }
+        @include mq-up("pc") {
+          border-bottom-left-radius: 45%;
+        }
+      }
+      @include mq-up("tab") {
+        border-bottom-left-radius: 50px;
+      }
+    }
+    &-bottom-right {
+      border-right: 1px solid $color-text;
+      border-bottom: 1px solid $color-text;
+      &.ver {
+        bottom: -3%;
+        right: -3%;
+        border-bottom-right-radius: 76%;
+        @include mq-up("tab") {
+          border-bottom-right-radius: 100%;
+        }
+        @include mq-up("pc") {
+          border-bottom-right-radius: 80%;
+        }
+      }
+      &.hor {
+        bottom: -4%;
+        right: -3%;
+        border-bottom-right-radius: 60%;
+        @include mq-up("tab") {
+          border-bottom-right-radius: 75%;
+        }
+        @include mq-up("pc") {
+          border-bottom-right-radius: 45%;
+        }
+      }
+      @include mq-up("tab") {
+        border-bottom-right-radius: 50px;
+      }
+    }
+  }
+}

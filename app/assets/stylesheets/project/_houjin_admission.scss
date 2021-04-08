@@ -25,7 +25,7 @@
   }
   &__inner-text {
     width: 100%;
-    padding-top: $space-section_sp;
+    padding-top: $space-section;
     order: 2;
     @include mq-up("pc") {
       width: 50%;

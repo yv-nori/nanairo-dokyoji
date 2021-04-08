@@ -7,28 +7,28 @@
       <%#-- ロゴ --%>
       <h1 class="L_header__logo">
         <div class="L_header__logo-image-piani isMoveTop" id="JS_scroll-change_target-H1"></div>
-        <%= link_to "", root_path, class:"U_link"%>
+        <%= link_to "", piani_index_path, class:"U_link"%>
       </h1>
       <%#-- メニューリストPC --%>
       <nav class="L_header__pc-nav">
         <ul class="L_header__pc-nav-items pc-only">
           <li class="L_header__pc-nav-item">
-            <%= link_to '当園について', about_home_index_path, class: 'L_header__pc-nav-text' %>
+            <%= link_to '当園について', about_piani_index_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
-            <%= link_to '入園をお考えの方へ', admission_home_index_path, class: 'L_header__pc-nav-text' %>
+            <%= link_to '入園をお考えの方へ', admission_piani_index_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
-            <%= link_to 'ギャラリー', contact_recruits_path, class: 'L_header__pc-nav-text' %>
+            <%= link_to 'ギャラリー', photo_gallery_piani_index_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
             <%= link_to '食育', root_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
-            <%= link_to '理念',  piani_index_path, class: 'L_header__pc-nav-text' %>
+            <%= link_to '理念',  vision_piani_index_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
-            <%= link_to '年間行事', contact_home_index_path, class: 'L_header__pc-nav-text' %>
+            <%= link_to '年間行事', event_piani_index_path, class: 'L_header__pc-nav-text' %>
           </li>
           <li class="L_header__pc-nav-item">
             <%= link_to '在園の方へ', contact_home_index_path, class: 'L_header__pc-nav-text' %>
@@ -49,14 +49,14 @@
   <nav class="L_header__tab-sp-nav">
     <ul class="L_header__tab-sp-nav-items isMoveTop" id="JS_menu-open_target">
       <li class="L_header__tab-sp-nav-item">
-        <%= link_to '当園について', about_home_index_path, class: 'L_header__tab-sp-nav-text' %>
+        <%= link_to '当園について', about_piani_index_path, class: 'L_header__tab-sp-nav-text' %>
       </li>
       <%#-- TODO:入園のご希望の方へのページ作成 --%>
       <li class="L_header__tab-sp-nav-item">
-        <%= link_to '入園をお考えの方へ', admission_home_index_path, class: 'L_header__tab-sp-nav-text' %>
+        <%= link_to '入園をお考えの方へ', admission_piani_index_path, class: 'L_header__tab-sp-nav-text' %>
       </li>
       <li class="L_header__tab-sp-nav-item">
-        <%= link_to 'ギャラリー', contact_recruits_path, class: 'L_header__tab-sp-nav-text' %>
+        <%= link_to 'ギャラリー', photo_gallery_piani_index_path, class: 'L_header__tab-sp-nav-text' %>
       </li>
       <%#-- TODO:パルティのページ作成 --%>
       <li class="L_header__tab-sp-nav-item">
@@ -64,11 +64,11 @@
       </li>
       <%#-- TODO:ピアニィのページ作成 --%>
       <li class="L_header__tab-sp-nav-item">
-        <%= link_to '理念',  piani_index_path, class: 'L_header__tab-sp-nav-text' %>
+        <%= link_to '理念',  vision_piani_index_path, class: 'L_header__tab-sp-nav-text' %>
       </li>
       <%#-- TODO:お問い合わせページの作成 --%>
       <li class="L_header__tab-sp-nav-item">
-        <%= link_to '年間行事', contact_home_index_path, class: 'L_header__sp-nav-text' %>
+        <%= link_to '年間行事', event_piani_index_path, class: 'L_header__sp-nav-text' %>
       </li>
       <%#-- TODO:お問い合わせページの作成 --%>
       <li class="L_header__tab-sp-nav-item">

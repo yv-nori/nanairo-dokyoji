@@ -2,24 +2,39 @@
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-attachment: fixed;
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 .C_image {
   &__logo {
     @include image;
     background: image-url('logo/nanairo_logo.png') no-repeat center center / contain;
+    &-piani {
+      @include image;
+      background: image-url('logo/piani_logo_under.svg') no-repeat center center / contain;
     }
-  &__logo-piani {
-    @include image;
-    background: image-url('logo/piani_logo.png') no-repeat center center / contain;
+    &-parti {
+      @include image;
+      background: image-url('logo/parti_logo_under.svg') no-repeat center center / contain;
     }
-  &__logo-parti {
-    @include image;
-    background: image-url('logo/parti_logo.png') no-repeat center center / contain;
+    &-cloud1 {
+      @include image;
+      background: image-url('logo/cloud1.png') no-repeat center center / contain;
+      background-size: 400px 300px;
     }
+    &-cloud2 {
+      @include image;
+      background: image-url('logo/cloud2.png') no-repeat center center / contain;
+      background-size: 696px 600px;
+    }
+    &-cloud3 {
+      @include image;
+      background: image-url('logo/cloud3.png') no-repeat center center / contain;
+    }
+  }
   &__parti {
     @include image;
     background: image-url('preschool/parti_sp.jpg') no-repeat center center / cover;
@@ -65,6 +80,10 @@
     background: image-url('recruit/recruit_sp.jpg') no-repeat center center / cover;
     @include mq-up("tab") {
       background: image-url('recruit/recruit.jpg') no-repeat center center / cover;
+      background-position: 17% 20%;
+    }
+    @include mq-up("pc") {
+        background-position: 50% 20%;
     }
     &2 {
       @include image;
@@ -135,22 +154,159 @@
     background: image-url('home/vision_kind.jpg') no-repeat center center / cover;
   }
   &__houjin-kv {
-    background: image-url('home/top_sp.jpg');
+    background: image-url('home/top_sp.jpg') no-repeat center center / cover;
     @include image;
     background-attachment: fixed;
     @include mq-up("pc") {
-      background: image-url('home/top_pc.jpg');
+      background: image-url('home/top_pc.jpg') no-repeat center center / cover;
       background-attachment: fixed;
     }
   }
   &__piani-kv {
-    background: image-url('piani/index/kv.jpg');
+    background: image-url('piani/kv.jpg') no-repeat center center / cover;
+    @include image;
+    filter: saturate(120%);
+    background-position: 62%;
+    @include mq-up("tab") {
+      background-position: 55%;
+    }
+    @include mq-up("pc") {
+      background-position: center;
+    }
+  }
+  &__watering {
+    @include image;
+    background: image-url('piani/watering.jpg') no-repeat center center / cover;
+    top: 0;
+    left: 0%;
+  }
+  &__potato {
+    @include image;
+    background: image-url('piani/potato.jpg') no-repeat center center / cover;
+    top: 0;
+    left: 0%;
+  }
+  &__outsideEat {
+    @include image;
+    background: image-url('piani/outsideEat.jpg') no-repeat center center / cover;
+    top: 0;
+    left: 0%;
+  }
+  &__piani__features__courtesy {
+    background: image-url('piani/features_courtesy.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__features__environment {
+    background: image-url('piani/features_environment.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__features__expression {
+    background: image-url('piani/features_expression.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__features__play {
+    background: image-url('piani/features_play.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__features__together {
+    background: image-url('piani/features_together.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__contents__about {
+    background: image-url('piani/contents_about.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__contents__food-education {
+    background: image-url('piani/contents_food-education.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__contents__philosophy {
+    background: image-url('piani/contents_philosophy.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__contents__event {
+    background: image-url('piani/contents_event.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__gallery1 {
+    background: image-url('piani/gallery1.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__gallery2 {
+    background: image-url('piani/gallery2.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__gallery3 {
+    background: image-url('piani/gallery3.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__gallery4 {
+    background: image-url('piani/gallery4.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__gallery5 {
+    background: image-url('piani/gallery5.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__gallery6 {
+    background: image-url('piani/gallery6.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__nav__admission {
+    background: image-url('piani/nav_admission.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__nav__belong {
+    background: image-url('piani/nav_belong.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__recruit1 {
+    background: image-url('piani/recruit1.jpg') no-repeat center center / cover;
+    @include image;
+    background-position: 32%;
+  }
+  &__piani__recruit2 {
+    background: image-url('piani/recruit2.jpg') no-repeat center center / cover;
+    @include image;
+    background-position: 37%;
+  }
+  &__piani__other__admission {
+    background: image-url('piani/other_admission.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__piani__other__support {
+    background: image-url('piani/other_support.jpg') no-repeat center center / cover;
+    @include image;
+  }
+  &__parti-kv {
+    background: image-url('parti/kv.jpg') no-repeat center center / cover;
     @include image;
     background-attachment: fixed;
   }
   &__parti-kv {
-    background: image-url('parti/index/kv.jpg');
+    background: image-url('parti/kv.jpg') no-repeat center center / cover;
     @include image;
-    background-attachment: fixed;
+  }
+  &__parti__leaf1 {
+    background: image-url('parti/leaf1.png') no-repeat center center / cover;
+    @include image;
+    background-size: contain;
+  }
+  &__parti__leaf2 {
+    background: image-url('parti/leaf2.png') no-repeat center center / cover;
+    @include image;
+    background-size: contain;
+  }
+  &__birds {
+    background: image-url('deco/birds.svg') no-repeat center center / cover;
+    @include image;
+  }
+  &__rain {
+    background: image-url('deco/rain.svg') no-repeat center center / cover;
+    @include image;
+  }
+  &__vision__sky {
+    background: image-url('vision/sky.jpg') no-repeat center center / cover;
+    @include image;
   }
 }

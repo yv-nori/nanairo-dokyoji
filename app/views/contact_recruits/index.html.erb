@@ -21,24 +21,7 @@
         <li><%= link_to '求人情報', '#', class: 'P_Recruit__kv__nav-list', id: 'JS_smoothScroll_trigger-3'%></li>
         <li><%= link_to 'お問い合わせ', '#', class: 'P_Recruit__kv__nav-list', id: 'JS_smoothScroll_trigger-4'%></li>
       </ul>
-      <%#-- シャボン玉左上 --%>
-      <%=render'shared/shabon',{x:16,y:18,cl:'pc-only P_Recruit__kv',size:'LLL',time:'3',ptn:'A',dir:'right',js:''}%>
-      <%=render'shared/shabon',{x:27,y:32,cl:'pc-only P_Recruit__kv',size:'LLL',time:'2',ptn:'B',dir:'right',js:''}%>
-      <%=render'shared/shabon',{x:19,y:45,cl:'P_Recruit__kv',size:'L',time:'1',ptn:'A',dir:'right',js:''}%>
-      <%#-- シャボン玉右上 --%>
-      <%=render'shared/shabon',{x:83,y:24,cl:'P_Recruit__kv',size:'S'  ,time:'2',ptn:'B',dir:'left',js:''}%>
-      <%=render'shared/shabon',{x:90,y:20,cl:'pc-only P_Recruit__kv',size:'SS' ,time:'3',ptn:'A',dir:'left',js:''}%>
-      <%=render'shared/shabon',{x:92,y:28,cl:'P_Recruit__kv',size:'SS' ,time:'2',ptn:'A',dir:'left',js:''}%>
-      <%=render'shared/shabon',{x:96,y:25,cl:'P_Recruit__kv',size:'SSS',time:'3',ptn:'B',dir:'left',js:''}%>
-      <%=render'shared/shabon',{x:86,y:16,cl:'pc-only P_Recruit__kv',size:'SSS',time:'3',ptn:'A',dir:'left',js:''}%>
-      <%#-- シャボン玉左下 --%>
-      <%=render'shared/shabon',{x:4, y:76,cl:'P_Recruit__kv',size:'LLL',time:'3',ptn:'A',dir:'right',js:''}%>
-      <%=render'shared/shabon',{x:10,y:87,cl:'pc_only P_Recruit__kv',size:'M'  ,time:'3',ptn:'B',dir:'right',js:''}%>
-      <%=render'shared/shabon',{x:7, y:92,cl:'P_Recruit__kv',size:'SSS',time:'1',ptn:'A',dir:'right',js:''}%>
-      <%#-- シャボン玉右下 --%>
-      <%=render'shared/shabon',{x:86,y:82,cl:'P_Recruit__kv',size:'LLL',time:'2',ptn:'A',dir:'right',js:''}%>
-      <%=render'shared/shabon',{x:92,y:90,cl:'P_Recruit__kv',size:'M'  ,time:'2',ptn:'B',dir:'right',js:''}%>
-      <%=render'shared/shabon',{x:86, y:94,cl:'P_Recruit__kv',size:'SSS',time:'1',ptn:'A',dir:'right',js:''}%>
+      <div id="JS_shabon_target-0" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
     </div>
   </div>
 </section>
@@ -74,17 +57,7 @@
           <div class="P_Recruit__concept__img-box">
             <div class="C_image__recruit2"></div>
           </div>
-          <%#-- pcシャボン玉左上 --%>
-          <%=render'shared/shabon',{x:6,y:-2,cl:'P_Recruit__concept',size:'M'  ,time:'3',ptn:'B',dir:'right',js:''}%>
-          <%=render'shared/shabon',{x:0,y:13,cl:'sp-only P_Recruit__concept',size:'SSS',time:'1',ptn:'B',dir:'right',js:''} %>
-          <%=render'shared/shabon',{x:10,y:17,cl:'sp-only P_Recruit__concept',size:'SSS',time:'1',ptn:'B',dir:'right',js:''} %>
-          <%=render'shared/shabon',{x:0,y:10,cl:'pc-tab-only P_Recruit__concept',size:'S',time:'1',ptn:'B',dir:'right',js:''} %>
-          <%=render'shared/shabon',{x:10,y:15,cl:'pc-tab-only P_Recruit__concept',size:'SS',time:'2',ptn:'B',dir:'right',js:''} %>
-          <%#-- pcシャボン玉右下 --%>
-          <%=render'shared/shabon',{x:95,y:90,cl:'pc-tab-only P_Recruit__concept',size:'L',time:'1',ptn:'B',dir:'right',js:''}%>
-          <%=render'shared/shabon',{x:95,y:80,cl:'sp-only P_Recruit__concept',size:'L',time:'1',ptn:'B',dir:'right',js:''}%>
-          <%=render'shared/shabon',{x:94,y:98,cl:'P_Recruit__concept',size:'SS'  ,time:'2',ptn:'B',dir:'right',js:''}%>
-          <%=render'shared/shabon',{x:100, y:100,cl:'P_Recruit__concept',size:'SSS',time:'1',ptn:'B',dir:'right',js:''}%>
+          <div id="JS_shabon_target-1" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
         </div>
       </div>
     </div>
@@ -356,15 +329,7 @@ staff4 = [
         </p>
       </div>
     </div>
-    <%#-- シャボン玉左上 --%>
-    <%=render'shared/shabon',{x:7,y:74,cl:'',size:'LLL',time:'3',ptn:'A',dir:'right',js:''}%>
-    <%=render'shared/shabon',{x:15,y:82,cl:'pc-only',size:'LLL',time:'2',ptn:'B',dir:'right',js:''}%>
-    <%=render'shared/shabon',{x:10,y:93,cl:'',size:'L',time:'1',ptn:'A',dir:'right',js:''}%>
-    <%#-- シャボン玉右上 --%>
-    <%=render'shared/shabon',{x:83,y:81,cl:'pc-only',size:'S'  ,time:'2',ptn:'B',dir:'left',js:''}%>
-    <%=render'shared/shabon',{x:92,y:82,cl:'',size:'SS' ,time:'3',ptn:'A',dir:'left',js:''}%>
-    <%=render'shared/shabon',{x:92,y:90,cl:'',size:'SS' ,time:'2',ptn:'A',dir:'left',js:''}%>
-    <%=render'shared/shabon',{x:96,y:92,cl:'',size:'SSS',time:'3',ptn:'B',dir:'left',js:''}%>
+    <div id="JS_shabon_target-2" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
   </div>
 </section>
 <%# ==================================== %>

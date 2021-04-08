@@ -26,8 +26,10 @@
         <div class="C_image__houjin-kv"></div>
         <div class="U_cover--shadow"></div>
         <%#-- マウスアイコン --%>
-        <div class="C_icon-mouse" id="JS_scroll-change_target">
-          <span class="C_icon-mouse__material"></span>
+        <div class="P_Houjin-kv__mouse">
+          <div class="C_icon-mouse" id="JS_scroll-change_target">
+            <span class="C_icon-mouse__material"></span>
+          </div>
         </div>
         <%#-- スクロールするキャッチコピー(フロント白) --%>
         <div class="P_Houjin-kv__text-container" id="JS_scroll-move_target-1">
@@ -116,11 +118,7 @@
           <h2 class="P_Info__sub-text">入園をお考えの方</h2>
         </div>
         <%#-- シャボン --%>
-        <%=render'shared/shabon',{x:4,  y:5,  cl:'P_Info',size:'S' ,time:'2',ptn:'B',dir:'left',js:'JS_scroll-action-0_target-2'}%>
-        <%=render'shared/shabon',{x:0,  y:90, cl:'P_Info',size:'M' ,time:'1',ptn:'A',dir:'left',js:'JS_scroll-action-0_target-3'}%>
-        <%=render'shared/shabon',{x:46, y:10, cl:'P_Info',size:'SS',time:'1',ptn:'A',dir:'left',js:'JS_scroll-action-0_target-4'}%>
-        <%=render'shared/shabon',{x:70, y:38, cl:'P_Info',size:'M' ,time:'2',ptn:'B',dir:'left',js:'JS_scroll-action-0_target-5'}%>
-        <%=render'shared/shabon',{x:100,y:100,cl:'P_Info',size:'L' ,time:'3',ptn:'B',dir:'left',js:'JS_scroll-action-0_target-6'}%>
+        <div id="JS_shabon_target-0" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
         <%= link_to "", admission_home_index_path, class:"U_link"%>
       </div>
       <%#-- 就職希望 --%>
@@ -134,12 +132,7 @@
           <h2 class="P_Info__sub-text">就職をご希望の方</h2>
         </div>
         <%#-- シャボン --%>
-        <%=render'shared/shabon',{x:4, y:5, cl:'P_Info',size:'SS' ,time:'1',ptn:'A',dir:'left',js:'JS_scroll-action-1_target-2'}%>
-        <%=render'shared/shabon',{x:7, y:5, cl:'P_Info',size:'S'  ,time:'2',ptn:'B',dir:'left',js:'JS_scroll-action-1_target-3'}%>
-        <%=render'shared/shabon',{x:1, y:55,cl:'P_Info',size:'LL' ,time:'1',ptn:'A',dir:'left',js:'JS_scroll-action-1_target-4'}%>
-        <%=render'shared/shabon',{x:80,y:10,cl:'P_Info',size:'SS' ,time:'1',ptn:'A',dir:'left',js:'JS_scroll-action-1_target-5'}%>
-        <%=render'shared/shabon',{x:55,y:42,cl:'P_Info',size:'M'  ,time:'2',ptn:'B',dir:'left',js:'JS_scroll-action-1_target-6'}%>
-        <%=render'shared/shabon',{x:100,y:100,cl:'P_Info',size:'LLL',time:'3',ptn:'B',dir:'left',js:'JS_scroll-action-1_target-7'}%>
+        <div id="JS_shabon_target-1" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
         <%= link_to "", contact_recruits_path, class:"U_link"%>
       </div>
     </div>

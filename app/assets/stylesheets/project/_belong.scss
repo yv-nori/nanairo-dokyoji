@@ -1,0 +1,307 @@
+.P_belong__kv {
+  height: 50vh;
+  @include mq-up("pc") {
+    height: 100vh;
+  }
+  position: relative;
+  &__panel-img1,
+  &__panel-img2,
+  &__panel-img3,
+  &__panel-img4,
+  &__panel-img5 {
+    position: absolute;
+    background-color: grey;
+  }
+  &__panel-img1 {
+    width: 50%;
+    height: 70%;
+    top: 0;
+    left: 0;
+  }
+  &__panel-img2 {
+    width: 50%;
+    height: 30%;
+    top: 70%;
+    left: 0;
+  }
+  &__panel-img3 {
+    width: 20%;
+    height: 40%;
+    left: 50%;
+    top: 0;
+  }
+  &__panel-img4 {
+    width: 30%;
+    height: 40%;
+    top: 0;
+    left: 70%;
+  }
+  &__panel-img5 {
+    width: 50%;
+    height: 60%;
+    top: 40%;
+    left: 50%;
+  }
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: $font-size-base * 1.75;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #555865;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    width: 15%;
+    height: 57%;
+    @include mq-up("tab") {
+      width: 9%;
+      min-height: 291px;
+      min-width: 69px;
+    }
+    @include mq-up("pc") {
+      width: 5%;
+      height: 40%;
+    }
+  }
+  &__mouse {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.P_belong__info {
+  &__wrap {
+    margin-top: $space-section;
+    margin-left: $space-side;
+    margin-right: $space-side;
+    @include mq-up("pc") {
+      margin-top: $space-section_L;
+      margin-left: $space-side_L;
+      margin-right: $space-side_L;
+    }
+  }
+  &__table {
+    width: 100%;
+    @include mq-up("pc") {
+      margin: auto;
+      width: 60%;
+    }
+  }
+  &__row {
+    border-top: 1px solid $color-border--thin2;
+    line-height: 150%;
+    &:last-child {
+      border-bottom: 1px solid $color-border--thin2;
+    }
+    @include mq-up("tab") {
+      line-height: 350%;
+    }
+  }
+  &__title {
+    padding-left: 10px;
+    width: 41%;
+    @include mq-up("tab") {
+      width: 23%;
+    }
+  }
+  &__text {
+    padding-left: 10px;
+  }
+  &__more-info {
+    margin: auto;
+    margin-top: $space-section;
+    position: relative;
+    width: 305px;
+    height: 55px;
+    &::after {
+      content: '';
+      width: 300px;
+      height: 50px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-bottom: solid 1px #555865;
+      border-right: solid 1px #555865;
+    }
+    &-text {
+      width: 300px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #555865;
+      color: #fff;
+      text-align: center;
+      padding-top: 11px;
+      transition: .3s;
+    }
+    cursor: pointer;
+    &:hover &-text {
+      transform: translate3d(5px, 5px, 0);
+    }
+  }
+}
+.P_belong__menu {
+  &__wrap {
+    margin-top: $space-section_L;
+    margin-left: $space-side;
+    margin-right: $space-side;
+    margin-bottom: $space-section;
+    @include mq-up("tab") {
+      margin-bottom: $space-section_L;
+    }
+    @include mq-up("pc") {
+      margin-left: $space-side_L;
+      margin-right: $space-side_L;
+    }
+  }
+  &__title-box {
+    margin: auto;
+    text-align: center;
+    width: 160px;
+    height: 100px;
+  }
+  &__title-en {
+    font-family: 'DinPro';
+    position: relative;
+    font-size: $font-size-base * 1.125;
+    padding-bottom: 9px;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: $color-text;
+    }
+  }
+  &__title-ja {
+    padding-top: 6px;
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: $space-vertical;
+    flex-wrap: wrap;
+  }
+  &__box {
+    width: calc(50% - #{$space-side} / 2);
+    @include mq-up("tab") {
+      width: calc(25% - #{$space-side - 1.5vw} / 2);
+    }
+    @include mq-up("pc") {
+      width: calc(25% - #{$space-side} / 2);
+    }
+    &.under {
+      margin-top: $space-section;
+      @include mq-up("tab") {
+        margin-top: 0;
+      }
+    }
+  }
+  &__number {
+    font-size: $font-size-base * 1.125;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  &__number-back-img {
+    position: absolute;
+    top: 56%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+  }
+  &__img {
+    background-color: grey;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    height: 30vh;
+    @include mq-up("tab") {
+      height: 22vh;
+      min-height: 225px;
+    }
+    @include mq-up("pc") {
+      height: 40vh;
+    }
+    &:hover:before {
+      opacity: 0.3;
+    }
+    &:hover &-click-text {
+      opacity: 1;
+    }
+    &:hover &-click-line{
+      opacity: 1;
+      animation: line-stretch3 1s ease-in-out infinite alternate;
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      background-color: #000;
+      opacity: 0;
+      transition: .3s;
+    }
+  }
+  &__img-click-line {
+    width: 67%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 49%;
+    left: 15%;
+    opacity: 0;
+    transition: .3s;
+    transform-origin: left center;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 1px;
+      top: 50%;
+      right: 1px;
+      transform: rotate(45deg) translateY(-50%);
+      transform-origin: right center;
+      background-color: #fff;
+    }
+  }
+  &__img-click-text {
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    top: 56%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    transition: .3s;
+  }
+  &__content-triangle {
+    height: 65px;
+    padding-top: 21px;
+    text-align: center;
+  }
+  &__content-title {
+    border-top: 1px dotted $color-border--thin3;
+    border-bottom: 1px dotted $color-border--thin3;
+    width: 100%;
+    text-align: center;
+    line-height: 250%;
+  }
+  &__content-text {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+  }
+}

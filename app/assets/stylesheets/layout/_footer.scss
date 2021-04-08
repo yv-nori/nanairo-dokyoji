@@ -83,6 +83,7 @@
     letter-spacing: $letter-spacing-base;
     display: block;
     padding-left: 10px;
+    white-space: nowrap;
     &::before {
       content: "/";
       font-size: 12px;

@@ -46,3 +46,22 @@
     }
   }
 }
+.C_text__logo {
+  &__shoe-logo__parti {
+    width: 100%;
+    height: 100%;
+    background: image-url('logo/shoe_logo_parti.svg') no-repeat center center / contain;
+  }
+  &__shoe-logo__piani {
+    width: 100%;
+    height: 100%;
+    background: image-url('logo/shoe_logo_piani.svg') no-repeat center center / contain;
+  }
+  &__name {
+    font-family: 'DinPro';
+    letter-spacing: 0.1em;
+    font-size: $font-size-base * 0.625;
+    text-align: center;
+    margin-top: -8px;
+  }
+}

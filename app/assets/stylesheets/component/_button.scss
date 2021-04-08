@@ -161,3 +161,104 @@
     transform:translate3d(0,0,0); 
   }
 }
+.C_Btn__side-nav {
+  z-index: map-get($layer, 'icon');
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  max-height: 35px;
+  max-width: 35px;
+  opacity: 0.4;
+  border-radius: 50%;
+  transition: .5s;
+  transform-origin: right bottom;
+  background-color: $color-text;
+  &.blue {
+    background-color: $color-blue-back;
+    opacity: 0.9;
+  }
+  @include mq-up("tab") {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    border-radius: initial;
+    max-width: initial;
+    max-height: initial;
+    left: 0;
+    bottom: 0;
+  }
+  &:hover &-title{
+    opacity: 1;
+    @include mq-up("tab") {
+      opacity: 0;
+    }
+  }
+  &-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    &.isActive {
+      display: none;
+    }
+  }
+  &.isActive {
+    opacity: 0.7;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 18px;
+    pointer-events: none;
+    &.blue {
+      opacity: 0.9;
+    }
+  }
+  &.isHide {
+    opacity: 0;
+  }
+  &-list {
+    opacity: 0;
+    color: white;
+    @include mq-up("tab") {
+      opacity: 1;
+      padding-left: 25px;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    &.isActive {
+      pointer-events: auto;
+      opacity: 1;
+      line-height: 190%;
+      cursor: pointer;
+      &.icon {
+        font-size: 15px;
+        position: absolute;
+        bottom: -1px;
+        right: 8px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    transition: .3s;
+    &.isActive {
+      display: none;
+    }
+  }
+}

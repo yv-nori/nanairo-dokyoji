@@ -14,6 +14,11 @@
     @include mq-up("tab") {
       height: 180px;
     }
+    @include mq-up("pc") {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+    }
   }
   &__main-title {
     font-size: $font-size-base * 3;
@@ -24,6 +29,9 @@
     @include mq-up("tab") {
       font-size: $font-size-base * 4.375;
       letter-spacing: $letter-spacing-base * 4.5;
+    }
+    @include mq-up("pc") {
+      font-size: $font-size-base * 2.5;
     }
   }
   &__sub-title {
@@ -37,6 +45,12 @@
       margin-top: -23px;
       font-size: $font-size-base * 2.2;
       letter-spacing: $letter-spacing-base * 1;
+    }
+    @include mq-up("pc") {
+      font-size: $font-size-base * 1.4375;
+      margin-top: 0;
+      padding-top: 15px;
+      padding-left: 10px;
     }
   }
   &__nav {
@@ -54,6 +68,9 @@
     padding-bottom: 15px;
     padding-right: 10px;
     padding-left: 10px;
+    @include mq-up("pc") {
+      justify-content: flex-end;
+    }
   }
   &__nav-list {
     cursor: pointer;

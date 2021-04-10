@@ -40,9 +40,8 @@ $(function(){
         removeToTopTrigger(ToTopItems);
         break;
       case "Tab":
-        scrollAction(windowScrollTop, ScrollActionItems);
         scrollToTop(windowScrollTop, startPosition, ToTopItems);
-        removeToTopTrigger(ToTopItems);
+        addToTopTrigger(ToTopItems);
           break;
       case "PC":
         scrollToTop(windowScrollTop, startPosition, ToTopItems);

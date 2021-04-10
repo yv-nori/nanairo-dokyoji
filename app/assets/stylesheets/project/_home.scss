@@ -10,6 +10,7 @@
     transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%);
     text-align: center;
+    z-index: 2;
   }
   &__front-text {
     color: #fff;
@@ -41,27 +42,44 @@
   }
   &__mouse {
     position: absolute;
-    bottom: 14%;
     left: 50%;
     transform: translateX(-50%);
+    bottom: 5%;
+    @include mq-up("tab") {
+      bottom: 14%;
+    }
   }
 }
 // --------------------------------
 // 理念
 // --------------------------------
 .P_Houjin-philosophy {
+  z-index: 1;
+  background-color: #fff;
+  padding-left: $space-side_L;
+  padding-right: $space-side_L;
+  position: relative;
+  @include mq-up("tab") {
+    padding-left: $space-side_2L;
+    padding-right: $space-side_2L;
+  }
+  @include mq-up("pc") {
+    padding-left: $space-side_3L;
+    padding-right: $space-side_3L;
+  }
   &__catch {
-    padding-top: 72px;
-    padding-bottom: 70px;
+    padding-top: $space-section_L;
     position: relative;
+    padding-bottom: $space-section;
     @include mq-up("tab") {
-      padding-top: 144px;
+      padding-top: $space-section_2L;
+      padding-bottom: $space-section_M;
     }
   }
   &__lead {
-    padding-bottom: 98px;
+    padding-bottom: $space-section;
     @include mq-up("tab") {
-      padding-bottom: 100px;
+      padding-bottom: $space-section_L;
     }
   }
   &__text {
@@ -79,11 +97,15 @@
   &__link-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
   }
   &__link-item {
     pointer-events: auto;
+    width: calc(50% - 2vw);
     cursor: pointer;
+    padding-right: 4vw;
+    padding-left: 4vw;
+    white-space: nowrap;
     &:hover .P_Houjin-philosophy__border-stretch::before {
       width: 100%;
     }
@@ -91,9 +113,7 @@
   &__link-item + li {
     position: relative;
     margin-left: 0;
-    margin-top: 60px;
     @include mq-up("tab") {
-      margin-left: 80px;
       margin-top: 0;
     }
   }
@@ -102,14 +122,19 @@
     text-align: center;
     width: 100%;
     &-ja {
-      padding-bottom: 15px;
-      font-size: $font-size-base * 1.8;
+      padding-bottom: 1.5vh;
+      @include mq-up("tab") {
+        font-size: $font-size-base * 1.8;
+      }
     }
     &-en {
       height: 50%;
-      padding-top: 20px;
-      font-size: $font-size-base;
+      padding-top: 1.3vh;
       letter-spacing: $letter-spacing-base;
+      font-size: $font-size-base * 0.875;
+      @include mq-up("tab") {
+        font-size: $font-size-base;
+      }
     }
   }
   
@@ -133,41 +158,50 @@
 // インフォメーション（就職・入園）
 // --------------------------------
 .P_Info {
-  height: 80vh;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-bottom: $space-side;
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  padding-left: $space-side_L;
+  padding-right: $space-side_L;
+  padding-bottom: 4vh;
+  margin-top: -1px;
+  @include mq-up("tab") {
+    margin-top: 0;
+    padding-left: $space-side_2L;
+    padding-right: $space-side_2L;
+  }
   @include mq-up("pc") {
-    height: 40vh;
-    margin-bottom: 100px;
+    padding-left: $space-side_3L;
+    padding-right: $space-side_3L;
+    padding-bottom: 100px;
   }
   &__container {
     width: 100%;
-    height: 100%;
     display: flex;
+    align-content: space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
   }
   &__image-box {
-    max-width: $image-tab-max;
     width: 100%;
-    height: calc(50% - #{$space-side}/2);
     overflow: hidden;
     transition: all $anime-time-short ease-out;
-    margin: 0 $space-side;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: relative;
-    &:last-child {
-      margin: $space-side $space-side 0 $space-side;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
     }
-    @include mq-up("pc") {
-      width: calc(50% - 120px/2);
-      height: 100%;
-      margin: 0;
-      &:last-child {
-        margin: 0 0 0 120px;
+    &.last {
+      margin-top: 4vh;
+      @include mq-up("tab") {
+        margin-top: 0;
       }
+    }
+    @include mq-up("tab") {
+      width: calc(50% - 3vw);
     }
     &:hover .P_Info__image {
       transform: scale(1.05);
@@ -188,7 +222,6 @@
   }
   &__text-box {
     width: 100%;
-    height: 25%;
     background-color: #77bfc4;
     position: absolute;
     bottom: 0;
@@ -200,10 +233,7 @@
     letter-spacing: $letter-spacing-base * 1.625;
     font-family: "goudy_bookletter_1911";
     @include mq-up("tab") {
-      padding-top: 2px;
-    }
-    @include mq-up("pc") {
-      padding-top: 0;
+      font-size: $font-size-base * 1.4375;
     }
   }
   &__sub-text {
@@ -213,8 +243,9 @@
     white-space: nowrap;
     font-family: "Hannari";
     margin-top: -13px;
+    padding-bottom: 5px;
     @include mq-up("tab") {
-      font-size: $font-size-base * 1.875;
+      font-size: $font-size-base * 1.5625;
     }
     @include mq-up("pc") {
       font-size: $font-size-base * 1.3;
@@ -227,41 +258,52 @@
     }
   }
 }
-
 // --------------------------------
 // 各施設
 // --------------------------------
 .P_Facility {
-  height: 80vh;
-  padding-bottom: $space-side;
-  @include mq-up("pc") {
-    height: 45vh;
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  padding-bottom: 4vh;
+  padding-left: $space-side_L;
+  padding-right: $space-side_L;
+  @include mq-up("tab") {
     padding-top: 0px;
     padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   &__container {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
   }
   &__image-box {
-    max-width: $image-tab-max;
     width: 100%;
-    height: calc(50% - #{$space-side}/2);
     position: relative;
-    margin: 0 $space-side;
     overflow: hidden;
     transition: all $anime-time-short;
-    &:last-child {
-      margin: $space-side $space-side 0 $space-side;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+      @include mq-up("tab") {
+        padding-top: 60%;
+      }
     }
-    @include mq-up("pc") {
-      max-width: inherit;
+    &:last-child {
+      margin-top: 4vh;
+      @include mq-up("tab") {
+        margin-top: 0;
+      }
+    }
+    @include mq-up("tab") {
+      box-shadow: initial;
       width: 50%;
-      height: 100%;
       margin: 0;
       &:last-child {
         margin: 0;
@@ -286,13 +328,16 @@
   }
   &__text {
     color: white;
-    font-size: $font-size-base * 5;
     letter-spacing: $letter-spacing-base * 0.125;
     font-family: "Blankid";
     transition: all $anime-time-short;
     @include abs(50, 60);
+    font-size: $font-size-base * 3.75;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 5;
+    }
     @include mq-up("pc") {
-      @include abs(50, 65);
+      @include abs(50, 68);
       font-size: $font-size-base * 6.875;
     }
   }

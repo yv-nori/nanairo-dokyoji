@@ -20,7 +20,18 @@
 }
 .C_box__side-bar-back {
   position: fixed;
-  z-index: -1;
+  z-index: -3;
+  top: 0;
+  right: 0;
+  width: $side-bar-size;
+  height: 100%;
+  background-color: $color-accent;
+  &.color-recruit {
+    background-color: $color-recruit;
+  }
+}
+.C_box__side-bar-inner {
+  position: absolute;
   top: 0;
   right: 0;
   width: $side-bar-size;

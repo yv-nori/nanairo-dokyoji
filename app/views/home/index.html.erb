@@ -55,86 +55,80 @@
 <%# 理念
 <%# ==================================== %>
 <%#-- キャッチコピーセクション --%>
-<section class="Philosophy">
+<section class="P_Houjin-philosophy">
+  <div class="C_box__side-bar-inner pc-tab-only"></div>
   <div class="P_Houjin-philosophy__catch">
-    <div class="L_wrap__600">
-      <div class="A_isInvisible" id="JS_scroll-move-end_target">
-        <p class="P_Houjin-kv__text-en">
-          <span>
-            Find the Many Like
-            <br class="sp-only">
-            Nurture the future
-          </span>
-        </p>
-        <h2 class="P_Houjin-kv__text-ja">
-          <span>好きが見つかる</span><br>
-          <span>未来を育む</span>
-        </h2>
-      </div>
+    <div class="A_isInvisible" id="JS_scroll-move-end_target">
+      <p class="P_Houjin-kv__text-en">
+        <span>
+          Find the Many Like
+          <br class="sp-only">
+          Nurture the future
+        </span>
+      </p>
+      <h2 class="P_Houjin-kv__text-ja">
+        <span>好きが見つかる</span><br>
+        <span>未来を育む</span>
+      </h2>
     </div>
   </div>
   <%#-- リード文 --%>
   <div class="P_Houjin-philosophy__lead">
-    <div class="L_wrap__600">
-      <p class="P_Houjin-philosophy__text">
-        　私たち七彩(なないろ)学舎では、子どもたちの「好き」を大切にしています。子どもの体験は全て「はじめて」です。その「はじめて」が「好き」になれば、たとえその時苦手なことも継続でき、子どもたちの将来の選択肢が広がります。<br>　私たちは、その考えのもと、子どもたちの未来を育んでいます。</p>
-      <ul class="P_Houjin-philosophy__link-container">
-        <li class="P_Houjin-philosophy__link-item">
-          <div class="P_Houjin-philosophy__link-text">
-            <div class="P_Houjin-philosophy__border-stretch">
-              <p class="P_Houjin-philosophy__link-text-ja">こどもへの願い</p>
-            </div>
-            <p class="P_Houjin-philosophy__link-text-en">VISION</p>
-            <%= link_to "", vision_home_index_path, class:"U_link"%>
+    <p class="P_Houjin-philosophy__text">
+      私たち七彩(なないろ)学舎では、子どもたちの「好き」を大切にしています。子どもの体験は全て「はじめて」です。その「はじめて」が「好き」になれば、たとえその時苦手なことも継続でき、子どもたちの将来の選択肢が広がります。<br>私たちは、その考えのもと、子どもたちの未来を育んでいます。</p>
+    <ul class="P_Houjin-philosophy__link-container">
+      <li class="P_Houjin-philosophy__link-item">
+        <div class="P_Houjin-philosophy__link-text">
+          <div class="P_Houjin-philosophy__border-stretch">
+            <p class="P_Houjin-philosophy__link-text-ja">こどもへの願い</p>
           </div>
-        </li>
-        <li class="P_Houjin-philosophy__link-item">
-          <div class="P_Houjin-philosophy__link-text">
-            <div class="P_Houjin-philosophy__border-stretch">
-              <p class="P_Houjin-philosophy__link-text-ja">私たちのあゆみ</p>
-            </div>
-            <p class="P_Houjin-philosophy__link-text-en">HISTORY</p>
-            <%= link_to "", about_home_index_path, class:"U_link"%>
+          <p class="P_Houjin-philosophy__link-text-en">VISION</p>
+          <%= link_to "", vision_home_index_path, class:"U_link"%>
+        </div>
+      </li>
+      <li class="P_Houjin-philosophy__link-item">
+        <div class="P_Houjin-philosophy__link-text">
+          <div class="P_Houjin-philosophy__border-stretch">
+            <p class="P_Houjin-philosophy__link-text-ja">私たちのあゆみ</p>
           </div>
-        </li>
-      </ul>
-    </div>
+          <p class="P_Houjin-philosophy__link-text-en">HISTORY</p>
+          <%= link_to "", about_home_index_path, class:"U_link"%>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 <%# ==================================== %>
 <%# 就職と入園希望の案内
 <%# ==================================== %>
-<section class="Info">
-  <div class="P_Info">
-    <div class="P_Info__container">
-      <%#-- 入園希望 --%>
-      <div class="P_Info__image-box" id="JS_scroll-action-0_target-0">
-        <div class="P_Info__image" id="JS_scroll-action-0_trigger">
-          <div class="C_image__admission"></div>
-        </div>
-        <div class="U_cover--shadow" id="JS_scroll-action-0_target-1"></div>
-        <div class="P_Info__text-box">
-          <h1 class="P_Info__text">Admission</h1>
-          <h2 class="P_Info__sub-text">入園をお考えの方</h2>
-        </div>
-        <%#-- シャボン --%>
-        <div id="JS_shabon_target-0" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
-        <%= link_to "", admission_home_index_path, class:"U_link"%>
+<section class="P_Info">
+  <div class="C_box__side-bar-inner pc-tab-only"></div>
+  <div class="P_Info__container">
+    <%#-- 入園希望 --%>
+    <div class="P_Info__image-box" id="JS_scroll-action-0_target-0">
+      <div class="P_Info__image" id="JS_scroll-action-0_trigger">
+        <div class="C_image__admission"></div>
       </div>
-      <%#-- 就職希望 --%>
-      <div class="P_Info__image-box" id="JS_scroll-action-1_target-0">
-        <div class="P_Info__image" id="JS_scroll-action-1_trigger">
-          <div class="C_image__recruit"></div>
-        </div>
-        <div class="U_cover--shadow" id="JS_scroll-action-1_target-1"></div>
-        <div class="P_Info__text-box">
-          <h1 class="P_Info__text">Recruiting</h1>
-          <h2 class="P_Info__sub-text">就職をご希望の方</h2>
-        </div>
-        <%#-- シャボン --%>
-        <div id="JS_shabon_target-1" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
-        <%= link_to "", contact_recruits_path, class:"U_link"%>
+      <div class="U_cover--shadow" id="JS_scroll-action-0_target-1"></div>
+      <div class="P_Info__text-box">
+        <h1 class="P_Info__text">Admission</h1>
+        <h2 class="P_Info__sub-text">入園をお考えの方</h2>
       </div>
+      <div id="JS_shabon_target-0" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
+      <%= link_to "", admission_home_index_path, class:"U_link"%>
+    </div>
+    <%#-- 就職希望 --%>
+    <div class="P_Info__image-box last" id="JS_scroll-action-1_target-0">
+      <div class="P_Info__image" id="JS_scroll-action-1_trigger">
+        <div class="C_image__recruit"></div>
+      </div>
+      <div class="U_cover--shadow" id="JS_scroll-action-1_target-1"></div>
+      <div class="P_Info__text-box">
+        <h1 class="P_Info__text">Recruiting</h1>
+        <h2 class="P_Info__sub-text">就職をご希望の方</h2>
+      </div>
+      <div id="JS_shabon_target-1" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
+      <%= link_to "", contact_recruits_path, class:"U_link"%>
     </div>
   </div>
 </section>
@@ -165,28 +159,3 @@
 </section>
 <%= render 'shared/side_bar',{color: ''}%>
 <%= render partial: 'shared/footer' %>
-
-<%#-- フォントの確認用 --%>
-<div class="L_full A_shabon-ver1A U_hy-30">
-  <p class="C_text__font-awesome">あア亜aA「font-family-awesome」</p>
-  <p class="C_text__font-code">あア亜aA「font-family-code」</p>
-  <p class="C_text__font-base">あア亜aA「font-family-base」</p>
-  <p class="C_text__font-hkgw3">あア亜aA「font-family-hkgw3」</p>
-  <p class="C_text__font-hkgw6">あア亜aA「font-family-hkgw6」</p>
-  <p class="C_text__font-minco">あア亜aA「font-family-minco」</p>
-  <p class="C_text__font-gothic">あア亜aA「font-family-gothic」</p>
-  <p class="C_text__font-shuei">あア亜aA「font-family-shuei」</p>
-  <p class="C_text__font-sub-en">あア亜aA「'Blankid'」:Brankid[parti]</p>
-  <p class="C_text__font-DINPro">あア亜aA「'DINPro-Medium';'KozGoPr6N-Regular'」</p>
-  <p class="C_text__font-NewBask">あア亜aA「'NewBaskervilleStd-Roman'」</p>
-  <p class="C_text__font-logo">あア亜aA「'CastroScript_PERSONAL_USE_ONLY'」：logo</p>
-  <p class="C_text__font-Hannari">あア亜aA「'Hannari'」</p>
-  <p class="C_text__font-Angelface">あア亜aA「'Angelface'」</p>
-  <p class="C_text__font-Bask">あア亜aA「'Baskerville'」</p>
-</div>
-
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
-<link rel="dns-prefetch" href="//s.w.org">
-<link rel="alternate" type="application/rss+xml" title="社会福祉法人　七彩学舎 » フィード" href="https://www.dokyoji.or.jp/feed/">
-<link rel="alternate" type="application/rss+xml" title="社会福祉法人　七彩学舎 » コメントフィード" href="https://www.dokyoji.or.jp/comments/feed/">
-<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>

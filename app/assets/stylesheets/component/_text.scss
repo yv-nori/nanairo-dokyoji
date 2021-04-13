@@ -36,9 +36,12 @@
   }
 }
 .C_text__sentence {
-  padding-top: 20px;
-  font-size: $font-size-base * 1.125;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
   letter-spacing: $letter-spacing-base;
+  @include mq-up("tab") {
+    font-size: $font-size-base * 1.125;
+  }
   &.in {
     padding-left: 10px;
     @include mq-up("tab") {

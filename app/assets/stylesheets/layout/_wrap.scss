@@ -26,7 +26,7 @@
   &__headding {
     flex-direction: column;
     position: relative;
-    padding-top: 170px;
+    padding-top: 130px;
     height: 50vh;
     display: flex;
     justify-content: space-between;
@@ -34,6 +34,7 @@
     padding-left: $space-side;
     padding-bottom: $space-section;
     @include mq-up("tab") {
+      padding-top: 170px;
       flex-direction: row;
       padding-right: $space-side;
       padding-left: $space-side;
@@ -52,11 +53,16 @@
   padding-left: $space-side;
   padding-right: $space-side;
 	padding-top: $space-section;
+  align-items: center;
   @include mq-up("pc") {
     flex-direction: row;
+    align-items: self-start;
   }
   &.title {
     flex-direction: column;
+    &.noSpace {
+      margin-top: -2px;
+    }
   }
   &.bottom {
     margin-bottom: $space-section * 2;
@@ -64,4 +70,11 @@
   &.color {
     background-color: $color-background2;
   }
+  &.last {
+    padding-bottom: $space-section_L;
+  }
+}
+.L_back-para {
+  background-color: #fff;
+  position: relative;
 }

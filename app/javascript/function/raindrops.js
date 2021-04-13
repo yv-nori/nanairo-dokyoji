@@ -15,7 +15,8 @@ $.widget("water.raindrops", {
         rightPadding: 20,    // To cover unwanted gaps created by the animation.
         position:'absolute',
         positionBottom:0,
-        positionLeft:0
+        positionLeft: 0,
+        id:'JS_raindrop'
     },
     _create: function () {
         var canvas = window.document.createElement('canvas');
@@ -28,7 +29,6 @@ $.widget("water.raindrops", {
         this.options.realWidth = this.options.canvasWidth + this.options.rightPadding;
         canvas.height = this.options.canvasHeight;
         canvas.width = this.options.realWidth;
-
         this.ctx = canvas.getContext('2d');
         this.ctx.fillStyle = this.options.color;
         this.element.append(canvas);
@@ -37,13 +37,12 @@ $.widget("water.raindrops", {
         canvas.style.position = this.options.position;
         canvas.style.bottom = this.options.positionBottom;
         canvas.style.left = this.options.positionLeft;
-        
+        canvas.id = this.options.id;
         this.springs = [];
         for (var i = 0; i < this.options.waveLength; i++)
         {
             this.springs[i] = new this.Spring();
         }
-
         raindropsAnimationTick(this);
     },
     Spring: function ()
@@ -114,7 +113,6 @@ $.widget("water.raindrops", {
 function raindropsAnimationTick(drop) {
     if ((Math.random() * 100) < drop.options.frequency)
         drop.springs[Math.floor(Math.random() * drop.options.waveLength)].p = drop.options.waveHeight;
-
     drop.ctx.clearRect(0, 0, drop.options.realWidth, drop.options.canvasHeight);
     drop.updateSprings(0.1);
     drop.renderWaves();

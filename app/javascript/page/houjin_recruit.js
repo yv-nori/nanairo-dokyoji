@@ -14,6 +14,8 @@ import {
   accordion, accordionItems
 } from "../function/accordion";
 import {
+  deleteCanvas,
+  rainChangeHeight,
   raindropsBlue, raindropsBlueDarken
 } from "../function/raindrops_items";
 import {
@@ -37,17 +39,15 @@ $(function () {
   switch (media()) {
     case "SP":
       wrightShabon(Shabon.$targets, Shabon.params_SP);
-      raindropsBlue(400);
       break;
     case "Tab":
       wrightShabon(Shabon.$targets, Shabon.params_Tab);
-      raindropsBlue(350);
       break;
     case "PC":
       wrightShabon(Shabon.$targets, Shabon.params_PC);
-      raindropsBlue(170);
       break;
   }
+  raindropsBlue(330);
   raindropsBlueDarken();
   staffSwitch(StaffItems.toggleItems);
   menuOpen(HeaderItems);
@@ -75,15 +75,12 @@ $(function () {
     switch (changeMedia(startSize)) {
       case "SP":
         wrightShabon(Shabon.$targets, Shabon.params_SP);
-        raindropsBlue(400);
         break;
       case "Tab":
         wrightShabon(Shabon.$targets, Shabon.params_Tab);
-        raindropsBlue(350);
         break;
       case "PC":
         wrightShabon(Shabon.$targets, Shabon.params_PC);
-        raindropsBlue(170);
         break;
     }
     startSize = $(window).width();
@@ -117,7 +114,7 @@ const shabonItems = () => {
         { top: '100', left: '100', class: 'P_Recruit__concept', size: '3S', time: '1', pattern: 'B', direction: 'right', id: '' },
         { top: '10', left: '0', class: 'P_Recruit__concept', size: 'S', time: '1', pattern: 'B', direction: 'right', id: '' },
         { top: '15', left: '10', class: 'P_Recruit__concept', size: '2S', time: '2', pattern: 'B', direction: 'right', id: '' },
-        { top: '90', left: '95', class: 'P_Recruit__concept', size: 'L', time: '1', pattern: 'B', direction: 'right', id: '' }
+        { top: '84', left: '95', class: 'P_Recruit__concept', size: 'L', time: '1', pattern: 'B', direction: 'right', id: '' }
       ],
       [
         { top: '74', left: '7', class: '', size: '3L', time: '3', pattern: 'A', direction: 'right', id: '' },
@@ -147,7 +144,7 @@ const shabonItems = () => {
         { top: '100', left: '100', class: 'P_Recruit__concept', size: '3S', time: '1', pattern: 'B', direction: 'right', id: '' },
         { top: '10', left: '0', class: 'P_Recruit__concept', size: 'S', time: '1', pattern: 'B', direction: 'right', id: '' },
         { top: '15', left: '10', class: 'P_Recruit__concept', size: '2S', time: '2', pattern: 'B', direction: 'right', id: '' },
-        { top: '90', left: '95', class: 'P_Recruit__concept', size: 'L', time: '1', pattern: 'B', direction: 'right', id: '' }
+        { top: '84', left: '95', class: 'P_Recruit__concept', size: 'L', time: '1', pattern: 'B', direction: 'right', id: '' }
       ],
       [
         { top: '74', left: '7', class: '', size: '3L', time: '3', pattern: 'A', direction: 'right', id: '' },

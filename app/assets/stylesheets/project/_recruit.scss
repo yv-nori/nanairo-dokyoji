@@ -1,3 +1,52 @@
+#P_Recruit__kv__rain {
+  @include mq-up("tab") {
+    transform: scale(1, 1.2);
+    transform-origin: center bottom;
+  }
+  @include mq-up("pc") {
+    display: none;
+  }
+}
+.P_Recruit {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    padding-left: $space-side;
+    padding-right: $space-side;
+    &.title {
+      text-align: center;
+      padding-top: $space-section;
+    }
+    @include mq-up("pc") {
+      padding-top: $space-section;
+    }
+    @include mq-up("pc") {
+      flex-direction: row;
+      justify-content: center;
+    }
+    &.text {
+      padding-top: $space-section;
+      @include mq-up("pc") {
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+  &__sub-title {
+    font-size: $font-size-base * 1.43;
+    padding-top: $space-vertical;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: -0.12em;
+    font-family: 'Hannari';
+    text-align: center;
+    @include mq-up("pc") {
+      text-align: initial;
+      font-size: $font-size-base * 2;
+      line-height: 120%;
+    }
+  }
+}
 // =====================================
 // トップイメージ
 // =====================================
@@ -15,9 +64,12 @@
       height: 180px;
     }
     @include mq-up("pc") {
-      height: 70px;
-      display: flex;
-      justify-content: center;
+      width: fit-content;
+      height: fit-content;
+      top:16%;
+      right: 3%;
+      border-radius: 20px;
+      background-color: rgba(118, 190, 194, 0.7);
     }
   }
   &__main-title {
@@ -32,6 +84,9 @@
     }
     @include mq-up("pc") {
       font-size: $font-size-base * 2.5;
+      padding-top: 21px;
+      padding-right: 19px;
+      padding-left: 38px;
     }
   }
   &__sub-title {
@@ -49,8 +104,7 @@
     @include mq-up("pc") {
       font-size: $font-size-base * 1.4375;
       margin-top: 0;
-      padding-top: 15px;
-      padding-left: 10px;
+      padding-bottom: 65px;
     }
   }
   &__nav {
@@ -69,7 +123,9 @@
     padding-right: 10px;
     padding-left: 10px;
     @include mq-up("pc") {
-      justify-content: flex-end;
+      bottom: 61.6%;
+      right: 6%;
+      width: initial;
     }
   }
   &__nav-list {
@@ -108,7 +164,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    @include mq-up("tab") {
+    @include mq-up("pc") {
       flex-direction: row;
     }
   }
@@ -117,6 +173,10 @@
     width: 100%;
     height: 30vh;
     @include mq-up("tab") {
+      height: 35vh;
+      min-height: 358px;
+    }
+    @include mq-up("pc") {
       width: 50%;
       height: 50vh;
       padding-left: $space-side / 2;
@@ -129,9 +189,7 @@
     position: relative;
   }
   &__inner-text {
-    margin-top: 4vh;
-    @include mq-up("tab") {
-      margin-top: 0;
+    @include mq-up("pc") {
       width: 50%;
     }
   }
@@ -167,7 +225,7 @@
     position: absolute;
     top: -40%;
     left: 8%;
-    @include mq-up("tab") {
+    @include mq-up("pc") {
       top: -50%;
       font-size: $font-size-base * 4;
     }
@@ -181,9 +239,13 @@
   height: 75vh;
   margin-left: $space-side;
   margin-right: $space-side;
-  margin-top: $space-section;
+  margin-top: $space-vertical;
   border-radius: 10px;
   overflow: hidden;
+  border: 1px solid $color-text;
+  @include mq-up("tab") {
+    margin-top: $space-section;
+  }
   // バックイメージ
   &__back {
     @include abs-full;
@@ -235,6 +297,9 @@
     color: #fff;
     pointer-events: none;
     @include mq-up("tab") {
+      font-size: $font-size-base * 2.5;
+    }
+    @include mq-up("pc") {
       font-size: $font-size-base * 2.75;
     }
   }
@@ -248,28 +313,78 @@
 // 求人内容
 // =====================================
 .P_Recruit__job-info {
+  @include mq-up("tab") {
+    margin-right: $side-bar-size;
+  }
+  &__paper-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    @include mq-up("tab") {
+      margin-bottom: 2vh;
+    }
+    @include mq-up("pc") {
+      margin-bottom: 0;
+    }
+  }
+  &__paper-box {
+    width: fit-content;
+    cursor: pointer;
+    border: 1px solid #09203f;
+    color:  #09203f;
+    transition: .4s;
+    &:hover {
+      background-color: #09203f;
+      color: #fff;
+    }
+  }
+  &__paper-text {
+    padding: 5px 20px;
+    padding-bottom: 7px;
+  }
   &__container {
     padding-left: $space-side;
     padding-right: $space-side;
-    margin-right: $side-bar-size;
-    padding-top: $space-section;
+    padding-top: $space-vertical;
     display: flex;
     flex-wrap: wrap;
     @include mq-up("tab") {
-      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    @include mq-up("pc") {
+      padding-top: $space-section;
     }
   }
   &__content {
-    margin-top: 20px;
-    width: 33.33%;
-    &:first-of-type {
-      margin-top: 0;
+    width: 100%;
+    &.first {
+      @include mq-up("tab") {
+        width: calc(50% - #{$space-side_S / 2});
+      }
+      @include mq-up("pc") {
+        width: calc(33.33% - #{$space-side_S * 2 / 3});
+      }
     }
-    @include mq-up("tab") {
-      margin-top: 0px;
-      margin-left: 30px;
-      &:first-of-type {
-        margin-left: 0;
+    &.second {
+      margin-top: $space-vertical;
+      @include mq-up("tab") {
+        margin-top: 0;
+        margin-left: $space-side_S;
+        width: calc(50% - #{$space-side_S / 2});
+      }
+      @include mq-up("pc") {
+        width: calc(33.33% - #{$space-side_S * 2 / 3});
+      }
+    }
+    &.third {
+      margin-top: $space-vertical;
+      @include mq-up("tab") {
+        width: calc(60% - #{$space-side_S / 2});
+      }
+      @include mq-up("pc") {
+        margin-top: 0;
+        margin-left: $space-side_S;
+        width: calc(33.33% - #{$space-side_S * 2 / 3});
       }
     }
   }
@@ -280,6 +395,7 @@
     color: #fff;
   }
   &__text1 {
+    white-space: nowrap;
     font-size: $font-size-base * 1.4375;
     margin-top: -5px;
     @include mq-up("tab") {
@@ -317,6 +433,17 @@
     @include mq-up("tab") {
       margin-top: 0;
       margin-left: 80px;
+    }
+  }
+}
+.P_Recruit__form {
+  &__wrap {
+    padding: 0 $space-side;
+    @include mq-up("tab") {
+      padding: 0 15vw;
+    }
+    @include mq-up("pc") {
+      padding: 0 25vw;
     }
   }
 }

@@ -247,11 +247,11 @@
   &__wrap {
     display: flex;
     flex-direction: column;
-    margin-bottom: $space-side * 2;
+    align-items: flex-start;
     @include mq-up("pc") {
       padding-left: $space-side;
       padding-right: $space-side;
-      padding-top: $space-section;
+      padding-top: $space-section_L;
       margin-bottom: 0;
     }
     &.noLeft {
@@ -267,18 +267,16 @@
       }
     }
     &.last {
-      margin-bottom: $space-side * 2;
+      @include mq-up("pc") {
+        padding-bottom: $space-section_L;
+      }
     }
   }
   &__text-box {
     width: 100%;
-    padding: $space-side;
-    padding-top: $space-side * 2;
+    padding: $space-section $space-side $space-section_L $space-side;
     position: relative;
     order: 2;
-    @include mq-up("pc") {
-      padding: 0;
-    }
     @include mq-up("pc") {
       padding: 0;
       order: 1;
@@ -294,11 +292,20 @@
   }
   &__img-box {
     position: relative;
-    height: 40vh;
     width: 100%;
     order: 1;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 50%;
+      @include mq-up("tab") {
+        padding-top: 45%;
+      }
+      @include mq-up("pc") {
+        padding-top: 50%;
+      }
+    }
     @include mq-up("pc") {
-      height: 50vh;
       order: 2;
       width: 70%;
     }

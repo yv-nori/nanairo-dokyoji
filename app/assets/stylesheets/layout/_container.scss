@@ -14,6 +14,11 @@
 	position: relative;
 	z-index: map-get($layer, 'kv');
 }
+.L_kv-half-para {
+  width: 100%;
+  height: 50vh;
+	position: relative;
+}
 .L_inner-trim {
 	position: absolute;
 	top: 0;

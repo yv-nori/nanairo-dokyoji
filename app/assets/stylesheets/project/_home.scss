@@ -16,26 +16,26 @@
     color: #fff;
   }
   &__text-en {
-    font-size: $font-size-base;
     line-height: 140%;
     margin-bottom: 15px;
     letter-spacing: 0em;
     font-family: 'Forum-Regular';
+    font-size: $font-size-base * 1.25;
     @include mq-up("tab") {
-      font-size: 3rem;
+      font-size: $font-size-base * 1.875;
       margin-bottom: 20px;
       font-weight: 500;
       line-height: 180%;
     }
   }
   &__text-ja {
-    font-size: $font-size-base * 2.8125;
+    font-size: $font-size-base * 3.4375;
     line-height: 120%;
     font-weight: 400;
     letter-spacing: -0.12em;
     font-family: 'Hannari';
     @include mq-up("tab") {
-      font-size: 11rem;
+      font-size: $font-size-base * 6.875;
       line-height: 120%;
       white-space: nowrap;
     }
@@ -54,8 +54,6 @@
 // 理念
 // --------------------------------
 .P_Houjin-philosophy {
-  z-index: 1;
-  background-color: #fff;
   padding-left: $space-side_L;
   padding-right: $space-side_L;
   position: relative;
@@ -71,6 +69,9 @@
     padding-top: $space-section_L;
     position: relative;
     padding-bottom: $space-section;
+    opacity: 0;
+    text-align: center;
+    white-space: nowrap;
     @include mq-up("tab") {
       padding-top: $space-section_2L;
       padding-bottom: $space-section_M;
@@ -101,11 +102,16 @@
   }
   &__link-item {
     pointer-events: auto;
-    width: calc(50% - 2vw);
     cursor: pointer;
-    padding-right: 4vw;
-    padding-left: 4vw;
+    padding-right: 12vw;
+    padding-left: 12vw;
     white-space: nowrap;
+    width: 100%;
+    @include mq-up("tab") {
+      width: calc(50% - 2vw);
+      padding-right: 4vw;
+      padding-left: 4vw;
+    }
     &:hover .P_Houjin-philosophy__border-stretch::before {
       width: 100%;
     }
@@ -113,6 +119,7 @@
   &__link-item + li {
     position: relative;
     margin-left: 0;
+    margin-top: 6vh;
     @include mq-up("tab") {
       margin-top: 0;
     }
@@ -122,6 +129,7 @@
     text-align: center;
     width: 100%;
     &-ja {
+      font-size: $font-size-base * 1.25;
       padding-bottom: 1.5vh;
       @include mq-up("tab") {
         font-size: $font-size-base * 1.8;
@@ -158,13 +166,9 @@
 // インフォメーション（就職・入園）
 // --------------------------------
 .P_Info {
-  position: relative;
-  background-color: #fff;
-  z-index: 1;
   padding-left: $space-side_L;
   padding-right: $space-side_L;
   padding-bottom: 4vh;
-  margin-top: -1px;
   @include mq-up("tab") {
     margin-top: 0;
     padding-left: $space-side_2L;
@@ -262,9 +266,6 @@
 // 各施設
 // --------------------------------
 .P_Facility {
-  position: relative;
-  background-color: #fff;
-  z-index: 1;
   padding-bottom: 4vh;
   padding-left: $space-side_L;
   padding-right: $space-side_L;

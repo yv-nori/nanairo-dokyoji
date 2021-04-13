@@ -6,10 +6,13 @@ Rails.application.routes.draw do
       get 'about'
       get 'admission'
       get 'contact'
+      post 'contact_create'
       get 'vision'
       get 'policy'
       get 'privacy'
       post 'create'
+      get 'recruit'
+      post 'recruit_create'
     end
   end
   resources :piani do
@@ -26,6 +29,8 @@ Rails.application.routes.draw do
       get 'support'
       get 'about'
       get 'features'
+      get 'recruit'
+      post 'recruit_create'
     end
   end
   resources :parti do
@@ -42,6 +47,8 @@ Rails.application.routes.draw do
       get 'support'
       get 'about'
       get 'features'
+      get 'recruit'
+      post 'recruit_create'
     end
   end
 end

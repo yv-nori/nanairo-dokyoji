@@ -1,10 +1,9 @@
-const _doc = document;
-export const rainChangeHeight = ($canvas, height) => {
-  $canvas.height = height
-}
+import {
+  _doc
+} from "../function/utility"
 export const raindropsBlue = (height = 170) => {
   const $target = _doc.getElementById('JS_raindrops_target');
-    $($target).raindrops({
+  $($target).raindrops({
     color:'#77bfc4', 
     waveLength:800, 
     frequency:3,
@@ -16,8 +15,9 @@ export const raindropsBlue = (height = 170) => {
     rightPadding:20, 
     position:'absolute',
     positionBottom:0, 
-    positionLeft:0
-    });
+    positionLeft:0,
+    id: 'P_Recruit__kv__rain',
+  });
   return $($target).find('canvas:last')[0]
 }
 export const raindropsBlueDarken = () => {
@@ -37,4 +37,10 @@ export const raindropsBlueDarken = () => {
     positionLeft: 0
   });
   return $($target).find('canvas:last')[0]
+}
+export const deleteCanvas = (id) => {
+  const $target = _doc.getElementById(id);
+  if ($target !== null) {
+    $target.remove()
+  }
 }

@@ -65,26 +65,27 @@
     background: image-url('home/admission.jpg') no-repeat center center / cover;
   }
   &__admission-para {
-    @include image;
     background: image-url('home/admission2.jpg') no-repeat center center / cover;
-    background-attachment: fixed
+    @include image-para;
   }
   &__admission-group-life {
     @include image;
     background: image-url('home/admission_group_life.jpg') no-repeat center center / cover;
+    background-position-y: 39%;
+    @include mq-up("pc") {
+      background-position-y: 50%; 
+    }
   }
   &__admission-child-facility {
     @include image;
     background: image-url('home/admission_child_facility.jpg') no-repeat center center / cover;
-  }
-  &__admission-group-life {
-    @include image;
-    background: image-url('home/admission_group_life.jpg') no-repeat center center / cover;
+    @include mq-up("pc") {
+      background-position-y: 63%;
+    }
   }
   &__contact-kv {
-    @include image;
     background: image-url('home/contact_kv.jpg') no-repeat center center / cover;
-    background-attachment: fixed;
+    @include image-para;
   }
   &__recruit {
     @include image;
@@ -135,9 +136,8 @@
     }
   }
   &__H-about_kv {
-    @include image;
     background: image-url('home/about_kv.jpg') no-repeat center center / cover;
-    background-attachment: fixed; 
+    @include image-para;
   }
   &__H-about_greeting {
     @include image;

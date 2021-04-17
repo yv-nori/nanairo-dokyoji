@@ -205,6 +205,10 @@
       display: block;
       padding-top: 100%;
     }
+    &:hover .P_about__modal__close-icon{
+      transform: translate(-50%, -50%) rotate(180deg);
+      transform-origin: center center;
+    }
   }
   &__close-icon {
     cursor: pointer;
@@ -213,6 +217,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: $font-size-base * 1.75;
+    transition: all 1.3s cubic-bezier(0.080, 1.090, 0.320, 1.275);
     @include mq-up("tab") {
       font-size: $font-size-base * 3;
     }
@@ -741,33 +746,12 @@
       margin-top: $space-section;
     }
   }
-  &__1F,
-  &__2F {
+  &__img-box {
     position: relative;
     &::before {
       content: '';
       display: block;
       padding-top: 106%;
-    }
-  }
-  &__1F {
-    &.parti {
-      background: image-url('map/parti-map-1F.png') no-repeat center center / contain;
-      background-size: 100% 100%;
-    }
-    &.piani {
-      background: image-url('map/piani-map-1F.png') no-repeat center center / contain;
-      background-size: 100% 100%;
-    }
-  }
-  &__2F {
-    &.parti {
-      background: image-url('map/parti-map-2F.png') no-repeat center center / contain;
-      background-size: 100% 100%;
-    }
-    &.piani {
-      background: image-url('map/piani-map-2F.png') no-repeat center center / contain;
-      background-size: 100% 100%;
     }
   }
   &__deco {
@@ -777,12 +761,27 @@
       top: -33%;
       left: -9%;
       height: 24vh;
+      &.piani {
+        top: -9%;
+        left: -6%;
+        height: 24vh;
+      }
       @include mq-up("tab") {
         height: 10vh;
         top: -25%;
+        &.piani {
+          height: 10vh;
+          top: 22%;
+          left: -20%;
+        }
       }
       @include mq-up("pc") {
         height: 24vh;
+        &.piani {
+          height: 22vh;
+          right: 10%;
+          bottom: 20%;
+        }
       }
     }
     &.babble {
@@ -790,39 +789,84 @@
       height: 14vh;
       top: -21%;
       left: -16%;
+      &.piani {
+        height: 14vh;
+        top: 2%;
+        left: -17%;
+      }
       @include mq-up("tab") {
         top: -14%;
         left: -37%;
         height: 7vh;
+        &.piani {
+          top: 12%;
+          left: -29%;
+          height: 7vh;
+        }
       }
       @include mq-up("pc") {
         height: 14vh;
+        &.piani {
+          height: 14vh;
+          top: 13%;
+          left: -32%;
+        }
       }
     }
     &.dots {
       height: 22vh;
       right: -15%;
       bottom: -1%;
+      &.piani {
+        height: 22vh;
+        right: 10%;
+        bottom: 20%;
+      }
       @include mq-up("tab") {
         right: -28%;
         bottom: 10%;
         height: 9vh;
+        &.piani {
+          right: -1%;
+          bottom: 40%;
+          height: 9vh;
+        }
       }
       @include mq-up("pc") {
         height: 22vh;
+      &.piani {
+        height: 22vh;
+        right: 10%;
+        bottom: 20%;
+      }
       }
     }
     &.triangle {
       height: 16vh;
       bottom: 11%;
       right: -2%;
+      &.piani {
+        height: 16vh;
+        bottom: -7%;
+        right: -2%;
+      }
       @include mq-up("tab") {
         bottom: 25%;
         right: -16%;
         height: 7vh;
+        &.piani {
+          bottom: 9%;
+          right: -16%;
+          height: 7vh;
+        }
       }
       @include mq-up("pc") {
         height: 16vh;
+      &.piani {
+        height: 22vh;
+        right: 10%;
+        bottom: 20%;
+      }
       }
     }
   }
@@ -837,68 +881,122 @@
       padding-top: 100%;
     }
     width: 6vw;
+    &.piani {
+      width: 5vw;
+    }
     @include mq-up("tab") {
       width: 3vw;
+      &.piani {
+        width: 2.5vw;
+      }
     }
-    &.N1 {
+    &.parti_1F_0 {
       top: 10%;
       left: 50%;
     }
-    &.N2 {
+    &.parti_1F_1 {
       top: 8%;
       left: 76%;
     }
-    &.N3 {
+    &.parti_1F_2 {
       top: 30%;
       left: 76%;
     }
-    &.N4 {
+    &.parti_1F_3 {
       top: 49%;
       left: 67%;
     }
-    &.N5 {
+    &.parti_1F_4 {
       top: 75%;
       left: 67%;
     }
-    &.N6 {
+    &.parti_1F_5 {
       top: 75%;
       left: 52%;
     }
-    &.N7 {
+    &.parti_1F_6 {
       top: 75%;
       left: 33%;
     }
-    &.N8 {
+    &.parti_1F_7 {
       top: 55%;
       left: 21%;
     }
-    &.N9 {
+    &.parti_1F_8 {
       top: 73%;
       left: 9%;
     }
-    &.N10 {
+    &.parti_2F_0 {
       top: 7%;
       left: 76%;
     }
-    &.N11 {
+    &.parti_2F_1 {
       top: 21%;
       left: 33%;
     }
-    &.N12 {
+    &.parti_2F_2 {
       top: 24%;
       left: 68%;
     }
-    &.N13 {
+    &.parti_2F_3 {
       top: 60%;
       left: 17%;
     }
-    &.N14 {
+    &.parti_2F_4 {
       top: 83%;
       left: 31%;
     }
-    &.N15 {
+    &.parti_2F_5 {
       top: 83%;
       left: 56%;
+    }
+    &.piani_1F_0 {
+      top: 31%;
+      left: 38%;
+    }
+    &.piani_1F_1 {
+      top: 60%;
+      left: 30%;
+    }
+    &.piani_1F_2 {
+      top: 60%;
+      left: 43%;
+    }
+    &.piani_1F_3 {
+      top: 75%;
+      left: 45%;
+    }
+    &.piani_1F_4 {
+      top: 75%;
+      left: 62%;
+    }
+    &.piani_1F_5 {
+      top: 75%;
+      left: 74%;
+    }
+    &.piani_1F_6 {
+      top: 71%;
+      left: 89%;
+    }
+    &.piani_2F_0 {
+      top: 38%;
+      left: 13%;
+    }
+    &.piani_2F_1 {
+      top: 38%;
+      left: 33%;
+    }
+    &.piani_2F_2 {
+      top: 38%;
+      left: 45%;
+    }
+    &.piani_2F_3 {
+      top: 38%;
+      left: 57%;
+    }
+    &.piani_2F_4 {
+      top: 58%;
+      left: 51%;
     }
   }
   &__number {
@@ -909,13 +1007,22 @@
     color: #fff;
     font-family: 'Baskerville';
     font-size: $font-size-base * 0.875;
+    &.piani {
+      font-size: $font-size-base * 0.75;
+    }
     @include mq-up("tab") {
       font-size: $font-size-base;
       padding-top: 1px;
+      &.piani {
+        font-size: $font-size-base * 0.875;
+      }
     }
     @include mq-up("pc") {
       font-size: $font-size-base * 1.5625;
       padding-top: 0;
+      &.piani {
+        font-size: $font-size-base * 1.375;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root to: "home#index"
+  root to: "nanairo#index"
   resources :contact_recruits, only: [:index, :create, :new]
-  resources :home do
+  resources :nanairo do
     collection do
       get 'about'
       get 'admission'
@@ -20,12 +20,12 @@ Rails.application.routes.draw do
       get 'index'
       get 'vision'
       get 'event'
-      get 'photo_gallery'
+      get 'photo-gallery'
       get 'belong'
-      get 'eat_education'
+      get 'eat-education'
       get 'admission'
-      get 'one_day'
-      get 'for_admission'
+      get 'one-day'
+      get 'for-admission'
       get 'support'
       get 'about'
       get 'features'
@@ -38,12 +38,12 @@ Rails.application.routes.draw do
       get 'index'
       get 'vision'
       get 'event'
-      get 'photo_gallery'
+      get 'photo-gallery'
       get 'belong'
-      get 'eat_education'
+      get 'eat-education'
       get 'admission'
-      get 'one_day'
-      get 'for_admission'
+      get 'one-day'
+      get 'for-admission'
       get 'support'
       get 'about'
       get 'features'

@@ -108,33 +108,30 @@
     &:hover {
       border: solid 1px rgba(3,3,3,0);
     }
-    &:hover .P_vision__intro__circle-line{
+    &:hover .P_vision__intro__circle-line {
       animation:vision-circle-rotate ease-in 1 0.8s forwards, vision-circle-scale ease-out 0.5s forwards 0.8s;
     }
     &.friend {
       top: 0;
       left: 50%;
+      &:hover .P_vision__intro__circle-line {
+        border: 3px solid darken($color-vision-friend,$darken);
+      }
     }
     &.play {
       top: 37%;
-      left: 22%;
-      @include mq-up("tab") {
-        top: 40%;
-        left: 30;
-      }
-      @include mq-up("pc") {
-        left: 31%;
+      left: 50%;
+      transform: translateX(-90%);
+      &:hover .P_vision__intro__circle-line {
+        border: 3px solid darken($color-vision-play,$darken);
       }
     }
     &.kind {
       top: 37%;
-      left: 78%;
-      @include mq-up("tab") {
-        top: 40%;
-        left: 70%;
-      }
-      @include mq-up("pc") {
-        left: 69%;
+      left: 50%;
+      transform: translateX(-10%);
+      &:hover .P_vision__intro__circle-line {
+        border: 3px solid darken($color-vision-kind,$darken);
       }
     }
   }
@@ -235,6 +232,33 @@
       writing-mode: initial;
     }
   }
+  &__title-en {
+    font-size: $font-size-base * 0.75;
+    letter-spacing: 0.7em;
+    &.right {
+      transform: scale(-1);
+    }
+    &.tab-pc {
+      opacity: 0;
+      @include mq-up("tab") {
+        opacity: 1;
+      }
+    }
+    &.sp {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      text-align: center;
+      transform: translateX(-140%) scale(-1);
+      letter-spacing: 1.4em;
+      &.right {
+        transform: translateX(140%);
+      }
+      @include mq-up("tab") {
+        display: none;
+      }
+    }
+  }
   &__text-box-main {
     display: flex;
     flex-wrap: wrap;
@@ -253,6 +277,11 @@
     margin-left: 2vw;
     &.left {
       order: 1;
+      margin-right: 4vw;
+      @include mq-up("tab") {
+        order: 2;
+        margin-right: 2vw;
+      }
     }
   }
   &__sub-title {
@@ -273,11 +302,12 @@
       width: 350px;
     }
     &.left {
-      order: 2;
+      order: 1;
       border-radius: 0 15px 15px 0;
       margin-left: $space-side_L * -1;
       margin-right: 0;
       @include mq-up("tab") {
+        order: 1;
         margin-left: 0;
         border-radius: 15px;
         font-size: $font-size-base * 1.4;

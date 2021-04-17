@@ -10,27 +10,29 @@ require("channels");
 require("jquery");
 // ページ関数
 let CurrentPath = location.pathname;
-if (CurrentPath == "/contact_recruits") { 
+if (CurrentPath == "/nanairo/recruit" ||
+    CurrentPath == "/parti/recruit" ||
+    CurrentPath == "/piani/recruit") {
   require("jquery-ui-dist/jquery-ui");
   require("../function/raindrops");
-  require("../page/houjin_recruit");
+  require("../page/nanairo_recruit");
 }
 if (CurrentPath == "/") { 
-  require("../page/houjin_top");
+  require("../page/nanairo_index");
 }
-if (CurrentPath == "/home/about") {
-  require("../page/houjin_about");
+if (CurrentPath == "/nanairo/about") {
+  require("../page/nanairo_about");
 }
-if (CurrentPath == "/home/vision") {
-  require("../page/houjin_vision");
+if (CurrentPath == "/nanairo/vision") {
+  require("../page/nanairo_vision");
 }
-if (CurrentPath == "/home/admission") {
-  require("../page/houjin_admission");
+if (CurrentPath == "/nanairo/admission") {
+  require("../page/nanairo_admission");
 }
-if (CurrentPath == "/home/contact" ||
-    CurrentPath == "/home/policy" ||
-    CurrentPath == "/home/privacy") {
-  require("../page/houjin_contact");
+if (CurrentPath == "/nanairo/contact" ||
+    CurrentPath == "/nanairo/policy" ||
+    CurrentPath == "/nanairo/privacy") {
+  require("../page/nanairo_contact");
 }
 if (CurrentPath == "/piani/index") {
   require("../page/piani_index");
@@ -46,34 +48,34 @@ if (CurrentPath == "/parti/event" ||
     CurrentPath == "/piani/event" ) {
   require("../page/event");
 }
-if (CurrentPath == "/parti/photo_gallery" ||
-    CurrentPath == "/piani/photo_gallery" ) {
-  require("../page/photo_gallery");
+if (CurrentPath == "/parti/photo-gallery" ||
+    CurrentPath == "/piani/photo-gallery" ) {
+  require("../page/photo-gallery");
 }
-if (CurrentPath == "/parti/photo_gallery" ||
-    CurrentPath == "/piani/photo_gallery" ) {
-  require("../page/photo_gallery");
+if (CurrentPath == "/parti/photo-gallery" ||
+    CurrentPath == "/piani/photo-gallery" ) {
+  require("../page/photo-gallery");
 }
 if (CurrentPath == "/parti/belong" ||
     CurrentPath == "/piani/belong" ) {
   require("../page/belong");
 }
-if (CurrentPath == "/parti/eat_education" ||
-  CurrentPath == "/piani/eat_education") {
+if (CurrentPath == "/parti/eat-education" ||
+  CurrentPath == "/piani/eat-education") {
   require("../function/jquery.arctext");
-  require("../page/eat_education");
+  require("../page/eat-education");
 }
 if (CurrentPath == "/parti/admission" ||
   CurrentPath == "/piani/admission") {
   require("../page/admission");
 }
-if (CurrentPath == "/parti/one_day" ||
-  CurrentPath == "/piani/one_day") {
-  require("../page/one_day");
+if (CurrentPath == "/parti/one-day" ||
+  CurrentPath == "/piani/one-day") {
+  require("../page/one-day");
 }
-if (CurrentPath == "/parti/for_admission" ||
-  CurrentPath == "/piani/for_admission") {
-  require("../page/for_admission");
+if (CurrentPath == "/parti/for-admission" ||
+  CurrentPath == "/piani/for-admission") {
+  require("../page/for-admission");
 }
 if (CurrentPath == "/parti/support" ||
   CurrentPath == "/piani/support") {

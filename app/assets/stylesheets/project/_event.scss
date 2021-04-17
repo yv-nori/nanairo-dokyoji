@@ -1,13 +1,14 @@
 .P_event {
   &__kv {
+    position: relative;
     width: 100%;
     height: 50vh;
     background-color: grey;
   }
   &__deco {
     &-spring {
-      &-heart2 {
-        background: image-url('deco/event/spring-heart.svg') no-repeat center center / cover;
+      &-heart1 {
+        background: image-url('deco/event/spring-heart1.svg') no-repeat center center / contain;
         position: absolute;
         width: 36%;
         height: 40%;
@@ -15,7 +16,7 @@
         right: -45%;
       }
       &-triangle1 {
-        background: image-url('deco/event/spring-triangle1.svg') no-repeat center center / cover;
+        background: image-url('deco/event/spring-triangle1.svg') no-repeat center center / contain;
         position: absolute;
         width: 22%;
         height: 38%;
@@ -23,7 +24,7 @@
         left: -22%;
       }
       &-triangle2 {
-        background: image-url('deco/event/spring-triangle2.svg') no-repeat center center / cover;
+        background: image-url('deco/event/spring-triangle2.svg') no-repeat center center / contain;
         position: absolute;
         width: 27%;
         height: 45%;
@@ -33,7 +34,7 @@
     }
     &-summer {
       &-star1 {
-        background: image-url('deco/event/summer-star1.svg') no-repeat center center / cover;
+        background: image-url('deco/event/summer-star1.svg') no-repeat center center / contain;
         position: absolute;
         width: 20%;
         height: 39%;
@@ -41,7 +42,7 @@
         left: -9%;
       }
       &-star2 {
-        background: image-url('deco/event/summer-star2.svg') no-repeat center center / cover;
+        background: image-url('deco/event/summer-star2.svg') no-repeat center center / contain;
         position: absolute;
         width: 20%;
         height: 43%;
@@ -49,7 +50,7 @@
         right: -19%;
       }
       &-bubble1 {
-        background: image-url('deco/event/summer-bubble1.svg') no-repeat center center / cover;
+        background: image-url('deco/event/summer-bubble1.svg') no-repeat center center / contain;
         position: absolute;
         width: 13%;
         height: 34%;
@@ -57,7 +58,7 @@
         left: -7%;
       }
       &-bubble2 {
-        background: image-url('deco/event/summer-bubble2.svg') no-repeat center center / cover;
+        background: image-url('deco/event/summer-bubble2.svg') no-repeat center center / contain;
         position: absolute;
         width: 35%;
         height: 39%;
@@ -67,7 +68,7 @@
     }
     &-autumn {
       &-triangle1 {
-        background: image-url('deco/event/autumn-triangle1.svg') no-repeat center center / cover;
+        background: image-url('deco/event/autumn-triangle1.svg') no-repeat center center / contain;
         position: absolute;
         width: 23%;
         height: 12%;
@@ -75,7 +76,7 @@
         right: -34%;
       }
       &-triangle2 {
-        background: image-url('deco/event/autumn-triangle2.svg') no-repeat center center / cover;
+        background: image-url('deco/event/autumn-triangle2.svg') no-repeat center center / contain;
         position: absolute;
         width: 38%;
         height: 28%;
@@ -83,7 +84,7 @@
         left: -44%;
       }
       &-heart1 {
-        background: image-url('deco/event/autumn-heart1.svg') no-repeat center center / cover;
+        background: image-url('deco/event/autumn-heart1.svg') no-repeat center center / contain;
         position: absolute;
         width: 18%;
         height: 35%;
@@ -91,7 +92,7 @@
         right: -15%;
       }
       &-heart2 {
-        background: image-url('deco/event/autumn-heart2.svg') no-repeat center center / cover;
+        background: image-url('deco/event/autumn-heart2.svg') no-repeat center center / contain;
         position: absolute;
         width: 22%;
         height: 42%;
@@ -103,7 +104,7 @@
         }
       }
       &-star1 {
-        background: image-url('deco/event/autumn-star1.svg') no-repeat center center / cover;
+        background: image-url('deco/event/autumn-star1.svg') no-repeat center center / contain;
         position: absolute;
         width: 27%;
         height: 19%;
@@ -111,7 +112,7 @@
         left: -10%;
       }
       &-star2 {
-        background: image-url('deco/event/autumn-star2.svg') no-repeat center center / cover;
+        background: image-url('deco/event/autumn-star2.svg') no-repeat center center / contain;
         position: absolute;
         width: 30%;
         height: 28%;
@@ -119,7 +120,7 @@
         right: -30%;
       }
       &-bubble {
-        background: image-url('deco/event/autumn-bubble1.svg') no-repeat center center / cover;
+        background: image-url('deco/event/autumn-bubble1.svg') no-repeat center center / contain;
         position: absolute;
         width: 31%;
         height: 38%;
@@ -129,7 +130,7 @@
     }
     &-winter {
       &-triangle1 {
-        background: image-url('deco/event/winter-triangle1.svg') no-repeat center center / cover;
+        background: image-url('deco/event/winter-triangle1.svg') no-repeat center center / contain;
         position: absolute;
         width: 16%;
         height: 19%;
@@ -137,7 +138,7 @@
         right: -23%;
       }
       &-triangle2 {
-        background: image-url('deco/event/winter-triangle2.svg') no-repeat center center / cover;
+        background: image-url('deco/event/winter-triangle2.svg') no-repeat center center / contain;
         position: absolute;
         width: 32%;
         height: 40%;
@@ -145,7 +146,7 @@
         left: -25%;
       }
       &-music-note1 {
-        background: image-url('deco/event/winter-music-note1.svg') no-repeat center center / cover;
+        background: image-url('deco/event/winter-music-note1.svg') no-repeat center center / contain;
         position: absolute;
         width: 19%;
         height: 25%;
@@ -159,7 +160,7 @@
         }
       }
       &-music-note2 {
-        background: image-url('deco/event/winter-music-note2.svg') no-repeat center center / cover;
+        background: image-url('deco/event/winter-music-note2.svg') no-repeat center center / contain;
         position: absolute;
         width: 22%;
         height: 25%;
@@ -167,7 +168,7 @@
         right: -15%;
       }
       &-star1 {
-        background: image-url('deco/event/winter-star1.svg') no-repeat center center / cover;
+        background: image-url('deco/event/winter-star1.svg') no-repeat center center / contain;
         position: absolute;
         width: 16%;
         height: 27%;
@@ -175,7 +176,7 @@
         left: -14%;
       }
       &-star2 {
-        background: image-url('deco/event/winter-star2.svg') no-repeat center center / cover;
+        background: image-url('deco/event/winter-star2.svg') no-repeat center center / contain;
         position: absolute;
         width: 18%;
         height: 36%;
@@ -272,7 +273,12 @@
     }
   }
   &__back-color {
-    background: linear-gradient(177deg,$color-spring-thin 19%, $color-summer-thin 22%, $color-summer-thin 34%, $color-autumn-thin 37%, $color-autumn-thin 70%, $color-winter-thin 73%);
+    &.parti {
+      background: linear-gradient(177deg,$color-spring-thin 19%, $color-summer-thin 22%, $color-summer-thin 34%, $color-autumn-thin 37%, $color-autumn-thin 70%, $color-winter-thin 73%);
+    }
+    &.piani {
+      background: linear-gradient(177deg,$color-spring-thin 19%, $color-summer-thin 22%, $color-summer-thin 34%, $color-autumn-thin 37%, $color-autumn-thin 70%, $color-winter-thin 73%);
+    }
   }
   &__wrap {
     padding-left: $space-side_L;
@@ -389,7 +395,8 @@
       height: 60vh;
     }
     @include mq-up("tab") {
-      min-height: 307px;
+      height: 30vh;
+      min-height: 307.188px;
       &.photo2-ver {
         height: 30vh;
       }
@@ -398,6 +405,7 @@
       }
     }
     @include mq-up("pc") {
+      min-height: initial;
       height: 45vh;
       &.photo2-ver {
         height: 45vh;
@@ -482,7 +490,6 @@
     }
     &_S {
       font-size: $font-size-base * 1.625;
-      margin-left: -8px;
     }
     &.spring {
       color: invert($color-spring);
@@ -509,6 +516,7 @@
     background-color: #fff;
     position: absolute;
     font-size: $font-size-base;
+    letter-spacing: 0.15em;
     transform: translateY(-50%);
     &.left {
       right: 10%;
@@ -543,11 +551,14 @@
     &.ver {
       margin: auto auto 0 auto;
       width: 60%;
-      height: calc(50% - #{$space-section_L} / 2);
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 140%;
+      }
       @include mq-up("tab") {
         margin: auto 0 auto auto;
         width: 22%;
-        height: 60%;
         &.left {
           margin: auto 0 auto auto;
         }
@@ -557,7 +568,7 @@
       }
       @include mq-up("pc") {
         width: 17%;
-        height: 70%;
+        min-width: 174px;
         &.left {
           margin: auto 6vw auto auto;
         }
@@ -569,10 +580,13 @@
     &.hor {
       margin: auto auto 0 auto;
       width: 80%;
-      height: calc(50% - 12vh);
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 70%;
+      }
       @include mq-up("tab") {
         width: 32%;
-        height: 42%;
         &.left {
           margin: auto -6vw auto auto;
         }
@@ -582,7 +596,7 @@
       }
       @include mq-up("pc") {
         width: 30%;
-        height: 52%;
+        min-width: 260px;
         &.left {
           margin: auto 2vw auto auto;
         }
@@ -599,7 +613,6 @@
     border-radius: 23px;
     overflow: hidden;
     position: absolute;
-    position: relative;
     top: 0;
     left: 0;
   }
@@ -616,117 +629,53 @@
     &-top-left {
       border-left: 1px solid $color-text;
       border-top: 1px solid $color-text;
+      border-top-left-radius: 25px;
       &.ver {
         top: -3%;
         left: -3%;
-        border-top-left-radius: 76%;
-        @include mq-up("tab") {
-          border-top-left-radius: 100%;
-        }
-        @include mq-up("pc") {
-          border-top-left-radius: 80%;
-        }
       }
       &.hor {
         top: -4%;
         left: -3%;
-        border-top-left-radius: 60%;
-        @include mq-up("tab") {
-          border-top-left-radius: 75%;
-        }
-        @include mq-up("pc") {
-          border-top-left-radius: 45%;
-        }
-      }
-      @include mq-up("tab") {
-        border-top-left-radius: 50px;
       }
     }
     &-top-right {
       border-right: 1px solid $color-text;
       border-top: 1px solid $color-text;
+      border-top-right-radius: 25px;
       &.ver {
         top: -3%;
         right: -3%;
-        border-top-right-radius: 76%;
-        @include mq-up("tab") {
-          border-top-right-radius: 100%;
-        }
-        @include mq-up("pc") {
-          border-top-right-radius: 80%;
-        }
       }
       &.hor {
         top: -4%;
         right: -3%;
-        border-top-right-radius: 60%;
-        @include mq-up("tab") {
-          border-top-right-radius: 75%;
-        }
-        @include mq-up("pc") {
-          border-top-right-radius: 45%;
-        }
-      }
-      @include mq-up("tab") {
-        border-top-right-radius: 50px;
       }
     }
     &-bottom-left {
       border-left: 1px solid $color-text;
       border-bottom: 1px solid $color-text;
+      border-bottom-left-radius: 25px;
       &.ver {
         bottom: -3%;
         left: -3%;
-        border-bottom-left-radius: 76%;
-        @include mq-up("tab") {
-          border-bottom-left-radius: 100%;
-        }
-        @include mq-up("pc") {
-          border-bottom-left-radius: 80%;
-        }
       }
       &.hor {
         bottom: -4%;
         left: -3%;
-        border-bottom-left-radius: 60%;
-        @include mq-up("tab") {
-          border-bottom-left-radius: 75%;
-        }
-        @include mq-up("pc") {
-          border-bottom-left-radius: 45%;
-        }
-      }
-      @include mq-up("tab") {
-        border-bottom-left-radius: 50px;
       }
     }
     &-bottom-right {
       border-right: 1px solid $color-text;
       border-bottom: 1px solid $color-text;
+      border-bottom-right-radius: 25px;
       &.ver {
         bottom: -3%;
         right: -3%;
-        border-bottom-right-radius: 76%;
-        @include mq-up("tab") {
-          border-bottom-right-radius: 100%;
-        }
-        @include mq-up("pc") {
-          border-bottom-right-radius: 80%;
-        }
       }
       &.hor {
         bottom: -4%;
         right: -3%;
-        border-bottom-right-radius: 60%;
-        @include mq-up("tab") {
-          border-bottom-right-radius: 75%;
-        }
-        @include mq-up("pc") {
-          border-bottom-right-radius: 45%;
-        }
-      }
-      @include mq-up("tab") {
-        border-bottom-right-radius: 50px;
       }
     }
   }

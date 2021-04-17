@@ -1,0 +1,75 @@
+<section class="PageTitle" id="JS_smoothScroll_target-0">
+  <div id="JS_scroll-to-top_trigger-0" style="position:absolute;height:100%;"></div>
+  <div class="L_pageTitle__headding">
+    <div class="box">
+      <p class="C_text__title-en">
+        Event
+      </p>
+      <h1 class="C_text__title-ja">
+        年間行事
+      </h1>
+    </div>
+  </div>
+  <div class="P_event__kv">
+    <div class="C_image__event__<%= items[:name_en] %>__kv"></div>
+  </div>
+</section>
+<ul class="P_event__nav">
+  <li class="P_event__season-list spring" id="JS_smoothScroll_trigger-1">春</li>
+  <li class="P_event__season-list summer" id="JS_smoothScroll_trigger-2">夏</li>
+  <li class="P_event__season-list autumn" id="JS_smoothScroll_trigger-3">秋</li>
+  <li class="P_event__season-list winter" id="JS_smoothScroll_trigger-4">冬</li>
+</ul>
+<div class="P_event__back-color <%= items[:name_en] %>">
+  <% season.each_with_index do |season, i| %>
+    <section class="P_event__wrap <%= season[:season_title_en] %>" id="JS_smoothScroll_target-<%= i + 1 %>">
+      <div class="P_event__season-text-ja <%= season[:season_title_en] %> <%= "top" if i === 0 %>"><%= season[:season_title_ja] %></div>
+
+      <div class="P_event__season-text-en <%= season[:season_title_en] %>"><%= season[:season_title_en] %></div>
+      <div class="P_event__contents-wrap">
+        <div class="P_event__deco-line-trim <%= season[:season_title_en] %>">
+          <svg class="P_event__deco-line-canvas tab-sp-only" x="0px" y="0px" width="100%" height="8010" viewBox="0, 0, 255, 8010">
+            <defs>
+              <pattern id="waveLine-<%= season[:season_title_en] %>" x="0" y="0" width="100%" height="10%">
+                <path class="P_event__deco-line-ver <%= season[:season_title_en] %>" fill="none" d="M 100 1 C 0 131, 0 271, 100 401 S 200 671, 100 801"/>
+              </pattern>
+            </defs>
+            <rect fill="url(#waveLine-<%= season[:season_title_en] %>)" x="0" y="0" width="100%" height="100%"/>
+          </svg>
+          <svg class="P_event__deco-line-canvas pc-only" x="0px" y="0px" width="100%" height="9410" viewBox="0, 0, 255, 9410">
+            <defs>
+              <pattern id="waveLine-<%= season[:season_title_en] %>_pc" x="0" y="0" width="100%" height="10%">
+                <path class="P_event__deco-line-ver <%= season[:season_title_en] %>" fill="none" d="M 100 1 C 0 131, 0 341, 100 471 S 200 811, 100 941"/>
+              </pattern>
+            </defs>
+            <rect fill="url(#waveLine-<%= season[:season_title_en] %>_pc)" x="0" y="0" width="100%" height="100%"/>
+          </svg>
+        </div>
+        <% season[:season_items].each_with_index do |season_items, j| %>
+          <div class="P_event__container <%= j.odd? ? 'right': 'left' %> photo2-<%= season_items[:photo2] %>">
+            <div class="P_event__img-box <%= j.odd? ? 'right': 'left' %> photo2-<%= season_items[:photo2] %>">
+              <div class="C_image__event__<%= items[:name_en] %>__<%= season[:season_title_en] %>_<%= j %>"></div>
+              <div class="P_event__month <%= season[:season_title_en] %> <%= j.odd? ? 'right': 'left' %>"><%= season_items[:month] %><span class="P_event__month_S">月</span></div>
+              <div class="P_event__title-ja <%= j.odd? ? 'right': 'left' %>"><%= season_items[:title] %></div>
+            </div>
+            <% if !(season_items[:photo2] == '') %>
+              <div class="P_event__img-sub <%= season_items[:photo2] %> <%= j.odd? ? 'right': 'left' %>">
+                <div class="P_event__trim-img">
+                  <div class="C_image__event__<%= items[:name_en] %>__<%= season[:season_title_en] %>_<%= j %>-S"></div>
+                </div>
+                <div class="P_event__deco-top-left <%= season_items[:photo2] %>"></div>
+                <div class="P_event__deco-top-right <%= season_items[:photo2] %>"></div>
+                <div class="P_event__deco-bottom-left <%= season_items[:photo2] %>"></div>
+                <div class="P_event__deco-bottom-right <%= season_items[:photo2] %>"></div>
+                <% season_items[:deco].each do |deco| %>
+                  <div class="P_event__deco-<%= season[:season_title_en] %>-<%= deco %>"></div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </section>
+  <% end %>
+</div>
+<%= render 'shared/side-bar_noBack',{color: ''}%>

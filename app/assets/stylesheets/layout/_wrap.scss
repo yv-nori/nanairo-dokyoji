@@ -59,13 +59,14 @@
     align-items: self-start;
   }
   &.title {
+    text-align :center;
     flex-direction: column;
     &.noSpace {
       margin-top: -2px;
     }
   }
   &.bottom {
-    margin-bottom: $space-section * 2;
+    padding-bottom: $space-section * 2;
   }
   &.color {
     background-color: $color-background2;

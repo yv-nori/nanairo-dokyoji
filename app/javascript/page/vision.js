@@ -24,27 +24,15 @@ $(function () {
   menuOpen(HeaderItems);
   smoothScroll(SmoothItems);
   headerStatusWhite(HeaderItems.$targets);
-  switch (media()) {
-    case "SP":
-      addToTopTrigger(ToTopItems)
-      break;
-    case "Tab":
-      addToTopTrigger(ToTopItems)
-      break;
-    case "PC":
-      removeToTopTrigger(ToTopItems)
-      break;
-  }
+  console.log(ToTopItems)
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
     scrollChange(windowScrollTop, startPosition, HeaderItems.$targets, false);
     switch (media()) {
       case "SP":
-        scrollAction(windowScrollTop, ScrollActionItems);
         scrollToTopHide(ToTopItems.$target);
         break;
       case "Tab":
-        scrollAction(windowScrollTop, ScrollActionItems);
         scrollToTop(windowScrollTop, startPosition, ToTopItems);
         break;
       case "PC":
@@ -57,17 +45,6 @@ $(function () {
     resetPositions(ToTopItems.scrollPositions, ToTopItems.$triggers);
     resetPositions(ScrollActionItems.scrollPositions, ScrollActionItems.$triggers);
     resetSmoothPositions(SmoothItems);
-    switch (changeMedia(startSize)) {
-      case "SP":
-        addToTopTrigger(ToTopItems);
-        break;
-      case "Tab":
-        addToTopTrigger(ToTopItems);
-        break;
-      case "PC":
-        removeToTopTrigger(ToTopItems);
-        break;
-    }
     startSize = $(window).width();
   }, false);
 });

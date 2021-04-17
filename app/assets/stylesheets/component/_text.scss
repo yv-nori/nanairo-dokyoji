@@ -8,7 +8,6 @@
     font-size: $font-size-base * 1.6;
     font-weight: 500;
     line-height: 180%;
-    padding-left: 15px;
   }
 }
 .C_text__title-ja {
@@ -34,11 +33,16 @@
     font-size: $font-size-base * 2;
     line-height: 120%;
   }
+  &.left {
+    text-align: left;
+  }
 }
 .C_text__sentence {
+  text-align: left;
   padding-top: 2vh;
   padding-bottom: 3vh;
-  letter-spacing: $letter-spacing-base;
+  font-size: $font-size-base;
+  letter-spacing: 0.01em;
   @include mq-up("tab") {
     font-size: $font-size-base * 1.125;
   }
@@ -67,4 +71,7 @@
     text-align: center;
     margin-top: -8px;
   }
+}
+.C_text__braces {
+  letter-spacing: -0.3em;
 }

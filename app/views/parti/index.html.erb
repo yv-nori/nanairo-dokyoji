@@ -1,9 +1,9 @@
-<%= render partial: 'shared/header_parti' %>
+<%= render partial: 'shared/header', locals:{header_items: @header_items, header_lists: @header_lists}%>
 <section class="KeyVisual">
   <%#-- イメージコンテナー --%>
   <div id="JS_smoothScroll_target-0"></div>
   <div class="P_Pa__kv" id="JS_scroll-to-top_trigger-0">
-    <div class="C_image__parti-kv"></div>
+    <div class="C_image__top-kv__parti"></div>
     <div id="JS_shabon_target-0" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
     <p class="P_Pa__kv__side-text">
       Grow kindness<span class="P_Pa__kv__space">.</span><br>
@@ -13,10 +13,10 @@
     <h1 class="P_Pa__kv__title">Parti</h1>
     <h2 class="P_Pa__kv__sub-title">dokyoji</h2>
     <div class="P_Pa__kv__leaf1">
-      <div class="C_image__parti__leaf1"></div>
+      <div class="C_deco__leaf1"></div>
     </div>
     <div class="P_Pa__kv__leaf2">
-      <div class="C_image__parti__leaf2"></div>
+      <div class="C_deco__leaf2"></div>
     </div>
   </div>
 </section>
@@ -59,17 +59,17 @@
       </div>
       <div class="P_Pa__thought__img-container" id="JS_scroll-to-top_trigger-add-0">
         <div class="P_Pa__thought__main-img-box">
-          <div class="C_image__watering"></div>
+          <div class="C_image__top-sub__parti__large"></div>
         </div>
         <div class="P_Pa__thought__sp-sub-img-container sp-only">
           <div class="P_Pa__thought__sub-img-box">
-            <div class="C_image__potato"></div>
+            <div class="C_image__top-sub__parti__small_0"></div>
           </div>
           <div class="P_Pa__thought__sub-img-box">
-            <div class="C_image__outsideEat"></div>
+            <div class="C_image__top-sub__parti__small_1"></div>
           </div>
           <div class="P_Pa__thought__sub-img-box">
-            <div class="C_image__outsideEat"></div>
+            <div class="C_image__top-sub__parti__small_2"></div>
           </div>
         </div>
         <div id="JS_shabon_target-1" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
@@ -77,13 +77,13 @@
     </div>
     <div class="P_Pa__thought__sub-img-container pc-tab-only">
       <div class="P_Pa__thought__sub-img-box">
-        <div class="C_image__potato"></div>
+        <div class="C_image__top-sub__parti__small_0"></div>
       </div>
       <div class="P_Pa__thought__sub-img-box">
-        <div class="C_image__outsideEat"></div>
+        <div class="C_image__top-sub__parti__small_1"></div>
       </div>
       <div class="P_Pa__thought__sub-img-box">
-        <div class="C_image__outsideEat"></div>
+        <div class="C_image__top-sub__parti__small_2"></div>
       </div>
       <div class="P_Pa__thought__deco-text-container pc-only">
         <div class="P_Pa__thought__deco-text-L_pc pc-only">Parti</div>
@@ -107,7 +107,7 @@
         <div id="JS_scroll-action-0_trigger" class="P_Pa__features__triggers"></div>
         <div class="P_Pa__features__side-border-left"></div>
         <div class="P_Pa__features__side-border-right"></div>
-        <div class="C_image__piani__features__play"></div>
+        <div class="C_image__features__parti__play"></div>
         <div class="P_Pa__features__sub-title-ja">遊び・学び</div>
         <div class="P_Pa__features__sub-title-en">PLAY・LEARN</div>
         <%= link_to "", features_parti_index_path(:anchor => "play"), class:"U_link"%>
@@ -116,7 +116,7 @@
         <div id="JS_scroll-action-1_trigger" class="P_Pa__features__triggers"></div>
         <div class="P_Pa__features__side-border-left"></div>
         <div class="P_Pa__features__side-border-right"></div>
-        <div class="C_image__piani__features__courtesy"></div>
+        <div class="C_image__features__parti__courtesy"></div>
         <div class="P_Pa__features__sub-title-ja">礼儀</div>
         <div class="P_Pa__features__sub-title-en">COURTESY</div>
         <%= link_to "", features_parti_index_path(:anchor => "courtesy"), class:"U_link"%>
@@ -127,7 +127,7 @@
         <div id="JS_scroll-action-2_trigger" class="P_Pa__features__triggers"></div>
         <div class="P_Pa__features__side-border-left"></div>
         <div class="P_Pa__features__side-border-right"></div>
-        <div class="C_image__piani__features__environment"></div>
+        <div class="C_image__features__parti__environment"></div>
         <div class="P_Pa__features__sub-title-ja">環境</div>
         <div class="P_Pa__features__sub-title-en">ENVIRONMENT</div>
         <%= link_to "", features_parti_index_path(:anchor => "environment"), class:"U_link"%>
@@ -136,7 +136,7 @@
         <div id="JS_scroll-action-3_trigger" class="P_Pa__features__triggers"></div>
         <div class="P_Pa__features__side-border-left"></div>
         <div class="P_Pa__features__side-border-right"></div>
-        <div class="C_image__piani__features__expression"></div>
+        <div class="C_image__features__parti__expression"></div>
         <div class="P_Pa__features__sub-title-ja">表現</div>
         <div class="P_Pa__features__sub-title-en">EXPRESSION</div>
         <%= link_to "", features_parti_index_path(:anchor => "expression"), class:"U_link"%>
@@ -144,7 +144,7 @@
       <div class="P_Pa__features__img-box space-left space-top2 pc-only">
         <div class="P_Pa__features__side-border-left"></div>
         <div class="P_Pa__features__side-border-right"></div>
-        <div class="C_image__piani__features__together"></div>
+        <div class="C_image__features__parti__together"></div>
         <div class="P_Pa__features__sub-title-ja">一緒に</div>
         <div class="P_Pa__features__sub-title-en">TOGETHER</div>
         <%= link_to "", features_parti_index_path(:anchor => "together"), class:"U_link"%>
@@ -155,7 +155,7 @@
         <div id="JS_scroll-action-4_trigger" class="P_Pa__features__triggers"></div>
         <div class="P_Pa__features__side-border-left"></div>
         <div class="P_Pa__features__side-border-right"></div>
-        <div class="C_image__piani__features__together"></div>
+        <div class="C_image__features__parti__together"></div>
         <div class="P_Pa__features__sub-title-ja">一緒に</div>
         <div class="P_Pa__features__sub-title-en">TOGETHER</div>
       </div>
@@ -168,7 +168,7 @@
       <div class="P_Pa__contents__number pc-tab-only">1.</div>
       <div id="JS_scroll-action-5_trigger">
         <div class="P_Pa__contents__img-box" id="JS_scroll-action-5_target-0">
-          <div class="C_image__piani__contents__about"></div>
+          <div class="C_image__about__banner"></div>
           <h1 class="P_Pa__contents__title-en">ABOUT</h1>
           <svg class="P_Pa__contents__deco-line" x="0px" y="0px" width="100%" height="100%">
             <line x1="50%" y1="1%" x2="50%" y2="100%"/>
@@ -189,7 +189,7 @@
       <div class="P_Pa__contents__number pc-tab-only">2.</div>
       <div id="JS_scroll-action-6_trigger">
         <div class="P_Pa__contents__img-box" id="JS_scroll-action-6_target-0">
-          <div class="C_image__piani__contents__event"></div>
+          <div class="C_image__event__banner"></div>
           <h1 class="P_Pa__contents__title-en">EVENT</h1>
           <svg class="P_Pa__contents__deco-line" x="0px" y="0px" width="100%" height="100%">
             <line x1="50%" y1="1%" x2="50%" y2="100%"/>
@@ -211,7 +211,7 @@
       <div class="P_Pa__contents__number pc-tab-only">3.</div>
       <div id="JS_scroll-action-7_trigger">
         <div class="P_Pa__contents__img-box" id="JS_scroll-action-7_target-0">
-          <div class="C_image__piani__contents__food-education"></div>
+          <div class="C_image__eat-education__banner"></div>
           <h1 class="P_Pa__contents__title-en">FOOD<br>EDUCATION</h1>
           <svg class="P_Pa__contents__deco-line" x="0px" y="0px" width="100%" height="100%">
             <line x1="50%" y1="1%" x2="50%" y2="100%"/>
@@ -232,7 +232,7 @@
       <div class="P_Pa__contents__number pc-tab-only">4.</div>
       <div id="JS_scroll-action-8_trigger">
         <div class="P_Pa__contents__img-box" id="JS_scroll-action-8_target-0">
-          <div class="C_image__piani__contents__philosophy"></div>
+          <div class="C_image__philosophy__banner"></div>
           <h1 class="P_Pa__contents__title-en">PHILOSOPHY</h1>
           <svg class="P_Pa__contents__deco-line" x="0px" y="0px" width="100%" height="100%">
             <line x1="50%" y1="1%" x2="50%" y2="100%"/>
@@ -284,53 +284,53 @@
     <div class="P_Pa__photo-gallery__img-slider">
       <ul class="P_Pa__photo-gallery__slide-group">
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery1"></div>
+          <div class="C_image__photo-gallery__parti__slider_0"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery2"></div>
+          <div class="C_image__photo-gallery__parti__slider_1"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery3"></div>
+          <div class="C_image__photo-gallery__parti__slider_2"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery4"></div>
+          <div class="C_image__photo-gallery__parti__slider_3"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery5"></div>
+          <div class="C_image__photo-gallery__parti__slider_4"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery6"></div>
+          <div class="C_image__photo-gallery__parti__slider_5"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
       </ul>
       <ul class="P_Pa__photo-gallery__slide-group">
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery1"></div>
+          <div class="C_image__photo-gallery__parti__slider_0"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery2"></div>
+          <div class="C_image__photo-gallery__parti__slider_1"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery3"></div>
+          <div class="C_image__photo-gallery__parti__slider_2"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery4"></div>
+          <div class="C_image__photo-gallery__parti__slider_3"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery5"></div>
+          <div class="C_image__photo-gallery__parti__slider_4"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
         <li class="P_Pa__photo-gallery__img-circle">
-          <div class="C_image__piani__gallery6"></div>
+          <div class="C_image__photo-gallery__parti__slider_5"></div>
           <%= link_to "", photo_gallery_parti_index_path, class:"U_link circle"%>
         </li>
       </ul>
@@ -351,7 +351,7 @@
     <div class="P_Pa__nav__top-wrap">
       <div class="P_Pa__nav__belong-box" id="JS_scroll-action-9_trigger">
         <div class="P_Pa__nav__rain">
-          <div class="C_image__rain"></div>
+          <div class="C_deco__rain"></div>
         </div>
         <div class="P_Pa__nav__title-box left">
           <div class="P_Pa__nav__title-ja">在園の方へ
@@ -364,7 +364,7 @@
         </div>
         <div class="P_Pa__nav__img-box">
           <div class="P_Pa__nav__trim-img">
-            <div class="C_image__piani__nav__belong"></div>
+            <div class="C_image__belong__banner"></div>
           </div>
           <div class="P_Pa__nav__deco-top-left"></div>
           <div class="P_Pa__nav__deco-top-right"></div>
@@ -377,7 +377,7 @@
       </svg>
       <div class="P_Pa__nav__admission-box" id="JS_scroll-action-10_trigger">
         <div class="P_Pa__nav__birds">
-          <div class="C_image__birds"></div>
+          <div class="C_deco__birds"></div>
         </div>
         <div class="P_Pa__nav__title-box right">
           <div class="P_Pa__nav__title-ja">入園希望の方へ
@@ -390,7 +390,7 @@
         </div>
         <div class="P_Pa__nav__img-box admission">
           <div class="P_Pa__nav__trim-img">
-            <div class="C_image__piani__nav__admission"></div>
+            <div class="C_image__admission__banner"></div>
           </div>
           <div class="P_Pa__nav__deco-top-left"></div>
           <div class="P_Pa__nav__deco-top-right"></div>
@@ -404,21 +404,21 @@
         <div id="JS_scroll-action-11_trigger" style="height:100%;">
           <div class="P_Pa__nav__under-title-en">ACCESS</div>
           <div class="P_Pa__nav__under-title-ja">アクセス</div>
-        <%= link_to "", root_path, class:"U_link"%>
+          <%= link_to "", about_parti_index_path(:anchor => "access"), class:"U_link"%>
         </div>
       </div>
       <div class="P_Pa__nav__map-title-box" id="JS_scroll-action-12_target-0">
         <div id="JS_scroll-action-12_trigger" style="height:100%;">
           <div class="P_Pa__nav__under-title-en">MAP</div>
           <div class="P_Pa__nav__under-title-ja">マップ</div>
-        <%= link_to "", root_path, class:"U_link"%>
+          <%= link_to "", about_parti_index_path(:anchor => "map"), class:"U_link"%>
         </div>
       </div>
       <div class="P_Pa__nav__info-title-box" id="JS_scroll-action-13_target-0">
         <div id="JS_scroll-action-13_trigger" style="height:100%;">
           <div class="P_Pa__nav__under-title-en">INFOMATION</div>
           <div class="P_Pa__nav__under-title-ja">インフォメーション</div>
-        <%= link_to "", root_path, class:"U_link"%>
+          <%= link_to "", about_parti_index_path(:anchor => "map"), class:"U_link"%>
         </div>
       </div>
     </div>
@@ -440,11 +440,13 @@
       <div class="P_Pa__recruit__title-ja">就職希望の方へ</div>
       <div class="P_Pa__recruit__title-en">RECRUITING</div>
       <div class="P_Pa__recruit__sub-title-en">Let's work together!</div>
-      <div class="P_Pa__recruit__read">READ MORE
+      <div class="P_Pa__recruit__read">
+        READ MORE
         <svg class="P_Pa__recruit__deco-line-read" x="0px" y="0px" width="250" height="110">
           <polyline class="P_Pa__recruit__deco-line-read-1" points="200,50 200,1 1,1 1,60" fill="transparent" id="JS_scroll-action-14_target-0"/>
           <polyline class="P_Pa__recruit__deco-line-read-2" points="1,60 220,60 220,55 230,60 220,65 220,60" fill="transparent" id="JS_scroll-action-14_target-1"/>
         </svg>
+        <%= link_to "", recruit_parti_index_path, class:"U_link"%>
       </div>
       <div class="P_Pa__recruit__text pc-only">
         子ども達を中心として<br>
@@ -457,12 +459,12 @@
       </div>
       <div class="P_Pa__recruit__img-frame-M pc-only">
         <div class="P_Pa__recruit__img-box-M">
-          <div class="C_image__piani__recruit1"></div>
+          <div class="C_image__recruit__photo-main"></div>
         </div>
       </div>
       <div class="P_Pa__recruit__img-frame-S pc-only">
         <div class="P_Pa__recruit__img-box-S">
-          <div class="C_image__recruit2"></div>
+          <div class="C_image__recruit__photo-sub"></div>
         </div>
       </div>
     </div>
@@ -475,7 +477,7 @@
       <div id="JS_scroll-action-15_trigger">
         <div class="P_Pa__others__img-frame">
           <div class="P_Pa__others__img-box" id="JS_scroll-action-15_target-0">
-            <div class="C_image__piani__other__support"></div>
+            <div class="C_image__support__banner"></div>
             <div class="P_Pa__others__title-ja">子育て支援</div>
             <%= link_to "", support_parti_index_path, class:"U_link"%>
           </div>
@@ -487,7 +489,7 @@
       <div id="JS_scroll-action-16_trigger">
         <div class="P_Pa__others__img-frame">
           <div class="P_Pa__others__img-box" id="JS_scroll-action-16_target-0">
-            <div class="C_image__piani__other__admission"></div>
+            <div class="C_image__for-admission__banner"></div>
             <div class="P_Pa__others__title-ja">入園に向けて</div>
             <%= link_to "", for_admission_parti_index_path, class:"U_link"%>
           </div>
@@ -496,5 +498,5 @@
     </div>
   </div>
 </section>
-<%= render 'shared/side_bar_noBack',{color: ''}%>
-<%= render partial: 'shared/footer_parti' %>
+<%= render 'shared/side-bar_noBack',{color: ''}%>
+<%= render partial: 'shared/footer', locals:{footer_item: @footer_item, footer_lists: @footer_lists, footer_texts: @footer_texts, side_bar: false }%>

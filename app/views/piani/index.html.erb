@@ -1,4 +1,4 @@
-<%= render partial: 'shared/header_piani' %>
+<%= render partial: 'shared/header', locals:{header_items: @header_items, header_lists: @header_lists}%>
 <section class="KeyVisual">
   <%#-- イメージコンテナー --%>
   <div id="JS_smoothScroll_target-0"></div>
@@ -488,5 +488,5 @@
     </div>
   </div>
 </section>
-<%= render 'shared/side_bar_noBack',{color: ''}%>
-<%= render partial: 'shared/footer_piani' %>
+<%= render 'shared/side-bar_noBack',{color: ''}%>
+<%= render partial: 'shared/footer', locals:{footer_item: @footer_item, footer_lists: @footer_lists, footer_texts: @footer_texts, side_bar: false }%>

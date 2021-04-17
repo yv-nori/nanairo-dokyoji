@@ -1,10 +1,7 @@
-<%= render partial: 'shared/header' %>
+<%= render partial: 'shared/header', locals:{header_items: @header_items, header_lists: @header_lists}%>
 <%# ==================================== %>
 <%# トップイメージ
 <%# ==================================== %>
-<%# <div class="C_icon__toDown" id="JS_toDown_Trigger">
-  <i class="fa fa-angle-double-down icon" aria-hidden="true"></i>
-</div> %>
 <section class="RecruitKeyVisual">
   <div id="JS_smoothScroll_target-0"></div>
   <div class="L_kv" id="JS_raindrops_target">
@@ -416,5 +413,5 @@ form_items = [
     <%=render partial:'shared/form', collection: form_items ,as:'form_items' %>
   </div>
 </section>
-<%= render 'shared/side_bar',{color: ''}%>
-<%= render partial: 'shared/footer' %>
+<%= render 'shared/side-bar',{color: ''}%>
+<%= render partial: 'shared/footer', locals:{footer_item: @footer_item, footer_lists: @footer_lists, footer_texts: @footer_texts}%>

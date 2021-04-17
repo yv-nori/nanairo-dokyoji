@@ -1,330 +1,365 @@
+@mixin image-base {
+  background-position: center;
+  -webkit-background-position: center;
+  -moz-background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-repeat: no-repeat;
+  -moz-background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+@mixin image {
+  @include image-base();
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  position: absolute;
+}
+@mixin image-contain {
+  @include image-base;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  position: absolute;
+}
+@mixin image-para {
+  @include image-base;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  content: "";
+  display: block;
+}
 .C_deco {
-  &__jagged1,
-  &__babble1,
-  &__triangle1,
-  &__dots1,
-  &__wave-line1,
-  &__wave-line2,
-  &__text-shine1,
-  &__text-shine2,
-  &__text-shine3,
-  &__text-shine4,
-  &__paint,
-  &__instagram,
-  &__sparkle1,
-  &__sparkle2,
-  &__one-day-deco-1,
-  &__one-day-deco-2,
-  &__one-day-deco-3,
-  &__one-day-deco-4,
-  &__one-day-deco-5,
-  &__one-day-deco-6,
-  &__one-day-deco-7,
-  &__one-day-deco-8,
-  &__one-day-deco-9,
-  &__one-day-deco-10,
-  &__one-day-deco-11,
-  &__arrow-right-L,
-  &__arrow-right,
-  &__arrow-left,
-  &__arrow-down,
-  &__cloud1,
-  &__cloud2,
-  &__cloud3,
-  &__cloud4,
-  &__cloud5,
-  &__symbols1,
-  &__frame,
-  &__under-arrow {
-    width: 100%;
-    height: 100%;
-  }
   &__features__play {
-    &-1-L,
-    &-1-R,
-    &-2-L,
-    &-2-R,
-    &-3-L,
-    &-3-R,
-    &-4-L,
-    &-4-R {
-      width: 100%;
-      height: 100%;
-    }
     &-1-L {
-      background: image-url('deco/features/play_deco1-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/play_deco1-L.svg');
+      @include image-contain;
     }
     &-1-R {
-      background: image-url('deco/features/play_deco1-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/play_deco1-R.svg');
+      @include image-contain;
     }
     &-2-L {
-      background: image-url('deco/features/play_deco2-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/play_deco2-L.svg');
+      @include image-contain;
     }
     &-2-R {
-      background: image-url('deco/features/play_deco2-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/play_deco2-R.svg');
+      @include image-contain;
     }
     &-3-L {
-      background: image-url('deco/features/play_deco3-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/play_deco3-L.svg');
+      @include image-contain;
     }
     &-3-R {
-      background: image-url('deco/features/play_deco3-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/play_deco3-R.svg');
+      @include image-contain;
     }
     &-4-L {
-      background: image-url('deco/features/play_deco4-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/play_deco4-L.svg');
+      @include image-contain;
     }
     &-4-R {
-      background: image-url('deco/features/play_deco4-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/play_deco4-R.svg');
+      @include image-contain;
     }
   }
   &__features__courtesy {
-    &-1-R,
-    &-2-L,
-    &-2-R,
-    &-3-L,
-    &-3-R,
-    &-4-L,
-    &-4-R {
-      width: 100%;
-      height: 100%;
-    }
     &-1-R {
-      background: image-url('deco/features/courtesy_deco1-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/courtesy_deco1-R.svg');
+      @include image-contain;
     }
     &-2-L {
-      background: image-url('deco/features/courtesy_deco2-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/courtesy_deco2-L.svg');
+      @include image-contain;
     }
     &-2-R {
-      background: image-url('deco/features/courtesy_deco2-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/courtesy_deco2-R.svg');
+      @include image-contain;
     }
     &-3-L {
-      background: image-url('deco/features/courtesy_deco3-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/courtesy_deco3-L.svg');
+      @include image-contain;
     }
     &-3-R {
-      background: image-url('deco/features/courtesy_deco3-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/courtesy_deco3-R.svg');
+      @include image-contain;
     }
     &-4-L {
-      background: image-url('deco/features/courtesy_deco4-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/courtesy_deco4-L.svg');
+      @include image-contain;
     }
     &-4-R {
-      background: image-url('deco/features/courtesy_deco4-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/courtesy_deco4-R.svg');
+      @include image-contain;
     }
   }
   &__features__environment {
-    &-1-L,
-    &-1-R,
-    &-2-L,
-    &-2-R,
-    &-3-L,
-    &-3-R,
-    &-4-L,
-    &-4-R,
-    &-5-L,
-    &-5-R {
-      width: 100%;
-      height: 100%;
-    }
     &-1-L {
-      background: image-url('deco/features/environment_deco1-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/environment_deco1-L.svg');
+      @include image-contain;
     }
     &-1-R {
-      background: image-url('deco/features/environment_deco1-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/environment_deco1-R.svg');
+      @include image-contain;
     }
     &-2-L {
-      background: image-url('deco/features/environment_deco2-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/environment_deco2-L.svg');
+      @include image-contain;
     }
     &-2-R {
-      background: image-url('deco/features/environment_deco2-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/environment_deco2-R.svg');
+      @include image-contain;
     }
     &-3-L {
-      background: image-url('deco/features/environment_deco3-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/environment_deco3-L.svg');
+      @include image-contain;
     }
     &-3-R {
-      background: image-url('deco/features/environment_deco3-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/environment_deco3-R.svg');
+      @include image-contain;
     }
     &-4-L {
-      background: image-url('deco/features/environment_deco4-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/environment_deco4-L.svg');
+      @include image-contain;
     }
     &-4-R {
-      background: image-url('deco/features/environment_deco4-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/environment_deco4-R.svg');
+      @include image-contain;
     }
     &-5-L {
-      background: image-url('deco/features/environment_deco5-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/environment_deco5-L.svg');
+      @include image-contain;
     }
     &-5-R {
-      background: image-url('deco/features/environment_deco5-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/environment_deco5-R.svg');
+      @include image-contain;
     }
   }
   &__features__expression {
-    &-1-L,
-    &-1-R,
-    &-2-L,
-    &-2-R,
-    &-3-L,
-    &-3-R,
-    &-4-R {
-      width: 100%;
-      height: 100%;
-    }
     &-1-L {
-      background: image-url('deco/features/expression_deco1-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/expression_deco1-L.svg');
+      @include image-contain;
     }
     &-1-R {
-      background: image-url('deco/features/expression_deco1-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/expression_deco1-R.svg');
+      @include image-contain;
     }
     &-2-L {
-      background: image-url('deco/features/expression_deco2-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/expression_deco2-L.svg');
+      @include image-contain;
     }
     &-2-R {
-      background: image-url('deco/features/expression_deco2-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/expression_deco2-R.svg');
+      @include image-contain;
     }
     &-3-L {
-      background: image-url('deco/features/expression_deco3-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/expression_deco3-L.svg');
+      @include image-contain;
     }
     &-3-R {
-      background: image-url('deco/features/expression_deco3-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/expression_deco3-R.svg');
+      @include image-contain;
     }
     &-4-R {
-      background: image-url('deco/features/expression_deco4-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/expression_deco4-R.svg');
+      @include image-contain;
     }
   }
   &__features__together {
-    &-1-L,
-    &-1-R,
-    &-2-L,
-    &-2-R,
-    &-3-L,
-    &-3-R {
-      width: 100%;
-      height: 100%;
-    }
     &-1-L {
-      background: image-url('deco/features/together_deco1-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/together_deco1-L.svg');
+      @include image-contain;
     }
     &-1-R {
-      background: image-url('deco/features/together_deco1-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/together_deco1-R.svg');
+      @include image-contain;
     }
     &-2-L {
-      background: image-url('deco/features/together_deco2-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/together_deco2-L.svg');
+      @include image-contain;
     }
     &-2-R {
-      background: image-url('deco/features/together_deco2-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/together_deco2-R.svg');
+      @include image-contain;
     }
     &-3-L {
-      background: image-url('deco/features/together_deco3-L.svg') no-repeat center center / contain;
+      background: image-url('deco/features/together_deco3-L.svg');
+      @include image-contain;
     }
     &-3-R {
-      background: image-url('deco/features/together_deco3-R.svg') no-repeat center center / contain;
+      background: image-url('deco/features/together_deco3-R.svg');
+      @include image-contain;
     }
   }
   &__jagged1 {
-    background: image-url('deco/public/jagged1.svg') no-repeat center center / contain;
+    background: image-url('deco/public/jagged1.svg');
+    @include image-contain;
   }
   &__babble1 {
-    background: image-url('deco/public/babble1.svg') no-repeat center center / contain;
+    background: image-url('deco/public/babble1.svg');
+    @include image-contain;
   }
   &__triangle1 {
-    background: image-url('deco/public/triangle1.svg') no-repeat center center / contain;
+    background: image-url('deco/public/triangle1.svg');
+    @include image-contain;
   }
   &__dots1 {
-    background: image-url('deco/public/dots1.svg') no-repeat center center / contain;
+    background: image-url('deco/public/dots1.svg');
+    @include image-contain;
   }
   &__wave-line1 {
-    background: image-url('deco/public/wave-line1.svg') no-repeat center center / contain;
+    background: image-url('deco/public/wave-line1.svg');
+    @include image-contain;
   }
   &__wave-line2 {
-    background: image-url('deco/public/wave-line2.svg') no-repeat center center / contain;
+    background: image-url('deco/public/wave-line2.svg');
+    @include image-contain;
   }
   &__text-shine1 {
-    background: image-url('deco/public/text-shine1.svg') no-repeat center center / contain;
+    background: image-url('deco/public/text-shine1.svg');
+    @include image-contain;
   }
   &__text-shine2 {
-    background: image-url('deco/public/text-shine2.svg') no-repeat center center / contain;
+    background: image-url('deco/public/text-shine2.svg');
+    @include image-contain;
   }
   &__text-shine3 {
-    background: image-url('deco/public/text-shine3.svg') no-repeat center center / contain;
+    background: image-url('deco/public/text-shine3.svg');
+    @include image-contain;
   }
   &__text-shine4 {
-    background: image-url('deco/public/text-shine4.svg') no-repeat center center / contain;
+    background: image-url('deco/public/text-shine4.svg');
+    @include image-contain;
   }
   &__paint {
-    background: image-url('deco/public/paint.svg') no-repeat center center / contain;
+    background: image-url('deco/public/paint.svg');
+    @include image-contain;
   }
   &__instagram {
-    background: image-url('deco/public/instagram.svg') no-repeat center center / contain;
+    background: image-url('deco/public/instagram.svg');
+    @include image-contain;
   }
   &__sparkle1 {
-    background: image-url('deco/public/sparkle1.svg') no-repeat center center / contain;
+    background: image-url('deco/public/sparkle1.svg');
+    @include image-contain;
   }
   &__sparkle2 {
-    background: image-url('deco/public/sparkle2.svg') no-repeat center center / contain;
+    background: image-url('deco/public/sparkle2.svg');
+    @include image-contain;
   }
   &__one-day-deco-1 {
-    background: image-url('deco/one_day/one_day_deco-1.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-1.svg');
+    @include image-contain;
   }
   &__one-day-deco-2 {
-    background: image-url('deco/one_day/one_day_deco-2.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-2.svg');
+    @include image-contain;
   }
   &__one-day-deco-3 {
-    background: image-url('deco/one_day/one_day_deco-3.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-3.svg');
+    @include image-contain;
   }
   &__one-day-deco-4 {
-    background: image-url('deco/one_day/one_day_deco-4.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-4.svg');
+    @include image-contain;
   }
   &__one-day-deco-5 {
-    background: image-url('deco/one_day/one_day_deco-5.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-5.svg');
+    @include image-contain;
   }
   &__one-day-deco-6 {
-    background: image-url('deco/one_day/one_day_deco-6.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-6.svg');
+    @include image-contain;
   }
   &__one-day-deco-7 {
-    background: image-url('deco/one_day/one_day_deco-7.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-7.svg');
+    @include image-contain;
   }
   &__one-day-deco-8 {
-    background: image-url('deco/one_day/one_day_deco-8.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-8.svg');
+    @include image-contain;
   }
   &__one-day-deco-9 {
-    background: image-url('deco/one_day/one_day_deco-9.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-9.svg');
+    @include image-contain;
   }
   &__one-day-deco-10 {
-    background: image-url('deco/one_day/one_day_deco-10.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-10.svg');
+    @include image-contain;
   }
   &__one-day-deco-11 {
-    background: image-url('deco/one_day/one_day_deco-11.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/one_day_deco-11.svg');
+    @include image-contain;
   }
   &__arrow-right {
-    background: image-url('deco/one_day/arrow-right.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/arrow-right.svg');
+    @include image-contain;
   }
   &__arrow-right-L {
-    background: image-url('deco/one_day/arrow-right-L.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/arrow-right-L.svg');
+    @include image-contain;
   }
   &__arrow-left {
-    background: image-url('deco/one_day/arrow-left.svg') no-repeat center center / contain;
+    background: image-url('deco/one_day/arrow-left.svg');
+    @include image-contain;
   }
   &__arrow-left {
-    background: image-url('deco/public/arrow-bottom.svg') no-repeat center center / contain;
+    background: image-url('deco/public/arrow-bottom.svg');
+    @include image-contain;
   }
   &__cloud1 {
-    background: image-url('deco/public/cloud1.svg') no-repeat center center / contain;
+    background: image-url('deco/public/cloud1.svg');
+    @include image-contain;
   }
   &__cloud2 {
-    background: image-url('deco/public/cloud2.svg') no-repeat center center / contain;
+    background: image-url('deco/public/cloud2.svg');
+    @include image-contain;
   }
   &__cloud3 {
-    background: image-url('deco/public/cloud3.svg') no-repeat center center / contain;
+    background: image-url('deco/public/cloud3.svg');
+    @include image-contain;
   }
   &__cloud4 {
-    background: image-url('deco/public/cloud4.svg') no-repeat center center / contain;
+    background: image-url('deco/public/cloud4.svg');
+    @include image-contain;
   }
   &__cloud5 {
-    background: image-url('deco/public/cloud5.svg') no-repeat center center / contain;
+    background: image-url('deco/public/cloud5.svg');
+    @include image-contain;
   }
   &__arrow-down {
-    background: image-url('deco/public/arrow-down.svg') no-repeat center center / contain;
+    background: image-url('deco/public/arrow-down.svg');
+    @include image-contain;
   }
   &__symbols1 {
-    background: image-url('deco/public/symbols.svg') no-repeat center center / contain;
+    background: image-url('deco/public/symbols.svg');
+    @include image-contain;
   }
   &__under-arrow {
-    background: image-url('deco/public/under-arrow.svg') no-repeat center center / contain;
+    background: image-url('deco/public/under-arrow.svg');
+    @include image-contain;
+  }
+  &__leaf1 {
+    background: image-url('deco/public/leaf1.png');
+    @include image-contain;
+  }
+  &__leaf2 {
+    background: image-url('deco/public/leaf2.png');
+    @include image-contain;
+  }
+  &__birds {
+    background: image-url('deco/public/birds.svg');
+    @include image-contain;
+  }
+  &__rain {
+    background: image-url('deco/public/rain.svg');
+    @include image-contain;
   }
 }

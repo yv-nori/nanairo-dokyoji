@@ -288,6 +288,8 @@
     font-size: $font-size-base * 0.9375;
     color: #fff;
     width: 300px;
+    border: solid 1px #fff;
+    position: relative;
     @include mq-up("tab") {
       width: 250px;
     }

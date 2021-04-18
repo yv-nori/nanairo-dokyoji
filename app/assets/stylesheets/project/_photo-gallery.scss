@@ -1017,6 +1017,7 @@
   &__icon-camera {
     @include S3_image('deco/camera.svg');
     @include image;
+    position: initial;
     width: 30px;
     height: 24px;
     margin: auto;

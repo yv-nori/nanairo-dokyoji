@@ -4,7 +4,7 @@
   <div class="P_eat-education__kv__img">
     <div class="C_image__eat-education__kv"></div>
   </div>
-  <h1 class="P_eat-education__kv__title pc-only"><%= items[:name_en_L] %></h1>
+  <h1 class="P_eat-education__kv__title pc-only"><%= name_items[:name_en_L] %></h1>
   <h2 class="P_eat-education__kv__sub-title pc-only">DOKYOJI</h2>
   <h2 class="P_eat-education__kv__sub-text">
     いただきます。<br>
@@ -83,111 +83,10 @@
   <h1 class="P_eat-education__recipe__title-en">RECIPE</h1>
   <h2 class="P_eat-education__common__title-ja">給食レシピ</h2>
   <h3 class="P_eat-education__common__sub-title multiple">子どもの発達に応じた<br class="sp-only">給食レシピ動画を<br class="sp-only">Youtubeで紹介</h3>
-    <div class="P_eat-education__recipe__img-slider">
-      <ul class="P_eat-education__recipe__slide-group">
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_0"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_1"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_2"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_3"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_4"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_5"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-      </ul>
-      <ul class="P_eat-education__recipe__slide-group">
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_0"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_1"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_2"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_3"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_4"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-        <li class="P_eat-education__recipe__content-box">
-          <div class="P_eat-education__recipe__img-circle">
-            <div class="C_image__eat-education__recipe_5"></div>
-          </div>
-          <div class="P_eat-education__recipe__recipe-title">
-            麻婆ナス
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="P_eat-education__recipe__btn">
-      <div class="P_eat-education__recipe__btn-text">VIEW MORE</div>
-    </div>
+  <%= render partial: 'shared/recipe_slider', locals:{recipe_items: @recipe_items}%>
+  <div class="P_eat-education__recipe__btn">
+    <div class="P_eat-education__recipe__btn-text">VIEW MORE</div>
+  </div>
 </section>
 <div id="JS_smoothScroll_target-3"></div>
 <section class="P_eat-education__instagram">
@@ -378,7 +277,7 @@
         <h3 class="P_eat-education__foodstuff__shop-name"><%= staff[:shop_name] %></h3>
         <div class="P_eat-education__foodstuff__container <%= "reverse" if i.odd? %>">
           <div class="P_eat-education__foodstuff__img">
-            <div class="C_image__eat-education__<%= items[:name_en] %>__food-staff_<%= i %>"></div>
+            <div class="C_image__eat-education__<%= name_items[:name_en] %>__food-staff_<%= i %>"></div>
           </div>
           <div class="P_eat-education__foodstuff__text-box">
             <h4>代表者</h4>

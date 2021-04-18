@@ -44,32 +44,32 @@
 	}
 	&__logo-image{
 		&.isMoveUp {
+			@include S3_image('logo/nanairo_logo.png');
 			@include image;
-			@include S3_image('logo/nanairo_logo.png') 
 		}
 		&.isMoveTop {
+			@include S3_image('logo/nanairo_logo_white.png');
 			@include image;
-			@include S3_image('logo/nanairo_logo_white.png') 
 		}
 	}
 	&__logo-image-piani{
 		&.isMoveUp {
+			@include S3_image('logo/piani_logo.svg');
 			@include image;
-			@include S3_image('logo/piani_logo.svg') 
 		}
 		&.isMoveTop {
+			@include S3_image('logo/piani_logo_white.svg');
 			@include image;
-			@include S3_image('logo/piani_logo_white.svg') 
 		}
 	}
 	&__logo-image-parti{
 		&.isMoveUp {
+			@include S3_image('logo/parti_logo.svg');
 			@include image;
-			@include S3_image('logo/parti_logo.svg') 
 		}
 		&.isMoveTop {
+			@include S3_image('logo/parti_logo_white.svg');
 			@include image;
-			@include S3_image('logo/parti_logo_white.svg') 
 		}
 	}
 }

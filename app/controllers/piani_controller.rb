@@ -1,10 +1,87 @@
 class PianiController < ApplicationController
   before_action :items
-  def belong
-    @items = { name_en: 'piani' }
+  before_action :recipe_items, only:[:eat_education,:support]
+  before_action :name_items, only:[:about, :admission, :belong,  :eat_education, :event, :features, :photo_gallery]
+  def about
+    @items = {
+      link_play: features_piani_index_path(:anchor => "play"),
+      link_courtesy: features_piani_index_path(:anchor => "courtesy"),
+      link_environment: features_piani_index_path(:anchor => "environment"),
+      link_expression: features_piani_index_path(:anchor => "expression"),
+      link_together: features_piani_index_path(:anchor => "together"),
+      intro_text: '
+        ピアニィと<span class="C_text__braces">は</span><br class="sp-only">「小さい<span class="C_text__braces">」</span>「かわいい<span class="C_text__braces">」</span>を意味します。<br>
+        音楽の楽譜などで見るm<span class="C_text__braces">p</span>（メゾピアノ<span class="C_text__braces">）</span>やp<span class="C_text__braces">p</span>（ピアニシモ<span class="C_text__braces">）</span>という記号のpと同じです。<br>
+        この名前には、ひとり一人の子ども達が音符のように大事な音を奏で、<br class="pc-tab-only">
+        ひとり一人が無くてはならない存在であり、ちがう音符を互いに大切にすることで<br class="pc-tab-only">
+        素晴らしいメロディ・ハーモニーになるとの思いが込められています。<br>
+        子ども達ひとり一人が自分を音で表現し、その音を暖かく大切に見守り、<br class="pc-tab-only">
+        そして子ども達が互いの音を認めあえる園でありたいという思いが込められています。',
+      map_1F_length: 6,
+      map_2F_length: 4,
+      address: '〒597-0081　大阪府貝塚市麻生中626　TEL 072-493-1330',
+      station: 'JR阪和線 東貝塚駅下車 徒歩10分',
+      google_map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6581.560123323829!2d135.37183865904808!3d34.43234136876365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca4652827cf45e9c!2z5LiD5b2p5a2m6IiOIOODlOOCouODi-OCo-mBk-aVmeWvug!5e0!3m2!1sja!2sjp!4v1618481720603!5m2!1sja!2sjp'
+    }
+    @map_items = [
+      {title: '1階保育室1', photo: '1F_0'},
+      {title: '1階保育室2', photo: '1F_1'},
+      {title: '1階保育室3', photo: '1F_2'},
+      {title: '1階保育室4', photo: '1F_3'},
+      {title: '1階保育室5', photo: '1F_4'},
+      {title: '1階保育室6', photo: '1F_5'},
+      {title: '1階保育室7', photo: '1F_6'},
+      {title: '2階保育室8', photo: '2F_0'},
+      {title: '2階保育室9', photo: '2F_1'},
+      {title: '2階保育室10', photo: '2F_2'},
+      {title: '2階保育室11', photo: '2F_3'},
+      {title: '2階保育室12', photo: '2F_4'},
+      {title: '2階保育室13', photo: '2F_5'}
+    ]
+  end
+  def admission
+    @items = {
+      movie_link: for_admission_parti_index_path(anchor: 'movie'),
+      pdf_link: for_admission_parti_index_path,
+      pdf_title: '令和2 年度 募集要<span class="C_text__braces">項</span>（PDF<span class="C_text__braces">）</span>',
+      one_day_link: one_day_parti_index_path
+    }
+  end
+  def eat_education
+    @food_staff = [
+      {
+        shop_name: 'ミートショップ北出',
+        representative: '北出　稔',
+        text: '美味しいお肉を納入しております',
+        delively: '三徳',
+        postal_code: '〒597-0033',
+        address: '大阪府　貝塚市　半田　1-3-15',
+        tel: '072-427-5515',
+        fax: '072-427-5515'
+      },
+      {
+        shop_name: 'ミートショップ北出',
+        representative: '北出　稔',
+        text: '美味しいお肉を納入しております',
+        delively: '三徳',
+        postal_code: '〒597-0033',
+        address: '大阪府　貝塚市　半田　1-3-15',
+        tel: '072-427-5515',
+        fax: '072-427-5515'
+      },
+      {
+        shop_name: 'ミートショップ北出',
+        representative: '北出　稔',
+        text: '美味しいお肉を納入しております',
+        delively: '三徳',
+        postal_code: '〒597-0033',
+        address: '大阪府　貝塚市　半田　1-3-15',
+        tel: '072-427-5515',
+        fax: '072-427-5515'
+      }
+    ]
   end
   def event
-    @items = { name_en: 'piani' }
     @season = [
       {
         season_title_en: 'spring',
@@ -186,91 +263,17 @@ class PianiController < ApplicationController
       },
     ]
   end
-  def vision
-  end
-  def eat_education
+  def support
     @items = {
-      name_en: 'piani',
-      name_en_L: 'Piani'
+      title: 'ピアルーム',
+      title_en: 'PIAROOM',
+      age: '0、1、2歳児（20組限定）',
+      date: '毎月第2・4木曜日　13時30分より',
+      span: '5月～2月末まで',
+      cost: '1回　200円',
+      local: 'ピアニィ道教寺',
+      request: 'ピアニィ道教寺にて随時受付中'
     }
-    @food_staff = [
-      {
-        shop_name: 'ミートショップ北出',
-        representative: '北出　稔',
-        text: '美味しいお肉を納入しております',
-        delively: '三徳',
-        postal_code: '〒597-0033',
-        address: '大阪府　貝塚市　半田　1-3-15',
-        tel: '072-427-5515',
-        fax: '072-427-5515'
-      },
-      {
-        shop_name: 'ミートショップ北出',
-        representative: '北出　稔',
-        text: '美味しいお肉を納入しております',
-        delively: '三徳',
-        postal_code: '〒597-0033',
-        address: '大阪府　貝塚市　半田　1-3-15',
-        tel: '072-427-5515',
-        fax: '072-427-5515'
-      },
-      {
-        shop_name: 'ミートショップ北出',
-        representative: '北出　稔',
-        text: '美味しいお肉を納入しております',
-        delively: '三徳',
-        postal_code: '〒597-0033',
-        address: '大阪府　貝塚市　半田　1-3-15',
-        tel: '072-427-5515',
-        fax: '072-427-5515'
-      }
-    ]
-  end
-  def photo_gallery
-    @items = { name_en: 'piani'}
-  end
-  def features
-    @item = { name_en: 'piani' }
-  end
-  def about
-    @items = {
-      link_play: features_piani_index_path(:anchor => "play"),
-      link_courtesy: features_piani_index_path(:anchor => "courtesy"),
-      link_environment: features_piani_index_path(:anchor => "environment"),
-      link_expression: features_piani_index_path(:anchor => "expression"),
-      link_together: features_piani_index_path(:anchor => "together"),
-      name_en: 'piani',
-      name_en_L: 'Piani',
-      name_ja: 'ピアニィ',
-      intro_text: '
-        ピアニィと<span class="C_text__braces">は</span><br class="sp-only">「小さい<span class="C_text__braces">」</span>「かわいい<span class="C_text__braces">」</span>を意味します。<br>
-        音楽の楽譜などで見るm<span class="C_text__braces">p</span>（メゾピアノ<span class="C_text__braces">）</span>やp<span class="C_text__braces">p</span>（ピアニシモ<span class="C_text__braces">）</span>という記号のpと同じです。<br>
-        この名前には、ひとり一人の子ども達が音符のように大事な音を奏で、<br class="pc-tab-only">
-        ひとり一人が無くてはならない存在であり、ちがう音符を互いに大切にすることで<br class="pc-tab-only">
-        素晴らしいメロディ・ハーモニーになるとの思いが込められています。<br>
-        子ども達ひとり一人が自分を音で表現し、その音を暖かく大切に見守り、<br class="pc-tab-only">
-        そして子ども達が互いの音を認めあえる園でありたいという思いが込められています。',
-      map_1F_length: 6,
-      map_2F_length: 4,
-      address: '〒597-0081　大阪府貝塚市麻生中626　TEL 072-493-1330',
-      station: 'JR阪和線 東貝塚駅下車 徒歩10分',
-      google_map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6581.560123323829!2d135.37183865904808!3d34.43234136876365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca4652827cf45e9c!2z5LiD5b2p5a2m6IiOIOODlOOCouODi-OCo-mBk-aVmeWvug!5e0!3m2!1sja!2sjp!4v1618481720603!5m2!1sja!2sjp'
-    }
-    @map_items = [
-      {title: '1階保育室1', photo: '1F_0'},
-      {title: '1階保育室2', photo: '1F_1'},
-      {title: '1階保育室3', photo: '1F_2'},
-      {title: '1階保育室4', photo: '1F_3'},
-      {title: '1階保育室5', photo: '1F_4'},
-      {title: '1階保育室6', photo: '1F_5'},
-      {title: '1階保育室7', photo: '1F_6'},
-      {title: '2階保育室8', photo: '2F_0'},
-      {title: '2階保育室9', photo: '2F_1'},
-      {title: '2階保育室10', photo: '2F_2'},
-      {title: '2階保育室11', photo: '2F_3'},
-      {title: '2階保育室12', photo: '2F_4'},
-      {title: '2階保育室13', photo: '2F_5'}
-    ]
   end
   def recruit
     @contact_recruit = ContactRecruit.new()
@@ -342,6 +345,44 @@ class PianiController < ApplicationController
       render :recruit
     end
   end
+
+  def name_items
+    @name_items = { 
+      name_en: 'piani',
+      name_en_L: 'Piani',
+      name_ja: 'ピアニィ'
+    }
+  end
+
+  def recipe_items
+    @recipe_items = [
+      {
+        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
+        title: '麻婆ナス'
+      },
+      {
+        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
+        title: '麻婆ナス'
+      },
+      {
+        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
+        title: '麻婆ナス'
+      },
+      {
+        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
+        title: '麻婆ナス'
+      },
+      {
+        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
+        title: '麻婆ナス'
+      },
+      {
+        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
+        title: '麻婆ナス'
+      },
+    ]
+  end
+
   def items
     @header_items = {
       logo: 'logo-image-piani',
@@ -371,8 +412,9 @@ class PianiController < ApplicationController
       tel: 'TEL 072-493-1330 FAX 072-493-1331',
     }
   end
+
   private
-  
+
   def contact_recruit_params
     params.require(:contact_recruit).permit(:name, :name_kana, :tel, :email, :email_confirmation, :postal_code, :address, :question)
   end

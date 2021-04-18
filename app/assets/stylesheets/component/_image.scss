@@ -125,6 +125,26 @@
       background-position-y: 63%;
     }
   }
+  &__parti {
+    &__uniform-summer {
+      @include S3_image('admission/parti_uniform-summer.jpg');
+      @include image;
+    }
+    &__uniform-winter {
+      @include S3_image('admission/parti_uniform-winter.jpg');
+      @include image;
+    }
+  }
+  &__piani {
+    &__uniform-summer {
+      @include S3_image('admission/piani_uniform-summer.jpg');
+      @include image;
+    }
+    &__uniform-winter {
+      @include S3_image('admission/piani_uniform-winter.jpg');
+      @include image;
+    }
+  }
 }
 // --------------------------------
 // 就職をお考えの方へ
@@ -1851,6 +1871,10 @@
     @include S3_image('for-admission/banner.jpg');
     @include image;
   }
+  &__kv {
+    @include S3_image('for-admission/kv.jpg');
+    @include image;
+  }
 }
 // --------------------------------
 // 子育て支援
@@ -1858,6 +1882,10 @@
 .C_image__support {
   &__banner {
     @include S3_image('support/banner.jpg');
+    @include image;
+  }
+  &__kv {
+    @include S3_image('support/kv.jpg');
     @include image;
   }
 }

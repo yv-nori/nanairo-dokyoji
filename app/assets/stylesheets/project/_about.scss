@@ -583,7 +583,7 @@
     left: 0;
     width: 102%;
     height: 102%;
-    background: image-url('deco/public/frame.png');
+    background: image-url( $S3_URL + 'deco/public/frame.png');
     background-size: 100% 100%;
   }
   &__contents {

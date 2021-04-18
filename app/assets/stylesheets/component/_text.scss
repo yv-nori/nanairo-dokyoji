@@ -57,12 +57,12 @@
   &__shoe-logo__parti {
     width: 100%;
     height: 100%;
-    background: image-url('logo/shoe_logo_parti.svg') no-repeat center center / contain;
+    background: image-url( $S3_URL + 'logo/shoe_logo_parti.svg') no-repeat center center / contain;
   }
   &__shoe-logo__piani {
     width: 100%;
     height: 100%;
-    background: image-url('logo/shoe_logo_piani.svg') no-repeat center center / contain;
+    background: image-url( $S3_URL + 'logo/shoe_logo_piani.svg') no-repeat center center / contain;
   }
   &__name {
     font-family: 'DinPro';

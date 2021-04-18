@@ -45,31 +45,31 @@
 	&__logo-image{
 		&.isMoveUp {
 			@include image;
-			background: image-url('logo/nanairo_logo.png') no-repeat center center / contain;
+			background: image-url( $S3_URL + 'logo/nanairo_logo.png') no-repeat center center / contain;
 		}
 		&.isMoveTop {
 			@include image;
-			background: image-url('logo/nanairo_logo_white.png') no-repeat center center / contain;
+			background: image-url( $S3_URL + 'logo/nanairo_logo_white.png') no-repeat center center / contain;
 		}
 	}
 	&__logo-image-piani{
 		&.isMoveUp {
 			@include image;
-			background: image-url('logo/piani_logo.svg') no-repeat center center / contain;
+			background: image-url( $S3_URL + 'logo/piani_logo.svg') no-repeat center center / contain;
 		}
 		&.isMoveTop {
 			@include image;
-			background: image-url('logo/piani_logo_white.svg') no-repeat center center / contain;
+			background: image-url( $S3_URL + 'logo/piani_logo_white.svg') no-repeat center center / contain;
 		}
 	}
 	&__logo-image-parti{
 		&.isMoveUp {
 			@include image;
-			background: image-url('logo/parti_logo.svg') no-repeat center center / contain;
+			background: image-url( $S3_URL + 'logo/parti_logo.svg') no-repeat center center / contain;
 		}
 		&.isMoveTop {
 			@include image;
-			background: image-url('logo/parti_logo_white.svg') no-repeat center center / contain;
+			background: image-url( $S3_URL + 'logo/parti_logo_white.svg') no-repeat center center / contain;
 		}
 	}
 }

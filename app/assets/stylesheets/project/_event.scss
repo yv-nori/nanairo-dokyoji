@@ -8,7 +8,7 @@
   &__deco {
     &-spring {
       &-heart1 {
-        background: image-url('deco/event/spring-heart1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/spring-heart1.svg') no-repeat center center / contain;
         position: absolute;
         width: 36%;
         height: 40%;
@@ -16,7 +16,7 @@
         right: -45%;
       }
       &-triangle1 {
-        background: image-url('deco/event/spring-triangle1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/spring-triangle1.svg') no-repeat center center / contain;
         position: absolute;
         width: 22%;
         height: 38%;
@@ -24,7 +24,7 @@
         left: -22%;
       }
       &-triangle2 {
-        background: image-url('deco/event/spring-triangle2.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/spring-triangle2.svg') no-repeat center center / contain;
         position: absolute;
         width: 27%;
         height: 45%;
@@ -34,7 +34,7 @@
     }
     &-summer {
       &-star1 {
-        background: image-url('deco/event/summer-star1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/summer-star1.svg') no-repeat center center / contain;
         position: absolute;
         width: 20%;
         height: 39%;
@@ -42,7 +42,7 @@
         left: -9%;
       }
       &-star2 {
-        background: image-url('deco/event/summer-star2.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/summer-star2.svg') no-repeat center center / contain;
         position: absolute;
         width: 20%;
         height: 43%;
@@ -50,7 +50,7 @@
         right: -19%;
       }
       &-bubble1 {
-        background: image-url('deco/event/summer-bubble1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/summer-bubble1.svg') no-repeat center center / contain;
         position: absolute;
         width: 13%;
         height: 34%;
@@ -58,7 +58,7 @@
         left: -7%;
       }
       &-bubble2 {
-        background: image-url('deco/event/summer-bubble2.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/summer-bubble2.svg') no-repeat center center / contain;
         position: absolute;
         width: 35%;
         height: 39%;
@@ -68,7 +68,7 @@
     }
     &-autumn {
       &-triangle1 {
-        background: image-url('deco/event/autumn-triangle1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/autumn-triangle1.svg') no-repeat center center / contain;
         position: absolute;
         width: 23%;
         height: 12%;
@@ -76,7 +76,7 @@
         right: -34%;
       }
       &-triangle2 {
-        background: image-url('deco/event/autumn-triangle2.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/autumn-triangle2.svg') no-repeat center center / contain;
         position: absolute;
         width: 38%;
         height: 28%;
@@ -84,7 +84,7 @@
         left: -44%;
       }
       &-heart1 {
-        background: image-url('deco/event/autumn-heart1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/autumn-heart1.svg') no-repeat center center / contain;
         position: absolute;
         width: 18%;
         height: 35%;
@@ -92,7 +92,7 @@
         right: -15%;
       }
       &-heart2 {
-        background: image-url('deco/event/autumn-heart2.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/autumn-heart2.svg') no-repeat center center / contain;
         position: absolute;
         width: 22%;
         height: 42%;
@@ -104,7 +104,7 @@
         }
       }
       &-star1 {
-        background: image-url('deco/event/autumn-star1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/autumn-star1.svg') no-repeat center center / contain;
         position: absolute;
         width: 27%;
         height: 19%;
@@ -112,7 +112,7 @@
         left: -10%;
       }
       &-star2 {
-        background: image-url('deco/event/autumn-star2.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/autumn-star2.svg') no-repeat center center / contain;
         position: absolute;
         width: 30%;
         height: 28%;
@@ -120,7 +120,7 @@
         right: -30%;
       }
       &-bubble {
-        background: image-url('deco/event/autumn-bubble1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/autumn-bubble1.svg') no-repeat center center / contain;
         position: absolute;
         width: 31%;
         height: 38%;
@@ -130,7 +130,7 @@
     }
     &-winter {
       &-triangle1 {
-        background: image-url('deco/event/winter-triangle1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/winter-triangle1.svg') no-repeat center center / contain;
         position: absolute;
         width: 16%;
         height: 19%;
@@ -138,7 +138,7 @@
         right: -23%;
       }
       &-triangle2 {
-        background: image-url('deco/event/winter-triangle2.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/winter-triangle2.svg') no-repeat center center / contain;
         position: absolute;
         width: 32%;
         height: 40%;
@@ -146,7 +146,7 @@
         left: -25%;
       }
       &-music-note1 {
-        background: image-url('deco/event/winter-music-note1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/winter-music-note1.svg') no-repeat center center / contain;
         position: absolute;
         width: 19%;
         height: 25%;
@@ -160,7 +160,7 @@
         }
       }
       &-music-note2 {
-        background: image-url('deco/event/winter-music-note2.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/winter-music-note2.svg') no-repeat center center / contain;
         position: absolute;
         width: 22%;
         height: 25%;
@@ -168,7 +168,7 @@
         right: -15%;
       }
       &-star1 {
-        background: image-url('deco/event/winter-star1.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/winter-star1.svg') no-repeat center center / contain;
         position: absolute;
         width: 16%;
         height: 27%;
@@ -176,7 +176,7 @@
         left: -14%;
       }
       &-star2 {
-        background: image-url('deco/event/winter-star2.svg') no-repeat center center / contain;
+        background: image-url( $S3_URL + 'deco/event/winter-star2.svg') no-repeat center center / contain;
         position: absolute;
         width: 18%;
         height: 36%;

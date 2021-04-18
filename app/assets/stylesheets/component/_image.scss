@@ -1,17 +1,16 @@
-$S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 // ロゴ
 // --------------------------------
 .C_image {
   &__logo {
-    background: image-url( $S3_URL + 'logo/nanairo_logo.png');
+    @include S3_image('logo/nanairo_logo.png');
     @include image-contain;
     &-piani {
-      background: image-url( $S3_URL + 'logo/piani_logo_under.svg');
+      @include S3_image('logo/piani_logo_under.svg');
       @include image-contain;
     }
     &-parti {
-      background: image-url( $S3_URL + 'logo/parti_logo_under.svg');
+      @include S3_image('logo/parti_logo_under.svg');
       @include image-contain;
     }
   }
@@ -21,19 +20,19 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__top-kv {
   &__nanairo {
-    background: image-url( $S3_URL + 'top-kv/nanairo_sp.jpg');
+    @include S3_image('top-kv/nanairo_sp.jpg');
     @include image-para;
     @include mq-up("tab") {
-      background: image-url( $S3_URL + 'top-kv/nanairo_pc.jpg');
+      @include S3_image('top-kv/nanairo_pc.jpg');
       @include image-para;
     }
   }
   &__parti {
-    background: image-url( $S3_URL + 'top-kv/parti.jpg');
+    @include S3_image('top-kv/parti.jpg');
     @include image;
   }
   &__piani {
-    background: image-url( $S3_URL + 'top-kv/piani.jpg');
+    @include S3_image('top-kv/piani.jpg');
     @include image;
     filter: saturate(120%);
     background-position: 62%;
@@ -51,33 +50,33 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 .C_image__top-sub {
   &__parti {
     &__large {
-      background: image-url( $S3_URL + 'top-sub/parti_large.jpg');
+      @include S3_image('top-sub/parti_large.jpg');
       @include image;
     }
     &__small_0 {
-      background: image-url( $S3_URL + 'top-sub/parti_small_0.jpg');
+      @include S3_image('top-sub/parti_small_0.jpg');
       @include image;
     }
     &__small_1 {
-      background: image-url( $S3_URL + 'top-sub/parti_small_1.jpg');
+      @include S3_image('top-sub/parti_small_1.jpg');
       @include image;
     }
     &__small_2 {
-      background: image-url( $S3_URL + 'top-sub/parti_small_2.jpg');
+      @include S3_image('top-sub/parti_small_2.jpg');
       @include image;
     }
   }
   &__piani {
     &__large {
-      background: image-url( $S3_URL + 'top-sub/piani_large.jpg');
+      @include S3_image('top-sub/piani_large.jpg');
       @include image;
     }
     &__small_0 {
-      background: image-url( $S3_URL + 'top-sub/piani_small_0.jpg');
+      @include S3_image('top-sub/piani_small_0.jpg');
       @include image;
     }
     &__small_1 {
-      background: image-url( $S3_URL + 'top-sub/piani_small_1.jpg');
+      @include S3_image('top-sub/piani_small_1.jpg');
       @include image;
     }
   }
@@ -87,11 +86,11 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__facility {
   &__parti {
-    background: image-url( $S3_URL + 'facility/parti.jpg');
+    @include S3_image('facility/parti.jpg');
     @include image;
   }
   &__piani {
-    background: image-url( $S3_URL + 'facility/piani.jpg');
+    @include S3_image('facility/piani.jpg');
     @include image;
   }
 }
@@ -100,19 +99,19 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__admission {
   &__nanairo__banner {
-    background: image-url( $S3_URL + 'admission/nanairo_banner.jpg');
+    @include S3_image('admission/nanairo_banner.jpg');
     @include image;
   }
   &__banner {
-    background: image-url( $S3_URL + 'admission/banner.jpg');
+    @include S3_image('admission/banner.jpg');
     @include image;
   }
   &__kv {
-    background: image-url( $S3_URL + 'admission/kv.jpg');
+    @include S3_image('admission/kv.jpg');
     @include image-para;
   }
   &__group-life {
-    background: image-url( $S3_URL + 'admission/group-life.jpg');
+    @include S3_image('admission/group-life.jpg');
     @include image;
     background-position-y: 39%;
     @include mq-up("pc") {
@@ -120,7 +119,7 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
     }
   }
   &__child-facility {
-    background: image-url( $S3_URL + 'admission/child-facility.jpg');
+    @include S3_image('admission/child-facility.jpg');
     @include image;
     @include mq-up("pc") {
       background-position-y: 63%;
@@ -132,9 +131,9 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__recruit {
   &__kv {
-    background: image-url( $S3_URL + 'recruit/kv_sp.jpg');
+    @include S3_image('recruit/kv_sp.jpg');
     @include mq-up("tab") {
-      background: image-url( $S3_URL + 'recruit/kv_pc.jpg');
+      @include S3_image('recruit/kv_pc.jpg');
       @include image;
       @include mq-up("pc") {
         background-position-y: 20%;
@@ -143,85 +142,85 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
     @include image;
   }
   &__sub {
-    background: image-url( $S3_URL + 'recruit/sub.jpg');
+    @include S3_image('recruit/sub.jpg');
     @include image;
   }
   &__banner {
-    background: image-url( $S3_URL + 'recruit/banner.jpg');
+    @include S3_image('recruit/banner.jpg');
     @include image;
   }
   &__photo-main {
-    background: image-url( $S3_URL + 'recruit/banner.jpg');
+    @include S3_image('recruit/banner.jpg');
     @include image;
     background-position-X: 27%;
   }
   &__photo-sub {
-    background: image-url( $S3_URL + 'recruit/sub.jpg');
+    @include S3_image('recruit/sub.jpg');
     @include image;
     background-position-X: 38%;
   }
   &__parti {
     &__staff_0 {
-      background: image-url( $S3_URL + 'recruit/parti_staff_0.jpg');
+      @include S3_image('recruit/parti_staff_0.jpg');
       @include image;
       transition: all $anime-time-short;
     }
     &__staff_1 {
-      background: image-url( $S3_URL + 'recruit/parti_staff_1.jpg');
+      @include S3_image('recruit/parti_staff_1.jpg');
       @include image;
       transition: all $anime-time-short;
     }
     &__staff_2 {
-      background: image-url( $S3_URL + 'recruit/parti_staff_2.jpg');
+      @include S3_image('recruit/parti_staff_2.jpg');
       @include image;
       transition: all $anime-time-short;
     }
     &__staff_3 {
-      background: image-url( $S3_URL + 'recruit/parti_staff_3.jpg');
+      @include S3_image('recruit/parti_staff_3.jpg');
       @include image;
       transition: all $anime-time-short;
     }
   }
   &__piani {
     &__staff_0 {
-      background: image-url( $S3_URL + 'recruit/piani_staff_0.jpg');
+      @include S3_image('recruit/piani_staff_0.jpg');
       @include image;
       transition: all $anime-time-short;
     }
     &__staff_1 {
-      background: image-url( $S3_URL + 'recruit/piani_staff_1.jpg');
+      @include S3_image('recruit/piani_staff_1.jpg');
       @include image;
       transition: all $anime-time-short;
     }
     &__staff_2 {
-      background: image-url( $S3_URL + 'recruit/piani_staff_2.jpg');
+      @include S3_image('recruit/piani_staff_2.jpg');
       @include image;
       transition: all $anime-time-short;
     }
     &__staff_3 {
-      background: image-url( $S3_URL + 'recruit/piani_staff_3.jpg');
+      @include S3_image('recruit/piani_staff_3.jpg');
       @include image;
       transition: all $anime-time-short;
     }
   }
   &__nanairo {
     &__staff_0 {
-      background: image-url( $S3_URL + 'recruit/parti_staff_0.jpg');
+      @include S3_image('recruit/parti_staff_0.jpg');
       @include image;
       transition: all $anime-time-short;
     }
     &__staff_1 {
-      background: image-url( $S3_URL + 'recruit/piani_staff_1.jpg');
+      @include S3_image('recruit/piani_staff_1.jpg');
       @include image;
       transition: all $anime-time-short;
     }
     &__staff_2 {
-      background: image-url( $S3_URL + 'recruit/parti_staff_2.jpg');
+      @include S3_image('recruit/parti_staff_2.jpg');
       @include image;
       transition: all $anime-time-short;
     }
     &__staff_3 {
-      background: image-url( $S3_URL + 'recruit/piani_staff_3.jpg');
+      @include S3_image('recruit/piani_staff_3.jpg');
       @include image;
       transition: all $anime-time-short;
     }
@@ -232,146 +231,146 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__about {
   &__kv {
-    background: image-url( $S3_URL + 'about/kv.jpg');
+    @include S3_image('about/kv.jpg');
     @include image-para;
   }
   &__greeting {
-    background: image-url( $S3_URL + 'about/greeting.jpg');
+    @include S3_image('about/greeting.jpg');
     @include image;
   }
   &__overview {
-    background: image-url( $S3_URL + 'about/overview.jpg');
+    @include S3_image('about/overview.jpg');
     @include image;
   }
   &__banner {
-    background: image-url( $S3_URL + 'about/banner.jpg');
+    @include S3_image('about/banner.jpg');
     @include image;
   }
   &__map {
     &__parti {
       &__1F {
-        background: image-url( $S3_URL + 'about/parti_map_1F.png');
+        @include S3_image('about/parti_map_1F.png');
         @include image-contain;
         &_0 {
-          background: image-url( $S3_URL + 'about/parti_map_1F_0.jpg');
+          @include S3_image('about/parti_map_1F_0.jpg');
           @include image;
         }
         &_1 {
-          background: image-url( $S3_URL + 'about/parti_map_1F_1.jpg');
+          @include S3_image('about/parti_map_1F_1.jpg');
           @include image;
         }
         &_2 {
-          background: image-url( $S3_URL + 'about/parti_map_1F_2.jpg');
+          @include S3_image('about/parti_map_1F_2.jpg');
           @include image;
         }
         &_3 {
-          background: image-url( $S3_URL + 'about/parti_map_1F_3.jpg');
+          @include S3_image('about/parti_map_1F_3.jpg');
           @include image;
         }
         &_4 {
-          background: image-url( $S3_URL + 'about/parti_map_1F_4.jpg');
+          @include S3_image('about/parti_map_1F_4.jpg');
           @include image;
         }
         &_5 {
-          background: image-url( $S3_URL + 'about/parti_map_1F_5.jpg');
+          @include S3_image('about/parti_map_1F_5.jpg');
           @include image;
         }
         &_6 {
-          background: image-url( $S3_URL + 'about/parti_map_1F_6.jpg');
+          @include S3_image('about/parti_map_1F_6.jpg');
           @include image;
         }
         &_7 {
-          background: image-url( $S3_URL + 'about/parti_map_1F_7.jpg');
+          @include S3_image('about/parti_map_1F_7.jpg');
           @include image;
         }
         &_8 {
-          background: image-url( $S3_URL + 'about/parti_map_1F_8.jpg');
+          @include S3_image('about/parti_map_1F_8.jpg');
           @include image;
         }
       }
       &__2F {
-        background: image-url( $S3_URL + 'about/parti_map_2F.png');
+        @include S3_image('about/parti_map_2F.png');
         @include image-contain;
         &_0 {
-          background: image-url( $S3_URL + 'about/parti_map_2F_0.jpg');
+          @include S3_image('about/parti_map_2F_0.jpg');
           @include image;
         }
         &_1 {
-          background: image-url( $S3_URL + 'about/parti_map_2F_1.jpg');
+          @include S3_image('about/parti_map_2F_1.jpg');
           @include image;
         }
         &_2 {
-          background: image-url( $S3_URL + 'about/parti_map_2F_2.jpg');
+          @include S3_image('about/parti_map_2F_2.jpg');
           @include image;
         }
         &_3 {
-          background: image-url( $S3_URL + 'about/parti_map_2F_3.jpg');
+          @include S3_image('about/parti_map_2F_3.jpg');
           @include image;
         }
         &_4 {
-          background: image-url( $S3_URL + 'about/parti_map_2F_4.jpg');
+          @include S3_image('about/parti_map_2F_4.jpg');
           @include image;
         }
         &_5 {
-          background: image-url( $S3_URL + 'about/parti_map_2F_5.jpg');
+          @include S3_image('about/parti_map_2F_5.jpg');
           @include image;
         }
       }
     }
     &__piani {
       &__1F {
-        background: image-url( $S3_URL + 'about/piani_map_1F.png');
+        @include S3_image('about/piani_map_1F.png');
         @include image-contain;
         &_0 {
-          background: image-url( $S3_URL + 'about/piani_map_1F_0.jpg');
+          @include S3_image('about/piani_map_1F_0.jpg');
           @include image;
         }
         &_1 {
-          background: image-url( $S3_URL + 'about/piani_map_1F_1.jpg');
+          @include S3_image('about/piani_map_1F_1.jpg');
           @include image;
         }
         &_2 {
-          background: image-url( $S3_URL + 'about/piani_map_1F_2.jpg');
+          @include S3_image('about/piani_map_1F_2.jpg');
           @include image;
         }
         &_3 {
-          background: image-url( $S3_URL + 'about/piani_map_1F_3.jpg');
+          @include S3_image('about/piani_map_1F_3.jpg');
           @include image;
         }
         &_4 {
-          background: image-url( $S3_URL + 'about/piani_map_1F_4.jpg');
+          @include S3_image('about/piani_map_1F_4.jpg');
           @include image;
         }
         &_5 {
-          background: image-url( $S3_URL + 'about/piani_map_1F_5.jpg');
+          @include S3_image('about/piani_map_1F_5.jpg');
           @include image;
         }
         &_6 {
-          background: image-url( $S3_URL + 'about/piani_map_1F_6.jpg');
+          @include S3_image('about/piani_map_1F_6.jpg');
           @include image;
         }
       }
       &__2F {
-        background: image-url( $S3_URL + 'about/piani_map_2F.png');
+        @include S3_image('about/piani_map_2F.png');
         @include image-contain;
         &_0 {
-          background: image-url( $S3_URL + 'about/piani_map_2F_0.jpg');
+          @include S3_image('about/piani_map_2F_0.jpg');
           @include image;
         }
         &_1 {
-          background: image-url( $S3_URL + 'about/piani_map_2F_1.jpg');
+          @include S3_image('about/piani_map_2F_1.jpg');
           @include image;
         }
         &_2 {
-          background: image-url( $S3_URL + 'about/piani_map_2F_2.jpg');
+          @include S3_image('about/piani_map_2F_2.jpg');
           @include image;
         }
         &_3 {
-          background: image-url( $S3_URL + 'about/piani_map_2F_3.jpg');
+          @include S3_image('about/piani_map_2F_3.jpg');
           @include image;
         }
         &_4 {
-          background: image-url( $S3_URL + 'about/piani_map_2F_4.jpg');
+          @include S3_image('about/piani_map_2F_4.jpg');
           @include image;
         }
       }
@@ -383,23 +382,23 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__vision {
   &__kv {
-    background: image-url( $S3_URL + 'vision/kv.jpg');
+    @include S3_image('vision/kv.jpg');
     @include image-para;
   }
   &__play {
-    background: image-url( $S3_URL + 'vision/play.jpg');
+    @include S3_image('vision/play.jpg');
     @include image;
   }
   &__friend {
-    background: image-url( $S3_URL + 'vision/friend.jpg');
+    @include S3_image('vision/friend.jpg');
     @include image;
   }
   &__kind {
-    background: image-url( $S3_URL + 'vision/kind.jpg');
+    @include S3_image('vision/kind.jpg');
     @include image;
   }
   &__sky {
-    background: image-url( $S3_URL + 'vision/sky.jpg');
+    @include S3_image('vision/sky.jpg');
     @include image;
   }
 }
@@ -409,420 +408,420 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 .C_image__features {
   &__parti {
     &__courtesy {
-      background: image-url( $S3_URL + 'features/parti_courtesy.jpg');
+      @include S3_image('features/parti_courtesy.jpg');
       @include image;
       &_0-0 {
-        background: image-url( $S3_URL + 'features/parti_courtesy_0-0.jpg');
+        @include S3_image('features/parti_courtesy_0-0.jpg');
         @include image;
       }
       &_0-1 {
-        background: image-url( $S3_URL + 'features/parti_courtesy_0-1.jpg');
+        @include S3_image('features/parti_courtesy_0-1.jpg');
         @include image;
       }
       &_0-2 {
-        background: image-url( $S3_URL + 'features/parti_courtesy_0-2.jpg');
+        @include S3_image('features/parti_courtesy_0-2.jpg');
         @include image;
       }
       &_1-0 {
-        background: image-url( $S3_URL + 'features/parti_courtesy_1-0.jpg');
+        @include S3_image('features/parti_courtesy_1-0.jpg');
         @include image;
       }
       &_1-1 {
-        background: image-url( $S3_URL + 'features/parti_courtesy_1-1.jpg');
+        @include S3_image('features/parti_courtesy_1-1.jpg');
         @include image;
       }
       &_1-2 {
-        background: image-url( $S3_URL + 'features/parti_courtesy_1-2.jpg');
+        @include S3_image('features/parti_courtesy_1-2.jpg');
         @include image;
       }
       &_2-0 {
-        background: image-url( $S3_URL + 'features/parti_courtesy_2-0.jpg');
+        @include S3_image('features/parti_courtesy_2-0.jpg');
         @include image;
       }
       &_2-1 {
-        background: image-url( $S3_URL + 'features/parti_courtesy_2-1.jpg');
+        @include S3_image('features/parti_courtesy_2-1.jpg');
         @include image;
       }
       &_2-2 {
-        background: image-url( $S3_URL + 'features/parti_courtesy_2-2.jpg');
+        @include S3_image('features/parti_courtesy_2-2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'features/parti_courtesy_3.jpg');
+        @include S3_image('features/parti_courtesy_3.jpg');
         @include image;
       }
     }
     &__environment {
-      background: image-url( $S3_URL + 'features/parti_environment.jpg');
+      @include S3_image('features/parti_environment.jpg');
       @include image;
       &_0 {
-        background: image-url( $S3_URL + 'features/parti_environment_0.jpg');
+        @include S3_image('features/parti_environment_0.jpg');
         @include image;
       }
       &_1-0 {
-        background: image-url( $S3_URL + 'features/parti_environment_1-0.jpg');
+        @include S3_image('features/parti_environment_1-0.jpg');
         @include image;
       }
       &_1-1 {
-        background: image-url( $S3_URL + 'features/parti_environment_1-1.jpg');
+        @include S3_image('features/parti_environment_1-1.jpg');
         @include image;
       }
       &_1-2 {
-        background: image-url( $S3_URL + 'features/parti_environment_1-2.jpg');
+        @include S3_image('features/parti_environment_1-2.jpg');
         @include image;
       }
       &_2-0 {
-        background: image-url( $S3_URL + 'features/parti_environment_2-0.jpg');
+        @include S3_image('features/parti_environment_2-0.jpg');
         @include image;
       }
       &_2-1 {
-        background: image-url( $S3_URL + 'features/parti_environment_2-1.jpg');
+        @include S3_image('features/parti_environment_2-1.jpg');
         @include image;
       }
       &_3-0 {
-        background: image-url( $S3_URL + 'features/parti_environment_3-0.jpg');
+        @include S3_image('features/parti_environment_3-0.jpg');
         @include image;
       }
       &_3-1 {
-        background: image-url( $S3_URL + 'features/parti_environment_3-1.jpg');
+        @include S3_image('features/parti_environment_3-1.jpg');
         @include image;
       }
       &_3-2 {
-        background: image-url( $S3_URL + 'features/parti_environment_3-2.jpg');
+        @include S3_image('features/parti_environment_3-2.jpg');
         @include image;
       }
       &_4-0 {
-        background: image-url( $S3_URL + 'features/parti_environment_4-0.jpg');
+        @include S3_image('features/parti_environment_4-0.jpg');
         @include image;
       }
       &_4-1 {
-        background: image-url( $S3_URL + 'features/parti_environment_4-1.jpg');
+        @include S3_image('features/parti_environment_4-1.jpg');
         @include image;
       }
       &_4-2 {
-        background: image-url( $S3_URL + 'features/parti_environment_4-2.jpg');
+        @include S3_image('features/parti_environment_4-2.jpg');
         @include image;
       }
     }
     &__expression {
-      background: image-url( $S3_URL + 'features/parti_expression.jpg');
+      @include S3_image('features/parti_expression.jpg');
       @include image;
       &_0 {
-        background: image-url( $S3_URL + 'features/parti_expression_0.jpg');
+        @include S3_image('features/parti_expression_0.jpg');
         @include image;
       }
       &_1-0 {
-        background: image-url( $S3_URL + 'features/parti_expression_1-0.jpg');
+        @include S3_image('features/parti_expression_1-0.jpg');
         @include image;
       }
       &_1-1 {
-        background: image-url( $S3_URL + 'features/parti_expression_1-1.jpg');
+        @include S3_image('features/parti_expression_1-1.jpg');
         @include image;
       }
       &_2-0 {
-        background: image-url( $S3_URL + 'features/parti_expression_2-0.jpg');
+        @include S3_image('features/parti_expression_2-0.jpg');
         @include image;
       }
       &_2-1 {
-        background: image-url( $S3_URL + 'features/parti_expression_2-1.jpg');
+        @include S3_image('features/parti_expression_2-1.jpg');
         @include image;
       }
       &_2-2 {
-        background: image-url( $S3_URL + 'features/parti_expression_2-2.jpg');
+        @include S3_image('features/parti_expression_2-2.jpg');
         @include image;
       }
       &_3-0 {
-        background: image-url( $S3_URL + 'features/parti_expression_3-0.jpg');
+        @include S3_image('features/parti_expression_3-0.jpg');
         @include image;
       }
       &_3-1 {
-        background: image-url( $S3_URL + 'features/parti_expression_3-1.jpg');
+        @include S3_image('features/parti_expression_3-1.jpg');
         @include image;
       }
       &_3-2 {
-        background: image-url( $S3_URL + 'features/parti_expression_3-2.jpg');
+        @include S3_image('features/parti_expression_3-2.jpg');
         @include image;
       }
     }
     &__play {
-      background: image-url( $S3_URL + 'features/parti_play.jpg');
+      @include S3_image('features/parti_play.jpg');
       @include image;
       &_0 {
-        background: image-url( $S3_URL + 'features/parti_play_0.jpg');
+        @include S3_image('features/parti_play_0.jpg');
         @include image;
       }
       &_1-0 {
-        background: image-url( $S3_URL + 'features/parti_play_1-0.jpg');
+        @include S3_image('features/parti_play_1-0.jpg');
         @include image;
       }
       &_1-1 {
-        background: image-url( $S3_URL + 'features/parti_play_1-1.jpg');
+        @include S3_image('features/parti_play_1-1.jpg');
         @include image;
       }
       &_1-2 {
-        background: image-url( $S3_URL + 'features/parti_play_1-2.jpg');
+        @include S3_image('features/parti_play_1-2.jpg');
         @include image;
       }
       &_2-0 {
-        background: image-url( $S3_URL + 'features/parti_play_2-0.jpg');
+        @include S3_image('features/parti_play_2-0.jpg');
         @include image;
       }
       &_2-1 {
-        background: image-url( $S3_URL + 'features/parti_play_2-1.jpg');
+        @include S3_image('features/parti_play_2-1.jpg');
         @include image;
       }
       &_2-2 {
-        background: image-url( $S3_URL + 'features/parti_play_2-2.jpg');
+        @include S3_image('features/parti_play_2-2.jpg');
         @include image;
       }
       &_3-0 {
-        background: image-url( $S3_URL + 'features/parti_play_3-0.jpg');
+        @include S3_image('features/parti_play_3-0.jpg');
         @include image;
       }
       &_3-1 {
-        background: image-url( $S3_URL + 'features/parti_play_3-1.jpg');
+        @include S3_image('features/parti_play_3-1.jpg');
         @include image;
       }
       &_3-2 {
-        background: image-url( $S3_URL + 'features/parti_play_3-2.jpg');
+        @include S3_image('features/parti_play_3-2.jpg');
         @include image;
       }
     }
     &__together {
-      background: image-url( $S3_URL + 'features/parti_together.jpg');
+      @include S3_image('features/parti_together.jpg');
       @include image;
       &_0 {
-        background: image-url( $S3_URL + 'features/parti_together_0.jpg');
+        @include S3_image('features/parti_together_0.jpg');
         @include image;
       }
       &_1-0 {
-        background: image-url( $S3_URL + 'features/parti_together_1-0.jpg');
+        @include S3_image('features/parti_together_1-0.jpg');
         @include image;
       }
       &_1-1 {
-        background: image-url( $S3_URL + 'features/parti_together_1-1.jpg');
+        @include S3_image('features/parti_together_1-1.jpg');
         @include image;
       }
       &_2-0 {
-        background: image-url( $S3_URL + 'features/parti_together_2-0.jpg');
+        @include S3_image('features/parti_together_2-0.jpg');
         @include image;
       }
       &_2-1 {
-        background: image-url( $S3_URL + 'features/parti_together_2-1.jpg');
+        @include S3_image('features/parti_together_2-1.jpg');
         @include image;
       }
       &_2-2 {
-        background: image-url( $S3_URL + 'features/parti_together_2-2.jpg');
+        @include S3_image('features/parti_together_2-2.jpg');
         @include image;
       }
     }
   }
   &__piani {
     &__courtesy {
-      background: image-url( $S3_URL + 'features/piani_courtesy.jpg');
+      @include S3_image('features/piani_courtesy.jpg');
       @include image;
       &_0-0 {
-        background: image-url( $S3_URL + 'features/piani_courtesy_0-0.jpg');
+        @include S3_image('features/piani_courtesy_0-0.jpg');
         @include image;
       }
       &_0-1 {
-        background: image-url( $S3_URL + 'features/piani_courtesy_0-1.jpg');
+        @include S3_image('features/piani_courtesy_0-1.jpg');
         @include image;
       }
       &_0-2 {
-        background: image-url( $S3_URL + 'features/piani_courtesy_0-2.jpg');
+        @include S3_image('features/piani_courtesy_0-2.jpg');
         @include image;
       }
       &_1-0 {
-        background: image-url( $S3_URL + 'features/piani_courtesy_1-0.jpg');
+        @include S3_image('features/piani_courtesy_1-0.jpg');
         @include image;
       }
       &_1-1 {
-        background: image-url( $S3_URL + 'features/piani_courtesy_1-1.jpg');
+        @include S3_image('features/piani_courtesy_1-1.jpg');
         @include image;
       }
       &_1-2 {
-        background: image-url( $S3_URL + 'features/piani_courtesy_1-2.jpg');
+        @include S3_image('features/piani_courtesy_1-2.jpg');
         @include image;
       }
       &_2-0 {
-        background: image-url( $S3_URL + 'features/piani_courtesy_2-0.jpg');
+        @include S3_image('features/piani_courtesy_2-0.jpg');
         @include image;
       }
       &_2-1 {
-        background: image-url( $S3_URL + 'features/piani_courtesy_2-1.jpg');
+        @include S3_image('features/piani_courtesy_2-1.jpg');
         @include image;
       }
       &_2-2 {
-        background: image-url( $S3_URL + 'features/piani_courtesy_2-2.jpg');
+        @include S3_image('features/piani_courtesy_2-2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'features/piani_courtesy_3.jpg');
+        @include S3_image('features/piani_courtesy_3.jpg');
         @include image;
       }
     }
     &__environment {
-      background: image-url( $S3_URL + 'features/piani_environment.jpg');
+      @include S3_image('features/piani_environment.jpg');
       @include image;
       &_0 {
-        background: image-url( $S3_URL + 'features/piani_environment_0.jpg');
+        @include S3_image('features/piani_environment_0.jpg');
         @include image;
       }
       &_1-0 {
-        background: image-url( $S3_URL + 'features/piani_environment_1-0.jpg');
+        @include S3_image('features/piani_environment_1-0.jpg');
         @include image;
       }
       &_1-1 {
-        background: image-url( $S3_URL + 'features/piani_environment_1-1.jpg');
+        @include S3_image('features/piani_environment_1-1.jpg');
         @include image;
       }
       &_1-2 {
-        background: image-url( $S3_URL + 'features/piani_environment_1-2.jpg');
+        @include S3_image('features/piani_environment_1-2.jpg');
         @include image;
       }
       &_2-0 {
-        background: image-url( $S3_URL + 'features/piani_environment_2-0.jpg');
+        @include S3_image('features/piani_environment_2-0.jpg');
         @include image;
       }
       &_2-1 {
-        background: image-url( $S3_URL + 'features/piani_environment_2-1.jpg');
+        @include S3_image('features/piani_environment_2-1.jpg');
         @include image;
       }
       &_3-0 {
-        background: image-url( $S3_URL + 'features/piani_environment_3-0.jpg');
+        @include S3_image('features/piani_environment_3-0.jpg');
         @include image;
       }
       &_3-1 {
-        background: image-url( $S3_URL + 'features/piani_environment_3-1.jpg');
+        @include S3_image('features/piani_environment_3-1.jpg');
         @include image;
       }
       &_3-2 {
-        background: image-url( $S3_URL + 'features/piani_environment_3-2.jpg');
+        @include S3_image('features/piani_environment_3-2.jpg');
         @include image;
       }
       &_4-0 {
-        background: image-url( $S3_URL + 'features/piani_environment_4-0.jpg');
+        @include S3_image('features/piani_environment_4-0.jpg');
         @include image;
       }
       &_4-1 {
-        background: image-url( $S3_URL + 'features/piani_environment_4-1.jpg');
+        @include S3_image('features/piani_environment_4-1.jpg');
         @include image;
       }
       &_4-2 {
-        background: image-url( $S3_URL + 'features/piani_environment_4-2.jpg');
+        @include S3_image('features/piani_environment_4-2.jpg');
         @include image;
       }
     }
     &__expression {
-      background: image-url( $S3_URL + 'features/piani_expression.jpg');
+      @include S3_image('features/piani_expression.jpg');
       @include image;
       &_0 {
-        background: image-url( $S3_URL + 'features/piani_expression_0.jpg');
+        @include S3_image('features/piani_expression_0.jpg');
         @include image;
       }
       &_1-0 {
-        background: image-url( $S3_URL + 'features/piani_expression_1-0.jpg');
+        @include S3_image('features/piani_expression_1-0.jpg');
         @include image;
       }
       &_1-1 {
-        background: image-url( $S3_URL + 'features/piani_expression_1-1.jpg');
+        @include S3_image('features/piani_expression_1-1.jpg');
         @include image;
       }
       &_2-0 {
-        background: image-url( $S3_URL + 'features/piani_expression_2-0.jpg');
+        @include S3_image('features/piani_expression_2-0.jpg');
         @include image;
       }
       &_2-1 {
-        background: image-url( $S3_URL + 'features/piani_expression_2-1.jpg');
+        @include S3_image('features/piani_expression_2-1.jpg');
         @include image;
       }
       &_2-2 {
-        background: image-url( $S3_URL + 'features/piani_expression_2-2.jpg');
+        @include S3_image('features/piani_expression_2-2.jpg');
         @include image;
       }
       &_3-0 {
-        background: image-url( $S3_URL + 'features/piani_expression_3-0.jpg');
+        @include S3_image('features/piani_expression_3-0.jpg');
         @include image;
       }
       &_3-1 {
-        background: image-url( $S3_URL + 'features/piani_expression_3-1.jpg');
+        @include S3_image('features/piani_expression_3-1.jpg');
         @include image;
       }
       &_3-2 {
-        background: image-url( $S3_URL + 'features/piani_expression_3-2.jpg');
+        @include S3_image('features/piani_expression_3-2.jpg');
         @include image;
       }
     }
     &__play {
-      background: image-url( $S3_URL + 'features/piani_play.jpg');
+      @include S3_image('features/piani_play.jpg');
       @include image;
       &_0 {
-        background: image-url( $S3_URL + 'features/piani_play_0.jpg');
+        @include S3_image('features/piani_play_0.jpg');
         @include image;
       }
       &_1-0 {
-        background: image-url( $S3_URL + 'features/piani_play_1-0.jpg');
+        @include S3_image('features/piani_play_1-0.jpg');
         @include image;
       }
       &_1-1 {
-        background: image-url( $S3_URL + 'features/piani_play_1-1.jpg');
+        @include S3_image('features/piani_play_1-1.jpg');
         @include image;
       }
       &_1-2 {
-        background: image-url( $S3_URL + 'features/piani_play_1-2.jpg');
+        @include S3_image('features/piani_play_1-2.jpg');
         @include image;
       }
       &_2-0 {
-        background: image-url( $S3_URL + 'features/piani_play_2-0.jpg');
+        @include S3_image('features/piani_play_2-0.jpg');
         @include image;
       }
       &_2-1 {
-        background: image-url( $S3_URL + 'features/piani_play_2-1.jpg');
+        @include S3_image('features/piani_play_2-1.jpg');
         @include image;
       }
       &_2-2 {
-        background: image-url( $S3_URL + 'features/piani_play_2-2.jpg');
+        @include S3_image('features/piani_play_2-2.jpg');
         @include image;
       }
       &_3-0 {
-        background: image-url( $S3_URL + 'features/piani_play_3-0.jpg');
+        @include S3_image('features/piani_play_3-0.jpg');
         @include image;
       }
       &_3-1 {
-        background: image-url( $S3_URL + 'features/piani_play_3-1.jpg');
+        @include S3_image('features/piani_play_3-1.jpg');
         @include image;
       }
       &_3-2 {
-        background: image-url( $S3_URL + 'features/piani_play_3-2.jpg');
+        @include S3_image('features/piani_play_3-2.jpg');
         @include image;
       }
     }
     &__together {
-      background: image-url( $S3_URL + 'features/piani_together.jpg');
+      @include S3_image('features/piani_together.jpg');
       @include image;
       &_0 {
-        background: image-url( $S3_URL + 'features/piani_together_0.jpg');
+        @include S3_image('features/piani_together_0.jpg');
         @include image;
       }
       &_1-0 {
-        background: image-url( $S3_URL + 'features/piani_together_1-0.jpg');
+        @include S3_image('features/piani_together_1-0.jpg');
         @include image;
       }
       &_1-1 {
-        background: image-url( $S3_URL + 'features/piani_together_1-1.jpg');
+        @include S3_image('features/piani_together_1-1.jpg');
         @include image;
       }
       &_2-0 {
-        background: image-url( $S3_URL + 'features/piani_together_2-0.jpg');
+        @include S3_image('features/piani_together_2-0.jpg');
         @include image;
       }
       &_2-1 {
-        background: image-url( $S3_URL + 'features/piani_together_2-1.jpg');
+        @include S3_image('features/piani_together_2-1.jpg');
         @include image;
       }
       &_2-2 {
-        background: image-url( $S3_URL + 'features/piani_together_2-2.jpg');
+        @include S3_image('features/piani_together_2-2.jpg');
         @include image;
       }
     }
@@ -833,11 +832,11 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__eat-education {
   &__banner {
-    background: image-url( $S3_URL + 'eat-education/banner.jpg');
+    @include S3_image('eat-education/banner.jpg');
     @include image;
   }
   &__kv {
-    background: image-url( $S3_URL + 'eat-education/kv.jpg');
+    @include S3_image('eat-education/kv.jpg');
     @include image;
     background-position-x: 59%;
     @include mq-up("tab") {
@@ -846,120 +845,120 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
   }
   &__recipe {
     &_0 {
-      background: image-url( $S3_URL + 'eat-education/recipe_0.jpg');
+      @include S3_image('eat-education/recipe_0.jpg');
       @include image;
     }
     &_1 {
-      background: image-url( $S3_URL + 'eat-education/recipe_1.jpg');
+      @include S3_image('eat-education/recipe_1.jpg');
       @include image;
     }
     &_2 {
-      background: image-url( $S3_URL + 'eat-education/recipe_2.jpg');
+      @include S3_image('eat-education/recipe_2.jpg');
       @include image;
     }
     &_3 {
-      background: image-url( $S3_URL + 'eat-education/recipe_3.jpg');
+      @include S3_image('eat-education/recipe_3.jpg');
       @include image;
     }
     &_4 {
-      background: image-url( $S3_URL + 'eat-education/recipe_4.jpg');
+      @include S3_image('eat-education/recipe_4.jpg');
       @include image;
     }
     &_5 {
-      background: image-url( $S3_URL + 'eat-education/recipe_5.jpg');
+      @include S3_image('eat-education/recipe_5.jpg');
       @include image;
     }
   }
   &__insta {
     &_0 {
-      background: image-url( $S3_URL + 'eat-education/insta_0.jpg');
+      @include S3_image('eat-education/insta_0.jpg');
       @include image;
     }
     &_1 {
-      background: image-url( $S3_URL + 'eat-education/insta_1.jpg');
+      @include S3_image('eat-education/insta_1.jpg');
       @include image;
     }
     &_2 {
-      background: image-url( $S3_URL + 'eat-education/insta_2.jpg');
+      @include S3_image('eat-education/insta_2.jpg');
       @include image;
     }
     &_3 {
-      background: image-url( $S3_URL + 'eat-education/insta_3.jpg');
+      @include S3_image('eat-education/insta_3.jpg');
       @include image;
     }
     &_4 {
-      background: image-url( $S3_URL + 'eat-education/insta_4.jpg');
+      @include S3_image('eat-education/insta_4.jpg');
       @include image;
     }
   }
   &__feel {
     &_0 {
-      background: image-url( $S3_URL + 'eat-education/feel_0.jpg');
+      @include S3_image('eat-education/feel_0.jpg');
       @include image;
     }
     &_1 {
-      background: image-url( $S3_URL + 'eat-education/feel_1.jpg');
+      @include S3_image('eat-education/feel_1.jpg');
       @include image;
     }
   }
   &__viking {
     &_0 {
-      background: image-url( $S3_URL + 'eat-education/viking_0.jpg');
+      @include S3_image('eat-education/viking_0.jpg');
       @include image;
     }
     &_1 {
-      background: image-url( $S3_URL + 'eat-education/viking_1.jpg');
+      @include S3_image('eat-education/viking_1.jpg');
       @include image;
     }
     &_2 {
-      background: image-url( $S3_URL + 'eat-education/viking_2.jpg');
+      @include S3_image('eat-education/viking_2.jpg');
       @include image;
     }
   }
   &__cooking {
     &_0 {
-      background: image-url( $S3_URL + 'eat-education/cooking_0.jpg');
+      @include S3_image('eat-education/cooking_0.jpg');
       @include image;
     }
     &_1 {
-      background: image-url( $S3_URL + 'eat-education/cooking_1.jpg');
+      @include S3_image('eat-education/cooking_1.jpg');
       @include image;
     }
     &_2 {
-      background: image-url( $S3_URL + 'eat-education/cooking_2.jpg');
+      @include S3_image('eat-education/cooking_2.jpg');
       @include image;
     }
   }
   &__harvest {
     &_0 {
-      background: image-url( $S3_URL + 'eat-education/harvest_0.jpg');
+      @include S3_image('eat-education/harvest_0.jpg');
       @include image;
     }
     &_1 {
-      background: image-url( $S3_URL + 'eat-education/harvest_1.jpg');
+      @include S3_image('eat-education/harvest_1.jpg');
       @include image;
     }
     &_2 {
-      background: image-url( $S3_URL + 'eat-education/harvest_2.jpg');
+      @include S3_image('eat-education/harvest_2.jpg');
       @include image;
     }
   }
   &__cultivation {
-    background: image-url( $S3_URL + 'eat-education/cultivation.jpg');
+    @include S3_image('eat-education/cultivation.jpg');
     @include image;
   }
   &__parti {
     &__food-staff {
       &_0 {
-        background: image-url( $S3_URL + 'eat-education/parti_food-staff_0.jpg');
+        @include S3_image('eat-education/parti_food-staff_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'eat-education/parti_food-staff_1.jpg');
+        @include S3_image('eat-education/parti_food-staff_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'eat-education/parti_food-staff_2.jpg');
+        @include S3_image('eat-education/parti_food-staff_2.jpg');
         @include image;
       }
     }
@@ -967,15 +966,15 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
   &__piani {
     &__food-staff {
       &_0 {
-        background: image-url( $S3_URL + 'eat-education/piani_food-staff_0.jpg');
+        @include S3_image('eat-education/piani_food-staff_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'eat-education/piani_food-staff_1.jpg');
+        @include S3_image('eat-education/piani_food-staff_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'eat-education/piani_food-staff_2.jpg');
+        @include S3_image('eat-education/piani_food-staff_2.jpg');
         @include image;
       }
     }
@@ -986,7 +985,7 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__philosophy {
   &__banner {
-    background: image-url( $S3_URL + 'philosophy/banner.jpg');
+    @include S3_image('philosophy/banner.jpg');
     @include image;
   }
 }
@@ -995,12 +994,12 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__event {
   &__banner {
-    background: image-url( $S3_URL + 'event/banner.jpg');
+    @include S3_image('event/banner.jpg');
     @include image;
   }
   &__parti {
     &__kv {
-      background: image-url( $S3_URL + 'event/parti_kv.jpg');
+      @include S3_image('event/parti_kv.jpg');
       @include image;
       @include mq-up("pc") {
         background-position-y: 31%;
@@ -1008,319 +1007,319 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
     }
     &__autumn {
       &_0 {
-        background: image-url( $S3_URL + 'event/parti_autumn_0.jpg');
+        @include S3_image('event/parti_autumn_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'event/parti_autumn_1.jpg');
+        @include S3_image('event/parti_autumn_1.jpg');
         @include image;
       }
       &_1-S {
-        background: image-url( $S3_URL + 'event/parti_autumn_1-S.jpg');
+        @include S3_image('event/parti_autumn_1-S.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'event/parti_autumn_2.jpg');
+        @include S3_image('event/parti_autumn_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'event/parti_autumn_3.jpg');
+        @include S3_image('event/parti_autumn_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'event/parti_autumn_4.jpg');
+        @include S3_image('event/parti_autumn_4.jpg');
         @include image;
       }
       &_4-S {
-        background: image-url( $S3_URL + 'event/parti_autumn_4-S.jpg');
+        @include S3_image('event/parti_autumn_4-S.jpg');
         @include image;
       }
       &_5 {
-        background: image-url( $S3_URL + 'event/parti_autumn_5.jpg');
+        @include S3_image('event/parti_autumn_5.jpg');
         @include image;
       }
       &_6 {
-        background: image-url( $S3_URL + 'event/parti_autumn_6.jpg');
+        @include S3_image('event/parti_autumn_6.jpg');
         @include image;
       }
       &_6-S {
-        background: image-url( $S3_URL + 'event/parti_autumn_6-S.jpg');
+        @include S3_image('event/parti_autumn_6-S.jpg');
         @include image;
       }
       &_7 {
-        background: image-url( $S3_URL + 'event/parti_autumn_7.jpg');
+        @include S3_image('event/parti_autumn_7.jpg');
         @include image;
       }
       &_8 {
-        background: image-url( $S3_URL + 'event/parti_autumn_8.jpg');
+        @include S3_image('event/parti_autumn_8.jpg');
         @include image;
       }
       &_8-S {
-        background: image-url( $S3_URL + 'event/parti_autumn_8-S.jpg');
+        @include S3_image('event/parti_autumn_8-S.jpg');
         @include image;
       }
     }
     &__spring {
       &_0 {
-        background: image-url( $S3_URL + 'event/parti_spring_0.jpg');
+        @include S3_image('event/parti_spring_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'event/parti_spring_1.jpg');
+        @include S3_image('event/parti_spring_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'event/parti_spring_2.jpg');
+        @include S3_image('event/parti_spring_2.jpg');
         @include image;
       }
       &_2-S {
-        background: image-url( $S3_URL + 'event/parti_spring_2-S.jpg');
+        @include S3_image('event/parti_spring_2-S.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'event/parti_spring_3.jpg');
+        @include S3_image('event/parti_spring_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'event/parti_spring_4.jpg');
+        @include S3_image('event/parti_spring_4.jpg');
         @include image;
       }
       &_4-S {
-        background: image-url( $S3_URL + 'event/parti_spring_4-S.jpg');
+        @include S3_image('event/parti_spring_4-S.jpg');
         @include image;
       }
     }
     &__summer {
       &_0 {
-        background: image-url( $S3_URL + 'event/parti_summer_0.jpg');
+        @include S3_image('event/parti_summer_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'event/parti_summer_1.jpg');
+        @include S3_image('event/parti_summer_1.jpg');
         @include image;
       }
       &_1-S {
-        background: image-url( $S3_URL + 'event/parti_summer_1-S.jpg');
+        @include S3_image('event/parti_summer_1-S.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'event/parti_summer_2.jpg');
+        @include S3_image('event/parti_summer_2.jpg');
         @include image;
       }
       &_2-S {
-        background: image-url( $S3_URL + 'event/parti_summer_2-S.jpg');
+        @include S3_image('event/parti_summer_2-S.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'event/parti_summer_3.jpg');
+        @include S3_image('event/parti_summer_3.jpg');
         @include image;
       }
     }
     &__winter {
       &_0 {
-        background: image-url( $S3_URL + 'event/parti_winter_0.jpg');
+        @include S3_image('event/parti_winter_0.jpg');
         @include image;
       }
       &_0-S {
-        background: image-url( $S3_URL + 'event/parti_winter_0-S.jpg');
+        @include S3_image('event/parti_winter_0-S.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'event/parti_winter_1.jpg');
+        @include S3_image('event/parti_winter_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'event/parti_winter_2.jpg');
+        @include S3_image('event/parti_winter_2.jpg');
         @include image;
       }
       &_2-S {
-        background: image-url( $S3_URL + 'event/parti_winter_2-S.jpg');
+        @include S3_image('event/parti_winter_2-S.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'event/parti_winter_3.jpg');
+        @include S3_image('event/parti_winter_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'event/parti_winter_4.jpg');
+        @include S3_image('event/parti_winter_4.jpg');
         @include image;
       }
       &_5 {
-        background: image-url( $S3_URL + 'event/parti_winter_5.jpg');
+        @include S3_image('event/parti_winter_5.jpg');
         @include image;
       }
       &_5-S {
-        background: image-url( $S3_URL + 'event/parti_winter_5-S.jpg');
+        @include S3_image('event/parti_winter_5-S.jpg');
         @include image;
       }
       &_6 {
-        background: image-url( $S3_URL + 'event/parti_winter_6.jpg');
+        @include S3_image('event/parti_winter_6.jpg');
         @include image;
       }
       &_7 {
-        background: image-url( $S3_URL + 'event/parti_winter_7.jpg');
+        @include S3_image('event/parti_winter_7.jpg');
         @include image;
       }
     }
   }
   &__piani {
     &__kv {
-      background: image-url( $S3_URL + 'event/piani_kv.jpg');
+      @include S3_image('event/piani_kv.jpg');
       @include image;
     }
     &__autumn {
       &_0 {
-        background: image-url( $S3_URL + 'event/piani_autumn_0.jpg');
+        @include S3_image('event/piani_autumn_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'event/piani_autumn_1.jpg');
+        @include S3_image('event/piani_autumn_1.jpg');
         @include image;
       }
       &_1-S {
-        background: image-url( $S3_URL + 'event/piani_autumn_1-S.jpg');
+        @include S3_image('event/piani_autumn_1-S.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'event/piani_autumn_2.jpg');
+        @include S3_image('event/piani_autumn_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'event/piani_autumn_3.jpg');
+        @include S3_image('event/piani_autumn_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'event/piani_autumn_4.jpg');
+        @include S3_image('event/piani_autumn_4.jpg');
         @include image;
       }
       &_4-S {
-        background: image-url( $S3_URL + 'event/piani_autumn_4-S.jpg');
+        @include S3_image('event/piani_autumn_4-S.jpg');
         @include image;
       }
       &_5 {
-        background: image-url( $S3_URL + 'event/piani_autumn_5.jpg');
+        @include S3_image('event/piani_autumn_5.jpg');
         @include image;
       }
       &_6 {
-        background: image-url( $S3_URL + 'event/piani_autumn_6.jpg');
+        @include S3_image('event/piani_autumn_6.jpg');
         @include image;
       }
       &_6-S {
-        background: image-url( $S3_URL + 'event/piani_autumn_6-S.jpg');
+        @include S3_image('event/piani_autumn_6-S.jpg');
         @include image;
       }
       &_7 {
-        background: image-url( $S3_URL + 'event/piani_autumn_7.jpg');
+        @include S3_image('event/piani_autumn_7.jpg');
         @include image;
       }
       &_8 {
-        background: image-url( $S3_URL + 'event/piani_autumn_8.jpg');
+        @include S3_image('event/piani_autumn_8.jpg');
         @include image;
       }
       &_8-S {
-        background: image-url( $S3_URL + 'event/piani_autumn_8-S.jpg');
+        @include S3_image('event/piani_autumn_8-S.jpg');
         @include image;
       }
     }
     &__spring {
       &_0 {
-        background: image-url( $S3_URL + 'event/piani_spring_0.jpg');
+        @include S3_image('event/piani_spring_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'event/piani_spring_1.jpg');
+        @include S3_image('event/piani_spring_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'event/piani_spring_2.jpg');
+        @include S3_image('event/piani_spring_2.jpg');
         @include image;
       }
       &_2-S {
-        background: image-url( $S3_URL + 'event/piani_spring_2-S.jpg');
+        @include S3_image('event/piani_spring_2-S.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'event/piani_spring_3.jpg');
+        @include S3_image('event/piani_spring_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'event/piani_spring_4.jpg');
+        @include S3_image('event/piani_spring_4.jpg');
         @include image;
       }
       &_4-S {
-        background: image-url( $S3_URL + 'event/piani_spring_4-S.jpg');
+        @include S3_image('event/piani_spring_4-S.jpg');
         @include image;
       }
     }
     &__summer {
       &_0 {
-        background: image-url( $S3_URL + 'event/piani_summer_0.jpg');
+        @include S3_image('event/piani_summer_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'event/piani_summer_1.jpg');
+        @include S3_image('event/piani_summer_1.jpg');
         @include image;
       }
       &_1-S {
-        background: image-url( $S3_URL + 'event/piani_summer_1-S.jpg');
+        @include S3_image('event/piani_summer_1-S.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'event/piani_summer_2.jpg');
+        @include S3_image('event/piani_summer_2.jpg');
         @include image;
       }
       &_2-S {
-        background: image-url( $S3_URL + 'event/piani_summer_2-S.jpg');
+        @include S3_image('event/piani_summer_2-S.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'event/piani_summer_3.jpg');
+        @include S3_image('event/piani_summer_3.jpg');
         @include image;
       }
     }
     &__winter {
       &_0 {
-        background: image-url( $S3_URL + 'event/piani_winter_0.jpg');
+        @include S3_image('event/piani_winter_0.jpg');
         @include image;
       }
       &_0-S {
-        background: image-url( $S3_URL + 'event/piani_winter_0-S.jpg');
+        @include S3_image('event/piani_winter_0-S.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'event/piani_winter_1.jpg');
+        @include S3_image('event/piani_winter_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'event/piani_winter_2.jpg');
+        @include S3_image('event/piani_winter_2.jpg');
         @include image;
       }
       &_2-S {
-        background: image-url( $S3_URL + 'event/piani_winter_2-S.jpg');
+        @include S3_image('event/piani_winter_2-S.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'event/piani_winter_3.jpg');
+        @include S3_image('event/piani_winter_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'event/piani_winter_4.jpg');
+        @include S3_image('event/piani_winter_4.jpg');
         @include image;
       }
       &_5 {
-        background: image-url( $S3_URL + 'event/piani_winter_5.jpg');
+        @include S3_image('event/piani_winter_5.jpg');
         @include image;
       }
       &_5-S {
-        background: image-url( $S3_URL + 'event/piani_winter_5-S.jpg');
+        @include S3_image('event/piani_winter_5-S.jpg');
         @include image;
       }
       &_6 {
-        background: image-url( $S3_URL + 'event/piani_winter_6.jpg');
+        @include S3_image('event/piani_winter_6.jpg');
         @include image;
       }
       &_7 {
-        background: image-url( $S3_URL + 'event/piani_winter_7.jpg');
+        @include S3_image('event/piani_winter_7.jpg');
         @include image;
       }
     }
@@ -1331,441 +1330,441 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__photo-gallery {
   &__kv {
-    background: image-url( $S3_URL + 'photo-gallery/kv.jpg');
+    @include S3_image('photo-gallery/kv.jpg');
     @include image;
   }
   &__parti {
     &__slider_0 {
-      background: image-url( $S3_URL + 'photo-gallery/parti_slider_0.jpg');
+      @include S3_image('photo-gallery/parti_slider_0.jpg');
       @include image;
     }
     &__slider_1 {
-      background: image-url( $S3_URL + 'photo-gallery/parti_slider_1.jpg');
+      @include S3_image('photo-gallery/parti_slider_1.jpg');
       @include image;
     }
     &__slider_2 {
-      background: image-url( $S3_URL + 'photo-gallery/parti_slider_2.jpg');
+      @include S3_image('photo-gallery/parti_slider_2.jpg');
       @include image;
     }
     &__slider_3 {
-      background: image-url( $S3_URL + 'photo-gallery/parti_slider_3.jpg');
+      @include S3_image('photo-gallery/parti_slider_3.jpg');
       @include image;
     }
     &__slider_4 {
-      background: image-url( $S3_URL + 'photo-gallery/parti_slider_4.jpg');
+      @include S3_image('photo-gallery/parti_slider_4.jpg');
       @include image;
     }
     &__slider_5 {
-      background: image-url( $S3_URL + 'photo-gallery/parti_slider_5.jpg');
+      @include S3_image('photo-gallery/parti_slider_5.jpg');
       @include image;
     }
     &__art {
       &_0 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_art_0.jpg');
+        @include S3_image('photo-gallery/parti_art_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_art_1.jpg');
+        @include S3_image('photo-gallery/parti_art_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_art_2.jpg');
+        @include S3_image('photo-gallery/parti_art_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_art_3.jpg');
+        @include S3_image('photo-gallery/parti_art_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_art_4.jpg');
+        @include S3_image('photo-gallery/parti_art_4.jpg');
         @include image;
       }
       &_5 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_art_5.jpg');
+        @include S3_image('photo-gallery/parti_art_5.jpg');
         @include image;
       }
       &_6 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_art_6.jpg');
+        @include S3_image('photo-gallery/parti_art_6.jpg');
         @include image;
       }
       &_7 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_art_7.jpg');
+        @include S3_image('photo-gallery/parti_art_7.jpg');
         @include image;
       }
       &_8 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_art_8.jpg');
+        @include S3_image('photo-gallery/parti_art_8.jpg');
         @include image;
       }
     }
     &__eat-education {
       &_0 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_eat-education_0.jpg');
+        @include S3_image('photo-gallery/parti_eat-education_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_eat-education_1.jpg');
+        @include S3_image('photo-gallery/parti_eat-education_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_eat-education_2.jpg');
+        @include S3_image('photo-gallery/parti_eat-education_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_eat-education_3.jpg');
+        @include S3_image('photo-gallery/parti_eat-education_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_eat-education_4.jpg');
+        @include S3_image('photo-gallery/parti_eat-education_4.jpg');
         @include image;
       }
     }
     &__event {
       &_0 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_0.jpg');
+        @include S3_image('photo-gallery/parti_event_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_1.jpg');
+        @include S3_image('photo-gallery/parti_event_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_2.jpg');
+        @include S3_image('photo-gallery/parti_event_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_3.jpg');
+        @include S3_image('photo-gallery/parti_event_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_4.jpg');
+        @include S3_image('photo-gallery/parti_event_4.jpg');
         @include image;
       }
       &_5 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_5.jpg');
+        @include S3_image('photo-gallery/parti_event_5.jpg');
         @include image;
       }
       &_6 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_6.jpg');
+        @include S3_image('photo-gallery/parti_event_6.jpg');
         @include image;
       }
       &_7 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_7.jpg');
+        @include S3_image('photo-gallery/parti_event_7.jpg');
         @include image;
       }
       &_8 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_8.jpg');
+        @include S3_image('photo-gallery/parti_event_8.jpg');
         @include image;
       }
       &_9 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_9.jpg');
+        @include S3_image('photo-gallery/parti_event_9.jpg');
         @include image;
       }
       &_10 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_10.jpg');
+        @include S3_image('photo-gallery/parti_event_10.jpg');
         @include image;
       }
       &_11 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_11.jpg');
+        @include S3_image('photo-gallery/parti_event_11.jpg');
         @include image;
       }
       &_12 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_12.jpg');
+        @include S3_image('photo-gallery/parti_event_12.jpg');
         @include image;
       }
       &_13 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_13.jpg');
+        @include S3_image('photo-gallery/parti_event_13.jpg');
         @include image;
       }
       &_14 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_14.jpg');
+        @include S3_image('photo-gallery/parti_event_14.jpg');
         @include image;
       }
       &_15 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_15.jpg');
+        @include S3_image('photo-gallery/parti_event_15.jpg');
         @include image;
       }
       &_16 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_16.jpg');
+        @include S3_image('photo-gallery/parti_event_16.jpg');
         @include image;
       }
       &_17 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_17.jpg');
+        @include S3_image('photo-gallery/parti_event_17.jpg');
         @include image;
       }
       &_18 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_18.jpg');
+        @include S3_image('photo-gallery/parti_event_18.jpg');
         @include image;
       }
       &_19 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_19.jpg');
+        @include S3_image('photo-gallery/parti_event_19.jpg');
         @include image;
       }
       &_20 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_20.jpg');
+        @include S3_image('photo-gallery/parti_event_20.jpg');
         @include image;
       }
       &_21 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_event_21.jpg');
+        @include S3_image('photo-gallery/parti_event_21.jpg');
         @include image;
       }
     }
     &__inside {
       &_0 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_inside_0.jpg');
+        @include S3_image('photo-gallery/parti_inside_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_inside_1.jpg');
+        @include S3_image('photo-gallery/parti_inside_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_inside_2.jpg');
+        @include S3_image('photo-gallery/parti_inside_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_inside_3.jpg');
+        @include S3_image('photo-gallery/parti_inside_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_inside_4.jpg');
+        @include S3_image('photo-gallery/parti_inside_4.jpg');
         @include image;
       }
       &_5 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_inside_5.jpg');
+        @include S3_image('photo-gallery/parti_inside_5.jpg');
         @include image;
       }
       &_6 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_inside_6.jpg');
+        @include S3_image('photo-gallery/parti_inside_6.jpg');
         @include image;
       }
       &_7 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_inside_7.jpg');
+        @include S3_image('photo-gallery/parti_inside_7.jpg');
         @include image;
       }
       &_8 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_inside_8.jpg');
+        @include S3_image('photo-gallery/parti_inside_8.jpg');
         @include image;
       }
       &_9 {
-        background: image-url( $S3_URL + 'photo-gallery/parti_inside_9.jpg');
+        @include S3_image('photo-gallery/parti_inside_9.jpg');
         @include image;
       }
     }
   }
   &__piani {
     &__slider_0 {
-      background: image-url( $S3_URL + 'photo-gallery/piani_slider_0.jpg');
+      @include S3_image('photo-gallery/piani_slider_0.jpg');
       @include image;
     }
     &__slider_1 {
-      background: image-url( $S3_URL + 'photo-gallery/piani_slider_1.jpg');
+      @include S3_image('photo-gallery/piani_slider_1.jpg');
       @include image;
     }
     &__slider_2 {
-      background: image-url( $S3_URL + 'photo-gallery/piani_slider_2.jpg');
+      @include S3_image('photo-gallery/piani_slider_2.jpg');
       @include image;
     }
     &__slider_3 {
-      background: image-url( $S3_URL + 'photo-gallery/piani_slider_3.jpg');
+      @include S3_image('photo-gallery/piani_slider_3.jpg');
       @include image;
     }
     &__slider_4 {
-      background: image-url( $S3_URL + 'photo-gallery/piani_slider_4.jpg');
+      @include S3_image('photo-gallery/piani_slider_4.jpg');
       @include image;
     }
     &__slider_5 {
-      background: image-url( $S3_URL + 'photo-gallery/piani_slider_5.jpg');
+      @include S3_image('photo-gallery/piani_slider_5.jpg');
       @include image;
     }
     &__art {
       &_0 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_art_0.jpg');
+        @include S3_image('photo-gallery/piani_art_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_art_1.jpg');
+        @include S3_image('photo-gallery/piani_art_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_art_2.jpg');
+        @include S3_image('photo-gallery/piani_art_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_art_3.jpg');
+        @include S3_image('photo-gallery/piani_art_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_art_4.jpg');
+        @include S3_image('photo-gallery/piani_art_4.jpg');
         @include image;
       }
       &_5 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_art_5.jpg');
+        @include S3_image('photo-gallery/piani_art_5.jpg');
         @include image;
       }
       &_6 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_art_6.jpg');
+        @include S3_image('photo-gallery/piani_art_6.jpg');
         @include image;
       }
       &_7 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_art_7.jpg');
+        @include S3_image('photo-gallery/piani_art_7.jpg');
         @include image;
       }
       &_8 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_art_8.jpg');
+        @include S3_image('photo-gallery/piani_art_8.jpg');
         @include image;
       }
     }
     &__eat-education {
       &_0 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_eat-education_0.jpg');
+        @include S3_image('photo-gallery/piani_eat-education_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_eat-education_1.jpg');
+        @include S3_image('photo-gallery/piani_eat-education_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_eat-education_2.jpg');
+        @include S3_image('photo-gallery/piani_eat-education_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_eat-education_3.jpg');
+        @include S3_image('photo-gallery/piani_eat-education_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_eat-education_4.jpg');
+        @include S3_image('photo-gallery/piani_eat-education_4.jpg');
         @include image;
       }
     }
     &__event {
       &_0 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event_0.jpg');
+        @include S3_image('photo-gallery/piani_event_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event_1.jpg');
+        @include S3_image('photo-gallery/piani_event_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event_2.jpg');
+        @include S3_image('photo-gallery/piani_event_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event_3.jpg');
+        @include S3_image('photo-gallery/piani_event_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event_4.jpg');
+        @include S3_image('photo-gallery/piani_event_4.jpg');
         @include image;
       }
       &_5 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event_5.jpg');
+        @include S3_image('photo-gallery/piani_event_5.jpg');
         @include image;
       }
       &_6 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event_6.jpg');
+        @include S3_image('photo-gallery/piani_event_6.jpg');
         @include image;
       }
       &_7 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event_7.jpg');
+        @include S3_image('photo-gallery/piani_event_7.jpg');
         @include image;
       }
       &_8 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event_8.jpg');
+        @include S3_image('photo-gallery/piani_event_8.jpg');
         @include image;
       }
       &_9 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event_9.jpg');
+        @include S3_image('photo-gallery/piani_event_9.jpg');
         @include image;
       }
       &_10 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__10.jpg');
+        @include S3_image('photo-gallery/piani_event__10.jpg');
         @include image;
       }
       &_11 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__11.jpg');
+        @include S3_image('photo-gallery/piani_event__11.jpg');
         @include image;
       }
       &_12 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__12.jpg');
+        @include S3_image('photo-gallery/piani_event__12.jpg');
         @include image;
       }
       &_13 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__13.jpg');
+        @include S3_image('photo-gallery/piani_event__13.jpg');
         @include image;
       }
       &_14 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__14.jpg');
+        @include S3_image('photo-gallery/piani_event__14.jpg');
         @include image;
       }
       &_15 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__15.jpg');
+        @include S3_image('photo-gallery/piani_event__15.jpg');
         @include image;
       }
       &_16 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__16.jpg');
+        @include S3_image('photo-gallery/piani_event__16.jpg');
         @include image;
       }
       &_17 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__17.jpg');
+        @include S3_image('photo-gallery/piani_event__17.jpg');
         @include image;
       }
       &_18 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__18.jpg');
+        @include S3_image('photo-gallery/piani_event__18.jpg');
         @include image;
       }
       &_19 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__19.jpg');
+        @include S3_image('photo-gallery/piani_event__19.jpg');
         @include image;
       }
       &_20 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__20.jpg');
+        @include S3_image('photo-gallery/piani_event__20.jpg');
         @include image;
       }
       &_21 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_event__21.jpg');
+        @include S3_image('photo-gallery/piani_event__21.jpg');
         @include image;
       }
     }
     &__inside {
       &_0 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_inside_0.jpg');
+        @include S3_image('photo-gallery/piani_inside_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_inside_1.jpg');
+        @include S3_image('photo-gallery/piani_inside_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_inside_2.jpg');
+        @include S3_image('photo-gallery/piani_inside_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_inside_3.jpg');
+        @include S3_image('photo-gallery/piani_inside_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_inside_4.jpg');
+        @include S3_image('photo-gallery/piani_inside_4.jpg');
         @include image;
       }
       &_5 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_inside_5.jpg');
+        @include S3_image('photo-gallery/piani_inside_5.jpg');
         @include image;
       }
       &_6 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_inside_6.jpg');
+        @include S3_image('photo-gallery/piani_inside_6.jpg');
         @include image;
       }
       &_7 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_inside_7.jpg');
+        @include S3_image('photo-gallery/piani_inside_7.jpg');
         @include image;
       }
       &_8 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_inside_8.jpg');
+        @include S3_image('photo-gallery/piani_inside_8.jpg');
         @include image;
       }
       &_9 {
-        background: image-url( $S3_URL + 'photo-gallery/piani_inside_9.jpg');
+        @include S3_image('photo-gallery/piani_inside_9.jpg');
         @include image;
       }
     }
@@ -1776,45 +1775,45 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__belong {
   &__banner {
-    background: image-url( $S3_URL + 'belong/banner.jpg');
+    @include S3_image('belong/banner.jpg');
     @include image;
     &__cheese {
-      background: image-url( $S3_URL + 'belong/banner_cheese.jpg');
+      @include S3_image('belong/banner_cheese.jpg');
       @include image;
     }
     &__letter {
-      background: image-url( $S3_URL + 'belong/banner_letter.jpg');
+      @include S3_image('belong/banner_letter.jpg');
       @include image;
     }
     &__movie {
-      background: image-url( $S3_URL + 'belong/banner_movie.jpg');
+      @include S3_image('belong/banner_movie.jpg');
       @include image;
     }
     &__print {
-      background: image-url( $S3_URL + 'belong/banner_print.jpg');
+      @include S3_image('belong/banner_print.jpg');
       @include image;
     }
   }
   &__parti {
     &__kv {
       &_0 {
-        background: image-url( $S3_URL + 'belong/parti_kv_0.jpg');
+        @include S3_image('belong/parti_kv_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'belong/parti_kv_1.jpg');
+        @include S3_image('belong/parti_kv_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'belong/parti_kv_2.jpg');
+        @include S3_image('belong/parti_kv_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'belong/parti_kv_3.jpg');
+        @include S3_image('belong/parti_kv_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'belong/parti_kv_4.jpg');
+        @include S3_image('belong/parti_kv_4.jpg');
         @include image;
       }
     }
@@ -1822,23 +1821,23 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
   &__piani {
     &__kv {
       &_0 {
-        background: image-url( $S3_URL + 'belong/piani_kv_0.jpg');
+        @include S3_image('belong/piani_kv_0.jpg');
         @include image;
       }
       &_1 {
-        background: image-url( $S3_URL + 'belong/piani_kv_1.jpg');
+        @include S3_image('belong/piani_kv_1.jpg');
         @include image;
       }
       &_2 {
-        background: image-url( $S3_URL + 'belong/piani_kv_2.jpg');
+        @include S3_image('belong/piani_kv_2.jpg');
         @include image;
       }
       &_3 {
-        background: image-url( $S3_URL + 'belong/piani_kv_3.jpg');
+        @include S3_image('belong/piani_kv_3.jpg');
         @include image;
       }
       &_4 {
-        background: image-url( $S3_URL + 'belong/piani_kv_4.jpg');
+        @include S3_image('belong/piani_kv_4.jpg');
         @include image;
       }
     }
@@ -1849,7 +1848,7 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__for-admission {
   &__banner {
-    background: image-url( $S3_URL + 'for-admission/banner.jpg');
+    @include S3_image('for-admission/banner.jpg');
     @include image;
   }
 }
@@ -1858,7 +1857,7 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__support {
   &__banner {
-    background: image-url( $S3_URL + 'support/banner.jpg');
+    @include S3_image('support/banner.jpg');
     @include image;
   }
 }
@@ -1867,7 +1866,7 @@ $S3_URL:'https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/';
 // --------------------------------
 .C_image__contact {
   &__kv {
-    background: image-url( $S3_URL + 'contact/kv.jpg');
+    @include S3_image('contact/kv.jpg');
     @include image-para;
   }
 }

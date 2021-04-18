@@ -86,12 +86,12 @@
   }
   // イメージ
   &-left {
+    @include S3_image('deco/shabon/shabon-left.png');
     @include image;
-    background: image-url( $S3_URL + 'deco/shabon/shabon-left.png') no-repeat center center / cover;
   }
   &-right {
+    @include S3_image('deco/shabon/shabon-right.png');
     @include image;
-    background: image-url( $S3_URL + 'deco/shabon/shabon-right.png') no-repeat center center / cover;
   }
   // サイズ
   &_3S {

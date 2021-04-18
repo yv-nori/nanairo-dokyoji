@@ -1,3 +1,6 @@
+@mixin S3_image($url) {
+  background: url('https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/#{$url}');
+}
 @mixin image-base {
   background-position: center;
   -webkit-background-position: center;
@@ -38,328 +41,328 @@
 .C_deco {
   &__features__play {
     &-1-L {
-      background: image-url( $S3_URL + 'deco/features/play_deco1-L.svg');
+      @include S3_image('deco/features/play_deco1-L.svg');
       @include image-contain;
     }
     &-1-R {
-      background: image-url( $S3_URL + 'deco/features/play_deco1-R.svg');
+      @include S3_image('deco/features/play_deco1-R.svg');
       @include image-contain;
     }
     &-2-L {
-      background: image-url( $S3_URL + 'deco/features/play_deco2-L.svg');
+      @include S3_image('deco/features/play_deco2-L.svg');
       @include image-contain;
     }
     &-2-R {
-      background: image-url( $S3_URL + 'deco/features/play_deco2-R.svg');
+      @include S3_image('deco/features/play_deco2-R.svg');
       @include image-contain;
     }
     &-3-L {
-      background: image-url( $S3_URL + 'deco/features/play_deco3-L.svg');
+      @include S3_image('deco/features/play_deco3-L.svg');
       @include image-contain;
     }
     &-3-R {
-      background: image-url( $S3_URL + 'deco/features/play_deco3-R.svg');
+      @include S3_image('deco/features/play_deco3-R.svg');
       @include image-contain;
     }
     &-4-L {
-      background: image-url( $S3_URL + 'deco/features/play_deco4-L.svg');
+      @include S3_image('deco/features/play_deco4-L.svg');
       @include image-contain;
     }
     &-4-R {
-      background: image-url( $S3_URL + 'deco/features/play_deco4-R.svg');
+      @include S3_image('deco/features/play_deco4-R.svg');
       @include image-contain;
     }
   }
   &__features__courtesy {
     &-1-R {
-      background: image-url( $S3_URL + 'deco/features/courtesy_deco1-R.svg');
+      @include S3_image('deco/features/courtesy_deco1-R.svg');
       @include image-contain;
     }
     &-2-L {
-      background: image-url( $S3_URL + 'deco/features/courtesy_deco2-L.svg');
+      @include S3_image('deco/features/courtesy_deco2-L.svg');
       @include image-contain;
     }
     &-2-R {
-      background: image-url( $S3_URL + 'deco/features/courtesy_deco2-R.svg');
+      @include S3_image('deco/features/courtesy_deco2-R.svg');
       @include image-contain;
     }
     &-3-L {
-      background: image-url( $S3_URL + 'deco/features/courtesy_deco3-L.svg');
+      @include S3_image('deco/features/courtesy_deco3-L.svg');
       @include image-contain;
     }
     &-3-R {
-      background: image-url( $S3_URL + 'deco/features/courtesy_deco3-R.svg');
+      @include S3_image('deco/features/courtesy_deco3-R.svg');
       @include image-contain;
     }
     &-4-L {
-      background: image-url( $S3_URL + 'deco/features/courtesy_deco4-L.svg');
+      @include S3_image('deco/features/courtesy_deco4-L.svg');
       @include image-contain;
     }
     &-4-R {
-      background: image-url( $S3_URL + 'deco/features/courtesy_deco4-R.svg');
+      @include S3_image('deco/features/courtesy_deco4-R.svg');
       @include image-contain;
     }
   }
   &__features__environment {
     &-1-L {
-      background: image-url( $S3_URL + 'deco/features/environment_deco1-L.svg');
+      @include S3_image('deco/features/environment_deco1-L.svg');
       @include image-contain;
     }
     &-1-R {
-      background: image-url( $S3_URL + 'deco/features/environment_deco1-R.svg');
+      @include S3_image('deco/features/environment_deco1-R.svg');
       @include image-contain;
     }
     &-2-L {
-      background: image-url( $S3_URL + 'deco/features/environment_deco2-L.svg');
+      @include S3_image('deco/features/environment_deco2-L.svg');
       @include image-contain;
     }
     &-2-R {
-      background: image-url( $S3_URL + 'deco/features/environment_deco2-R.svg');
+      @include S3_image('deco/features/environment_deco2-R.svg');
       @include image-contain;
     }
     &-3-L {
-      background: image-url( $S3_URL + 'deco/features/environment_deco3-L.svg');
+      @include S3_image('deco/features/environment_deco3-L.svg');
       @include image-contain;
     }
     &-3-R {
-      background: image-url( $S3_URL + 'deco/features/environment_deco3-R.svg');
+      @include S3_image('deco/features/environment_deco3-R.svg');
       @include image-contain;
     }
     &-4-L {
-      background: image-url( $S3_URL + 'deco/features/environment_deco4-L.svg');
+      @include S3_image('deco/features/environment_deco4-L.svg');
       @include image-contain;
     }
     &-4-R {
-      background: image-url( $S3_URL + 'deco/features/environment_deco4-R.svg');
+      @include S3_image('deco/features/environment_deco4-R.svg');
       @include image-contain;
     }
     &-5-L {
-      background: image-url( $S3_URL + 'deco/features/environment_deco5-L.svg');
+      @include S3_image('deco/features/environment_deco5-L.svg');
       @include image-contain;
     }
     &-5-R {
-      background: image-url( $S3_URL + 'deco/features/environment_deco5-R.svg');
+      @include S3_image('deco/features/environment_deco5-R.svg');
       @include image-contain;
     }
   }
   &__features__expression {
     &-1-L {
-      background: image-url( $S3_URL + 'deco/features/expression_deco1-L.svg');
+      @include S3_image('deco/features/expression_deco1-L.svg');
       @include image-contain;
     }
     &-1-R {
-      background: image-url( $S3_URL + 'deco/features/expression_deco1-R.svg');
+      @include S3_image('deco/features/expression_deco1-R.svg');
       @include image-contain;
     }
     &-2-L {
-      background: image-url( $S3_URL + 'deco/features/expression_deco2-L.svg');
+      @include S3_image('deco/features/expression_deco2-L.svg');
       @include image-contain;
     }
     &-2-R {
-      background: image-url( $S3_URL + 'deco/features/expression_deco2-R.svg');
+      @include S3_image('deco/features/expression_deco2-R.svg');
       @include image-contain;
     }
     &-3-L {
-      background: image-url( $S3_URL + 'deco/features/expression_deco3-L.svg');
+      @include S3_image('deco/features/expression_deco3-L.svg');
       @include image-contain;
     }
     &-3-R {
-      background: image-url( $S3_URL + 'deco/features/expression_deco3-R.svg');
+      @include S3_image('deco/features/expression_deco3-R.svg');
       @include image-contain;
     }
     &-4-R {
-      background: image-url( $S3_URL + 'deco/features/expression_deco4-R.svg');
+      @include S3_image('deco/features/expression_deco4-R.svg');
       @include image-contain;
     }
   }
   &__features__together {
     &-1-L {
-      background: image-url( $S3_URL + 'deco/features/together_deco1-L.svg');
+      @include S3_image('deco/features/together_deco1-L.svg');
       @include image-contain;
     }
     &-1-R {
-      background: image-url( $S3_URL + 'deco/features/together_deco1-R.svg');
+      @include S3_image('deco/features/together_deco1-R.svg');
       @include image-contain;
     }
     &-2-L {
-      background: image-url( $S3_URL + 'deco/features/together_deco2-L.svg');
+      @include S3_image('deco/features/together_deco2-L.svg');
       @include image-contain;
     }
     &-2-R {
-      background: image-url( $S3_URL + 'deco/features/together_deco2-R.svg');
+      @include S3_image('deco/features/together_deco2-R.svg');
       @include image-contain;
     }
     &-3-L {
-      background: image-url( $S3_URL + 'deco/features/together_deco3-L.svg');
+      @include S3_image('deco/features/together_deco3-L.svg');
       @include image-contain;
     }
     &-3-R {
-      background: image-url( $S3_URL + 'deco/features/together_deco3-R.svg');
+      @include S3_image('deco/features/together_deco3-R.svg');
       @include image-contain;
     }
   }
   &__jagged1 {
-    background: image-url( $S3_URL + 'deco/public/jagged1.svg');
+    @include S3_image('deco/public/jagged1.svg');
     @include image-contain;
   }
   &__babble1 {
-    background: image-url( $S3_URL + 'deco/public/babble1.svg');
+    @include S3_image('deco/public/babble1.svg');
     @include image-contain;
   }
   &__triangle1 {
-    background: image-url( $S3_URL + 'deco/public/triangle1.svg');
+    @include S3_image('deco/public/triangle1.svg');
     @include image-contain;
   }
   &__dots1 {
-    background: image-url( $S3_URL + 'deco/public/dots1.svg');
+    @include S3_image('deco/public/dots1.svg');
     @include image-contain;
   }
   &__wave-line1 {
-    background: image-url( $S3_URL + 'deco/public/wave-line1.svg');
+    @include S3_image('deco/public/wave-line1.svg');
     @include image-contain;
   }
   &__wave-line2 {
-    background: image-url( $S3_URL + 'deco/public/wave-line2.svg');
+    @include S3_image('deco/public/wave-line2.svg');
     @include image-contain;
   }
   &__text-shine1 {
-    background: image-url( $S3_URL + 'deco/public/text-shine1.svg');
+    @include S3_image('deco/public/text-shine1.svg');
     @include image-contain;
   }
   &__text-shine2 {
-    background: image-url( $S3_URL + 'deco/public/text-shine2.svg');
+    @include S3_image('deco/public/text-shine2.svg');
     @include image-contain;
   }
   &__text-shine3 {
-    background: image-url( $S3_URL + 'deco/public/text-shine3.svg');
+    @include S3_image('deco/public/text-shine3.svg');
     @include image-contain;
   }
   &__text-shine4 {
-    background: image-url( $S3_URL + 'deco/public/text-shine4.svg');
+    @include S3_image('deco/public/text-shine4.svg');
     @include image-contain;
   }
   &__paint {
-    background: image-url( $S3_URL + 'deco/public/paint.svg');
+    @include S3_image('deco/public/paint.svg');
     @include image-contain;
   }
   &__instagram {
-    background: image-url( $S3_URL + 'deco/public/instagram.svg');
+    @include S3_image('deco/public/instagram.svg');
     @include image-contain;
   }
   &__sparkle1 {
-    background: image-url( $S3_URL + 'deco/public/sparkle1.svg');
+    @include S3_image('deco/public/sparkle1.svg');
     @include image-contain;
   }
   &__sparkle2 {
-    background: image-url( $S3_URL + 'deco/public/sparkle2.svg');
+    @include S3_image('deco/public/sparkle2.svg');
     @include image-contain;
   }
   &__one-day-deco-1 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-1.svg');
+    @include S3_image('deco/one_day/one_day_deco-1.svg');
     @include image-contain;
   }
   &__one-day-deco-2 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-2.svg');
+    @include S3_image('deco/one_day/one_day_deco-2.svg');
     @include image-contain;
   }
   &__one-day-deco-3 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-3.svg');
+    @include S3_image('deco/one_day/one_day_deco-3.svg');
     @include image-contain;
   }
   &__one-day-deco-4 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-4.svg');
+    @include S3_image('deco/one_day/one_day_deco-4.svg');
     @include image-contain;
   }
   &__one-day-deco-5 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-5.svg');
+    @include S3_image('deco/one_day/one_day_deco-5.svg');
     @include image-contain;
   }
   &__one-day-deco-6 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-6.svg');
+    @include S3_image('deco/one_day/one_day_deco-6.svg');
     @include image-contain;
   }
   &__one-day-deco-7 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-7.svg');
+    @include S3_image('deco/one_day/one_day_deco-7.svg');
     @include image-contain;
   }
   &__one-day-deco-8 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-8.svg');
+    @include S3_image('deco/one_day/one_day_deco-8.svg');
     @include image-contain;
   }
   &__one-day-deco-9 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-9.svg');
+    @include S3_image('deco/one_day/one_day_deco-9.svg');
     @include image-contain;
   }
   &__one-day-deco-10 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-10.svg');
+    @include S3_image('deco/one_day/one_day_deco-10.svg');
     @include image-contain;
   }
   &__one-day-deco-11 {
-    background: image-url( $S3_URL + 'deco/one_day/one_day_deco-11.svg');
+    @include S3_image('deco/one_day/one_day_deco-11.svg');
     @include image-contain;
   }
   &__arrow-right {
-    background: image-url( $S3_URL + 'deco/one_day/arrow-right.svg');
+    @include S3_image('deco/one_day/arrow-right.svg');
     @include image-contain;
   }
   &__arrow-right-L {
-    background: image-url( $S3_URL + 'deco/one_day/arrow-right-L.svg');
+    @include S3_image('deco/one_day/arrow-right-L.svg');
     @include image-contain;
   }
   &__arrow-left {
-    background: image-url( $S3_URL + 'deco/one_day/arrow-left.svg');
+    @include S3_image('deco/one_day/arrow-left.svg');
     @include image-contain;
   }
   &__arrow-left {
-    background: image-url( $S3_URL + 'deco/public/arrow-bottom.svg');
+    @include S3_image('deco/public/arrow-bottom.svg');
     @include image-contain;
   }
   &__cloud1 {
-    background: image-url( $S3_URL + 'deco/public/cloud1.svg');
+    @include S3_image('deco/public/cloud1.svg');
     @include image-contain;
   }
   &__cloud2 {
-    background: image-url( $S3_URL + 'deco/public/cloud2.svg');
+    @include S3_image('deco/public/cloud2.svg');
     @include image-contain;
   }
   &__cloud3 {
-    background: image-url( $S3_URL + 'deco/public/cloud3.svg');
+    @include S3_image('deco/public/cloud3.svg');
     @include image-contain;
   }
   &__cloud4 {
-    background: image-url( $S3_URL + 'deco/public/cloud4.svg');
+    @include S3_image('deco/public/cloud4.svg');
     @include image-contain;
   }
   &__cloud5 {
-    background: image-url( $S3_URL + 'deco/public/cloud5.svg');
+    @include S3_image('deco/public/cloud5.svg');
     @include image-contain;
   }
   &__arrow-down {
-    background: image-url( $S3_URL + 'deco/public/arrow-down.svg');
+    @include S3_image('deco/public/arrow-down.svg');
     @include image-contain;
   }
   &__symbols1 {
-    background: image-url( $S3_URL + 'deco/public/symbols.svg');
+    @include S3_image('deco/public/symbols.svg');
     @include image-contain;
   }
   &__under-arrow {
-    background: image-url( $S3_URL + 'deco/public/under-arrow.svg');
+    @include S3_image('deco/public/under-arrow.svg');
     @include image-contain;
   }
   &__leaf1 {
-    background: image-url( $S3_URL + 'deco/public/leaf1.png');
+    @include S3_image('deco/public/leaf1.png');
     @include image-contain;
   }
   &__leaf2 {
-    background: image-url( $S3_URL + 'deco/public/leaf2.png');
+    @include S3_image('deco/public/leaf2.png');
     @include image-contain;
   }
   &__birds {
-    background: image-url( $S3_URL + 'deco/public/birds.svg');
+    @include S3_image('deco/public/birds.svg');
     @include image-contain;
   }
   &__rain {
-    background: image-url( $S3_URL + 'deco/public/rain.svg');
+    @include S3_image('deco/public/rain.svg');
     @include image-contain;
   }
 }

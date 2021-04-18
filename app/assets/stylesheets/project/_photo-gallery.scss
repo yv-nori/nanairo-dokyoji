@@ -1015,7 +1015,8 @@
     padding-bottom: 10px;
   }
   &__icon-camera {
-    background: image-url( $S3_URL + 'deco/camera.svg') no-repeat center center / cover;
+    @include S3_image('deco/camera.svg');
+    @include image;
     width: 30px;
     height: 24px;
     margin: auto;

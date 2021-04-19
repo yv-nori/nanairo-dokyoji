@@ -310,6 +310,15 @@ class PartiController < ApplicationController
       local: 'パルティ道教寺',
       request: 'パルティ道教寺にて随時受付中'
     }
+    @slider_items = {
+      inner_title: false,
+      back: false,
+      title: 'Photo Gallery',
+      img_source: 'eat-education__recipe',
+      link: eat_education_parti_index_path,
+      content_title: true,
+      items: @recipe_items
+    }
   end
   def recruit
     @contact_recruit = ContactRecruit.new()

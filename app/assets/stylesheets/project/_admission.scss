@@ -837,8 +837,8 @@
   }
   &__img {
     width: calc(50% - 1vw);
-    
     height: 23vh;
+    position: relative;
     @include mq-up("tab") {
       height: 30vh;
       max-height: 304px;

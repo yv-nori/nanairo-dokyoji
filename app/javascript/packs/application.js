@@ -34,10 +34,12 @@ if (CurrentPath == "/nanairo/contact" ||
     CurrentPath == "/nanairo/privacy") {
   require("../page/nanairo_contact");
 }
-if (CurrentPath == "/piani/index") {
+if (CurrentPath == "/piani/index" ||
+    CurrentPath == "/piani") {
   require("../page/piani_index");
 }
-if (CurrentPath == "/parti/index") {
+if (CurrentPath == "/parti/index" ||
+    CurrentPath == "/parti") {
   require("../page/parti_index");
 }
 if (CurrentPath == "/parti/vision" ||

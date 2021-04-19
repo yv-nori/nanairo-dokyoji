@@ -39,6 +39,42 @@
   display: block;
 }
 .C_deco {
+  &__parti {
+    &__leaf1 {
+      @include S3_image('deco/parti/leaf1.png');
+      @include image-contain;
+    }
+    &__leaf2 {
+      @include S3_image('deco/parti/leaf2.png');
+      @include image-contain;
+    }
+  }
+  &__piani {
+    &__cloud_0 {
+      @include S3_image('deco/piani/cloud_0.png');
+      @include image-contain;
+    }
+    &__cloud_1 {
+      @include S3_image('deco/piani/cloud_1.png');
+      @include image-contain;
+    }
+    &__cloud_2 {
+      @include S3_image('deco/piani/cloud_2.png');
+      @include image-contain;
+    }
+    &__deco__bottom-right {
+      @include S3_image('deco/piani/deco_bottom-right.svg');
+      @include image-contain;
+    }
+    &__deco__left {
+      @include S3_image('deco/piani/deco_left.svg');
+      @include image-contain;
+    }
+    &__deco__top-right {
+      @include S3_image('deco/piani/deco_top-right.svg');
+      @include image-contain;
+    }
+  }
   &__features__play {
     &-1-L {
       @include S3_image('deco/features/play_deco1-L.svg');
@@ -347,14 +383,6 @@
   }
   &__under-arrow {
     @include S3_image('deco/public/under-arrow.svg');
-    @include image-contain;
-  }
-  &__leaf1 {
-    @include S3_image('deco/public/leaf1.png');
-    @include image-contain;
-  }
-  &__leaf2 {
-    @include S3_image('deco/public/leaf2.png');
     @include image-contain;
   }
   &__birds {

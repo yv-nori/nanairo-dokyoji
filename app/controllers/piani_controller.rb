@@ -1,7 +1,7 @@
 class PianiController < ApplicationController
   before_action :items
   before_action :recipe_items, only:[:eat_education,:support]
-  before_action :name_items, only:[:about, :admission, :belong,  :eat_education, :event, :features, :photo_gallery]
+  before_action :name_items, only:[:about, :admission, :belong,  :eat_education, :event, :index, :features, :photo_gallery]
   def about
     @items = {
       link_play: features_piani_index_path(:anchor => "play"),
@@ -48,6 +48,15 @@ class PianiController < ApplicationController
     }
   end
   def eat_education
+    @slider_items = {
+      inner_title: false,
+      back: false,
+      title: 'Photo Gallery',
+      img_source: 'eat-education__recipe',
+      link: eat_education_piani_index_path,
+      content_title: true,
+      items: @recipe_items
+    }
     @food_staff = [
       {
         shop_name: 'ミートショップ北出',
@@ -262,6 +271,38 @@ class PianiController < ApplicationController
         ]
       },
     ]
+  end
+  def index
+    @links = {
+      about: about_piani_index_path,
+      event: event_piani_index_path,
+      eat_education: eat_education_piani_index_path,
+      vision: vision_piani_index_path,
+      belong: belong_piani_index_path,
+      admission: admission_piani_index_path,
+      access: about_piani_index_path(:anchor => "access"),
+      map: about_piani_index_path(:anchor => "map"),
+      info: about_piani_index_path(:anchor => "map"),
+      recruit: recruit_piani_index_path,
+      support: support_piani_index_path,
+      for_admission: for_admission_piani_index_path
+    }
+    @slider_items = {
+      inner_title: true,
+      back: true,
+      title: 'Photo Gallery',
+      img_source: 'photo-gallery__piani__slider',
+      link: photo_gallery_piani_index_path,
+      content_title: false,
+      items: [
+        { link: photo_gallery_piani_index_path },
+        { link: photo_gallery_piani_index_path },
+        { link: photo_gallery_piani_index_path },
+        { link: photo_gallery_piani_index_path },
+        { link: photo_gallery_piani_index_path },
+        { link: photo_gallery_piani_index_path }
+      ]
+    }
   end
   def support
     @items = {

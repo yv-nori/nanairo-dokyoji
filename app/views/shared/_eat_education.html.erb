@@ -83,10 +83,7 @@
   <h1 class="P_eat-education__recipe__title-en">RECIPE</h1>
   <h2 class="P_eat-education__common__title-ja">給食レシピ</h2>
   <h3 class="P_eat-education__common__sub-title multiple">子どもの発達に応じた<br class="sp-only">給食レシピ動画を<br class="sp-only">Youtubeで紹介</h3>
-  <%= render partial: 'shared/recipe_slider', locals:{recipe_items: @recipe_items}%>
-  <div class="P_eat-education__recipe__btn">
-    <div class="P_eat-education__recipe__btn-text">VIEW MORE</div>
-  </div>
+  <%= render partial: 'shared/img-slider', locals:{slider_items: slider_items}%>
 </section>
 <div id="JS_smoothScroll_target-3"></div>
 <section class="P_eat-education__instagram">

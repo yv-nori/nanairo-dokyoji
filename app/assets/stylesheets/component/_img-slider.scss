@@ -1,0 +1,211 @@
+.C_img-slider {
+  &__wrap {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    background-color: $color-background2;
+    @include mq-up("tab") {
+      height: 47vh;
+    }
+    @include mq-up("pc") {
+      height: 77.35vh;
+    }
+  }
+  &__title {
+    font-family: 'Blankid';
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    font-size: $font-size-base * 1.875;
+    white-space: nowrap;
+    padding-top: 18px;
+    @include mq-up("tab") {
+      top: 7%;
+      font-size: $font-size-base * 2.5;
+    }
+  }
+  &__deco-container {
+    position: absolute;
+    top: 10%;
+    right: 17%;
+    width: 20%;
+    transform: translate3d(50%, 0 , 0);
+    display: flex;
+    @include mq-up("tab") {
+      width: 12%;
+    }
+    @include mq-up("pc") {
+      width: 9.7%;
+    }
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 50%;
+    }
+  }
+  &__deco-box {
+    width: 50%;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    position: relative;
+    border-bottom: 1px solid $color-text;
+    &.left {
+      border-right: 1px solid $color-text;
+      transform: rotate(45deg);
+      transform-origin: right top;
+    }
+    &.right {
+      border-left: 1px solid $color-text;
+      transform: rotate(-45deg);
+      transform-origin: left top;
+    }
+  }
+  &__deco-box-text {
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    text-align: center;
+    font-size: 0.1rem;
+    font-family: 'DinPro';
+    top: 0;
+    @include mq-up("tab") {
+      transform: translate3d(-50%, 0, 0);
+      font-size: $font-size-base * 0.625;
+      top: -10%;
+    }
+    @include mq-up("pc") {
+      font-size: $font-size-base * 0.875;
+    }
+    &.left {
+      left: 15%;
+    }
+    &.right {
+      left: 85%;
+    }
+  }
+  &__img-slider {
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0%, -50%, 0);
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    pointer-events: none;
+    &:hover ul {
+      animation-play-state: paused;
+    }
+    &.content_title {
+      top: 35%;
+      height: 100%;
+    }
+  }
+  &__slide-group {
+    padding: 0;
+    display: flex;
+    flex-shrink: 0;
+    &:first-child {
+      animation: slide1 60s -30s linear infinite;
+    }
+    &:last-child {
+      animation: slide2 60s linear infinite;
+    }
+  }
+  &__content-box {
+    position: relative;
+  }
+  &__img-circle {
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin-right: 23px;
+    pointer-events: auto;
+    width: 20vh;
+    height: 20vh;
+    @include mq-up("pc") {
+      width: 35vh;
+      height: 35vh;
+    }
+    &:hover:after {
+      opacity: .3;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $thumbnail-gradation-back;
+      background-image: $thumbnail-gradation-image;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      transition: .3s;
+      pointer-events: none;
+    }
+  }
+  &__content-title {
+    text-align: center;
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+    width: 100%;
+    font-size: 1.6rem;
+    transform: translateX(-50%);
+    padding-right: 23px;
+    @include mq-up("tab") {
+      bottom: 50px;
+    }
+    @include mq-up("pc") {
+      bottom: 61px;
+    }
+    &::before {
+      content: '';
+      height: 1px;
+      width: 19px;
+      background-color: $color-text;
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-100%) rotate(-35deg);
+    }
+  }
+  &__btn {
+    position: absolute;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    border-radius: 50px;
+    background-color: $color-text;
+    cursor: pointer;
+    transition: .3s;
+    bottom: 8%;
+    border: 2px solid $color-text;
+    @include mq-up("tab") {
+      bottom: 10%;
+    }
+    &:hover {
+      background-color: #fff;
+    }
+    &:hover .C_img-slider__btn-text {
+      color: $color-text;
+    }
+  }
+  &__btn-text {
+    font-size: $font-size-base * 1;
+    font-family: 'DinPro';
+    color: #fff;
+    letter-spacing: 0.3em;
+    text-align: center;
+    padding: 1vh 6vw;
+    font-size: $font-size-base * 0.875;
+    @include mq-up("tab") {
+      font-size: $font-size-base * 1.1;
+    }
+  }
+}

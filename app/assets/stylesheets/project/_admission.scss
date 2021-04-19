@@ -837,7 +837,7 @@
   }
   &__img {
     width: calc(50% - 1vw);
-    background-color: grey;
+    
     height: 23vh;
     @include mq-up("tab") {
       height: 30vh;

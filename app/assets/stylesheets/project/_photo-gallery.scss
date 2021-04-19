@@ -1,7 +1,7 @@
 .P_photo-gallery__kv {
   width: 100%;
   height: 50vh;
-  background-color: grey;
+  
   position: relative;
   &__text-box {
     position: absolute;
@@ -1110,7 +1110,7 @@
   &__half,
   &__twin,
   &__panel {
-    background-color: grey;
+    
     border-radius: 5px;
     position: relative;
   }

@@ -75,6 +75,96 @@
       @include image-contain;
     }
   }
+  &__event {
+    &__spring {
+      &-heart1 {
+        @include S3_image('deco/event/spring-heart1.svg');
+        @include image-contain;
+      }
+      &-triangle1 {
+        @include S3_image('deco/event/spring-triangle1.svg');
+        @include image-contain;
+      }
+      &-triangle2 {
+        @include S3_image('deco/event/spring-triangle2.svg');
+        @include image-contain;
+      }
+    }
+    &__summer {
+      &-star1 {
+        @include S3_image('deco/event/summer-star1.svg');
+        @include image-contain;
+      }
+      &-star2 {
+        @include S3_image('deco/event/summer-star2.svg');
+        @include image-contain;
+      }
+      &-bubble1 {
+        @include S3_image('deco/event/summer-bubble1.svg');
+        @include image-contain;
+      }
+      &-bubble2 {
+        @include S3_image('deco/event/summer-bubble2.svg');
+        @include image-contain;
+      }
+    }
+    &__autumn {
+      &-triangle1 {
+        @include S3_image('deco/event/autumn-triangle1.svg');
+        @include image-contain;
+      }
+      &-triangle2 {
+        @include S3_image('deco/event/autumn-triangle2.svg');
+        @include image-contain;
+      }
+      &-heart1 {
+        @include S3_image('deco/event/autumn-heart1.svg');
+        @include image-contain;
+      }
+      &-heart2 {
+        @include S3_image('deco/event/autumn-heart2.svg');
+        @include image-contain;
+      }
+      &-star1 {
+        @include S3_image('deco/event/autumn-star1.svg');
+        @include image-contain;
+      }
+      &-star2 {
+        @include S3_image('deco/event/autumn-star2.svg');
+        @include image-contain;
+      }
+      &-bubble {
+        @include S3_image('deco/event/autumn-bubble1.svg');
+        @include image-contain;
+      }
+    }
+    &__winter {
+      &-triangle1 {
+        @include S3_image('deco/event/winter-triangle1.svg');
+        @include image-contain;
+      }
+      &-triangle2 {
+        @include S3_image('deco/event/winter-triangle2.svg');
+        @include image-contain;
+      }
+      &-music-note1 {
+        @include S3_image('deco/event/winter-music-note1.svg');
+        @include image-contain;
+      }
+      &-music-note2 {
+        @include S3_image('deco/event/winter-music-note2.svg');
+        @include image-contain;
+      }
+      &-star1 {
+        @include S3_image('deco/event/winter-star1.svg');
+        @include image-contain;
+      }
+      &-star2 {
+        @include S3_image('deco/event/winter-star2.svg');
+        @include image-contain;
+      }
+    }
+  }
   &__features__play {
     &-1-L {
       @include S3_image('deco/features/play_deco1-L.svg');

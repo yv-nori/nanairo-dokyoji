@@ -62,7 +62,9 @@
                 <div class="P_event__deco-bottom-left <%= season_items[:photo2] %>"></div>
                 <div class="P_event__deco-bottom-right <%= season_items[:photo2] %>"></div>
                 <% season_items[:deco].each do |deco| %>
-                  <div class="P_event__deco-<%= season[:season_title_en] %>-<%= deco %>"></div>
+                  <div class="P_event__deco-<%= season[:season_title_en] %>-<%= deco %>">
+                    <div class="C_deco__event__<%= season[:season_title_en] %>-<%= deco %>"></div>
+                  </div>
                 <% end %>
               </div>
             <% end %>

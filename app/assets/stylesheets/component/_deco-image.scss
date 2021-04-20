@@ -1,5 +1,5 @@
 @mixin S3_image($url) {
-  background: url('http://dazq5oer2h0ku.cloudfront.net/images/#{$url}');
+  background: url('https://dazq5oer2h0ku.cloudfront.net/images/#{$url}');
 }
 @mixin image-base {
   background-position: center;

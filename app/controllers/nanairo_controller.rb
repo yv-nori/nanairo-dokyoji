@@ -18,7 +18,8 @@ class NanairoController < ApplicationController
       card_position:'right',
       js_id:'0'
     ]
-    @staff_img_0 = 'nanairo__staff_0'
+    @staff_img_0 = ['parti','0']
+    @staff_catch_0 ='仕事も家族も'
     @staff_1 = [
       name:'篠原　明美',
       name_en:'kitano saori',
@@ -32,7 +33,8 @@ class NanairoController < ApplicationController
       card_position:'right',
       js_id:'1'
     ]
-    @staff_img_1 = 'nanairo__staff_1'
+    @staff_img_1 = ['parti','1']
+    @staff_catch_1 ='ひとりひとりの<br>子どもを大切に'
     @staff_2 = [
       name:'名前　名前',
       name_en:'kitano saori',
@@ -46,7 +48,8 @@ class NanairoController < ApplicationController
       card_position:'left',
       js_id:'2'
     ]
-    @staff_img_2 = 'nanairo__staff_2'
+    @staff_img_2 = ['piani','2']
+    @staff_catch_2 ='言葉を手渡す'
     @staff_3 = [
       name:'北野　沙織',
       name_en:'kitano saori',
@@ -60,7 +63,8 @@ class NanairoController < ApplicationController
       card_position:'left',
       js_id:'3'
     ]
-    @staff_img_3 = 'nanairo__staff_3'
+    @staff_img_3 = ['piani','3']
+    @staff_catch_3 ='優しさをもって'
   end
 
   def contact_create

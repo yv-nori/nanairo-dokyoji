@@ -1,5 +1,5 @@
 @mixin S3_image($url) {
-  background: url('https://nanairo-dokyoji.s3-ap-northeast-1.amazonaws.com/images/#{$url}');
+  background: url('http://dazq5oer2h0ku.cloudfront.net/images/#{$url}');
 }
 @mixin image-base {
   background-position: center;

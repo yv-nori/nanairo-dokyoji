@@ -5,7 +5,7 @@
   <div id="JS_smoothScroll_target-0"></div>
   <div class="L_kv" id="JS_raindrops_target">
     <div class="L_kv__inner" id="JS_scroll-to-top_trigger-0">
-      <div class="C_image__recruit__kv"></div>
+      <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_pc.jpg" alt="就職案内 トップ画像" class="C_image">
       <%#-- 採用タイトル --%>
       <div class="P_Recruit__kv__text-box">
         <h1 class="P_Recruit__kv__main-title">RECRUITING</h1>
@@ -51,7 +51,7 @@
         </div>
         <div class="P_Recruit__concept__inner-img">
           <div class="P_Recruit__concept__img-box">
-            <div class="C_image__recruit__sub"></div>
+            <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_pc.jpg" alt="就職案内 サブ画像" class="C_image">
           </div>
           <div id="JS_shabon_target-1" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
         </div>
@@ -80,7 +80,7 @@
     <div class="P_Recruit__staff__back">
       <%#-- バックイメージ0 --%>
       <div class="A_isInvisible" id="JS_staff-switch_target0-backImg">
-        <div class="C_image__recruit__<%= staff_img_0 %>"></div>
+        <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_pc.jpg" alt="職員紹介１" class="C_image">
         <div class="A_isNone" id="JS_staff-switch_target0-intro">
           <%#-- 紹介文 --%>
           <%=render partial:'shared/staff_intro',collection: staff_0,as:'staff' %>
@@ -88,7 +88,7 @@
       </div>
       <%#-- バックイメージ1 --%>
       <div class="A_isInvisible" id="JS_staff-switch_target1-backImg">
-        <div class="C_image__recruit__<%= staff_img_1 %>"></div>
+        <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_pc.jpg" alt="職員紹介2" class="C_image">
         <div class="A_isNone" id="JS_staff-switch_target1-intro">
           <%#-- 紹介文 --%>
           <%=render partial:'shared/staff_intro',collection: staff_1,as:'staff' %>
@@ -96,7 +96,7 @@
       </div>
       <%#-- バックイメージ2 --%>
       <div class="A_isInvisible" id="JS_staff-switch_target2-backImg">
-        <div class="C_image__recruit__<%= staff_img_2 %>"></div>
+        <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_pc.jpg" alt="職員紹介3" class="C_image">
         <div class="A_isNone" id="JS_staff-switch_target2-intro">
           <%#-- 紹介文 --%>
           <%=render partial:'shared/staff_intro',collection: staff_2,as:'staff' %>
@@ -104,7 +104,7 @@
       </div>
       <%#-- バックイメージ3 --%>
       <div class="A_isInvisible" id="JS_staff-switch_target3-backImg">
-        <div class="C_image__recruit__<%= staff_img_3 %>"></div>
+        <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_pc.jpg" alt="職員紹介4" class="C_image">
         <div class="A_isNone" id="JS_staff-switch_target3-intro">
           <%#-- 紹介文 --%>
           <%=render partial:'shared/staff_intro',collection: staff_3,as:'staff' %>
@@ -122,37 +122,36 @@
       <%#-- フロントイメージ0 --%>
       <div class="P_Recruit__staff__inner">
         <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target0-white"></div>
-        <div class="C_image__recruit__<%= staff_img_0 %>" id="JS_staff-switch_target0-frontImg"></div>
+        <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_pc.jpg" alt="職員紹介1 パネル" class="C_image" id="JS_staff-switch_target0-frontImg">
         <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target0-catch">
-          仕事も家族も
+          <%= staff_catch_0.html_safe %>
         </h1>
         <div class="P_Recruit__staff__trigger" id="JS_staff-switch_trigger0"></div>
       </div>
       <%#-- フロントイメージ1 --%>
       <div class="P_Recruit__staff__inner">
         <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target1-white"></div>
-        <div class="C_image__recruit__<%= staff_img_1 %>" id="JS_staff-switch_target1-frontImg"></div>
+        <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_pc.jpg" alt="職員紹介2 パネル" class="C_image" id="JS_staff-switch_target1-frontImg">
         <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target1-catch">
-          ひとりひとりの<br>
-          子どもを大切に
+          <%= staff_catch_1.html_safe %>
         </h1>
         <div class="P_Recruit__staff__trigger" id="JS_staff-switch_trigger1"></div>
       </div>
       <%#-- フロントイメージ2 --%>
       <div class="P_Recruit__staff__inner">
         <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target2-white"></div>
-        <div class="C_image__recruit__<%= staff_img_2 %>" id="JS_staff-switch_target2-frontImg"></div>
+        <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_pc.jpg" alt="職員紹介3 パネル" class="C_image" id="JS_staff-switch_target2-frontImg">
         <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target2-catch">
-          言葉を手渡す
+          <%= staff_catch_2.html_safe %>
         </h1>
         <div class="P_Recruit__staff__trigger" id="JS_staff-switch_trigger2"></div>
       </div>
       <%#-- フロントイメージ3 --%>
       <div class="P_Recruit__staff__inner">
         <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target3-white"></div>
-        <div class="C_image__recruit__<%= staff_img_3 %>" id="JS_staff-switch_target3-frontImg"></div>
+        <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_pc.jpg" alt="職員紹介4 パネル" class="C_image" id="JS_staff-switch_target3-frontImg">
         <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target3-catch">
-          優しさをもって
+          <%= staff_catch_3.html_safe %>
         </h1>
         <div class="P_Recruit__staff__trigger" id="JS_staff-switch_trigger3"></div>
       </div>

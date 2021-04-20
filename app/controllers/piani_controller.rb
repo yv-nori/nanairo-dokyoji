@@ -1,7 +1,7 @@
 class PianiController < ApplicationController
   before_action :items
   before_action :recipe_items, only:[:eat_education,:support]
-  before_action :name_items, only:[:about, :admission, :belong,  :eat_education, :event, :index, :features, :photo_gallery]
+  before_action :name_items, only:[:about, :admission, :belong,  :eat_education, :event, :index, :features, :one_day, :photo_gallery]
   def about
     @items = {
       link_play: features_piani_index_path(:anchor => "play"),
@@ -52,7 +52,7 @@ class PianiController < ApplicationController
       inner_title: false,
       back: false,
       title: 'Photo Gallery',
-      img_source: 'eat-education__recipe',
+      img_source: 'eat-education/recipe',
       link: eat_education_piani_index_path,
       content_title: true,
       items: @recipe_items
@@ -291,7 +291,7 @@ class PianiController < ApplicationController
       inner_title: true,
       back: true,
       title: 'Photo Gallery',
-      img_source: 'photo-gallery__piani__slider',
+      img_source: 'photo-gallery/piani_slider',
       link: photo_gallery_piani_index_path,
       content_title: false,
       items: [
@@ -340,7 +340,8 @@ class PianiController < ApplicationController
       card_position:'right',
       js_id:'0'
     ]
-    @staff_img_0 = 'piani__staff_0'
+    @staff_img_0 = ['piani','0']
+    @staff_catch_0 ='仕事も家族も'
     @staff_1 = [
       name:'篠原　明美',
       name_en:'kitano saori',
@@ -354,7 +355,8 @@ class PianiController < ApplicationController
       card_position:'right',
       js_id:'1'
     ]
-    @staff_img_1 = 'piani__staff_1'
+    @staff_img_1 = ['piani','1']
+    @staff_catch_1 ='ひとりひとりの<br>子どもを大切に'
     @staff_2 = [
       name:'名前　名前',
       name_en:'kitano saori',
@@ -368,7 +370,8 @@ class PianiController < ApplicationController
       card_position:'left',
       js_id:'2'
     ]
-    @staff_img_2 = 'piani__staff_2'
+    @staff_img_2 = ['piani','2']
+    @staff_catch_2 ='言葉を手渡す'
     @staff_3 = [
       name:'北野　沙織',
       name_en:'kitano saori',
@@ -382,7 +385,8 @@ class PianiController < ApplicationController
       card_position:'left',
       js_id:'3'
     ]
-    @staff_img_3 = 'piani__staff_3'
+    @staff_img_3 = ['piani','3']
+    @staff_catch_3 ='優しさをもって'
   end
 
   def recruit_create

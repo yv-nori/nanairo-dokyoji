@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="P_event__kv">
-    <div class="C_image__event__<%= name_items[:name_en] %>__kv"></div>
+    <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_kv_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_kv_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_kv_pc.jpg" alt="年間行事 トップ画像" class="C_image">
   </div>
 </section>
 <ul class="P_event__nav">
@@ -24,7 +24,6 @@
   <% season.each_with_index do |season, i| %>
     <section class="P_event__wrap <%= season[:season_title_en] %>" id="JS_smoothScroll_target-<%= i + 1 %>">
       <div class="P_event__season-text-ja <%= season[:season_title_en] %> <%= "top" if i === 0 %>"><%= season[:season_title_ja] %></div>
-
       <div class="P_event__season-text-en <%= season[:season_title_en] %>"><%= season[:season_title_en] %></div>
       <div class="P_event__contents-wrap">
         <div class="P_event__deco-line-trim <%= season[:season_title_en] %>">
@@ -48,14 +47,14 @@
         <% season[:season_items].each_with_index do |season_items, j| %>
           <div class="P_event__container <%= j.odd? ? 'right': 'left' %> photo2-<%= season_items[:photo2] %>">
             <div class="P_event__img-box <%= j.odd? ? 'right': 'left' %> photo2-<%= season_items[:photo2] %>">
-              <div class="C_image__event__<%= name_items[:name_en] %>__<%= season[:season_title_en] %>_<%= j %>"></div>
+              <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>_pc.jpg" alt="年間行事 <%= season[:season_title_ja] %><%= j + 1 %>" class="C_image">
               <div class="P_event__month <%= season[:season_title_en] %> <%= j.odd? ? 'right': 'left' %>"><%= season_items[:month] %><span class="P_event__month_S">月</span></div>
               <div class="P_event__title-ja <%= j.odd? ? 'right': 'left' %>"><%= season_items[:title] %></div>
             </div>
             <% if !(season_items[:photo2] == '') %>
               <div class="P_event__img-sub <%= season_items[:photo2] %> <%= j.odd? ? 'right': 'left' %>">
                 <div class="P_event__trim-img">
-                  <div class="C_image__event__<%= name_items[:name_en] %>__<%= season[:season_title_en] %>_<%= j %>-S"></div>
+                  <img srcset="http://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>-S_sp.jpg 600w, http://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>-S_tab.jpg 1025w, http://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>-S_pc.jpg" alt="年間行事 <%= season[:season_title_ja] %><%= j + 1 %> サブ画像" class="C_image">
                 </div>
                 <div class="P_event__deco-top-left <%= season_items[:photo2] %>"></div>
                 <div class="P_event__deco-top-right <%= season_items[:photo2] %>"></div>
@@ -63,7 +62,7 @@
                 <div class="P_event__deco-bottom-right <%= season_items[:photo2] %>"></div>
                 <% season_items[:deco].each do |deco| %>
                   <div class="P_event__deco-<%= season[:season_title_en] %>-<%= deco %>">
-                    <div class="C_deco__event__<%= season[:season_title_en] %>-<%= deco %>"></div>
+                    <div class="C_deco__event__<%= season[:season_title_en] %>-<%= deco %> lazye"></div>
                   </div>
                 <% end %>
               </div>

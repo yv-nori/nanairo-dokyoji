@@ -41,10 +41,10 @@ class PianiController < ApplicationController
   end
   def admission
     @items = {
-      movie_link: for_admission_parti_index_path(anchor: 'movie'),
-      pdf_link: for_admission_parti_index_path,
+      movie_link: for_admission_piani_index_path(anchor: 'movie'),
+      pdf_link: for_admission_piani_index_path,
       pdf_title: '令和2 年度 募集要<span class="C_text__braces">項</span>（PDF<span class="C_text__braces">）</span>',
-      one_day_link: one_day_parti_index_path
+      one_day_link: one_day_piani_index_path
     }
   end
   def eat_education

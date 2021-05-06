@@ -11,7 +11,12 @@
     </div>
   </div>
   <div class="P_photo-gallery__kv">
-    <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/kv_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/kv_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/kv_pc.jpg" alt="フォトギャラリー トップ画像" class="C_image">
+    <picture>
+      <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/kv_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+      <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/kv_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+      <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/kv_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/kv_sp2.webp 2x" type="image/webp" class="C_image"/>
+      <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/kv_alt.jpg" alt="フォトギャラリー トップ画像" class="C_image"/>
+    </picture>
     <div class="P_photo-gallery__kv__text-box">
       <h1 class="P_photo-gallery__kv__title">
         PHOTO<br>
@@ -59,7 +64,12 @@
   <div class="P_photo-gallery__contents-wrap">
     <div class="P_photo-gallery__layout__double">
       <div class="P_photo-gallery__img__double-main">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_0_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_0_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_0_pc.jpg" alt="イベント1" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_0_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_0_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_0_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_0_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_0_alt.jpg" alt="イベント1" class="C_image"/>
+        </picture>
         <div class="P_photo-gallery__deco dots1">
           <div class="C_deco__dots1"></div>
         </div>
@@ -67,7 +77,12 @@
       <div class="P_photo-gallery__img__double-sub-back tab-sp-only">
       </div>
       <div class="P_photo-gallery__img__double-sub">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_1_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_1_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_1_pc.jpg" alt="イベント2" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_1_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_1_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_1_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_1_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_1_alt.jpg" alt="イベント2" class="C_image"/>
+        </picture>
         <div class="P_photo-gallery__deco jagged1">
           <div class="C_deco__jagged1"></div>
         </div>
@@ -75,7 +90,12 @@
     </div>
     <div class="P_photo-gallery__layout">
       <div class="P_photo-gallery__img__center-hor">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_2_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_2_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_2_pc.jpg" alt="イベント3" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_2_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_2_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_2_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_2_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_2_alt.jpg" alt="イベント3" class="C_image"/>
+        </picture>
         <div class="P_photo-gallery__deco triangles1">
           <div class="C_deco__triangle1"></div>
         </div>
@@ -89,31 +109,80 @@
     </div>
     <div class="P_photo-gallery__layout">
       <div class="P_photo-gallery__img__quarter-up first">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_3_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_3_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_3_pc.jpg" alt="イベント4" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_3_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_3_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_3_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_3_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_3_alt.jpg" alt="イベント4" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__quarter-down first">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_4_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_4_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_4_pc.jpg" alt="イベント5" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_4_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_4_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_4_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_4_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_4_alt.jpg" alt="イベント5" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__quarter-up second">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_5_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_5_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_5_pc.jpg" alt="イベント6" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_5_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_5_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_5_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_5_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_5_alt.jpg" alt="イベント6" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__quarter-down second">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_6_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_6_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_6_pc.jpg" alt="イベント7" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_6_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_6_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_6_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_6_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_6_alt.jpg" alt="イベント7" class="C_image"/>
+        </picture>
       </div>
     </div>
     <div class="P_photo-gallery__layout">
-      <div class="P_photo-gallery__img__left">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_7_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_7_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_7_pc.jpg" alt="イベント8" class="C_image">
-        <div class="P_photo-gallery__deco babble1">
-          <div class="C_deco__babble1"></div>
+      <div class="P_photo-gallery__deco triangles2">
+        <div class="C_deco__triangle1"></div>
+      </div>
+      <div class="P_photo-gallery__img__center-hor">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_7_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_7_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_7_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_7_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_7_alt.jpg" alt="イベント8" class="C_image"/>
+        </picture>
+      </div>
+      <div class="P_photo-gallery__img__sub-frame frame1">
+        <div class="P_photo-gallery__img__sub">
+          <picture>
+            <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_8_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+            <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_8_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+            <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_8_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_8_sp2.webp 2x" type="image/webp" class="C_image"/>
+            <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_8_alt.jpg" alt="イベント9" class="C_image"/>
+          </picture>
         </div>
       </div>
+      <h3 class="P_photo-gallery__side-text show">KAITAI SHOW!!!!</h3>
     </div>
     <div class="P_photo-gallery__layout">
-      <div class="P_photo-gallery__img__right">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_8_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_8_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_8_pc.jpg" alt="イベント9" class="C_image">
-        <div class="P_photo-gallery__deco jagged2">
-          <div class="C_deco__jagged1"></div>
+      <div class="P_photo-gallery__img__double-main-right">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_9_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_9_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_9_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_9_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_9_alt.jpg" alt="イベント10" class="C_image"/>
+        </picture>
+        <div class="P_photo-gallery__side-text camp">CAMP! CAMP! CAMP!</div>
+      </div>
+      <div class="P_photo-gallery__img__sub-frame frame2">
+        <div class="P_photo-gallery__img__sub">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_10_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_10_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_10_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_10_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_10_alt.jpg" alt="イベント11" class="C_image"/>
+        </picture>
         </div>
       </div>
     </div>
@@ -123,86 +192,36 @@
     </div>
     <div class="P_photo-gallery__layout">
       <div class="P_photo-gallery__img__quarter first">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_9_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_9_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_9_pc.jpg" alt="イベント10" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_11_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_11_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_11_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_11_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_11_alt.jpg" alt="イベント12" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__quarter right">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_10_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_10_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_10_pc.jpg" alt="イベント11" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_12_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_12_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_12_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_12_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_12_alt.jpg" alt="イベント13" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__quarter under">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_11_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_11_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_11_pc.jpg" alt="イベント12" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_13_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_13_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_13_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_13_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_13_alt.jpg" alt="イベント14" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__quarter right under">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_12_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_12_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_12_pc.jpg" alt="イベント13" class="C_image">
-      </div>
-    </div>
-    <div class="P_photo-gallery__layout">
-      <div class="P_photo-gallery__img__center-hor">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_13_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_13_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_13_pc.jpg" alt="イベント14" class="C_image">
-        <svg class="P_photo-gallery__deco-line2 line1" x="0px" y="0px" width="100%" height="100%">
-          <line x1="3" y1="50%" x2="100%" y2="50%"/>
-        </svg>
-        <svg class="P_photo-gallery__deco-line2 line2" x="0px" y="0px" width="100%" height="100%">
-          <line x1="3" y1="50%" x2="100%" y2="50%"/>
-        </svg>
-      </div>
-    </div>
-    <div class="P_photo-gallery__layout__over-ray">
-      <div class="P_photo-gallery__img__over-ray-under">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_14_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_14_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_14_pc.jpg" alt="イベント15" class="C_image">
-        <h3 class="P_photo-gallery__deco-text cooking">
-          Cooking
-          <div class="P_photo-gallery__deco text-shine3">
-            <div class="C_deco__text-shine2"></div>
-          </div>
-        </h3>
-        <div class="P_photo-gallery__deco dots2">
-          <div class="C_deco__dots1"></div>
-        </div>
-        <div class="P_photo-gallery__img__over-ray-over-back"></div>
-        <div class="P_photo-gallery__img__over-ray-over">
-          <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_15_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_15_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_15_pc.jpg" alt="イベント16" class="C_image">
-        </div>
-      </div>
-    </div>
-    <div class="P_photo-gallery__layout">
-      <div class="P_photo-gallery__deco triangles2">
-        <div class="C_deco__triangle1"></div>
-      </div>
-      <div class="P_photo-gallery__img__center-hor">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_16_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_16_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_16_pc.jpg" alt="イベント17" class="C_image">
-      </div>
-      <div class="P_photo-gallery__img__sub-frame frame1">
-        <div class="P_photo-gallery__img__sub">
-          <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_17_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_17_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_17_pc.jpg" alt="イベント18" class="C_image">
-        </div>
-      </div>
-      <h3 class="P_photo-gallery__side-text show">KAITAI SHOW!!!!</h3>
-    </div>
-    <div class="P_photo-gallery__layout">
-      <div class="P_photo-gallery__deco triangles3">
-        <div class="C_deco__triangle1"></div>
-      </div>
-      <div class="P_photo-gallery__img__left">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_18_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_18_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_18_pc.jpg" alt="イベント19" class="C_image">
-      </div>
-    </div>
-    <div class="P_photo-gallery__layout">
-      <div class="P_photo-gallery__img__right">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_19_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_19_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_19_pc.jpg" alt="イベント20" class="C_image">
-        <div class="P_photo-gallery__deco babble2">
-          <div class="C_deco__babble1"></div>
-        </div>
-      </div>
-    </div>
-    <div class="P_photo-gallery__layout">
-      <div class="P_photo-gallery__img__double-main-right">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_20_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_20_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_20_pc.jpg" alt="イベント21" class="C_image">
-        <div class="P_photo-gallery__side-text camp">CAMP! CAMP! CAMP!</div>
-      </div>
-      <div class="P_photo-gallery__img__sub-frame frame2">
-        <div class="P_photo-gallery__img__sub">
-          <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_21_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_21_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_21_pc.jpg" alt="イベント22" class="C_image">
-        </div>
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_14_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_14_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_14_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_14_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_event_14_alt.jpg" alt="イベント15" class="C_image"/>
+        </picture>
       </div>
     </div>
   </div>
@@ -224,7 +243,12 @@
         <div class="C_deco__babble1"></div>
       </div>
       <div class="P_photo-gallery__img__left">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_0_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_0_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_0_pc.jpg" alt="園内1" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_0_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_0_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_0_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_0_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_0_alt.jpg" alt="園内1" class="C_image"/>
+        </picture>
       </div>
     </div>
     <div class="P_photo-gallery__layout">
@@ -232,7 +256,12 @@
         <div class="C_deco__jagged1"></div>
       </div>
       <div class="P_photo-gallery__img__right">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_1_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_1_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_1_pc.jpg" alt="園内2" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_1_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_1_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_1_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_1_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_1_alt.jpg" alt="園内2" class="C_image"/>
+        </picture>
       </div>
     </div>
     <div class="P_photo-gallery__layout">
@@ -245,16 +274,36 @@
     </div>
     <div class="P_photo-gallery__layout">
       <div class="P_photo-gallery__img__quarter first">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_2_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_2_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_2_pc.jpg" alt="園内3" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_2_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_2_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_2_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_2_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_2_alt.jpg" alt="園内3" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__quarter right">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_3_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_3_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_3_pc.jpg" alt="園内4" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_3_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_3_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_3_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_3_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_3_alt.jpg" alt="園内4" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__quarter under">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_4_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_4_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_4_pc.jpg" alt="園内5" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_4__pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_4__tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_4__sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_4__sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_4__alt.jpg" alt="園内5" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__quarter right under">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_5_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_5_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_5_pc.jpg" alt="園内6" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_5_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_5_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_5_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_5_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_5_alt.jpg" alt="園内6" class="C_image"/>
+        </picture>
       </div>
     </div>
     <div class="P_photo-gallery__layout">
@@ -269,15 +318,30 @@
       </svg>
       <h3 class="P_photo-gallery__deco-text study">Study!</h3>
       <div class="P_photo-gallery__img__center-ver">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_6_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_6_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_6_pc.jpg" alt="園内7" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_6_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_6_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_6_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_6_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_6_alt.jpg" alt="園内7" class="C_image"/>
+        </picture>
       </div>
     </div>
     <div class="P_photo-gallery__layout">
       <div class="P_photo-gallery__img__half left">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_7_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_7_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_7_pc.jpg" alt="園内8" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_7_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_7_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_7_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_7_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_7_alt.jpg" alt="園内8" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__half right">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_8_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_8_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_8_pc.jpg" alt="園内9" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_8_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_8_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_8_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_8_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_8_alt.jpg" alt="園内9" class="C_image"/>
+        </picture>
       </div>
     </div>
     <div class="P_photo-gallery__layout">
@@ -288,7 +352,12 @@
         <div class="C_deco__triangle1"></div>
       </div>
       <div class="P_photo-gallery__img__center-hor">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_9_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_9_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_9_pc.jpg" alt="園内10" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_9_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_9_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_9_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_9_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_inside_9_alt.jpg" alt="園内10" class="C_image"/>
+        </picture>
         <h3 class="P_photo-gallery__side-text contact">contact<br>with<br>nature</h3>
       </div>
     </div>
@@ -317,7 +386,12 @@
         </div>
       </h3>
       <div class="P_photo-gallery__img__center-hor">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_0_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_0_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_0_pc.jpg" alt="食育1" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_0_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_0_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_0_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_0_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_0_alt.jpg" alt="食育1" class="C_image"/>
+        </picture>
       </div>
     </div>
     <div class="P_photo-gallery__layout">
@@ -325,17 +399,32 @@
         <div class="C_deco__babble1"></div>
       </div>
       <div class="P_photo-gallery__img__left">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_1_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_1_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_1_pc.jpg" alt="食育2" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_1_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_1_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_1_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_1_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_1_alt.jpg" alt="食育2" class="C_image"/>
+        </picture>
       </div>
     </div>
     <div class="P_photo-gallery__layout">
       <div class="P_photo-gallery__img__right">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_2_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_2_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_2_pc.jpg" alt="食育3" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_2_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_2_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_2_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_2_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_2_alt.jpg" alt="食育3" class="C_image"/>
+        </picture>
       </div>
     </div>
     <div class="P_photo-gallery__layout__twin">
       <div class="P_photo-gallery__img__twin">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_3_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_3_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_3_pc.jpg" alt="食育4" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_3_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_3_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_3_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_3_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_3_alt.jpg" alt="食育4" class="C_image"/>
+        </picture>
       <div class="P_photo-gallery__side-text best-smile">
         BEST<br>
         SMILE!
@@ -351,7 +440,12 @@
       </div>
       </div>
       <div class="P_photo-gallery__img__twin right">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_4_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_4_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_4_pc.jpg" alt="食育5" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_4_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_4_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_4_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_4_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_eat-education_4_alt.jpg" alt="食育5" class="C_image"/>
+        </picture>
         <div class="P_photo-gallery__deco triangles7">
           <div class="C_deco__triangle1"></div>
         </div>
@@ -373,7 +467,12 @@
   <div class="P_photo-gallery__contents-wrap">
     <div class="P_photo-gallery__layout">
       <div class="P_photo-gallery__img__center-hor">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_0_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_0_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_0_pc.jpg" alt="作品展1" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_0_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_0_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_0_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_0_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_0_alt.jpg" alt="作品1" class="C_image"/>
+        </picture>
         <div class="P_photo-gallery__deco dots4">
         <div class="C_deco__dots1"></div>
         </div>
@@ -381,7 +480,12 @@
     </div>
     <div class="P_photo-gallery__layout">
       <div class="P_photo-gallery__img__right">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_1_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_1_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_1_pc.jpg" alt="作品展2" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_1_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_1_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_1_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_1_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_1_alt.jpg" alt="作品2" class="C_image"/>
+        </picture>
         <h3 class="P_photo-gallery__deco-text great">
           Great
           <div class="P_photo-gallery__deco text-shine5">
@@ -395,7 +499,12 @@
     </div>
     <div class="P_photo-gallery__layout">
       <div class="P_photo-gallery__img__left">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_2_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_2_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_2_pc.jpg" alt="作品展3" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_2_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_2_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_2_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_2_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_2_alt.jpg" alt="作品3" class="C_image"/>
+        </picture>
         <div class="P_photo-gallery__deco jagged5">
           <div class="C_deco__jagged1"></div>
         </div>
@@ -403,22 +512,52 @@
     </div>
     <div class="P_photo-gallery__layout__panel">
       <div class="P_photo-gallery__img__panel left top">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_3_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_3_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_3_pc.jpg" alt="作品展4" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_3_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_3_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_3_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_3_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_3_alt.jpg" alt="作品4" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__panel top">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_4_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_4_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_4_pc.jpg" alt="作品展5" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_4_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_4_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_4_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_4_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_4_alt.jpg" alt="作品5" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__panel left">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_5_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_5_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_5_pc.jpg" alt="作品展6" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_5_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_5_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_5_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_5_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_5_alt.jpg" alt="作品6" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__panel">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_6_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_6_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_6_pc.jpg" alt="作品展7" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_6_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_6_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_6_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_6_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_6_alt.jpg" alt="作品7" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__panel left">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_7_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_7_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_7_pc.jpg" alt="作品展8" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_7_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_7_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_7_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_7_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_7_alt.jpg" alt="作品8" class="C_image"/>
+        </picture>
       </div>
       <div class="P_photo-gallery__img__panel">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_8_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_8_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_8_pc.jpg" alt="作品展9" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_8_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_8_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_8_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_8_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/photo-gallery/<%= name_items[:name_en]%>_art_8_alt.jpg" alt="作品9" class="C_image"/>
+        </picture>
       </div>
     </div>
   </div>

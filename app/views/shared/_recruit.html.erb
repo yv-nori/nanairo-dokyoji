@@ -5,7 +5,12 @@
   <div id="JS_smoothScroll_target-0"></div>
   <div class="L_kv" id="JS_raindrops_target">
     <div class="L_kv__inner" id="JS_scroll-to-top_trigger-0">
-      <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_pc.jpg" alt="就職案内 トップ画像" class="C_image">
+      <picture>
+        <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+        <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+        <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_sp2.webp 2x" type="image/webp" class="C_image"/>
+        <img src="https://dazq5oer2h0ku.cloudfront.net/images/recruit/kv_alt.jpg" alt="就職案内 トップ画像" class="C_image"/>
+      </picture>
       <%#-- 採用タイトル --%>
       <div class="P_Recruit__kv__text-box">
         <h1 class="P_Recruit__kv__main-title">RECRUITING</h1>
@@ -51,7 +56,12 @@
         </div>
         <div class="P_Recruit__concept__inner-img">
           <div class="P_Recruit__concept__img-box">
-            <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_pc.jpg" alt="就職案内 サブ画像" class="C_image">
+            <picture>
+              <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+              <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+              <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_sp2.webp 2x" type="image/webp" class="C_image"/>
+              <img src="https://dazq5oer2h0ku.cloudfront.net/images/recruit/sub_alt.jpg" alt="就職案内 サブ画像" class="C_image"/>
+            </picture>
           </div>
           <div id="JS_shabon_target-1" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
         </div>
@@ -80,7 +90,12 @@
     <div class="P_Recruit__staff__back">
       <%#-- バックイメージ0 --%>
       <div class="A_isInvisible" id="JS_staff-switch_target0-backImg">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_pc.jpg" alt="職員紹介１" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_back_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_back_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_back_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_back_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_<%= staff_img_0[1] %>_back_alt.jpg" alt="職員紹介１" class="C_image"/>
+        </picture>
         <div class="A_isNone" id="JS_staff-switch_target0-intro">
           <%#-- 紹介文 --%>
           <%=render partial:'shared/staff_intro',collection: staff_0,as:'staff' %>
@@ -88,7 +103,12 @@
       </div>
       <%#-- バックイメージ1 --%>
       <div class="A_isInvisible" id="JS_staff-switch_target1-backImg">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_pc.jpg" alt="職員紹介2" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_back_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_back_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_back_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_back_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_<%= staff_img_1[1] %>_back_alt.jpg" alt="職員紹介2" class="C_image"/>
+        </picture>
         <div class="A_isNone" id="JS_staff-switch_target1-intro">
           <%#-- 紹介文 --%>
           <%=render partial:'shared/staff_intro',collection: staff_1,as:'staff' %>
@@ -96,7 +116,12 @@
       </div>
       <%#-- バックイメージ2 --%>
       <div class="A_isInvisible" id="JS_staff-switch_target2-backImg">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_pc.jpg" alt="職員紹介3" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_back_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_back_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_back_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_back_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_<%= staff_img_2[1] %>_back_alt.jpg" alt="職員紹介3" class="C_image"/>
+        </picture>
         <div class="A_isNone" id="JS_staff-switch_target2-intro">
           <%#-- 紹介文 --%>
           <%=render partial:'shared/staff_intro',collection: staff_2,as:'staff' %>
@@ -104,7 +129,12 @@
       </div>
       <%#-- バックイメージ3 --%>
       <div class="A_isInvisible" id="JS_staff-switch_target3-backImg">
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_pc.jpg" alt="職員紹介4" class="C_image">
+        <picture>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_back_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_back_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_back_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_back_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_<%= staff_img_3[1] %>_back_alt.jpg" alt="職員紹介4" class="C_image"/>
+        </picture>
         <div class="A_isNone" id="JS_staff-switch_target3-intro">
           <%#-- 紹介文 --%>
           <%=render partial:'shared/staff_intro',collection: staff_3,as:'staff' %>
@@ -122,7 +152,12 @@
       <%#-- フロントイメージ0 --%>
       <div class="P_Recruit__staff__inner">
         <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target0-white"></div>
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_pc.jpg" alt="職員紹介1 パネル" class="C_image" id="JS_staff-switch_target0-frontImg">
+        <picture id="JS_staff-switch_target0-frontImg">
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_panel_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_panel_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_panel_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_panel_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_0[0] %>_staff_panel_<%= staff_img_0[1] %>_panel_alt.jpg" alt="職員紹介1 パネル" class="C_image"/>
+        </picture>
         <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target0-catch">
           <%= staff_catch_0.html_safe %>
         </h1>
@@ -131,7 +166,12 @@
       <%#-- フロントイメージ1 --%>
       <div class="P_Recruit__staff__inner">
         <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target1-white"></div>
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_pc.jpg" alt="職員紹介2 パネル" class="C_image" id="JS_staff-switch_target1-frontImg">
+        <picture id="JS_staff-switch_target1-frontImg">
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_panel_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_panel_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_panel_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_panel_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_1[0] %>_staff_panel_<%= staff_img_1[1] %>_panel_alt.jpg" alt="職員紹介2 パネル" class="C_image"/>
+        </picture>
         <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target1-catch">
           <%= staff_catch_1.html_safe %>
         </h1>
@@ -140,7 +180,12 @@
       <%#-- フロントイメージ2 --%>
       <div class="P_Recruit__staff__inner">
         <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target2-white"></div>
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_pc.jpg" alt="職員紹介3 パネル" class="C_image" id="JS_staff-switch_target2-frontImg">
+        <picture id="JS_staff-switch_target2-frontImg">
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_panel_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_panel_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_panel_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_panel_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_2[0] %>_staff_panel_<%= staff_img_2[1] %>_panel_alt.jpg" alt="職員紹介3 パネル" class="C_image"/>
+        </picture>
         <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target2-catch">
           <%= staff_catch_2.html_safe %>
         </h1>
@@ -149,7 +194,12 @@
       <%#-- フロントイメージ3 --%>
       <div class="P_Recruit__staff__inner">
         <div class="U_cover--shadow-white A_isInvisible" id="JS_staff-switch_target3-white"></div>
-        <img srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_sp.jpg 600w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_tab.jpg 1025w, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_pc.jpg" alt="職員紹介4 パネル" class="C_image" id="JS_staff-switch_target3-frontImg">
+        <picture id="JS_staff-switch_target3-frontImg">
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_panel_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_panel_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+          <source srcset="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_panel_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_panel_sp2.webp 2x" type="image/webp" class="C_image"/>
+          <img src="https://dazq5oer2h0ku.cloudfront.net/images/recruit/<%= staff_img_3[0] %>_staff_panel_<%= staff_img_3[1] %>_panel_alt.jpg" alt="職員紹介4 パネル" class="C_image"/>
+        </picture>
         <h1 class="P_Recruit__staff__front-catch" id="JS_staff-switch_target3-catch">
           <%= staff_catch_3.html_safe %>
         </h1>

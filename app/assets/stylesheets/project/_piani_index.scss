@@ -131,7 +131,7 @@
   &__title {
     color: white;
     font-size: $font-size-base * 12.5;
-    font-family: "Angelface";
+    font-family: "Angelface", sans-serif;
     position: absolute;
     bottom: -4%;
     left: 50%;
@@ -141,7 +141,7 @@
     color: white;
     font-size: $font-size-base * 2.5;
     letter-spacing: $letter-spacing-base;
-    font-family: "goudy_bookletter_1911";
+    font-family: "goudy_bookletter_1911", sans-serif;
     position: absolute;
     left: 50%;
     bottom: 6%;
@@ -310,7 +310,7 @@
   &__title-en {
     font-size: $font-size-base;
     letter-spacing: 0.32em;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     @include mq-up("tab") {
     letter-spacing: $letter-spacing-base * 9;
     }
@@ -344,7 +344,7 @@
     font-size: $font-size-base * 1.25;
     font-weight: 400;
     letter-spacing: 0.017em;
-    font-family: 'Hannari';
+    font-family: 'Hannari', sans-serif;
     padding-top: $space-section_L;
     @include mq-up("tab") {
       padding-top: 10.5vh;
@@ -441,7 +441,7 @@
     padding-top: 20px;
     text-align: center;
     width: 100%;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     @include mq-up("tab") {
       letter-spacing: $letter-spacing-base * 9;
     }
@@ -622,7 +622,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    font-family: 'NewBaskervilleStd-Roman';
+    font-family: 'NewBaskervilleStd-Roman', sans-serif;
     transform: translate3d(-50%, -40%, 0);
     font-size: $font-size-base * 0.625;
     color: #fff;
@@ -746,7 +746,7 @@
   }
   &__sub-title-en {
     font-size: $font-size-base * 0.875;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     padding-top: 23px;
     position: absolute;
     top: -26%;

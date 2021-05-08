@@ -12,11 +12,9 @@ $letter-spacing-base: 0.08em;
 // フォント
 // ================================
 
-$font-family-awesome: "Font Awesome 5 Free",
-sans-serif;
+$font-family-awesome: "Font Awesome 5 Free";
 
-$font-family-code: monospace,
-sans-serif;
+$font-family-code: monospace;
 
 $font-family-base: 'Hannari',
 dnp-shuei-gothic-gin-std,
@@ -42,16 +40,14 @@ $font-family-hkgw3: "Hiragino Kaku Gothic Pro",
 "メイリオ",
 meiryo,
 "MS Pゴシック",
-"MS PGothic",
-sans-serif;
+"MS PGothic";
 
 $font-family-hkgw6: "HiraKakuPro-W6",
 "ヒラギノ角ゴ Pro W6",
 "メイリオ",
 meiryo,
 "MS Pゴシック",
-"MS PGothic",
-sans-serif;
+"MS PGothic";
 
 $font-family-minco: "游明朝体",
 "Yu Mincho",
@@ -59,8 +55,7 @@ yumincho,
 "ヒラギノ明朝 Pro",
 "Hiragino Mincho Pro",
 "MS P明朝",
-"MS PMincho",
-serif;
+"MS PMincho";
 $font-family-gothic: "游ゴシック体",
 "Yu Gothic",
 yugothic,
@@ -69,8 +64,7 @@ yugothic,
 "メイリオ",
 meiryo,
 "MS Pゴシック",
-"MS PGothic",
-sans-serif;
+"MS PGothic";
 
 $font-family-shuei: dnp-shuei-mincho-pr6n,
 "Noto Serif JP",
@@ -93,6 +87,7 @@ serif;
   src: font-url('Blankid.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -100,13 +95,7 @@ serif;
   src: font-url('DINPro-Medium.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'KozGoPr6N-Regular';
-  src: font-url('KozGoPr6N-Regular.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -114,6 +103,7 @@ serif;
   src: font-url('NewBaskervilleStd-Roman.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -121,6 +111,7 @@ serif;
   src: font-url('CastroScript_PERSONAL_USE_ONLY.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -128,6 +119,7 @@ serif;
   src: font-url('Hannari.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -135,6 +127,7 @@ serif;
   src: font-url('Angelface.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -142,41 +135,7 @@ serif;
   src: font-url('Baskerville.ttc') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'SummerFestival-Regular';
-  src: font-url('SummerFestival-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SummerFestival-Regular';
-  src: font-url('SummerFestival-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'CursiveScript';
-  src: font-url('CursiveScript.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'IndulgeScript';
-  src: font-url('IndulgeScript.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Sono-Bold';
-  src: font-url('Sono-Bold.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -184,6 +143,7 @@ serif;
   src: font-url('Forum-Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -191,6 +151,7 @@ serif;
   src: font-url('goudy_bookletter_1911.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -198,4 +159,5 @@ serif;
   src: font-url('Artegra_Sans-300-Light.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }

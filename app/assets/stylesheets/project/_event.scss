@@ -298,7 +298,7 @@
     font-size: $font-size-base * 1.875;
     margin-top: -18px;
     text-align: center;
-    font-family: 'logo-font';
+    font-family: 'logo-font', sans-serif;
     &.spring {
       color: invert($color-spring);
     }

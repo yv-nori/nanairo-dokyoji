@@ -19,7 +19,7 @@
     line-height: 140%;
     margin-bottom: 15px;
     letter-spacing: 0em;
-    font-family: 'Forum-Regular';
+    font-family: 'Forum-Regular', sans-serif;
     font-size: $font-size-base * 1.25;
     @include mq-up("tab") {
       font-size: $font-size-base * 1.875;
@@ -33,7 +33,13 @@
     line-height: 120%;
     font-weight: 400;
     letter-spacing: -0.12em;
-    font-family: 'Hannari';
+    font-family: 'Hannari', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include mq-up("sp") {
+      font-size: $font-size-base * 5;
+    }
     @include mq-up("tab") {
       font-size: $font-size-base * 6.875;
       line-height: 120%;
@@ -235,7 +241,8 @@
     color: white;
     font-size: $font-size-base * 2;
     letter-spacing: $letter-spacing-base * 1.625;
-    font-family: "goudy_bookletter_1911";
+    font-family: "goudy_bookletter_1911", sans-serif;
+    padding-top: 2%;
     @include mq-up("tab") {
       font-size: $font-size-base * 1.4375;
     }
@@ -245,9 +252,9 @@
     font-size: $font-size-base * 1.3;
     letter-spacing: $letter-spacing-base * 0.3;
     white-space: nowrap;
-    font-family: "Hannari";
+    font-family: "Hannari", sans-serif;
     margin-top: -13px;
-    padding-bottom: 5px;
+    padding-bottom: 2%;
     @include mq-up("tab") {
       font-size: $font-size-base * 1.5625;
     }
@@ -330,12 +337,16 @@
   &__text {
     color: white;
     letter-spacing: $letter-spacing-base * 0.125;
-    font-family: "Blankid";
+    font-family: "Blankid", sans-serif;
     transition: all $anime-time-short;
     @include abs(50, 60);
     font-size: $font-size-base * 3.75;
+    @include mq-up("sp") {
+      font-size: $font-size-base * 6.25;
+    }
     @include mq-up("tab") {
       font-size: $font-size-base * 5;
+      @include abs(50, 70);
     }
     @include mq-up("pc") {
       @include abs(50, 68);

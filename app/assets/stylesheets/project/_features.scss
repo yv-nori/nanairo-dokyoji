@@ -8,7 +8,7 @@
   &__title {
     position: relative;
     margin-top: $space-vertical;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     font-size: $font-size-base * 1.5;
     letter-spacing: 0.7em;
     &::before,
@@ -160,7 +160,7 @@
   &__nav-title-en {
     pointer-events: none;
     writing-mode: vertical-rl;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     position: absolute;
     top: 50%;
     right: 5%;
@@ -178,7 +178,7 @@
 .P_features__sp-nav {
   &__title {
     margin: $space-section_L auto 0 auto;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     font-size: $font-size-base * 1;
     letter-spacing: 0.5em;
     text-align: center;
@@ -583,7 +583,7 @@
     width: 100%;
   }
   &__content-title {
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     font-size: $font-size-base * 0.75;
     letter-spacing: 0.2em;
     @include mq-up("pc") {

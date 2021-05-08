@@ -10,7 +10,7 @@
     position: absolute;
     display: block;
     text-align: center;
-    font-family: 'logo-font';
+    font-family: 'logo-font', sans-serif;
     width: 100%;
     bottom: 0%;
     left: 50%;
@@ -149,7 +149,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: $font-size-base * 1.625;
-    font-family: 'Blankid';
+    font-family: 'Blankid', sans-serif;
     z-index: map-get($layer, 'icon');
   }
   &__circle-line {
@@ -210,7 +210,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     font-size: $font-size-base * 1.5;
     letter-spacing: $letter-spacing-base;
     &.left {
@@ -222,7 +222,7 @@
     }
     &::before {
       content: 'you';
-      font-family: 'Blankid';
+      font-family: 'Blankid', sans-serif;
       font-size: $font-size-base * 2.5;
       text-align: center;
       position: absolute;

@@ -13,7 +13,7 @@
     }
   }
   &__title, &__sub-title {
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     text-align: center;
     color: #fff;
   }
@@ -791,7 +791,7 @@
     transform: translate3d(-50%, -50%, 0);
     text-align: center;
     font-size: 0.1rem;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     top: 0;
     @include mq-up("tab") {
       transform: translate3d(-50%, 0, 0);
@@ -810,7 +810,7 @@
   }
 }
 .P_photo-gallery__side-text {
-  font-family: 'DinPro';
+  font-family: 'DINPro-Medium', sans-serif;
   position: absolute;
   &.show {
     font-size: $font-size-base * 0.625;
@@ -905,7 +905,7 @@
 .P_photo-gallery__deco-text {
   z-index: map-get($layer, 'icon');
   position: absolute;
-  font-family: 'Angelface';
+  font-family: 'Angelface', sans-serif;
   font-size: $font-size-base * 3.75;
   @include mq-up("tab") {
     font-size: $font-size-base * 6.25;
@@ -1008,7 +1008,7 @@
     margin-top: 15vh;
   }
   &__title-en {
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     letter-spacing: 0.2em;
     font-size: $font-size-base * 0.875;
     text-align: center;
@@ -1036,11 +1036,11 @@
     }
   }
   &__section-text-main {
-    font-family: 'logo-font';
+    font-family: 'logo-font', sans-serif;
     font-size: 8rem;
   }
   &__section-text-sub {
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     margin-top: -40px;
     text-align: center;
   }

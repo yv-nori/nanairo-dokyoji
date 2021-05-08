@@ -29,7 +29,7 @@
   &__title {
     color: white;
     font-size: $font-size-base * 12.5;
-    font-family: "Angelface";
+    font-family: "Angelface", sans-serif;
     position: absolute;
     bottom: -4%;
     left: 50%;
@@ -39,7 +39,7 @@
     color: white;
     font-size: $font-size-base * 2.5;
     letter-spacing: $letter-spacing-base;
-    font-family: "goudy_bookletter_1911";
+    font-family: "goudy_bookletter_1911", sans-serif;
     position: absolute;
     left: 50%;
     bottom: 6%;
@@ -135,7 +135,7 @@
     width: 100%;
     text-align: center;
     font-size: $font-size-base * 2.5;
-    font-family: 'Blankid';
+    font-family: 'Blankid', sans-serif;
     padding-top: 5px;
     @include mq-up("tab") {
       padding-top: 6vh;
@@ -188,7 +188,7 @@
     border-bottom-right-radius: 4px;
     font-weight: 400;
     letter-spacing: 0.017em;
-    font-family: 'Hannari';
+    font-family: 'Hannari', sans-serif;
     text-align: center;
     @include mq-up("pc") {
       border-radius: 4px;
@@ -296,7 +296,7 @@
       position: absolute;
     }
     &-L {
-      font-family: 'logo-font';
+      font-family: 'logo-font', sans-serif;
       font-size: $font-size-base * 8.75;
       top: 50%;
       left: 50%;
@@ -311,7 +311,7 @@
       }
     }
     &-S {
-      font-family: 'Baskerville';
+      font-family: 'Baskerville', sans-serif;
       font-size: $font-size-base * 2.5;
       letter-spacing: $letter-spacing-base;
       right: 0;
@@ -331,13 +331,13 @@
       width: 100%;
     }
     &-L_pc {
-      font-family: 'logo-font';
+      font-family: 'logo-font', sans-serif;
       font-size: 17rem;
       white-space: pre;
       transform: translateY(30px);
     }
     &-S_pc {
-      font-family: 'Baskerville';
+      font-family: 'Baskerville', sans-serif;
       font-size: $font-size-base * 1.875;
       letter-spacing: $letter-spacing-base;
     }
@@ -362,7 +362,7 @@
     font-size: $font-size-base * 1.875;
     text-align: center;
     width: 100%;
-    font-family: 'Blankid';
+    font-family: 'Blankid', sans-serif;
     @include mq-up("tab") {
       font-size: $font-size-base * 2.5;
     }
@@ -489,7 +489,7 @@
   }
   &__sub-title-en {
     font-size: $font-size-base * 0.875;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     position: absolute;
     top: 5%;
     right: -3%;

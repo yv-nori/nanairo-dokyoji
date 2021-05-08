@@ -30,7 +30,7 @@
     }
   }
   &__title-en {
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     font-size: $font-size-base * 0.75;
     letter-spacing: 0.08em;
   }
@@ -74,7 +74,7 @@
   }
   &__table {
     font-size: $font-size-base * 0.75;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif, sans-serif;
     text-align: center;
     border: double 1px $color-text;
     margin-right: $space-side * -1;
@@ -209,7 +209,7 @@
     padding: 20px 5px;
     color: $color-blue-text;
     border: 1px solid $color-blue-text;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif, sans-serif;
     border-radius: 50px;
     padding: 5px 45px;
     font-weight: bold;
@@ -233,12 +233,12 @@
   &__blue-title {
     color: $color-blue-text;
     font-weight: bold;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif, sans-serif;
   }
 }
 .P_admission__intro {
   &__page-title-en {
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     text-align: center;
     letter-spacing: 0.35em;
     font-size: $font-size-base * 2.375;
@@ -357,7 +357,7 @@
   &__en-text {
     padding-top: 17px;
     pointer-events: none;
-    font-family: 'Angelface';
+    font-family: 'Angelface', sans-serif;
     font-size: $font-size-base * 2.5;
     @include mq-up("tab") {
       font-size: $font-size-base * 3.125;
@@ -440,7 +440,7 @@
     }
   }
   &__title-en {
-    font-family: 'Angelface';
+    font-family: 'Angelface', sans-serif;
     text-align: center;
     margin-top: -2vh;
     font-size: $font-size-base * 1.875;
@@ -762,7 +762,7 @@
     text-align: center;
     border-spacing: 0 3vh;
     border-collapse: separate;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif, sans-serif;
     font-weight: bold;
     font-size: $font-size-base * 0.75;
     width: 100%;
@@ -848,7 +848,7 @@
     }
   }
   &__text {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif, sans-serif;
     width: 100%;
     margin-top: 1.5vh;
     @include mq-up("pc") {
@@ -864,14 +864,14 @@
 }
 .P_admission__extension {
   &__text1 {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif, sans-serif;
     margin-top: $space-section;
     @include mq-up("pc") {
       margin-top: $space-section_L;
     }
   }
   &__text2 {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif, sans-serif;
     margin-top: $space-section / 2;
     @include mq-up("pc") {
       margin-top: $space-section;

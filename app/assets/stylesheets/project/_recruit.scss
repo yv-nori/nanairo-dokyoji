@@ -38,7 +38,7 @@
     line-height: 140%;
     font-weight: 400;
     letter-spacing: -0.12em;
-    font-family: 'Hannari';
+    font-family: 'Hannari', sans-serif;
     text-align: center;
     @include mq-up("pc") {
       text-align: initial;
@@ -76,7 +76,7 @@
     font-size: $font-size-base * 3;
     letter-spacing: $letter-spacing-base * 1.25;
     white-space: nowrap;
-    font-family: 'goudy_bookletter_1911';
+    font-family: 'goudy_bookletter_1911', sans-serif;
     color: #fff;
     @include mq-up("tab") {
       font-size: $font-size-base * 4.375;
@@ -94,7 +94,7 @@
     font-size: $font-size-base * 1.5;
     letter-spacing: $letter-spacing-base * 1.25;
     white-space: nowrap;
-    font-family: 'goudy_bookletter_1911';
+    font-family: 'goudy_bookletter_1911', sans-serif;
     pointer-events: none;
     @include mq-up("tab") {
       margin-top: -23px;
@@ -218,7 +218,7 @@
   &__title {
     font-size: $font-size-base * 4;
     letter-spacing: 0px;
-    font-family: 'Blankid';
+    font-family: 'Blankid', sans-serif;
     pointer-events: none;
     z-index: map-get($layer, 'icon');
     transform: rotate(-10deg);

@@ -85,7 +85,7 @@
     }
   }
   &__title-en {
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     margin-top: 1vh;
     font-size: $font-size-base * 0.8125;
     letter-spacing: 0.4em;
@@ -137,7 +137,7 @@
     }
   }
   &__content-number {
-    font-family: 'NewBaskervilleStd-Roman';
+    font-family: 'NewBaskervilleStd-Roman', sans-serif;
     text-align: center;
     height: 50px;
     width: 50px;
@@ -224,12 +224,12 @@
     left: 50%;
   }
   &__title {
-    font-family: 'logo-font';
+    font-family: 'logo-font', sans-serif;
     font-size: $font-size-base * 6.25;
     bottom: -4%;
   }
   &__sub-title {
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     bottom: 6%;
     font-size: $font-size-base * 0.875;
     letter-spacing: 0.5em;
@@ -293,11 +293,11 @@
     color: #fff;
     transform: rotate(-1deg) scale(0.9);
     font-size: 1rem;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     -ms-writing-mode: lr-tb;
     writing-mode: horizontal-tb;
     &.font {
-      font-family: 'logo-font';
+      font-family: 'logo-font', sans-serif;
     }
   }
 }
@@ -366,7 +366,7 @@
     width: 100%;
     height: 5vh;
     position: relative;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     &::before {
       content: '';
       border-right: 1px solid $color-text;
@@ -432,7 +432,7 @@
     margin-top: $space-section_L;
   }
   &__title-en {
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     font-size: $font-size-base * 3.125;
     letter-spacing: 0.4em;
     position: absolute;
@@ -455,7 +455,7 @@
     position: relative;
   }
   &__icon-title {
-    font-family: 'Artegra_Sans-300-Light';
+    font-family: 'Artegra_Sans-300-Light', sans-serif;
     letter-spacing: 0.18em;
     margin-top: 1vh;
   }

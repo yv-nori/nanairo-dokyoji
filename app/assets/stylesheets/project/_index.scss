@@ -106,7 +106,7 @@
   &__title-en {
     text-align: center;
     font-size: $font-size-base;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     letter-spacing: $letter-spacing-base * 5.25;
     color: #fff;
     position: absolute;
@@ -148,7 +148,7 @@
   &__number {
     text-align: center;
     font-size: $font-size-base;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     letter-spacing: $letter-spacing-base * 9;
     width: 100%;
     height: 42px;
@@ -185,7 +185,7 @@
     }
   }
   &__title {
-    font-family: 'Blankid';
+    font-family: 'Blankid', sans-serif;
     position: absolute;
     top: 6%;
     left: 50%;
@@ -242,7 +242,7 @@
     transform: translate3d(-50%, -50%, 0);
     text-align: center;
     font-size: 0.1rem;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     top: 0;
     @include mq-up("tab") {
       transform: translate3d(-50%, 0, 0);
@@ -338,7 +338,7 @@
   }
   &__btn-text {
     font-size: $font-size-base * 1;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     color: #fff;
     letter-spacing: 0.3em;
     text-align: center;
@@ -523,7 +523,7 @@
   &__read {
     padding-top: 4vh;
     text-align: center;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     font-size: $font-size-base * 0.875;
   }
   &__img-box {
@@ -702,7 +702,7 @@
   &__under-title-en {
     pointer-events: none;
     font-size: 3rem;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     font-size: 1rem;
     padding-bottom: 1vh;
     @include mq-up("tab") {
@@ -792,7 +792,7 @@
     top: 36%;
     left: 50%;
     transform: translate3d(-50%, 0 ,0);
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     letter-spacing: $letter-spacing-base;
     font-size: $font-size-base * 3;
     @include mq-up("tab") {
@@ -807,7 +807,7 @@
     top: 56%;
     left: 50%;
     transform: translate3d(-50%, 0 ,0);
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     letter-spacing: $letter-spacing-base;
   }
   &__read {
@@ -819,7 +819,7 @@
     top: 70%;
     left: 50%;
     transform: translate3d(-50%, 0 ,0);
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     letter-spacing: $letter-spacing-base;
     cursor: pointer;
     @include mq-up("tab") {
@@ -928,7 +928,7 @@
     }
   }
   &__title-en {
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     position: relative;
     margin-bottom: 35px;
     display: inline-block;

@@ -186,7 +186,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     font-size: $font-size-base * 1.75;
     @include mq-up("tab") {
       font-size: $font-size-base * 2.375;
@@ -236,14 +236,14 @@
     padding: $space-section_L $space-side_L;
   }
   &__name1 {
-    font-family: 'logo-font';
+    font-family: 'logo-font', sans-serif;
     font-size: $font-size-base * 2.25;
     @include mq-up("tab") {
       font-size: $font-size-base * 3.5;
     }
   }
   &__name2 {
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     margin-top: -2vh;
     font-size: $font-size-base * 0.25;
     @include mq-up("tab") {
@@ -290,7 +290,7 @@
   }
   &__back-name {
     position: absolute;
-    font-family: 'logo-font';
+    font-family: 'logo-font', sans-serif;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -320,7 +320,7 @@
   &__title {
     margin-top: $space-section_L;
     letter-spacing: 0.3em;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     position: relative;
     text-align: center;
     &::before,
@@ -417,7 +417,7 @@
     left: 50%;
     bottom: 10%;
     transform: translate(-50%, -50%);
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     color: #fff;
     pointer-events: none;
     white-space: nowrap;
@@ -517,7 +517,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     @include mq-up("tab") {
       font-size: $font-size-base * 0.9375;
     }
@@ -568,7 +568,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     font-size: $font-size-base * 1.1875;
     @include mq-up("tab") {
       font-size: $font-size-base * 1.875;
@@ -1005,7 +1005,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', sans-serif;
     font-size: $font-size-base * 0.875;
     &.piani {
       font-size: $font-size-base * 0.75;
@@ -1038,7 +1038,7 @@
   }
   &__title-en {
     font-size: $font-size-base * 0.875;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     text-align: center;
   }
   &__title-ja {

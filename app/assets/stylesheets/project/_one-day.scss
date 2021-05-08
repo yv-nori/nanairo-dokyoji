@@ -85,7 +85,7 @@
     }
   }
   &__title-en {
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     font-size: $font-size-base * 0.75;
     letter-spacing: 0.08em;
   }
@@ -194,7 +194,7 @@
     }
   }
   &__time {
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     font-size: $font-size-base * 1.375;
     padding-top: 3px;
     @include mq-up("tab") {
@@ -203,7 +203,7 @@
     }
   }
   &__title {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif, sans-serif;
     font-weight: bold;
     font-size: $font-size-base * 0.9375;
     @include mq-up("tab") {
@@ -212,7 +212,7 @@
     }
   }
   &__class {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif, sans-serif;
     font-weight: bold;
     padding-right: 18px;
     padding-left: 18px;
@@ -231,7 +231,7 @@
     }
   }
   &__text {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif, sans-serif;
     padding-top: 8px;
     padding-bottom: 12px;
     font-size: $font-size-base * 0.625;

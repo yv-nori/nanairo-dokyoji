@@ -43,7 +43,7 @@ body {
 }
 
 body {
-  font-family: $font-family-base;
+  font-family: $font-family-base, sans-serif;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   color: $color-text;
@@ -142,7 +142,7 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace, monospace, sans-serif;
   /* 1 */
   font-size: inherit;
   /* 2 */
@@ -194,7 +194,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace, monospace, sans-serif;
   /* 1 */
   font-size: inherit;
   /* 2 */

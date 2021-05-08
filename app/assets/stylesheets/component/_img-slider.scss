@@ -12,7 +12,7 @@
     }
   }
   &__title {
-    font-family: 'Blankid';
+    font-family: 'Blankid', sans-serif;
     position: absolute;
     top: 6%;
     left: 50%;
@@ -69,7 +69,7 @@
     transform: translate3d(-50%, -50%, 0);
     text-align: center;
     font-size: 0.1rem;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     top: 0;
     @include mq-up("tab") {
       transform: translate3d(-50%, 0, 0);
@@ -198,7 +198,7 @@
   }
   &__btn-text {
     font-size: $font-size-base * 1;
-    font-family: 'DinPro';
+    font-family: 'DINPro-Medium', sans-serif;
     color: #fff;
     letter-spacing: 0.3em;
     text-align: center;

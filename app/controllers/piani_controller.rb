@@ -35,8 +35,7 @@ class PianiController < ApplicationController
       {title: '2階保育室9', photo: '2F_1'},
       {title: '2階保育室10', photo: '2F_2'},
       {title: '2階保育室11', photo: '2F_3'},
-      {title: '2階保育室12', photo: '2F_4'},
-      {title: '2階保育室13', photo: '2F_5'}
+      {title: '2階保育室12', photo: '2F_4'}
     ]
   end
   def admission
@@ -103,7 +102,7 @@ class PianiController < ApplicationController
           },
           {
             month: '5',
-            title: 'こどもの日',
+            title: '交通安全指導',
             photo2: ''
           },
           {
@@ -131,25 +130,25 @@ class PianiController < ApplicationController
         season_title_ja: '夏',
         season_items: [
           {
-            month: '5',
-            title: '田植え',
+            month: '6',
+            title: '野菜栽培',
             photo2: '',
             deco: []
           },
           {
-            month: '5',
+            month: '7',
             title: '七夕会',
             photo2: 'hor',
             deco: ['star1','star2']
           },
           {
-            month: '5',
+            month: '7',
             title: '水遊び',
             photo2: 'hor',
             deco: ['bubble1','bubble2']
           },
           {
-            month: '5',
+            month: '7',
             title: 'キャンプ',
             photo2: '',
             deco: []
@@ -161,57 +160,45 @@ class PianiController < ApplicationController
         season_title_ja: '秋',
         season_items: [
           {
-            month: '5',
-            title: '縁日ごっこ',
+            month: '9',
+            title: '夕涼み会',
             photo2: '',
             deco: []
           },
           {
-            month: '5',
+            month: '9',
             title: '敬老会',
-            photo2: 'ver',
+            photo2: 'hor',
             deco: ['triangle1','triangle2']
           },
           {
-            month: '5',
-            title: '秋のつどい',
-            photo2: '',
-            deco: []
-          },
-          {
-            month: '5',
-            title: 'お店屋さんごっこ',
-            photo2: '',
-            deco: []
-          },
-          {
-            month: '5',
+            month: '11',
             title: 'お芋掘り',
-            photo2: 'hor',
+            photo2: 'ver',
             deco: ['heart1','heart2']
           },
           {
-            month: '5',
+            month: '11',
             title: '遠足',
             photo2: '',
             deco: []
           },
           {
-            month: '5',
-            title: '遠足',
+            month: '11',
+            title: '乗馬体験',
             photo2: 'ver',
             deco: ['star1','star2']
           },
           {
-            month: '5',
+            month: '11',
             title: '報恩講',
             photo2: '',
             deco: []
           },
           {
-            month: '5',
-            title: '親子バイキング',
-            photo2: 'hor',
+            month: '11',
+            title: 'バイキング',
+            photo2: 'ver',
             deco: ['bubble']
           }
         ]
@@ -221,37 +208,25 @@ class PianiController < ApplicationController
         season_title_ja: '冬',
         season_items: [
           {
-            month: '5',
+            month: '12',
             title: 'お餅つき',
             photo2: 'hor',
             deco: ['triangle1','triangle2']
           },
           {
-            month: '5',
-            title: '成道会',
-            photo2: '',
-            deco: []
-          },
-          {
-            month: '5',
+            month: '1',
             title: '発表会',
             photo2: 'hor',
             deco: ['music-note1','music-note2']
           },
           {
-            month: '5',
+            month: '2',
             title: '節分',
             photo2: '',
             deco: []
           },
           {
-            month: '5',
-            title: '涅槃会',
-            photo2: '',
-            deco: []
-          },
-          {
-            month: '5',
+            month: '2',
             title: 'お茶会',
             photo2: 'hor',
             deco: ['star1','star2']
@@ -263,9 +238,9 @@ class PianiController < ApplicationController
             deco: []
           },
           {
-            month: '5',
+            month: '3',
             title: '卒園式',
-            photo2: '',
+            photo2: 'hor',
             deco: []
           }
         ]

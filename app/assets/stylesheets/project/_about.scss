@@ -361,7 +361,6 @@
     }
   }
   &__list {
-    
     position: relative;
     cursor: pointer;
     width: 100%;
@@ -384,10 +383,10 @@
     @include mq-up("pc") {
       width: calc(20% - 25px);
     }
-    &:hover:after {
+    &:hover &__shadow {
       opacity: 0;
     }
-    &::after {
+    &__shadow {
       content: '';
       background-color: #000;
       opacity: 0.6;
@@ -398,6 +397,9 @@
       height: 100%;
       transition: .3s;
       pointer-events: none;
+      &.isActive {
+        opacity: 0;
+      }
     }
   }
   &__list-title-ja {

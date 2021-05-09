@@ -95,7 +95,7 @@ class NanairoController < ApplicationController
       logo_path: root_path
     }
     @header_lists = [
-      {title: '七彩学舎',link: about_nanairo_index_path},
+      {title: '七彩学舎について',link: about_nanairo_index_path},
       {title: '入園をお考えの方へ',link: admission_nanairo_index_path},
       {title: '就職をお考えの方へ',link: recruit_nanairo_index_path},
       {title: 'パルティ道教寺',link: parti_index_path},

@@ -5,6 +5,22 @@
   position: fixed;
   z-index: -1;
   top: 0;
+  &_pc {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include mq-up("pc") {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      z-index: -1;
+      top: 0;
+    }
+  }
 }
 .C_image {
   width: 100%;

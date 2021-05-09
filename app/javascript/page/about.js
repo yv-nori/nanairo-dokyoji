@@ -2,7 +2,7 @@
 // 関数と定数の読み込み
 // --------------------------------
 import {
-  scrollChange, headerStatusWhite, $changeTargets, toTopItems, scrollToTop, smoothItems, smoothScroll, resetPositions, resetSmoothPositions, scrollToTopHide
+  scrollChange, headerStatusWhite, scrollAction, scrollActionItems, scrollActionStop,  $changeTargets, toTopItems, scrollToTop, smoothItems, smoothScroll, resetPositions, resetSmoothPositions, scrollToTopHide
 } from "../function/scroll"
 import {
   media, changeMedia, _doc, getElements, getElementsInner, noScrollPC, noScrollSP, onScrollPC, onScrollSP
@@ -19,6 +19,7 @@ import {
 $(function () {
   const HeaderItems = headerItems();
   const SmoothItems = smoothItems();
+  const ScrollActionItems = scrollActionItems();
   const ToTopItems = toTopItems();
   const $ChangeTargets = $changeTargets(HeaderItems.$targets);
   const ImgSlideItems = imgSlideItems();
@@ -50,6 +51,7 @@ $(function () {
     switch (media()) {
       case "SP":
         scrollToTopHide(ToTopItems.$target);
+        scrollAction(windowScrollTop, ScrollActionItems);
         break;
       case "Tab":
         scrollToTop(windowScrollTop, startPosition, ToTopItems);
@@ -63,6 +65,7 @@ $(function () {
   window.addEventListener('resize', () => {
     resetPositions(ToTopItems.scrollPositions, ToTopItems.$triggers);
     resetSmoothPositions(SmoothItems);
+    scrollActionStop(ScrollActionItems.$targets);
     switch (changeMedia(startSize)) {
       case "SP":
         wrightShabon(Shabon.$targets, Shabon.params_SP);

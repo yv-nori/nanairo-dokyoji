@@ -861,7 +861,6 @@
     display: block;
     position: absolute;
     background: white;
-    padding: 4px;
     border: solid 1px $color-text;
     -moz-box-shadow: 0 4px 10px $color-text;
     -webkit-box-shadow: 0 4px 10px $color-text;
@@ -870,21 +869,31 @@
   &__img-frame-M {
     top: 15%;
     left: 10%;
-    width: 170px;
-    height: 46%;
+    width: 11%;
     border-radius: 2% 2% 3% 3% / 50% 50% 50% 50%;
+    &::before {
+      content: '';
+      padding-top: 140%;
+      display: block;
+    }
   }
   &__img-frame-S {
     top: 53%;
     left: 17%;
-    width: 130px;
-    height: 35%;
+    width: 8%;
     border-radius: 3% 3% 2% 2% / 50% 50% 50% 50%;
+    &::before {
+      content: '';
+      padding-top: 140%;
+      display: block;
+    }
   }
   &__img-box-S,&__img-box-M {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: calc(0% + 4px);
+    left: calc(0% + 4px);
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
     overflow: hidden;
   }
   &__img-box-M {

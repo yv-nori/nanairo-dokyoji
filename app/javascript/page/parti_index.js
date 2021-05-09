@@ -51,7 +51,6 @@ $(function () {
         scrollToTopHide(ToTopItems.$target);
         break;
       case "Tab":
-        scrollAction(windowScrollTop, ScrollActionItems);
         scrollToTop(windowScrollTop, startPosition, ToTopItems);
         break;
       case "PC":

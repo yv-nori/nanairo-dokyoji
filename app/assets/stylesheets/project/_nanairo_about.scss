@@ -236,3 +236,6 @@
     padding-bottom: $space-section * 2;
   }
 }
+iframe {
+  pointer-events: none;
+}

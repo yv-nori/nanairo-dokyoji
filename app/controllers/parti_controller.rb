@@ -98,7 +98,7 @@ class PartiController < ApplicationController
           },
           {
             month: '5',
-            title: 'こどもの日',
+            title: '交通安全指導',
             photo2: ''
           },
           {
@@ -126,25 +126,25 @@ class PartiController < ApplicationController
         season_title_ja: '夏',
         season_items: [
           {
-            month: '5',
+            month: '6',
             title: '田植え',
             photo2: '',
             deco: []
           },
           {
-            month: '5',
+            month: '7',
             title: '七夕会',
             photo2: 'hor',
             deco: ['star1','star2']
           },
           {
-            month: '5',
+            month: '7',
             title: '水遊び',
             photo2: 'hor',
             deco: ['bubble1','bubble2']
           },
           {
-            month: '5',
+            month: '7',
             title: 'キャンプ',
             photo2: '',
             deco: []
@@ -156,56 +156,44 @@ class PartiController < ApplicationController
         season_title_ja: '秋',
         season_items: [
           {
-            month: '5',
+            month: '9',
             title: '縁日ごっこ',
-            photo2: '',
+            photo2: 'hor',
             deco: []
           },
           {
-            month: '5',
+            month: '9',
             title: '敬老会',
             photo2: 'ver',
             deco: ['triangle1','triangle2']
           },
           {
-            month: '5',
-            title: '秋のつどい',
-            photo2: '',
-            deco: []
-          },
-          {
-            month: '5',
-            title: 'お店屋さんごっこ',
-            photo2: '',
-            deco: []
-          },
-          {
-            month: '5',
+            month: '11',
             title: 'お芋掘り',
             photo2: 'hor',
             deco: ['heart1','heart2']
           },
           {
-            month: '5',
+            month: '11',
             title: '遠足',
             photo2: '',
             deco: []
           },
           {
-            month: '5',
-            title: '遠足',
+            month: '11',
+            title: '乗馬体験',
             photo2: 'ver',
             deco: ['star1','star2']
           },
           {
-            month: '5',
+            month: '11',
             title: '報恩講',
             photo2: '',
             deco: []
           },
           {
-            month: '5',
-            title: '親子バイキング',
+            month: '11',
+            title: 'バイキング',
             photo2: 'hor',
             deco: ['bubble']
           }
@@ -216,37 +204,25 @@ class PartiController < ApplicationController
         season_title_ja: '冬',
         season_items: [
           {
-            month: '5',
+            month: '12',
             title: 'お餅つき',
-            photo2: 'hor',
+            photo2: 'ver',
             deco: ['triangle1','triangle2']
           },
           {
-            month: '5',
-            title: '成道会',
-            photo2: '',
-            deco: []
-          },
-          {
-            month: '5',
+            month: '1',
             title: '発表会',
             photo2: 'hor',
             deco: ['music-note1','music-note2']
           },
           {
-            month: '5',
+            month: '2',
             title: '節分',
             photo2: '',
             deco: []
           },
           {
-            month: '5',
-            title: '涅槃会',
-            photo2: '',
-            deco: []
-          },
-          {
-            month: '5',
+            month: '2',
             title: 'お茶会',
             photo2: 'hor',
             deco: ['star1','star2']
@@ -258,9 +234,9 @@ class PartiController < ApplicationController
             deco: []
           },
           {
-            month: '5',
+            month: '3',
             title: '卒園式',
-            photo2: '',
+            photo2: 'hor',
             deco: []
           }
         ]
@@ -378,8 +354,6 @@ class PartiController < ApplicationController
       link: photo_gallery_parti_index_path,
       content_title: false,
       items: [
-        { link: photo_gallery_parti_index_path },
-        { link: photo_gallery_parti_index_path },
         { link: photo_gallery_parti_index_path },
         { link: photo_gallery_parti_index_path },
         { link: photo_gallery_parti_index_path },

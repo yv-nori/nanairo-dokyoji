@@ -26,30 +26,27 @@
   &__space {
     opacity: 0;
   }
+  &__text-box {
+    position: absolute;
+    bottom: -6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
   &__title {
     color: white;
     font-size: $font-size-base * 12.5;
     font-family: "Angelface", sans-serif;
-    position: absolute;
-    bottom: -4%;
-    left: 50%;
-    transform: translate3d( -50%, 0, 0);
+    margin-bottom: -50%;
   }
   &__sub-title {
     color: white;
     font-size: $font-size-base * 2.5;
     letter-spacing: $letter-spacing-base;
     font-family: "goudy_bookletter_1911", sans-serif;
-    position: absolute;
-    left: 50%;
-    bottom: 6%;
-    transform: translate3d( -50%, 0, 0);
-    @include mq-up("tab") {
-      bottom: 2%;
-    }
-    @include mq-up("pc") {
-      bottom: 5%;
-    }
   }
   &__leaf1, &__leaf2 {
     position: absolute;

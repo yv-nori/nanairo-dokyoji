@@ -53,7 +53,7 @@
               <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
               <img src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_alt.jpg" alt="<%= slider_items[:title] %> <%= i + 1%>" class="C_image lazyload"/>
             </picture>
-            <%= link_to "", slider_items[:link], class:"U_link circle"%>
+            <%= link_to "", item[:link], class:"U_link circle"%>
           </li>
         <% end %>
       <% end %>

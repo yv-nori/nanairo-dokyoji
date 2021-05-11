@@ -355,10 +355,14 @@ class PartiController < ApplicationController
       link: photo_gallery_parti_index_path,
       content_title: false,
       items: [
-        { link: photo_gallery_parti_index_path },
-        { link: photo_gallery_parti_index_path },
-        { link: photo_gallery_parti_index_path },
-        { link: photo_gallery_parti_index_path }
+        { link: photo_gallery_parti_index_path(:anchor => "art") },
+        { link: photo_gallery_parti_index_path(:anchor => "eat-education") },
+        { link: photo_gallery_parti_index_path(:anchor => "event") },
+        { link: photo_gallery_parti_index_path(:anchor => "inside") },
+        { link: photo_gallery_parti_index_path(:anchor => "art") },
+        { link: photo_gallery_parti_index_path(:anchor => "eat-education") },
+        { link: photo_gallery_parti_index_path(:anchor => "event") },
+        { link: photo_gallery_parti_index_path(:anchor => "inside") }
       ]
     }
   end

@@ -837,14 +837,11 @@
   }
   &__img {
     width: calc(50% - 1vw);
-    height: 23vh;
     position: relative;
-    @include mq-up("tab") {
-      height: 30vh;
-      max-height: 304px;
-    }
-    @include mq-up("pc") {
-      height: 45vh;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 142%;
     }
   }
   &__text {

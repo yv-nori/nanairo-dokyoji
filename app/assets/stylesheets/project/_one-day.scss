@@ -10,10 +10,9 @@
     padding-right: $space-side;
     padding-left: $space-side;
     padding-bottom: $space-section_L;
-        background: linear-gradient(
-                    177deg,
-                    #FDF5F6 49%,
-                    #e7ded9 51%);
+    background: linear-gradient(177deg,
+                              #FDF5F6 25%,
+                              #e7ded9 75%);
     @include mq-up("tab") {
       padding-right: $space-side_L;
       padding-left: $space-side_L;
@@ -255,6 +254,9 @@
         width: 12vw;
         height: 10vh;
       }
+      @include mq-up("pc_full") {
+        top: -31%;
+      }
     }
     &.arrow-left {
       width: 13vw;
@@ -267,46 +269,85 @@
         top: -16%;
         left: 73%;
       }
+      @include mq-up("pc_full") {
+        top: -25%;
+      }
     }
     &.arrow-right-L {
-      top: -38%;
-      left: -4%;
+      top: -30%;
+      left: 67%;
+      width: 16vw;
+      height: 15vh;
+      @include mq-up("tab") {
+        top: -25%;
+        left: 75%;
+        width: 14vw;
+        height: 11vh;
+      }
       @include mq-up("pc") {
         top: -36%;
         left: -4%;
       }
+      @include mq-up("pc_full") {
+        top: -46%;
+      }
     }
     &.deco1 {
-      top: -38%;
+      top: -29%;
       left: 82%;
       width: 17vw;
+      @include mq-up("tab") {
+        top: -20%;
+        left: 94%;
+        width: 15vw;
+      }
       @include mq-up("pc") {
         top: -39%;
         left: 17%;
         width: 10vw;
         height: 15vh;
       }
+      @include mq-up("pc_full") {
+        top: -50%;
+      }
     }
     &.deco2 {
-      top: -35%;
-      left: 44%;
+      top: -28%;
+      left: 75%;
       width: 19vw;
       height: 13vh;
+      @include mq-up("tab") {
+        top: -28%;
+        left: 70%;
+        width: 13vw;
+        height: 13vh;
+      }
       @include mq-up("pc") {
-        top: -37%;
-        left: 71%;
+        top: -31%;
+        left: 57%;
         width: 7vw;
         height: 13vh;
       }
+      @include mq-up("pc_full") {
+        top: -39%;
+      }
     }
     &.deco3 {
-      top: -36%;
-      left: 8%;
-      width: 22vw;
+      top: -30%;
+      left: 78%;
+      width: 17vw;
+      @include mq-up("tab") {
+        top: -30%;
+        left: 82%;
+        width: 13vw;
+      }
       @include mq-up("pc") {
         top: -33%;
         left: 69%;
         width: 10vw;
+      }
+      @include mq-up("pc_full") {
+        top: -41%;
       }
     }
     &.deco4 {
@@ -320,25 +361,44 @@
         width: 7vw;
         height: 9vh;
       }
+      @include mq-up("pc_full") {
+        top: -36%;
+      }
     }
     &.deco5 {
-      top: -25%;
-      left: 8%;
-      width: 15vw;
+      top: -29%;
+      left: 82%;
+      width: 14vw;
+      @include mq-up("tab") {
+        top: -30%;
+        left: 84%;
+        width: 9vw;
+      }
       @include mq-up("pc") {
-        top: -24%;
+        top: -31%;
         left: 65%;
         width: 10vw;
       }
+      @include mq-up("pc_full") {
+        top: -39%;
+      }
     }
     &.deco6 {
-      top: -28%;
+      top: -29%;
       left: 59%;
       width: 31vw;
+      @include mq-up("tab") {
+        top: -30%;
+        left: 72%;
+        width: 21vw;
+      }
       @include mq-up("pc") {
-        top: -34%;
+        top: -32%;
         left: 38%;
         width: 14vw;
+      }
+      @include mq-up("pc_full") {
+        top: -40%;
       }
     }
     &.deco7 {
@@ -350,45 +410,75 @@
         left: 23%;
         width: 13vw;
       }
+      @include mq-up("pc_full") {
+        top: -40%;
+      }
     }
     &.deco8 {
       top: -28%;
-      width: 12vw;
-      left: 77%;
+      width: 22vw;
+      left: 68%;
       @include mq-up("pc") {
         top: -26%;
         width: 8vw;
         left: 19%;
       }
+      @include mq-up("pc_full") {
+        top: -34%;
+      }
     }
     &.deco9 {
       top: -30%;
-      left: 8%;
+      left: 82%;
       width: 10vw;
+      @include mq-up("tab") {
+        top: -30%;
+        left: 85%;
+        width: 10vw;
+      }
       @include mq-up("pc") {
         top: -29%;
         left: 31%;
         width: 5vw;
+      }
+      @include mq-up("pc_full") {
+        top: -37%;
       }
     }
     &.deco10 {
       top: -29%;
       left: 77%;
       width: 16vw;
+      @include mq-up("tab") {
+        top: -30%;
+        left: 77%;
+        width: 13vw;
+      }
       @include mq-up("pc") {
-        top: -23%;
+        top: -32%;
         left: 45%;
         width: 10vw;
       }
+      @include mq-up("pc_full") {
+        top: -40%;
+      }
     }
     &.deco11 {
-      top: -29%;
-      left: 7%;
-      width: 15vw;
+      top: -30%;
+      left: 78%;
+      width: 18vw;
+      @include mq-up("tab") {
+        top: -30%;
+        left: 81%;
+        width: 15vw;
+      }
       @include mq-up("pc") {
-        top: -37%;
-        left: 22%;
+        top: -31%;
+        left: 30%;
         width: 8vw;
+      }
+      @include mq-up("pc_full") {
+        top: -39%;
       }
     }
   }

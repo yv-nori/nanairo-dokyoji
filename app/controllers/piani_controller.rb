@@ -54,6 +54,7 @@ class PianiController < ApplicationController
       img_source: 'eat-education/recipe',
       link: eat_education_piani_index_path,
       content_title: true,
+      recipe: true,
       items: @recipe_items
     }
     @food_staff = [
@@ -403,7 +404,7 @@ class PianiController < ApplicationController
       card_position:'right',
       js_id:'0'
     ]
-    @staff_img_0 = ['piani','0']
+    @staff_img_0 = ['parti','0']
     @staff_catch_0 ='仕事も家族も'
     @staff_1 = [
       name:'篠原　明美',
@@ -433,7 +434,7 @@ class PianiController < ApplicationController
       card_position:'left',
       js_id:'2'
     ]
-    @staff_img_2 = ['piani','2']
+    @staff_img_2 = ['piani','3']
     @staff_catch_2 ='言葉を手渡す'
     @staff_3 = [
       name:'北野　沙織',
@@ -448,7 +449,7 @@ class PianiController < ApplicationController
       card_position:'left',
       js_id:'3'
     ]
-    @staff_img_3 = ['piani','3']
+    @staff_img_3 = ['parti','0']
     @staff_catch_3 ='優しさをもって'
   end
 
@@ -474,29 +475,49 @@ class PianiController < ApplicationController
   def recipe_items
     @recipe_items = [
       {
-        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
+        link: 'https://youtu.be/SFbAND6oWjc',
+        title: 'レバーの煮物'
+      },
+      {
+        link: 'https://youtu.be/IfQ30KeeS1w',
         title: '麻婆ナス'
       },
       {
-        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
-        title: '麻婆ナス'
+        link: 'https://youtu.be/ItgTd7_fXKI',
+        title: 'さばのごま衣焼き'
       },
       {
-        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
-        title: '麻婆ナス'
+        link: 'https://youtu.be/XhHRZgPS5lc',
+        title: '豆乳みそ汁'
       },
       {
-        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
-        title: '麻婆ナス'
+        link: 'https://youtu.be/PSHt8ijbHNA',
+        title: 'あじの南蛮漬け'
       },
       {
-        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
-        title: '麻婆ナス'
+        link: 'https://youtu.be/xA9oVXr-4NI',
+        title: 'さつまいもサラダ'
       },
       {
-        link: 'https://www.youtube.com/watch?v=cC5JR5ObdPA',
-        title: '麻婆ナス'
+        link: 'https://youtu.be/u6n1rNpMmV4',
+        title: '和風パスタ'
       },
+      {
+        link: 'https://youtu.be/cc-bQdG588o',
+        title: 'トマト肉じゃが'
+      },
+      {
+        link: 'https://youtu.be/2lfqaTH0wLU',
+        title: 'かぼちゃさらだ'
+      },
+      {
+        link: 'https://youtu.be/HT8L6gjlA1o',
+        title: '豚肉甘辛炒め'
+      },
+      {
+        link: 'https://youtu.be/r3XYoGFw69w',
+        title: '肉団子のコーン蒸し'
+      }
     ]
   end
 

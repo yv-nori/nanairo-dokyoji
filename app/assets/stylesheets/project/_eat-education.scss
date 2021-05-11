@@ -220,7 +220,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.2);
+      background-color: rgba(0,0,0,0.1);
       z-index: 1;
     }
   }
@@ -274,6 +274,10 @@
     @include mq-up("pc") {
       height: 45%;
     }
+    @include mq-up("pc_full") {
+      width: 135px;
+      font-size: $font-size-base * 2;
+    }
   }
   &__deco-line {
     width: 32px;
@@ -306,17 +310,20 @@
   &__deco-text {
     position: absolute;
     top: -29px;
-    left: 6%;
+    left: 50%;
     letter-spacing: 0.01em;
     width: 100%;
     color: #fff;
-    transform: rotate(-1deg) scale(0.9);
+    transform: rotate(-1deg) scale(0.9) translateX(-50%);
     font-size: 1rem;
     font-family: 'DINPro-Medium', sans-serif;
     -ms-writing-mode: lr-tb;
     writing-mode: horizontal-tb;
     &.font {
       font-family: 'logo-font', sans-serif;
+    }
+    @include mq-up("pc_full") {
+      left: 60%;
     }
   }
 }

@@ -439,7 +439,7 @@
     @include S3_image('deco/one_day/arrow-left.svg');
     @include image-contain;
   }
-  &__arrow-left {
+  &__arrow-bottom {
     @include S3_image('deco/public/arrow-bottom.svg');
     @include image-contain;
   }

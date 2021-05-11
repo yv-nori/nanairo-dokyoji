@@ -27,8 +27,8 @@
                   <img src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_alt.jpg" alt="一日の流れ<%= i + 1 %>" class="C_image lazyload"/>
                 </picture>
                 <% if i > 0 then %>
-                  <div class="P_one-day__deco deco<% i %>">
-                    <div class="C_deco__one-day-deco-<% i %>"></div>
+                  <div class="P_one-day__deco deco<%= i %>">
+                    <div class="C_deco__one-day-deco-<%= i %>"></div>
                   </div>
                   <div class="P_one-day__deco arrow-left">
                     <div class="C_deco__arrow-left"></div>
@@ -68,8 +68,8 @@
                   <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
                   <img src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_alt.jpg" alt="一日の流れ<%= i + 1 %>" class="C_image lazyload"/>
                 </picture>
-                  <div class="P_one-day__deco deco<% i %>">
-                    <div class="C_deco__one-day-deco-<% i %>"></div>
+                  <div class="P_one-day__deco deco<%= i %>">
+                    <div class="C_deco__one-day-deco-<%= i %>"></div>
                   </div>
                   <% if i === 1 then %>
                     <div class="P_one-day__deco arrow-right-L">
@@ -107,7 +107,7 @@
       </div>
       <div class="P_one-day__content-wrap tab-sp-only">
         <% items.each_with_index do |items, i| %>
-          <div class="P_one-day__img <%= 'first' if i === 1 %>">
+          <div class="P_one-day__img <%= 'first' if i === 0 %>">
             <picture>
               <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
               <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
@@ -115,8 +115,8 @@
               <img src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_alt.jpg" alt="一日の流れ<%= i + 1 %>" class="C_image lazyload"/>
             </picture>
             <% if i > 0 then %>
-              <div class="P_one-day__deco deco<% i %>">
-                <div class="C_deco__one-day-deco-<% i %>"></div>
+              <div class="P_one-day__deco deco<%= i %>">
+                <div class="C_deco__one-day-deco-<%= i %>"></div>
               </div>
             <% end %>
             <% if i === 1 then %>

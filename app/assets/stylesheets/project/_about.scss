@@ -241,14 +241,31 @@
     @include mq-up("tab") {
       font-size: $font-size-base * 3.5;
     }
+    @include mq-up("pc_full") {
+      font-size: $font-size-base * 4.25;
+    }
   }
   &__name2 {
     font-family: 'DINPro-Medium', sans-serif;
     margin-top: -2vh;
     font-size: $font-size-base * 0.25;
+    letter-spacing: 0.3em;
+    @include mq-up("sp_full") {
+      margin-top: -1vh;
+    }
     @include mq-up("tab") {
       margin-top: -3vh;
       font-size: $font-size-base * 0.875;
+    }
+    @include mq-up("tab_full") {
+      margin-top: -2vh;
+    }
+    @include mq-up("pc") {
+      margin-top: -3vh;
+    }
+    @include mq-up("pc_full") {
+      font-size: $font-size-base * 1.125;
+      margin-top: -2vh;
     }
   }
   &__title {
@@ -701,6 +718,9 @@
     font-size: $font-size-base * 1.875;
     width: fit-content;
     letter-spacing: 0.3em;
+    @include mq-up("sp_full") {
+      font-size: $font-size-base * 2.5;
+    }
     @include mq-up("tab") {
       font-size: $font-size-base * 2.05;
     }

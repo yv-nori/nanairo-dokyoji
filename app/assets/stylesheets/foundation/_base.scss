@@ -53,6 +53,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   overflow-wrap: break-word;
+  @include mq-up("pc_full") {
+    font-size: $font-size-base * 1.25;
+  }
 }
 
 /**

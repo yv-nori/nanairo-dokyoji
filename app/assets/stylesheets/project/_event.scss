@@ -187,6 +187,9 @@
       top: 13%;
       right: 2%;
     }
+    @include mq-up("pc_full") {
+      top: 11.5%;
+    }
   }
   &__season-list {
     width: 50px;
@@ -198,6 +201,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    @include mq-up("pc_full") {
+      font-size: $font-size-base * 1.625;
+      width: 75px;
+      height: 75px;
+    }
     &.spring {
       color: invert($color-spring);
       background: #E7A0A9;

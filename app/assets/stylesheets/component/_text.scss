@@ -9,6 +9,9 @@
     font-weight: 500;
     line-height: 180%;
   }
+  @include mq-up("pc_full") {
+    font-size: $font-size-base * 2.225;
+  }
 }
 .C_text__title-ja {
   font-size: $font-size-base * 2;
@@ -20,6 +23,9 @@
     font-size: $font-size-base * 3.4375;
     line-height: 120%;
     white-space: nowrap;
+  }
+  @include mq-up("pc_full") {
+    font-size: $font-size-base * 4.0625;
   }
 }
 .C_text__sub-title {

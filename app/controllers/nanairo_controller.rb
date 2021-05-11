@@ -33,7 +33,8 @@ class NanairoController < ApplicationController
       card_position:'right',
       js_id:'1'
     ]
-    @staff_img_1 = ['parti','1']
+    # parti0,1,piani2,3
+    @staff_img_1 = ['piani','1']
     @staff_catch_1 ='ひとりひとりの<br>子どもを大切に'
     @staff_2 = [
       name:'名前　名前',
@@ -48,7 +49,7 @@ class NanairoController < ApplicationController
       card_position:'left',
       js_id:'2'
     ]
-    @staff_img_2 = ['piani','2']
+    @staff_img_2 = ['piani','3']
     @staff_catch_2 ='言葉を手渡す'
     @staff_3 = [
       name:'北野　沙織',
@@ -63,7 +64,7 @@ class NanairoController < ApplicationController
       card_position:'left',
       js_id:'3'
     ]
-    @staff_img_3 = ['piani','3']
+    @staff_img_3 = ['parti','0']
     @staff_catch_3 ='優しさをもって'
   end
 

@@ -11,7 +11,7 @@
   align-items: center;
 	transition: all $anime-time-short;
 	&.isMoveDown {
-		top: -100px;
+		top: -110px;
 	}
 	&.isMoveUp {
 		background-color: $color-background;
@@ -25,6 +25,10 @@
 	@include mq-up("tab") {
 		height: $header-height_pc;
 	}
+	@include mq-up("pc_full") {
+		height: $header-height_pc_full;
+		font-size: $font-size-base * 1.5;
+  }
 	&__inner {
 		width: 100%;
 		height: 100%;

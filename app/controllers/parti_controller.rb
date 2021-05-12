@@ -55,8 +55,8 @@ class PartiController < ApplicationController
     }
     @food_staff = [
       {
-        shop_name: 'ミートショップ北出',
-        representative: '北出　稔',
+        shop_name: '〇〇商店',
+        representative: '七彩　太郎',
         text: '美味しいお肉を納入しております',
         delively: '三徳',
         postal_code: '〒597-0033',
@@ -65,8 +65,8 @@ class PartiController < ApplicationController
         fax: '072-427-5515'
       },
       {
-        shop_name: 'ミートショップ北出',
-        representative: '北出　稔',
+        shop_name: '〇〇商店',
+        representative: '七彩　太郎',
         text: '美味しいお肉を納入しております',
         delively: '三徳',
         postal_code: '〒597-0033',
@@ -75,8 +75,8 @@ class PartiController < ApplicationController
         fax: '072-427-5515'
       },
       {
-        shop_name: 'ミートショップ北出',
-        representative: '北出　稔',
+        shop_name: '〇〇商店',
+        representative: '七彩　太郎',
         text: '美味しいお肉を納入しております',
         delively: '三徳',
         postal_code: '〒597-0033',
@@ -381,7 +381,7 @@ class PartiController < ApplicationController
       inner_title: false,
       back: false,
       title: 'Photo Gallery',
-      img_source: 'eat-education__recipe',
+      img_source: 'eat-education/recipe',
       link: eat_education_parti_index_path,
       content_title: true,
       recipe: true,

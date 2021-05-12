@@ -1,5 +1,88 @@
 class NanairoController < ApplicationController
   before_action :items
+  before_action :recipe_items, only:[:support]
+  def support
+    @items = [
+      {
+        title: 'どんぐり',
+        title_en: 'DONGURI',
+        age: '0、1、2歳児（20組限定）',
+        date: '毎月第2・4木曜日　13時30分より',
+        span: '5月～2月末まで',
+        cost: '1回　200円',
+        local: 'パルティ道教寺',
+        request: 'パルティ道教寺にて随時受付中'
+      },
+      {
+        title: 'ピアルーム',
+        title_en: 'PIAROOM',
+        age: '0、1、2歳児（20組限定）',
+        date: '毎月第2・4木曜日　13時30分より',
+        span: '5月～2月末まで',
+        cost: '1回　200円',
+        local: 'ピアニィ道教寺',
+        request: 'ピアニィ道教寺にて随時受付中'
+      }
+    ]
+    @slider_items = {
+      inner_title: false,
+      back: false,
+      title: 'Photo Gallery',
+      img_source: 'eat-education/recipe',
+      link: recipe_nanairo_index_path,
+      content_title: true,
+      recipe: true,
+      items: @recipe_items
+    }
+  end
+  def recipe_items
+    @recipe_items = [
+      {
+        link: 'https://youtu.be/SFbAND6oWjc',
+        title: 'レバーの煮物'
+      },
+      {
+        link: 'https://youtu.be/IfQ30KeeS1w',
+        title: '麻婆ナス'
+      },
+      {
+        link: 'https://youtu.be/ItgTd7_fXKI',
+        title: 'さばのごま衣焼き'
+      },
+      {
+        link: 'https://youtu.be/XhHRZgPS5lc',
+        title: '豆乳みそ汁'
+      },
+      {
+        link: 'https://youtu.be/PSHt8ijbHNA',
+        title: 'あじの南蛮漬け'
+      },
+      {
+        link: 'https://youtu.be/xA9oVXr-4NI',
+        title: 'さつまいもサラダ'
+      },
+      {
+        link: 'https://youtu.be/u6n1rNpMmV4',
+        title: '和風パスタ'
+      },
+      {
+        link: 'https://youtu.be/cc-bQdG588o',
+        title: 'トマト肉じゃが'
+      },
+      {
+        link: 'https://youtu.be/2lfqaTH0wLU',
+        title: 'かぼちゃさらだ'
+      },
+      {
+        link: 'https://youtu.be/HT8L6gjlA1o',
+        title: '豚肉甘辛炒め'
+      },
+      {
+        link: 'https://youtu.be/r3XYoGFw69w',
+        title: '肉団子のコーン蒸し'
+      }
+    ]
+  end
   def contact
     @contact = Contact.new()
   end
@@ -101,11 +184,13 @@ class NanairoController < ApplicationController
       {title: '就職をお考えの方へ',link: recruit_nanairo_index_path},
       {title: 'パルティ道教寺',link: parti_index_path},
       {title: 'ピアニィ道教寺',link: piani_index_path},
+      {title: '子育て支援',link: support_nanairo_index_path},
       {title: 'お問い合わせ',link: contact_nanairo_index_path}
     ]
     @footer_item = {logo: 'logo'}
     @footer_lists = [
       {title: '七彩学舎',link: root_path},
+      {title: '法人概要',link: about_nanairo_index_path},
       {title: '法人概要',link: about_nanairo_index_path},
       {title: 'お問い合わせ',link: contact_nanairo_index_path},
       {title: '個人情報保護',link: privacy_nanairo_index_path},

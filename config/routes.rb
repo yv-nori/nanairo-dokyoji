@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       get 'privacy'
       post 'create'
       get 'recruit'
+      get 'support'
+      get 'recipe'
       post 'recruit_create'
     end
   end
@@ -30,6 +32,7 @@ Rails.application.routes.draw do
       get 'about'
       get 'features'
       get 'recruit'
+      get 'recipe'
       post 'recruit_create'
     end
   end
@@ -48,6 +51,7 @@ Rails.application.routes.draw do
       get 'about'
       get 'features'
       get 'recruit'
+      get 'recipe'
       post 'recruit_create'
     end
   end

@@ -52,7 +52,7 @@ class PianiController < ApplicationController
       back: false,
       title: 'Photo Gallery',
       img_source: 'eat-education/recipe',
-      link: eat_education_piani_index_path,
+      link: recipe_piani_index_path,
       content_title: true,
       recipe: true,
       items: @recipe_items
@@ -371,22 +371,24 @@ class PianiController < ApplicationController
     }
   end
   def support
-    @items = {
-      title: 'ピアルーム',
-      title_en: 'PIAROOM',
-      age: '0、1、2歳児（20組限定）',
-      date: '毎月第2・4木曜日　13時30分より',
-      span: '5月～2月末まで',
-      cost: '1回　200円',
-      local: 'ピアニィ道教寺',
-      request: 'ピアニィ道教寺にて随時受付中'
-    }
+    @items = [
+      {
+        title: 'ピアルーム',
+        title_en: 'PIAROOM',
+        age: '0、1、2歳児（20組限定）',
+        date: '毎月第2・4木曜日　13時30分より',
+        span: '5月～2月末まで',
+        cost: '1回　200円',
+        local: 'ピアニィ道教寺',
+        request: 'ピアニィ道教寺にて随時受付中'
+      }
+    ]
     @slider_items = {
       inner_title: false,
       back: false,
       title: 'Photo Gallery',
       img_source: 'eat-education__recipe',
-      link: eat_education_piani_index_path,
+      link: recipe_piani_index_path,
       content_title: true,
       items: @recipe_items
     }

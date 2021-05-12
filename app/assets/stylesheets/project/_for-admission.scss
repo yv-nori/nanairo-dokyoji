@@ -50,6 +50,7 @@
     transform: translate(-50%, -50%);
     position: absolute;
     border: $color-text 1px solid;
+    white-space: nowrap;
     &:before {
       content: '';
       position: absolute;

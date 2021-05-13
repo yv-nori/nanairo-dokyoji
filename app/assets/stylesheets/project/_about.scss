@@ -290,18 +290,14 @@
     position: absolute;
     top: 50%;
     height: 120%;
-    transform: translateY(-50%);
+    width: 10%;
     &.left {
-      left: -112%;
-      @include mq-up("tab") {
-        left: -100%;
-      }
+      left: 0;
+      transform: translate(-160%,-50%);
     }
     &.right {
-      right: -112%;
-      @include mq-up("tab") {
-        right: -100%;
-      }
+      right: 0;
+      transform: translate(160%,-50%);
     }
   }
   &__back-name {

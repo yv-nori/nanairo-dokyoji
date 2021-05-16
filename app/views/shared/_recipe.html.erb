@@ -1,0 +1,34 @@
+<section class="PageTitle" id="JS_smoothScroll_target-0">
+  <div id="JS_scroll-to-top_trigger-0" style="position:absolute;top:0;height:100vh;width:100vw;"></div>
+  <div class="L_pageTitle__headding half">
+    <div class="">
+      <p class="C_text__title-en">
+        Recipe
+      </p>
+      <h1 class="C_text__title-ja">
+        レシピ一覧
+      </h1>
+    </div>
+  </div>
+  <div class="P_recipe__wrap">
+    <ul class="P_recipe__index">
+      <% recipe.each_with_index do |recipe, i| %>
+        <li class="P_recipe__content-box">
+          <div class="P_recipe__img-circle">
+            <picture>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/eat-education/recipe_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/eat-education/recipe_<%= i %>_pc.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/eat-education/recipe_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/eat-education/recipe_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
+              <img src="https://dazq5oer2h0ku.cloudfront.net/images/eat-education/recipe_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/eat-education/recipe_<%= i %>_alt.jpg" alt="レシピのサムネイル<%= i + 1 %>" class="C_image lazyload"/>
+            </picture>
+            <%= link_to "", recipe[:link], target: :_blank, class:"U_link circle"%>
+          </div>
+          <div class="P_recipe__content-title">
+            <%= recipe[:title]%>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>
+<%= render 'shared/side-bar_noBack',{color: ''}%>

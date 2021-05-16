@@ -40,6 +40,24 @@
       padding-left: $space-side;
       padding-bottom: $space-section;
     }
+    &.half {
+      height: 23vh;
+      @include mq-up("sp_full") {
+        height: 17vh;
+      }
+      @include mq-up("tab") {
+        height: 28vh;
+      }
+      @include mq-up("tab_full") {
+        height: 21vh;
+      }
+      @include mq-up("pc") {
+        height: 39vh;
+      }
+      @include mq-up("pc_full") {
+        height: 28vh;
+      }
+    }
   }
   &__second {
     padding-top: $space-section / 2;

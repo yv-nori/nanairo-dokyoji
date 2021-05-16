@@ -10,7 +10,7 @@
     </picture>
   </div>
   <div class="P_eat-education__kv__text-box">
-    <h1 class="P_eat-education__kv__title pc-only"><%= name_items[:name_en_L] %></h1>
+    <h1 class="P_eat-education__kv__title pc-only"><%= name[:en_L] %></h1>
     <h2 class="P_eat-education__kv__sub-title pc-only">DOKYOJI</h2>
   </div>
   <h2 class="P_eat-education__kv__sub-text">
@@ -90,7 +90,7 @@
   <h1 class="P_eat-education__recipe__title-en">RECIPE</h1>
   <h2 class="P_eat-education__common__title-ja">給食レシピ</h2>
   <h3 class="P_eat-education__common__sub-title multiple">子どもの発達に応じた<br class="sp-only">給食レシピ動画を<br class="sp-only">Youtubeで紹介</h3>
-  <%= render partial: 'shared/img-slider', locals:{slider_items: slider_items}%>
+  <%= render partial: 'shared/img-slider', locals:{ slider: slider, name: name}%>
 </section>
 <div id="JS_smoothScroll_target-3"></div>
 <section class="P_eat-education__instagram">
@@ -116,7 +116,7 @@
         <p class="P_eat-education__instagram__img-text">
           Instagramで確認
         </p>
-        <%= link_to "", 'https://www.instagram.com/7c_' + name_items[:name_en], class:"U_link"%>
+        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link"%>
       </div>
       <div class="P_eat-education__instagram__img">
         <picture>
@@ -128,7 +128,7 @@
         <p class="P_eat-education__instagram__img-text">
           Instagramで確認
         </p>
-        <%= link_to "", 'https://www.instagram.com/7c_' + name_items[:name_en], class:"U_link"%>
+        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link"%>
       </div>
       <div class="P_eat-education__instagram__img">
         <picture>
@@ -140,7 +140,7 @@
         <p class="P_eat-education__instagram__img-text">
           Instagramで確認
         </p>
-        <%= link_to "", 'https://www.instagram.com/7c_' + name_items[:name_en], class:"U_link"%>
+        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link"%>
       </div>
       <div class="P_eat-education__instagram__img pc-only">
         <picture>
@@ -152,7 +152,7 @@
         <p class="P_eat-education__instagram__img-text">
           Instagramで確認
         </p>
-        <%= link_to "", 'https://www.instagram.com/7c_' + name_items[:name_en], class:"U_link"%>
+        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link"%>
       </div>
       <div class="P_eat-education__instagram__img pc-tab-only">
         <picture>
@@ -164,7 +164,7 @@
         <p class="P_eat-education__instagram__img-text">
           Instagramで確認
         </p>
-        <%= link_to "", 'https://www.instagram.com/7c_' + name_items[:name_en], class:"U_link"%>
+        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link"%>
       </div>
     </div>
   </div>
@@ -371,7 +371,7 @@
         <h3 class="P_eat-education__foodstuff__shop-name"><%= staff[:shop_name] %></h3>
         <div class="P_eat-education__foodstuff__container <%= "reverse" if i.odd? %>">
           <div class="P_eat-education__foodstuff__img">
-            <%# TODO 0 ⇨ i , parti ⇨ <%= name_items[:name_en] food-staff %>
+            <%# TODO 0 ⇨ i , parti ⇨ <%= name[:en] food-staff %>
             <picture>
               <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/eat-education/parti_food-staff_0_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
               <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/eat-education/parti_food-staff_0_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>

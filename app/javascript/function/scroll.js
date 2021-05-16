@@ -87,24 +87,6 @@ export const screenBottom = () => {
   let html = window.document.documentElement;
   return html.clientHeight
 }
-// scrollAction
-// export const scrollAction = (windowScrollTop, Items) => {
-//   let trigers_length = Items.$triggers.length;
-//   let result = scrollTrigger(windowScrollTop, Items.scrollPositions)
-//   for (let trigger = 0; trigger < trigers_length; trigger++) {
-//     if (result !== false) {
-//       let targets_length = Items.$targets[result].length;
-//       for (let i = 0; i < targets_length; i++) {
-//         $(Items.$targets[result][i]).addClass('isActive');
-//       }
-//     } else {
-//       let targets_length = Items.$targets[trigger].length;
-//       for (let i = 0; i < targets_length; i++) {
-//         $(Items.$targets[trigger][i]).removeClass('isActive');
-//       }
-//     }
-//   }
-// }
 export const scrollAction = (windowScrollTop, Items) => {
   let trigers_length = Items.$triggers.length;
   let result = scrollTrigger(windowScrollTop, Items.scrollPositions)
@@ -194,24 +176,6 @@ export const smoothScroll = (Items, speed = 500) => {
     });
   }
 };
-// 未toDown
-// export const toDown = (Items, speed = 500) => {
-//   let length = Items.targetOffset.length
-//   console.log(Items.targetOffset.length)
-
-//   const $trigger = _doc.getElementById('JS_toDown_trigger');
-//   $($trigger).on('click', () => {
-//     console.log(Items)
-//     Items.currentPosition++;
-//     $("html, body").animate({ scrollTop: Items.targetOffset[Items.currentPosition] }, speed, "swing");
-//     if (length === Items.currentPosition) {
-//       $(Items.$trigger).removeClass('isActive')
-//     } else {
-//       $(Items.$trigger).addClass('isActive')
-//     }
-//   });
-// };
-
 // --------------------------------
 // DOMの格納
 // --------------------------------

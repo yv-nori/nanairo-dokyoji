@@ -1,4 +1,4 @@
-<%= render partial: 'shared/header', locals:{header_items: @header_items, header_lists: @header_lists}%>
+<%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
 <section class="KeyVisual">
   <%#-- イメージコンテナー --%>
   <div id="JS_smoothScroll_target-0"></div>
@@ -307,5 +307,5 @@
     <path d="M0,0 v25 q10,10 20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 v-25 Z" fill="#F4F4F2"></path>
   </svg>
 </div>
-<%= render partial: 'shared/index', locals:{links: @links, slider_items: @slider_items, name_items: @name_items}%>
-<%= render partial: 'shared/footer', locals:{footer_item: @footer_item, footer_lists: @footer_lists, footer_texts: @footer_texts, side_bar: false }%>
+<%= render partial: 'shared/index', locals:{ slider: @slider, name: @name }%>
+<%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: false }%>

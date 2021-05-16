@@ -2,13 +2,13 @@
   <div class="L_header isMoveTop" id="JS_scroll-change_target-H0">
     <div class="L_header__inner">
       <h1 class="L_header__logo">
-        <div class="L_header__<%= header_items[:logo] %> isMoveTop" id="JS_scroll-change_target-H1"></div>
-        <%= link_to "", header_items[:logo_path], class:"U_link"%>
+        <div class="L_header__logo-image<%= name[:logo] %> isMoveTop" id="JS_scroll-change_target-H1"></div>
+        <%= link_to "", '/' + name[:en], class:"U_link"%>
       </h1>
       <%#-- メニューリストPC --%>
       <nav class="L_header__pc-nav">
         <ul class="L_header__pc-nav-items pc-only">
-          <% header_lists.each do |list| %>
+          <% header[:lists].each do |list| %>
             <li class="L_header__pc-nav-item">
               <%= link_to list[:title], list[:link], class: 'L_header__pc-nav-text' %>
             </li>
@@ -25,7 +25,7 @@
   <%#-- メニューリストSP --%>
   <nav class="L_header__tab-sp-nav">
     <ul class="L_header__tab-sp-nav-items isMoveTop" id="JS_menu-open_target">
-      <% header_lists.each do |list| %>
+      <% header[:lists].each do |list| %>
         <li class="L_header__tab-sp-nav-item">
           <%= link_to list[:title], list[:link], class: 'L_header__tab-sp-nav-text' %>
         </li>

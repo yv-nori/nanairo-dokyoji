@@ -125,6 +125,6 @@
   <h1 class="P_eat-education__recipe__title-en">RECIPE</h1>
   <h2 class="P_eat-education__common__title-ja">給食レシピ</h2>
   <h3 class="P_eat-education__common__sub-title multiple">子どもの発達に応じた<br class="sp-only">給食レシピ動画を<br class="sp-only">Youtubeで紹介</h3>
-  <%= render partial: 'shared/img-slider', locals:{slider_items: slider_items}%>
+  <%= render partial: 'shared/img-slider', locals:{ slider: slider, name: @name }%>
 </section>
 <%= render 'shared/side-bar_noBack',{color: ''}%>

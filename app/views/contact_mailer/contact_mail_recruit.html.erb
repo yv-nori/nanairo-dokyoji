@@ -1,0 +1,15 @@
+<p>求人のお問い合わせがありました。</p>
+
+<p>お名前：<%= @contact.name %></p>
+<p>お名前(読み)：<%= @contact.name_kana %></p>
+<p>email：<%= @contact.email %></p>
+<p>連絡先：<%= @contact.tel %></p>
+
+<p>ご住所</p>
+<p>　<%= @contact.postal_code %></p>
+<p>　<%= @contact.address %></p>
+
+<p>お問い合わせ内容</p>
+<p>　<%= @contact.question %></p>
+
+<p><%= @form_name %>より送信</p>

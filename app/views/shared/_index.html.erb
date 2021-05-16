@@ -5,10 +5,10 @@
       <div id="JS_scroll-action-5_trigger">
         <div class="C_index__contents__img-box" id="JS_scroll-action-5_target-0">
           <picture>
-            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name_items[:name_en]%>_banner_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name_items[:name_en]%>_banner_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name_items[:name_en]%>_banner_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name_items[:name_en]%>_banner_sp2.webp 2x" type="image/webp" class="C_image"/>
-            <img src="https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name_items[:name_en]%>_banner_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name_items[:name_en]%>_banner_alt.jpg" alt="概要 バナー画像" class="C_image lazyload"/>
+            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name[:en]%>_banner_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name[:en]%>_banner_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name[:en]%>_banner_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name[:en]%>_banner_sp2.webp 2x" type="image/webp" class="C_image"/>
+            <img src="https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name[:en]%>_banner_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/about/<%= name[:en]%>_banner_alt.jpg" alt="概要 バナー画像" class="C_image lazyload"/>
           </picture>
           <h1 class="C_index__contents__title-en">ABOUT</h1>
           <svg class="C_index__contents__deco-line" x="0px" y="0px" width="100%" height="100%">
@@ -17,12 +17,12 @@
           <div class="C_index__contents__title-box">
             <h1 class="C_index__contents__title-ja">当園について</h1>
           </div>
-          <%= link_to "", links[:about], class:"U_link"%>
+          <%= link_to "",'/' + name[:en] + '/about', class:"U_link"%>
         </div>
       </div>
       <div class="C_index__contents__text-box">
         <p class="C_index__contents__text">
-          園<span class="C_text__braces">名</span>「<%= name_items[:name_ja] %><span class="C_text__braces">」</span>に込められた思い
+          園<span class="C_text__braces">名</span>「<%= name[:ja] %><span class="C_text__braces">」</span>に込められた思い
         </p>
       </div>
     </li>
@@ -31,10 +31,10 @@
       <div id="JS_scroll-action-6_trigger">
         <div class="C_index__contents__img-box" id="JS_scroll-action-6_target-0">
           <picture>
-            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en]%>_banner_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en]%>_banner_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en]%>_banner_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en]%>_banner_sp2.webp 2x" type="image/webp" class="C_image"/>
-            <img src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en]%>_banner_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en]%>_banner_alt.jpg" alt="年間行事 バナー画像" class="C_image lazyload"/>
+            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en]%>_banner_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en]%>_banner_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+            <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en]%>_banner_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en]%>_banner_sp2.webp 2x" type="image/webp" class="C_image"/>
+            <img src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en]%>_banner_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en]%>_banner_alt.jpg" alt="年間行事 バナー画像" class="C_image lazyload"/>
           </picture>
           <h1 class="C_index__contents__title-en">EVENT</h1>
           <svg class="C_index__contents__deco-line" x="0px" y="0px" width="100%" height="100%">
@@ -43,7 +43,7 @@
           <div class="C_index__contents__title-box">
             <h1 class="C_index__contents__title-ja">年間行事</h1>
           </div>
-          <%= link_to "", links[:event], class:"U_link"%>
+          <%= link_to "",'/' + name[:en] + '/event', class:"U_link"%>
         </div>
       </div>
       <div class="C_index__contents__text-box">
@@ -70,7 +70,7 @@
           <div class="C_index__contents__title-box">
             <h1 class="C_index__contents__title-ja">食育</h1>
           </div>
-          <%= link_to "", links[:eat_education], class:"U_link"%>
+          <%= link_to "",'/' + name[:en] + '/eat-education', class:"U_link"%>
         </div>
       </div>
       <div class="C_index__contents__text-box">
@@ -96,7 +96,7 @@
           <div class="C_index__contents__title-box">
           <h1 class="C_index__contents__title-ja">理念</h1>
           </div>
-          <%= link_to "", links[:vision], class:"U_link"%>
+          <%= link_to "",'/' + name[:en] + '/vision', class:"U_link"%>
         </div>
       </div>
       <div class="C_index__contents__text-box">
@@ -113,7 +113,7 @@
   </svg>
 </div>
 <section class="photoGallery" id="JS_scroll-to-top_trigger-1">
-  <%= render partial: 'shared/img-slider', locals:{slider_items: slider_items}%>
+  <%= render partial: 'shared/img-slider', locals:{ slider: slider, name: name}%>
 </section>
 <div class="C_index__section__wrap">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 50" preserveAspectRatio="none" class="C_index__section__wave">
@@ -134,7 +134,7 @@
             </svg>
           </div>
           <div class="C_index__nav__read">READ MORE</div>
-          <%= link_to "",  links[:belong], class:"U_link"%>
+          <%= link_to "",'/' + name[:en] + '/belong', class:"U_link"%>
         </div>
         <div class="C_index__nav__img-box">
           <div class="C_index__nav__trim-img">
@@ -165,7 +165,7 @@
             </svg>
           </div>
           <div class="C_index__nav__read">READ MORE</div>
-          <%= link_to "", links[:admission], class:"U_link"%>
+          <%= link_to "",'/' + name[:en] + '/admission', class:"U_link"%>
         </div>
         <div class="C_index__nav__img-box admission">
           <div class="C_index__nav__trim-img">
@@ -188,21 +188,21 @@
         <div id="JS_scroll-action-11_trigger" style="height:100%;">
           <div class="C_index__nav__under-title-en">ACCESS</div>
           <div class="C_index__nav__under-title-ja">アクセス</div>
-          <%= link_to "", links[:access], class:"U_link"%>
+          <%= link_to "",'/' + name[:en] + '/about#access', class:"U_link"%>
         </div>
       </div>
       <div class="C_index__nav__map-title-box" id="JS_scroll-action-12_target-0">
         <div id="JS_scroll-action-12_trigger" style="height:100%;">
           <div class="C_index__nav__under-title-en">MAP</div>
           <div class="C_index__nav__under-title-ja">マップ</div>
-          <%= link_to "", links[:map], class:"U_link"%>
+          <%= link_to "",'/' + name[:en] + '/about#map', class:"U_link"%>
         </div>
       </div>
       <div class="C_index__nav__info-title-box" id="JS_scroll-action-13_target-0">
         <div id="JS_scroll-action-13_trigger" style="height:100%;">
           <div class="C_index__nav__under-title-en">INFOMATION</div>
           <div class="C_index__nav__under-title-ja">インフォメーション</div>
-          <%= link_to "", links[:info], class:"U_link"%>
+          <%= link_to "",'/' + name[:en] + '/about', class:"U_link"%>
         </div>
       </div>
     </div>
@@ -230,7 +230,7 @@
           <polyline class="C_index__recruit__deco-line-read-1" points="200,50 200,1 1,1 1,60" fill="transparent" id="JS_scroll-action-14_target-0"/>
           <polyline class="C_index__recruit__deco-line-read-2" points="1,60 220,60 220,55 230,60 220,65 220,60" fill="transparent" id="JS_scroll-action-14_target-1"/>
         </svg>
-        <%= link_to "", links[:recruit], class:"U_link"%>
+        <%= link_to "",'/' + name[:en] + '/recruit', class:"U_link"%>
       </div>
       <div class="C_index__recruit__text pc-only">
         子ども達を中心として<br>
@@ -278,7 +278,7 @@
               <img src="https://dazq5oer2h0ku.cloudfront.net/images/support/banner_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/support/banner_alt.jpg" alt="子育て支援 バナー画像" class="C_image lazyload"/>
             </picture>
             <div class="C_index__others__title-ja">子育て支援</div>
-            <%= link_to "", links[:support], class:"U_link"%>
+            <%= link_to "",'/' + name[:en] + '/support', class:"U_link"%>
           </div>
         </div>
       </div>
@@ -289,13 +289,13 @@
         <div class="C_index__others__img-frame">
           <div class="C_index__others__img-box" id="JS_scroll-action-16_target-0">
             <picture>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name_items[:name_en]%>_banner_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name_items[:name_en]%>_banner_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name_items[:name_en]%>_banner_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name_items[:name_en]%>_banner_sp2.webp 2x" type="image/webp" class="C_image"/>
-              <img src="https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name_items[:name_en]%>_banner_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name_items[:name_en]%>_banner_alt.jpg" alt="入園にむけて バナー画像" class="C_image lazyload"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name[:en]%>_banner_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name[:en]%>_banner_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name[:en]%>_banner_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name[:en]%>_banner_sp2.webp 2x" type="image/webp" class="C_image"/>
+              <img src="https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name[:en]%>_banner_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/for-admission/<%= name[:en]%>_banner_alt.jpg" alt="入園にむけて バナー画像" class="C_image lazyload"/>
             </picture>
             <div class="C_index__others__title-ja">入園に向けて</div>
-            <%= link_to "", links[:for_admission], class:"U_link"%>
+            <%= link_to "",'/' + name[:en] + '/for-admission', class:"U_link"%>
           </div>
         </div>
       </div>

@@ -4,6 +4,9 @@
   letter-spacing: 0.18em;
   font-family: 'Forum-Regular', sans-serif;
   padding-left: 5px;
+  @include mq-up("sp_full") {
+    font-size: $font-size-base * 1.875;
+  }
   @include mq-up("tab") {
     font-size: $font-size-base * 1.6;
     font-weight: 500;
@@ -19,6 +22,9 @@
   font-weight: 400;
   letter-spacing: -0.12em;
   font-family: 'Hannari', sans-serif;
+  @include mq-up("sp_full") {
+    font-size: $font-size-base * 3.25;
+  }
   @include mq-up("tab") {
     font-size: $font-size-base * 3.4375;
     line-height: 120%;

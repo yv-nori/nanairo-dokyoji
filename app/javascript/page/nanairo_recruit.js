@@ -2,7 +2,7 @@
 // 関数の読み込み
 // --------------------------------
 import {
-  scrollChange, resetPositions, toTopItems, scrollToTop, smoothItems, smoothScroll, headerStatusWhite, scrollToTopHide
+  scrollChange, resetPositions, toTopItems, scrollToTop, smoothItems, smoothScroll, scrollToTopHide
 } from "../function/scroll"
 import {
   headerItems, menuOpen
@@ -14,8 +14,6 @@ import {
   accordion, accordionItems
 } from "../function/accordion";
 import {
-  deleteCanvas,
-  rainChangeHeight,
   raindropsBlue, raindropsBlueDarken
 } from "../function/raindrops_items";
 import {
@@ -24,6 +22,7 @@ import {
 import {
   wrightShabon
 } from "../function/shabon"
+
 // --------------------------------
 // メイン処理
 // --------------------------------

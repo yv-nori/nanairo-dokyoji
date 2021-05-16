@@ -1,5 +1,5 @@
 <div class="C_img-slider__wrap">
-  <% if slider_items[:back] then %>
+  <% if slider[:options][:back] then %>
     <svg class="pc-only" width="100%" height="100%" viewBox="0 0 1500 700" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
       <g transform="matrix(1.28112,0,0,1.27168,99.9272,-13.5684)">
         <path d="M-123.273,482.486C-78.046,413.042 -27.143,342.926 37.823,290.466C145.174,203.78 287.13,163.849 423.524,161.249C438.355,160.966 453.197,161.235 468.02,161.769C522.456,163.733 580.32,172.459 628.892,198.515C671.824,221.544 705.664,258.748 714.193,307.855C717.432,326.5 717.922,341.314 716.032,360.14C707.937,440.816 620.305,481.59 547.093,473.583C493.436,467.715 446.702,435.466 423.445,386.255C416.369,371.283 410.63,353.922 410.711,337.069C410.888,300.651 421.081,266.151 438.805,234.408C476.496,166.905 549.689,134.516 620.812,113.065C714.295,84.87 815.758,79.418 911.216,101.04C952.829,110.466 991.569,127.917 1030.3,145.431C1070.05,163.408 1107.8,186.253 1141.25,214.337" style="fill:none;stroke:white;stroke-width:117.52px;"/>
@@ -16,10 +16,10 @@
       </g>
     </svg>
   <% end %>
-  <% if slider_items[:inner_title] then %>
-    <h1 class="C_img-slider__title"><%= slider_items[:title] %></h1>
+  <% if slider[:options][:inner_title] then %>
+    <h1 class="C_img-slider__title"><%= slider[:options][:title] %></h1>
   <% end %>
-  <% if slider_items[:back] then %>
+  <% if slider[:options][:back] then %>
     <div class="C_img-slider__deco-container pc-tab-only">
       <div class="C_img-slider__deco-box left"></div>
       <div class="C_img-slider__deco-box-text left">PLAY</div>
@@ -27,19 +27,23 @@
       <div class="C_img-slider__deco-box-text right">LEARN</div>
     </div>
   <% end %>
-  <div class="C_img-slider__img-slider <%= "content_title" if slider_items[:content_title] %>">
+  <div class="C_img-slider__img-slider <%= "content_title" if slider[:options][:content_title] %>">
     <ul class="C_img-slider__slide-group">
-      <% slider_items[:items].each_with_index do |item, i|%>
-        <% if slider_items[:content_title] then %>
+      <% slider[:items].each_with_index do |item, i|%>
+        <% if slider[:options][:content_title] then %>
           <li class="C_img-slider__content-box">
             <div class="C_img-slider__img-circle">
               <picture>
-                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
-                <img src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_alt.jpg" alt="<%= slider_items[:title] %> <%= i + 1%>" class="C_image lazyload"/>
+                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
+                <img src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_alt.jpg" alt="<%= slider[:options][:title] %> <%= i + 1%>" class="C_image lazyload"/>
               </picture>
-              <%= link_to "", item[:link], class:"U_link circle"%>
+              <% if slider[:options][:blank] then %>
+                <%= link_to "", item[:link], target: :_blank, class:"U_link circle"%>
+              <% else %>
+                <%= link_to "", item[:link], class:"U_link circle"%>
+              <% end %>
             </div>
             <div class="C_img-slider__content-title">
               <%= item[:title]%>
@@ -48,28 +52,36 @@
         <% else %>
           <li class="C_img-slider__img-circle">
             <picture>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
-              <img src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_alt.jpg" alt="<%= slider_items[:title] %> <%= i + 1%>" class="C_image lazyload"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
+              <img src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_alt.jpg" alt="<%= slider[:options][:title] %> <%= i + 1%>" class="C_image lazyload"/>
             </picture>
-            <%= link_to "", item[:link], class:"U_link circle"%>
+            <% if slider[:options][:blank] then %>
+              <%= link_to "", item[:link], target: :_blank, class:"U_link circle"%>
+            <% else %>
+              <%= link_to "", item[:link], class:"U_link circle"%>
+            <% end %>
           </li>
         <% end %>
       <% end %>
     </ul>
     <ul class="C_img-slider__slide-group">
-      <% slider_items[:items].each_with_index do |item, i|%>
-        <% if slider_items[:content_title] then %>
+      <% slider[:items].each_with_index do |item, i|%>
+        <% if slider[:options][:content_title] then %>
           <li class="C_img-slider__content-box">
             <div class="C_img-slider__img-circle">
               <picture>
-                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
-                <img src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_alt.jpg" alt="<%= slider_items[:title] %> <%= i + 1%>" class="C_image lazyload"/>
+                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
+                <img src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_alt.jpg" alt="<%= slider[:options][:title] %> <%= i + 1%>" class="C_image lazyload"/>
               </picture>
-              <%= link_to "", item[:link], class:"U_link circle"%>
+              <% if slider[:options][:blank] then %>
+                <%= link_to "", item[:link], target: :_blank, class:"U_link circle"%>
+              <% else %>
+                <%= link_to "", item[:link], class:"U_link circle"%>
+              <% end %>
             </div>
             <div class="C_img-slider__content-title">
               <%= item[:title]%>
@@ -78,12 +90,16 @@
         <% else %>
           <li class="C_img-slider__img-circle">
             <picture>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
-              <img src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider_items[:img_source] %>_<%= i %>_alt.jpg" alt="<%= slider_items[:title] %> <%= i + 1%>" class="C_image lazyload"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
+              <img src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/<%= slider[:options][:img_source] %>_<%= i %>_alt.jpg" alt="<%= slider[:options][:title] %> <%= i + 1%>" class="C_image lazyload"/>
             </picture>
-            <%= link_to "", item[:link], class:"U_link circle"%>
+            <% if slider[:options][:blank] then %>
+              <%= link_to "", item[:link], target: :_blank, class:"U_link circle"%>
+            <% else %>
+              <%= link_to "", item[:link], class:"U_link circle"%>
+            <% end %>
           </li>
         <% end %>
       <% end %>
@@ -91,6 +107,6 @@
   </div>
   <div class="C_img-slider__btn">
     <div class="C_img-slider__btn-text">VIEW MORE</div>
-    <%= link_to "", slider_items[:link], class:"U_link"%>
+    <%= link_to "", '/' + name[:en] + slider[:options][:link], class:"U_link"%>
   </div>
 </div>

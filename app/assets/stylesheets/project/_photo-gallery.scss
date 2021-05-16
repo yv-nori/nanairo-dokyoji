@@ -1210,8 +1210,10 @@
     width: 26vw;
     position: absolute;
     height: 18vh;
-    right: 0.5%;
+    right: 0.7%;
     bottom: -23.5%;
+    border: none;
+    border-radius: 5px;
     @include mq-up("tab") {
       height: 26vh;
       min-height: 266px;

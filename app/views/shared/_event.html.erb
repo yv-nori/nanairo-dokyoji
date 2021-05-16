@@ -14,10 +14,10 @@
   </div>
   <div class="P_event__kv">
     <picture>
-      <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_kv_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image<%='__para_pc' if name_items[:name_en] === 'piani'%>"/>
-      <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_kv_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image<%='__para_pc' if name_items[:name_en] === 'piani'%>"/>
-      <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_kv_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_kv_sp2.webp 2x" type="image/webp" class="C_image<%='__para_pc' if name_items[:name_en] === 'piani'%>"/>
-      <img src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_kv_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_kv_alt.jpg" alt="年間行事 トップ画像" class="C_image<%='__para_pc' if name_items[:name_en] === 'piani'%> lazyload"/>
+      <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_kv_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image<%='__para_pc' if name[:en] === 'piani'%>"/>
+      <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_kv_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image<%='__para_pc' if name[:en] === 'piani'%>"/>
+      <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_kv_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_kv_sp2.webp 2x" type="image/webp" class="C_image<%='__para_pc' if name[:en] === 'piani'%>"/>
+      <img src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_kv_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_kv_alt.jpg" alt="年間行事 トップ画像" class="C_image<%='__para_pc' if name[:en] === 'piani'%> lazyload"/>
     </picture>
   </div>
 </section>
@@ -27,59 +27,59 @@
   <li class="P_event__season-list autumn" id="JS_smoothScroll_trigger-3">秋</li>
   <li class="P_event__season-list winter" id="JS_smoothScroll_trigger-4">冬</li>
 </ul>
-<div class="P_event__back-color <%= name_items[:name_en] %>">
-  <% season.each_with_index do |season, i| %>
-    <section class="P_event__wrap <%= season[:season_title_en] %>" id="JS_smoothScroll_target-<%= i + 1 %>">
-      <div class="P_event__season-text-ja <%= season[:season_title_en] %> <%= "top" if i === 0 %>"><%= season[:season_title_ja] %></div>
-      <div class="P_event__season-text-en <%= season[:season_title_en] %>"><%= season[:season_title_en] %></div>
+<div class="P_event__back-color <%= name[:en] %>">
+  <% items.each_with_index do |item, i| %>
+    <section class="P_event__wrap <%= item[:season_title_en] %>" id="JS_smoothScroll_target-<%= i + 1 %>">
+      <div class="P_event__season-text-ja <%= item[:season_title_en] %> <%= "top" if i === 0 %>"><%= item[:season_title_ja] %></div>
+      <div class="P_event__season-text-en <%= item[:season_title_en] %>"><%= item[:season_title_en] %></div>
       <div class="P_event__contents-wrap">
-        <div class="P_event__deco-line-trim <%= season[:season_title_en] %>">
+        <div class="P_event__deco-line-trim <%= item[:season_title_en] %>">
           <svg class="P_event__deco-line-canvas tab-sp-only" x="0px" y="0px" width="100%" height="8010" viewBox="0, 0, 255, 8010">
             <defs>
-              <pattern id="waveLine-<%= season[:season_title_en] %>" x="0" y="0" width="100%" height="10%">
-                <path class="P_event__deco-line-ver <%= season[:season_title_en] %>" fill="none" d="M 100 1 C 0 131, 0 271, 100 401 S 200 671, 100 801"/>
+              <pattern id="waveLine-<%= item[:season_title_en] %>" x="0" y="0" width="100%" height="10%">
+                <path class="P_event__deco-line-ver <%= item[:season_title_en] %>" fill="none" d="M 100 1 C 0 131, 0 271, 100 401 S 200 671, 100 801"/>
               </pattern>
             </defs>
-            <rect fill="url(#waveLine-<%= season[:season_title_en] %>)" x="0" y="0" width="100%" height="100%"/>
+            <rect fill="url(#waveLine-<%= item[:season_title_en] %>)" x="0" y="0" width="100%" height="100%"/>
           </svg>
           <svg class="P_event__deco-line-canvas pc-only" x="0px" y="0px" width="100%" height="9410" viewBox="0, 0, 255, 9410">
             <defs>
-              <pattern id="waveLine-<%= season[:season_title_en] %>_pc" x="0" y="0" width="100%" height="10%">
-                <path class="P_event__deco-line-ver <%= season[:season_title_en] %>" fill="none" d="M 100 1 C 0 131, 0 341, 100 471 S 200 811, 100 941"/>
+              <pattern id="waveLine-<%= item[:season_title_en] %>_pc" x="0" y="0" width="100%" height="10%">
+                <path class="P_event__deco-line-ver <%= item[:season_title_en] %>" fill="none" d="M 100 1 C 0 131, 0 341, 100 471 S 200 811, 100 941"/>
               </pattern>
             </defs>
-            <rect fill="url(#waveLine-<%= season[:season_title_en] %>_pc)" x="0" y="0" width="100%" height="100%"/>
+            <rect fill="url(#waveLine-<%= item[:season_title_en] %>_pc)" x="0" y="0" width="100%" height="100%"/>
           </svg>
         </div>
-        <% season[:season_items].each_with_index do |season_items, j| %>
-          <div class="P_event__container <%= j.odd? ? 'right': 'left' %> photo2-<%= season_items[:photo2] %>">
-            <div class="P_event__img-box <%= j.odd? ? 'right': 'left' %> photo2-<%= season_items[:photo2] %>">
+        <% item[:season_items].each_with_index do |season_item, j| %>
+          <div class="P_event__container <%= j.odd? ? 'right': 'left' %> photo2-<%= season_item[:photo2] %>">
+            <div class="P_event__img-box <%= j.odd? ? 'right': 'left' %> photo2-<%= season_item[:photo2] %>">
               <picture>
-                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>_sp2.webp 2x" type="image/webp" class="C_image"/>
-                <img src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>_alt.jpg" alt="年間行事 <%= season[:season_title_ja] %><%= j + 1 %>" class="C_image lazyload"/>
+                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+                <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>_sp2.webp 2x" type="image/webp" class="C_image"/>
+                <img src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>_alt.jpg" alt="年間行事 <%= item[:season_title_ja] %><%= j + 1 %>" class="C_image lazyload"/>
               </picture>
-              <div class="P_event__month <%= season[:season_title_en] %> <%= j.odd? ? 'right': 'left' %>"><%= season_items[:month] %><span class="P_event__month_S">月</span></div>
-              <div class="P_event__title-ja <%= j.odd? ? 'right': 'left' %>"><%= season_items[:title] %></div>
+              <div class="P_event__month <%= item[:season_title_en] %> <%= j.odd? ? 'right': 'left' %>"><%= season_item[:month] %><span class="P_event__month_S">月</span></div>
+              <div class="P_event__title-ja <%= j.odd? ? 'right': 'left' %>"><%= season_item[:title] %></div>
             </div>
-            <% if !(season_items[:photo2] == '') %>
-              <div class="P_event__img-sub <%= season_items[:photo2] %> <%= j.odd? ? 'right': 'left' %>">
+            <% if !(season_item[:photo2] == '') %>
+              <div class="P_event__img-sub <%= season_item[:photo2] %> <%= j.odd? ? 'right': 'left' %>">
                 <div class="P_event__trim-img">
                   <picture>
-                    <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>-S_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-                    <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>-S_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-                    <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>-S_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>-S_sp2.webp 2x" type="image/webp" class="C_image"/>
-                    <img src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>-S_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name_items[:name_en] %>_<%= season[:season_title_en] %>_<%= j %>-S_alt.jpg" alt="年間行事 <%= season[:season_title_ja] %><%= j + 1 %> サブ画像" class="C_image lazyload"/>
+                    <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>-S_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+                    <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>-S_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+                    <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>-S_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>-S_sp2.webp 2x" type="image/webp" class="C_image"/>
+                    <img src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>-S_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/event/<%= name[:en] %>_<%= item[:season_title_en] %>_<%= j %>-S_alt.jpg" alt="年間行事 <%= item[:season_title_ja] %><%= j + 1 %> サブ画像" class="C_image lazyload"/>
                   </picture>
                 </div>
-                <div class="P_event__deco-top-left <%= season_items[:photo2] %>"></div>
-                <div class="P_event__deco-top-right <%= season_items[:photo2] %>"></div>
-                <div class="P_event__deco-bottom-left <%= season_items[:photo2] %>"></div>
-                <div class="P_event__deco-bottom-right <%= season_items[:photo2] %>"></div>
-                <% season_items[:deco].each do |deco| %>
-                  <div class="P_event__deco-<%= season[:season_title_en] %>-<%= deco %>">
-                    <div class="C_deco__event__<%= season[:season_title_en] %>-<%= deco %> lazye"></div>
+                <div class="P_event__deco-top-left <%= season_item[:photo2] %>"></div>
+                <div class="P_event__deco-top-right <%= season_item[:photo2] %>"></div>
+                <div class="P_event__deco-bottom-left <%= season_item[:photo2] %>"></div>
+                <div class="P_event__deco-bottom-right <%= season_item[:photo2] %>"></div>
+                <% season_item[:deco].each do |deco| %>
+                  <div class="P_event__deco-<%= item[:season_title_en] %>-<%= deco %>">
+                    <div class="C_deco__event__<%= item[:season_title_en] %>-<%= deco %> lazye"></div>
                   </div>
                 <% end %>
               </div>
@@ -90,4 +90,4 @@
     </section>
   <% end %>
 </div>
-<%= render 'shared/side-bar_noBack',{color: ''}%>
+<%= render 'shared/side-bar_noBack',{ color: ''}%>

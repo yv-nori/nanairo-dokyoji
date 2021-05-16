@@ -221,7 +221,6 @@
     height: 80px;
   }
   &__img {
-    
     cursor: pointer;
     width: 100%;
     position: relative;
@@ -233,7 +232,7 @@
     @include mq-up("pc") {
       height: 40vh;
     }
-    &:hover:before {
+    &:hover::before {
       opacity: 0.3;
     }
     &:hover &-click-text {
@@ -253,6 +252,7 @@
       background-color: #000;
       opacity: 0;
       transition: .3s;
+      z-index: 1;
     }
   }
   &__img-click-line {
@@ -265,6 +265,8 @@
     opacity: 0;
     transition: .3s;
     transform-origin: left center;
+    z-index: 2;
+    pointer-events: none;
     &::before {
       content: '';
       position: absolute;
@@ -285,6 +287,8 @@
     transform: translate(-50%, -50%);
     color: #fff;
     transition: .3s;
+    pointer-events: none;
+    z-index: 3;
   }
   &__content-triangle {
     height: 65px;

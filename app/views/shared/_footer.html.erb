@@ -4,12 +4,12 @@
       <div class="C_box__side-bar pc-tab-only <%= 'A_isNone' if side_bar === false %>"></div>
       <h1 class="L_footer__logo">
         <div class="L_footer__logo-box">
-          <div class="C_image__<%= footer_item[:logo] %>"></div>
+          <div class="C_image__logo<%= name[:logo] %>"></div>
         </div>
       </h1>
       <nav class="L_footer__nav-inner">
         <ul class="L_footer__list">
-          <% footer_lists.each do |list| %>
+          <% footer[:lists].each do |list| %>
             <li class="L_footer__list-item">
               <%= link_to list[:title], list[:link], class: 'L_footer__list-link' %>
             </li>
@@ -18,9 +18,9 @@
       </nav>
       <div class="L_footer__bottom" >
         <p class="L_footer__text">
-          <%= footer_texts[:address] %><br class="tab-sp-only">
+          <%= footer[:address] %><br class="tab-sp-only">
           <span class="pc-only">　</span>
-          <%= footer_texts[:tel] %>
+          <%= footer[:tel] %>
         </p>
         <p class="L_footer__text">
           <small>Copyright © Nanairo Gakusya<br class="tab-sp-only">

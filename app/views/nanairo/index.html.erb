@@ -1,4 +1,4 @@
-<%= render partial: 'shared/header', locals:{header_items: @header_items, header_lists: @header_lists}%>
+<%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
 <section class="KeyVisual">
   <div class="P_Nanairo-kv" id="JS_smoothScroll_target-0">
     <div class="L_kv" id="JS_scroll-to-top_trigger-0">
@@ -164,4 +164,4 @@
   </section>
 </div>
 <%= render partial: 'shared/side-bar',locals:{color: ''}%>
-<%= render partial: 'shared/footer', locals:{footer_item: @footer_item, footer_lists: @footer_lists, footer_texts: @footer_texts, side_bar: true }%>
+<%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: true }%>

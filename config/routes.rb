@@ -1,58 +1,66 @@
 Rails.application.routes.draw do
   root to: "nanairo#index"
-  resources :contact_recruits, only: [:index, :create, :new]
   resources :nanairo do
     collection do
       get 'about'
       get 'admission'
       get 'contact'
       post 'contact_create'
-      get 'vision'
       get 'policy'
       get 'privacy'
-      post 'create'
-      get 'recruit'
-      get 'support'
       get 'recipe'
+      get 'recruit'
       post 'recruit_create'
+      get 'support'
+      get 'vision'
+
+      post 'create'
     end
   end
   resources :piani do
     collection do
-      get 'index'
-      get 'vision'
-      get 'event'
-      get 'photo-gallery'
-      get 'belong'
-      get 'eat-education'
-      get 'admission'
-      get 'one-day'
-      get 'for-admission'
-      get 'support'
       get 'about'
+      get 'admission'
+      get 'belong'
+      get 'contact'
+      post 'contact_create'
+      get 'eat-education'
+      get 'event'
       get 'features'
-      get 'recruit'
+      get 'for-admission'
+      get 'index'
+      get 'one-day'
+      get 'photo-gallery'
+      get 'policy'
+      get 'privacy'
       get 'recipe'
+      get 'recruit'
       post 'recruit_create'
+      get 'support'
+      get 'vision'
     end
   end
   resources :parti do
     collection do
-      get 'index'
-      get 'vision'
-      get 'event'
-      get 'photo-gallery'
-      get 'belong'
-      get 'eat-education'
-      get 'admission'
-      get 'one-day'
-      get 'for-admission'
-      get 'support'
       get 'about'
+      get 'admission'
+      get 'belong'
+      get 'contact'
+      post 'contact_create'
+      get 'eat-education'
+      get 'event'
       get 'features'
-      get 'recruit'
+      get 'for-admission'
+      get 'index'
+      get 'one-day'
+      get 'photo-gallery'
+      get 'policy'
+      get 'privacy'
       get 'recipe'
+      get 'recruit'
       post 'recruit_create'
+      get 'support'
+      get 'vision'
     end
   end
 end

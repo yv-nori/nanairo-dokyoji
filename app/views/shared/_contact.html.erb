@@ -26,49 +26,10 @@
 </section>
 <div class="L_back-para">
   <div class="C_box__side-bar-inner pc-tab-only"></div>
-  <%
-  form_items = [
-    title: 'CONTACT',
-    url: contact_create_nanairo_index_path,
-    forms: @contact,
-    items: [{
-      title: 'お名前',
-      mandatory: true,
-      key: :name,
-      id: 'name',
-      maxlength: '30',
-      placeholder: '例) 七彩　花子',
-      error_message: @contact.errors.full_messages_for(:name)},
-    {
-      title: 'メールアドレス',
-      mandatory: true,
-      key: :email,
-      id: 'email',
-      email_field: true,
-      placeholder: '例) example@dokyoji.or.jp',
-      error_message: @contact.errors.full_messages_for(:email)},
-    {
-      title: 'メールアドレス確認',
-      mandatory: true,
-      key: :email_confirmation,
-      id: 'email_cofirmation',
-      email_field: true,
-      placeholder: '例) example@dokyoji.or.jp',
-      error_message: @contact.errors.full_messages_for(:email_confirmation)},
-    {
-      title: 'お問い合わせ内容',
-      key: :question,
-      id: 'question',
-      text_area: true,
-      maxlength: '1000',
-      rows: '4',
-      error_message: @contact.errors.full_messages_for(:question)
-    }]]
-  %>
-  <section class="Contact">
+  <section class="Contact" id="return">
     <div class="L_wrap__600">
       <%=render partial:'shared/form', collection: form_items ,as:'form_items' %>
     </div>
   </section>
 </div>
-<%= render 'shared/side-bar',{color: ''}%>
+<%= render 'shared/side-bar',{ color: '' }%>

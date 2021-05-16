@@ -17,14 +17,14 @@
     <div class="P_one-day__js-wrap">
       <div class="P_one-day__content-wrap pc-only">
         <div class="P_one-day__container left">
-          <% items.each_with_index do |items, i| %>
+          <% items.each_with_index do |item, i| %>
             <% if i.even? then %>
               <div class="P_one-day__img <%= 'first' if i === 0 %>">
                 <picture>
-                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
-                  <img src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_alt.jpg" alt="一日の流れ<%= i + 1 %>" class="C_image lazyload"/>
+                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
+                  <img src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_alt.jpg" alt="一日の流れ<%= i + 1 %>" class="C_image lazyload"/>
                 </picture>
                 <% if i > 0 then %>
                   <div class="P_one-day__deco deco<%= i %>">
@@ -36,22 +36,22 @@
                 <% end %>
                 <div class="P_one-day__text-box">
                   <div class="P_one-day__time">
-                    <%= items[:time] %>
+                    <%= item[:time] %>
                   </div>
                   <div class="P_one-day__title">
-                    <%= items[:title] %>
+                    <%= item[:title] %>
                   </div>
-                  <% if items[:class] === 'infant' then %>
-                    <div class="P_one-day__class <%= items[:class] %>">
+                  <% if item[:class] === 'infant' then %>
+                    <div class="P_one-day__class <%= item[:class] %>">
                       乳児クラス
                     </div>
-                  <% elsif items[:class] === 'toddler' then %>
-                    <div class="P_one-day__class <%= items[:class] %>">
+                  <% elsif item[:class] === 'toddler' then %>
+                    <div class="P_one-day__class <%= item[:class] %>">
                       幼児クラス
                     </div>
                   <% end %>
                   <div class="P_one-day__text">
-                    <%= items[:text].html_safe %>
+                    <%= item[:text].html_safe %>
                   </div>
                 </div>
               </div>
@@ -59,14 +59,14 @@
           <% end %>
         </div>
         <div class="P_one-day__container right">
-          <% items.each_with_index do |items, i| %>
+          <% items.each_with_index do |item, i| %>
             <% if i.odd? then %>
               <div class="P_one-day__img <%= 'first' if i === 1 %>">
                 <picture>
-                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
-                  <img src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_alt.jpg" alt="一日の流れ<%= i + 1 %>" class="C_image lazyload"/>
+                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+                  <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
+                  <img src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_alt.jpg" alt="一日の流れ<%= i + 1 %>" class="C_image lazyload"/>
                 </picture>
                   <div class="P_one-day__deco deco<%= i %>">
                     <div class="C_deco__one-day-deco-<%= i %>"></div>
@@ -82,22 +82,22 @@
                   <% end %>
                 <div class="P_one-day__text-box">
                   <div class="P_one-day__time">
-                    <%= items[:time] %>
+                    <%= item[:time] %>
                   </div>
                   <div class="P_one-day__title">
-                    <%= items[:title] %>
+                    <%= item[:title] %>
                   </div>
-                  <% if items[:class] === 'infant' then %>
-                    <div class="P_one-day__class <%= items[:class] %>">
+                  <% if item[:class] === 'infant' then %>
+                    <div class="P_one-day__class <%= item[:class] %>">
                       乳児クラス
                     </div>
-                  <% elsif items[:class] === 'toddler' %>
-                    <div class="P_one-day__class <%= items[:class] %>">
+                  <% elsif item[:class] === 'toddler' %>
+                    <div class="P_one-day__class <%= item[:class] %>">
                       幼児クラス
                     </div>
                   <% end %>
                   <div class="P_one-day__text">
-                    <%= items[:text].html_safe %>
+                    <%= item[:text].html_safe %>
                   </div>
                 </div>
               </div>
@@ -106,13 +106,13 @@
         </div>
       </div>
       <div class="P_one-day__content-wrap tab-sp-only">
-        <% items.each_with_index do |items, i| %>
+        <% items.each_with_index do |item, i| %>
           <div class="P_one-day__img <%= 'first' if i === 0 %>">
             <picture>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
-              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
-              <img src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name_items[:name_en] %>_<%= i %>_alt.jpg" alt="一日の流れ<%= i + 1 %>" class="C_image lazyload"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_pc.webp" media="(min-width: 1025px)" type="image/webp" class="C_image"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_tab.webp" media="(min-width: 600px)" type="image/webp" class="C_image"/>
+              <source data-srcset="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_sp.webp 1x, https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_sp2.webp 2x" type="image/webp" class="C_image"/>
+              <img src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_dummy.webp" data-src="https://dazq5oer2h0ku.cloudfront.net/images/one-day/<%= name[:en] %>_<%= i %>_alt.jpg" alt="一日の流れ<%= i + 1 %>" class="C_image lazyload"/>
             </picture>
             <% if i > 0 then %>
               <div class="P_one-day__deco deco<%= i %>">
@@ -134,22 +134,22 @@
             <% end %>
             <div class="P_one-day__text-box">
               <div class="P_one-day__time">
-                <%= items[:time] %>
+                <%= item[:time] %>
               </div>
               <div class="P_one-day__title">
-                <%= items[:title] %>
+                <%= item[:title] %>
               </div>
-                <% if items[:class] === 'infant' then %>
-                  <div class="P_one-day__class <%= items[:class] %>">
+                <% if item[:class] === 'infant' then %>
+                  <div class="P_one-day__class <%= item[:class] %>">
                     乳児クラス
                   </div>
-                <% elsif items[:class] === 'toddler' %>
-                  <div class="P_one-day__class <%= items[:class] %>">
+                <% elsif item[:class] === 'toddler' %>
+                  <div class="P_one-day__class <%= item[:class] %>">
                     幼児クラス
                   </div>
                 <% end %>
               <div class="P_one-day__text">
-                <%= items[:text].html_safe %>
+                <%= item[:text].html_safe %>
               </div>
             </div>
           </div>
@@ -158,4 +158,4 @@
     </div>
   </div>
 </section>
-<%= render 'shared/side-bar_noBack',{color: ''}%>
+<%= render 'shared/side-bar_noBack',{ color: ''}%>

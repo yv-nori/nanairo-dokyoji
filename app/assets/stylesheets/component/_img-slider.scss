@@ -209,3 +209,20 @@
     }
   }
 }
+.P_recipe {
+  &__index {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__content-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &::before {
+      content: '';
+      padding-top: 120%;
+      display: block;
+    }
+  }
+}

@@ -12,13 +12,17 @@ require("../function/lazysizes.min");
 // ページ関数
 let CurrentPath = location.pathname;
 if (CurrentPath == "/nanairo/recruit" ||
+    CurrentPath == "/nanairo/recruit_create" ||
     CurrentPath == "/parti/recruit" ||
-    CurrentPath == "/piani/recruit") {
+    CurrentPath == "/parti/recruit_create" ||
+    CurrentPath == "/piani/recruit" ||
+    CurrentPath == "/piani/recruit_create") {
   require("jquery-ui-dist/jquery-ui");
   require("../function/raindrops");
   require("../page/nanairo_recruit");
 }
-if (CurrentPath == "/") { 
+if (CurrentPath == "/" ||
+    CurrentPath == "/nanairo") {
   require("../page/nanairo_index");
 }
 if (CurrentPath == "/nanairo/about") {
@@ -31,8 +35,20 @@ if (CurrentPath == "/nanairo/admission") {
   require("../page/nanairo_admission");
 }
 if (CurrentPath == "/nanairo/contact" ||
+    CurrentPath == "/nanairo/contact_create" ||
+    CurrentPath == "/parti/contact" ||
+    CurrentPath == "/parti/contact_create" ||
+    CurrentPath == "/piani/contact" ||
+    CurrentPath == "/piani/contact_create" ||
     CurrentPath == "/nanairo/policy" ||
-    CurrentPath == "/nanairo/privacy") {
+    CurrentPath == "/parti/policy" ||
+    CurrentPath == "/piani/policy" ||
+    CurrentPath == "/nanairo/privacy" ||
+    CurrentPath == "/parti/privacy" ||
+    CurrentPath == "/piani/privacy" ||
+    CurrentPath == "/nanairo/recipe" ||
+    CurrentPath == "/parti/recipe" ||
+    CurrentPath == "/piani/recipe") {
   require("../page/nanairo_contact");
 }
 if (CurrentPath == "/piani/index" ||
@@ -81,7 +97,8 @@ if (CurrentPath == "/parti/for-admission" ||
   require("../page/for-admission");
 }
 if (CurrentPath == "/parti/support" ||
-  CurrentPath == "/piani/support") {
+    CurrentPath == "/nanairo/support" ||
+    CurrentPath == "/piani/support") {
   require("../page/support");
 }
 if (CurrentPath == "/parti/about" ||

@@ -69,3 +69,5 @@ gem 'fog-aws'
 	
 gem 'rack-mini-profiler', require: false
 gem 'rails-i18n'
+gem 'administrate'
+gem 'bcrypt-ruby'

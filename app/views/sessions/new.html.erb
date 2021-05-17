@@ -1,0 +1,21 @@
+<section>
+  <h1 class="C_Form__title">ログイン画面</h1>
+  <%= form_with(model: @user, url: '/login', local: true) do |f| %>
+    <div class="C_Form__item">
+      <div class="C_Form__item-title">
+        <h2 class="C_Form__item-text">ユーザー名</h2>
+      </div>
+      <%#-- フィールドの作成 --%>
+      <%= f.text_field  name='name', id: 'name', class: 'C_Form__item-input'%>
+    </div>
+    <div class="C_Form__item">
+      <div class="C_Form__item-title">
+        <h2 class="C_Form__item-text">パスワード</h2>
+      </div>
+      <%= f.password_field  name='password', id: 'password', class: 'C_Form__item-input'%>
+    </div>
+    <%# ENTRY %>
+    <%= f.submit "Entry", class:"C_Form__submit" %>
+    <%# /下部ボタン %>
+  <% end %>
+</section>

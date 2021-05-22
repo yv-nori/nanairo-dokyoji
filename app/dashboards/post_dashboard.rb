@@ -14,8 +14,8 @@ class PostDashboard < Administrate::BaseDashboard
     text: Field::Text.with_options(searchable: true),
     release_date: Field::DateTime,
     delete_flag: Field::String.with_options(searchable: false),
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    created_at: Field::Date,
+    updated_at: Field::Date,
     image: Field::ActiveStorage,
   }.freeze
 
@@ -29,6 +29,8 @@ class PostDashboard < Administrate::BaseDashboard
     id
     title
     text
+    created_at
+    updated_at
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

@@ -22,6 +22,9 @@ import {
 import {
   wrightShabon
 } from "../function/shabon"
+import {
+  modal, modalItems
+} from "../function/modal"
 
 // --------------------------------
 // メイン処理
@@ -31,7 +34,8 @@ $(function () {
   const StaffItems = staffItems();
   const SmoothItems = smoothItems();
   const ToTopItems = toTopItems();
-  const Shabon = shabonItems()
+  const Shabon = shabonItems();
+  const ModalItems = modalItems();
   let startPosition = 0;
   let windowScrollTop = 0;
   let startSize = 0;
@@ -52,6 +56,7 @@ $(function () {
   menuOpen(HeaderItems);
   smoothScroll(SmoothItems);
   accordion(accordionItems());
+  modal(ModalItems);
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
     scrollChange(windowScrollTop, startPosition, HeaderItems.$targets);

@@ -308,11 +308,80 @@
 // =====================================
 // 求人内容
 // =====================================
+.P_Recruit__modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: .5s;
+  z-index: map-get($layer, 'modal');
+  visibility: hidden;
+  opacity: 0;
+  &.isActive {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__overlay {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+  }
+  &__container {
+    border-radius: 5px;
+    position: absolute;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    @include mq-up("tab") {
+      width: 90vw;
+    }
+    @include mq-up("pc") {
+      width: 36vw;
+    }
+    @include mq-up("pc_full") {
+      width: 40vw;
+    }
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 140%;
+      @include mq-up("pc") {
+        padding-top: 130%;
+      }
+    }
+  }
+  &__job-posting {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__btn {
+    @include abs(98,2);
+    display: block;
+    font-size: $font-size-base * 2.5;
+    pointer-events: auto;
+    cursor: pointer;
+    &:hover .C_box--btn{
+      transform: rotate(180deg);
+      transform-origin: center center;
+    }
+  }
+}
 .P_Recruit__job-info {
   @include mq-up("tab") {
     margin-right: $side-bar-size;
   }
-  &__paper-wrap {
+  &__posting-wrap {
     display: flex;
     justify-content: center;
     margin-top: 3vh;
@@ -323,7 +392,7 @@
       margin-bottom: 0;
     }
   }
-  &__paper-box {
+  &__posting-box {
     width: fit-content;
     cursor: pointer;
     border: 1px solid #09203f;
@@ -334,7 +403,7 @@
       color: #fff;
     }
   }
-  &__paper-text {
+  &__posting-text {
     padding: 5px 20px;
     padding-bottom: 7px;
   }

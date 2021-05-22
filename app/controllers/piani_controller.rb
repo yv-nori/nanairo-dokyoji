@@ -58,6 +58,7 @@ class PianiController < PostsController
   def recruit
     @contact_recruit = ContactRecruit.new()
     recruit_new
+    @job_posting = Post.where(category_id: 9).order(updated_at: :desc).limit(1)
   end
   def recruit_new
     @staff = STAFF::PIANI

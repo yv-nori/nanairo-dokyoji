@@ -40,18 +40,25 @@ ja:
       user:
         name: ユーザー名
         created_at: 作成日
+        updated_at: 更新日
       post:
         date: 日付
         category: カテゴリー
         title: タイトル
         text: テキスト
         release_date: 公開日
+        created_at: 作成日
+        updated_at: 更新日
       category:
         name: タイトル
         public: 全公開
         accepts: 閲覧ユーザー
         posts: 投稿
+        created_at: 作成日
+        updated_at: 更新日
       accept:
         category: カテゴリー
         user: ユーザー名
         created_at: 作成日
+        created_at: 作成日
+        updated_at: 更新日

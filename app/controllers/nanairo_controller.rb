@@ -18,6 +18,7 @@ class NanairoController < FormController
   def recruit
     @contact_recruit = ContactRecruit.new()
     recruit_new
+    @job_posting = Post.where(category_id: 9).order(updated_at: :desc).limit(1)
   end
   def recruit_new
     @staff = [STAFF::PARTI[0],STAFF::PARTI[1],STAFF::PIANI[2],STAFF::PIANI[3]]

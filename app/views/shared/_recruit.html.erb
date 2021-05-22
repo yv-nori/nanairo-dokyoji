@@ -219,6 +219,19 @@
 <%# ==================================== %>
 <%# 採用情報
 <%# ==================================== %>
+<% if @job_posting[0].image.attached? %>
+  <div class="P_Recruit__modal" id='JS_modal_target'>
+    <div class="P_Recruit__modal__overlay"></div>
+    <div class="P_Recruit__modal__container">
+      <%= image_tag @job_posting[0].image.preview(resize: "6000x6000>"), class: 'P_Recruit__modal__job-posting' %>
+      <div class="P_Recruit__modal__btn" id="JS_modal_close-btn">
+        <div class="C_box--btn">
+          <i class="far fa-times-circle"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
 <section class="P_Recruit__job-info" id="JS_raindrops_target-darken">
   <div id="JS_smoothScroll_target-3"></div>
   <div class="U_relative U_z-1">
@@ -232,10 +245,10 @@
         </h1>
       </div>
     </div>
-    <div class="P_Recruit__job-info__paper-wrap">
-      <div class="P_Recruit__job-info__paper-box">
-        <div class="P_Recruit__job-info__paper-text">
-        令和２年度　求人票
+    <div class="P_Recruit__job-info__posting-wrap">
+      <div class="P_Recruit__job-info__posting-box" id='JS_modal_trigger'>
+        <div class="P_Recruit__job-info__posting-text">
+        <%= @job_posting[0].title %>
         </div>
       </div>
     </div>

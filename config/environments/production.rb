@@ -28,7 +28,7 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   
   #Javascriptの圧縮ライブラリの設定。productionではuglifierというgemを利用しているが nilの設定にして無効にすることも出来る。
-  config.assets.js_compressor = :uglifier
+  # config.assets.js_compressor = :uglifier
   #CSSの圧縮ライブラリの設定。以下default。
   config.assets.css_compressor = :sass
   #動的にcompileするか。trueだとprecompileしていないファイルを動的にコンパイルするのでproductionではfalseが良さそう。

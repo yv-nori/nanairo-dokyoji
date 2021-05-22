@@ -1,0 +1,28 @@
+<ul class="P_belong__info__lists">
+  <% @posts.each do |post| %>
+    <li class="P_belong__info__list">
+      <% if name[:en] === 'parti' then %>
+        <%= link_to parti_post_path(post), class:"P_belong__info__link" do%>
+          <h1 class="P_belong__info__title">
+            <%= h(I18n.l(post.created_at, format: :long)) %>
+          </h1>
+          <p class="P_belong__info__text">
+            <%= h(post.title) %>
+          </p>
+          <i class="fa fa-caret-right P_belong__info__link__icon"></i>
+        <% end %>
+      <% else %>
+        <%= link_to piani_post_path(post), class:"P_belong__info__link" do%>
+          <h1 class="P_belong__info__title">
+            <%= h(I18n.l(post.created_at, format: :long)) %>
+          </h1>
+          <p class="P_belong__info__text">
+            <%= h(post.title) %>
+          </p>
+          <i class="fa fa-caret-right P_belong__info__link__icon"></i>
+        <% end %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+<%= paginate @posts %>

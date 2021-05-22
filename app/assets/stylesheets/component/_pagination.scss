@@ -1,0 +1,76 @@
+.C_pagination {
+  &__box {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  &__prevs {
+    display: flex;
+  }
+  &__prev {
+    display: flex;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    &:hover .C_under-line {
+      opacity: 1;
+    }
+    &:hover {
+      cursor: pointer;
+      color: $color-link-text;
+    }
+  }
+  &__numbers {
+    display: flex;
+    margin: 0 15px;
+    @include mq-up("tab") {
+      margin: 0 35px;
+    }
+  }
+  &__number {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    &:hover .C_under-line {
+      opacity: 1;
+    }
+    &:hover {
+      cursor: pointer;
+      color: $color-link-text;
+    }
+    &.current {
+      cursor: initial;
+      color: $color-link-text;
+      &:hover .C_under-line {
+        opacity: 0;
+      }
+    }
+  }
+  &__nexts {
+    display: flex;
+  }
+  &__next {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    &:hover .C_under-line {
+      opacity: 1;
+    }
+    &:hover {
+      cursor: pointer;
+      color: $color-link-text;
+    }
+  }
+}
+.C_under-line {
+  height: 1px;
+  width: 100%;
+  background-color: $color-link-text;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .3s;
+  opacity: 0;
+  position: absolute;
+}

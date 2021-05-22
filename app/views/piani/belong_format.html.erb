@@ -1,0 +1,4 @@
+<%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
+<%= render partial: 'posts/index', locals:{ posts: @posts, items: @items, name: @name }%>
+<%= render 'shared/side-bar_noBack' ,{color: '' }%>
+<%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: false }%>

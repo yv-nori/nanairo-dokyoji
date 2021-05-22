@@ -66,4 +66,5 @@ class ContactDashboard < Administrate::BaseDashboard
   # def display_resource(contact)
   #   "Contact ##{contact.id}"
   # end
+
 end

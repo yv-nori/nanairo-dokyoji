@@ -7,15 +7,28 @@ class SessionsController < ApplicationController
 
   def create
     if @user.authenticate(session_params[:password])
-      sign_in(@user)
-      redirect_to '/admin'
+      if session[:path].include?('parti') && @user.id === 2 ||
+        session[:path].include?('piani') && @user.id === 3 ||
+        session[:path].include?('parti') && @user.id === 1 ||
+        session[:path].include?('piani') && @user.id === 1 ||
+        session[:path].include?('admin') && @user.id === 1
+        sign_in_success
+      else
+        sign_in_false('NoMatchUser')
+      end
     else
-      flash.now[:danger] = t('.flash.invalid_password')
-    @user = User.new()
-      render 'new'
+      sign_in_false(t('.flash.invalid_password'))
     end
   end
-
+  def sign_in_success
+    sign_in(@user)
+    redirect_to session[:path]
+  end
+  def sign_in_false(message)
+    flash.now[:danger] = message
+    @user = User.new()
+    render 'new'
+  end
   def logout_self
     destroy
   end
@@ -38,5 +51,4 @@ class SessionsController < ApplicationController
     def session_params
       params.require(:user).permit(:name, :password)
     end
-
 end

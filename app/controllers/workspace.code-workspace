@@ -12,6 +12,7 @@
 		],
 		"html-css-class-completion.enableEmmetSupport": true,
 		"workbench.tree.renderIndentGuides": "always",
-		"emmet.triggerExpansionOnTab": true
+		"emmet.triggerExpansionOnTab": true,
+		"search.useGlobalIgnoreFiles": true
 	}
 }

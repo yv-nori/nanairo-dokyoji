@@ -48,32 +48,38 @@
   </div>
 </section>
 <section class="P_belong__info__wrap">
-  <table class="P_belong__info__table">
-    <tr class="P_belong__info__row">
-      <td class="P_belong__info__title">2020年1月6日(月)</td>
-      <td class="P_belong__info__text">『パルティ通信1月号』 『1月献立表』を掲載しました</td>
-    </tr>
-    <tr class="P_belong__info__row">
-      <td class="P_belong__info__title">2020年1月6日(月)</td>
-      <td class="P_belong__info__text">『パルティ通信1月号』 『1月献立表』を掲載しました</td>
-    </tr>
-    <tr class="P_belong__info__row">
-      <td class="P_belong__info__title">2020年1月6日(月)</td>
-      <td class="P_belong__info__text">『パルティ通信1月号』 『1月献立表』を掲載しました</td>
-    </tr>
-    <tr class="P_belong__info__row">
-      <td class="P_belong__info__title">2020年1月6日(月)</td>
-      <td class="P_belong__info__text">『パルティ通信1月号』 『1月献立表』を掲載しました</td>
-    </tr>
-    <tr class="P_belong__info__row">
-      <td class="P_belong__info__title">2020年1月6日(月)</td>
-      <td class="P_belong__info__text">『パルティ通信1月号』 『1月献立表』を掲載しました</td>
-    </tr>
-  </table>
+  <ul class="P_belong__info__lists">
+    <% posts.each do |post| %>
+      <li class="P_belong__info__list">
+        <% if name[:en] === 'parti' then %>
+          <%= link_to parti_post_path(post), class:"P_belong__info__link" do%>
+            <h1 class="P_belong__info__title">
+              <%= I18n.l(post.created_at, format: :long) %>
+            </h1>
+            <p class="P_belong__info__text">
+              <%= post.title %>
+            </p>
+            <i class="fa fa-caret-right P_belong__info__link__icon"></i>
+          <% end %>
+        <% else %>
+          <%= link_to piani_post_path(post), class:"P_belong__info__link" do%>
+            <h1 class="P_belong__info__title">
+              <%= I18n.l(post.created_at, format: :long) %>
+            </h1>
+            <p class="P_belong__info__text">
+              <%= post.title %>
+            </p>
+            <i class="fa fa-caret-right P_belong__info__link__icon"></i>
+          <% end %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
   <div class="P_belong__info__more-info">
     <div class="P_belong__info__more-info-text">
       過去のお知らせ一覧はこちら
     </div>
+    <%= link_to '', links[:notice], class:"U_link" %>
   </div>
 </section>
 <section class="P_belong__menu__wrap">
@@ -98,12 +104,13 @@
         </picture>
         <div class="P_belong__menu__img-click-line"></div>
         <div class="P_belong__menu__img-click-text">click</div>
+        <%= link_to '', 'https://parents.codmon.com/#/', class:"U_link", target: :_blank %>
       </div>
       <div class="P_belong__menu__content-triangle">
         ▲
       </div>
       <div class="P_belong__menu__content-title">
-        はいチーズ
+        コドモン
       </div>
       <div class="P_belong__menu__content-text">
         園内で撮った写真を<br>
@@ -127,6 +134,7 @@
         </picture>
         <div class="P_belong__menu__img-click-line"></div>
         <div class="P_belong__menu__img-click-text">click</div>
+        <%= link_to '', links[:movie], class:"U_link" %>
       </div>
       <div class="P_belong__menu__content-triangle">
         ▲
@@ -155,6 +163,7 @@
         </picture>
         <div class="P_belong__menu__img-click-line"></div>
         <div class="P_belong__menu__img-click-text">click</div>
+        <%= link_to '', links[:letter], class:"U_link" %>
       </div>
       <div class="P_belong__menu__content-triangle">
         ▲
@@ -183,6 +192,7 @@
         </picture>
         <div class="P_belong__menu__img-click-line"></div>
         <div class="P_belong__menu__img-click-text">click</div>
+        <%= link_to '', links[:format], class:"U_link" %>
       </div>
       <div class="P_belong__menu__content-triangle">
         ▲

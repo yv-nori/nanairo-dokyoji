@@ -56,7 +56,7 @@ module COMMON
       {title: '七彩学舎について',link: '/nanairo/about'},
       {title: '理念',link: '/nanairo/vision'},
       {title: 'パルティ道教寺',link: '/parti'},
-      {title: 'ピアニィ道教寺',link: 'piani'},
+      {title: 'ピアニィ道教寺',link: '/piani'},
       {title: '入園をお考えの方へ',link: '/nanairo/admission'},
       {title: '就職をお考えの方へ',link: '/nanairo/recruit'}
     ]

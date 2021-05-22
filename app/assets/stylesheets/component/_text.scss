@@ -33,6 +33,9 @@
   @include mq-up("pc_full") {
     font-size: $font-size-base * 4.0625;
   }
+  &.wide {
+    letter-spacing: 0.1em;
+  }
 }
 .C_text__sub-title {
   font-size: $font-size-base * 1.43;

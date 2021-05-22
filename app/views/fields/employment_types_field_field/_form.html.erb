@@ -1,0 +1,9 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute %>
+</div>
+<div class="field-unit__field">
+  <% field.employemnt_types.each do |employments| %>
+    <%= check_box_tag 'customer[employment_categories_id][]', employments.id %>
+    <%= employments.employment_type %>
+  <% end %>
+</div>

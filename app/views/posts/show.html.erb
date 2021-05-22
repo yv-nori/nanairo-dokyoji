@@ -1,0 +1,25 @@
+<%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
+<div class="L_pageTitle__headding half">
+  <div class="">
+    <p class="C_text__title-en">
+      <%= I18n.l(@posts.created_at, format: :long) %>
+    </p>
+    <h1 class="C_text__title-ja wide">
+      <%= @posts.title %>
+    </h1>
+  </div>
+</div>
+<section id="JS_smoothScroll_target-0">
+  <div id="JS_scroll-to-top_trigger-0" style="position:absolute;height:100%;"></div>
+  <section class="P_belong__info__wrap under">
+    <div class="P_belong__post__text">
+      <%= safe_join(@posts.text.split("\n"),tag(:br)) %>
+    </div>
+    <% if @posts.image.attached? %>
+      <%= image_tag @posts.image.preview(resize: "6000x6000>"), class: 'P_belong__post__image' %>
+    <% end %>
+    <%= link_to '戻る', @link, class: 'P_belong__post__back' %>
+  </section>
+</section>
+<%= render 'shared/side-bar_noBack' ,{color: '' }%>
+<%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: false }%>

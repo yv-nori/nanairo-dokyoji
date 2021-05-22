@@ -71,3 +71,8 @@ gem 'rack-mini-profiler', require: false
 gem 'rails-i18n'
 gem 'administrate'
 gem 'bcrypt-ruby'
+gem 'kaminari'
+gem 'administrate-field-active_storage'
+gem "image_processing"
+gem 'poppler'
+gem 'rabbit'

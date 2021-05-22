@@ -48,7 +48,17 @@ if (CurrentPath == "/nanairo/contact" ||
     CurrentPath == "/piani/privacy" ||
     CurrentPath == "/nanairo/recipe" ||
     CurrentPath == "/parti/recipe" ||
-    CurrentPath == "/piani/recipe") {
+    CurrentPath == "/piani/recipe" ||
+    CurrentPath == "/parti/belong_notice" ||
+    CurrentPath == "/parti/belong_letter" ||
+    CurrentPath == "/parti/belong_movie" ||
+    CurrentPath == "/parti/belong_format" ||
+    CurrentPath == "/piani/belong_notice" ||
+    CurrentPath == "/piani/belong_letter" ||
+    CurrentPath == "/piani/belong_movie" ||
+    CurrentPath == "/piani/belong_format" ||
+    CurrentPath == "/posts" ||
+    CurrentPath.indexOf('/posts/') > -1 ) {
   require("../page/nanairo_contact");
 }
 if (CurrentPath == "/piani/index" ||

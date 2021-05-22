@@ -1,0 +1,19 @@
+<div class="L_pageTitle__headding half">
+  <div class="">
+    <p class="C_text__title-en">
+      <%= items[:title_en] %>
+    </p>
+    <h1 class="C_text__title-ja">
+      <%= items[:title] %>
+    </h1>
+  </div>
+</div>
+<section id="JS_smoothScroll_target-0">
+  <div id="JS_scroll-to-top_trigger-0" style="position:absolute;height:100%;"></div>
+  <section class="P_belong__info__wrap under">
+    <div id='posts'>
+      <%= render partial: 'posts', locals: { name: @name }%>
+    </div>
+    <%= link_to '戻る', '/' + name[:en] + '/belong', class: 'P_belong__post__back' %>
+  </section>
+</section>

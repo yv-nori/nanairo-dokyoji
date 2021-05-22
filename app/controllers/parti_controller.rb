@@ -1,4 +1,4 @@
-class PartiController < FormController
+class PartiController < PostsController
   before_action :common
   before_action :name
   def about
@@ -6,6 +6,29 @@ class PartiController < FormController
   end
   def admission
     @items = ADMISSION::COMMON
+  end
+  def belong
+    @posts = Post.where(category_id: 1).order(release_date: 'DESC').limit(5)
+    @links = {
+      notice: belong_notice_parti_index_path,
+      letter: belong_letter_parti_index_path,
+      movie: belong_movie_parti_index_path,
+      format: belong_format_parti_index_path,
+    }
+  end
+  def belong_notice
+    post_public(1, 'Notice', 'お知らせ一覧')
+  end
+  def belong_letter
+    post_private(3, belong_letter_parti_index_path, 'Letter', 'おたより一覧')
+  end
+  def belong_movie
+    post_private(5, belong_movie_parti_index_path, 'Movie', '動画配信の一覧')
+  end
+  def belong_format
+    post_public(7, 'Format', 'お届け様式一覧')
+  end
+  def show
   end
   def contact
     @contact = Contact.new()

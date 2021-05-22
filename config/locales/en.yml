@@ -29,5 +29,29 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      post: 投稿
+      category: カテゴリー
+      accept: 閲覧権限
+    attributes:
+      user:
+        name: ユーザー名
+        created_at: 作成日
+      post:
+        date: 日付
+        category: カテゴリー
+        title: タイトル
+        text: テキスト
+        release_date: 公開日
+      category:
+        name: タイトル
+        public: 全公開
+        accepts: 閲覧ユーザー
+        posts: 投稿
+      accept:
+        category: カテゴリー
+        user: ユーザー名
+        created_at: 作成日

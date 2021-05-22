@@ -7,11 +7,11 @@ class SessionsController < ApplicationController
 
   def create
     if @user.authenticate(session_params[:password])
-      if session[:path].include?('parti') && @user.id === 2 ||
-        session[:path].include?('piani') && @user.id === 3 ||
-        session[:path].include?('parti') && @user.id === 1 ||
-        session[:path].include?('piani') && @user.id === 1 ||
-        session[:path].include?('admin') && @user.id === 1
+      if session[:path].include?('parti') && @user.id === User::PartiUser_ID ||
+        session[:path].include?('piani') && @user.id === User::PianiUser_ID ||
+        session[:path].include?('parti') && @user.id === User::NanairoRoot_ID ||
+        session[:path].include?('piani') && @user.id === User::NanairoRoot_ID ||
+        session[:path].include?('admin') && @user.id === User::NanairoRoot_ID
         sign_in_success
       else
         sign_in_false('NoMatchUser')

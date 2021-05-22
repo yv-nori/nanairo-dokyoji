@@ -219,11 +219,11 @@
 <%# ==================================== %>
 <%# 採用情報
 <%# ==================================== %>
-<% if @job_posting[0].image.attached? %>
+<% if @job_posting.image.attached? %>
   <div class="P_Recruit__modal" id='JS_modal_target'>
     <div class="P_Recruit__modal__overlay"></div>
     <div class="P_Recruit__modal__container">
-      <%= image_tag @job_posting[0].image.preview(resize: "6000x6000>"), class: 'P_Recruit__modal__job-posting' %>
+      <%= image_tag @job_posting.image.preview(resize: "6000x6000>"), class: 'P_Recruit__modal__job-posting' %>
       <div class="P_Recruit__modal__btn" id="JS_modal_close-btn">
         <div class="C_box--btn">
           <i class="far fa-times-circle"></i>
@@ -248,7 +248,7 @@
     <div class="P_Recruit__job-info__posting-wrap">
       <div class="P_Recruit__job-info__posting-box" id='JS_modal_trigger'>
         <div class="P_Recruit__job-info__posting-text">
-        <%= @job_posting[0].title %>
+        <%= @job_posting.title %>
         </div>
       </div>
     </div>

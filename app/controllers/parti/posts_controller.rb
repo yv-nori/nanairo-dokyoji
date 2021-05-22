@@ -3,18 +3,18 @@ class Parti::PostsController < PostsController
   before_action :name
   def show
     @posts = Post.find(params_id)
-    if @posts.category_id === 3 ||
-        @posts.category_id === 5
+    if @posts.category_id === Category::PartiLetter_ID ||
+        @posts.category_id === Category::PartiMovie_ID
       current_user
       require_sign_in!(parti_post_path(params_id))
     end
-    if @posts.category_id === 1
+    if @posts.category_id === Category::PartiNotice_ID
       @link =  belong_notice_parti_index_path
-    elsif  @posts.category_id === 3
+    elsif  @posts.category_id === Category::PartiLetter_ID
       @link =  belong_letter_parti_index_path
-    elsif  @posts.category_id === 5
+    elsif  @posts.category_id === Category::PartiMovie_ID
       @link =  belong_movie_parti_index_path
-    elsif  @posts.category_id === 7
+    elsif  @posts.category_id === Category::PartiFormat_ID
       @link =  belong_format_parti_index_path
     end
   end

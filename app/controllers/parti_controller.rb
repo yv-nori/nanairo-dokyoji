@@ -8,7 +8,7 @@ class PartiController < PostsController
     @items = ADMISSION::COMMON
   end
   def belong
-    @posts = Post.where(category_id: 1).order(release_date: 'DESC').limit(5)
+    @posts = Post.where(category_id: Category::PartiNotice_ID).order(release_date: 'DESC').limit(5)
     @links = {
       notice: belong_notice_parti_index_path,
       letter: belong_letter_parti_index_path,
@@ -17,16 +17,16 @@ class PartiController < PostsController
     }
   end
   def belong_notice
-    post_public(1, 'Notice', 'お知らせ一覧')
+    post_public(Category::PartiNotice_ID, 'Notice', 'お知らせ一覧')
   end
   def belong_letter
-    post_private(3, belong_letter_parti_index_path, 'Letter', 'おたより一覧')
+    post_private(Category::PartiLetter_ID, belong_letter_parti_index_path, 'Letter', 'おたより一覧')
   end
   def belong_movie
-    post_private(5, belong_movie_parti_index_path, 'Movie', '動画配信の一覧')
+    post_private(Category::PartiMovie_ID, belong_movie_parti_index_path, 'Movie', '動画配信の一覧')
   end
   def belong_format
-    post_public(7, 'Format', 'お届け様式一覧')
+    post_public(Category::PartiFormat_ID, 'Format', 'お届け様式一覧')
   end
   def show
   end
@@ -60,7 +60,7 @@ class PartiController < PostsController
   def recruit
     @contact_recruit = ContactRecruit.new()
     recruit_new
-    @job_posting = Post.where(category_id: 9).order(updated_at: :desc).limit(1)
+    @job_posting = Post.where(category_id: Category::JobPosting_ID).order(updated_at: :desc).first
   end
   def recruit_new
     @staff = STAFF::PARTI

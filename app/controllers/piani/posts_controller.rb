@@ -3,18 +3,18 @@ class Piani::PostsController < PostsController
   before_action :name
   def show
     @posts = Post.find(params_id)
-    if @posts.category_id === 4 ||
-        @posts.category_id === 6
+    if @posts.category_id === Category::PianiLetter_ID ||
+        @posts.category_id === Category::PianiMovie_ID
       current_user
       require_sign_in!(parti_post_path(params_id))
     end
-    if @posts.category_id === 2
+    if @posts.category_id === Category::PianiNotice_ID
       @link =  belong_notice_piani_index_path
-    elsif  @posts.category_id === 4
+    elsif  @posts.category_id === Category::PianiLetter_ID
       @link =  belong_letter_piani_index_path
-    elsif  @posts.category_id === 6
+    elsif  @posts.category_id === Category::PianiMovie_ID
       @link =  belong_movie_piani_index_path
-    elsif  @posts.category_id === 8
+    elsif  @posts.category_id === Category::PianiFormat_ID
       @link =  belong_format_piani_index_path
     end
   end

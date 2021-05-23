@@ -1,6 +1,13 @@
 class NanairoController < FormController
   before_action :common
   before_action :name
+  def about
+    @companyStatute = Post::CompanyStatute
+    @officerList = Post::OfficerList
+    @paymentRule = Post::PaymentRule
+    @partiSelfAssessment = Post::PartiSelfAssessment
+    @pianiSelfAssessment = Post::PianiSelfAssessment
+  end
   def support
     @items = [SUPPORT::PARTI, SUPPORT::PIANI]
     @slider = { options: RECIPE::OPTIONS, items: RECIPE::ITEMS[0..10] }

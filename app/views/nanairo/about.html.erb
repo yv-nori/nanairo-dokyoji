@@ -245,18 +245,33 @@
       <ul class="P_Nanairo-about__info">
         <li class="P_Nanairo-about__info-list">
           七彩学舎定款
+          <% if @companyStatute.image.attached? %>
+            <%= link_to '', @companyStatute.image_url, class:"U_link"%>
+          <% end %>
         </li>
         <li class="P_Nanairo-about__info-list">
           役員・評議員名簿
+          <% if @officerList.image.attached? %>
+            <%= link_to '', @officerList.image_url, class:"U_link"%>
+          <% end %>
         </li>
         <li class="P_Nanairo-about__info-list">
           役員報酬基準
+          <% if @paymentRule.image.attached? %>
+            <%= link_to '', @paymentRule.image_url, class:"U_link"%>
+          <% end %>
         </li>
         <li class="P_Nanairo-about__info-list">
           パルティ道教寺　自己評価票
+          <% if @partiSelfAssessment.image.attached? %>
+            <%= link_to '', @partiSelfAssessment.image_url, class:"U_link"%>
+          <% end %>
         </li>
         <li class="P_Nanairo-about__info-list">
           ピアニィ道教寺　自己評価票
+          <% if @pianiSelfAssessment.image.attached? %>
+            <%= link_to '', @pianiSelfAssessment.image_url, class:"U_link"%>
+          <% end %>
         </li>
         <li class="P_Nanairo-about__info-list">
           第三者苦情解決者<br class="sp-only"><span class="pc-only">　</span>連絡先　090-8169-1968

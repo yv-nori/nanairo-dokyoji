@@ -97,7 +97,7 @@ Rails.application.configure do
   # 更新がおそい
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.file_watcher = ActiveSupport::FileUpdateChecker
- 
+
 # # コンパイル済みアセットを圧縮するかどうかを指定。圧縮することで、データ容量を減らし、高速化をする
 # config.assets.compress = true
 
@@ -112,4 +112,13 @@ Rails.application.configure do
 
 # # デバッグ用にアセットの連結と圧縮をやめるかどうかを指定
 # config.assets.debug = false
+
+  #N+1問題が発生している場合のアラート
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = true
+    Bullet.bullet_logger = true
+    Bullet.console = true
+    Bullet.rails_logger = true
+  end
 end

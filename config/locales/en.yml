@@ -36,6 +36,8 @@ ja:
       post: 投稿
       category: カテゴリー
       accept: 閲覧権限
+      cost_uniform: 制服価格表
+      cost_age: 年齢別価格表
     attributes:
       user:
         name: ユーザー名
@@ -60,5 +62,20 @@ ja:
         category: カテゴリー
         user: ユーザー名
         created_at: 作成日
+        created_at: 作成日
+        updated_at: 更新日
+      cost_uniform:
+        name: 名前
+        cost: 価格
+        created_at: 作成日
+        updated_at: 更新日
+      cost_age:
+        name: 名前
+        cost_age_0: 0歳児
+        cost_age_1: 1歳児
+        cost_age_2: 2歳児
+        cost_age_3: 3歳児
+        cost_age_4: 4歳児
+        cost_age_5: 5歳児
         created_at: 作成日
         updated_at: 更新日

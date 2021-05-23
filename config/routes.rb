@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :users
     resources :accepts
     resources :categories
+    resources :cost_uniforms
+    resources :cost_ages
     root to: "contacts#index"
   end
   get 'login', to: 'sessions#new'

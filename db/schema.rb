@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_19_235950) do
+ActiveRecord::Schema.define(version: 2021_05_22_090713) do
 
   create_table "accepts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -69,6 +69,27 @@ ActiveRecord::Schema.define(version: 2021_05_19_235950) do
     t.text "question"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "cost_ages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "cost_age_0", null: false
+    t.integer "cost_age_1", null: false
+    t.integer "cost_age_2", null: false
+    t.integer "cost_age_3", null: false
+    t.integer "cost_age_4", null: false
+    t.integer "cost_age_5", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_cost_ages_on_name"
+  end
+
+  create_table "cost_uniforms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "cost", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_cost_uniforms_on_name"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

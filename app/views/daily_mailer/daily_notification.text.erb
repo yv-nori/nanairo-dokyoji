@@ -1,0 +1,5 @@
+ホームページを更新してください。
+下記項目を<%= @alerts[:date].year %>年度のものに更新してください。
+<% @alerts[:items].each do |item| %>
+  ・<%= item[:name] %> 最終更新日:<%= item[:date] %>
+<% end %>

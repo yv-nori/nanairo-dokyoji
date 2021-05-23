@@ -22,7 +22,6 @@ class ApplicationController < ActionController::Base
       sign_out
     end
   end
-
 private
   def require_sign_in!(path)
     session[:path] = path

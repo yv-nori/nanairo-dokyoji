@@ -12,7 +12,7 @@ namespace :heroku do
     end
 
     current_pid = Process.pid
-    signal      = "SIGTERM"
+    signal      = "SIGKILL"
     Process.kill(signal, current_pid)
   end
 end

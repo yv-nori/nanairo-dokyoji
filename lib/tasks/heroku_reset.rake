@@ -1,8 +1,18 @@
 namespace :heroku do
   desc 'restarts all the heroku dynos so we can control when they restart'
   task :restart do
-    PlatformAPI.
-      new(username: ENV['HEROKU_USERNAME'], password: ENV['HEROKU_PASSWORD']).
-      post_ps_restart(ENV['HEROKU_APP_NAME'])
+    thread = Thread.new do
+      begin
+        while true
+          sleep 1
+        end
+      ensure
+        puts "ensure called"
+      end
+    end
+
+    current_pid = Process.pid
+    signal      = "SIGTERM"
+    Process.kill(signal, current_pid)
   end
 end

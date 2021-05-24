@@ -10,3 +10,7 @@ User.seed do |s|
   s.name = 'piani_user', 
   s.password = 'houpublic'
 end
+User.seed do |s|
+  s.name = 'text', 
+  s.password = 'houpublic'
+end

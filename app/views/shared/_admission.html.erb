@@ -27,8 +27,10 @@
         <%= link_to "",'/' + name[:en] + '/for-admission#movie', class:"U_link"%>
       </div>
       <div class="P_admission__intro__btn right">
-        <%= items[:pdf_title].html_safe %>
-        <%= link_to "", items[:pdf_link], class:"U_link"%>
+        <%= admission_pdf[:title] %>
+        <% if admission_pdf.present? &&  admission_pdf.image.attached? %>
+          <%= link_to '', admission_pdf.image, class:"U_link", target: :_blank %>
+        <% end %>
       </div>
     </div>
     <div id="JS_smoothScroll_target-2"></div>
@@ -484,40 +486,18 @@
         </picture>
       </div>
     </div>
-    <h2 class="P_admission__common__table-title">制服代（29年度実績）</h2>
+    <h2 class="P_admission__common__table-title">制服代（<%= goods_cost.updated_at.year %>年度実績）</h2>
     <table class="P_admission__common__table width-4S margin-S">
       <tr class="P_admission__common__row">
         <th class="P_admission__common__head">制服</th>
         <th class="P_admission__common__head width-S">価格</th>
       </tr>
+      <% cost_uniforms.each do |cost_uniform| %>
       <tr class="P_admission__common__row">
-        <td class="P_admission__common__data first">制服上着</td>
-        <td class="P_admission__common__data first">1,000円</td>
+        <td class="P_admission__common__data"><%= cost_uniform.name %></td>
+        <td class="P_admission__common__data"><%= cost_uniform.cost.to_s(:delimited) %>円</td>
       </tr>
-      <tr class="P_admission__common__row">
-        <td class="P_admission__common__data">制服上着</td>
-        <td class="P_admission__common__data">1,000円</td>
-      </tr>
-      <tr class="P_admission__common__row">
-        <td class="P_admission__common__data">制服上着</td>
-        <td class="P_admission__common__data">1,000円</td>
-      </tr>
-      <tr class="P_admission__common__row">
-        <td class="P_admission__common__data">制服上着</td>
-        <td class="P_admission__common__data">1,000円</td>
-      </tr>
-      <tr class="P_admission__common__row">
-        <td class="P_admission__common__data">制服上着</td>
-        <td class="P_admission__common__data">1,000円</td>
-      </tr>
-      <tr class="P_admission__common__row">
-        <td class="P_admission__common__data">制服上着</td>
-        <td class="P_admission__common__data">1,000円</td>
-      </tr>
-      <tr class="P_admission__common__row">
-        <td class="P_admission__common__data">制服上着</td>
-        <td class="P_admission__common__data">1,000円</td>
-      </tr>
+      <% end %>
     </table>
     <h2 class="P_admission__common__table-title">用品代</h2>
     <table class="P_admission__common__table margin-S">
@@ -532,12 +512,12 @@
       </tr>
       <tr class="P_admission__common__row">
         <td class="P_admission__common__data first">費用</td>
-        <td class="P_admission__common__data first">1,000円</td>
-        <td class="P_admission__common__data first">1,000円</td>
-        <td class="P_admission__common__data first">1,000円</td>
-        <td class="P_admission__common__data first">1,000円</td>
-        <td class="P_admission__common__data first">1,000円</td>
-        <td class="P_admission__common__data first">1,000円</td>
+        <td class="P_admission__common__data first"><%= goods_cost.cost_age_0.to_s(:delimited) %>円</td>
+        <td class="P_admission__common__data first"><%= goods_cost.cost_age_1.to_s(:delimited) %>円</td>
+        <td class="P_admission__common__data first"><%= goods_cost.cost_age_2.to_s(:delimited) %>円</td>
+        <td class="P_admission__common__data first"><%= goods_cost.cost_age_3.to_s(:delimited) %>円</td>
+        <td class="P_admission__common__data first"><%= goods_cost.cost_age_4.to_s(:delimited) %>円</td>
+        <td class="P_admission__common__data first"><%= goods_cost.cost_age_5.to_s(:delimited) %>円</td>
       </tr>
     </table>
     <h2 class="P_admission__common__table-title">月々にかかる費用</h2>
@@ -566,32 +546,41 @@
         <th class="P_admission__common__head">4歳児</th>
         <th class="P_admission__common__head">5歳児</th>
       </tr>
-      <tr class="P_admission__common__row">
-        <td class="P_admission__common__data first padding-0">教材費</td>
-        <td class="P_admission__common__data first padding-0">1,000円</td>
-        <td class="P_admission__common__data first padding-0">1,000円</td>
-        <td class="P_admission__common__data first padding-0">1,000円</td>
-        <td class="P_admission__common__data first padding-0">1,000円</td>
-        <td class="P_admission__common__data first padding-0">1,000円</td>
-        <td class="P_admission__common__data first padding-0">1,000円</td>
-      </tr>
-      <tr class="P_admission__common__row">
-        <td class="P_admission__common__data padding-0">環境向上費</td>
-        <td class="P_admission__common__data padding-0">1,000円</td>
-        <td class="P_admission__common__data padding-0">1,000円</td>
-        <td class="P_admission__common__data padding-0">1,000円</td>
-        <td class="P_admission__common__data padding-0">1,000円</td>
-        <td class="P_admission__common__data padding-0">1,000円</td>
-        <td class="P_admission__common__data padding-0">1,000円</td>
-      </tr>
+      <% 
+        age_0_sum = 0
+        age_1_sum = 0
+        age_2_sum = 0
+        age_3_sum = 0
+        age_4_sum = 0
+        age_5_sum = 0
+      %>
+      <% other_costs.each do |other_cost| %>
+        <% 
+        age_0_sum = age_0_sum + other_cost.cost_age_0
+        age_1_sum = age_1_sum + other_cost.cost_age_1
+        age_2_sum = age_2_sum + other_cost.cost_age_2
+        age_3_sum = age_3_sum + other_cost.cost_age_3
+        age_4_sum = age_4_sum + other_cost.cost_age_4
+        age_5_sum = age_5_sum + other_cost.cost_age_5
+        %>
+        <tr class="P_admission__common__row">
+          <td class="P_admission__common__data first padding-0"><%= other_cost.name %></td>
+          <td class="P_admission__common__data first padding-0"><%= other_cost.cost_age_0.to_s(:delimited) %>円</td>
+          <td class="P_admission__common__data first padding-0"><%= other_cost.cost_age_1.to_s(:delimited) %>円</td>
+          <td class="P_admission__common__data first padding-0"><%= other_cost.cost_age_2.to_s(:delimited) %>円</td>
+          <td class="P_admission__common__data first padding-0"><%= other_cost.cost_age_3.to_s(:delimited) %>円</td>
+          <td class="P_admission__common__data first padding-0"><%= other_cost.cost_age_4.to_s(:delimited) %>円</td>
+          <td class="P_admission__common__data first padding-0"><%= other_cost.cost_age_5.to_s(:delimited) %>円</td>
+        </tr>
+      <% end %>
       <tr class="P_admission__common__row">
         <td class="P_admission__common__data padding-0 L-blue">合計</td>
-        <td class="P_admission__common__data padding-0 L-blue">1,000円</td>
-        <td class="P_admission__common__data padding-0 L-blue">1,000円</td>
-        <td class="P_admission__common__data padding-0 L-blue">1,000円</td>
-        <td class="P_admission__common__data padding-0 L-blue">1,000円</td>
-        <td class="P_admission__common__data padding-0 L-blue">1,000円</td>
-        <td class="P_admission__common__data padding-0 L-blue">1,000円</td>
+        <td class="P_admission__common__data padding-0 L-blue"><%= age_0_sum.to_s(:delimited) %>円</td>
+        <td class="P_admission__common__data padding-0 L-blue"><%= age_1_sum.to_s(:delimited) %>円</td>
+        <td class="P_admission__common__data padding-0 L-blue"><%= age_2_sum.to_s(:delimited) %>円</td>
+        <td class="P_admission__common__data padding-0 L-blue"><%= age_3_sum.to_s(:delimited) %>円</td>
+        <td class="P_admission__common__data padding-0 L-blue"><%= age_4_sum.to_s(:delimited) %>円</td>
+        <td class="P_admission__common__data padding-0 L-blue"><%= age_5_sum.to_s(:delimited) %>円</td>
       </tr>
     </table>
     <div id="JS_smoothScroll_target-6"></div>

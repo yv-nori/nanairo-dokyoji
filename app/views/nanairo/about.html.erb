@@ -245,32 +245,32 @@
       <ul class="P_Nanairo-about__info">
         <li class="P_Nanairo-about__info-list">
           七彩学舎定款
-          <% if @companyStatute.image.attached? %>
-            <%= link_to '', @companyStatute.image_url, class:"U_link"%>
+          <% if @companyStatute.present? &&  @companyStatute.image.attached? %>
+            <%= link_to '', @companyStatute.image, class:"U_link", target: :_blank %>
           <% end %>
         </li>
         <li class="P_Nanairo-about__info-list">
           役員・評議員名簿
-          <% if @officerList.image.attached? %>
-            <%= link_to '', @officerList.image_url, class:"U_link"%>
+          <% if @officerList.present? &&  @officerList.image.attached? %>
+            <%= link_to '', @officerList.image, class:"U_link", target: :_blank %>
           <% end %>
         </li>
         <li class="P_Nanairo-about__info-list">
           役員報酬基準
-          <% if @paymentRule.image.attached? %>
-            <%= link_to '', @paymentRule.image_url, class:"U_link"%>
+          <% if @paymentRule.present? &&  @paymentRule.image.attached? %>
+            <%= link_to '', @paymentRule.image, class:"U_link", target: :_blank %>
           <% end %>
         </li>
         <li class="P_Nanairo-about__info-list">
           パルティ道教寺　自己評価票
-          <% if @partiSelfAssessment.image.attached? %>
-            <%= link_to '', @partiSelfAssessment.image_url, class:"U_link"%>
+          <% if @partiSelfAssessment.present? &&  @partiSelfAssessment.image.attached? %>
+            <%= link_to '', @partiSelfAssessment.image, class:"U_link", target: :_blank %>
           <% end %>
         </li>
         <li class="P_Nanairo-about__info-list">
           ピアニィ道教寺　自己評価票
-          <% if @pianiSelfAssessment.image.attached? %>
-            <%= link_to '', @pianiSelfAssessment.image_url, class:"U_link"%>
+          <% if @pianiSelfAssessment.present? && @pianiSelfAssessment.image.attached? %>
+            <%= link_to '', @pianiSelfAssessment.image, class:"U_link", target: :_blank %>
           <% end %>
         </li>
         <li class="P_Nanairo-about__info-list">

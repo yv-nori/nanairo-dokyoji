@@ -14,7 +14,9 @@ task :daily_notification => :environment do
     {date: Post::OfficerList_Update, message: '役員名簿'},
     {date: Post::PaymentRule_Update, message: '役員報酬'},
     {date: Post::PartiSelfAssessment_Update, message: 'パルティ自己評価'},
-    {date: Post::PianiSelfAssessment_Update, message: 'ピアニィ自己評価'}
+    {date: Post::PianiSelfAssessment_Update, message: 'ピアニィ自己評価'},
+    {date: Post::PartiAdmission_PDF_Update, message: 'パルティ募集要項'},
+    {date: Post::PianiAdmission_PDF_Update, message: 'ピアニィ募集要項'}
   ]
   alerts = {items:[], date: check_day}
   check_lists.each do |list|

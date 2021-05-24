@@ -1,4 +1,4 @@
 <%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
-<%= render partial: 'shared/admission', locals:{ items: @items, name: @name }%>
+<%= render partial: 'shared/admission', locals:{ items: @items, name: @name, cost_uniforms: @cost_uniforms, goods_cost: @goods_cost, other_costs: @other_costs, admission_pdf: @admission_pdf}%>
 <%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: false }%>
-// <div id="JS_side-nav_target-bottom"></div>
+<div id="JS_side-nav_target-bottom"></div>

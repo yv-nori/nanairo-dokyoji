@@ -15,4 +15,6 @@ class Category < ApplicationRecord
   PaymentRule_ID = Category.where(name: '役員報酬基準').first.id
   PartiSelfAssessment_ID = Category.where(name: 'パルティ自己評価表').first.id
   PianiSelfAssessment_ID = Category.where(name: 'ピアニィ自己評価表').first.id
+  PartiAdmission_ID = Category.where(name: 'パルティ募集要項').first.id
+  PianiAdmission_ID = Category.where(name: 'ピアニィ募集要項').first.id
 end

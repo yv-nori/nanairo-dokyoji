@@ -5,7 +5,11 @@ class PianiController < PostsController
     @items = ABOUT::PIANI
   end
   def admission
-    @items = ADMISSION::COMMON
+    @cost_uniforms = CostUniform.all
+    @cost_ages = CostAge.all
+    @goods_cost = @cost_ages.where(name: '用品代')
+    @other_costs = @cost_ages.where.not(name: '用品代')
+    @admission_pdf = Post::PianiAdmission_PDF
   end
   def belong
     @posts = Post.where(category_id: Category::PianiNotice_ID).order(release_date: 'DESC').limit(5)

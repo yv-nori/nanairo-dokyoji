@@ -9,7 +9,7 @@ class Post < ApplicationRecord
     JobPosting = @var
     JobPosting_Update = @var.updated_at
   end
-  @var = Post.where(category_id: Category::CompanyStatute_ID).order(updated_at: 'ASC').first
+  @var = Post.with_attached_image.where(category_id: Category::CompanyStatute_ID).order(updated_at: 'ASC').first
   if @var === nil
     CompanyStatute = nil
     CompanyStatute_Update = Date.new(2020, 4, 1)
@@ -17,7 +17,7 @@ class Post < ApplicationRecord
     CompanyStatute = @var
     CompanyStatute_Update = @var.updated_at
   end
-  @var = Post.where(category_id: Category::OfficerList_ID).order(updated_at: 'ASC').first
+  @var = Post.with_attached_image.where(category_id: Category::OfficerList_ID).order(updated_at: 'ASC').first
   if @var === nil
     OfficerList = nil
     OfficerList_Update = Date.new(2020, 4, 1)
@@ -25,7 +25,7 @@ class Post < ApplicationRecord
     OfficerList = @var
     OfficerList_Update = @var.updated_at
   end
-  @var = Post.where(category_id: Category::PaymentRule_ID).order(updated_at: 'ASC').first
+  @var = Post.with_attached_image.where(category_id: Category::PaymentRule_ID).order(updated_at: 'ASC').first
   if @var === nil
     PaymentRule = nil
     PaymentRule_Update = Date.new(2020, 4, 1)
@@ -33,7 +33,7 @@ class Post < ApplicationRecord
     PaymentRule = @var
     PaymentRule_Update = @var.updated_at
   end
-  @var = Post.where(category_id: Category::PartiSelfAssessment_ID).order(updated_at: 'ASC').first
+  @var = Post.with_attached_image.where(category_id: Category::PartiSelfAssessment_ID).order(updated_at: 'ASC').first
   if @var === nil
     PartiSelfAssessment = nil
     PartiSelfAssessment_Update = Date.new(2020, 4, 1)
@@ -41,12 +41,28 @@ class Post < ApplicationRecord
     PartiSelfAssessment = @var
     PartiSelfAssessment_Update = @var.updated_at
   end
-  @var = Post.where(category_id: Category::PianiSelfAssessment_ID).order(updated_at: 'ASC').first
+  @var = Post.with_attached_image.where(category_id: Category::PianiSelfAssessment_ID).order(updated_at: 'ASC').first
   if @var === nil
     PianiSelfAssessment = nil
     PianiSelfAssessment_Update = Date.new(2020, 4, 1)
   else
     PianiSelfAssessment = @var
     PianiSelfAssessment_Update = @var.updated_at
+  end
+  @var = Post.with_attached_image.where(category_id: Category::PartiAdmission_ID).order(updated_at: 'ASC').first
+  if @var === nil
+    PartiAdmission_PDF = nil
+    PartiAdmission_PDF_Update = Date.new(2020, 4, 1)
+  else
+    PartiAdmission_PDF = @var
+    PartiAdmission_PDF_Update = @var.updated_at
+  end
+  @var = Post.with_attached_image.where(category_id: Category::PianiAdmission_ID).order(updated_at: 'ASC').first
+  if @var === nil
+    PianiAdmission_PDF = nil
+    PianiAdmission_PDF_Update = Date.new(2020, 4, 1)
+  else
+    PianiAdmission_PDF = @var
+    PianiAdmission_PDF_Update = @var.updated_at
   end
 end

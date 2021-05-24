@@ -5,7 +5,11 @@ class PartiController < PostsController
     @items = ABOUT::PARTI
   end
   def admission
-    @items = ADMISSION::COMMON
+    @cost_uniforms = CostUniform.all
+    @cost_ages = CostAge.all
+    @goods_cost = @cost_ages.where(name: '用品代').first
+    @other_costs = @cost_ages.where.not(name: '用品代')
+    @admission_pdf = Post::PartiAdmission_PDF
   end
   def belong
     @posts = Post.where(category_id: Category::PartiNotice_ID).order(release_date: 'DESC').limit(5)

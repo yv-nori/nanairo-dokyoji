@@ -3,18 +3,18 @@ class Piani::PostsController < PostsController
   before_action :name
   def show
     @posts = Post.find(params_id)
-    if @posts.category_id === Category::PianiLetter_ID ||
-        @posts.category_id === Category::PianiMovie_ID
+    if @posts.category_id === CATEGORY::PianiLetter_ID ||
+        @posts.category_id === CATEGORY::PianiMovie_ID
       current_user
       require_sign_in!(parti_post_path(params_id))
     end
-    if @posts.category_id === Category::PianiNotice_ID
+    if @posts.category_id === CATEGORY::PianiNotice_ID
       @link =  belong_notice_piani_index_path
-    elsif  @posts.category_id === Category::PianiLetter_ID
+    elsif  @posts.category_id === CATEGORY::PianiLetter_ID
       @link =  belong_letter_piani_index_path
-    elsif  @posts.category_id === Category::PianiMovie_ID
+    elsif  @posts.category_id === CATEGORY::PianiMovie_ID
       @link =  belong_movie_piani_index_path
-    elsif  @posts.category_id === Category::PianiFormat_ID
+    elsif  @posts.category_id === CATEGORY::PianiFormat_ID
       @link =  belong_format_piani_index_path
     end
   end

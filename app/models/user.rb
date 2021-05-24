@@ -10,7 +10,11 @@ class User < ApplicationRecord
   def self.encrypt(token)
     Digest::SHA256.hexdigest(token.to_s)
   end
-  NanairoRoot_ID = User.where(name: 'nanairo_root').first.id
-  PartiUser_ID = User.where(name: 'parti_user').first.id
-  PianiUser_ID = User.where(name: 'piani_user').first.id
+  if @var === nil
+    JobPosting = nil
+    JobPosting_Update = Date.new(2020, 4, 1)
+  else
+    JobPosting = @var
+    JobPosting_Update = @var.updated_at
+  end
 end

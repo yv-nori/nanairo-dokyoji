@@ -1,6 +1,4 @@
 module CATEGORY
-  has_many :posts
-  has_many :accepts
   PartiNotice_ID = Category.where(name: 'パルティお知らせ(全体)').first.id
   PianiNotice_ID = Category.where(name: 'ピアニィお知らせ(全体)').first.id
   PartiLetter_ID = Category.where(name: 'パルティおたより(パスワード)').first.id

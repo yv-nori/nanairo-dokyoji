@@ -76,3 +76,4 @@ gem 'kaminari'
 gem 'administrate-field-active_storage'
 gem "image_processing"
 gem 'seed-fu'
+gem 'platform-api'

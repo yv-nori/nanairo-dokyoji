@@ -12,7 +12,7 @@ class PianiController < PostsController
     @admission_pdf = Post::PianiAdmission_PDF
   end
   def belong
-    @posts = Post.where(category_id: CATEGORY::PianiNotice_ID).order(release_date: 'DESC').limit(5)
+    @posts = Post.where(category_id: Category_id::PianiNotice_ID).order(release_date: 'DESC').limit(5)
     @links = {
       notice: belong_notice_piani_index_path,
       letter: belong_letter_piani_index_path,
@@ -21,16 +21,16 @@ class PianiController < PostsController
     }
   end
   def belong_notice
-    post_public(CATEGORY::PianiNotice_ID, 'Notice', 'お知らせ一覧')
+    post_public(Category_id::PianiNotice_ID, 'Notice', 'お知らせ一覧')
   end
   def belong_letter
-    post_private(CATEGORY::PianiLetter_ID, belong_letter_piani_index_path, 'Letter', 'おたより一覧')
+    post_private(Category_id::PianiLetter_ID, belong_letter_piani_index_path, 'Letter', 'おたより一覧')
   end
   def belong_movie
-    post_private(CATEGORY::PianiMovie_ID, belong_movie_piani_index_path, 'Movie', '動画配信の一覧')
+    post_private(Category_id::PianiMovie_ID, belong_movie_piani_index_path, 'Movie', '動画配信の一覧')
   end
   def belong_format
-    post_public(CATEGORY::PianiFormat_ID, 'Format', 'お届け様式一覧')
+    post_public(Category_id::PianiFormat_ID, 'Format', 'お届け様式一覧')
   end
   def contact
     @contact = Contact.new()
@@ -62,7 +62,7 @@ class PianiController < PostsController
   def recruit
     @contact_recruit = ContactRecruit.new()
     recruit_new
-    @job_posting = Post.where(category_id: CATEGORY::JobPosting_ID).order(updated_at: :desc).first
+    @job_posting = Post.where(category_id: Category_id::JobPosting_ID).order(updated_at: :desc).first
   end
   def recruit_new
     @staff = STAFF::PIANI

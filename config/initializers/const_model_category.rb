@@ -1,4 +1,4 @@
-module CATEGORY
+module Category_id
   @var = Category.find_by(name: 'パルティお知らせ(全体)').first.id
   if @var ==! nil
     PartiNotice_ID = @var

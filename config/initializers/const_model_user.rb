@@ -1,4 +1,4 @@
-module USER
+module User_id
   @var = User.find_by(name: 'nanairo_root').first.id
   if @var ==! nil
     NanairoRoot_ID = @var

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_22_090713) do
+ActiveRecord::Schema.define(version: 2021_05_25_030830) do
 
   create_table "accepts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 2021_05_22_090713) do
     t.integer "cost_age_5", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "cost_type"
     t.index ["name"], name: "index_cost_ages_on_name"
   end
 

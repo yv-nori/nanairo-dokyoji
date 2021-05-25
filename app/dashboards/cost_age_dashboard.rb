@@ -10,6 +10,7 @@ class CostAgeDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
+    cost_type: Field::Number,
     cost_age_0: Field::Number.with_options(
       prefix: "¥",
       format: { 
@@ -84,6 +85,7 @@ class CostAgeDashboard < Administrate::BaseDashboard
     cost_age_5
     created_at
     updated_at
+    cost_type
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -99,6 +101,7 @@ class CostAgeDashboard < Administrate::BaseDashboard
     cost_age_5
     created_at
     updated_at
+    cost_type
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -112,6 +115,7 @@ class CostAgeDashboard < Administrate::BaseDashboard
     cost_age_3
     cost_age_4
     cost_age_5
+    cost_type
   ].freeze
 
   # COLLECTION_FILTERS

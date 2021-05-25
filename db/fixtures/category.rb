@@ -62,7 +62,3 @@ Category.seed do |s|
   s.id = 16
   s.name = 'ピアニィ募集要項'
 end
-Category.seed do |s|
-  s.id = 17
-  s.name = 'tesut'
-end

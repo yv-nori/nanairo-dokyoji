@@ -7,7 +7,7 @@ CostAge.seed do |s|
   s.cost_age_3 = 0
   s.cost_age_4 = 0
   s.cost_age_5 = 0
-  s.cost_type
+  s.cost_type = 1
 end
 CostAge.seed do |s|
   s.id = 2

@@ -114,11 +114,11 @@ Rails.application.configure do
 # config.assets.debug = false
 
   #N+1問題が発生している場合のアラート
-  config.after_initialize do
-    Bullet.enable = true
-    Bullet.alert = true
-    Bullet.bullet_logger = true
-    Bullet.console = true
-    Bullet.rails_logger = true
-  end
+  # config.after_initialize do
+  #   Bullet.enable = false
+  #   Bullet.alert = false
+  #   Bullet.bullet_logger = false
+  #   Bullet.console = false
+  #   Bullet.rails_logger = false
+  # end
 end

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :contacts
-    resources :contact_recruits
+    # resources :contacts
+    # resources :contact_recruits
     resources :posts
     resources :users
-    resources :accepts
-    resources :categories
+    # resources :accepts
+    # resources :categories
     resources :cost_uniforms
     resources :cost_ages
     root to: "contacts#index"
@@ -14,9 +14,9 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   get 'logout_self', to: 'sessions#logout_self'
   delete 'logout', to: 'sessions#destroy'
-  root to: "nanairo#index"  
+  root to: "nanairo#index"
     resources :posts, only: [:index, :show]
-  resources :nanairo do
+  resources :nanairo, only:[:index] do
     collection do
       get 'about'
       get 'admission'
@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   namespace :piani do
     resources :posts, only: [:show]
   end
-  resources :piani do
+  resources :piani, only:[:index] do
     collection do
       get 'about'
       get 'admission'
@@ -65,7 +65,7 @@ Rails.application.routes.draw do
   namespace :parti do
     resources :posts, only: [:show]
   end
-  resources :parti do
+  resources :parti, only:[:index] do
     collection do
       get 'about'
       get 'admission'

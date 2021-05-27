@@ -1,16 +1,24 @@
 .P_Staff-intro {
   position: absolute;
-  top: 10%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
   &.left {
     @include mq-up("tab") {
       left: 2%;
       top: 10%;
+      bottom: initial;
+      transform: initial;
     }
   }
   &.right {
     @include mq-up("tab") {
       right: 2%;
       top: 10%;
+      bottom: initial;
+      transform: initial;
     }
   }
   &__title {

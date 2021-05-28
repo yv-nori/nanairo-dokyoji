@@ -74,7 +74,7 @@
   }
   &__table {
     font-size: $font-size-base * 0.75;
-    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-family: fot-tsukuardgothic-std,"游ゴシック体", YuGothic, "Yu Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -212,7 +212,7 @@
     padding: 20px 5px;
     color: $color-blue-text;
     border: 1px solid $color-blue-text;
-    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-family: fot-tsukuardgothic-std,"游ゴシック体", YuGothic, "Yu Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
     border-radius: 50px;
@@ -238,7 +238,7 @@
   &__blue-title {
     color: $color-blue-text;
     font-weight: bold;
-    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-family: fot-tsukuardgothic-std,"游ゴシック体", YuGothic, "Yu Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
@@ -769,7 +769,7 @@
     text-align: center;
     border-spacing: 0 3vh;
     border-collapse: separate;
-    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-family: fot-tsukuardgothic-std,"游ゴシック体", YuGothic, "Yu Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-weight: bold;
@@ -854,7 +854,7 @@
     }
   }
   &__text {
-    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-family: fot-tsukuardgothic-std,"游ゴシック体", YuGothic, "Yu Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
     width: 100%;
@@ -872,7 +872,7 @@
 }
 .P_admission__extension {
   &__text1 {
-    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-family: fot-tsukuardgothic-std,"游ゴシック体", YuGothic, "Yu Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin-top: $space-section;
@@ -881,7 +881,7 @@
     }
   }
   &__text2 {
-    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-family: fot-tsukuardgothic-std,"游ゴシック体", YuGothic, "Yu Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin-top: $space-section / 2;

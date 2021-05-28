@@ -219,19 +219,6 @@
 <%# ==================================== %>
 <%# 採用情報
 <%# ==================================== %>
-<% if job_posting.image.attached? %>
-  <div class="P_Recruit__modal" id='JS_modal_target'>
-    <div class="P_Recruit__modal__overlay"></div>
-    <div class="P_Recruit__modal__container">
-      <%= image_tag job_posting.image.preview(resize: "6000x6000>"), class: 'P_Recruit__modal__job-posting' %>
-      <div class="P_Recruit__modal__btn" id="JS_modal_close-btn">
-        <div class="C_box--btn">
-          <i class="far fa-times-circle"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
 <section class="P_Recruit__job-info" id="JS_raindrops_target-darken">
   <div id="JS_smoothScroll_target-3"></div>
   <div class="U_relative U_z-1">
@@ -243,6 +230,9 @@
         <h1 class="C_text__title-ja">
           求人情報
         </h1>
+        <% if job_posting.present? && job_posting.image.attached? %>
+          <%= link_to '', job_posting.image, class:"U_link", target: :_blank %>
+        <% end %>
       </div>
     </div>
     <div class="P_Recruit__job-info__posting-wrap">

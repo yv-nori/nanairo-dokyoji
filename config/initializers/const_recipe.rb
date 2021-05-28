@@ -44,7 +44,7 @@ module RECIPE
     },
     {
       link: 'https://youtu.be/2lfqaTH0wLU',
-      title: 'かぼちゃさらだ'
+      title: 'かぼちゃサラダ'
     },
     {
       link: 'https://youtu.be/HT8L6gjlA1o',

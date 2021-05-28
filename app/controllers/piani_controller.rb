@@ -46,6 +46,12 @@ class PianiController < PostsController
   def event
     @items = EVENT::PIANI
   end
+  def for_admission
+    @items = {
+      toddler_link: 'https://www.youtube.com/embed/fwZdHAe7I30?start=1',
+      infant_link: 'https://www.youtube.com/embed/qZgur7QBRp4?start=1'
+    }
+  end
   def one_day
     @items = ONE_DAY::COMMON
   end

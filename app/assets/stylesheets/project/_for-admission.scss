@@ -116,9 +116,11 @@
       bottom: -45%;
     }
   }
+  &__youtube-frame {
+    pointer-events: auto;
+  }
   &__content-img {
     position: relative;
-    
     width: 100%;
     margin-top: $space-vertical;
     height: 25vh;

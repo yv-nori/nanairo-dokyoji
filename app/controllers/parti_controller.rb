@@ -48,6 +48,12 @@ class PartiController < PostsController
   def event
     @items = EVENT::PARTI
   end
+  def for_admission
+    @items = {
+      toddler_link: 'https://www.youtube.com/embed/uoh0b6yf7pA',
+      infant_link: 'https://www.youtube.com/embed/-DICdeACN8E'
+    }
+  end
   def one_day
     @items = ONE_DAY::COMMON
   end

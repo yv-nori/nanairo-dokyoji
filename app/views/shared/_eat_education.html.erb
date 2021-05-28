@@ -116,7 +116,7 @@
         <p class="P_eat-education__instagram__img-text">
           Instagramで確認
         </p>
-        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link"%>
+        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link", target: :_blank%>
       </div>
       <div class="P_eat-education__instagram__img">
         <picture>
@@ -128,7 +128,7 @@
         <p class="P_eat-education__instagram__img-text">
           Instagramで確認
         </p>
-        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link"%>
+        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link", target: :_blank%>
       </div>
       <div class="P_eat-education__instagram__img">
         <picture>
@@ -140,7 +140,7 @@
         <p class="P_eat-education__instagram__img-text">
           Instagramで確認
         </p>
-        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link"%>
+        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link", target: :_blank%>
       </div>
       <div class="P_eat-education__instagram__img pc-only">
         <picture>
@@ -152,7 +152,7 @@
         <p class="P_eat-education__instagram__img-text">
           Instagramで確認
         </p>
-        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link"%>
+        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link", target: :_blank%>
       </div>
       <div class="P_eat-education__instagram__img pc-tab-only">
         <picture>
@@ -164,7 +164,7 @@
         <p class="P_eat-education__instagram__img-text">
           Instagramで確認
         </p>
-        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link"%>
+        <%= link_to "", 'https://www.instagram.com/7c_' + name[:en], class:"U_link", target: :_blank%>
       </div>
     </div>
   </div>
@@ -383,7 +383,7 @@
             <h5 class="P_eat-education__foodstuff__representative"><%= staff[:representative] %></h5>
             <h5 class="P_eat-education__foodstuff__text-section"><%= staff[:text] %></h5>
             <h4 class="P_eat-education__foodstuff__text-section">主な納品先</h4>
-            <h5 class="P_eat-education__foodstuff__text-content"><%= staff[:delively] %></h5>
+            <h5 class="P_eat-education__foodstuff__text-content"><%= staff[:delively].html_safe %></h5>
             <h4 class="P_eat-education__foodstuff__text-section">所在地</h4>
             <h5 class="P_eat-education__foodstuff__text-content"><%= staff[:postal_code] %></h5>
             <h5 class="P_eat-education__foodstuff__text-content"><%= staff[:address] %></h5>

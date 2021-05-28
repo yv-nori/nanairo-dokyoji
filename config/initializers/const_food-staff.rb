@@ -13,7 +13,7 @@ module FOOD_STAFF
       shop_name: 'ミートショップきたで',
       representative: '北出　稔',
       text: '保育所や小学校が主な納品先の為、毎月の検便や年に一度保健所の検査を受け、衛生面には厳重な配慮をしています。従業員一同頑張っています！',
-      delively: '貝塚市　保育所４つ　小学校　熊鳥　小学校　中学校',
+      delively: '貝塚市　保育所４つ　小学校<br>熊鳥　小学校　中学校',
       postal_code: '〒597-0085',
       address: '大阪府　貝塚市　東　121-2 24棟15号',
       tel: '072-422-2384'
@@ -40,7 +40,7 @@ module FOOD_STAFF
       shop_name: '(有)砂原牛乳店',
       representative: '砂原　邦恵',
       text: 'こどもたちの栄養を支える、美味しい牛乳をお届けします。',
-      delively: 'ジョイフィット　太平の湯　りんくうの湯　弥生の里　小栗の湯',
+      delively: 'ジョイフィット<br>太平の湯<br>りんくうの湯<br>弥生の里<br>小栗の湯',
       postal_code: '〒597-0083',
       address: '大阪府　泉大津市　忠岡町　1-1-6',
       tel: '072-521-0503'
@@ -87,7 +87,7 @@ module FOOD_STAFF
       shop_name: '(有)砂原牛乳店',
       representative: '砂原　邦恵',
       text: 'こどもたちの栄養を支える、美味しい牛乳をお届けします。',
-      delively: 'ジョイフィット　太平の湯　りんくうの湯　弥生の里　小栗の湯',
+      delively: 'ジョイフィット<br>太平の湯<br>りんくうの湯<br>弥生の里<br>小栗の湯',
       postal_code: '〒597-0083',
       address: '大阪府　泉大津市　忠岡町　1-1-6',
       tel: '072-521-0503'

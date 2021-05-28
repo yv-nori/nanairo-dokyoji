@@ -119,8 +119,11 @@
         position: absolute;
         width: 16%;
         height: 19%;
-        bottom: -25%;
+        bottom: -18%;
         right: -23%;
+        @include mq-up("sp_full") {
+          bottom: -25%;
+        }
       }
       &-triangle2 {
         position: absolute;

@@ -7,21 +7,21 @@ module ABOUT
     station: 'JR阪和線 東貝塚駅下車 徒歩2分',
     google_map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13162.036286214505!2d135.3731036!3d34.4392232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd48c9cfe7b368468!2z56S-5Lya56aP56WJ5rOV5Lq6IOS4g-W9qeWtpuiIjg!5e0!3m2!1sja!2sjp!4v1614213618813!5m2!1sja!2sjp',
     map: [
-    {title: '1階保育室1', photo: '1F_0'},
-    {title: '1階保育室2', photo: '1F_1'},
-    {title: '1階保育室3', photo: '1F_2'},
-    {title: '1階保育室4', photo: '1F_3'},
-    {title: '1階保育室5', photo: '1F_4'},
-    {title: '1階保育室6', photo: '1F_5'},
-    {title: '1階保育室7', photo: '1F_6'},
-    {title: '1階保育室8', photo: '1F_7'},
-    {title: '1階保育室9', photo: '1F_8'},
-    {title: '2階保育室10', photo: '2F_0'},
-    {title: '2階保育室11', photo: '2F_1'},
-    {title: '2階保育室12', photo: '2F_2'},
-    {title: '2階保育室13', photo: '2F_3'},
-    {title: '2階保育室14', photo: '2F_4'},
-    {title: '2階保育室15', photo: '2F_5'}
+    {title: '玄関', photo: '1F_0'},
+    {title: '3歳保育室①', photo: '1F_1'},
+    {title: '3歳保育室②', photo: '1F_2'},
+    {title: '園庭', photo: '1F_3'},
+    {title: '1歳保育室①', photo: '1F_4'},
+    {title: '1歳保育室②', photo: '1F_5'},
+    {title: '2歳保育室', photo: '1F_6'},
+    {title: '0歳保育室', photo: '1F_7'},
+    {title: '乳児園庭', photo: '1F_8'},
+    {title: 'ベランダ', photo: '2F_0'},
+    {title: 'フリールーム', photo: '2F_1'},
+    {title: 'ホール', photo: '2F_2'},
+    {title: '5歳保育室', photo: '2F_3'},
+    {title: '4歳保育室①', photo: '2F_4'},
+    {title: '4歳保育室②', photo: '2F_5'}
     ]
   }.freeze
   PIANI = {
@@ -32,18 +32,18 @@ module ABOUT
     station: 'JR阪和線 東貝塚駅下車 徒歩10分',
     google_map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6581.560123323829!2d135.37183865904808!3d34.43234136876365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca4652827cf45e9c!2z5LiD5b2p5a2m6IiOIOODlOOCouODi-OCo-mBk-aVmeWvug!5e0!3m2!1sja!2sjp!4v1618481720603!5m2!1sja!2sjp',
     map: [
-      {title: '1階保育室1', photo: '1F_0'},
-      {title: '1階保育室2', photo: '1F_1'},
-      {title: '1階保育室3', photo: '1F_2'},
-      {title: '1階保育室4', photo: '1F_3'},
-      {title: '1階保育室5', photo: '1F_4'},
-      {title: '1階保育室6', photo: '1F_5'},
-      {title: '1階保育室7', photo: '1F_6'},
-      {title: '2階保育室8', photo: '2F_0'},
-      {title: '2階保育室9', photo: '2F_1'},
-      {title: '2階保育室10', photo: '2F_2'},
-      {title: '2階保育室11', photo: '2F_3'},
-      {title: '2階保育室12', photo: '2F_4'}
+      {title: '園庭', photo: '1F_0'},
+      {title: '3歳保育室①', photo: '1F_1'},
+      {title: '3歳保育室②', photo: '1F_2'},
+      {title: '2歳保育室', photo: '1F_3'},
+      {title: '1歳保育室', photo: '1F_4'},
+      {title: '0階保育室', photo: '1F_5'},
+      {title: '乳児園庭', photo: '1F_6'},
+      {title: 'ホール', photo: '2F_0'},
+      {title: 'ランチルーム', photo: '2F_1'},
+      {title: '4歳保育室', photo: '2F_2'},
+      {title: '5歳保育室', photo: '2F_3'},
+      {title: 'フリールーム', photo: '2F_4'}
     ]
   }.freeze
 end

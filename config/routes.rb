@@ -3,12 +3,12 @@ Rails.application.routes.draw do
     # resources :contacts
     # resources :contact_recruits
     resources :posts
-    resources :users
+    # resources :users
     # resources :accepts
     # resources :categories
     resources :cost_uniforms
     resources :cost_ages
-    root to: "contacts#index"
+    root to: "posts#index"
   end
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

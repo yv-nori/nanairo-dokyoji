@@ -15,8 +15,8 @@
     <div class="P_belong__post__text">
       <%= safe_join(@posts.text.split("\n"),tag(:br)) %>
     </div>
-    <% if @posts.image.attached? %>
-      <%= image_tag @posts.image.preview(resize: "6000x6000>"), class: 'P_belong__post__image' %>
+    <% if @posts.present? && @posts.image.attached? %>
+      <%= link_to @posts.title + 'を開く', @posts.image, target: :_blank %>
     <% end %>
     <%= link_to '戻る', @link, class: 'P_belong__post__back' %>
   </section>

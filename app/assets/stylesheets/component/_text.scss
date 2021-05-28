@@ -34,6 +34,16 @@
     font-size: $font-size-base * 4.0625;
   }
   &.wide {
+    font-size: $font-size-base * 1.375;
+    @include mq-up("sp_full") {
+      font-size: $font-size-base * 2;
+    }
+    @include mq-up("tab") {
+      font-size: $font-size-base * 2.8125;
+    }
+    @include mq-up("pc_full") {
+      font-size: $font-size-base * 4.0625;
+    }
     letter-spacing: 0.1em;
   }
 }

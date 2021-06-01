@@ -31,7 +31,9 @@ $(function () {
   tabChangeAction(TabChangeItems, hashToResult())
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
-    scrollChange(windowScrollTop, startPosition, $ChangeTargets, false);
+    if (HeaderItems.Activity === 'isPassive') {
+      scrollChange(windowScrollTop, startPosition, $ChangeTargets, false);
+    }
     scrollToTop(windowScrollTop, startPosition, ToTopItems);
     startPosition = windowScrollTop;
   });

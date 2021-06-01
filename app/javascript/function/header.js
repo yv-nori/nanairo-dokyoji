@@ -13,8 +13,7 @@ export const menuOpen = Items => {
       $(Items.$targets[i]).toggleClass('isOpen');
     }
     if ($(Items.$targets[0]).hasClass('isOpen')) {
-      noScrollPC();
-      noScrollSP();
+      Items.Activity = 'isActive'
       if ($(Items.$targets[0]).hasClass('isMoveTop')) {
         headerStatus = 'wasCleared'
         for (let i = 0; i < length; i++) {
@@ -22,8 +21,7 @@ export const menuOpen = Items => {
         }
       };
     } else {
-      onScrollPC();
-      onScrollSP();
+      Items.Activity = 'isPassive'
       if (headerStatus = 'wasCleared') {
         headerStatus = null;
         for (let i = 0; i < length; i++) {
@@ -46,7 +44,8 @@ export const headerItems = () => {
       _doc.getElementById('JS_menu-open_target-btn-0'),
       _doc.getElementById('JS_menu-open_target-btn-1'),
       _doc.getElementById('JS_menu-open_target-btn-2')
-    ]
+    ],
+    Activity: 'isPassive'
   };
   return HeaderItems;
 }

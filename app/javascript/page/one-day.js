@@ -27,7 +27,9 @@ $(function () {
   headerStatusWhite(HeaderItems.$targets);
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
-    scrollChange(windowScrollTop, startPosition, $ChangeTargets, false);
+    if (HeaderItems.Activity === 'isPassive') {
+      scrollChange(windowScrollTop, startPosition, $ChangeTargets, false);
+    }
     switch (media()) {
       case "SP":
         scrollToTopHide(ToTopItems.$target);

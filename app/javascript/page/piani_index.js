@@ -25,7 +25,9 @@ $(function () {
   let windowScrollTop = 0;
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
-    scrollChange(windowScrollTop, startPosition, $ChangeTargets);
+    if (HeaderItems.Activity === 'isPassive') {
+      scrollChange(windowScrollTop, startPosition, $ChangeTargets);
+    }
     switch (media()) {
       case "SP":
         scrollAction(windowScrollTop, ScrollActionItems);

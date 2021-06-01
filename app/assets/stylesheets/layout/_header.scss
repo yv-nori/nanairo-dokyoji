@@ -107,8 +107,9 @@
 		left: 0;
 		z-index: map-get($layer, "header");
 		transition: all $anime-time-middle;
-		overflow: hidden;
 		max-height: 0px;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
 		&.isOpen {
 			max-height: 100vh!important;
 			opacity: 1;

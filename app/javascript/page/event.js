@@ -37,7 +37,9 @@ $(function () {
   }
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
-    scrollChange(windowScrollTop, startPosition, HeaderItems.$targets, false);
+    if (HeaderItems.Activity === 'isPassive') {
+      scrollChange(windowScrollTop, startPosition, HeaderItems.$targets, false);
+    }
     scrollAction(windowScrollTop, ScrollActionItems);
     switch (media()) {
       case "SP":

@@ -25,7 +25,9 @@ $(function () {
   let windowScrollTop = 0;
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
-    scrollChange(windowScrollTop, startPosition, HeaderItems.$targets, false);
+    if (HeaderItems.Activity === 'isPassive') {
+      scrollChange(windowScrollTop, startPosition, HeaderItems.$targets, false);
+    }
     if (pc_only()) {
       scrollToTop(windowScrollTop, startPosition, ToTopItems);
     }

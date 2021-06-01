@@ -32,8 +32,10 @@ $(function () {
   menuOpen(HeaderItems);
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
-    scrollSideNavHide(windowScrollTop, SideNavItems)
-    scrollChange(windowScrollTop, startPosition, $ChangeTargets);
+    scrollSideNavHide(windowScrollTop, SideNavItems);
+    if (HeaderItems.Activity === 'isPassive') {
+      scrollChange(windowScrollTop, startPosition, $ChangeTargets);
+    }
     switch (media()) {
       case "SP":
         scrollToTopHide(ToTopItems.$target);

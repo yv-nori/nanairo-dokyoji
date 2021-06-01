@@ -3,7 +3,6 @@ import {
 } from "../function/utility"
 export const modal = (Items) => {
   $(Items.$trigger).on('click', () => {
-    console.log('Clicke');
     $(Items.$target).addClass('isActive');
     noScrollPC();
     noScrollSP();

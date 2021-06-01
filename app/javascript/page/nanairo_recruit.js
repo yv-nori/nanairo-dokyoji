@@ -59,7 +59,9 @@ $(function () {
   modal(ModalItems);
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
-    scrollChange(windowScrollTop, startPosition, HeaderItems.$targets);
+    if (HeaderItems.Activity === 'isPassive') {
+      scrollChange(windowScrollTop, startPosition, HeaderItems.$targets);
+    }
     switch (media()) {
       case "SP":
         scrollAction(windowScrollTop, StaffItems);

@@ -31,7 +31,9 @@ $(function(){
   smoothScroll($SmoothItems);
   $(window).on('scroll', function () {
     windowScrollTop = $(this).scrollTop();
-    scrollChange(windowScrollTop, startPosition, $ChangeTargets);
+    if (HeaderItems.Activity === 'isPassive') {
+      scrollChange(windowScrollTop, startPosition, $ChangeTargets);
+    }
     scrollMove(windowScrollTop, MoveItems);
     switch (media()) {
       case "SP":

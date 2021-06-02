@@ -15,7 +15,7 @@ module STAFF
       img: 'parti_staff_0'
     },
     {
-      name:'西尾　由香',
+      name:'西尾　由華',
       name_en:'nishio yuka',
       joined_date:'平成21年4月',
       work_style:'リーダー',
@@ -101,7 +101,7 @@ module STAFF
       img: 'piani_staff_2'
     },
     {
-      name:'北野　沙織',
+      name:'北野　沙依',
       name_en:'kitano sayori',
       joined_date:'平成27年4月',
       work_style:'正規・常勤',

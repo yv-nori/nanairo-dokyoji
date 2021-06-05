@@ -46,7 +46,6 @@ $(function () {
       break;
   }
   $(window).on('scroll', function () {
-    console.log(HeaderItems.Activity )
     windowScrollTop = $(this).scrollTop();
     if (HeaderItems.Activity === 'isPassive') {
       scrollChange(windowScrollTop, startPosition, $ChangeTargets, false);

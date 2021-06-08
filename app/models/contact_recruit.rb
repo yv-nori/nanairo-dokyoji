@@ -6,6 +6,6 @@ class ContactRecruit < ApplicationRecord
     validates :name_kana
     validates :tel
     validates :email, confirmation: true
-    validates :postal_code, format: { with: VALID_POSTAL_REGEX }
   end
+  validates :postal_code, format: { with: VALID_POSTAL_REGEX }, allow_blank: true
 end

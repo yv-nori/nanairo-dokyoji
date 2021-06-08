@@ -25,7 +25,6 @@ import {
 import {
   modal, modalItems
 } from "../function/modal"
-
 // --------------------------------
 // メイン処理
 // --------------------------------

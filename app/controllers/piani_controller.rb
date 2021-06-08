@@ -1,6 +1,7 @@
 class PianiController < PostsController
   before_action :common
   before_action :name
+  before_action :get_job_posting, only: [:recruit, :recruit_new, :recruit_create]
   def about
     @items = ABOUT::PIANI
   end
@@ -68,7 +69,6 @@ class PianiController < PostsController
   def recruit
     @contact_recruit = ContactRecruit.new()
     recruit_new
-    @job_posting = Post.where(category_id: Category_id::JobPosting_ID).order(updated_at: :desc).first
   end
   def recruit_new
     @staff = STAFF::PIANI
@@ -85,6 +85,9 @@ class PianiController < PostsController
     @footer = COMMON::FOOTER_PIANI
   end
   private
+  def get_job_posting
+    @job_posting = Post.where(category_id: Category_id::JobPosting_ID).order(updated_at: :desc).first
+  end
   def contact_recruit_params
     params.require(:contact_recruit).permit(:name, :name_kana, :tel, :email, :email_confirmation, :postal_code, :address, :question)
   end

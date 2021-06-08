@@ -1,6 +1,7 @@
 class NanairoController < FormController
   before_action :common
   before_action :name
+  before_action :get_job_posting, only: [:recruit, :recruit_new, :recruit_create]
   def about
     @companyStatute = Post::CompanyStatute
     @officerList = Post::OfficerList
@@ -25,7 +26,6 @@ class NanairoController < FormController
   def recruit
     @contact_recruit = ContactRecruit.new()
     recruit_new
-    @job_posting = Post.where(category_id: Category_id::JobPosting_ID).order(updated_at: :desc).first
   end
   def recruit_new
     @staff = [STAFF::PARTI[0],STAFF::PARTI[1],STAFF::PIANI[2],STAFF::PIANI[3]]
@@ -42,6 +42,9 @@ class NanairoController < FormController
     @footer = COMMON::FOOTER_NANAIRO
   end
   private
+  def get_job_posting
+    @job_posting = Post.where(category_id: Category_id::JobPosting_ID).order(updated_at: :desc).first
+  end
   def contact_recruit_params
     params.require(:contact_recruit).permit(:name, :name_kana, :tel, :email, :email_confirmation, :postal_code, :address, :question)
   end

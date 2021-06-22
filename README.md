@@ -21,10 +21,4 @@ CMD
 * 管理者URL
   
   https://nanairo-dokyoji.herokuapp.com/admin
-* 管理者user
 
-  'nanairo_root'
-
-* 管理者パスワード
-
-  'hozdkz8969'

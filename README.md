@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+アプリケーション名
 
-Things you may want to cover:
+* 社会福祉法人 七彩学舎のホームページ
 
-* Ruby version
+アプリケーション概要
 
-* System dependencies
+* 法人の運営する認定こども園の情報を発信する
 
-* Configuration
+URL
+* https://nanairo-dokyoji.herokuapp.com/
 
-* Database creation
+実装機能
+* 情報の閲覧
+* お問い合わせメール送信
+* 在園保護者のみ閲覧を限定
+* ホームページ管理機能
 
-* Database initialization
+CMD
+* 管理者URL
+  
+  https://nanairo-dokyoji.herokuapp.com/admin
+* 管理者user
 
-* How to run the test suite
+  'nanairo_root'
 
-* Services (job queues, cache servers, search engines, etc.)
+* 管理者パスワード
 
-* Deployment instructions
-
-* ...
+  'hozdkz8969'

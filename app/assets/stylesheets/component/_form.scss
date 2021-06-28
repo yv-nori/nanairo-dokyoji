@@ -94,6 +94,12 @@
       box-shadow: $shadow;
     }
   }
+  .attention {
+    margin-bottom: 15vw;
+    @include mq-up("tab") {
+      margin-bottom: 5vw;
+    }
+  }
 }
 .field_with_errors {
   border: #BE0738 1px solid;

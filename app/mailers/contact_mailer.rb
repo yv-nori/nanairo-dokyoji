@@ -2,7 +2,7 @@ class ContactMailer < ApplicationMailer
   def contact_mail_recruit(contact, form_name)
     @contact = contact
     @form_name = form_name
-    mail to: 'dokyoji@gmail.com',
+    mail to: 'parti@dokyoji.or.jp',
         subject: 'お問い合わせ内容'
   end
   def contact_mail_recruit_auto_reserve(contact)
@@ -13,7 +13,7 @@ class ContactMailer < ApplicationMailer
   def contact_mail(contact, form_name)
     @contact = contact
     @form_name = form_name
-    mail to: 'dokyoji@gmail.com',
+    mail to: 'parti@dokyoji.or.jp',
         subject: 'お問い合わせ内容'
   end
   def contact_mail_auto_reserve(contact)

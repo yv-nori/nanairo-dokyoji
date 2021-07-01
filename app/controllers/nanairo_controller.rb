@@ -2,6 +2,9 @@ class NanairoController < FormController
   before_action :common
   before_action :name
   before_action :get_job_posting, only: [:recruit, :recruit_new, :recruit_create]
+  def index
+    flash.now[:alert] = User.find(3).name
+  end
   def about
     @companyStatute = Post::CompanyStatute
     @officerList = Post::OfficerList

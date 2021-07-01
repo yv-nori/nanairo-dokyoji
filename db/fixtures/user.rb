@@ -5,11 +5,11 @@ User.seed do |s|
 end
 User.seed do |s|
   s.id = 2
-  s.name = 'parti_user', 
+  s.name = 'parti_user'
   s.password = 'houpublic'
 end
 User.seed do |s|
   s.id = 3
-  s.name = 'piani_user', 
+  s.name = 'piani_user'
   s.password = 'houpublic'
 end

@@ -1,3 +1,9 @@
+<% content_for :title do %>
+レシピ一覧｜社会福祉法人 七彩学舎｜認定こども園
+<% end %>
+<% content_for :description do %>
+社会福祉法人 七彩学舎の給食職員が栄養士指導のもと、乳幼児の子育てに最適に食育レシピを公開しています。日々の子育てや献立にお役立てください。
+<% end %>
 <%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
 <%= render partial: 'shared/recipe', locals: { recipe: @recipe }%>
 <%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: false }%>

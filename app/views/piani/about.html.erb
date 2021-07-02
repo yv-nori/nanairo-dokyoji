@@ -1,3 +1,9 @@
+<% content_for :title do %>
+当園について｜認定こども園 ピアニィ道教寺｜社会福祉法人 七彩学舎
+<% end %>
+<% content_for :description do %>
+貝塚市のJR阪和線 東貝塚駅徒歩10分の認定こども園ピアニィ道教寺は優しい子どもを育むため、音楽記号のピアニッシモからピアニィと名付けました。保育所、幼稚園をお探しの方は、お気軽にお問い合わせください。
+<% end %>
 <%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
 <%= render partial: 'shared/about', locals:{ name: @name, items: @items }%>
 <%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: false }%>

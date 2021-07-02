@@ -1,3 +1,9 @@
+<% content_for :title do %>
+就職をお考えの方へ｜認定こども園 パルティ道教寺｜社会福祉法人 七彩学舎
+<% end %>
+<% content_for :description do %>
+社会福祉法人 七彩学舎の運営する認定こども園パルティ道教寺やピアニィ道教寺で、一緒に働く仲間を探しています。子どもたちの「好き」を一緒に探しませんか。就職活動中の方はどうぞお気軽にご連絡ください。
+<% end %>
 <%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
 <%= render partial: 'shared/recruit', locals:{ staff: @staff , form_items: @form_items, job_posting: @job_posting } %>
 <%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: true }%>

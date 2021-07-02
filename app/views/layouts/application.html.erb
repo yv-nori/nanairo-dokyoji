@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title><%= content_for?(:title) ? yield(:title) : "社会福祉法人 七彩学舎 – 認定こども園 - 貝塚市"%></title>
+    <meta name="keywords" content="保育所,幼稚園,保育園,子育て,託児,保育,東貝塚駅,七彩学舎,なないろがくしゃ,大阪府,貝塚市,認定こども園,パルティ,parti,ピアニィ,piani,道教寺">
+    <meta name='description' content='<%= content_for?(:description) ? yield(:description) : '社会福祉法人 七彩学舎は、貝塚市のJR東貝塚駅近くで、認定こども園 パルティ道教寺とピアニィ道教寺を運営しています。保育所や幼稚園をお探しの方は、ぜひ一度ご見学にきてください。'%>'>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="keywords" content="保育所,幼稚園,保育園,社会福祉法人,七彩学舎,なないろがくしゃ,大阪府,貝塚市,認定こども園,パルティ,parti,ピアニィ,piani,道教寺">
-    <title>社会福祉法人　七彩学舎</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta nam>
-
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all'%>
     <%= javascript_pack_tag 'application' %>

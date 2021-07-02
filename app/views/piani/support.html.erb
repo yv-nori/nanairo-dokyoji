@@ -1,3 +1,9 @@
+<% content_for :title do %>
+子育て支援｜認定こども園 ピアニィ道教寺｜社会福祉法人 七彩学舎
+<% end %>
+<% content_for :description do %>
+社会福祉法人 七彩学舎は地域で子育てにお悩みの方へ、子育て支援として子育て相談事業、園庭開放、食育レシピの公開などを行い、地域の子育てを応援しています。
+<% end %>
 <%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
 <%= render partial: 'shared/support', locals:{ items: @items, slider: @slider }%>
 <%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: false }%>

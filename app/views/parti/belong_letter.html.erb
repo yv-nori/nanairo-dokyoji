@@ -1,3 +1,6 @@
+<% content_for :title do %>
+おたより｜認定こども園 パルティ道教寺｜社会福祉法人 七彩学舎
+<% end %>
 <%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
 <%= render partial: 'posts/index', locals:{ posts: @posts, items: @items, name: @name }%>
 <%= render 'shared/side-bar_noBack' ,{color: '' }%>

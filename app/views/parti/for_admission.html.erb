@@ -1,3 +1,9 @@
+<% content_for :title do %>
+入園にむけて｜認定こども園 パルティ道教寺｜社会福祉法人 七彩学舎
+<% end %>
+<% content_for :description do %>
+認定こども園 パルティ道教寺では入園にむけて、動画を見てもらい安心して入園への準備をすることができます。
+<% end %>
 <%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
 <%= render partial: 'shared/for_admission', locals:{ items: @items } %>
 <%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: false }%>

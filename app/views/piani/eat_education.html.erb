@@ -1,3 +1,9 @@
+<% content_for :title do %>
+食育｜認定こども園 ピアニィ道教寺｜社会福祉法人 七彩学舎
+<% end %>
+<% content_for :description do %>
+認定こども園 ピアニィ道教寺では、栄養士の指導のもと、バイキング、クッキング、栽培を通し、子どもたちが食への興味を高めるイベントを実施します。衛生面やアレルギー対応にも十分配慮し、安全安心の給食を提供します。
+<% end %>
 <%= render partial: 'shared/header', locals:{ header: @header, name: @name}%>
 <%= render partial: 'shared/eat_education', locals:{ name: @name, food_staff: @food_staff, slider: @slider }%>
 <%= render partial: 'shared/footer', locals:{ footer: @footer, name: @name, side_bar: false }%>
